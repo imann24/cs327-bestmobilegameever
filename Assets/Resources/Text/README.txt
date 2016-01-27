@@ -1,0 +1,1 @@
+Text assets to be loaded at runtime (e.g. dialogue scripts or tutorial text)

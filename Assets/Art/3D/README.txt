@@ -1,0 +1,1 @@
+3D Art Assets: e.g. Maya .fxb files

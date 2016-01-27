@@ -1,0 +1,1 @@
+Any 2D art asset: Sprite and UI assets

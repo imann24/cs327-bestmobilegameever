@@ -1,0 +1,1 @@
+For Unity scenes files: .unity
