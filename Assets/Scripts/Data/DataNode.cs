@@ -58,8 +58,6 @@ public class DataNode {
 		AddChild (
 			newNode
 		);
-
-		newNode.Parent = this;
 	}
 
 	public void AddChild (DataNode node) {
@@ -70,6 +68,8 @@ public class DataNode {
 		Children.Add (
 			node
 		);
+
+		node.Parent = this;
 	}
 
 	// Tree Depth from the current node
