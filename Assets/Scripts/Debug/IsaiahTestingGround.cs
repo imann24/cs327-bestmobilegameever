@@ -29,6 +29,11 @@ public class IsaiahTestingGround : MonoBehaviour {
 			)
 		);
 
+		Debug.Log("&&&&&");
+		Debug.Log(
+			XMLReader.ReadXMLAsDataTree(doc)
+		);
+
 		XmlDocument doc2 = new XmlDocument();
 		doc2.LoadXml(@"<item><name>wrench</name></item>");
 		Debug.Log(doc2.OuterXml);

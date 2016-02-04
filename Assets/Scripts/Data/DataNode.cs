@@ -11,6 +11,12 @@ using System.Collections.Generic;
 
 public class DataNode {
 
+	// Empty Constructor
+	// CAUTION: should only use if you're going to set the values later
+	public DataNode () {
+
+	}
+
 	// Constructor for the root node
 	public DataNode (string value) {
 		this.Value = value;
@@ -44,12 +50,16 @@ public class DataNode {
 
 	// Overloaded method that takes a string instead of a DataNode
 	public void AddChild (string value) {
-		AddChild (
-			new DataNode (
-				this,
-				value
-			)
+		DataNode newNode = new DataNode (
+			this,
+			value
 		);
+
+		AddChild (
+			newNode
+		);
+
+		newNode.Parent = this;
 	}
 
 	public void AddChild (DataNode node) {
