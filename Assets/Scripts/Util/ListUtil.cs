@@ -1,0 +1,28 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public static class ListUtil {
+
+	public static bool IsNullOrEmpty<T> (List<T> list) {
+		return list == null || list.Count == 0;
+	}
+
+	public static string ToString<T> (List<T> list) {
+		if (list == null) {
+
+			return null;
+
+		} else {
+
+			string listAsString = "";
+
+			for (int i = 0; i < list.Count; i++) {
+				listAsString += list[i].ToString() + '\n';
+			}
+
+			return listAsString;
+
+		}
+	}
+}
