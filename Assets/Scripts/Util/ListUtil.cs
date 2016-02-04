@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/*
+ * Author: Isaiah Mann
+ * Description: Utility methods to assist with using List class
+ * All methods are static
+ */
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 

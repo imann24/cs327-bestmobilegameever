@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ * Author: Isaiah Mann
+ * Description: Utility methods to assist with using strings
+ * All methods are static
+ */
+
+
+using UnityEngine;
 using System.Collections;
 using System.Text.RegularExpressions;
 
