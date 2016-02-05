@@ -46,11 +46,12 @@ public static class XMLReader {
 		
 		if (xmlNode.HasChildNodes) {
 
-			DataNode newDataNode = new DataNode("");
-		
-			dataWriteNode.AddChild (newDataNode);
-
 			foreach (XmlNode childXMLNode in xmlNode.ChildNodes) {
+
+				DataNode newDataNode = new DataNode("");
+
+				dataWriteNode.AddChild (newDataNode);
+
 				ReadNode(
 					childXMLNode,
 					ref newDataNode

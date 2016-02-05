@@ -11,6 +11,30 @@ using System.Collections;
 public class DataTree {
 	const string _defaultRootValue = "Root";
 
+	// String indexer for accessing a property in grand child node:
+	/* EXAMPLE: 
+	 * this.Value == "DateTime"
+	 * 		this.Children[i].Value == "Time"
+	 * 			this.Children[i].Children[j].Value == "10:10"
+	 * this["Time"] == "10:10"
+	 */
+	public string this[string keyInChildren] {
+		get {
+			return Root.GetGrandChildValueByKey(keyInChildren);
+		}
+	}
+
+	// Integer indexer for accessing a child, returns null if out of range
+	public DataNode this[int index] {
+		get {
+			if (ListUtil.InRange(Root.Children, index)) {
+				return Root.Children[index];
+			} else {
+				return null;
+			}
+		}
+	}
+
 	public DataNode Root;
 
 	public DataTree () {
@@ -35,5 +59,12 @@ public class DataTree {
 
 	public override string ToString () {
 		return Root.ToString();
+	}
+
+	// Recursive: Returns first node it finds, or null if no node is found
+	public DataNode SearchForNodeByValue (string value) {
+
+		return Root.SearchForNodeByValue(value);
+
 	}
 }

@@ -6,28 +6,29 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		/*
-		DataTree tree = new DataTree();
 
-		tree.Root = new DataNode("Hi");
+		// If you're not familiar with the data structure of a tree: http://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm
 
-		tree.Add("Hello");
-		tree.Add("Peace");
+		// This is the funciton you can use to load any XML file stored inside the Resources folder
+		DataTree tree = DataUtil.ParseXML("Text/TestFile");
 
-		tree.Root.Children[0].AddChild("Whatup");
-		tree.Root.Children[0].Children[0].AddChild("Whatup");
-		tree.Root.Children[0].Children[0].Children[0].AddChild("Whatup");
+		// You can print all the tree data to console because the ToString method I implemented (for debugging purposes)
+		Debug.Log(tree);
 
-		Debug.Log(tree.Depth);
+		// This debugging also works on individual nodes
 		Debug.Log(tree.Root);
-		*/
 
-		XmlDocument doc =  XMLReader.Read("Text/TestFile");
+		// You can index through the children of the root node
+		Debug.Log(tree[1].Value);
 
-		Debug.Log("&&&&&");
-		Debug.Log(
-			XMLReader.ReadXMLAsDataTree(doc)
-		);
+		// You can also index through individual the children of individual nodes (ask me if you don't understand the nested indexing going on here)
+		Debug.Log(tree[1][2].Value);
+
+		// You can index through the tree's immediate children by giving a value. This looks for the first grandchild of a child node with the Value of "title"
+		Debug.Log(tree["title"]);
+
+		// You can combine the integer indexing and the string indexing
+		Debug.Log(tree[1]["data-point"]);
 
 	}
 	

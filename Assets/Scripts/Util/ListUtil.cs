@@ -31,4 +31,12 @@ public static class ListUtil {
 
 		}
 	}
+
+	public static bool InRange<T> (List<T> list, int index) {
+		if (IsNullOrEmpty(list)) {
+			return false;
+		} else {
+			return index >= 0 && index < list.Count;
+		}
+	}
 }

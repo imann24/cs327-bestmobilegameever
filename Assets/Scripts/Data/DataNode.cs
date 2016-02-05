@@ -11,6 +11,30 @@ using System.Collections.Generic;
 
 public class DataNode {
 
+	// String indexer for accessing a property in grand child node:
+	/* EXAMPLE: 
+	 * this.Value == "DateTime"
+	 * 		this.Children[i].Value == "Time"
+	 * 			this.Children[i].Children[j].Value == "10:10"
+	 * this["Time"] == "10:10"
+	 */
+	public string this[string keyInChildren] {
+		get {
+			return GetGrandChildValueByKey(keyInChildren);
+		}
+	}
+
+	// Integer indexer for accessing a child, returns null if out of range
+	public DataNode this[int index] {
+		get {
+			if (ListUtil.InRange(Children, index)) {
+				return Children[index];
+			} else {
+				return null;
+			}
+		}
+	}
+
 	// Empty Constructor
 	// CAUTION: should only use if you're going to set the values later
 	public DataNode () {
@@ -45,6 +69,16 @@ public class DataNode {
 	public bool HasParent {
 		get {
 			return Parent != null;
+		}
+	}
+
+	public int ChildCount {
+		get {
+			if (HasChildren) {
+				return Children.Count;
+			} else {
+				return 0;
+			}
 		}
 	}
 
@@ -109,6 +143,55 @@ public class DataNode {
 			"Children={1}]", Value, ListUtil.ToString(Children));
 	}
 		
+	// Recursive: Returns the object it was called on if the parent is null
+	public DataNode Root () {
+		if (Parent == null) {
+			return this;
+		} else {
+			return Parent.Root();
+		}
+	}
+
+	public string GetGrandChildValueByKey (string key) {
+		for (int i = 0; i < ChildCount; i++) {
+			if (Children[i].Value == key && Children[i].HasChildren) {
+				return Children[i].Children[0].Value;
+			}
+		}
+
+		return null;
+	}
+
+	// Recursive: Returns first node it finds, or null if no node is found
+	public DataNode SearchForNodeByValue (string value) {
+		if (this.Value == value) {
+			return this;
+		} else if (HasChildren) {
+
+			DataNode[] resultNodes = new DataNode[ChildCount];
+
+			for (int i = 0; i < resultNodes.Length; i++) {
+				resultNodes[i] = Children[i].SearchForNodeByValue(value);
+			}
+
+			return tryReturnFirstNonNullNode (
+				resultNodes
+			);
+
+		} else {
+			return null;
+		}
+	}
+
+	DataNode tryReturnFirstNonNullNode (params DataNode[] nodes) {
+		for (int i = 0; i < nodes.Length; i++) {
+			if (nodes[i] != null) {
+				return nodes[i];
+			}
+		}
+
+		return null;
+	}
 	int maxDepthFromChildren (int currentDepth) {
 
 		int [] childrenMaxDepths = new int[Children.Count];
