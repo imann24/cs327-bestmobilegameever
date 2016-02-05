@@ -192,6 +192,8 @@ public class DataNode {
 
 		return null;
 	}
+
+	// Finds the greatest depth: to be coupled with the Depth function recursively
 	int maxDepthFromChildren (int currentDepth) {
 
 		int [] childrenMaxDepths = new int[Children.Count];

@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ * Author: Isaiah Mann
+ * Description: Utility scripts for handling XML files and classes
+ */
+
+using UnityEngine;
 using System.Xml;
 using System.Collections;
 

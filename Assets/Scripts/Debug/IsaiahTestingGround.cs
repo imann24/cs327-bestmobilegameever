@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/*
+ * Author: Isaiah Mann
+ * Description: Debugging/demonstration script (like a debugging Main function)
+ */
+using UnityEngine;
 using System.Xml;
 using System.Collections;
 
