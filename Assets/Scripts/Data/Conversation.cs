@@ -1,7 +1,8 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
-[System.Serializable];
+
+[System.Serializable]
 public class Conversation
 {
 	public DataTree Tree;
@@ -26,7 +27,7 @@ public class Conversation
 	}
 
 	//Get the string preceding current string
-	public string GetParentDialogue()
+	public string GetParentDialogueText()
 	{
 		return Cursor.Parent.Value;
 
