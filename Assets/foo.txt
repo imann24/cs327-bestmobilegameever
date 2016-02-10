@@ -1,7 +1,0 @@
-Hello World
-
-<<<<<<< HEAD
-Person with GitHub Desktop is making changes
-=======
-Person is editing it from the command line Git
->>>>>>> origin/master
