@@ -11,6 +11,8 @@ public class Item : MonoBehaviour {
 
 	public string itemName;
 	public string itemDescription;
+
+	[System.NonSerialized] // Texture2D's are non-serializable
 	public Texture2D icon;
 	public int itemCount;
 
