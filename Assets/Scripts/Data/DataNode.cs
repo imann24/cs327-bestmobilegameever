@@ -20,7 +20,7 @@ public class DataNode {
 	 */
 	public string this[string keyInChildren] {
 		get {
-			return GetGrandChildValueByKey(keyInChildren);
+			return GetFirstGrandChildValueByKey(keyInChildren);
 		}
 	}
 
@@ -152,10 +152,28 @@ public class DataNode {
 		}
 	}
 
-	public string GetGrandChildValueByKey (string key) {
+	public string GetFirstGrandChildValueByKey (string key) {
+		try {
+			return GetGrandChildrenValuesByKey(key)[0];
+		} catch {
+			return null;
+		}
+	}
+		
+	public DataNode[] GetGrandChildrenByKey (string key) {
 		for (int i = 0; i < ChildCount; i++) {
 			if (Children[i].Value == key && Children[i].HasChildren) {
-				return Children[i].Children[0].Value;
+				return Children[i].Children.ToArray();
+			}
+		}
+
+		return null;
+	}
+
+	public string[] GetGrandChildrenValuesByKey (string key) {
+		for (int i = 0; i < ChildCount; i++) {
+			if (Children[i].Value == key && Children[i].HasChildren) {
+				return (childValues(Children[i]));
 			}
 		}
 
@@ -214,5 +232,15 @@ public class DataNode {
 	// A helper method because it would cause stack overflow to initialize Children in the variable header
 	void initChildList () {
 		Children = new List<DataNode>();
+	}
+
+	string [] childValues (DataNode parentNode) {
+		string [] values = new string[parentNode.ChildCount];
+
+		for (int i = 0; i < values.Length; i++) {
+			values[i] = parentNode[i].Value;
+		}
+
+		return values;
 	}
 }

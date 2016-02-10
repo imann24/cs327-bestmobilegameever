@@ -1,0 +1,1 @@
+For prefabs: archetypes for GameObjects that can exist across multiple scenes
