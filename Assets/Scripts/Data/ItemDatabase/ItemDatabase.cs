@@ -11,21 +11,22 @@ using System.Collections.Generic;
 [System.Serializable]
 public class ItemDatabase : MonoBehaviour {
 
-	public List<Item> items = new List<Item>();
+	public List<Item> Items = new List<Item>();
 
 	// stub for now; should read item information from the controller(?) in a certain format
 	// and addItem to the list of items
 	// But we should just do it via the Unity interface...
-	public void initItemDatabase() {
-		throw new System.NotImplementedException();
+	public void InitItemDatabase(string filePath) {
+		DataTree ItemsTree = XMLReader.ReadXMLAsDataTree(XMLReader.Read (filePath));
 	}
 
-	public Item getItem(string itemName) {
-		return items.Find(x => x.itemName == itemName);
+
+	public Item GetItem(string itemName) {
+		return Items.Find(x => x.ItemName == itemName);
 	}
 		
-	private void addItem(Item item) {
-		items.Add (item);
+	private void _addItem(Item item) {
+		Items.Add (item);
 	}
 	
 }
