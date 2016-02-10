@@ -20,7 +20,7 @@ public class DataTree {
 	 */
 	public string this[string keyInChildren] {
 		get {
-			return Root.GetGrandChildValueByKey(keyInChildren);
+			return Root.GetFirstGrandChildValueByKey(keyInChildren);
 		}
 	}
 
