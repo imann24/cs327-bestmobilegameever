@@ -1,20 +1,18 @@
 ﻿/*
- * Author: Isaiah Mann
+ * Author: Donna Pan
  * Description: Debugging/demonstration script (like a debugging Main function)
  */
 using UnityEngine;
 using System.Xml;
 using System.Collections;
 
-public class IsaiahTestingGround : MonoBehaviour {
+public class DonnaTestingGround : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
 
-		// If you're not familiar with the data structure of a tree: http://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm
-
 		// This is the funciton you can use to load any XML file stored inside the Resources folder
-		DataTree tree = DataUtil.ParseXML("Text/TestFile");
+		DataTree tree = DataUtil.ParseXML("Text/SampleItemsList");
 
 		// You can print all the tree data to console because the ToString method I implemented (for debugging purposes)
 		Debug.Log(tree);

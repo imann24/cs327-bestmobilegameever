@@ -1,0 +1,12 @@
+<inventory>
+	<item>
+		<name>Orange</name>
+		<description>Throw me!</description>
+		<icon>Visual/TestOrange.jpg</icon>
+	</item>
+	<item>
+		<name>Shuriken</name>
+		<description>Throw me 2!</description>
+		<icon>Visual/TestShuriken.jpg</icon>
+	</item>
+</inventory>
