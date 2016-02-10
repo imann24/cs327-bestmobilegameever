@@ -1,1 +1,3 @@
 Hello World
+
+Person is editing it from the command line Git
