@@ -87,7 +87,13 @@ public class DirectedGraphNode<T> {
 	}
 
 	public bool HasNeighbor (T valueOfNeighbor) {
-		return Value.Equals(valueOfNeighbor);
+		for (int i = 0; i < Neighbors.Count; i++) {
+			if (Neighbors[i]._value.Equals(valueOfNeighbor)) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	// Only returns first neighbor with matching value
