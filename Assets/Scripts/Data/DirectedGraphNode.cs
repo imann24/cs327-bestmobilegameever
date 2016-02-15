@@ -74,7 +74,7 @@ public class DirectedGraphNode<T> {
 
 		checkNeighborsList();
 
-		neighbor.AddNeighbor(neighbor);
+		Neighbors.Add(neighbor);
 	}
 
 	public void AddNeighbors (DirectedGraphNode<T>[] neighbors) {
@@ -83,7 +83,7 @@ public class DirectedGraphNode<T> {
 		}
 	}
 	public bool HasNeighbor (DirectedGraphNode<T> neighbor) {
-		return HasNeighbor(neighbor.Value);
+		return HasNeighbor(neighbor._value);
 	}
 
 	public bool HasNeighbor (T valueOfNeighbor) {
