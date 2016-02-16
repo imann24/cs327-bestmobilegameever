@@ -10,13 +10,8 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		testSwellsAndSweeteners();
 	}
-
-	void testSwellsAndSweeteners () {
-		AudioController.Instance.TestCycling();
-	}
-
+		
 	// Test randomized queue
 	void randomizedQeueDemo () {
 		string[] testList = new string[]{"one", "two", "three"};

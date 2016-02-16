@@ -3,7 +3,7 @@
  * Description: Used to control the audio in the game
  * Is a Singleton (only one instance can exist at once)
  * Attached to a GameObject that stores all AudioSources and AudioListeners for the game
- * Dependencies: AudioFile, AudioLoader, AudioList, AudioUtil
+ * Dependencies: AudioFile, AudioLoader, AudioList, AudioUtil, RandomizedQueue<AudioFile>
  */
 using UnityEngine;
 using System;
@@ -38,8 +38,8 @@ public class AudioController : MonoBehaviour {
 	// Set to false to halt active coroutines
 	bool _coroutinesActive = true;
 	[Header("Sweeteners")]
-	public float ShortestSweetenerPlayFrequenecy;
-	public float LongestSweetenerPlayFrequenecy;
+	public float ShortestSweetenerPlayFrequenecy = 10;
+	public float LongestSweetenerPlayFrequenecy = 25;
 
 	void Awake () {
 		Init();
@@ -64,8 +64,7 @@ public class AudioController : MonoBehaviour {
 	}
 		
 	public void Play (AudioFile file) {
-
-		Debug.Log("PLaying " + file.FileName + " " + Time.time);
+	
 		AudioSource source = GetChannel(file.Channel);
 
 		CheckMute(file, source);
@@ -131,6 +130,7 @@ public class AudioController : MonoBehaviour {
 	}
 
 
+	// Must be colled to setup the class's functionality
 	void Init () {
 
 		// Singleton method returns a bool depending on whether this object is the instance of the class
@@ -148,6 +148,8 @@ public class AudioController : MonoBehaviour {
 			if (isAudioListener) {
 				AddAudioListener();
 			}
+
+			initCyclingAudio();
 	
 		}
 	}
@@ -220,6 +222,7 @@ public class AudioController : MonoBehaviour {
 
 	}
 
+	// Uses C#'s delegate system
 	void SubscribeEvents () {
 		EventController.OnNamedEvent += HandleEvent;
 		EventController.OnAudioEvent += HandleEvent;
@@ -286,6 +289,7 @@ public class AudioController : MonoBehaviour {
 		gameObject.AddComponent<AudioListener>();
 	}
 
+	// Used to loop through lists of tracks in pseudo-random order
 	void startTrackCycling () {
 		_sweetenerCoroutine = cycleTracksFrequenecyRange(
 			_sweeteners,
@@ -303,12 +307,14 @@ public class AudioController : MonoBehaviour {
 		);
 	}
 
-	public void TestCycling () {
-		_sweeteners = new RandomizedQueue<AudioFile>(fileList[0], fileList[1]);
-		_swells = new RandomizedQueue<AudioFile>(fileList[0], fileList[1]);
+	void initCyclingAudio () {
+		//TODO: Init Queue's with sound files once they're delivered
+		_sweeteners = new RandomizedQueue<AudioFile>();
+		_swells = new RandomizedQueue<AudioFile>();
 		startTrackCycling();
 	}
 
+	// Plays audio files back to back
 	IEnumerator cycleTracksContinuous (RandomizedQueue<AudioFile> files) {
 		while (_coroutinesActive) {	
 			AudioFile nextTrack = files.Cycle();
@@ -317,6 +323,7 @@ public class AudioController : MonoBehaviour {
 		}
 	}
 
+	// Plays audio files on a set frequenecy
 	IEnumerator cycleTracksFrequenecy (RandomizedQueue<AudioFile> files, float frequenecy) {
 		while (_coroutinesActive) {
 			Play(files.Cycle());
@@ -324,6 +331,7 @@ public class AudioController : MonoBehaviour {
 		}
 	}
 
+	// Coroutine that varies the frequency with which it plays audio files
 	IEnumerator cycleTracksFrequenecyRange (RandomizedQueue<AudioFile> files, float minFrequency, float maxFrequency) {
 		while (_coroutinesActive) {
 			Play(files.Cycle());
@@ -337,6 +345,8 @@ public class AudioController : MonoBehaviour {
 		}
 	}
 
+
+	// Starts an arbitrary amount of coroutines
 	void startCoroutines (params IEnumerator[] coroutines) {
 		for (int i = 0; i < coroutines.Length; i++) {
 			StartCoroutine(coroutines[i]);
