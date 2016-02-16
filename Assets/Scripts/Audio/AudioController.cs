@@ -95,13 +95,13 @@ public class AudioController : MonoBehaviour {
 
 	public void ToggleFXMute () {
 		SettingsUtil.ToggleFXMuted (
-			!SettingsUtil.fxMuted
+			!SettingsUtil.FXMuted
 		);
 	}
 
 	public void ToggleMusicMute () {
 		SettingsUtil.ToggleMusicMuted (
-			!SettingsUtil.musicMuted
+			!SettingsUtil.MusicMuted
 		);
 	}
 		
