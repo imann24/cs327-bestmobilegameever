@@ -34,6 +34,8 @@ public static class AudioUtil {
 			return AudioType.FX;
 		case "Music":
 			return AudioType.Music;
+		case "VO":
+			return AudioType.VO;
 		default:
 			throw new System.Collections.Generic.KeyNotFoundException();
 		}
@@ -42,9 +44,9 @@ public static class AudioUtil {
 	public static bool IsMuted (AudioType audioType) {
 		switch (audioType) {
 		case AudioType.FX:
-			return SettingsUtil.fxMuted;
+			return SettingsUtil.FXMuted;
 		case AudioType.Music:
-			return SettingsUtil.musicMuted;
+			return SettingsUtil.MusicMuted;
 		default:
 			throw new System.Collections.Generic.KeyNotFoundException();
 		}
