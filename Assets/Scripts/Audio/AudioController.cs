@@ -3,7 +3,7 @@
  * Description: Used to control the audio in the game
  * Is a Singleton (only one instance can exist at once)
  * Attached to a GameObject that stores all AudioSources and AudioListeners for the game
- * Dependencies: AudioFile, AudioLoader, AudioList, AudioUtil
+ * Dependencies: AudioFile, AudioLoader, AudioList, AudioUtil, RandomizedQueue<AudioFile>
  */
 using UnityEngine;
 using System;
@@ -14,7 +14,7 @@ public class AudioController : MonoBehaviour {
 	public bool isAudioListener = true;
 
 	// Singleton implementation
-	static AudioController instance;
+	public static AudioController Instance;
 
 	const string path = "Audio/AudioList";
 	AudioList fileList;
@@ -28,6 +28,18 @@ public class AudioController : MonoBehaviour {
 	// Stores all the audio events inside dictionaries
 	Dictionary<string, List<AudioFile>> playEvents = new Dictionary<string, List<AudioFile>>();
 	Dictionary<string, List<AudioFile>> stopEvents = new Dictionary<string, List<AudioFile>>();
+
+	// Audio Control Patterns
+	RandomizedQueue<AudioFile> _swells;
+	RandomizedQueue<AudioFile> _sweeteners;
+	IEnumerator _swellCoroutine;
+	IEnumerator _sweetenerCoroutine;
+
+	// Set to false to halt active coroutines
+	bool _coroutinesActive = true;
+	[Header("Sweeteners")]
+	public float ShortestSweetenerPlayFrequenecy = 10;
+	public float LongestSweetenerPlayFrequenecy = 25;
 
 	void Awake () {
 		Init();
@@ -52,6 +64,7 @@ public class AudioController : MonoBehaviour {
 	}
 		
 	public void Play (AudioFile file) {
+	
 		AudioSource source = GetChannel(file.Channel);
 
 		CheckMute(file, source);
@@ -117,10 +130,11 @@ public class AudioController : MonoBehaviour {
 	}
 
 
+	// Must be colled to setup the class's functionality
 	void Init () {
 
 		// Singleton method returns a bool depending on whether this object is the instance of the class
-		if (SingletonUtil.TryInit(ref instance, this, gameObject)) {
+		if (SingletonUtil.TryInit(ref Instance, this, gameObject)) {
 				
 			loader = new AudioLoader(path);
 			fileList = loader.Load();
@@ -134,6 +148,8 @@ public class AudioController : MonoBehaviour {
 			if (isAudioListener) {
 				AddAudioListener();
 			}
+
+			initCyclingAudio();
 	
 		}
 	}
@@ -205,6 +221,8 @@ public class AudioController : MonoBehaviour {
 		}
 
 	}
+
+	// Uses C#'s delegate system
 	void SubscribeEvents () {
 		EventController.OnNamedEvent += HandleEvent;
 		EventController.OnAudioEvent += HandleEvent;
@@ -270,4 +288,69 @@ public class AudioController : MonoBehaviour {
 	void AddAudioListener () {
 		gameObject.AddComponent<AudioListener>();
 	}
+
+	// Used to loop through lists of tracks in pseudo-random order
+	void startTrackCycling () {
+		_sweetenerCoroutine = cycleTracksFrequenecyRange(
+			_sweeteners,
+			ShortestSweetenerPlayFrequenecy,
+			LongestSweetenerPlayFrequenecy
+		);
+
+		_swellCoroutine = cycleTracksContinuous (
+			_swells
+		);
+
+		startCoroutines(
+			_sweetenerCoroutine,
+			_swellCoroutine
+		);
+	}
+
+	void initCyclingAudio () {
+		//TODO: Init Queue's with sound files once they're delivered
+		_sweeteners = new RandomizedQueue<AudioFile>();
+		_swells = new RandomizedQueue<AudioFile>();
+		startTrackCycling();
+	}
+
+	// Plays audio files back to back
+	IEnumerator cycleTracksContinuous (RandomizedQueue<AudioFile> files) {
+		while (_coroutinesActive) {	
+			AudioFile nextTrack = files.Cycle();
+			Play(nextTrack);
+			yield return new WaitForSeconds(nextTrack.Clip.length);
+		}
+	}
+
+	// Plays audio files on a set frequenecy
+	IEnumerator cycleTracksFrequenecy (RandomizedQueue<AudioFile> files, float frequenecy) {
+		while (_coroutinesActive) {
+			Play(files.Cycle());
+			yield return new WaitForSeconds(frequenecy);
+		}
+	}
+
+	// Coroutine that varies the frequency with which it plays audio files
+	IEnumerator cycleTracksFrequenecyRange (RandomizedQueue<AudioFile> files, float minFrequency, float maxFrequency) {
+		while (_coroutinesActive) {
+			Play(files.Cycle());
+
+			yield return new WaitForSeconds(
+				UnityEngine.Random.Range(
+					minFrequency, 
+					maxFrequency
+				)
+			);
+		}
+	}
+
+
+	// Starts an arbitrary amount of coroutines
+	void startCoroutines (params IEnumerator[] coroutines) {
+		for (int i = 0; i < coroutines.Length; i++) {
+			StartCoroutine(coroutines[i]);
+		}
+	}
+
 }

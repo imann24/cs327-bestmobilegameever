@@ -25,6 +25,12 @@ public class AudioFile {
 		}
 	}
 
+	public float ClipLength {
+		get {
+			return Clip.length;
+		}
+	}
+
 	public string FileName;
 	public string[] EventNames;
 	public string[] StopEventNames;
