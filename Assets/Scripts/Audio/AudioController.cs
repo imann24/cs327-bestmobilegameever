@@ -14,7 +14,7 @@ public class AudioController : MonoBehaviour {
 	public bool isAudioListener = true;
 
 	// Singleton implementation
-	static AudioController instance;
+	public static AudioController Instance;
 
 	const string path = "Audio/AudioList";
 	AudioList fileList;
@@ -28,6 +28,18 @@ public class AudioController : MonoBehaviour {
 	// Stores all the audio events inside dictionaries
 	Dictionary<string, List<AudioFile>> playEvents = new Dictionary<string, List<AudioFile>>();
 	Dictionary<string, List<AudioFile>> stopEvents = new Dictionary<string, List<AudioFile>>();
+
+	// Audio Control Patterns
+	RandomizedQueue<AudioFile> _swells;
+	RandomizedQueue<AudioFile> _sweeteners;
+	IEnumerator _swellCoroutine;
+	IEnumerator _sweetenerCoroutine;
+
+	// Set to false to halt active coroutines
+	bool _coroutinesActive = true;
+	[Header("Sweeteners")]
+	public float ShortestSweetenerPlayFrequenecy;
+	public float LongestSweetenerPlayFrequenecy;
 
 	void Awake () {
 		Init();
@@ -52,6 +64,8 @@ public class AudioController : MonoBehaviour {
 	}
 		
 	public void Play (AudioFile file) {
+
+		Debug.Log("PLaying " + file.FileName + " " + Time.time);
 		AudioSource source = GetChannel(file.Channel);
 
 		CheckMute(file, source);
@@ -120,7 +134,7 @@ public class AudioController : MonoBehaviour {
 	void Init () {
 
 		// Singleton method returns a bool depending on whether this object is the instance of the class
-		if (SingletonUtil.TryInit(ref instance, this, gameObject)) {
+		if (SingletonUtil.TryInit(ref Instance, this, gameObject)) {
 				
 			loader = new AudioLoader(path);
 			fileList = loader.Load();
@@ -205,6 +219,7 @@ public class AudioController : MonoBehaviour {
 		}
 
 	}
+
 	void SubscribeEvents () {
 		EventController.OnNamedEvent += HandleEvent;
 		EventController.OnAudioEvent += HandleEvent;
@@ -270,4 +285,62 @@ public class AudioController : MonoBehaviour {
 	void AddAudioListener () {
 		gameObject.AddComponent<AudioListener>();
 	}
+
+	void startTrackCycling () {
+		_sweetenerCoroutine = cycleTracksFrequenecyRange(
+			_sweeteners,
+			ShortestSweetenerPlayFrequenecy,
+			LongestSweetenerPlayFrequenecy
+		);
+
+		_swellCoroutine = cycleTracksContinuous (
+			_swells
+		);
+
+		startCoroutines(
+			_sweetenerCoroutine,
+			_swellCoroutine
+		);
+	}
+
+	public void TestCycling () {
+		_sweeteners = new RandomizedQueue<AudioFile>(fileList[0], fileList[1]);
+		_swells = new RandomizedQueue<AudioFile>(fileList[0], fileList[1]);
+		startTrackCycling();
+	}
+
+	IEnumerator cycleTracksContinuous (RandomizedQueue<AudioFile> files) {
+		while (_coroutinesActive) {	
+			AudioFile nextTrack = files.Cycle();
+			Play(nextTrack);
+			yield return new WaitForSeconds(nextTrack.Clip.length);
+		}
+	}
+
+	IEnumerator cycleTracksFrequenecy (RandomizedQueue<AudioFile> files, float frequenecy) {
+		while (_coroutinesActive) {
+			Play(files.Cycle());
+			yield return new WaitForSeconds(frequenecy);
+		}
+	}
+
+	IEnumerator cycleTracksFrequenecyRange (RandomizedQueue<AudioFile> files, float minFrequency, float maxFrequency) {
+		while (_coroutinesActive) {
+			Play(files.Cycle());
+
+			yield return new WaitForSeconds(
+				UnityEngine.Random.Range(
+					minFrequency, 
+					maxFrequency
+				)
+			);
+		}
+	}
+
+	void startCoroutines (params IEnumerator[] coroutines) {
+		for (int i = 0; i < coroutines.Length; i++) {
+			StartCoroutine(coroutines[i]);
+		}
+	}
+
 }

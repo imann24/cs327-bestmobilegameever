@@ -10,7 +10,24 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		testSwellsAndSweeteners();
+	}
+
+	void testSwellsAndSweeteners () {
+		AudioController.Instance.TestCycling();
+	}
+
+	// Test randomized queue
+	void randomizedQeueDemo () {
+		string[] testList = new string[]{"one", "two", "three"};
+
+		RandomizedQueue<string> queue = new RandomizedQueue<string>(testList);
+
+		// Cycle ensures that the randomized queue does not return the same value two times in a row
+		// But it also re-adds the value
+		for (int i = 0; i < 20; i++) {
+			Debug.Log(queue.Cycle());
+		}
 	}
 
 	// For testing AudioController class
