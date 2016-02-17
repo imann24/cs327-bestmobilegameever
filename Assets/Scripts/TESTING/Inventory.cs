@@ -24,11 +24,6 @@ public class Inventory {
 	private Inventory() {
 		panel = GameObject.Find ("inventory_panel").GetComponent<InvPanel>();
 		slots = panel.transform.GetComponentsInChildren<InvSlot> ();
-
-		/**foreach (Transform child in panel.transform) {
-			InvSlot slot = child.gameObject.AddComponent<InvSlot> ();
-			slots [child.transform.GetSiblingIndex ()] = slot;
-		}**/
 	}
 
 	public void AddItem(InvItem item){

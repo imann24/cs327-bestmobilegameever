@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Inventory inv = Inventory.Instance;
+		CharacterManager chrs = CharacterManager.Instance;
 	}
 
 	public void OpenOptions(){
