@@ -47,6 +47,9 @@ public class AudioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		PlayMusic();
+
 	}
 
 	void OnDestroy () {
@@ -149,7 +152,8 @@ public class AudioController : MonoBehaviour {
 				AddAudioListener();
 			}
 
-			initCyclingAudio();
+			// TODO: Enable after tracks have been delivered
+			// initCyclingAudio();
 	
 		}
 	}
