@@ -1,13 +1,12 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEditor;
 
-public class VisualConversationDisplayer : ConversationInterface {
+public class VisualConversationDisplayer {
 
-	public Conversation CurrentConvo;
+	public ConversationInterface<string> CurrentConvo;
 
-	public VisualConversationDisplayer (Conversation c){
+	public VisualConversationDisplayer (ConversationInterface<string> c){
 		CurrentConvo = c;
 	}
 
