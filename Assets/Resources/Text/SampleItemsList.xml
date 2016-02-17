@@ -2,11 +2,14 @@
 	<item>
 		<name>Orange</name>
 		<description>Throw me!</description>
-		<icon>Visual/TestOrange.jpg</icon>
+		<combo_item>no<combo_item>
+		<icon>Orange1.jpg</icon>
+		<icon>Orange2.jpg</icon>
 	</item>
 	<item>
-		<name>Shuriken</name>
-		<description>Throw me 2!</description>
-		<icon>Visual/TestShuriken.jpg</icon>
+		<name>OJ</name>
+		<description>Made with 2 oranges and a blender.</description>
+		<combo_item>yes<combo_item>
+		<icon>OJ.jpg</icon>
 	</item>
 </inventory>
