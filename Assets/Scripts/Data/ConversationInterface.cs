@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public interface ConversationInterface
+public interface ConversationInterface<T>
 {
 
 	/** get the first line of dialogue in the conversation**/
