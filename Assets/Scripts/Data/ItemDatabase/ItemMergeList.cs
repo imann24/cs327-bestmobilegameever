@@ -8,7 +8,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[System.Serializable]
 public class ItemMergeList : MonoBehaviour {
 
 	const string LISTFILE = "Text/SampleMergeList";
@@ -23,8 +22,13 @@ public class ItemMergeList : MonoBehaviour {
 			i++;
 		}
 	}
-		
-	// stub until figure out return type
-	public void GetRecipe(string objective_item) {
+
+	public Recipe GetRecipe(string objective_item) {
+		foreach (Recipe recipe in MergeList) {
+			if(recipe.Objective.Equals(objective_item)) {
+				return recipe;
+			}
+		}
+		return null;
 	}
 }

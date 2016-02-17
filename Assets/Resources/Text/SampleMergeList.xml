@@ -1,10 +1,12 @@
 ﻿<merge_list>
 	<recipe>
 		<objective>OJ</objective>
-		<ingredient>Orange
+		<ingredient>
+			<name>Orange</name>
 			<count>2</count>
 		</ingredient>
-		<ingredient>Blender
+		<ingredient>
+			<name>Blender</name>
 			<count>1</count>
 		</ingredient>
 	</recipe>
