@@ -45,6 +45,7 @@ public class SaveLoad {
 [Serializable]
 class PlayerData
 {
+	public Dictionary<string, bool> someData;
 //	public float HighScore;
 //	public float Money;
 }

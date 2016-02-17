@@ -1,0 +1,12 @@
+<characters>
+	<Bob>
+		<sprite>Visual/BobIdle.jpg</sprite>	
+		<sprite>Visual/BobIdle2.jpg</sprite>	
+	</Bob>
+	<Bob2>
+		<sprite>Visual/Bob2Idle.jpg</sprite>	
+		<sprite>Visual/Bob2Idle2.jpg</sprite>
+		<sprite>Visual/Bob2Idle3.jpg</sprite>
+		<sprite>Visual/Bob2Idle4.jpg</sprite>
+	</Bob2>
+</characters>
