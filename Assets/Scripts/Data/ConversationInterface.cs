@@ -2,7 +2,6 @@
 using UnityEngine;
 using System.Collections;
 
-
 public interface ConversationInterface<T>
 {
 
