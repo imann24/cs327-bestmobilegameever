@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: 03b610f6099c8f14d86202b06c6ef4f6
+timeCreated: 1455742447
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Puzzle1_0
+    21300002: Puzzle1_1
+    21300004: Puzzle1_2
+    21300006: Puzzle1_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Puzzle1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 300
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150, y: 193}
+        - {x: -150, y: 193}
+        - {x: -150, y: -191}
+        - {x: -104, y: -191}
+        - {x: -105, y: -193}
+        - {x: 2, y: -193}
+        - {x: 1, y: -191}
+        - {x: 150, y: -191}
+    - name: Puzzle1_1
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 853
+        width: 151
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.5, y: 84.5}
+        - {x: -75.5, y: 17.5}
+        - {x: -75.5, y: -63.5}
+        - {x: -38.5, y: -84.5}
+        - {x: -2.5, y: -84.5}
+        - {x: 75.5, y: -53.5}
+        - {x: 75.5, y: 78.5}
+        - {x: 67.5, y: 84.5}
+    - name: Puzzle1_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 176
+        width: 511
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Puzzle1_3
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 413
+        width: 227
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
