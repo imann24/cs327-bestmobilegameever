@@ -48,8 +48,11 @@ public class DataTree {
 		}
 	}
 
-	public int LeafNodeCount () {
-		throw new System.NotImplementedException();
+	// How many children in the tree have no children of their own
+	public int LeafCount () {
+
+		return Root.LeafCount();
+
 	}
 
 	// Currently adds child nodes to the root, will think about revising to be able to add nodes to any child node

@@ -87,7 +87,8 @@ public class RandomizedQueue<T> {
 	bool isMostRecent (T value) {
 		return _mostRecentRemoved != null && value.Equals(_mostRecentRemoved);
 	}
-	
+
+	// Tests the cycling functionality of the Queue
 	bool canReturnNonMostRecentItem () { 
 		return _data.Count > 1 || !isMostRecent(_data[0]);
 	}

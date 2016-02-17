@@ -234,6 +234,22 @@ public class DataNode {
 		Children = new List<DataNode>();
 	}
 
+	// How many children in the tree (or this branch) have no children of their own
+	public int LeafCount () {
+		if (HasChildren) {
+			int sum = 0;
+
+			for (int i = 0; i < ChildCount; i++) {
+				sum += Children[i].LeafCount();
+			}
+
+			return sum;
+				
+		} else {
+			return 1;
+		}
+	}
+
 	string [] childValues (DataNode parentNode) {
 		string [] values = new string[parentNode.ChildCount];
 

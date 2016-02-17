@@ -10,6 +10,7 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 	}
 		
 	// Test randomized queue
@@ -30,7 +31,7 @@ public class IsaiahTestingGround : MonoBehaviour {
 		EventController.Event("testStart");
 		EventController.Event(PSEventType.StartMusic);
 	}
-
+		
 	// Demonstration of the functionality of the DataTree class
 	void dataTreeDemonstration () {
 
@@ -56,6 +57,9 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 		// You can combine the integer indexing and the string indexing
 		Debug.Log(tree[1]["data-point"]);
+
+		// How many children w/out children of their own are in the tree
+		Debug.Log(tree.LeafCount());
 
 	}
 
