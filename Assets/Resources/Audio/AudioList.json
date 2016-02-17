@@ -10,13 +10,13 @@
 			"Volume": 100
 		},
 		{
-			“FileName”:"demoLoop",
+			“FileName”:"TitleMenu_Soundtrack_1",
 			“EventNames”:["musicStart"],
 			"StopEventNames":["musicStop"],
 			“Loop”:true,
 			“Type”: "Music",
 			“Channel”:1,
-			"Volume": 50
+			"Volume": 100
 		}
 	]
 }
