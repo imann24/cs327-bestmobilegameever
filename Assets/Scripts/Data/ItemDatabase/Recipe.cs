@@ -19,7 +19,7 @@ public class Recipe : MonoBehaviour {
 		Objective = recipe [0].Value;
 		int i = 1;
 		while (recipe [i] != null) {
-			Dictionary<string,int> ingredient = new Dictionary<string,int> (recipe [i] [0], recipe [i] [1]);
+			Dictionary<string,int> ingredient = new Dictionary<string,int> (recipe [i] [0].Value, recipe [i] [1].Value);
 			Ingredients.Add (ingredient);
 		}
 	}
