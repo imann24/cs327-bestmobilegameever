@@ -9,7 +9,9 @@ using System.Collections;
 public class MainMenuController : MonoBehaviour {
 
 	public void LaunchGame () {
+
 		SceneController.LoadMainGame();
+
 	}
 
 }
