@@ -10,6 +10,7 @@ public static class SettingsUtil {
 	// Keys used to acccess the settings from player prefs
 	const string musicMuteSettingsKey = "musicMute";
 	const string fxMuteSettingsKey = "fxMute";
+	const string voMuteSettingsKey = "voMute";
 
 	public static void ToggleMusicMuted (bool muted) {
 		ToggleMute (
@@ -35,15 +36,34 @@ public static class SettingsUtil {
 		);
 	}
 
-	public static bool musicMuted {
+	public static void ToggleVOMuted (bool muted) {
+		ToggleMute (
+			voMuteSettingsKey,
+			muted
+		);
+
+		EventController.Event (
+			AudioUtil.MuteActionFromBool(muted),
+			AudioType.VO
+		);
+	}
+
+
+	public static bool MusicMuted {
 		get {
 			return IsMuted(musicMuteSettingsKey);
 		}
 	}
 
-	public static bool fxMuted {
+	public static bool FXMuted {
 		get {
 			return IsMuted(fxMuteSettingsKey);
+		}
+	}
+
+	public static bool VOMuted {
+		get {
+			return IsMuted(voMuteSettingsKey);
 		}
 	}
 

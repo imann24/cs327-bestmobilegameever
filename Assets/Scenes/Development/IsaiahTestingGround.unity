@@ -260,6 +260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAudioListener: 0
+  ShortestSweetenerPlayFrequenecy: 10
+  LongestSweetenerPlayFrequenecy: 25
 --- !u!4 &977978628
 Transform:
   m_ObjectHideFlags: 0

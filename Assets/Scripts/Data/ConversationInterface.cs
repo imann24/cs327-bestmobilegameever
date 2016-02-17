@@ -3,7 +3,11 @@ using UnityEngine;
 using System.Collections;
 
 
+<<<<<<< HEAD
 public interface ConversationInterface
+=======
+public interface ConversationInterface<T>
+>>>>>>> refs/remotes/origin/master
 {
 
 	/** get the first line of dialogue in the conversation**/
