@@ -10,6 +10,29 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+	}
+		
+	// Test randomized queue
+	void randomizedQeueDemo () {
+		string[] testList = new string[]{"one", "two", "three"};
+
+		RandomizedQueue<string> queue = new RandomizedQueue<string>(testList);
+
+		// Cycle ensures that the randomized queue does not return the same value two times in a row
+		// But it also re-adds the value
+		for (int i = 0; i < 20; i++) {
+			Debug.Log(queue.Cycle());
+		}
+	}
+
+	// For testing AudioController class
+	void playSoundDemo () {
+		EventController.Event("testStart");
+		EventController.Event(PSEventType.StartMusic);
+	}
+
+	// Demonstration of the functionality of the DataTree class
+	void dataTreeDemonstration () {
 
 		// If you're not familiar with the data structure of a tree: http://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm
 
@@ -35,7 +58,7 @@ public class IsaiahTestingGround : MonoBehaviour {
 		Debug.Log(tree[1]["data-point"]);
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
