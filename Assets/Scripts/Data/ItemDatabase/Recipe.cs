@@ -13,14 +13,13 @@ using System.Collections.Generic;
 public class Recipe : MonoBehaviour {
 	
 	public string Objective;
-	public List<Dictionary<string,int>> Ingredients = new List<Dictionary<string,int>>();
+	public Dictionary<string,int> Ingredients = new Dictionary<string,int>();
 
 	public Recipe(DataNode recipe) {
 		Objective = recipe [0].Value;
 		int i = 1;
 		while (recipe [i] != null) {
-			Dictionary<string,int> ingredient = new Dictionary<string,int> (recipe [i] [0].Value, recipe [i] [1].Value);
-			Ingredients.Add (ingredient);
+			Ingredients.Add(recipe [i] [0].Value,int.Parse(recipe [i] [1].Value));
 		}
 	}
 }
