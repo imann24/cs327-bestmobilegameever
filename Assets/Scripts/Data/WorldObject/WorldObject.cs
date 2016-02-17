@@ -3,13 +3,7 @@ using System.Collections;
 
 public class WorldObject : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	// Do something when it is interated with 
+	public void Interact() {
 	}
 }

@@ -1,15 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿/*
+ * Author: Donna Pan
+ * Description: Interface for WorldObject class
+ */
 
-public class WorldObjectInterface : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public interface WorldObjectInterface {
+	public void Interact();
 }
