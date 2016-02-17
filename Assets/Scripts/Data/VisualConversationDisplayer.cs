@@ -4,10 +4,16 @@ using UnityEngine.UI;
 
 public class VisualConversationDisplayer {
 
-	public ConversationInterface<string> CurrentConvo;
+	public ConversationInterface CurrentConvo;
+	public GameObject Char1Sprite;
+	public GameObject Char2Sprite;
+	public GameObject BackgroundSprite;
 
-	public VisualConversationDisplayer (ConversationInterface<string> c){
+	public VisualConversationDisplayer (ConversationInterface c, Sprite x, Sprite y, Sprite z){
 		CurrentConvo = c;
+		Char1Sprite = x;
+		Char2Sprite = y;
+		BackgroundSprite = z;
 	}
 
 	public void BeginConvo(){
