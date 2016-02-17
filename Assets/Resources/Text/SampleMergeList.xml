@@ -1,0 +1,13 @@
+﻿<merge_list>
+	<recipe>
+		<objective>OJ</objective>
+		<ingredient>
+			<name>Orange</name>
+			<count>2</count>
+		</ingredient>
+		<ingredient>
+			<name>Blender</name>
+			<count>1</count>
+		</ingredient>
+	</recipe>
+</merge_list>
