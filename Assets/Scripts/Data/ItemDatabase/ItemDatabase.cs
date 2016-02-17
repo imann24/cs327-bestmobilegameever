@@ -11,24 +11,30 @@ using System.Collections.Generic;
 [System.Serializable]
 public class ItemDatabase : MonoBehaviour {
 
-	const string ITEMSFILE = "Text/SampleTextFile";
+	const string ITEMSFILE = "Text/SampleItemsList";
 
 	public List<Item> Items = new List<Item>();
 
-	// stub for now; should read item information from the controller(?) in a certain format
-	// and addItem to the list of items
-	// But we should just do it via the Unity interface...
-	public void InitItemDatabase(string filePath) {
+	public void InitItemDatabase() {
 		DataTree itemTree = DataUtil.ParseXML(ITEMSFILE);
 		int i = 0;
 		while (itemTree [i] != null) { // add all items to inventory
 			Item item = new Item (itemTree [i]);
 			Items.Add (item);
+			i++;
 		}
 	}
 
 	public Item GetItem(string itemName) {
 		return Items.Find(x => x.ItemName == itemName);
+	}
+
+	public void AddItem(string itemName) {
+		GetItem (itemName).AddItem();
+	}
+
+	public void RemoveItem(string itemName) {
+		GetItem (itemName).RemoveItem();
 	}
 	
 }
