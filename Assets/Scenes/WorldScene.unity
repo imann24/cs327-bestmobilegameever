@@ -183,7 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54bd408ccb183e14297fbc1ad287f5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 439672679}
 --- !u!1 &439672675
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  camMoveSpeed: 1
+  camMoveOffset: 2
   moving: 0
 --- !u!1 &525664393
 GameObject:
@@ -426,7 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f9644689d9349479b13fbb87bea89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 439672679}
 --- !u!1 &2095122149
 GameObject:
   m_ObjectHideFlags: 0
