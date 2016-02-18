@@ -1,68 +1,43 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
-
 [System.Serializable]
-public class Conversation
+public class Conversation : ConversationInterface
 {
-	public DataTree Tree;
-	public DataNode Cursor;
-		
-	public Conversation (DataTree t)
+	DirectedGraph<string> Graph;
+	DirectedGraphNode<string> Cursor;
+
+	public Conversation (DirectedGraph<string> Graph)
 	{
-		Tree = t;
-		Cursor = Tree.Root;
+		this.Graph = Graph;
+		Cursor = GetFirstDialogue (); 
 	}
 
-	//Go back to the previous dialogue
-	public void ReturnToParent()
+	public DirectedGraphNode<string> GetFirstDialogue()
 	{
-		Cursor = Cursor.Parent;
+		return Graph.NodeList [0];
 	}
 
-	//Get the dialogue preceding the current dialogue
-	public DataNode GetParentDialogue()
+	public DirectedGraphNode<string> GetCurrentDialogue()
 	{
-		return Cursor.Parent;
-	}
-
-	//Get the string preceding current string
-	public string GetParentDialogueText()
-	{
-		return Cursor.Parent.Value;
+		return Cursor;
 
 	}
-
-	// This first line of dialogue in this conversation
-	public DataNode GetFirstDialogue()
-	{
-		return Tree.Root;
-	}
-
-	// The current line of dialogue, this is changed when you call AdvanceDialogue
-	public DataNode GetCurrentDialogue()
-	{
-		if (Cursor != null) {
-			return Cursor;
-		}
-		return null;
-	}
-
 
 	public string GetCurrentDialogueText()
 	{
+
 		return Cursor.Value;
 	}
 
-	//
-	public void AdvanceDialogue(DataNode Response)
+	public void AdvanceDialogue(DirectedGraphNode<string> Response)
 	{
 		if (Response != null) {
 			Cursor = Response;
 		}
-
 	}
-}
 
+
+}
 
 
