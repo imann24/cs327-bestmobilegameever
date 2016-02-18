@@ -9,6 +9,7 @@ using System.Collections;
 
 public static class XMLUtil {
 
+	// For debugging purposes
 	public static string ToString (XmlDocument document) {
 		string xmlDocAsString = "";
 

@@ -10,6 +10,8 @@ using System.Collections.Generic;
 
 public static class ArrayUtil {
 
+	// Removes empty strings from an Array of strings
+	// Useful for text reading
 	public static string [] RemoveEmptyElements (string [] original) {
 		List<string> modified = new List<string>();
 
@@ -25,6 +27,7 @@ public static class ArrayUtil {
 		return modified.ToArray();
 	}
 
+	// Returns an array w/ first element removed
 	public static T[] RemoveFirst<T> (T[] source) {
 		T[] modified = new T[source.Length - 1];
 
@@ -38,12 +41,14 @@ public static class ArrayUtil {
 		return modified;
 	}
 
+	// Removes and returns first element of an array
 	public static T Pop<T> (ref T[] arrayToModify) {
 		T firstElement = arrayToModify[0];
 		arrayToModify = RemoveFirst(arrayToModify);
 		return firstElement;
 	}
 
+	// Creates an array of two arrays merged
 	public static T[] Concat<T> (T[] source1, T[] source2) {
 		T[] combined = new T[source1.Length + source2.Length];
 
@@ -53,6 +58,7 @@ public static class ArrayUtil {
 		return combined;
 	}
 
+	// Used to convert an array to string (for debugging purposes)
 	public static string ToString<T> (T[] source) {
 		string arrayAsString = "";
 
@@ -63,6 +69,7 @@ public static class ArrayUtil {
 		return arrayAsString;
 	}
 
+	// Fetches the first index of an array element
 	public static int IndexOf<T> (T[] source, T element) where T : IComparable {
 		for (int i = 0; i < source.Length; i++) {
 			if (source[i].CompareTo(element) == 0) {
@@ -73,6 +80,7 @@ public static class ArrayUtil {
 		throw new KeyNotFoundException();
 	}
 
+	// Returns an array with the designated element removed
 	public static T Remove<T> (ref T[]source, T element) where T : IComparable {
 		int index = IndexOf(
 			source,
@@ -98,12 +106,13 @@ public static class ArrayUtil {
 		return element;
 	}
 
-
+	// Adds an element to the list
 	public static void Add<T> (ref T[]source, T element) {
 		T[] modified = new T[source.Length+1];
 		modified[source.Length] = element;
 	}
 
+	// Converts a list of arrays to a string for debugging
 	public static string ToString<T> (List<T>[] source) {
 		string result = string.Empty;
 
@@ -114,6 +123,7 @@ public static class ArrayUtil {
 		return result;
 	}
 
+	// Checks whether a an array contains an element
 	public static bool Contains<T> (T[] source, T element) where T : IComparable {
 		for (int i = 0; i < source.Length; i++) {
 			if (source[i].CompareTo(element) == 0) {
@@ -124,5 +134,14 @@ public static class ArrayUtil {
 		return false;
 	}
 
+	public static int Sum (params int[] values) {
+		int sum = 0;
+
+		for (int i = 0; i < values.Length; i++) {
+			sum += values[i];
+		}
+
+		return sum;
+	}
 
 }

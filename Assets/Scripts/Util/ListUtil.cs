@@ -10,6 +10,7 @@ using System.Collections.Generic;
 
 public static class ListUtil {
 
+	// Checks list for elements
 	public static bool IsNullOrEmpty<T> (List<T> list) {
 		return list == null || list.Count == 0;
 	}
@@ -32,6 +33,7 @@ public static class ListUtil {
 		}
 	}
 
+	// Checks whether an index is in range
 	public static bool InRange<T> (List<T> list, int index) {
 		if (IsNullOrEmpty(list)) {
 			return false;
