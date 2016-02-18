@@ -11,9 +11,9 @@ public class VisualConversationDisplayer {
 
 	public VisualConversationDisplayer (ConversationInterface c, Sprite x, Sprite y, Sprite z){
 		CurrentConvo = c;
-		Char1Sprite = x;
-		Char2Sprite = y;
-		BackgroundSprite = z;
+		Char1Sprite.GetComponent<SpriteRenderer>().sprite = x;
+		Char2Sprite.GetComponent<SpriteRenderer>().sprite = y;
+		BackgroundSprite.GetComponent<SpriteRenderer>().sprite = z;
 	}
 
 	public void BeginConvo(){
