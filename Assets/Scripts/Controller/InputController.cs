@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class InputController : MonoBehaviour {
-	public PlayerMovement player;
-
 	private Camera mainCamera;
 
 	void Start(){
@@ -34,7 +32,7 @@ public class InputController : MonoBehaviour {
 				}
 				else if (recipient.tag == "Ground"){
 					Debug.Log (mainCamera.ScreenToWorldPoint(Input.mousePosition).x);
-					player.MoveTowards(new Vector2 (mainCamera.ScreenToWorldPoint(Input.mousePosition).x, mainCamera.ScreenToWorldPoint(Input.mousePosition).y) , false);
+					PlayerMovement.Instance.MoveTowards(new Vector2 (mainCamera.ScreenToWorldPoint(Input.mousePosition).x, mainCamera.ScreenToWorldPoint(Input.mousePosition).y) , false);
 				}
 			}
 		}
