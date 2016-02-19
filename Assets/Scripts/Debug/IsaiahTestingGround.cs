@@ -10,9 +10,24 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+		testConversation();
 	}
 		
+	// Testing Conversation class
+	void testConversation () {
+
+
+		Conversation conversation = new Conversation("Text/TestFile");
+
+		//while (conversation.
+		Debug.Log(conversation.GetCurrentDialogueText());
+
+		for (int i = 0; i < 5; i++) {
+			Debug.Log(conversation.AdvanceDialogue());
+		}
+	}
+
 	// Test randomized queue
 	void randomizedQeueDemo () {
 		string[] testList = new string[]{"one", "two", "three"};
