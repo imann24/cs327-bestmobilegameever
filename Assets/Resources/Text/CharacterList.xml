@@ -1,9 +1,12 @@
 <characters>
-	<Player>
-		<sprite>Visual/pirate</sprite>		
-	</Player>
-	<Pete>
-		<sprite>Visual/PlaceholderPeteIdle</sprite>	
+	<Sadie>
+		<sprite>Visual/pirate</sprite>	
+	</Sadie>
+	<First_Mate>
+		<sprite>Visual/PlaceholderPeteIdle</sprite>
+	</First_Mate>
+	<Swabbie>
+		<sprite>Visual/PlaceholderPeteIdle</sprite>
 		<sprite>Visual/PlaceholderPeteMopping</sprite>
-	</Pete>
+	</Swabbie>
 </characters>
