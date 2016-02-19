@@ -3,7 +3,7 @@ using System.Collections;
 
 public class InputController : MonoBehaviour {
 	private Camera mainCamera;
-
+	bool _debug = false;
 	void Start(){
 		mainCamera = this.gameObject.GetComponent<Camera> (); 
 	}
@@ -31,7 +31,9 @@ public class InputController : MonoBehaviour {
 					}
 				}
 				else if (recipient.tag == "Ground"){
-					Debug.Log (mainCamera.ScreenToWorldPoint(Input.mousePosition).x);
+					if (_debug) {
+						Debug.Log (mainCamera.ScreenToWorldPoint(Input.mousePosition).x);
+					}
 					PlayerMovement.Instance.MoveTowards(new Vector2 (mainCamera.ScreenToWorldPoint(Input.mousePosition).x, mainCamera.ScreenToWorldPoint(Input.mousePosition).y) , false);
 				}
 			}
