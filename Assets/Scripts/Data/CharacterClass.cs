@@ -13,14 +13,19 @@ public class CharacterClass : MonoBehaviour {
 	string[] sprites = new string[peopleList.GetLength(1) - 1];
 	private SpriteRenderer spriteRenderer;
 
+	bool _spriteLoadingImplemented = false;
+
 	void Start(){
 		GetPeople ();
 		 
 		//indivdual sprite list for character via name
-		sprites = GetSprites (name); 
+		sprites = GetSprites (name);
 		spriteRenderer = GetComponent<SpriteRenderer> ();
-		Sprite currentSprite = (Sprite) Resources.Load (sprites [0], typeof(Sprite)); 
-		spriteRenderer.sprite = currentSprite;
+
+		if (_spriteLoadingImplemented) {
+			Sprite currentSprite = (Sprite) Resources.Load (sprites [0], typeof(Sprite)); 
+			spriteRenderer.sprite = currentSprite;
+		}
 	}
 
 	public void GetPeople(){  //Initializes list of people and their sprites

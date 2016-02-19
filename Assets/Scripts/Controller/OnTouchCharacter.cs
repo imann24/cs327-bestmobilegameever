@@ -3,20 +3,37 @@ using System.Collections;
 
 public class OnTouchCharacter : MonoBehaviour {
 	private Renderer rend;
+	bool _debug = false;
+	bool _mouseDown;
+
 	void Start()
 	{
 		rend = GetComponent<Renderer> ();
 	}
 
-	void OnTouchDown(){
-		Debug.Log ("Tapped");
+	void OnMouseDown(){
+		if (_debug) {
+			Debug.Log ("Tapped");
+		}
+
+		_mouseDown = true;
 	}
-	void OnTouchUp(){
+	void OnMouseUp(){
 		PlayerMovement.Instance.MoveTowards (transform.position, true);
-		Debug.Log ("Let go");
+
+		if (_debug) {
+			Debug.Log ("Let go");
+		}
+
+		_mouseDown = false;
 	}
-	void OnTouchStay(){
-		Debug.Log ("Holding");
+	void OnMouseOver(){
+		if (_mouseDown) {
+
+			if (_debug) {
+				Debug.Log ("Holding");
+			}
+		}
 	}
 	
 }
