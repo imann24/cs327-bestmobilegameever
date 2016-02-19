@@ -11,8 +11,17 @@
 		},
 		{
 			“FileName”:"TitleMenu_Soundtrack_1",
-			“EventNames”:["musicStart"],
-			"StopEventNames":["musicStop"],
+			“EventNames”:["menuMusicStart"],
+			"StopEventNames":["menuMusicStop"],
+			“Loop”:true,
+			“Type”: "Music",
+			“Channel”:1,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Deck_Soundtrack_A_2",
+			“EventNames”:["gameMusicStart"],
+			"StopEventNames":["gameMusicStop"],
 			“Loop”:true,
 			“Type”: "Music",
 			“Channel”:1,
