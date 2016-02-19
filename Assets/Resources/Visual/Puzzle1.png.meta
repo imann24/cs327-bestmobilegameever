@@ -1,13 +1,15 @@
 fileFormatVersion: 2
 guid: 03b610f6099c8f14d86202b06c6ef4f6
-timeCreated: 1455742447
+timeCreated: 1455840485
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Puzzle1_0
-    21300002: Puzzle1_1
-    21300004: Puzzle1_2
-    21300006: Puzzle1_3
+    21300000: Puzzle1_portrait_remastered
+    21300002: Puzzle1_paint
+    21300004: Puzzle1_rope
+    21300006: Puzzle1_seaweed
+    21300008: Puzzle1_portrait_original
+    21300010: Puzzle1_mop
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,66 +56,125 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Puzzle1_0
+    - name: Puzzle1_portrait_original
       rect:
         serializedVersion: 2
-        x: 0
-        y: 638
-        width: 300
-        height: 386
+        x: 1
+        y: 643
+        width: 299
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 150, y: 193}
-        - {x: -150, y: 193}
-        - {x: -150, y: -191}
-        - {x: -104, y: -191}
-        - {x: -105, y: -193}
-        - {x: 2, y: -193}
-        - {x: 1, y: -191}
-        - {x: 150, y: -191}
-    - name: Puzzle1_1
+      - - {x: -149.5, y: 190.5}
+        - {x: -149.5, y: -190.5}
+        - {x: 149.5, y: -190.5}
+        - {x: 149.5, y: 190.5}
+    - name: Puzzle1_paint
       rect:
         serializedVersion: 2
-        x: 803
-        y: 853
+        x: 802
+        y: 855
         width: 151
         height: 169
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -43.5, y: 84.5}
-        - {x: -75.5, y: 17.5}
-        - {x: -75.5, y: -63.5}
-        - {x: -38.5, y: -84.5}
-        - {x: -2.5, y: -84.5}
-        - {x: 75.5, y: -53.5}
-        - {x: 75.5, y: 78.5}
-        - {x: 67.5, y: 84.5}
-    - name: Puzzle1_2
+      - - {x: -29.5, y: 84.5}
+        - {x: -49.5, y: 80.5}
+        - {x: -75.5, y: -21.5}
+        - {x: -75.5, y: -69.5}
+        - {x: -36.5, y: -84.5}
+        - {x: -11.5, y: -84.5}
+        - {x: 75.5, y: -52.5}
+        - {x: 75.5, y: 82.5}
+        - {x: 72.5, y: 84.5}
+    - name: Puzzle1_portrait_remastered
       rect:
         serializedVersion: 2
-        x: 51
-        y: 176
-        width: 511
+        x: 302
+        y: 642
+        width: 299
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -149.5, y: 190.5}
+        - {x: -149.5, y: -190.5}
+        - {x: 149.5, y: -190.5}
+        - {x: 149.5, y: 190.5}
+    - name: Puzzle1_mop
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 859
+        width: 200
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 100, y: 82.5}
+        - {x: 87, y: 82.5}
+        - {x: -61, y: -19.5}
+        - {x: -100, y: -76.5}
+        - {x: -100, y: -82.5}
+        - {x: -21, y: -82.5}
+        - {x: -15, y: -76.5}
+        - {x: -21, y: -42.5}
+        - {x: 100, y: 66.5}
+    - name: Puzzle1_rope
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 479
+        width: 510
         height: 161
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Puzzle1_3
+      outline:
+      - - {x: 167, y: -22.5}
+        - {x: 96, y: -20.5}
+        - {x: 71, y: 24.5}
+        - {x: -33, y: 80.5}
+        - {x: -255, y: 80.5}
+        - {x: -255, y: -4.5}
+        - {x: 70, y: -80.5}
+        - {x: 255, y: -80.5}
+        - {x: 255, y: -40.5}
+        - {x: 233, y: -25.5}
+    - name: Puzzle1_seaweed
       rect:
         serializedVersion: 2
-        x: 674
-        y: 413
+        x: 510
+        y: 533
         width: 227
         height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 61.5, y: -9.5}
+        - {x: 45.5, y: -14.5}
+        - {x: 22.5, y: -14.5}
+        - {x: 74.5, y: -6.5}
+        - {x: 101.5, y: 10.5}
+        - {x: 109.5, y: 29.5}
+        - {x: 68.5, y: 35.5}
+        - {x: 55.5, y: 31.5}
+        - {x: 6.5, y: 53.5}
+        - {x: -43.5, y: 53.5}
+        - {x: -97.5, y: 16.5}
+        - {x: -113.5, y: -0.5}
+        - {x: -113.5, y: -53.5}
+        - {x: 81.5, y: -53.5}
+        - {x: 113.5, y: -33.5}
+        - {x: 113.5, y: -13.5}
+        - {x: 106.5, y: -11.5}
     outline: []
   spritePackingTag: 
   userData: 
