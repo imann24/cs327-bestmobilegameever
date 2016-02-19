@@ -18,7 +18,7 @@ public class IsaiahTestingGround : MonoBehaviour {
 	void testConversation () {
 
 
-		Conversation conversation = new Conversation("Text/TestFile");
+		Conversation conversation = new Conversation("Text/SampleDialogue");
 
 		//while (conversation.
 		Debug.Log(conversation.GetCurrentDialogueText());

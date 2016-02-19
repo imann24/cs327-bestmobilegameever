@@ -1,0 +1,12 @@
+<Line>
+     <Type>Line</Type>
+     <Tag>firstmate_intro_1</Tag>
+     <Owner>character_firstmate</Owner>
+     <Trigger></Trigger>
+     <Conditional></Conditional>
+     <Speaker></Speaker>
+     <Body></Body>
+     <Next></Next>
+     <Event></Event>
+     <Notes></Notes>
+ </LineL
