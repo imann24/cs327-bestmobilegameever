@@ -26,6 +26,8 @@ public class TreeToGraphConverter
 				ListToReturn.Add(TreeToGraphNode(list[i]));
 
 			}
+
+			return ListToReturn;
 		}
 		return null;
 

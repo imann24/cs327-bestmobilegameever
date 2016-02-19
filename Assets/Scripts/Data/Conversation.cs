@@ -13,6 +13,18 @@ public class Conversation : ConversationInterface
 		Cursor = GetFirstDialogue (); 
 	}
 
+	// Overloaded method to create a conversation directly from XML
+	public Conversation (string pathFileInResources) {
+
+		DataTree tree = DataUtil.ParseXML(pathFileInResources);
+
+		DirectedGraph<string> graph = new TreeToGraphConverter(tree).ConvertToGraph();
+
+		this.Graph = graph;
+
+		Cursor = GetFirstDialogue();
+	}
+
 	public DirectedGraphNode<string> GetFirstDialogue()
 	{
 		return Graph.NodeList [0];
@@ -37,6 +49,15 @@ public class Conversation : ConversationInterface
 		}
 	}
 
+	// Overloaded method to advance cursor automatically
+	// And gets text in one method
+	public string AdvanceDialogue() {
+		if (Cursor.NeighborCount > 0) {
+			Cursor = Cursor.Neighbors[0];
+		}
+
+		return GetCurrentDialogueText();
+	}
 
 }
 
