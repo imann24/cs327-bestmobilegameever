@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DialogueManager : MonoBehaviour {
+public class OrangeThrower : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
