@@ -9,38 +9,26 @@ using System.Collections.Generic;
 
 public class IsaiahTestingGround : MonoBehaviour {
 
+	public ConversationDisplayController DialogueController;
+
 	// Use this for initialization
 	void Start () {
+		testConversationDisplay();
+	}
+
+	Conversation readInConversation () {
+		return new Conversation("Text/SampleDialogue");
 	}
 
 	// Used to test the visual conversation class
 	void testConversationDisplay () {
+		DialogueController.Init();
 
 		ConversationDisplayController conversationDisplay = ConversationDisplayController.Instance;
 
-		List<DirectedGraphNode<string>> nodeList = new List<DirectedGraphNode<string>>();
+		conversationDisplay.AutoHide = false;
 
-		// Generates the conversation nodees
-		DirectedGraphNode<string> pointer;
-		DirectedGraphNode<string> previous = null;
-		string [] testPhrases = new string[]{
-			"Hi, Bob",
-			"how are you?",
-			"Good bye"
-		};
-
-		for (int i = 0; i < 3; i++) {
-			pointer = new DirectedGraphNode<string>(testPhrases[i]);
-			nodeList.Add(pointer);
-			if (previous != null) {
-				previous.AddNeighbor(pointer);
-			}
-			previous = pointer;
-		}
-			
-		DirectedGraph<string> conversationGraph = new DirectedGraph<string>(nodeList);
-
-		Conversation conversation = new Conversation(conversationGraph);
+		Conversation conversation = readInConversation();
 
 		conversationDisplay.Show();
 
@@ -55,7 +43,7 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 		Conversation conversation = new Conversation("Text/SampleDialogue");
 
-		Debug.Log(conversation.GetCurrentDialogueText());
+		Debug.Log(conversation.GetCurrentDialogue());
 	
 	}
 

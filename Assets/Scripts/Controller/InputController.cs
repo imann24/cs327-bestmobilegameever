@@ -10,6 +10,11 @@ public class InputController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		// Does not check for player input if the dialogue is currently active
+		if (WorldController.Instance.DialogueActive) {
+			return;
+		}
+
 		#if UNITY_EDITOR
 		if (Input.GetMouseButton(0) || Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0)) {
 

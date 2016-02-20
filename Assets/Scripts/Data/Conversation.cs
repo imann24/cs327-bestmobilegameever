@@ -1,66 +1,66 @@
-﻿using System;
+﻿/*
+ * Authors: Isaiah Mann, Kaya Ni
+ * Description: Used to store a dialogue interaction
+ */
+
+using System;
 using UnityEngine;
 using System.Collections;
 [System.Serializable]
-public class Conversation : ConversationInterface
-{
-	DirectedGraph<string> Graph;
-	DirectedGraphNode<string> Cursor;
+public class Conversation {
+	ConversationNode Head;
+	ConversationNode Cursor;
 
-	public Conversation (DirectedGraph<string> Graph)
-	{
-		this.Graph = Graph;
-		Cursor = GetFirstDialogue (); 
+	public int Length {
+		get {
+			if (Head == null) {
+				return 0;
+			} else {
+				return Head.Count();
+			}
+		}
+	}
+
+	public Conversation (ConversationNode head) {
+		initFromHeadNode(head);
 	}
 
 	// Overloaded method to create a conversation directly from XML
 	public Conversation (string pathFileInResources) {
 
-		DataTree tree = DataUtil.ParseXML(pathFileInResources);
+		DataTree conversationAsTree = DataUtil.ParseXML(pathFileInResources);
 
-		DirectedGraph<string> graph = new TreeToGraphConverter(tree).ConvertToGraph();
-
-		this.Graph = graph;
-
-		Cursor = GetFirstDialogue();
+		initFromHeadNode ( 
+			ConversationUtil.DataTreeToConversationNodes (
+				conversationAsTree
+			)
+		);
 	}
 
-	public DirectedGraphNode<string> GetFirstDialogue()
-	{
-		return Graph.NodeList [0];
+	void initFromHeadNode (ConversationNode head) {
+		this.Head = head;
+		this.Cursor = head;
 	}
 
-	public DirectedGraphNode<string> GetCurrentDialogue()
-	{
-		return Cursor;
-
+	public string GetCurrentDialogue() {
+		return Cursor.Text;
 	}
 
-	public string GetCurrentDialogueText()
-	{
-
-		return Cursor.Value;
+	public string[] GetCurrentResponses () {
+		return Cursor.Responses;
 	}
+		
 
-	public void AdvanceDialogue(DirectedGraphNode<string> Response)
-	{
-		if (Response != null) {
-			Cursor = Response;
-		}
-	}
-
-	// Overloaded method to advance cursor automatically
-	// And gets text in one method
 	public string AdvanceDialogue() {
-		if (Cursor.NeighborCount > 0) {
-			Cursor = Cursor.Neighbors[0];
+		if (Cursor.HasNext) {
+			Cursor = Cursor.Next;
 		}
 
-		return GetCurrentDialogueText();
+		return GetCurrentDialogue();
 	}
 
 	public bool HasNext () {
-		return Cursor.NeighborCount > 0;
+		return Cursor.HasNext;
 	}
 
 }
