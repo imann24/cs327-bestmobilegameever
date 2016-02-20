@@ -1,4 +1,5 @@
 ﻿public enum PSScene {
 	MainMenu,
-	MainGame
+	MainGame,
+	OptionsMenu
 }
