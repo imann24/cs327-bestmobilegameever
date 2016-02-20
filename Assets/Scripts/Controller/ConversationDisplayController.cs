@@ -11,6 +11,11 @@ using System.Collections;
 public class ConversationDisplayController : MonoBehaviour {
 
 	public bool AutoHide = true;
+	public bool Active {
+		get {
+			return gameObject.activeSelf;
+		}
+	}
 
 	public Text CharacterName;
 	public Text LineOfDialogue;
@@ -18,16 +23,15 @@ public class ConversationDisplayController : MonoBehaviour {
 	public Image CharacterPortraitLeft;
 	public Image CharacterPortraitRight;
 
+	public ResponseDisplayController ResponseDisplay;
+
 	Conversation _conversation;
 
 	public static ConversationDisplayController Instance;
 
-	void Awake () {
-		SingletonUtil.TryInit(ref Instance, this, gameObject);
 
-		if (AutoHide) {
-			Hide();
-		}
+	void Awake () {
+		Init();
 	}
 
 	public void Show () {
@@ -76,25 +80,24 @@ public class ConversationDisplayController : MonoBehaviour {
 	}
 	public void SetConversation (Conversation conversation) {
 		this._conversation = conversation;
-		this.SetText(conversation.GetFirstDialogue().Value);
+		SetText();
 	}
 
 	public void AdvanceConversation () {
 		if (_conversation != null) {
-			_conversation.AdvanceDialogue();
 
-			SetText();
-		}
-	}
+			if (_conversation.HasNext()) {
 
-	public void AdvanceConversation (string option)  {
-		if (_conversation != null) { 
+				_conversation.AdvanceDialogue();
 
-			_conversation.AdvanceDialogue (
-				_conversation.GetCurrentDialogue()[option]
-			);
+				SetText();
 
-			SetText();
+			} else {
+				
+				//Automatically closes the UI if the conversation is over
+				Hide();
+
+			}
 		}
 	}
 
@@ -104,12 +107,26 @@ public class ConversationDisplayController : MonoBehaviour {
 
 	public void SetText (string text) {
 		LineOfDialogue.text = text;
+
+
+	}
+
+	public void SetResponses (string [] responses) {
+		ResponseDisplay.Show(responses);
 	}
 
 	public void SetText () {
 		if (_conversation != null) {
-			SetText(_conversation.GetCurrentDialogueText());
+			SetText(_conversation.GetCurrentDialogue());
+			SetResponses(_conversation.GetCurrentResponses());
 		}
 	}
 
+	public void Init () {
+		if (AutoHide) {
+			Hide();
+		}
+
+		Instance = this;
+	}
 }

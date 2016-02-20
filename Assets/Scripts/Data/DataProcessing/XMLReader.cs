@@ -42,7 +42,7 @@ public static class XMLReader {
 		dataWriteNode.Value = 
 			xmlNode.Value == null ?
 			getLeadingTag(xmlNode) :
-			xmlNode.Value;
+			xmlNode.Value.Trim();
 		
 		if (xmlNode.HasChildNodes) {
 
