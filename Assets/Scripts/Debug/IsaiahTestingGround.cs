@@ -17,7 +17,7 @@ public class IsaiahTestingGround : MonoBehaviour {
 	}
 
 	Conversation readInConversation () {
-		return new Conversation(ConversationXMLFileList.INTRO_TO_FIRST_MATE);
+		return new Conversation(ConversationXMLFileList.FIRST_MATE_PORTRAIT_PAINTED);
 	}
 
 	// Used to test the visual conversation class
