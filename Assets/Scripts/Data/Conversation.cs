@@ -59,6 +59,10 @@ public class Conversation : ConversationInterface
 		return GetCurrentDialogueText();
 	}
 
+	public bool HasNext () {
+		return Cursor.NeighborCount > 0;
+	}
+
 }
 
 

@@ -5,27 +5,58 @@
 using UnityEngine;
 using System.Xml;
 using System.Collections;
+using System.Collections.Generic;
 
 public class IsaiahTestingGround : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		testConversation();
 	}
-		
+
+	// Used to test the visual conversation class
+	void testConversationDisplay () {
+
+		ConversationDisplayController conversationDisplay = ConversationDisplayController.Instance;
+
+		List<DirectedGraphNode<string>> nodeList = new List<DirectedGraphNode<string>>();
+
+		// Generates the conversation nodees
+		DirectedGraphNode<string> pointer;
+		DirectedGraphNode<string> previous = null;
+		string [] testPhrases = new string[]{
+			"Hi, Bob",
+			"how are you?",
+			"Good bye"
+		};
+
+		for (int i = 0; i < 3; i++) {
+			pointer = new DirectedGraphNode<string>(testPhrases[i]);
+			nodeList.Add(pointer);
+			if (previous != null) {
+				previous.AddNeighbor(pointer);
+			}
+			previous = pointer;
+		}
+			
+		DirectedGraph<string> conversationGraph = new DirectedGraph<string>(nodeList);
+
+		Conversation conversation = new Conversation(conversationGraph);
+
+		conversationDisplay.Show();
+
+		conversationDisplay.SetCharacter("Peter", Resources.Load<Sprite>("Visual/pirate"), ScreenPosition.Right);
+
+		conversationDisplay.SetConversation(conversation);
+
+	}
+
 	// Testing Conversation class
 	void testConversation () {
 
-
 		Conversation conversation = new Conversation("Text/SampleDialogue");
 
-		//while (conversation.
 		Debug.Log(conversation.GetCurrentDialogueText());
-
-		for (int i = 0; i < 5; i++) {
-			Debug.Log(conversation.AdvanceDialogue());
-		}
+	
 	}
 
 	// Test randomized queue
