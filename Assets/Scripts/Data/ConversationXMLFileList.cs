@@ -5,6 +5,9 @@
 
 public static class ConversationXMLFileList {
 
-	public const string INTRO_TO_FIRST_MATE = "Text/IntroToFirstMate";
+	public const string FIRST_MATE_INTRO = "Text/FirstMateIntro";
+	public const string FIRST_MATE_MOP_NOT_YET_FOUND = "Text/FirstMateMopNotYetFound";
+	public const string FIRST_MATE_MOP_FOUND = "Text/FirstMateMopFound";
+	public const string FIRST_MATE_PORTRAIT_PAINTED = "Text/FirstMatePortraitPainted";
 
 }

@@ -119,6 +119,7 @@ public class ConversationDisplayController : MonoBehaviour {
 		if (_conversation != null) {
 			SetText(_conversation.GetCurrentDialogue());
 			SetResponses(_conversation.GetCurrentResponses());
+			SetName(_conversation.GetCurrentSpeaker());
 		}
 	}
 

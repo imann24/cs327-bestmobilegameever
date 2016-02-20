@@ -46,6 +46,10 @@ public class Conversation {
 		return Cursor.Text;
 	}
 
+	public string GetCurrentSpeaker() {
+		return Cursor.SpeakerName;
+	}
+
 	public string[] GetCurrentResponses () {
 		return Cursor.Responses;
 	}
