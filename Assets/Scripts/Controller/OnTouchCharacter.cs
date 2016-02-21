@@ -6,6 +6,8 @@ public class OnTouchCharacter : MonoBehaviour {
 	bool _debug = false;
 	bool _mouseDown;
 
+	public InteractionID InteractionType;
+
 	void Start()
 	{
 		rend = GetComponent<Renderer> ();
@@ -15,6 +17,8 @@ public class OnTouchCharacter : MonoBehaviour {
 		if (_debug) {
 			Debug.Log ("Tapped");
 		}
+
+		EventController.Event(InteractionType);
 
 		_mouseDown = true;
 	}

@@ -30,7 +30,9 @@ public class WorldController : MonoBehaviour {
 	}
 
 	public void Save () {
+
 		new SaveLoad().Save(SaveFile);
+
 	}
 
 	void init () {
