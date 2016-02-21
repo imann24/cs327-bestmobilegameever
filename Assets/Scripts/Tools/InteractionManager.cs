@@ -145,6 +145,7 @@ public class InteractionManager{
 		}
 		foreach (Interaction interaction in validInteractions) {
 			if (interaction.HasText) {
+				UIManager.Instance.CloseInteractionPanel ();
 				UIManager.Instance.ShowInteractionPanel ();
 				InteractionButton.Generate (interactor, interaction, possibleInteractions);
 				if (interaction.HasImage) {
