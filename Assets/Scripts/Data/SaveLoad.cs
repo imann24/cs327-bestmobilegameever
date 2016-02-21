@@ -8,28 +8,29 @@ using System.IO;
 //Remove highscore and Money for things we want to save and record in playerData class
 
 public class SaveLoad {
-	public void Save(){
+
+	public void Save(PlayerData data){
 		BinaryFormatter bf = new BinaryFormatter ();
 		FileStream file = File.Create (Application.persistentDataPath + "/Save.sav");
-
-		PlayerData data = new PlayerData ();
-//		data.HighScore = GameManager.Instance.HighScore;
-//		data.Money = GameManager.Instance.Money;
 
 		bf.Serialize (file, data);
 		file.Close ();
 	}
 
-	public void Load(){
+	public PlayerData Load(){
+
 		if (File.Exists (Application.persistentDataPath + "/Save.sav")) {
+		
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open(Application.persistentDataPath + "/Save.sav", FileMode.Open);
 			PlayerData data = (PlayerData)bf.Deserialize(file);
-
-
-//			GameManager.Instance.HighScore = data.HighScore;
-//			GameManager.Instance.Money = data.Money;
 			file.Close();
+
+			return data;
+		} else {
+
+			return null;
+
 		}
 
 	}
@@ -43,8 +44,13 @@ public class SaveLoad {
 	}
 }
 [Serializable]
-class PlayerData
+public class PlayerData
 {
+	public PlayerData () {
+		Progress = new ProgressTracker();
+	}
+
+	public ProgressTracker Progress;
 	public Dictionary<string, bool> someData;
 //	public float HighScore;
 //	public float Money;

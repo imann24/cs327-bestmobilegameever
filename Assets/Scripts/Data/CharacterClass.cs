@@ -4,7 +4,7 @@ using System.Collections;
 [System.Serializable]
 public class CharacterClass : MonoBehaviour {
 
-	private static DataTree characterList = DataUtil.ParseXML("Text/CharacterList");
+	private static DataTree characterList;
 
 	public string characterName;
 	private static string[,] peopleList = new string[2, 5]; // Amount of characters and max number of spites + 1  for each character
@@ -14,6 +14,10 @@ public class CharacterClass : MonoBehaviour {
 	private SpriteRenderer spriteRenderer;
 
 	bool _spriteLoadingImplemented = false;
+
+	void Awake () {
+		initCharacterList();
+	}
 
 	void Start(){
 		GetPeople ();
@@ -52,4 +56,9 @@ public class CharacterClass : MonoBehaviour {
 		return null;
 	}
 
+	void initCharacterList () {
+		if (characterList == null) {
+			characterList = DataUtil.ParseXML("Text/CharacterList");
+		}
+	}
 }
