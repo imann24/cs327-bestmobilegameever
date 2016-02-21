@@ -8,6 +8,7 @@ using System.Collections;
 public class WorldController : MonoBehaviour {
 	public static WorldController Instance;
 	public ConversationDisplayController DialogueDisplay;
+	public PlayerData SaveFile;
 
 	public bool DialogueActive {
 		get {
@@ -28,9 +29,18 @@ public class WorldController : MonoBehaviour {
 		EventController.Event("gameMusicStart");	
 	}
 
+	public void Save () {
+		new SaveLoad().Save(SaveFile);
+	}
+
 	void init () {
 		Instance = this;
 		//TODO: Insert initialization/world loading code here
 		DialogueDisplay.Init();
 	}
+
+	void getGameProgress () {
+		SaveFile = new SaveLoad().Load();
+	}
+
 }

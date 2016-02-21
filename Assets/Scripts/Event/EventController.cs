@@ -18,6 +18,9 @@ public static class EventController {
 	public delegate void AudioEventAction (AudioActionType actionType, AudioType audioType);
 	public static event AudioEventAction OnAudioEvent;
 
+	public delegate void InteractionEventAction (InteractionID interaction);
+	public static event InteractionEventAction OnInteractionEvent;
+
 	static Dictionary<PSEventType, string> eventMapping;
 
 	static EventController () {
@@ -44,6 +47,12 @@ public static class EventController {
 		} else {
 			Debug.LogWarning("Event System does not contain event " + eventType);       
         }
+	}
+
+	public static void Event (InteractionID interaction) {
+		if (OnInteractionEvent != null) {
+			OnInteractionEvent(interaction);
+		}
 	}
 
 	static void Init() {
