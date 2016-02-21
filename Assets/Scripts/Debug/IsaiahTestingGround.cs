@@ -16,10 +16,6 @@ public class IsaiahTestingGround : MonoBehaviour {
 		testConversationDisplay();
 	}
 
-	Conversation readInConversation () {
-		return new Conversation(ConversationXMLFileList.FIRST_MATE_PORTRAIT_PAINTED);
-	}
-
 	// Used to test the visual conversation class
 	void testConversationDisplay () {
 		DialogueController.Init();
@@ -28,13 +24,7 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 		conversationDisplay.AutoHide = false;
 
-		Conversation conversation = readInConversation();
-
-		conversationDisplay.Show();
-
-		conversationDisplay.SetCharacter("Peter", Resources.Load<Sprite>("Visual/pirate"), ScreenPosition.Right);
-
-		conversationDisplay.SetConversation(conversation);
+		conversationDisplay.StartConversation(ConversationXMLFileList.FIRST_MATE_PORTRAIT_PAINTED);
 
 	}
 
