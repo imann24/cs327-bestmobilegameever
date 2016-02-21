@@ -27,22 +27,25 @@ public class SaveLoad {
 			file.Close();
 
 			return data;
+
 		} else {
 
-			return null;
+			return new PlayerData();
 
 		}
 
 	}
 	public void ClearSave(){
+
 		if (File.Exists (Application.persistentDataPath + "/Save.sav")) {
+
 			File.Delete( Application.persistentDataPath + "/Save.sav");
-//			GameManager.Instance.HighScore = 0;
-//			GameManager.Instance.Money = 0;
+
 		}
 
 	}
 }
+
 [Serializable]
 public class PlayerData
 {

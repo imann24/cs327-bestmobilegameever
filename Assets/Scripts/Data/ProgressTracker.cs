@@ -2,7 +2,7 @@
 using System.Collections;
 
 [System.Serializable]
-public struct ProgressTracker {
+public class ProgressTracker {
 	public bool IntroducedToFirstMate;
 	public bool PickedUpMop;
 	public bool PickedUpPaint;

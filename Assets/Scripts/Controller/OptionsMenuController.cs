@@ -13,4 +13,10 @@ public class OptionsMenuController : MonoBehaviour {
 		SceneController.LoadMainMenu();
 
 	}
+
+	public void ResetSaveFile () {
+
+		new SaveLoad().ClearSave();
+
+	}
 }

@@ -3,8 +3,9 @@ using System.Collections;
 
 public class InteractionHandler : MonoBehaviour {
 
-	ProgressTracker _progress;
 	ConversationDisplayController _conversation;
+
+	ProgressTracker _progress;
 
 	// Use this for initialization
 	void Start () {
@@ -67,7 +68,6 @@ public class InteractionHandler : MonoBehaviour {
 
 	void init () {
 		subscribeEvents();
-
 		_progress = WorldController.Instance.SaveFile.Progress;
 		_conversation = ConversationDisplayController.Instance;
 	}
