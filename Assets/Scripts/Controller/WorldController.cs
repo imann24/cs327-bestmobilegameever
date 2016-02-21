@@ -39,6 +39,7 @@ public class WorldController : MonoBehaviour {
 		Instance = this;
 		//TODO: Insert initialization/world loading code here
 		DialogueDisplay.Init();
+		getGameProgress();
 	}
 
 	void getGameProgress () {
