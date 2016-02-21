@@ -11,11 +11,47 @@
 		},
 		{
 			“FileName”:"TitleMenu_Soundtrack_1",
-			“EventNames”:["musicStart"],
-			"StopEventNames":["musicStop"],
+			“EventNames”:["menuMusicStart"],
+			"StopEventNames":["menuMusicStop"],
 			“Loop”:true,
 			“Type”: "Music",
 			“Channel”:1,
+			"Volume": 80
+		},
+		{
+			“FileName”:"Deck_Soundtrack_A_2",
+			“EventNames”:["gameMusicStart"],
+			"StopEventNames":["gameMusicStop"],
+			“Loop”:true,
+			“Type”: "Music",
+			“Channel”:1,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Placeholder_Put_Down_1",
+			“EventNames”:["PutDownItem"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Placeholder_Pick_Up_1",
+			“EventNames”:["PickUpItem"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Placeholder_Speak_1",
+			“EventNames”:["OpenDialogue"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
 			"Volume": 100
 		}
 	]

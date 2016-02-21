@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Inventory Slot
+  - Clickable
+  - Ground
   layers:
   - Default
   - TransparentFX
