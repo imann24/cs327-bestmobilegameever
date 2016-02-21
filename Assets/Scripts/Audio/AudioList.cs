@@ -16,6 +16,7 @@ public class AudioList {
 
 	public AudioList (AudioFile[] files) {
 		Audio = files;
+		Debug.Log("Subscribing");
 		SubscribeEvents();
 	}
 
@@ -46,6 +47,14 @@ public class AudioList {
 
 	public AudioType GetAudioType (AudioClip clip) {
 		return AudioUtil.AudioTypeFromString(clipToFileDictionary[clip].Type);
+	}
+
+	public AudioFile GetAudioFileByClip (AudioClip clip) {
+		return clipToFileDictionary[clip];
+	}
+
+	public void Init () {
+		SubscribeEvents();
 	}
 
 	void ProcessAudioFileAccess (AudioFile file) {
