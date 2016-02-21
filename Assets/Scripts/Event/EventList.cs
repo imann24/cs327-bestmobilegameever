@@ -16,9 +16,11 @@ public static class EventList {
 
 	const string START_MUSIC = "musicStart";
 	const string STOP_MUSIC = "musicStop";
+	const string START_CONVERSATION = "OpenDialogue";
 
 	public static string[] events = {
 		START_MUSIC,
-		STOP_MUSIC
+		STOP_MUSIC,
+		START_CONVERSATION
 	};
 }
