@@ -42,7 +42,7 @@ public class ConversationDisplayController : MonoBehaviour {
 		gameObject.SetActive(false);
 	}
 		
-	public void SetCharacter (string characterName, Sprite characterPortait, ScreenPosition position) {
+	public void SetCharacter (string characterName, ScreenPosition position, Sprite characterPortrait = null) {
 		Image portraitFrame = null;
 
 		switch (position) {
@@ -56,7 +56,9 @@ public class ConversationDisplayController : MonoBehaviour {
 			break;
 		}
 
-		portraitFrame.sprite = characterPortait;
+		if (characterPortrait != null) {
+			portraitFrame.sprite = characterPortrait;
+		}
 
 		TogglePortraits(position);
 
@@ -78,9 +80,23 @@ public class ConversationDisplayController : MonoBehaviour {
 
 		}
 	}
-	public void SetConversation (Conversation conversation) {
+
+	public void StartConversation (string conversationFilePathInResources, ScreenPosition position = ScreenPosition.Right) {
+		Show();
+
+		SetConversation (
+			new Conversation(conversationFilePathInResources),
+			position
+		);
+	}
+
+	public void SetConversation (Conversation conversation, ScreenPosition position = ScreenPosition.Right) {
 		this._conversation = conversation;
 		SetText();
+		SetCharacter(
+			this._conversation.GetCurrentSpeaker(),
+			position
+		);
 	}
 
 	public void AdvanceConversation () {
