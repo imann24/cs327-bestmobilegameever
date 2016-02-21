@@ -17,12 +17,50 @@
                First Mate Bartholomew
           </speaker>
           <text>
-               Hm? This looks… so very familiar… yes, my eyes do not betray me! It’s so pure, woven of such lovely fibers, like the foam of rushing tides that birthed Aphrodite herself! It’s the very image of captainly beauty! Fantastique! I’m in love, simply in love! I knew I could count on you, ma cherie!
-
+               Hm? This looks… so very familiar…
           </text>
           <responses>
                <response>
-                    You bet.
+                    ~CONTINUE~
+               </response>
+          </responses>
+     </line>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               Yes, my eyes do not betray me! It’s the very image of captainly beauty!
+          </text>
+          <responses>
+               <response>
+                    ~CONTINUE~
+               </response>
+          </responses>
+     </line>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               It’s so pure, woven of such lovely fibers, like the foam of rushing tides that birthed Aphrodite herself! Fantastique! I’m in love, simply in love!
+          </text>
+          <responses>
+               <response>
+                    ~CONTINUE~
+               </response>
+          </responses>
+     </line>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               I knew I could count on you, ma cherie!
+          </text>
+          <responses>
+               <response>
+                    ~END~
                </response>
           </responses>
      </line>
