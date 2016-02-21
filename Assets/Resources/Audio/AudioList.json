@@ -30,30 +30,29 @@
 		{
 			“FileName”:"Placeholder_Put_Down_1",
 			“EventNames”:["PutDownItem"],
-			"StopEventNames":["NA"],
+			"StopEventNames":[],
 			“Loop”:false,
 			“Type”: "FX",
-			“Channel”:1,
+			“Channel”:2,
 			"Volume": 100
 		},
 		{
 			“FileName”:"Placeholder_Pick_Up_1",
 			“EventNames”:["PickUpItem"],
-			"StopEventNames":["NA"],
+			"StopEventNames":[],
 			“Loop”:false,
 			“Type”: "FX",
-			“Channel”:1,
+			“Channel”:2,
 			"Volume": 100
-,
+		},
 		{
 			“FileName”:"Placeholder_Speak_1",
 			“EventNames”:["OpenDialogue"],
-			"StopEventNames":["NA"],
+			"StopEventNames":[],
 			“Loop”:false,
 			“Type”: "FX",
-			“Channel”:1,
+			“Channel”:2,
 			"Volume": 100
-
-
+		}
 	]
 }

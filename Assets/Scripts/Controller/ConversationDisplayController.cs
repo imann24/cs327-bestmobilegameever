@@ -82,6 +82,8 @@ public class ConversationDisplayController : MonoBehaviour {
 	}
 
 	public void StartConversation (string conversationFilePathInResources, ScreenPosition position = ScreenPosition.Right) {
+		EventController.Event(PSEventType.StartConversation);
+
 		Show();
 
 		SetConversation (
@@ -103,6 +105,8 @@ public class ConversationDisplayController : MonoBehaviour {
 		if (_conversation != null) {
 
 			if (_conversation.HasNext()) {
+
+				EventController.Event(PSEventType.StartConversation);
 
 				_conversation.AdvanceDialogue();
 
