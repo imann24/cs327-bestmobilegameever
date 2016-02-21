@@ -5,6 +5,7 @@ public class InteractionHandler : MonoBehaviour {
 
 	ProgressTracker _progress;
 	ConversationDisplayController _conversation;
+
 	// Use this for initialization
 	void Start () {
 		init();
