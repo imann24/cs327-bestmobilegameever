@@ -26,13 +26,13 @@ public class InputController : MonoBehaviour {
 
 				if (recipient.tag == "Clickable") {
 					if (Input.GetMouseButtonDown(0)) {
-						recipient.SendMessage ("OnTouchDown", SendMessageOptions.DontRequireReceiver);
+						recipient.SendMessage ("OnMouseDown", SendMessageOptions.DontRequireReceiver);
 					}
 					if (Input.GetMouseButtonUp(0)) {
-						recipient.SendMessage ("OnTouchUp", SendMessageOptions.DontRequireReceiver);
+						recipient.SendMessage ("OnMouseUp", SendMessageOptions.DontRequireReceiver);
 					}
 					if (Input.GetMouseButton(0)) {
-						recipient.SendMessage ("OnTouchStay", SendMessageOptions.DontRequireReceiver);
+						recipient.SendMessage ("OnMouseOver", SendMessageOptions.DontRequireReceiver);
 					}
 				}
 				else if (recipient.tag == "Ground"){
@@ -55,13 +55,13 @@ public class InputController : MonoBehaviour {
 
 					if (recipient.tag == "Clickable") {
 						if (touch.phase == TouchPhase.Began) {
-							recipient.SendMessage ("OnTouchDown", SendMessageOptions.DontRequireReceiver);
+							recipient.SendMessage ("OnMouseDown", SendMessageOptions.DontRequireReceiver);
 						}
 						if (touch.phase == TouchPhase.Ended) {
-							recipient.SendMessage ("OnTouchUp", SendMessageOptions.DontRequireReceiver);
+							recipient.SendMessage ("OnMouseUp", SendMessageOptions.DontRequireReceiver);
 						}
 						if (touch.phase == TouchPhase.Stationary) {
-							recipient.SendMessage ("OnTouchStay", SendMessageOptions.DontRequireReceiver);
+							recipient.SendMessage ("OnMouseOver", SendMessageOptions.DontRequireReceiver);
 						}
 						if (touch.phase == TouchPhase.Canceled) {
 							recipient.SendMessage ("OnTouchExit", SendMessageOptions.DontRequireReceiver);
