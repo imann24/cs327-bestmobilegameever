@@ -67,6 +67,12 @@ public class InputController : MonoBehaviour {
 							recipient.SendMessage ("OnTouchExit", SendMessageOptions.DontRequireReceiver);
 						}
 					} 
+					else if (recipient.tag == "Ground"){
+						if (_debug) {
+							Debug.Log (mainCamera.ScreenToWorldPoint(Input.mousePosition).x);
+						}
+						PlayerMovement.Instance.MoveTowards(new Vector2 (mainCamera.ScreenToWorldPoint(Input.mousePosition).x, mainCamera.ScreenToWorldPoint(Input.mousePosition).y) , false);
+					}
 				} 
 			}
 		}
