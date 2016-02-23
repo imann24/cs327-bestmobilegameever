@@ -26,13 +26,13 @@ public class InputController : MonoBehaviour {
 
 				if (recipient.tag == "Clickable") {
 					if (Input.GetMouseButtonDown(0)) {
-						recipient.SendMessage ("OnMouseDown", SendMessageOptions.DontRequireReceiver);
+						recipient.SendMessage ("OnTouchDown", SendMessageOptions.DontRequireReceiver);
 					}
 					if (Input.GetMouseButtonUp(0)) {
-						recipient.SendMessage ("OnMouseUp", SendMessageOptions.DontRequireReceiver);
+						recipient.SendMessage ("OnTouchUp", SendMessageOptions.DontRequireReceiver);
 					}
 					if (Input.GetMouseButton(0)) {
-						recipient.SendMessage ("OnMouseOver", SendMessageOptions.DontRequireReceiver);
+						recipient.SendMessage ("OnTouchStay", SendMessageOptions.DontRequireReceiver);
 					}
 				}
 				else if (recipient.tag == "Ground"){
@@ -55,24 +55,18 @@ public class InputController : MonoBehaviour {
 
 					if (recipient.tag == "Clickable") {
 						if (touch.phase == TouchPhase.Began) {
-							recipient.SendMessage ("OnMouseDown", SendMessageOptions.DontRequireReceiver);
+							recipient.SendMessage ("OnTouchDown", SendMessageOptions.DontRequireReceiver);
 						}
 						if (touch.phase == TouchPhase.Ended) {
-							recipient.SendMessage ("OnMouseUp", SendMessageOptions.DontRequireReceiver);
+							recipient.SendMessage ("OnTouchUp", SendMessageOptions.DontRequireReceiver);
 						}
 						if (touch.phase == TouchPhase.Stationary) {
-							recipient.SendMessage ("OnMouseOver", SendMessageOptions.DontRequireReceiver);
+							recipient.SendMessage ("OnTouchStay", SendMessageOptions.DontRequireReceiver);
 						}
 						if (touch.phase == TouchPhase.Canceled) {
 							recipient.SendMessage ("OnTouchExit", SendMessageOptions.DontRequireReceiver);
 						}
 					} 
-					else if (recipient.tag == "Ground"){
-						if (_debug) {
-							Debug.Log (mainCamera.ScreenToWorldPoint(Input.mousePosition).x);
-						}
-						PlayerMovement.Instance.MoveTowards(new Vector2 (mainCamera.ScreenToWorldPoint(Input.mousePosition).x, mainCamera.ScreenToWorldPoint(Input.mousePosition).y) , false);
-					}
 				} 
 			}
 		}

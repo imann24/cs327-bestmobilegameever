@@ -17,7 +17,7 @@ public class InventoryManager{
 
 	public bool IsHoldingItem { get { return selectedItem != null; } }
 	List<InventorySlot> inventory;
-	GameObject selectedItem;
+	public GameObject selectedItem { get; private set; }
 
 	InventoryManager(){
 		inventory = UIManager.Instance.GetInventorySlots ();
@@ -35,7 +35,11 @@ public class InventoryManager{
 		
 	//pull a reference to the object and store it in a slot.
 	public bool GiveItem(string itemPath){
-		GameObject itemToAdd = Resources.Load<GameObject> ("Prefabs/" + itemPath);
+		
+		GameObject itemToAdd = Interactable.InstantiateAsInventory (itemPath);
+		if (GameManager.DEBUGGING) {
+			Debug.Log ("Giving: " + itemToAdd.name + ". Item is not null?" + (itemToAdd != null).ToString());
+		}
 		return AddToInventory (itemToAdd);
 	}
 
@@ -89,11 +93,10 @@ public class InventoryManager{
 			TagManager.Instance.GiveTag (selectedItem.GetComponent<Interactable> ().HoldingTag);
 			UIManager.Instance.ShowSelected (selectedItem);
 		} else { //otherwise try to use the selected item on the clicked item.
-			Interactable interactor = fromSlot.contents.GetComponent<Interactable>();
-			List<Interaction> subList = interactor.Interactions.FindAll (interaction => interaction.iType == InteractionType.UseItem);
-			InteractionManager.HandleInteractions (interactor, subList);
+			fromSlot.contents.GetComponent<Interactable>().UseSelected ();
 		}
 	}
+
 
 	//return the selected item to the player's inventory
 	//NOTE - THIS METHOD DOES NOT HAVE A FAIL STATE. IT NEEDS TO BE IMPLEMENTED.
@@ -101,6 +104,7 @@ public class InventoryManager{
 		if (AddToInventory (selectedItem)) {
 			UIManager.Instance.Deselect ();
 			TagManager.Instance.TakeTag (selectedItem.GetComponent<Interactable> ().HoldingTag);
+			selectedItem = null;
 		}
 	}
 

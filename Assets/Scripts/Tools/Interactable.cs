@@ -10,6 +10,7 @@ public class Interactable : MonoBehaviour {
 	public Sprite InventoryImage;
 	public string InventoryTag;
 	public string HoldingTag;
+	public float DistanceBarrier;
 	public bool PickUp;
 
 	// Use this for initialization
@@ -18,36 +19,53 @@ public class Interactable : MonoBehaviour {
 	}
 
 	void Start(){
+		//*
 		if (GameManager.DEBUGGING) {
 			Debug.Log (Interactions.Count);
 			foreach (Interaction i in Interactions) {
 				Debug.Log (i.ToString ());
 			}
-		}
+		}//*/
+	}
+
+	public static GameObject InstantiateAsInventory(string path){
+		GameObject go = Instantiate (Resources.Load<GameObject> ("Prefabs/" + path)) as GameObject;
+		go.GetComponent<Collider> ().enabled = false;
+		go.GetComponent<Renderer> ().enabled = false;
+		return go;
 	}
 
 	void OnMouseUpAsButton(){
-		if (GameManager.DEBUGGING) {
-			Debug.Log ("Clicked!");
-		}
 		List<Interaction> subList;
 		if (InventoryManager.Instance.IsHoldingItem) {
-			subList = Interactions.FindAll (interaction => interaction.iType == InteractionType.UseItem);
-			if (GameManager.DEBUGGING) {
-				Debug.Log ("Use Interaction. Number of potential interactions:" + subList.Count);
-			}
+			UseSelected ();
 		} else {
 			subList = Interactions.FindAll (interaction => interaction.iType == InteractionType.Click);
 			if (GameManager.DEBUGGING) {
 				Debug.Log ("Click Interaction. Number of potential interactions:" + subList.Count);
 			}
+			InteractionManager.HandleInteractionList (this,subList);
 		}
-		InteractionManager.HandleInteractions (this,subList);
+	}
+
+	public void UseSelected(){
+		Interactable selected = InventoryManager.Instance.selectedItem.GetComponent<Interactable> ();
+		List<Interaction> validItemsForTarget = Interactions.FindAll (i => (i.iType == InteractionType.UseItem) && (i.IsValid) && (i.iAllTags.Contains (selected.HoldingTag)));
+		if (validItemsForTarget.Count > 0) {
+			InteractionManager.HandleInteractionList (this, validItemsForTarget);
+		} else {
+			Interaction error = selected.Interactions.Find (i => i.iName == "DefaultCan'tUse");
+			if (error != null) {
+				InteractionManager.HandleInteractionSingle (this, error);
+			} else {
+				InventoryManager.Instance.ReturnSelected ();
+			}
+		}
 	}
 
 	public void OnOrange(){
 		List<Interaction> subList = Interactions.FindAll (interaction => interaction.iType == InteractionType.Orange);
-		InteractionManager.HandleInteractions (this, subList);
+		InteractionManager.HandleInteractionList (this, subList);
 	}
 
 	public void DoSpecialActions(List<string> actionsToDo){
