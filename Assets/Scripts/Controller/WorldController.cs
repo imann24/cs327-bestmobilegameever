@@ -35,6 +35,12 @@ public class WorldController : MonoBehaviour {
 
 	}
 
+	public void ExitToMainMenu () {
+
+		SceneController.LoadMainMenu();
+
+	}
+
 	void init () {
 		Instance = this;
 		//TODO: Insert initialization/world loading code here
