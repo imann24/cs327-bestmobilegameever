@@ -19,7 +19,8 @@ public class InventorySlot : MonoBehaviour {
 
 	public void FillWith (GameObject newContents){
 		gameObject.GetComponent<Button> ().enabled = true;
-		gameObject.GetComponent<Image> ().sprite = newContents.GetComponent<Interactable> ().InventoryImage;
+		gameObject.GetComponent<Image> ().sprite = 
+			newContents.GetComponent<Interactable> ().InventoryImage;
 		contents = newContents;
 	}
 
