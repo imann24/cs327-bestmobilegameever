@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<InteractionList>
+	<Interactions>
+		<Interaction>
+			<Name>purpleSaysHi</Name>
+			<Type>Click</Type>
+			<ALLTags></ALLTags>
+			<ANYTags></ANYTags>
+			<NONETags>purpleSaidHi</NONETags>
+			<Text>Hello There! I'm Purple!</Text>
+			<Image>purple</Image>
+			<Next>purpleSaysBye</Next>
+			<GiveTags>purpleSaidHi</GiveTags>
+			<TakeTags></TakeTags>
+			<GiveItems></GiveItems>
+			<TakeItems></TakeItems>
+			<SpecialActions></SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>purpleSaysBye</Name>
+			<Type>Derivative</Type>
+			<ALLTags></ALLTags>
+			<ANYTags></ANYTags>
+			<NONETags></NONETags>
+			<Text>Ok! I've said hi!</Text>
+			<Image>purple</Image>
+			<Next></Next>
+			<GiveTags>purpleSaidBye</GiveTags>
+			<TakeTags></TakeTags>
+			<GiveItems></GiveItems>
+			<TakeItems></TakeItems>
+			<SpecialActions></SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>hitPurpleWithOrange</Name>
+			<Type>Orange</Type>
+			<ALLTags></ALLTags>
+			<ANYTags></ANYTags>
+			<NONETags></NONETags>
+			<Text>You hit me with an Orange!</Text>
+			<Image>purple</Image>
+			<Next></Next>
+			<GiveTags>hitPurpleWithOrange</GiveTags>
+			<TakeTags></TakeTags>
+			<GiveItems></GiveItems>
+			<TakeItems></TakeItems>
+			<SpecialActions></SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>hitPurpleWithOrangeAgain</Name>
+			<Type>Orange</Type>
+			<ALLTags>hitPurpleWithOrange</ALLTags>
+			<ANYTags></ANYTags>
+			<NONETags></NONETags>
+			<Text>You hit me with an Orange again!</Text>
+			<Image>purple</Image>
+			<Next></Next>
+			<GiveTags></GiveTags>
+			<TakeTags></TakeTags>
+			<GiveItems></GiveItems>
+			<TakeItems></TakeItems>
+			<SpecialActions></SpecialActions>
+		</Interaction>
+	</Interactions>
+</InteractionList>

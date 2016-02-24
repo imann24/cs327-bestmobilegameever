@@ -1,0 +1,441 @@
+fileFormatVersion: 2
+guid: 89bef9ec37525ff40bc2887200f20a70
+timeCreated: 1455734026
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlaceholderPeteMopping_0
+    21300002: PlaceholderPeteMopping_1
+    21300004: PlaceholderPeteMopping_2
+    21300006: PlaceholderPeteMopping_3
+    21300008: PlaceholderPeteMopping_4
+    21300010: PlaceholderPeteMopping_5
+    21300012: PlaceholderPeteMopping_6
+    21300014: PlaceholderPeteMopping_7
+    21300016: PlaceholderPeteMopping_8
+    21300018: PlaceholderPeteMopping_9
+    21300020: PlaceholderPeteMopping_10
+    21300022: PlaceholderPeteMopping_11
+    21300024: PlaceholderPeteMopping_12
+    21300026: PlaceholderPeteMopping_13
+    21300028: PlaceholderPeteMopping_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PlaceholderPeteMopping_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 810
+        width: 70
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 57.5}
+        - {x: 11, y: 53.5}
+        - {x: 19, y: 99.5}
+        - {x: 5, y: 106.5}
+        - {x: -34, y: 106.5}
+        - {x: -35, y: 85.5}
+        - {x: -35, y: -106.5}
+        - {x: -6, y: -106.5}
+        - {x: -6, y: -102.5}
+        - {x: -9, y: -99.5}
+        - {x: -6, y: -17.5}
+        - {x: -6, y: -103.5}
+        - {x: -4, y: -105.5}
+        - {x: -1, y: -106.5}
+        - {x: 35, y: -106.5}
+        - {x: 35, y: 48.5}
+        - {x: 19, y: 59.5}
+    - name: PlaceholderPeteMopping_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 808
+        width: 76
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 107.5}
+        - {x: -38, y: 97.5}
+        - {x: -38, y: -104.5}
+        - {x: -10, y: -107.5}
+        - {x: -9, y: -102.5}
+        - {x: -9, y: -101.5}
+        - {x: -12, y: -98.5}
+        - {x: -9, y: -16.5}
+        - {x: -9, y: -102.5}
+        - {x: -7, y: -104.5}
+        - {x: 4, y: -107.5}
+        - {x: 38, y: -107.5}
+        - {x: 38, y: -67.5}
+        - {x: 18, y: 102.5}
+        - {x: 5, y: 107.5}
+    - name: PlaceholderPeteMopping_2
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 807
+        width: 80
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: -104}
+        - {x: -12, y: -107}
+        - {x: -11, y: -102}
+        - {x: -11, y: -101}
+        - {x: -14, y: -98}
+        - {x: -11, y: -16}
+        - {x: -11, y: -108}
+        - {x: 40, y: -108}
+        - {x: 40, y: -59}
+        - {x: 28, y: 108}
+        - {x: -29, y: 108}
+        - {x: -40, y: 97}
+    - name: PlaceholderPeteMopping_3
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 807
+        width: 80
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 108}
+        - {x: -39, y: 77}
+        - {x: -40, y: 73}
+        - {x: -40, y: -104}
+        - {x: -12, y: -107}
+        - {x: -11, y: -102}
+        - {x: -11, y: -101}
+        - {x: -14, y: -98}
+        - {x: -11, y: -16}
+        - {x: -11, y: -108}
+        - {x: 40, y: -108}
+        - {x: 40, y: 56}
+        - {x: 9, y: 108}
+    - name: PlaceholderPeteMopping_4
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 808
+        width: 76
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 107.5}
+        - {x: -38, y: 97.5}
+        - {x: -38, y: -104.5}
+        - {x: -10, y: -107.5}
+        - {x: -9, y: -102.5}
+        - {x: -9, y: -101.5}
+        - {x: -12, y: -98.5}
+        - {x: -9, y: -16.5}
+        - {x: -9, y: -102.5}
+        - {x: -7, y: -104.5}
+        - {x: 4, y: -107.5}
+        - {x: 38, y: -107.5}
+        - {x: 38, y: 41.5}
+        - {x: 22, y: 107.5}
+    - name: PlaceholderPeteMopping_5
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 810
+        width: 70
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 106.5}
+        - {x: -35, y: -106.5}
+        - {x: -6, y: -106.5}
+        - {x: -6, y: -102.5}
+        - {x: -9, y: -99.5}
+        - {x: -6, y: -17.5}
+        - {x: -6, y: -103.5}
+        - {x: -4, y: -105.5}
+        - {x: 0, y: -106.5}
+        - {x: 35, y: -106.5}
+        - {x: 35, y: 81.5}
+        - {x: 13, y: 106.5}
+    - name: PlaceholderPeteMopping_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 593
+        width: 71
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: 99.5}
+        - {x: 4.5, y: 106.5}
+        - {x: -34.5, y: 106.5}
+        - {x: -35.5, y: 85.5}
+        - {x: -35.5, y: -106.5}
+        - {x: -6.5, y: -106.5}
+        - {x: -6.5, y: -102.5}
+        - {x: -9.5, y: -99.5}
+        - {x: -6.5, y: -17.5}
+        - {x: -6.5, y: -103.5}
+        - {x: -4.5, y: -105.5}
+        - {x: -0.5, y: -106.5}
+        - {x: 35.5, y: -106.5}
+        - {x: 35.5, y: 45.5}
+        - {x: 29.5, y: 67.5}
+    - name: PlaceholderPeteMopping_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 593
+        width: 70
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 106.5}
+        - {x: -35, y: -106.5}
+        - {x: -6, y: -106.5}
+        - {x: -6, y: -102.5}
+        - {x: -9, y: -99.5}
+        - {x: -6, y: -17.5}
+        - {x: -6, y: -103.5}
+        - {x: -4, y: -105.5}
+        - {x: 0, y: -106.5}
+        - {x: 35, y: -106.5}
+        - {x: 35, y: 81.5}
+        - {x: 13, y: 106.5}
+    - name: PlaceholderPeteMopping_8
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 593
+        width: 70
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 106.5}
+        - {x: -35, y: -106.5}
+        - {x: -6, y: -106.5}
+        - {x: -6, y: -102.5}
+        - {x: -9, y: -99.5}
+        - {x: -6, y: -17.5}
+        - {x: -6, y: -103.5}
+        - {x: -4, y: -105.5}
+        - {x: 0, y: -106.5}
+        - {x: 35, y: -106.5}
+        - {x: 35, y: 81.5}
+        - {x: 13, y: 106.5}
+    - name: PlaceholderPeteMopping_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 593
+        width: 70
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 106.5}
+        - {x: -35, y: -106.5}
+        - {x: -6, y: -106.5}
+        - {x: -6, y: -102.5}
+        - {x: -9, y: -99.5}
+        - {x: -6, y: -17.5}
+        - {x: -6, y: -103.5}
+        - {x: -4, y: -105.5}
+        - {x: 0, y: -106.5}
+        - {x: 35, y: -106.5}
+        - {x: 35, y: 81.5}
+        - {x: 13, y: 106.5}
+    - name: PlaceholderPeteMopping_10
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 593
+        width: 71
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: 99.5}
+        - {x: 4.5, y: 106.5}
+        - {x: -34.5, y: 106.5}
+        - {x: -35.5, y: 85.5}
+        - {x: -35.5, y: -106.5}
+        - {x: -6.5, y: -106.5}
+        - {x: -6.5, y: -102.5}
+        - {x: -9.5, y: -99.5}
+        - {x: -6.5, y: -17.5}
+        - {x: -6.5, y: -103.5}
+        - {x: -4.5, y: -105.5}
+        - {x: -0.5, y: -106.5}
+        - {x: 35.5, y: -106.5}
+        - {x: 35.5, y: 45.5}
+        - {x: 29.5, y: 67.5}
+    - name: PlaceholderPeteMopping_11
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 593
+        width: 70
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 106.5}
+        - {x: -35, y: -106.5}
+        - {x: -6, y: -106.5}
+        - {x: -6, y: -102.5}
+        - {x: -9, y: -99.5}
+        - {x: -6, y: -17.5}
+        - {x: -6, y: -103.5}
+        - {x: -4, y: -105.5}
+        - {x: 0, y: -106.5}
+        - {x: 35, y: -106.5}
+        - {x: 35, y: 81.5}
+        - {x: 13, y: 106.5}
+    - name: PlaceholderPeteMopping_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 376
+        width: 71
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: 99.5}
+        - {x: 4.5, y: 106.5}
+        - {x: -34.5, y: 106.5}
+        - {x: -35.5, y: 85.5}
+        - {x: -35.5, y: -106.5}
+        - {x: -6.5, y: -106.5}
+        - {x: -6.5, y: -102.5}
+        - {x: -9.5, y: -99.5}
+        - {x: -6.5, y: -17.5}
+        - {x: -6.5, y: -103.5}
+        - {x: -4.5, y: -105.5}
+        - {x: -0.5, y: -106.5}
+        - {x: 35.5, y: -106.5}
+        - {x: 35.5, y: 45.5}
+        - {x: 29.5, y: 67.5}
+    - name: PlaceholderPeteMopping_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 376
+        width: 70
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 101}
+        - {x: 2, y: 107}
+        - {x: -34, y: 107}
+        - {x: -35, y: 86}
+        - {x: -35, y: -108}
+        - {x: -6, y: -108}
+        - {x: -6, y: -104}
+        - {x: -9, y: -101}
+        - {x: -6, y: -19}
+        - {x: -6, y: -105}
+        - {x: -4, y: -107}
+        - {x: 7, y: -108}
+        - {x: 33, y: -108}
+        - {x: 35, y: -95}
+        - {x: 35, y: -13}
+        - {x: 32, y: 33}
+    - name: PlaceholderPeteMopping_14
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 376
+        width: 70
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 106.5}
+        - {x: -35, y: -106.5}
+        - {x: -6, y: -106.5}
+        - {x: -6, y: -102.5}
+        - {x: -9, y: -99.5}
+        - {x: -6, y: -17.5}
+        - {x: -6, y: -103.5}
+        - {x: -4, y: -105.5}
+        - {x: 0, y: -106.5}
+        - {x: 35, y: -106.5}
+        - {x: 35, y: 81.5}
+        - {x: 13, y: 106.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

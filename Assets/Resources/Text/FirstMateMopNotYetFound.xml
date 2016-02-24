@@ -1,0 +1,15 @@
+<dialogue>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               Have you found my wig, ma cherie? No? Well, hurry along, now! I’m afraid I haven’t the time to assist you.
+          </text>
+          <responses>
+               <response>
+                    ~END~
+               </response>
+          </responses>
+     </line>
+</dialogue>

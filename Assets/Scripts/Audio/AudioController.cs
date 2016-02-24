@@ -12,6 +12,7 @@ using System.Collections.Generic;
 
 public class AudioController : MonoBehaviour {
 	public bool isAudioListener = true;
+	public float Volume = 1.0f;
 
 	// Singleton implementation
 	public static AudioController Instance;
@@ -76,7 +77,7 @@ public class AudioController : MonoBehaviour {
 
 		source.loop = file.Loop;
 
-		source.volume = file.Volumef;
+		source.volume = file.Volumef * Volume;
 
 		source.Play();
 
@@ -107,7 +108,27 @@ public class AudioController : MonoBehaviour {
 			!SettingsUtil.MusicMuted
 		);
 	}
+
+	public void ChangeVolume (float newVolume) {
+
+		this.Volume = newVolume;
+
+		adjustSourceVolume();
+
+	}
 		
+	void adjustSourceVolume () {
+
+		foreach (AudioSource source in channels.Values) {
+			AudioFile file = fileList.GetAudioFileByClip(source.clip);
+			if (file != null) {
+				source.volume = file.Volumef * this.Volume;
+			}
+
+		}
+
+	}
+
 	void CheckMute (AudioFile file, AudioSource source) {
 		source.mute = AudioUtil.IsMuted(file.typeAsEnum);
 	}
@@ -141,6 +162,7 @@ public class AudioController : MonoBehaviour {
 				
 			loader = new AudioLoader(path);
 			fileList = loader.Load();
+			fileList.Init();
 
 			InitFileDictionary(fileList);
 

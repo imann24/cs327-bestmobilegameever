@@ -43,7 +43,11 @@ public class DirectedGraphNode<T> {
 		
 	public int NeighborCount {
 		get {
-			return Neighbors.Count;
+			if (ListUtil.IsNullOrEmpty(Neighbors)) {
+				return 0;
+			} else {
+				return Neighbors.Count;
+			}
 		}
 	}
 

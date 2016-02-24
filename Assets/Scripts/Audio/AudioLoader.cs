@@ -8,12 +8,16 @@ using System.Collections;
 
 public class AudioLoader {
 	const string DIRECTORY = "Audio/";
+
+	// The path within the directory where the JSON file is saved
 	string _path;
 
 	public AudioLoader (string path) {
 		this._path = path;
 	}
 
+	// Returns a C# class formatted like corresponding JSON file
+	// JSON file must be formatted to match class structure or will throw an error
 	public AudioList Load () {
 		return JsonUtility.FromJson<AudioList>(
 			FileUtil.FileText (
@@ -22,6 +26,8 @@ public class AudioLoader {
 		);
 	}
 
+
+	// Fetches a particular clip from the resources folder
 	public static AudioClip GetClip (string fileName) {
 		return Resources.Load<AudioClip>(
 			DIRECTORY + fileName

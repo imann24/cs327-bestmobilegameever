@@ -1,0 +1,28 @@
+<dialogue>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               Oh? Have you found it? Let me...  ahaha! Oh, la la! Ohohoho! You must be joking, ma cherie! This is hardly fit for a captain! You couldn’t possibly be suggesting that I wear that.
+          </text>
+          <responses>
+               <response>
+                    ~CONTINUE~
+               </response>
+          </responses>
+     </line>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               It’s hideous, frankly! No true captain would be caught dead wearing something so… so very… no, no! It just won’t do. You must try harder than that!
+          </text>
+          <responses>
+               <response>
+                    ~END~
+               </response>
+          </responses>
+     </line>
+</dialogue>

@@ -5,13 +5,38 @@
 using UnityEngine;
 using System.Xml;
 using System.Collections;
+using System.Collections.Generic;
 
 public class IsaiahTestingGround : MonoBehaviour {
 
+	public ConversationDisplayController DialogueController;
+
 	// Use this for initialization
 	void Start () {
+		testConversationDisplay();
 	}
-		
+
+	// Used to test the visual conversation class
+	void testConversationDisplay () {
+		DialogueController.Init();
+
+		ConversationDisplayController conversationDisplay = ConversationDisplayController.Instance;
+
+		conversationDisplay.AutoHide = false;
+
+		conversationDisplay.StartConversation(ConversationXMLFileList.FIRST_MATE_PORTRAIT_PAINTED);
+
+	}
+
+	// Testing Conversation class
+	void testConversation () {
+
+		Conversation conversation = new Conversation("Text/SampleDialogue");
+
+		Debug.Log(conversation.GetCurrentDialogue());
+	
+	}
+
 	// Test randomized queue
 	void randomizedQeueDemo () {
 		string[] testList = new string[]{"one", "two", "three"};
@@ -30,7 +55,7 @@ public class IsaiahTestingGround : MonoBehaviour {
 		EventController.Event("testStart");
 		EventController.Event(PSEventType.StartMusic);
 	}
-
+		
 	// Demonstration of the functionality of the DataTree class
 	void dataTreeDemonstration () {
 
@@ -56,6 +81,9 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 		// You can combine the integer indexing and the string indexing
 		Debug.Log(tree[1]["data-point"]);
+
+		// How many children w/out children of their own are in the tree
+		Debug.Log(tree.LeafCount());
 
 	}
 

@@ -1,0 +1,67 @@
+<dialogue>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               Back again? What have you found this time? Let me see, now.
+          </text>
+          <responses>
+               <response>
+                    One...ah...handcrafted wig for the would-be captain.
+               </response>
+          </responses>
+     </line>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               Hm? This looks… so very familiar…
+          </text>
+          <responses>
+               <response>
+                    ~CONTINUE~
+               </response>
+          </responses>
+     </line>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               Yes, my eyes do not betray me! It’s the very image of captainly beauty!
+          </text>
+          <responses>
+               <response>
+                    ~CONTINUE~
+               </response>
+          </responses>
+     </line>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               It’s so pure, woven of such lovely fibers, like the foam of rushing tides that birthed Aphrodite herself! Fantastique! I’m in love, simply in love!
+          </text>
+          <responses>
+               <response>
+                    ~CONTINUE~
+               </response>
+          </responses>
+     </line>
+     <line>
+          <speaker>
+               First Mate Bartholomew
+          </speaker>
+          <text>
+               I knew I could count on you, ma cherie!
+          </text>
+          <responses>
+               <response>
+                    ~END~
+               </response>
+          </responses>
+     </line>
+</dialogue>

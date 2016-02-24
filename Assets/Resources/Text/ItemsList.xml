@@ -1,0 +1,14 @@
+<inventory>
+	<item>
+		<name>Mop head</name>
+		<description>The broken-off head of a mop.</description>
+		<combo_item>no<combo_item>
+		<sprite>Visual/Puzzle1_mop_head</sprite>
+	</item>
+	<item>
+		<name>Bucket o' Paint</name>
+		<description>A bucket of grey paint.</description>
+		<combo_item>no<combo_item>
+		<sprite>Visual/Puzzle1_paint</sprite>
+	</item>
+</inventory>

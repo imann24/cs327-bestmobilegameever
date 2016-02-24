@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 03b610f6099c8f14d86202b06c6ef4f6
+timeCreated: 1455840485
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Puzzle1_portrait_remastered
+    21300002: Puzzle1_paint
+    21300004: Puzzle1_rope
+    21300006: Puzzle1_seaweed
+    21300008: Puzzle1_portrait_original
+    21300010: Puzzle1_mop
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Puzzle1_portrait_original
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 643
+        width: 299
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -149.5, y: 190.5}
+        - {x: -149.5, y: -190.5}
+        - {x: 149.5, y: -190.5}
+        - {x: 149.5, y: 190.5}
+    - name: Puzzle1_paint
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 855
+        width: 151
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 84.5}
+        - {x: -49.5, y: 80.5}
+        - {x: -75.5, y: -21.5}
+        - {x: -75.5, y: -69.5}
+        - {x: -36.5, y: -84.5}
+        - {x: -11.5, y: -84.5}
+        - {x: 75.5, y: -52.5}
+        - {x: 75.5, y: 82.5}
+        - {x: 72.5, y: 84.5}
+    - name: Puzzle1_portrait_remastered
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 642
+        width: 299
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -149.5, y: 190.5}
+        - {x: -149.5, y: -190.5}
+        - {x: 149.5, y: -190.5}
+        - {x: 149.5, y: 190.5}
+    - name: Puzzle1_mop
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 859
+        width: 200
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 100, y: 82.5}
+        - {x: 87, y: 82.5}
+        - {x: -61, y: -19.5}
+        - {x: -100, y: -76.5}
+        - {x: -100, y: -82.5}
+        - {x: -21, y: -82.5}
+        - {x: -15, y: -76.5}
+        - {x: -21, y: -42.5}
+        - {x: 100, y: 66.5}
+    - name: Puzzle1_rope
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 479
+        width: 510
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 167, y: -22.5}
+        - {x: 96, y: -20.5}
+        - {x: 71, y: 24.5}
+        - {x: -33, y: 80.5}
+        - {x: -255, y: 80.5}
+        - {x: -255, y: -4.5}
+        - {x: 70, y: -80.5}
+        - {x: 255, y: -80.5}
+        - {x: 255, y: -40.5}
+        - {x: 233, y: -25.5}
+    - name: Puzzle1_seaweed
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 533
+        width: 227
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61.5, y: -9.5}
+        - {x: 45.5, y: -14.5}
+        - {x: 22.5, y: -14.5}
+        - {x: 74.5, y: -6.5}
+        - {x: 101.5, y: 10.5}
+        - {x: 109.5, y: 29.5}
+        - {x: 68.5, y: 35.5}
+        - {x: 55.5, y: 31.5}
+        - {x: 6.5, y: 53.5}
+        - {x: -43.5, y: 53.5}
+        - {x: -97.5, y: 16.5}
+        - {x: -113.5, y: -0.5}
+        - {x: -113.5, y: -53.5}
+        - {x: 81.5, y: -53.5}
+        - {x: 113.5, y: -33.5}
+        - {x: 113.5, y: -13.5}
+        - {x: 106.5, y: -11.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
