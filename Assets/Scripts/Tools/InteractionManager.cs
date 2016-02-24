@@ -11,7 +11,6 @@ public enum InteractionType{
 	Click,
 	Orange,
 	UseItem,
-	Default,
 	Derivative}
 
 public class Interaction {
@@ -78,6 +77,7 @@ public class Interaction {
 	public string _image { private get; set; }
 	public bool HasImage { get { return _image != null && iImage != null; } }
 	public Sprite iImage {
+		//*
 		get {
 			Texture2D image = Resources.Load<Texture2D> (string.Concat ("Visual/", _image));
 			if (image != null) {
@@ -87,7 +87,11 @@ public class Interaction {
 			} else {
 				return null;
 			}
-		}
+		}/*/
+		get{ 
+			Sprite sprite = Resources.Load<Sprite> ("Visual/" + _image);
+			return (sprite == null) ? null : sprite;
+		}/**/
 	}
 
 	[XmlElement("Next")]
@@ -146,7 +150,7 @@ public class Interaction {
 			bool hasANY = TagManager.Instance.HasAnyTags (iAnyTags);
 			bool hasNONE = TagManager.Instance.HasNoneTags (iNoneTags);
 			if (GameManager.DEBUGGING) {
-				Debug.Log ("Checking Validity. ALL: " + hasALL.ToString() + " ANY: " + hasANY.ToString() + " NONE: " + hasNONE.ToString());
+				Debug.Log ("Checking Validity for " + iName + ". ALL: " + hasALL.ToString() + " ANY: " + hasANY.ToString() + " NONE: " + hasNONE.ToString() + " . Returning " + (hasALL && hasANY && hasNONE).ToString());
 			}
 			return (hasALL && hasANY && hasNONE);
 		}
@@ -174,6 +178,10 @@ public class InteractionList{
 	public static List<Interaction> Load(string path){
 		TextAsset _xml = Resources.Load<TextAsset> (path);
 
+		if (_xml == null) {
+			return new List<Interaction> ();
+		}
+
 		XmlSerializer serializer = new XmlSerializer (typeof(InteractionList));
 
 		StringReader reader = new StringReader (_xml.text);
@@ -200,11 +208,11 @@ public class InteractionManager{
 
 	public static void HandleInteractionList(Interactable interactor, List<Interaction> possibleInteractions){
 		List<Interaction> validInteractions = possibleInteractions.FindAll (interaction => interaction.IsValid);
-		float interactionDistance = Vector3.Distance (interactor.transform.position, GameManager.Instance.playerCharacter.transform.position);
-		/*
 		if (GameManager.DEBUGGING) {
-			Debug.Log ("Searching for valid interactions. Number of valid interactions:" + validInteractions.Count);
-		}//*/
+			Debug.Log ("Possible Interactions: " + possibleInteractions.Count.ToString());
+			Debug.Log ("Valid Interactions: " + string.Join (" ", validInteractions.ConvertAll (new Converter<Interaction, string> (i => i.iName)).ToArray ()));
+		}
+		float interactionDistance = Vector3.Distance (interactor.transform.position, GameManager.Instance.playerCharacter.transform.position);
 		//UIManager.Instance.CloseInteractionPanel ();
 		//if all of the otherwise valid interactions are close enough to happen, do them all.
 		if (validInteractions.TrueForAll (interaction => interactionDistance <= interaction.iMaxDist)) {

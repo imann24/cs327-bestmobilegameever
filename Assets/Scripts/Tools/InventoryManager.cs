@@ -90,6 +90,7 @@ public class InventoryManager{
 		//if the player isn't holding an item, select the item
 		if (selectedItem == null) {
 			selectedItem = fromSlot.RemoveContents ();
+			Debug.Log ("Not holding anything... Picked up " + selectedItem.name);
 			TagManager.Instance.GiveTag (selectedItem.GetComponent<Interactable> ().HoldingTag);
 			UIManager.Instance.ShowSelected (selectedItem);
 		} else { //otherwise try to use the selected item on the clicked item.
@@ -113,7 +114,7 @@ public class InventoryManager{
 	public void RemoveFromSelected(string itemPath){
 		GameObject itemToRemove = Resources.Load<GameObject> ("Prefabs/" + itemPath);
 		string itemHoldingTag = itemToRemove.GetComponent<Interactable> ().HoldingTag;
-		if (selectedItem.GetComponent<Interactable> ().HoldingTag == itemHoldingTag) {
+		if (IsHoldingItem && selectedItem.GetComponent<Interactable> ().HoldingTag == itemHoldingTag) {
 			UIManager.Instance.Deselect ();
 			TagManager.Instance.TakeTag (selectedItem.GetComponent<Interactable> ().HoldingTag);
 			selectedItem = null;

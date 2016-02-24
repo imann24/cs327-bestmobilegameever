@@ -50,7 +50,7 @@ public class TagManager{
 
 	public bool HasTag(string tag){
 		if (GameManager.DEBUGGING) {
-			Debug.Log ("Checking tag: " + tag + "Player tags: " + string.Join(" ", PlayerTags.ToArray()));
+			//Debug.Log ("Checking tag: " + tag + "Player tags: " + string.Join(" ", PlayerTags.ToArray()));
 		}
 		return PlayerTags.Contains (tag);
 	}
@@ -75,7 +75,7 @@ public class TagManager{
 		if (tags.Count > 0) {
 			List<string> conflictingTags = tags.FindAll(tag => HasTag(tag));
 			if (GameManager.DEBUGGING) {
-				Debug.Log ("Checking HasNoneTags. Conflicting tag count: " + conflictingTags.Count);
+				//Debug.Log ("Checking HasNoneTags. Conflicting tags: " + string.Join(" ", conflictingTags.ToArray()));
 			}
 			return conflictingTags.Count == 0;
 		} else {

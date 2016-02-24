@@ -29,5 +29,8 @@ public class SpecialActions : MonoBehaviour {
 
 	//override this function in subclasses for specific actions.
 	public virtual void DoSpecialAction(string actionTag){
+		if (gameObject.GetComponent<Interactable> ().Debugging) {
+			Debug.Log (actionTag + " isn't defined here. This object has the base SpecialActions behavior.");
+		}
 	}
 }

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>blue_use_yellow</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_yellow</ALLTags>
+      <Text>(Combine the two colors)</Text>
+      <GiveItems>green_circle</GiveItems>
+      <TakeItems>blue_circle|yellow_circle</TakeItems>
+    </Interaction>
+    <Interaction>
+      <Name>blue_use_green</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_green</ALLTags>
+      <Text>(Combine the two colors)</Text>
+      <GiveItems>teal_circle</GiveItems>
+      <TakeItems>blue_circle|green_circle</TakeItems>
+    </Interaction>
+    <Interaction>
+      <Name>blue_use_red</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_red</ALLTags>
+      <Text>(Combine the two colors)</Text>
+      <GiveItems>purple_circle</GiveItems>
+      <TakeItems>red_circle|blue_circle</TakeItems>
+    </Interaction>
+    <Interaction>
+      <Name>blue_dont_use_red</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_red</ALLTags>
+      <Text>(Nevermind)</Text>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>blue_dont_use_yellow</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_yellow</ALLTags>
+      <Text>(Nevermind)</Text>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>blue_dont_use_green</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_green</ALLTags>
+      <Text>(Nevermind)</Text>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultTooFar</Name>
+      <Type>Derivative</Type>
+      <Text>Maybe I should go closer...</Text>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Text>I cannot use this item now.</Text>
+      <Image></Image>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+  </Interactions>
+</InteractionList>
