@@ -2,6 +2,15 @@
 <InteractionList>
   <Interactions>
     <Interaction>
+      <Name>use_mop_on_mop</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_mop</ALLTags>
+      <NONETags>has_mop</NONETags>
+      <Text>You use the mop on the mop.</Text>
+      <Image>mop</Image>
+      <TakeItems>mop</TakeItems>
+    </Interaction>
+    <Interaction>
       <Name>click_mop</Name>
       <Type>Click</Type>
       <ALLTags>intro</ALLTags>

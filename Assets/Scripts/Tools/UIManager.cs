@@ -88,10 +88,6 @@ public class UIManager : MonoBehaviour {
 	public void ShowInteractionPanel(){
 		IsInteractionShowing = true;
 		transform.FindChild ("InteractionPanel").gameObject.SetActive (true);
-		/*
-		if (GameManager.DEBUGGING) {
-			Debug.Log ("showing interaction panel");
-		}//*/
 	}
 		
 	public void ChangeInteractionImage(Sprite newImage){
@@ -108,10 +104,6 @@ public class UIManager : MonoBehaviour {
 			}
 		}
 		transform.FindChild ("InteractionPanel").gameObject.SetActive (false);
-		/*/
-		if (GameManager.DEBUGGING) {
-			Debug.Log ("closing interaction panel");
-		}//*/
 	}
 
 	public void RefreshInteractionPanel(){

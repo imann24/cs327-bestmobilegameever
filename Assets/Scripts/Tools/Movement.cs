@@ -8,10 +8,11 @@ public class Movement : MonoBehaviour {
 	Vector3 baseToCenter { get { return Vector3.up * heightToCenter; } }
 	Vector3 floorCenter { get { return transform.position - baseToCenter; } }
 	public Vector3 destination; //{ get; private set; }
+	public bool canMove = true;
 
 
 	void Start () {
-		Ground ();
+		//Ground ();
 	}
 
 	void Ground(){
@@ -19,12 +20,12 @@ public class Movement : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast (down, out hit)) {
 			transform.position = hit.point + baseToCenter;
-			destination = hit.point;
+			destination = hit.point + baseToCenter;
 		}
 	}
 
 	void FixedUpdate () {
-		if (Vector3.Distance (destination, floorCenter) < 0.1f)
+		if (Vector3.Distance (destination, floorCenter) < 0.3f)
 			GetComponent<Rigidbody> ().velocity = Vector3.zero;
 	}
 
@@ -33,8 +34,11 @@ public class Movement : MonoBehaviour {
 	}
 
 	public void MoveTo(Vector3 target){
-		destination = target;
-		GetComponent<Rigidbody> ().velocity = Vector3.zero;
-		GetComponent<Rigidbody> ().AddForce (Vector3.MoveTowards(floorCenter,destination,maxVelocity) - floorCenter, ForceMode.VelocityChange);
+		//destination = target + baseToCenter;
+		//GetComponent<Rigidbody> ().velocity = Vector3.zero;
+		//GetComponent<Rigidbody> ().AddForce (Vector3.MoveTowards(floorCenter,destination,maxVelocity), ForceMode.VelocityChange);
+
 	}
+
+
 }

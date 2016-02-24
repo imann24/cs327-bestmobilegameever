@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>The name of the interaction goes here. Fill out any necessary fields below, and delete the others.</Name>
+      <Type>Click or UseItem or Orange or Derivative</Type>
+      <ALLTags>All the tags needed for this interaction go here, separated by |</ALLTags>
+      <ANYTags>Only one of these tags is required. Also separated by |</ANYTags>
+      <NONETags>These tags must all be absent. Also separated by |</NONETags>
+      <Text>If the interaction results in a dialogue, the text goes here.</Text>
+      <Image>If the interaction needs an image, the path to the image goes here. It must be a sprite in the Resources/Visual folder</Image>
+      <Next>When this interaction finishes, call any Derivative interactions here. They must all have the same name, but may have different requirements.</Next>
+      <TakeTags>Take these tags from the player.</TakeTags>
+      <GiveTags>Give these tags to the player.</GiveTags>
+      <TakeItems>Take these items from the player. The item names must correspond to prefabs in the Resources/Prefabs folder.</TakeItems>
+      <GiveItems>Give these items to the player. The item names must correspond to prefabs in the Resources/Prefabs folder.</GiveItems>
+      <SpecialActions>Tell the object to perform these special actions. The defaults are ComeHere, Destroy, and ReturnSelected.</SpecialActions>
+      <MaxDistance>The interaction won't be completed if the player is farther than this number from the game object.</MaxDistance>
+      <TooFar>This action will be completed instead.</TooFar>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultTooFar</Name>
+      <Type>Derivative</Type>
+      <Text>Maybe I should go closer...</Text>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Text>I cannot use this item now.</Text>
+      <Image></Image>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+  </Interactions>
+</InteractionList>

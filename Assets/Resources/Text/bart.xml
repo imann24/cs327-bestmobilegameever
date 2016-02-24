@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>first_mate_puzzle_1_a</Name>
+      <Type>Click</Type>
+      <ALLTags></ALLTags>
+      <ANYTags></ANYTags>
+      <NONETags>puzzle_1_started</NONETags>
+      <Text>Ah, there you are! You must be my new assistant, yes? Thank goodness! You mustn’t keep your future captain waiting… but I will forgive you just this once.</Text>
+      <Image></Image>
+      <Next>first_mate_puzzle_1_b</Next>
+      <GiveTags>puzzle_1_started</GiveTags>
+      <TakeTags></TakeTags>
+      <GiveItems></GiveItems>
+      <TakeItems></TakeItems>
+      <SpecialActions></SpecialActions>
+      <MaxDistance>5</MaxDistance>
+      <TooFar>ComeHere</TooFar>
+    </Interaction>
+    <Interaction>
+      <Name></Name>
+      <Type></Type>
+      <ALLTags></ALLTags>
+      <ANYTags></ANYTags>
+      <NONETags></NONETags>
+      <Text></Text>
+      <Image></Image>
+      <Next></Next>
+      <GiveTags></GiveTags>
+      <TakeTags></TakeTags>
+      <GiveItems></GiveItems>
+      <TakeItems></TakeItems>
+      <SpecialActions></SpecialActions>
+      <MaxDistance />
+      <TooFar />
+    </Interaction>
+  </Interactions>
+</InteractionList>
