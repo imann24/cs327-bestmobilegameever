@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>red_use_yellow</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_yellow</ALLTags>
+      <Text>(Combine the two colors)</Text>
+      <GiveItems>orange_circle</GiveItems>
+      <TakeItems>red_circle|yellow_circle</TakeItems>
+    </Interaction>
+    <Interaction>
+      <Name>red_use_blue</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_blue</ALLTags>
+      <Text>(Combine the two colors)</Text>
+      <GiveItems>purple_circle</GiveItems>
+      <TakeItems>red_circle|blue_circle</TakeItems>
+    </Interaction>
+    <Interaction>
+      <Name>red_dont_use_blue</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_blue</ALLTags>
+      <Text>(Nevermind)</Text>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>red_dont_use_yellow</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_yellow</ALLTags>
+      <Text>(Nevermind)</Text>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultTooFar</Name>
+      <Type>Derivative</Type>
+      <Text>Maybe I should go closer...</Text>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Text>I cannot use this item now.</Text>
+      <Image></Image>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+  </Interactions>
+</InteractionList>

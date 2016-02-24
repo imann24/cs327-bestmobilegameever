@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour {
 	void Awake(){//use the singleton pattern to avoid multiple interfaces.
 		if (Instance == null) {
 			Instance = this;
+			DontDestroyOnLoad (gameObject);
 		} else if (this != Instance) {
 			Destroy (gameObject);
 			if (GameManager.DEBUGGING) {
@@ -49,7 +50,9 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public List<InventorySlot> GetInventorySlots(){
-		return transform.FindChild ("InventoryPanel").gameObject.GetComponentsInChildren<InventorySlot> ().ToList ();
+		//return transform.FindChild ("InventoryPanel").gameObject.GetComponentsInChildren<InventorySlot> ().ToList ();
+		Debug.Log("Slots:" + GetComponentsInChildren<InventorySlot>(true).ToList().Count);
+		return GetComponentsInChildren<InventorySlot> (true).ToList();
 	}
 
 	public void ShowSelected(GameObject selected){
@@ -85,9 +88,6 @@ public class UIManager : MonoBehaviour {
 	public void ShowInteractionPanel(){
 		IsInteractionShowing = true;
 		transform.FindChild ("InteractionPanel").gameObject.SetActive (true);
-		if (GameManager.DEBUGGING) {
-			Debug.Log ("showing interaction panel");
-		}
 	}
 		
 	public void ChangeInteractionImage(Sprite newImage){
@@ -104,8 +104,10 @@ public class UIManager : MonoBehaviour {
 			}
 		}
 		transform.FindChild ("InteractionPanel").gameObject.SetActive (false);
-		if (GameManager.DEBUGGING) {
-			Debug.Log ("closing interaction panel");
-		}
+	}
+
+	public void RefreshInteractionPanel(){
+		CloseInteractionPanel ();
+		ShowInteractionPanel ();
 	}
 }

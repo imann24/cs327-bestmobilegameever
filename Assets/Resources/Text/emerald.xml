@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>emerald_click_get_blue</Name>
+      <Type>Click</Type>
+      <ALLTags>intro|prism_puzzle_started</ALLTags>
+      <Text>(Take just the blue)</Text>
+      <Image>emerald</Image>
+      <GiveItems>blue_circle</GiveItems>
+      <SpecialActions>SpawnTopaz|Destroy</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>emerald_click_get_yellow</Name>
+      <Type>Click|prism_puzzle_started</Type>
+      <ALLTags>intro|prism_puzzle_started</ALLTags>
+      <Text>(Take just the yellow)</Text>
+      <Image>emerald</Image>
+      <GiveItems>yellow_circle</GiveItems>
+      <SpecialActions>ChangeToSapphire</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>emerald_click_get_both</Name>
+      <Type>Click</Type>
+      <ALLTags>intro|prism_puzzle_started</ALLTags>
+      <Text>(Take both colors)</Text>
+      <Image>emerald</Image>
+      <GiveItems>yellow_circle|blue_circle</GiveItems>
+      <SpecialActions>Destroy</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>emerald_click_prism_puzzle_not_started</Name>
+      <Type>Click</Type>
+      <NONETags>prism_puzzle_started</NONETags>
+      <Text>It's an emerald.</Text>
+      <Image>emerald</Image>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultTooFar</Name>
+      <Type>Derivative</Type>
+      <Text>Maybe I should go closer...</Text>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Text>I cannot use this item now.</Text>
+      <Image></Image>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+  </Interactions>
+</InteractionList>
