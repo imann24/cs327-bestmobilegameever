@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>gold_circle</Name>
+      <Type>UseItem</Type>
+      <ALLTags>intro|hold_red</ALLTags>
+      <GiveItems>purple_circle|green_circle</GiveItems>
+      <Next>wahoo</Next>
+      <TakeItems>gold_circle</TakeItems>
+      <MaxDistance>27.2</MaxDistance>
+      <!--comment here-->
+    </Interaction>
+    <Interaction>
+      <Name>wahoo</Name>
+      <Type>Derivative</Type>
+      <Text>Wahoo!</Text>
+      <Image>gold</Image>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultTooFar</Name>
+      <Type>Derivative</Type>
+      <Text>Maybe I should go closer...</Text>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Text>I cannot use this item now.</Text>
+      <Image></Image>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+  </Interactions>
+</InteractionList>
