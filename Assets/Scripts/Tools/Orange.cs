@@ -25,6 +25,7 @@ public class Orange : MonoBehaviour{
 		go.GetComponent<Orange> ().thrower = orangeThrower;
 		go.GetComponent<SpringJoint> ().connectedBody = orangeThrower.GetComponent<Rigidbody> ();
 		orangeThrower.GetComponent<Rigidbody> ().isKinematic = true;
+		orangeThrower.GetComponent<CharacterController> ().enabled = false;
 		return go;
 	}
 
@@ -55,6 +56,7 @@ public class Orange : MonoBehaviour{
 			if (lastVelocitySquared > rigidBody.velocity.sqrMagnitude) {//check if the orange is slowing down (i.e. the spring is now pulling in the wrong direction)
 				Destroy (springJoint);//if it is, destroy it so the orange flys freely
 				thrower.GetComponent<Rigidbody> ().isKinematic = false;//and restore the thrower to regular kinematics.
+				thrower.GetComponent<CharacterController>().enabled = true;
 			}
 			lastVelocitySquared = rigidBody.velocity.sqrMagnitude;//if the orange isn't slowing down yet, update the variable used to track whether it's slowing down
 		} else {//after we remove the spring, start a countdown to automatically kill the orange so it doesn't clog the data.

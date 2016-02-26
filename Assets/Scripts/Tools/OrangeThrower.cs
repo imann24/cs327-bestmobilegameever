@@ -2,10 +2,13 @@
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class OrangeThrower : MonoBehaviour, IPointerDownHandler {
+public class OrangeThrower : MonoBehaviour{//, IPointerDownHandler {
 
-	public void OnPointerDown (PointerEventData eventData)
+	public void OnMouseDown ()//(PointerEventData eventData)
 	{
+		if (GameManager.DEBUGGING) {
+			Debug.Log ("Pointer Down on Player. Winding up!");
+		}
 		Orange.WindUp (gameObject);
 	}
 
