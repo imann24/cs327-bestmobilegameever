@@ -4,7 +4,9 @@ using System.Collections.Generic;
 
 public class SpecialActions : MonoBehaviour {
 
-	public void DoSpecialActions(List<string> actionList){
+    private Dictionary<string, SpecialActions_Extended> actionScripts = new Dictionary<string, SpecialActions_Extended>();
+
+    public void DoSpecialActions(List<string> actionList){
 		bool destroy = false;
 		foreach (string action in actionList) {
 			switch (action) {
@@ -18,7 +20,8 @@ public class SpecialActions : MonoBehaviour {
 				GameManager.Instance.playerCharacter.GetComponent<Movement> ().MoveTo (transform.position);
 				break;
 			default:
-				DoSpecialAction (action);
+                if (GetComponent<SpecialActions_Extended>() != null) { actionScripts[action].DoExtendedAction(); }
+                DoSpecialAction (action);
 				break;
 			}
 		}
@@ -27,14 +30,15 @@ public class SpecialActions : MonoBehaviour {
 		}
 	}
 
-	//override this function in subclasses for specific actions.
-	public virtual void DoSpecialAction(string actionTag){
+    public void Start() {
+        SpecialActions_Extended[] scripts = GetComponents<SpecialActions_Extended>();
+        foreach (SpecialActions_Extended script in scripts) { actionScripts.Add(script.ActionTag, script); }
+    }
+
+    //override this function in subclasses for specific actions.
+    public virtual void DoSpecialAction(string actionTag) {
 		if (gameObject.GetComponent<Interactable> ().Debugging) {
-			Debug.Log (actionTag + " isn't defined here. This object has the base SpecialActions behavior.");
+			Debug.Log (actionTag + " is not defined. Using default SpecialActions script.");
 		}
 	}
-
-    public void ChangeSprite(Sprite newSprite) {
-        GetComponent<SpriteRenderer>().sprite = newSprite;
-    }
 }

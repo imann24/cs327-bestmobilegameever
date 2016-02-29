@@ -5,22 +5,19 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     public GameObject Quartermaster;
     public GameObject Shipmaster;
     public GameObject Firstmate;
-    public Vector2 QuartermasterExit;
-    public Vector2 ShipmasterExit;
-    public Vector2 FirstmateExit;
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
             case "QuartermasterExit":
-                npcExit(Quartermaster, QuartermasterExit);
+                npcExit(Quartermaster);
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Quartermaster"); }
                 break;
             case "ShipmasterExit":
-                npcExit(Shipmaster, ShipmasterExit);
+                npcExit(Shipmaster);
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Shipmaster"); }
                 break;
             case "FirstmateExit":
-                npcExit(Firstmate, FirstmateExit);
+                npcExit(Firstmate);
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Firstmate"); }
                 break;
             default:
@@ -29,7 +26,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         }
     }
 
-    private void npcExit(GameObject npc, Vector2 exit) {
+    private void npcExit(GameObject npc) {
         Destroy(npc);
     }
 }
