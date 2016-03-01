@@ -2,18 +2,25 @@
 <InteractionList>
 	<Interactions>
 		<Interaction>
-			<Name>get_rag</Name>
-			<Type>Click</Type>
-			<NONETags>hasRag</NONETags>
-			<Text>Let's pick it up.</Text>
-			<GiveItems>Rag</GiveItems>
-			<SpecialActions>Destroy</SpecialActions>
-		</Interaction>
-		<Interaction>
 			<Name>examine</Name>
 			<Type>Click</Type>
-			<ALLTags>hasRag</ALLTags>
-			<Text>It's just a rag.</Text>
+			<Next>examine_rag</Next>
+			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>use</Name>
+			<Type>UseItem</Type>
+			<ALLTags>holdingHookDirty</ALLTags>
+			<Next>use_rag_hook</Next>
+			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>take</Name>
+			<Type>Derivative</Type>
+			<GiveItems>Rag</GiveItems>
+			<SpecialActions>Destroy</SpecialActions>
+			<Next>exit_tutorial_room</Next>
+			<NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 	</Interactions>
 </InteractionList>

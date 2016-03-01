@@ -2,6 +2,12 @@
 <InteractionList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Interactions>
 		<Interaction>
+			<Name>exit_tutorial_room</Name>
+			<Type>Derivative</Type>
+			<SpecialActions>ExitTutorialRoom</SpecialActions>
+			<Next>tutorial_cutscene_start</Next>
+		</Interaction>
+		<Interaction>
 			<Name>tutorial_cutscene_start</Name>
 			<Type>Derivative</Type>
 			<Text>I know what you’ve been up to! You can’t fool me!</Text>
