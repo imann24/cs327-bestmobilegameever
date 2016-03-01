@@ -19,8 +19,6 @@
 			<Type>Derivative</Type>
 			<GiveItems>Rag</GiveItems>
 			<SpecialActions>Destroy</SpecialActions>
-			<Next>exit_tutorial_room</Next>
-			<NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 	</Interactions>
 </InteractionList>

@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 430752}
   - 212: {fileID: 21276510}
   - 114: {fileID: 11415374}
+  - 114: {fileID: 11465332}
   - 65: {fileID: 6553126}
   - 54: {fileID: 5405648}
   m_Layer: 0
@@ -74,6 +75,17 @@ MonoBehaviour:
   InventoryTag: hasRag
   HoldingTag: holdingRag
   Debugging: 0
+--- !u!114 &11465332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31deef0cc6fde7a41bb9536c94e1bd76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21276510
 SpriteRenderer:
   m_ObjectHideFlags: 1

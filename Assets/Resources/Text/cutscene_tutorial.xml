@@ -5,7 +5,6 @@
 			<Name>exit_tutorial_room</Name>
 			<Type>Derivative</Type>
 			<SpecialActions>ExitTutorialRoom</SpecialActions>
-			<Next>tutorial_cutscene_start</Next>
 		</Interaction>
 		<Interaction>
 			<Name>tutorial_cutscene_start</Name>
@@ -157,11 +156,10 @@
 		<Interaction>
 			<Name>tutorial_cutscene_21</Name>
 			<Type>Derivative</Type>
-			<Next>tutorial_cutscene_22</Next>
 			<SpecialActions>QuartermasterExit</SpecialActions>
 		</Interaction>
 		<Interaction>
-			<Name>tutorial_cutscene_22</Name>
+			<Name>tutorial_cutscene_exit_QM</Name>
 			<Type>Derivative</Type>
 			<Text>That… woman! I just - I can’t-</Text>
 			<Image>blue</Image>
@@ -219,11 +217,10 @@
 		<Interaction>
 			<Name>tutorial_cutscene_30</Name>
 			<Type>Derivative</Type>
-			<Next>tutorial_cutscene_31</Next>
 			<SpecialActions>ShipmasterExit</SpecialActions>
 		</Interaction>
 		<Interaction>
-			<Name>tutorial_cutscene_31</Name>
+			<Name>tutorial_cutscene_exit_SM</Name>
 			<Type>Derivative</Type>
 			<Text>Hear me, mes amis! Lend me your ears! Our dear, dashing, clever captain has perished!</Text>
 			<Image>red</Image>
@@ -246,11 +243,10 @@
 		<Interaction>
 			<Name>tutorial_cutscene_34</Name>
 			<Type>Derivative</Type>
-			<Next>tutorial_cutscene_35</Next>
 			<SpecialActions>FirstmateExit</SpecialActions>
 		</Interaction>
 		<Interaction>
-			<Name>tutorial_cutscene_35</Name>
+			<Name>tutorial_cutscene_exit_FM</Name>
 			<Type>Derivative</Type>
 			<Text>The captain is… dead?</Text>
 			<Image>purple</Image>
@@ -258,18 +254,21 @@
 		</Interaction>
 		<Interaction>
 			<Name>tutorial_cutscene_36</Name>
+			<Type>Derivative</Type>
 			<Text>…</Text>
 			<Image>purple</Image>
 			<Next>tutorial_cutscene_37</Next>
 		</Interaction>
 		<Interaction>
 			<Name>tutorial_cutscene_37</Name>
+			<Type>Derivative</Type>
 			<Text>What am I supposed to do now?</Text>
 			<Image>purple</Image>
 			<Next>tutorial_cutscene_38</Next>
 		</Interaction>
 		<Interaction>
 			<Name>tutorial_cutscene_38</Name>
+			<Type>Derivative</Type>
 			<Text>Did Bart say something about a service?</Text>
 			<Image>purple</Image>
 		</Interaction>

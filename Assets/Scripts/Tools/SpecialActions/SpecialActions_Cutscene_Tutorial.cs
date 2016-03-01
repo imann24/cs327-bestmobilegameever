@@ -1,32 +1,33 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SpecialActions_Cutscene_Tutorial : SpecialActions {
-    public GameObject Quartermaster;
-    public GameObject Shipmaster;
-    public GameObject Firstmate;
-    private ScreenFader screenFader;
+    private GameObject Quartermaster;
+    private GameObject Shipmaster;
+    private GameObject Firstmate;
+    private string next;
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
             case "ExitTutorialRoom":
-                screenFader = GameObject.FindObjectOfType<ScreenFader>() as ScreenFader;
-                DontDestroyOnLoad(screenFader);
-                DontDestroyOnLoad(GameObject.Find("Cutscene_Handler"));
+                next = "tutorial_cutscene_start";
                 StartCoroutine(NextScene());
                 break;
             case "QuartermasterExit":
-                npcExit(Quartermaster);
+                next = "tutorial_cutscene_exit_QM";
+                StartCoroutine(npcExit(Quartermaster));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Quartermaster"); }
                 break;
             case "ShipmasterExit":
-                npcExit(Shipmaster);
+                next = "tutorial_cutscene_exit_SM";
+                StartCoroutine(npcExit(Shipmaster));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Shipmaster"); }
                 break;
             case "FirstmateExit":
-                npcExit(Firstmate);
+                next = "tutorial_cutscene_exit_FM";
+                StartCoroutine(npcExit(Firstmate));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Firstmate"); }
                 break;
             default:
@@ -35,16 +36,32 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         }
     }
 
-    private void npcExit(GameObject npc) {
+    IEnumerator npcExit(GameObject npc) {
+        ScreenFader.FadeOut(1f);
+        yield return new WaitForSeconds(1f);
         Destroy(npc);
+        ScreenFader.FadeIn(1f);
+        yield return new WaitForSeconds(1f);
+        nextInteraction();
     }
     
     IEnumerator NextScene() {
-        screenFader.FadeOut();
+        DontDestroyOnLoad(gameObject);
+        ScreenFader.FadeOut();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Scenes/Development/SiennaTest2");
+        ScreenFader.FadeIn();
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Scenes/WorldScene");
-        screenFader.FadeIn();
-        yield return new WaitForSeconds(1f);
-        Debug.Log("Finished.");
+        Quartermaster = GameObject.Find("Quartermaster");
+        Shipmaster = GameObject.Find("Shipmaster");
+        Firstmate = GameObject.Find("Firstmate");
+        nextInteraction();
+    }
+
+    private void nextInteraction() {
+        Interactable interactor = gameObject.GetComponent<Interactable>();
+        List<Interaction> iList = interactor.Interactions.FindAll(i => (i.iName == next) && (i.iType == InteractionType.Derivative));
+        if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Attempting to run interaction, interactor: " + interactor + "list: " + iList); }
+        InteractionManager.HandleInteractionList(interactor, iList);
     }
 }

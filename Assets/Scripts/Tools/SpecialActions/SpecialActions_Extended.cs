@@ -36,7 +36,7 @@ public class SpecialActionsEditor : Editor {
             thisScript.TargetPosition = EditorGUILayout.Vector2Field("Target Position", thisScript.TargetPosition);
         }
 
-        thisScript.DestroysObject = GUILayout.Toggle(thisScript.DestroysObject, "Destroys Object");
+        //thisScript.DestroysObject = GUILayout.Toggle(thisScript.DestroysObject, "Destroys Object");
         if (thisScript.DestroysObject) { thisScript.ObjectToDestroy = EditorGUILayout.ObjectField("Object", thisScript.ObjectToDestroy, typeof(GameObject), true) as GameObject; }
     }
 }

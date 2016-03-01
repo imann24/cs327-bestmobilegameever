@@ -3,14 +3,18 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class ScreenFader : MonoBehaviour {
-    private Graphic fade;
+    static Graphic fade = null;
 
 	// Use this for initialization
-	void Start () {
-        fade = GetComponent<Image>();
-        fade.CrossFadeAlpha(0f, 0f, true);
+	void Awake () {
+        if (fade != null) { Destroy(gameObject); }
+        else {
+            fade = GetComponent<Image>();
+            fade.CrossFadeAlpha(0f, 0f, true);
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
-    public void FadeOut(float time = 1f) { fade.CrossFadeAlpha(1f, time, true); }
-    public void FadeIn(float time = 1f) { fade.CrossFadeAlpha(0f, time, true); }
+    public static void FadeOut(float time = 2f) { fade.CrossFadeAlpha(1f, time, true); }
+    public static void FadeIn(float time = 2f) { fade.CrossFadeAlpha(0f, time, true); }
 }
