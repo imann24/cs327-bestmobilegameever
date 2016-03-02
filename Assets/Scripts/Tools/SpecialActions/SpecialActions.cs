@@ -29,13 +29,14 @@ public class SpecialActions : MonoBehaviour {
 		foreach (string action in actionList) {
 			switch (action) {
 			case "ReturnSelected":
-				InventoryManager.Instance.ReturnSelected ();
+				GameManager.InventoryManager.ReturnSelected();
 				break;
 			case "Destroy":
 				destroy = true;
 				break;
 			case "ComeHere":
-				GameManager.Instance.playerCharacter.GetComponent<Movement> ().MoveTo (transform.position);
+				//TODO: Implement Joel's movement system
+				//GameManager.Instance.playerCharacter.GetComponent<Movement> ().MoveTo (transform.position);
 				break;
             case "FadeIn":
                 ScreenFader.FadeIn();
