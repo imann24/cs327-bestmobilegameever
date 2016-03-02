@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InteractionList>
+	<Interactions>
+		<Interaction>
+			<Name>tutorial_sadie</Name>
+			<Type>Derivative</Type>
+			<Text>Where is it, again...?</Text>
+			<TextType>Floating</TextType>
+			<Next>tutorial_04</Next>
+			<NextInteractor>Cutscene_Handler</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>examine_rag</Name>
+			<Type>Derivative</Type>
+			<NONETags>hasRag</NONETags>
+			<Text>I think I'll take this.</Text>
+			<TextType>Floating</TextType>
+			<Next>take</Next>
+			<NextInteractor>Rag</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>examine_rag</Name>
+			<Type>Derivative</Type>
+			<ALLTags>hasRag</ALLTags>
+			<Text>It's just a rag.</Text>
+			<TextType>Floating</TextType>
+		</Interaction>
+		<Interaction>
+			<Name>use_rag_hook</Name>
+			<Type>Derivative</Type>
+			<Text>Let's see...</Text>
+			<TextType>Floating</TextType>
+			<TakeItems>Rag|Hook_Dirty</TakeItems>
+			<GiveItems>Hook_Clean</GiveItems>
+			<Next>exit_tutorial_room</Next>
+			<NextInteractor>Cutscene_Handler</NextInteractor>
+		</Interaction>
+	</Interactions>
+</InteractionList>

@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+
 	IEnumerator MovePlayerAndLerpCam(Vector2 endLocation){
 		moving = true;
 		float percentComplete = 0f;
@@ -78,6 +79,7 @@ public class PlayerMovement : MonoBehaviour {
 				Camera.main.transform.position = Vector3.Lerp (startPos, endCamPos, percentComplete);
 			}
 			//Move Player
+
 			transform.position = Vector2.MoveTowards (transform.position, endLocation, moveSpeed * Time.deltaTime);
 
 			yield return new WaitForFixedUpdate();

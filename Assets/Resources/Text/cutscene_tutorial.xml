@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<InteractionList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Interactions>
+		<Interaction>
+			<Name>tutorial_start</Name>
+			<Type>Derivative</Type>
+			<Text>We KNOW you’ve had a hand in this! Don’t you lie!</Text>
+			<Image>yellow</Image>
+			<Next>tutorial_01</Next>
+			<SpecialActions>FadeIn</SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_01</Name>
+			<Type>Derivative</Type>
+			<Text>**Tap the screen anywhere to advance dialogue text**</Text>
+			<Next>tutorial_02</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_02</Name>
+			<Type>Derivative</Type>
+			<Text>Hand?! Hand... oh, right! Crap! Still gotta clean off the Captain's hand...</Text>
+			<Image>purple</Image>
+			<Next>tutorial_03</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_03</Name>
+			<Type>Derivative</Type>
+			<Text>**Tap the screen to move Sadie**</Text>
+			<Next>tutorial_sadie</Next>
+			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_04</Name>
+			<Type>Derivative</Type>
+			<Text>**Tap an object to pick it up**</Text>
+		</Interaction>
+		<Interaction>
+			<Name>exit_tutorial_room</Name>
+			<Type>Derivative</Type>
+			<SpecialActions>ExitTutorialRoom</SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_start</Name>
+			<Type>Derivative</Type>
+			<Text>I know what you’ve been up to! You can’t fool me!</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_01</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_01</Name>
+			<Type>Derivative</Type>
+			<Text>These accusations are completely unfounded. You have no evidence whatsoever.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_02</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_02</Name>
+			<Type>Derivative</Type>
+			<Text>I… I do! You’re wrong!</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_03</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_03</Name>
+			<Type>Derivative</Type>
+			<Text>Really, now? Please, by all means. Show me.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_04</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_04</Name>
+			<Type>Derivative</Type>
+			<Text>It’s… y-you… ugh! We all know what kind of  cheating, no-good scoundrel you are! It’s no coincidence! You killed the captain!</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_05</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_05</Name>
+			<Type>Derivative</Type>
+			<Text>All I have ever done is preserve and protect the interests of this ship.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_06</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_06</Name>
+			<Type>Derivative</Type>
+			<Text>All you’ve ever done is preserve your own shady interests! And I won’t let you get away with it anymore!</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_07</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_07</Name>
+			<Type>Derivative</Type>
+			<Text>Hear, hear! No evildoings shall be gotten away with under the watchful eye of yours truly.</Text>
+			<Image>red</Image>
+			<Next>tutorial_cutscene_08</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_08</Name>
+			<Type>Derivative</Type>
+			<Text>Oh shut up, you fop. Go polish your gears elsewhere.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_09</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_09</Name>
+			<Type>Derivative</Type>
+			<Text>Ah, mon coeur! You wound me with your wicked words!</Text>
+			<Image>red</Image>
+			<Next>tutorial_cutscene_10</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_10</Name>
+			<Type>Derivative</Type>
+			<Text>Bart, this is not the time. We have to bring her to justice.</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_11</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_11</Name>
+			<Type>Derivative</Type>
+			<Text>Justice? On a pirate vessel? You are a fool.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_12</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_12</Name>
+			<Type>Derivative</Type>
+			<Text>Without me, this ship would be nothing. You think the captain was leading this mess? Hardly. I’ve been captaining this ship for years while they claimed the title for it.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_13</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_13</Name>
+			<Type>Derivative</Type>
+			<Text>The only sensible course of action is for me to continue in that position.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_14</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_14</Name>
+			<Type>Derivative</Type>
+			<Text>But if you truly harbor the delusion that residing in the brigg will prevent me from doing my job, then I suppose I could entertain you.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_15</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_15</Name>
+			<Type>Derivative</Type>
+			<Text>Then go! We’ll get more done without you sneering at everyone, anyway! You have no respect for this crew, and no right to call yourself a captain of this ship!</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_16</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_16</Name>
+			<Type>Derivative</Type>
+			<Text>Our captain was someone who knew better than to demean and threaten us like this. Our captain was a good person!</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_17</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_17</Name>
+			<Type>Derivative</Type>
+			<Text>And you, you’re just a criminal! So get down into that brigg before I... before I…!</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_18</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_18</Name>
+			<Type>Derivative</Type>
+			<Text>Ma cherie, there is no need for such threats! Fear not, for in this sea of chaos, I shall step forth to lead and protec--</Text>
+			<Image>red</Image>
+			<Next>tutorial_cutscene_19</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_19</Name>
+			<Type>Derivative</Type>
+			<Text>Fair enough, Creesy. You have made your choice. I would hate to see you strain yourself apprehending me.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_20</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_20</Name>
+			<Type>Derivative</Type>
+			<Text>But whether I’m in the brigg or standing on this deck, I’ll be captain yet. And you will sorely regret addressing your superior with so little tact.</Text>
+			<Image2>green</Image2>
+			<Next>tutorial_cutscene_21</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_21</Name>
+			<Type>Derivative</Type>
+			<SpecialActions>QuartermasterExit</SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_exit_QM</Name>
+			<Type>Derivative</Type>
+			<Text>That… woman! I just - I can’t-</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_23</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_23</Name>
+			<Type>Derivative</Type>
+			<Text>Oooooogh! She is everything that’s wrong with piracy, and nothing that’s right!</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_24</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_24</Name>
+			<Type>Derivative</Type>
+			<Text>Your poor heart is burdened with sorrow, mademoiselle… I see it in your eyes! It pains me to see it! My own heart aches enough at this loss, and yet, with your agony, I cannot go on...</Text>
+			<Image2>red</Image2>
+			<Next>tutorial_cutscene_25</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_25</Name>
+			<Type>Derivative</Type>
+			<Text>What? … oh, ah - it’s ok, Bart.</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_26</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_26</Name>
+			<Type>Derivative</Type>
+			<Text>Surely you must rest! I, Bartholomieu Disquefloppe IV, will carry your heavy burden as rightful captain of our beautiful ship. Be not afraid.</Text>
+			<Image2>red</Image2>
+			<Next>tutorial_cutscene_27</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_27</Name>
+			<Type>Derivative</Type>
+			<Text>I, uhm… thanks, Bart. But I’m going to set things straight. Just try not to cause any trouble. </Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_28</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_28</Name>
+			<Type>Derivative</Type>
+			<Text>And if you see Quartermaster Bonney come out of her brigg, you let me know right away! My speaker is always on.</Text>
+			<Image>blue</Image>
+			<Next>tutorial_cutscene_29</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_29</Name>
+			<Type>Derivative</Type>
+			<Text>You have my word, ma cherie! No crookedness shall slip beneath my gaze.</Text>
+			<Image2>red</Image2>
+			<Next>tutorial_cutscene_30</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_30</Name>
+			<Type>Derivative</Type>
+			<SpecialActions>ShipmasterExit</SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_exit_SM</Name>
+			<Type>Derivative</Type>
+			<Text>Hear me, mes amis! Lend me your ears! Our dear, dashing, clever captain has perished!</Text>
+			<Image>red</Image>
+			<Next>tutorial_cutscene_32</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_32</Name>
+			<Type>Derivative</Type>
+			<Text>Those who wish to mourn his untimely passing should follow me to the helm, where we may lay roses and candles in his memory!</Text>
+			<Image>red</Image>
+			<Next>tutorial_cutscene_33</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_33</Name>
+			<Type>Derivative</Type>
+			<Text>Come, come! There is much to be done!</Text>
+			<Image>red</Image>
+			<Next>tutorial_cutscene_34</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_34</Name>
+			<Type>Derivative</Type>
+			<SpecialActions>FirstmateExit</SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_exit_FM</Name>
+			<Type>Derivative</Type>
+			<Text>The captain is… dead?</Text>
+			<Image>purple</Image>
+			<Next>tutorial_cutscene_36</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_36</Name>
+			<Type>Derivative</Type>
+			<Text>…</Text>
+			<Image>purple</Image>
+			<Next>tutorial_cutscene_37</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_37</Name>
+			<Type>Derivative</Type>
+			<Text>What am I supposed to do now?</Text>
+			<Image>purple</Image>
+			<Next>tutorial_cutscene_38</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_cutscene_38</Name>
+			<Type>Derivative</Type>
+			<Text>Did Bart say something about a service?</Text>
+			<Image>purple</Image>
+		</Interaction>
+	</Interactions>
+</InteractionList>
