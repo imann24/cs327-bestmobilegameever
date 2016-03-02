@@ -890,6 +890,7 @@ GameObject:
   - 65: {fileID: 817048033}
   - 54: {fileID: 817048032}
   - 114: {fileID: 817048031}
+  - 114: {fileID: 817048034}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -950,7 +951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bbf8cc7c99bab34689aa8b152ce3ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionsXmlPath: 
+  InteractionsXmlPath: door
   InventoryImage: {fileID: 0}
   InventoryTag: 
   HoldingTag: 
@@ -982,6 +983,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &817048034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 817048028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55905b758b106d94ca07e30052304159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1152090807 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11472252, guid: 2c88b2636004344ecacd6c74c1fd98a8,
