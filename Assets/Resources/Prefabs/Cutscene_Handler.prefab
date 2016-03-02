@@ -40,9 +40,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55905b758b106d94ca07e30052304159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Quartermaster: {fileID: 0}
-  Shipmaster: {fileID: 0}
-  Firstmate: {fileID: 0}
+  ActionTag: 
+  UseExtended: 0
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  MoveToPosition: {x: 0, y: 0}
+  CreateAtPosition: {x: 0, y: 0}
 --- !u!114 &11438484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,6 +79,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: UseExtended
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

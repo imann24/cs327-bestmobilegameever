@@ -4,9 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SpecialActions_Cutscene_Tutorial : SpecialActions {
-    private GameObject Quartermaster;
-    private GameObject Shipmaster;
-    private GameObject Firstmate;
+    private GameObject Quartermaster, Shipmaster, Firstmate;
     private string next;
 
     public override void DoSpecialAction(string actionTag) {
@@ -42,7 +40,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         Destroy(npc);
         ScreenFader.FadeIn(1f);
         yield return new WaitForSeconds(1f);
-        nextInteraction();
+        NextInteraction(next);
     }
     
     IEnumerator NextScene() {
@@ -55,13 +53,6 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         Quartermaster = GameObject.Find("Quartermaster");
         Shipmaster = GameObject.Find("Shipmaster");
         Firstmate = GameObject.Find("Firstmate");
-        nextInteraction();
-    }
-
-    private void nextInteraction() {
-        Interactable interactor = gameObject.GetComponent<Interactable>();
-        List<Interaction> iList = interactor.Interactions.FindAll(i => (i.iName == next) && (i.iType == InteractionType.Derivative));
-        if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Attempting to run interaction, interactor: " + interactor + "list: " + iList); }
-        InteractionManager.HandleInteractionList(interactor, iList);
+        NextInteraction(next);
     }
 }
