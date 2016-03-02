@@ -1,0 +1,90 @@
+fileFormatVersion: 2
+guid: 0f66b537d1ccff44c8d6bd44637cc788
+timeCreated: 1456792866
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: White Rag
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.48189917, y: 0.80492896}
+  spriteBorder: {x: 0, y: 298, z: 72, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: White Rag
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 299
+        width: 438
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 147, y: -106.5}
+        - {x: 184, y: -66.5}
+        - {x: 219, y: -53.5}
+        - {x: 219, y: -42.5}
+        - {x: 218, y: -39.5}
+        - {x: 152, y: 25.5}
+        - {x: 93, y: 92.5}
+        - {x: 77, y: 106.5}
+        - {x: 5, y: 106.5}
+        - {x: -32, y: 91.5}
+        - {x: -137, y: -9.5}
+        - {x: -219, y: -52.5}
+        - {x: -219, y: -63.5}
+        - {x: -213, y: -67.5}
+        - {x: -141, y: -73.5}
+        - {x: -103, y: -106.5}
+        - {x: -62, y: -106.5}
+        - {x: -52, y: -105.5}
+        - {x: 34, y: -67.5}
+        - {x: 53, y: -87.5}
+        - {x: 100, y: -106.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
