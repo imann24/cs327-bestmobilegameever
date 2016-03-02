@@ -28,10 +28,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 125848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bbf8cc7c99bab34689aa8b152ce3ab5, type: 3}
+  m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionsXmlPath: red
+  InteractionPath: red
   Debugging: 0
 --- !u!114 &11480104
 MonoBehaviour:
@@ -71,9 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316cc03b6bf3401448bd2364280d16d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoldingTag: hold_red
   HasTag: has_red
-  InventorySprite: {fileID: 21300000, guid: 70e7c107cc736eb469826a9952dbe7a4, type: 3}
+  HoldTag: hold_red
 --- !u!222 &22201750
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -140,6 +139,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_BlocksRaycasts
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HoldTag
+      value: hold_red
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InteractionPath
+      value: red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -31,9 +31,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316cc03b6bf3401448bd2364280d16d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoldingTag: 
   HasTag: 
-  InventorySprite: {fileID: 0}
+  HoldTag: 
 --- !u!114 &11420702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,10 +68,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 130862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bbf8cc7c99bab34689aa8b152ce3ab5, type: 3}
+  m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionsXmlPath: 
+  InteractionPath: 
   Debugging: 0
 --- !u!222 &22225270
 CanvasRenderer:

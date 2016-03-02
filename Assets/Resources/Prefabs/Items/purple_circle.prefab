@@ -31,9 +31,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316cc03b6bf3401448bd2364280d16d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoldingTag: hold_purple
   HasTag: has_purple
-  InventorySprite: {fileID: 0}
+  HoldTag: hold_purple
 --- !u!114 &11409798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,10 +68,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 127254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bbf8cc7c99bab34689aa8b152ce3ab5, type: 3}
+  m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionsXmlPath: 
+  InteractionPath: purple
   Debugging: 0
 --- !u!222 &22231914
 CanvasRenderer:
@@ -114,7 +113,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: HoldTag
+      value: hold_purple
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InteractionPath
+      value: purple
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127254}
