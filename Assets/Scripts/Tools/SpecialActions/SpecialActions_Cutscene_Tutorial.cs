@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
 
 public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     private GameObject Quartermaster, Shipmaster, Firstmate;
     private string next;
+
+    void Start() {
+        ScreenFader.FadeOut(0);
+        NextInteraction("tutorial_start");
+    }
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {

@@ -2,6 +2,39 @@
 <InteractionList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Interactions>
 		<Interaction>
+			<Name>tutorial_start</Name>
+			<Type>Derivative</Type>
+			<Text>We KNOW you’ve had a hand in this! Don’t you lie!</Text>
+			<Image>yellow</Image>
+			<Next>tutorial_01</Next>
+			<SpecialActions>FadeIn</SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_01</Name>
+			<Type>Derivative</Type>
+			<Text>**Tap the screen anywhere to advance dialogue text**</Text>
+			<Next>tutorial_02</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_02</Name>
+			<Type>Derivative</Type>
+			<Text>Hand?! Hand... oh, right! Crap! Still gotta clean off the Captain's hand...</Text>
+			<Image>purple</Image>
+			<Next>tutorial_03</Next>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_03</Name>
+			<Type>Derivative</Type>
+			<Text>**Tap the screen to move Sadie**</Text>
+			<Next>tutorial_sadie</Next>
+			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_04</Name>
+			<Type>Derivative</Type>
+			<Text>**Tap an object to pick it up**</Text>
+		</Interaction>
+		<Interaction>
 			<Name>exit_tutorial_room</Name>
 			<Type>Derivative</Type>
 			<SpecialActions>ExitTutorialRoom</SpecialActions>

@@ -37,6 +37,12 @@ public class SpecialActions : MonoBehaviour {
 			case "ComeHere":
 				GameManager.Instance.playerCharacter.GetComponent<Movement> ().MoveTo (transform.position);
 				break;
+            case "FadeIn":
+                ScreenFader.FadeIn();
+                break;
+            case "FadeOut":
+                ScreenFader.FadeOut();
+                break;
 			default:
                 if (actionScripts.ContainsKey(action)) { actionScripts[action].DoExtendedAction(); }
                 DoSpecialAction (action);
