@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 public class InteractionButton : MonoBehaviour {
 
-	Interactable buttonInteractor;
-	Interaction buttonInteraction;
+	public Interactable buttonInteractor;
+	public Interaction buttonInteraction;
 
 	public static void Generate(Interactable interactor, Interaction interaction){
 		Debug.Log ("Showing Interaction Panel");

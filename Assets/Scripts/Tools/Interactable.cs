@@ -69,40 +69,43 @@ public class Interactable : MonoBehaviour, IPointerClickHandler{
 	public void OnPointerClick (PointerEventData eventData)
 	{
 		if (!UIManager.Instance.IsInteractionShowing) {
-			List<Interaction> subList;
 			if (InventoryManager.Instance.IsHoldingItem) {
-				UseSelected ();
+				InteractionManager.HandleUseItem (this);
 			} else {
-				subList = Interactions.FindAll (interaction => interaction.iType == InteractionType.Click);
-				if (Debugging) {
-					Debug.Log ("Clicked on " + gameObject.name + ". Number of potential interactions:" + subList.Count);
-				}
-				InteractionManager.HandleInteractionList (this, subList);
+				InteractionManager.HandleOnClick (this);
 			}
 		}
 	}
-		
+
+	/// <summary>
+	/// Despawn this instance.
+	/// </summary>
+	public void Despawn(){
+		Destroy (gameObject);
+	}
 	/// <summary>
 	/// Try to use the currently selected item on this interactable. If there are no valid interactions, use the "DefaultCannotUse" interacted in the selected item's interaction list. If it doesn't have one, return the item to inventory.
 	/// </summary>
 	public void UseSelected(){
+		if(!UIManager.Instance.IsInteractionShowing){
 		Interactable selected = InventoryManager.Instance.selectedItem.GetComponent<Interactable> ();
 		List<Interaction> validItemsForTarget = Interactions.FindAll (i => (i.iType == InteractionType.UseItem) && (i.IsValid));// && (i.iAllTags.Contains (selected.HoldingTag)));
 		Debug.Log ("UseSelected() validItemsForTarget: " + string.Join (" ", validItemsForTarget.ConvertAll (new System.Converter<Interaction, string> (i => i.iName)).ToArray ()));
-		if (validItemsForTarget.Count > 0) {
-			InteractionManager.HandleInteractionList (this, validItemsForTarget);
-		} else {
-			if (Debugging) {
-				Debug.Log ("Used " + selected.gameObject.name + " on " + gameObject.name + ". No interactions were found. The player tags were: " + string.Join(", ", TagManager.Instance.PlayerTags.ToArray()));
-			}
-			Interaction error = selected.Interactions.Find (i => i.iName == "DefaultCannotUse");
-			if (error != null) {
-				InteractionManager.HandleInteractionSingle (this, error);
+			if (validItemsForTarget.Count > 0) {
+				InteractionManager.HandleInteractionList (this, validItemsForTarget);
 			} else {
 				if (Debugging) {
-					Debug.Log ("There is no 'DefaultCannotUse' interaction for " + selected.gameObject.name + ".");
+					Debug.Log ("Used " + selected.gameObject.name + " on " + gameObject.name + ". No interactions were found. The player tags were: " + string.Join (", ", TagManager.Instance.PlayerTags.ToArray ()));
 				}
-				InventoryManager.Instance.ReturnSelected ();
+				Interaction error = selected.Interactions.Find (i => i.iName == "DefaultCannotUse");
+				if (error != null) {
+					InteractionManager.HandleInteractionSingle (this, error);
+				} else {
+					if (Debugging) {
+						Debug.Log ("There is no 'DefaultCannotUse' interaction for " + selected.gameObject.name + ".");
+					}
+					InventoryManager.Instance.ReturnSelected ();
+				}
 			}
 		}
 	}

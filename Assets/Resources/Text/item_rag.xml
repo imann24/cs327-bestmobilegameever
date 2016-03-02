@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InteractionList>
+	<Interactions>
+		<Interaction>
+			<Name>examine</Name>
+			<Type>Click</Type>
+			<Next>examine_rag</Next>
+			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>use</Name>
+			<Type>UseItem</Type>
+			<ALLTags>holdingHookDirty</ALLTags>
+			<Next>use_rag_hook</Next>
+			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>take</Name>
+			<Type>Derivative</Type>
+			<GiveItems>Rag</GiveItems>
+			<SpecialActions>Destroy</SpecialActions>
+		</Interaction>
+	</Interactions>
+</InteractionList>

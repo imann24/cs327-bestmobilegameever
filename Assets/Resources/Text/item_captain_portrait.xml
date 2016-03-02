@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InteractionList>
+	<Interactions>
+		<Interaction>
+			<Name>paint_portrait</Name>
+			<Type>Click</Type>
+			<NONETags>portraitPainted|portraitDressed</NONETags>
+			<GiveTags>portraitPainted</GiveTags>
+			<SpecialActions>ChangeToPainted</SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>dress_portrait</Name>
+			<Type>Click</Type>
+			<ALLTags>portraitPainted</ALLTags>
+			<NONETags>portraitDressed</NONETags>
+			<GiveTags>portraitDressed</GiveTags>
+			<TakeTags>portraitPainted</TakeTags>
+			<SpecialActions>ChangeToDressed</SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>examine</Name>
+			<Type>Click</Type>
+			<ALLTags>portraitDressed</ALLTags>
+			<Text>All done!</Text>
+			<Next>exit_tutorial_room</Next>
+			<NextInteractor>Cutscene_Handler</NextInteractor>
+		</Interaction>
+	</Interactions>
+</InteractionList>

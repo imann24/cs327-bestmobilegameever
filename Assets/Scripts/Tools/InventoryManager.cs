@@ -49,11 +49,11 @@ public class InventoryManager{
 			GiveItem (obj);
 		});
 	}
-
-	//stop referencing the object
+		
 	public void TakeItem(string itemPath){
-		RemoveFromInventory (itemPath);
-		RemoveFromSelected (itemPath);
+		if (!RemoveFromSelected (itemPath) && !RemoveFromInventory(itemPath) && GameManager.DEBUGGING) {
+			Debug.Log ("You don't have an item called " + itemPath + ". Were you supposed to have one?");
+		}
 	}
 
 	public void TakeItems(List<string> itemPaths){
@@ -64,13 +64,17 @@ public class InventoryManager{
 
 	//remove the item from the player's inventory.
 	//NOTE - THIS DOES NOT PASS A REFERENCE TO THE OBJECT TO ANYTHING. IMPLEMENT DESTRUCTION OF REMOVED OBJECT SOMEWHERE
-	public void RemoveFromInventory(string itemPath){
+	public bool RemoveFromInventory(string itemPath){
 		GameObject itemToRemove = Resources.Load<GameObject>("Prefabs/" + itemPath);//load the object information
 		string itemInventoryTag = itemToRemove.GetComponent<Interactable> ().InventoryTag;//get the object's inventory tag
 		List<InventorySlot> filledSlots = inventory.FindAll (slot => !slot.IsEmpty);//look for inventory slots that are full
 		InventorySlot itemSlot = filledSlots.Find (slot => slot.contentsTag == itemInventoryTag);//get the first one whose inventory tag matches
 		if (itemSlot != null) {//if we find one, empty the slot
+			itemSlot.contents.GetComponent<Interactable> ().Despawn ();
 			itemSlot.RemoveContents ();
+			return true;
+		} else {
+			return false;
 		}
 	}
 
@@ -111,13 +115,17 @@ public class InventoryManager{
 
 	//remove the selected item from the player.
 	//This does not pass a reference to the object anywhere. Probably need to implement destruction of th object?
-	public void RemoveFromSelected(string itemPath){
+	public bool RemoveFromSelected(string itemPath){
 		GameObject itemToRemove = Resources.Load<GameObject> ("Prefabs/" + itemPath);
 		string itemHoldingTag = itemToRemove.GetComponent<Interactable> ().HoldingTag;
 		if (IsHoldingItem && selectedItem.GetComponent<Interactable> ().HoldingTag == itemHoldingTag) {
 			UIManager.Instance.Deselect ();
 			TagManager.Instance.TakeTag (selectedItem.GetComponent<Interactable> ().HoldingTag);
+			selectedItem.GetComponent<Interactable> ().Despawn ();
 			selectedItem = null;
+			return true;
+		} else {
+			return false;
 		}
 	}
 
