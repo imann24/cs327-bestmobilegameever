@@ -2,38 +2,49 @@
 <InteractionList>
   <Interactions>
     <Interaction>
-      <Name>first_mate_puzzle_1_a</Name>
+      <Name>door_click_to_tutorial_room</Name>
       <Type>Click</Type>
-      <ALLTags></ALLTags>
-      <ANYTags></ANYTags>
-      <NONETags>puzzle_1_started</NONETags>
-      <Text>Ah, there you are! You must be my new assistant, yes? Thank goodness! You mustn’t keep your future captain waiting… but I will forgive you just this once.</Text>
-      <Image></Image>
-      <Next>first_mate_puzzle_1_b</Next>
-      <GiveTags>puzzle_1_started</GiveTags>
-      <TakeTags></TakeTags>
-      <GiveItems></GiveItems>
-      <TakeItems></TakeItems>
+      <ALLTags>intro</ALLTags>
+      <Text>Start tutorial.</Text>
+      <Image>PauseMenuBase</Image>
       <SpecialActions></SpecialActions>
-      <MaxDistance>5</MaxDistance>
-      <TooFar>ComeHere</TooFar>
     </Interaction>
     <Interaction>
-      <Name></Name>
-      <Type></Type>
-      <ALLTags></ALLTags>
-      <ANYTags></ANYTags>
-      <NONETags></NONETags>
-      <Text></Text>
+      <Name>door_click_to_main_game</Name>
+      <Type>Click|tutorial_started</Type>
+      <ALLTags>intro|prism_puzzle_started</ALLTags>
+      <Text>(Take just the yellow)</Text>
+      <Image>emerald</Image>
+      <GiveItems>yellow_circle</GiveItems>
+      <SpecialActions>ChangeToSapphire</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>emerald_click_get_both</Name>
+      <Type>Click</Type>
+      <ALLTags>intro|prism_puzzle_started</ALLTags>
+      <Text>(Take both colors)</Text>
+      <Image>emerald</Image>
+      <GiveItems>yellow_circle|blue_circle</GiveItems>
+      <SpecialActions>Destroy</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>emerald_click_prism_puzzle_not_started</Name>
+      <Type>Click</Type>
+      <NONETags>prism_puzzle_started</NONETags>
+      <Text>It's an emerald.</Text>
+      <Image>emerald</Image>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultTooFar</Name>
+      <Type>Derivative</Type>
+      <Text>Maybe I should go closer...</Text>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Text>I cannot use this item now.</Text>
       <Image></Image>
-      <Next></Next>
-      <GiveTags></GiveTags>
-      <TakeTags></TakeTags>
-      <GiveItems></GiveItems>
-      <TakeItems></TakeItems>
-      <SpecialActions></SpecialActions>
-      <MaxDistance />
-      <TooFar />
+      <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
   </Interactions>
 </InteractionList>
