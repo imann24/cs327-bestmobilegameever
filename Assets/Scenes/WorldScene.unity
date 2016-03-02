@@ -955,7 +955,7 @@ MonoBehaviour:
   InventoryImage: {fileID: 0}
   InventoryTag: 
   HoldingTag: 
-  Debugging: 0
+  Debugging: 1
 --- !u!54 &817048032
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 817048028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55905b758b106d94ca07e30052304159, type: 3}
+  m_Script: {fileID: 11500000, guid: cd02bcbf749cb45659c80a253e49cc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1152090807 stripped
