@@ -21,6 +21,10 @@ public static class SceneController {
 		LoadScene(PSScene.OptionsMenu);
 	}
 
+	public static void LoadCredits () {
+		LoadScene (PSScene.Credits);
+	}
+
 	// Uses an enum to load a scene
 	// For this to work: build settings must correspond to the PSScene Enum order
 	public static void LoadScene (PSScene scene) {
