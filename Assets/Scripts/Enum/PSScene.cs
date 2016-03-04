@@ -2,5 +2,6 @@
 	MainMenu,
 	MainGame,
 	OptionsMenu,
-	Credits
+	Credits,
+	TutorialScene
 }

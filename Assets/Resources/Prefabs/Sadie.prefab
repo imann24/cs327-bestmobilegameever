@@ -84,14 +84,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 172834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bbf8cc7c99bab34689aa8b152ce3ab5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fd9f88356865d449a2f68db53434efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionsXmlPath: character_sadie
-  InventoryImage: {fileID: 0}
-  InventoryTag: 
-  HoldingTag: 
-  Debugging: 0
+  _debug: 0
+  points: []
+  hasPath: 0
 --- !u!114 &11497150
 MonoBehaviour:
   m_ObjectHideFlags: 1

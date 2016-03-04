@@ -544,6 +544,7 @@ GameObject:
   - 114: {fileID: 439672679}
   - 50: {fileID: 439672680}
   - 58: {fileID: 439672681}
+  - 114: {fileID: 439672682}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -651,6 +652,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.45}
   serializedVersion: 2
   m_Radius: 0.66
+--- !u!114 &439672682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 439672675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd9f88356865d449a2f68db53434efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _debug: 0
+  points: []
+  hasPath: 0
 --- !u!1001 &516315721
 Prefab:
   m_ObjectHideFlags: 0
@@ -951,11 +966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bbf8cc7c99bab34689aa8b152ce3ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionsXmlPath: door
-  InventoryImage: {fileID: 0}
-  InventoryTag: 
-  HoldingTag: 
-  Debugging: 1
 --- !u!54 &817048032
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -994,6 +1004,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd02bcbf749cb45659c80a253e49cc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActionTag: 
+  UseExtended: 0
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  MoveToPosition: {x: 0, y: 0}
+  CreateAtPosition: {x: 0, y: 0}
 --- !u!114 &1152090807 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11472252, guid: 2c88b2636004344ecacd6c74c1fd98a8,
@@ -1368,11 +1388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bbf8cc7c99bab34689aa8b152ce3ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionsXmlPath: 
-  InventoryImage: {fileID: 0}
-  InventoryTag: 
-  HoldingTag: 
-  Debugging: 0
 --- !u!1 &1861836287
 GameObject:
   m_ObjectHideFlags: 0
