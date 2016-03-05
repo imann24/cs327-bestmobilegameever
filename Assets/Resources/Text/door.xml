@@ -2,20 +2,12 @@
 <InteractionList>
   <Interactions>
     <Interaction>
-      <Name>door_click_to_tutorial_room</Name>
+      <Name>LeaveTutorialRoom</Name>
       <Type>Click</Type>
-      <ALLTags>intro</ALLTags>
-      <Text>Start tutorial.</Text>
-      <Image>PauseMenuBase</Image>
-      <SpecialActions>ExitTutorialRoom</SpecialActions>
-    </Interaction>
-    <Interaction>
-      <Name>door_click_to_main_game</Name>
-      <Type>Click</Type>
-      <ALLTags>intro</ALLTags>
-      <Text>Start tutorial.</Text>
-      <Image>PauseMenuBase</Image>
-      <SpecialActions>ExitTutorialRoom</SpecialActions>
+      <ALLTags>tutorial_finished</ALLTags>
+      <Text>Leave the tutorial.</Text>
+      <TakeTags>tutorial_finished</TakeTags>
+      <SpecialActions>ComeHere</SpecialActions>
     </Interaction>
   </Interactions>
 </InteractionList>
