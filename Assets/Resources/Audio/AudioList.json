@@ -53,6 +53,7 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
+<<<<<<< HEAD
 		},
 		{
 			“FileName”:"Crowd_Chatter",
@@ -269,6 +270,8 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
+=======
+>>>>>>> master
 		}
 	]
 }
