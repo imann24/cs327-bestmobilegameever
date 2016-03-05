@@ -21,7 +21,9 @@ public class SpecialActions : MonoBehaviour {
 
     public void Awake() {
         SpecialActions[] scripts = GetComponents<SpecialActions>();
-        foreach (SpecialActions script in scripts) { actionScripts.Add(script.ActionTag, script); }
+        foreach (SpecialActions script in scripts) {
+            if (script.ActionTag != null) { actionScripts.Add(script.ActionTag, script); }
+        }
     }
 
     public void DoSpecialActions(List<string> actionList){

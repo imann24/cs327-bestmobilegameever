@@ -5,11 +5,22 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
+    private static UIManager _instance = null;
 
-	[SerializeField]
+    [SerializeField]
 	GameObject tapToContinue = null;
 
-	public void EnableTapToContinue(Interactable interactor, Interaction interaction){
+    void Awake() {
+        if (_instance == null) {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (this != _instance) {
+            Destroy(gameObject);
+        }
+    }
+
+    public void EnableTapToContinue(Interactable interactor, Interaction interaction){
 		tapToContinue.SetActive (true);
 		tapToContinue.GetComponent<InteractionButton> ().interactor = interactor;
 		tapToContinue.GetComponent<InteractionButton> ().interaction = interaction;
