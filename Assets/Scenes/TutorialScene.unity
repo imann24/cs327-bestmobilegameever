@@ -328,6 +328,7 @@ GameObject:
   - 50: {fileID: 439672680}
   - 58: {fileID: 439672681}
   - 114: {fileID: 439672682}
+  - 114: {fileID: 439672683}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -430,7 +431,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 4767d6d5731f4d146a7b12648848f470, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -0.45}
   serializedVersion: 2
@@ -449,6 +450,22 @@ MonoBehaviour:
   _debug: 0
   points: []
   hasPath: 0
+--- !u!114 &439672683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 439672675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83aa89a7c9747ee48953283c42d45919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orangePrefab: {fileID: 169374, guid: 8140404d6c952b846a4c80109515d26b, type: 2}
+  minX: 0
+  maxX: 5
+  minY: -5
+  maxY: 5
 --- !u!1001 &516315721
 Prefab:
   m_ObjectHideFlags: 0
