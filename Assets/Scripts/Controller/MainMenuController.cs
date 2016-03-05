@@ -22,6 +22,12 @@ public class MainMenuController : MonoBehaviour {
 
 	}
 
+	public void LaunchTutorial () {
+
+		SceneController.LoadTutorialScene();
+
+	}
+
 	public void LoadOptionsMenu () {
 
 		SceneController.LoadOptionsMenu();

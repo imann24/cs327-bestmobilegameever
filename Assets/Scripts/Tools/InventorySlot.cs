@@ -1,31 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class InventorySlot : MonoBehaviour {
+public class InventorySlot : MonoBehaviour, IDropHandler{
 
-	public GameObject contents { get; private set; }
-	public string contentsTag { get { return contents.GetComponent<Interactable> ().InventoryTag; } }
-	public bool IsEmpty { get { return contents == null; } }
+	public GameObject Contents { get { return (transform.childCount > 0) ? transform.GetChild (0).gameObject : null; } }
 
-	public GameObject RemoveContents(){
-		gameObject.GetComponent<Button> ().enabled = false;
-		gameObject.GetComponent<Image> ().sprite = null;
-		TagManager.Instance.TakeTag (contentsTag);
-		GameObject go = contents;
-		contents = null;
-		return go;
+	public void OnDrop (PointerEventData eventData)
+	{
+		if (Contents != null) {
+			#if (DEBUG)
+			Debug.Log("Using " + GameManager.InventoryManager.Selected.name + " on " + Contents.name);
+			#endif
+			InteractionManager.HandleUseItem (Contents.GetComponent<Interactable>());
+		} else {
+			#if (DEBUG)
+			Debug.Log("Moving " + GameManager.InventoryManager.Selected.name);
+			#endif
+			GameManager.InventoryManager.Selected.GetComponent<InventoryItem> ().MoveTo (this);
+		}
 	}
-
-	public void FillWith (GameObject newContents){
-		gameObject.GetComponent<Button> ().enabled = true;
-		gameObject.GetComponent<Image> ().sprite = 
-			newContents.GetComponent<Interactable> ().InventoryImage;
-		contents = newContents;
-	}
-
-	public void SelectContents(){
-		InventoryManager.Instance.SelectItem (this);
-	}
-
 }

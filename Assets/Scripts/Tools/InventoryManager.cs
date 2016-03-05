@@ -2,125 +2,175 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class InventoryManager{
+public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
 
-	private static InventoryManager _instance;
-	public static InventoryManager Instance {
-		get {
-			if (_instance == null) {
-				_instance = new InventoryManager ();
+	[SerializeField]
+	private GameObject ToggleButton = null;
+	[SerializeField]
+	private Sprite ShowButton = null;
+	[SerializeField]
+	private Sprite HideButton = null;
+
+	public GameObject Selected { get; private set; }
+	public bool PanelShowing { get; private set; }
+
+	private InventorySlot[] slots { get { return GetComponentsInChildren<InventorySlot> (); } }
+	public InventorySlot FirstEmptySlot { get { return slots.FirstOrDefault (slot => slot.Contents == null); } }
+
+	/// <summary>
+	/// Gives the item.
+	/// </summary>
+	/// <returns><c>true</c>, if item was given, <c>false</c> otherwise.</returns>
+	public bool GiveItem(string item){
+		if (FirstEmptySlot) {
+			Show ();
+			GameObject itemToGive = InventoryItem.Create (item);
+			if (itemToGive) {
+				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
+				return true;
+			} else {
+				#if (DEBUG)
+				Debug.Log("There is no inventory item called " + item + " in Resources/Prefabs/Items");
+				#endif
+				return false;
 			}
-			return _instance;
-		}
-	}
-
-	public bool IsHoldingItem { get { return selectedItem != null; } }
-	List<InventorySlot> inventory;
-	public GameObject selectedItem { get; private set; }
-
-	InventoryManager(){
-		inventory = UIManager.Instance.GetInventorySlots ();
-	}
-
-	public InventorySlot GetOpenSlot(){
-		List<InventorySlot> emptySlots = inventory.FindAll (slot => slot.IsEmpty);
-		if (emptySlots.Count > 0) {
-			InventorySlot bestEmpty = emptySlots.OrderBy (slot => slot.transform.GetSiblingIndex ()).First ();
-			return bestEmpty;
 		} else {
-			return null;
-		}
-	}
-		
-	//pull a reference to the object and store it in a slot.
-	public bool GiveItem(string itemPath){
-		
-		GameObject itemToAdd = Interactable.InstantiateAsInventory (itemPath);
-		if (GameManager.DEBUGGING) {
-			Debug.Log ("Giving: " + itemToAdd.name + ". Item is not null?" + (itemToAdd != null).ToString());
-		}
-		return AddToInventory (itemToAdd);
-	}
-
-	//THIS ONE NEEDS WORK. CURRENTLY CAN'T FIND EXCEPTIONS.
-	public void GiveItems(List<string> itemPaths){
-		itemPaths.ForEach (delegate(string obj) {
-			GiveItem (obj);
-		});
-	}
-
-	//stop referencing the object
-	public void TakeItem(string itemPath){
-		RemoveFromInventory (itemPath);
-		RemoveFromSelected (itemPath);
-	}
-
-	public void TakeItems(List<string> itemPaths){
-		itemPaths.ForEach (delegate(string obj) {
-			TakeItem (obj);
-		});
-	}
-
-	//remove the item from the player's inventory.
-	//NOTE - THIS DOES NOT PASS A REFERENCE TO THE OBJECT TO ANYTHING. IMPLEMENT DESTRUCTION OF REMOVED OBJECT SOMEWHERE
-	public void RemoveFromInventory(string itemPath){
-		GameObject itemToRemove = Resources.Load<GameObject>("Prefabs/" + itemPath);//load the object information
-		string itemInventoryTag = itemToRemove.GetComponent<Interactable> ().InventoryTag;//get the object's inventory tag
-		List<InventorySlot> filledSlots = inventory.FindAll (slot => !slot.IsEmpty);//look for inventory slots that are full
-		InventorySlot itemSlot = filledSlots.Find (slot => slot.contentsTag == itemInventoryTag);//get the first one whose inventory tag matches
-		if (itemSlot != null) {//if we find one, empty the slot
-			itemSlot.RemoveContents ();
+			#if (DEBUG)
+			Debug.Log("No empty slots for " + item);
+			#endif
+			return false;
 		}
 	}
 
-	public bool AddToInventory(GameObject itemToAdd){
-		InventorySlot slotToAdd = GetOpenSlot ();
-		if (slotToAdd != null) {
-			slotToAdd.FillWith (itemToAdd);
-			TagManager.Instance.GiveTag (slotToAdd.contentsTag);
+	/// <summary>
+	/// Gives each item in the list.
+	/// </summary>
+	/// <returns><c>true</c>, if each item in the list was given, <c>false</c> otherwise.</returns>
+	/// <param name="items">Items.</param>
+	public bool GiveItemList(List<string> items){
+		List<string> successes = items.FindAll (i => GiveItem (i));
+		#if (DEBUG)
+		Debug.Log("Successfully given: " + string.Join(" ", successes.ToArray()));
+		#endif
+		return successes == items;
+	}
+
+	/// <summary>
+	/// Takes the item.
+	/// </summary>
+	/// <returns><c>true</c>, if item was taken, <c>false</c> otherwise.</returns>
+	/// <param name="item">Item.</param>
+	public bool TakeItem(string item){
+		GameManager.InventoryManager.ReturnSelected ();
+		InventoryItem itemToTake = GetComponentsInChildren<InventoryItem> ().FirstOrDefault (i => i.gameObject.name == item);
+		if (itemToTake != null) {
+			Destroy (itemToTake.gameObject);
 			return true;
 		} else {
+			#if (DEBUG)
+			Debug.Log("You don't have an item called " + item + ", are you supposed to?");
+			#endif
 			return false;
-		}		
-	}
-
-	//remove the item from the player's inventory and save it as the selected item.
-	public void SelectItem(InventorySlot fromSlot){
-		//if the player isn't holding an item, select the item
-		if (selectedItem == null) {
-			selectedItem = fromSlot.RemoveContents ();
-			Debug.Log ("Not holding anything... Picked up " + selectedItem.name);
-			TagManager.Instance.GiveTag (selectedItem.GetComponent<Interactable> ().HoldingTag);
-			UIManager.Instance.ShowSelected (selectedItem);
-		} else { //otherwise try to use the selected item on the clicked item.
-			fromSlot.contents.GetComponent<Interactable>().UseSelected ();
 		}
 	}
 
+	/// <summary>
+	/// Takes each item in the list.
+	/// </summary>
+	/// <returns><c>true</c>, if each item in the list was taken, <c>false</c> otherwise.</returns>
+	/// <param name="items">Items.</param>
+	public bool TakeItemList(List<string> items){
+		List<string> successes = items.FindAll (i => TakeItem (i));
+		#if (DEBUG)
+		Debug.Log("Items successfully taken " + string.Join(" ", items.ToArray()));
+		#endif
+		return false;
+	}
 
-	//return the selected item to the player's inventory
-	//NOTE - THIS METHOD DOES NOT HAVE A FAIL STATE. IT NEEDS TO BE IMPLEMENTED.
+	/// <summary>
+	/// Returns the selected item to the inventory.
+	/// </summary>
 	public void ReturnSelected(){
-		if (AddToInventory (selectedItem)) {
-			UIManager.Instance.Deselect ();
-			TagManager.Instance.TakeTag (selectedItem.GetComponent<Interactable> ().HoldingTag);
-			selectedItem = null;
+		if (Selected != null) {
+			Selected.GetComponent<InventoryItem> ().ReturnToInventory ();
 		}
 	}
 
-	//remove the selected item from the player.
-	//This does not pass a reference to the object anywhere. Probably need to implement destruction of th object?
-	public void RemoveFromSelected(string itemPath){
-		GameObject itemToRemove = Resources.Load<GameObject> ("Prefabs/" + itemPath);
-		string itemHoldingTag = itemToRemove.GetComponent<Interactable> ().HoldingTag;
-		if (IsHoldingItem && selectedItem.GetComponent<Interactable> ().HoldingTag == itemHoldingTag) {
-			UIManager.Instance.Deselect ();
-			TagManager.Instance.TakeTag (selectedItem.GetComponent<Interactable> ().HoldingTag);
-			selectedItem = null;
+	public void Deselect(){
+		Selected = null;
+	}
+
+	/// <summary>
+	/// Select the specified item.
+	/// </summary>
+	/// <param name="item">Item.</param>
+	public void Select(GameObject item){
+		Selected = item;
+	}
+
+	/// <summary>
+	/// Show the inventory panel.
+	/// </summary>
+	public void Show(){
+		PanelShowing = true;
+		ToggleButton.GetComponent<Image> ().sprite = HideButton;
+		StartCoroutine ("ChangeHeight", Vector2.zero);
+	}
+
+	/// <summary>
+	/// Hide the inventory panel.
+	/// </summary>
+	public void Hide(){
+		PanelShowing = false;
+		ToggleButton.GetComponent<Image> ().sprite = ShowButton;
+		StartCoroutine("ChangeHeight", new Vector2(0,-105));
+	}
+
+	/// <summary>
+	/// Toggle between showing and hidden.
+	/// </summary>
+	public void Toggle(){
+		if (PanelShowing) {
+			Hide ();
+		} else {
+			Show ();
 		}
 	}
 
+	#region IPointerEnterHandler implementation
 
-		
+	public void OnPointerEnter (PointerEventData eventData)
+	{
+		if (Selected != null && !PanelShowing)
+			Show ();
+	}
+
+	#endregion
+
+	#region IPointerExitHandler implementation
+
+	public void OnPointerExit (PointerEventData eventData)
+	{
+		if (Selected != null && PanelShowing)
+			Hide ();
+	}
+
+	#endregion
+
+	/// <summary>
+	/// Changes the height over time.
+	/// </summary>
+	/// <param name="target">Target.</param>
+	IEnumerator ChangeHeight(Vector2 target){
+		float changeDuration = 0.5f;
+		Vector2 start = GetComponent<RectTransform> ().anchoredPosition;
+		for (float t = 0; t < changeDuration; t += Time.deltaTime) {
+			GetComponent<RectTransform> ().anchoredPosition = Vector2.Lerp (start, target, t / changeDuration);
+			yield return null;
+		}
+		GetComponent<RectTransform> ().anchoredPosition = target;
+	}
 }
