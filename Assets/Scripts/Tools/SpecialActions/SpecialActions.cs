@@ -65,7 +65,7 @@ public class SpecialActions : MonoBehaviour {
         if (ChangesSprite) { GetComponent<SpriteRenderer>().sprite = NewSprite; }
         if (MovesObject) { ObjectToMove.transform.position = new Vector3(MoveToPosition.x, MoveToPosition.y, ObjectToMove.transform.position.z); }
         if (CreatesObject) {
-            GameObject newObject = (GameObject)Instantiate(ObjectToCreate, new Vector3(CreateAtPosition.x, CreateAtPosition.y, 0), Quaternion.identity);
+            GameObject newObject = (GameObject)Instantiate(ObjectToCreate, new Vector3(CreateAtPosition.x, CreateAtPosition.y, gameObject.transform.position.z), Quaternion.identity);
             newObject.name = ObjectToCreate.name;
         }
         if (PlaysSound) {

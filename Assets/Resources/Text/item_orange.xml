@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>take</Name>
+      <Type>Click</Type>
+	  <NONETags>hasOrange</NONETags>
+	  <GiveItems>Orange</GiveItems>
+	  <SpecialActions>Destroy</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>default_cant_use</Name>
+      <Type>UseItem</Type>
+      <Next>default_cant_use</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+  </Interactions>
+</InteractionList>

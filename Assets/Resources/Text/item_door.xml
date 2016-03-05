@@ -16,5 +16,11 @@
 	  <Next>examine_tutorial_door</Next>
 	  <NextInteractor>Sadie</NextInteractor>
     </Interaction>
+    <Interaction>
+      <Name>default_cant_use</Name>
+      <Type>UseItem</Type>
+      <Next>default_cant_use</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
   </Interactions>
 </InteractionList>

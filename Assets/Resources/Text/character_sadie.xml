@@ -79,10 +79,17 @@
 		  <Next>pick_up_dirty_hook_3</Next>
 		</Interaction>
 		<Interaction>
+		  <Name>examine_bottle</Name>
+		  <Type>Derivative</Type>
+		  <Text>I can't reach that.</Text>
+		  <TextType>Floating</TextType>
+		</Interaction>
+		<Interaction>
 		  <Name>default_cant_use</Name>
 		  <Type>Derivative</Type>
 		  <Text>Nah.</Text>
 		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
 		</Interaction>
 	</Interactions>
 </InteractionList>
