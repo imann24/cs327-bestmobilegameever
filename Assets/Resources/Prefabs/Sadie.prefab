@@ -15,6 +15,7 @@ GameObject:
   - 58: {fileID: 5878220}
   - 114: {fileID: 11456348}
   - 114: {fileID: 11497104}
+  - 114: {fileID: 11493744}
   m_Layer: 0
   m_Name: Sadie
   m_TagString: Untagged
@@ -175,6 +176,22 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &11493744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83aa89a7c9747ee48953283c42d45919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orangePrefab: {fileID: 169374, guid: 8140404d6c952b846a4c80109515d26b, type: 2}
+  minX: 0
+  maxX: 5
+  minY: 0
+  maxY: 10
 --- !u!114 &11497104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,7 +277,27 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: maxX
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: minY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxY
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: orangePrefab
+      value: 
+      objectReference: {fileID: 169374, guid: 8140404d6c952b846a4c80109515d26b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: minX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 111028}
