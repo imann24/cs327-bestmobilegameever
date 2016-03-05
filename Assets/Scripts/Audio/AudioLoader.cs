@@ -19,12 +19,6 @@ public class AudioLoader {
 	// Returns a C# class formatted like corresponding JSON file
 	// JSON file must be formatted to match class structure or will throw an error
 	public AudioList Load () {
-		/**Debug.Log(
-			JsonUtility.FromJson<AudioList>(
-			FileUtil.FileText (
-				this._path
-			)
-			));**/
 		return JsonUtility.FromJson<AudioList>(
 			FileUtil.FileText (
 				this._path
