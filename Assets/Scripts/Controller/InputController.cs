@@ -68,7 +68,18 @@ public class InputController : MonoBehaviour {
 						if (touch.phase == TouchPhase.Canceled) {
 							recipient.SendMessage ("OnTouchExit", SendMessageOptions.DontRequireReceiver);
 						}
-					} 
+					} else if (recipient.tag == "Ground") {
+						if (_debug) {
+							Debug.Log (mainCamera.ScreenToWorldPoint (touch.position).x);
+						}
+						if (touch.phase == TouchPhase.Began) {
+							path.GetPath (new Vector2 (hit.point.x, hit.point.y));
+						}
+					} else if (recipient.tag == "Player") {
+						if (touch.phase == TouchPhase.Stationary) {
+							hit.transform.GetComponent<OrangeThrowing> ().Activate (touch);
+						}
+					}
 				} 
 			}
 		}
