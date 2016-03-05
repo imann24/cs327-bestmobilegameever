@@ -267,6 +267,50 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
+		},
+		{
+			“FileName”:"Captain_Talk_A_1",
+			“EventNames”:["Captaintalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Cabingirl_Talk_A_1",
+			“EventNames”:["Cabingirltalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Quartermaster_Talk_A_1",
+			“EventNames”:["Quartermastertalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_A_1",
+			“EventNames”:["Shipmastertalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		{
+			“FileName”:"Firstmate_Talk_A_1",
+			“EventNames”:["Firstmatetalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
 		}
 	]
 }

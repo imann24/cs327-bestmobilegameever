@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>door_click_to_tutorial_room</Name>
+      <Type>Click</Type>
+      <ALLTags>intro</ALLTags>
+      <Text>Start tutorial.</Text>
+      <Image>PauseMenuBase</Image>
+      <SpecialActions>ExitTutorialRoom</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>door_click_to_main_game</Name>
+      <Type>Click</Type>
+      <ALLTags>intro</ALLTags>
+      <Text>Start tutorial.</Text>
+      <Image>PauseMenuBase</Image>
+      <SpecialActions>ExitTutorialRoom</SpecialActions>
+    </Interaction>
+  </Interactions>
+</InteractionList>

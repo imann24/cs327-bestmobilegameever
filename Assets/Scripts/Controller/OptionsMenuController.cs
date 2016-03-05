@@ -14,6 +14,11 @@ public class OptionsMenuController : MonoBehaviour {
 
 	}
 
+	public void CreditsScene () {
+
+		SceneController.LoadCredits ();
+	}
+
 	public void ResetSaveFile () {
 
 		new SaveLoad().ClearSave();

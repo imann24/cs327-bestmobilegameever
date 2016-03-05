@@ -3,8 +3,11 @@ using System.Collections;
 
 public class InputController : MonoBehaviour {
 	private Camera mainCamera;
+	private RayPathFinding path;
+		
 	bool _debug = false;
 	void Start(){
+		path = PlayerMovement.Instance.transform.GetComponent<RayPathFinding> ();
 		mainCamera = this.gameObject.GetComponent<Camera> (); 
 	}
 
@@ -16,12 +19,11 @@ public class InputController : MonoBehaviour {
 		}
 
 		#if UNITY_EDITOR
-		if (Input.GetMouseButton(0) || Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0)) {
-
+		if (Input.GetMouseButtonUp(0)) {
 			Ray ray = mainCamera.ScreenPointToRay (Input.mousePosition);
-			RaycastHit hit;
+			RaycastHit2D hit = Physics2D.Raycast(new Vector2 (ray.origin.x, ray.origin.y), ray.direction);
 
-			if (Physics.Raycast (ray, out hit)) {
+			if (hit) {
 				GameObject recipient = hit.transform.gameObject;
 
 				if (recipient.tag == "Clickable") {
@@ -39,7 +41,7 @@ public class InputController : MonoBehaviour {
 					if (_debug) {
 						Debug.Log (mainCamera.ScreenToWorldPoint(Input.mousePosition).x);
 					}
-					PlayerMovement.Instance.MoveTowards(new Vector2 (mainCamera.ScreenToWorldPoint(Input.mousePosition).x, mainCamera.ScreenToWorldPoint(Input.mousePosition).y) , false);
+					path.GetPath(new Vector2 (hit.point.x, hit.point.y));
 				}
 			}
 		}
