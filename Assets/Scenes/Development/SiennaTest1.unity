@@ -417,12 +417,54 @@ RectTransform:
   - {fileID: 1639231915}
   - {fileID: 1156069672}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &146241768
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 405138, guid: 3153f3d53b666834b81cd7eb34934b2a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.7388142
+      objectReference: {fileID: 0}
+    - target: {fileID: 405138, guid: 3153f3d53b666834b81cd7eb34934b2a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.63368106
+      objectReference: {fileID: 0}
+    - target: {fileID: 405138, guid: 3153f3d53b666834b81cd7eb34934b2a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405138, guid: 3153f3d53b666834b81cd7eb34934b2a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405138, guid: 3153f3d53b666834b81cd7eb34934b2a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405138, guid: 3153f3d53b666834b81cd7eb34934b2a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405138, guid: 3153f3d53b666834b81cd7eb34934b2a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 405138, guid: 3153f3d53b666834b81cd7eb34934b2a, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3153f3d53b666834b81cd7eb34934b2a, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &149415624
 Prefab:
   m_ObjectHideFlags: 0
@@ -779,7 +821,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1001 &298849196
 Prefab:
   m_ObjectHideFlags: 0
@@ -1232,7 +1274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &562137471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4416,7 +4458,7 @@ Transform:
   - {fileID: 1384794428}
   - {fileID: 1758415718}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &1605458504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4585,7 +4627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1639231914
 GameObject:
   m_ObjectHideFlags: 0
@@ -5144,7 +5186,6 @@ GameObject:
   - 114: {fileID: 1761889247}
   - 54: {fileID: 1761889246}
   - 65: {fileID: 1761889245}
-  - 114: {fileID: 1761889244}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -5164,27 +5205,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2065786938}
   m_RootOrder: 0
---- !u!114 &1761889244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1761889242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd02bcbf749cb45659c80a253e49cc4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionTag: 
-  UseExtended: 0
-  ChangesSprite: 0
-  MovesObject: 0
-  CreatesObject: 0
-  NewSprite: {fileID: 0}
-  ObjectToMove: {fileID: 0}
-  ObjectToCreate: {fileID: 0}
-  MoveToPosition: {x: 0, y: 0}
-  CreateAtPosition: {x: 0, y: 0}
 --- !u!65 &1761889245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6877,7 +6897,7 @@ Transform:
   - {fileID: 394091162}
   - {fileID: 1887175108}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &2122933886
 GameObject:
   m_ObjectHideFlags: 0
@@ -6920,7 +6940,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &2146447843
 GameObject:
   m_ObjectHideFlags: 0
