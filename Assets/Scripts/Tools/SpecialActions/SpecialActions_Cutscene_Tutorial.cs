@@ -7,7 +7,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     private string next;
 
     void Start() {
-        //ScreenFader.FadeOut(0);
+        ScreenFader.FadeOut(0);
         NextInteraction("tutorial_start");
     }
 

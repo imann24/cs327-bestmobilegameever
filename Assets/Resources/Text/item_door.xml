@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>door_click_to_tutorial_room</Name>
+      <Type>Click</Type>
+	  <Next>exit_tutorial_room</Next>
+	  <NextInteractor>Cutscene_Handler</NextInteractor>
+    </Interaction>
+  </Interactions>
+</InteractionList>

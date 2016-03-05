@@ -14,6 +14,7 @@ GameObject:
   - 50: {fileID: 5093310}
   - 58: {fileID: 5878220}
   - 114: {fileID: 11456348}
+  - 114: {fileID: 11497104}
   m_Layer: 0
   m_Name: Sadie
   m_TagString: Untagged
@@ -174,6 +175,20 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &11497104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd9f88356865d449a2f68db53434efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _debug: 0
+  points: []
+  hasPath: 0
 --- !u!212 &21244914
 SpriteRenderer:
   m_ObjectHideFlags: 1
