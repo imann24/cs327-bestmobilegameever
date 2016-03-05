@@ -11,13 +11,17 @@ public class SpecialActions : MonoBehaviour {
     [HideInInspector]
     public string ActionTag = null;
     [HideInInspector]
-    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject;
+    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound;
     [HideInInspector]
     public Sprite NewSprite;
     [HideInInspector]
     public GameObject ObjectToMove, ObjectToCreate;
     [HideInInspector]
     public Vector2 MoveToPosition, CreateAtPosition;
+    [HideInInspector]
+    public AudioSource Sound;
+    [HideInInspector]
+    public float SoundDelay = 0;
 
     public void Awake() {
         SpecialActions[] scripts = GetComponents<SpecialActions>();
@@ -64,6 +68,10 @@ public class SpecialActions : MonoBehaviour {
             GameObject newObject = (GameObject)Instantiate(ObjectToCreate, new Vector3(CreateAtPosition.x, CreateAtPosition.y, 0), Quaternion.identity);
             newObject.name = ObjectToCreate.name;
         }
+        if (PlaysSound) {
+            if (SoundDelay == 0) { Sound.Play(); }
+            else { Sound.PlayDelayed(SoundDelay); }
+        }
     }
 
     public void NextInteraction(string name, Interactable interactor = null) {
@@ -103,6 +111,12 @@ public class SpecialActionsEditor : Editor {
                 if (thisScript.CreatesObject) {
                     thisScript.ObjectToCreate = EditorGUILayout.ObjectField("Object Prefab", thisScript.ObjectToCreate, typeof(GameObject), true) as GameObject;
                     thisScript.CreateAtPosition = EditorGUILayout.Vector2Field("Position", thisScript.CreateAtPosition);
+                }
+
+                thisScript.PlaysSound = GUILayout.Toggle(thisScript.PlaysSound, "Play Sound");
+                if (thisScript.PlaysSound) {
+                    thisScript.Sound = EditorGUILayout.ObjectField("Sound", thisScript.Sound, typeof(AudioSource), true) as AudioSource;
+                    thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
                 }
             }
         }

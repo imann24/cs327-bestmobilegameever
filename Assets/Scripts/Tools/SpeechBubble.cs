@@ -13,6 +13,7 @@ public class SpeechBubble : MonoBehaviour {
 	public void Say(Interactable interactor, Interaction interaction) {
         this.interactor = interactor;
         this.interaction = interaction;
+        GameManager.UIManager.LockScreen();
         Invoke("nextInteraction", 2f);
 
         GameObject go = Instantiate (floatingText);
@@ -27,5 +28,8 @@ public class SpeechBubble : MonoBehaviour {
 		transform.LookAt (transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
     }
 
-    private void nextInteraction() { InteractionManager.CompleteInteraction(interactor, interaction); }
+    private void nextInteraction() {
+        GameManager.UIManager.UnlockScreen();
+        InteractionManager.CompleteInteraction(interactor, interaction);
+    }
 }

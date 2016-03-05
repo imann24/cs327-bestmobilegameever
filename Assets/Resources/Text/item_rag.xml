@@ -15,10 +15,33 @@
 			<NextInteractor>Sadie</NextInteractor>
 		</Interaction>
 		<Interaction>
+			<Name>use</Name>
+			<Type>UseItem</Type>
+			<NONETags>holdingHookDirty</NONETags>
+			<Next>default_cant_use</Next>
+			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+		<Interaction>
 			<Name>take</Name>
 			<Type>Derivative</Type>
 			<GiveItems>Rag</GiveItems>
 			<SpecialActions>Destroy</SpecialActions>
+		</Interaction>
+		<Interaction>
+			<Name>default_cant_use</Name>
+			<Type>UseItem</Type>
+			<NONETags>holdingHookDirty</NONETags>
+			<Next>default_cant_use</Next>
+			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>clean_hook</Name>
+			<Type>Derivative</Type>
+			<TakeItems>Rag|Hook_Dirty</TakeItems>
+			<GiveItems>Hook_Clean</GiveItems>
+			<SpecialActions>SoundCleaningHook</SpecialActions>
+			<Next>cleaned_hook</Next>
+			<NextInteractor>Sadie</NextInteractor>
 		</Interaction>
 	</Interactions>
 </InteractionList>

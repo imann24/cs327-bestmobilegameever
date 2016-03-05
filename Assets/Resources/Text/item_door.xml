@@ -4,14 +4,15 @@
     <Interaction>
       <Name>door_click_to_tutorial_room</Name>
       <Type>Click</Type>
-	  <ALLTags>hasHookClean</ALLTags>
+	  <ALLTags>hasHook</ALLTags>
 	  <Next>exit_tutorial_room</Next>
 	  <NextInteractor>Cutscene_Handler</NextInteractor>
+	  <SpecialActions>SoundOpenDoor</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>examine</Name>
       <Type>Click</Type>
-	  <NONETags>hasHookClean</NONETags>
+	  <NONETags>hasHook</NONETags>
 	  <Next>examine_tutorial_door</Next>
 	  <NextInteractor>Sadie</NextInteractor>
     </Interaction>

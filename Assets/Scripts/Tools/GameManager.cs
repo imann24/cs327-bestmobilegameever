@@ -39,6 +39,14 @@ public class GameManager : MonoBehaviour {
 		//InventoryManager.Show ();
 	}
 
+    public static bool InteractionActive {
+        get {
+            GameObject InteractionPanel = GameObject.Find("InteractionTextPanel");
+            if (InteractionPanel != null) { return true; }
+            else { return false; }
+        }
+    }
+
 
 	#region TAG MANAGEMENT FUNCTIONS
 	public static void GiveTags(List<string> tags){
