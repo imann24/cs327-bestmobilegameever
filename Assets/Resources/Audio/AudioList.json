@@ -57,7 +57,7 @@
 		{
 			“FileName”:"Crowd_Chatter",
 			“EventNames”:["ChatterStart"],
-			"StopEventNames":[ChatterStop],
+			"StopEventNames":["ChatterStop"],
 			“Loop”:true,
 			“Type”: "Ambience",
 			“Channel”:1,
@@ -107,6 +107,7 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
+		},
 		{
 			“FileName”:"FirstMate_Speech_D_1",
 			“EventNames”:["FirstMateSpeech"],
@@ -259,6 +260,7 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
+		},
 		{
 			“FileName”:"Rope_On_Lifeboat_1",
 			“EventNames”:["RopeOnLifeboat"],
@@ -303,6 +305,7 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
+		},
 		{
 			“FileName”:"Firstmate_Talk_A_1",
 			“EventNames”:["Firstmatetalk"],
