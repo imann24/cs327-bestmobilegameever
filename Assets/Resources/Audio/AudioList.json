@@ -57,7 +57,7 @@
 		{
 			“FileName”:"Crowd_Chatter",
 			“EventNames”:["ChatterStart"],
-			"StopEventNames":[ChatterStop],
+			"StopEventNames":["ChatterStop"],
 			“Loop”:true,
 			“Type”: "Ambience",
 			“Channel”:1,

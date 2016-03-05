@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public static class FileUtil {
 
 	public static string FileText (string path) {
+		Debug.Log(convertQuotationMarks(
+			Resources.Load<TextAsset>(path).text
+		));
 		return convertQuotationMarks(
 			Resources.Load<TextAsset>(path).text
 		);
