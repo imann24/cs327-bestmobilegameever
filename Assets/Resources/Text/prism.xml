@@ -17,6 +17,7 @@
       <NONETags>prism_puzzle_complete</NONETags>
       <Text>You still need to make me TEAL. I wonder how you make the color teal...</Text>
       <Image>prism</Image>
+      <TextType>Monologue</TextType>
     </Interaction>
     <Interaction>
       <Name>prism_puzzle_2_start</Name>
@@ -63,6 +64,13 @@
       <Image>purple</Image>
       <TakeItems>purple_circle</TakeItems>
       <GiveItems>blue_circle|red_circle</GiveItems>
+    </Interaction>
+    <Interaction>
+      <Name>prism_puzzle_fix_colors</Name>
+      <Type>Derivative</Type>
+      <ALLTags>prism_puzzle_started|hold_red</ALLTags>
+      <NONETags>prism_puzzle_complete</NONETags>
+      <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>prism_puzzle_fix_colors</Name>

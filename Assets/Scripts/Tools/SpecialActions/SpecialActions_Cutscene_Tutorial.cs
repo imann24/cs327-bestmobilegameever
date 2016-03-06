@@ -1,26 +1,38 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SpecialActions_Cutscene_Tutorial : SpecialActions {
-    public GameObject Quartermaster;
-    public GameObject Shipmaster;
-    public GameObject Firstmate;
-    public Vector2 QuartermasterExit;
-    public Vector2 ShipmasterExit;
-    public Vector2 FirstmateExit;
+    public AudioSource Yawn;
+    private GameObject Quartermaster, Shipmaster, Firstmate;
+    private string next;
+
+    void Start() {
+        ScreenFader.FadeOut(0);
+        Yawn.Play();
+        next = "tutorial_start";
+        Invoke("doNext", 1f);
+    }
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
+            case "ExitTutorialRoom":
+                next = "tutorial_cutscene_start";
+                StartCoroutine(NextScene());
+                break;
             case "QuartermasterExit":
-                npcExit(Quartermaster, QuartermasterExit);
+                next = "tutorial_cutscene_exit_QM";
+                StartCoroutine(npcExit(Quartermaster));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Quartermaster"); }
                 break;
             case "ShipmasterExit":
-                npcExit(Shipmaster, ShipmasterExit);
+                next = "tutorial_cutscene_exit_SM";
+                StartCoroutine(npcExit(Shipmaster));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Shipmaster"); }
                 break;
             case "FirstmateExit":
-                npcExit(Firstmate, FirstmateExit);
+                next = "tutorial_cutscene_exit_FM";
+                StartCoroutine(npcExit(Firstmate));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Firstmate"); }
                 break;
             default:
@@ -29,7 +41,31 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         }
     }
 
-    private void npcExit(GameObject npc, Vector2 exit) {
+    private void doNext() { NextInteraction(next); }
+
+    IEnumerator npcExit(GameObject npc) {
+        GameManager.UIManager.LockScreen();
+        ScreenFader.FadeOut(1f);
+        yield return new WaitForSeconds(1f);
         Destroy(npc);
+        ScreenFader.FadeIn(1f);
+        yield return new WaitForSeconds(1f);
+        GameManager.UIManager.UnlockScreen();
+        NextInteraction(next);
+    }
+    
+    IEnumerator NextScene() {
+        GameManager.UIManager.LockScreen();
+        DontDestroyOnLoad(gameObject);
+        ScreenFader.FadeOut();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Scenes/Development/SiennaTest2");
+        ScreenFader.FadeIn();
+        yield return new WaitForSeconds(1f);
+        Quartermaster = GameObject.Find("Quartermaster");
+        Shipmaster = GameObject.Find("Shipmaster");
+        Firstmate = GameObject.Find("Firstmate");
+        GameManager.UIManager.UnlockScreen();
+        NextInteraction(next);
     }
 }

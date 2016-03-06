@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>door_click_to_tutorial_room</Name>
+      <Type>Click</Type>
+	  <ALLTags>hasHook</ALLTags>
+	  <Next>exit_tutorial_room</Next>
+	  <NextInteractor>Cutscene_Handler</NextInteractor>
+	  <SpecialActions>SoundOpenDoor</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+	  <NONETags>hasHook</NONETags>
+	  <Next>examine_tutorial_door</Next>
+	  <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>default_cant_use</Name>
+      <Type>UseItem</Type>
+      <Next>default_cant_use</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+  </Interactions>
+</InteractionList>
