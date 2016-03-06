@@ -21,6 +21,11 @@ public static class SceneController {
 		LoadScene(PSScene.OptionsMenu);
 	}
 
+
+	public static void LoadCredits () {
+		LoadScene (PSScene.Credits);
+	}
+
 	public static void LoadTutorialScene () {
 		LoadScene(PSScene.TutorialScene);
 	}

@@ -22,6 +22,8 @@
 			<Type>Click</Type>
 			<ALLTags>portraitDressed</ALLTags>
 			<Text>All done!</Text>
+			<Next>exit_tutorial_room</Next>
+			<NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 	</Interactions>
 </InteractionList>
