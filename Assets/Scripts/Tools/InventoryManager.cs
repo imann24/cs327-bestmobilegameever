@@ -27,6 +27,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	/// <returns><c>true</c>, if item was given, <c>false</c> otherwise.</returns>
 	public bool GiveItem(string item){
 		if (FirstEmptySlot) {
+			Show ();
 			GameObject itemToGive = InventoryItem.Create (item);
 			if (itemToGive) {
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
@@ -125,8 +126,8 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	/// </summary>
 	public void Hide(){
 		PanelShowing = false;
-		ToggleButton.GetComponent<Image> ().sprite = ShowButton;
 		StartCoroutine("ChangeHeight", new Vector2(0,-105));
+		ToggleButton.GetComponent<Image> ().sprite = ShowButton;
 	}
 
 	/// <summary>
@@ -166,6 +167,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	{
 		Debug.Log ("started drag");
 		dragAnchor = Input.mousePosition;
+		Debug.Log (dragAnchor.y);
 		//Toggle ();
 	}
 
@@ -175,13 +177,14 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
 	public void OnDrag (PointerEventData eventData)
 	{
-		//throw new System.NotImplementedException ();
 		if (dragAnchor.y > Input.mousePosition.y && PanelShowing) {
 			dragAnchor = Input.mousePosition;
+			Debug.Log (dragAnchor.y);
 			Hide ();
 		}
 		if (dragAnchor.y < Input.mousePosition.y && !PanelShowing) {
 			dragAnchor = Input.mousePosition;
+			Debug.Log (dragAnchor.y);
 			Show ();
 		}
 	}
