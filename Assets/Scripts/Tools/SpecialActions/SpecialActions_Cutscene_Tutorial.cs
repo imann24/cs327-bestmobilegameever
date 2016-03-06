@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SpecialActions_Cutscene_Tutorial : SpecialActions {
-    public AudioSource Yawn;
+    public AudioClip Yawn;
     private GameObject Quartermaster, Shipmaster, Firstmate;
     private string next;
 
     void Start() {
         ScreenFader.FadeOut(0);
-        Yawn.Play();
+        PlaySound(Yawn);
         next = "tutorial_start";
         Invoke("doNext", 1f);
     }
@@ -59,7 +59,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         DontDestroyOnLoad(gameObject);
         ScreenFader.FadeOut();
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Scenes/Development/SiennaTest2");
+        SceneManager.LoadScene("Scenes/WorldScene");
         ScreenFader.FadeIn();
         yield return new WaitForSeconds(1f);
         Quartermaster = GameObject.Find("Quartermaster");
