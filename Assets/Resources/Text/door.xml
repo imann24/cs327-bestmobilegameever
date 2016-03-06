@@ -2,12 +2,20 @@
 <InteractionList>
   <Interactions>
     <Interaction>
-      <Name>LeaveTutorialRoom</Name>
+      <Name>leave_tutorial_room</Name>
       <Type>Click</Type>
-      <ALLTags>tutorial_finished</ALLTags>
-      <Text>Leave the tutorial.</Text>
-      <TakeTags>tutorial_finished</TakeTags>
+      <ALLTags>tutorialComplete</ALLTags>
+      <NONETags>tutorialStarted</NONETags>
+      <TakeTags>tutorialComplete</TakeTags>
+      <SpecialActions>ExitTutorial</SpecialActions>
+      <MaxDistance>10</MaxDistance>
+      <TooFar>go_to_door</TooFar>
+    </Interaction>
+    <Interaction>
+      <Name>go_to_door</Name>
+      <Type>Derivative</Type>
       <SpecialActions>ComeHere</SpecialActions>
+      <Next>leave_tutorial_room</Next>
     </Interaction>
   </Interactions>
 </InteractionList>
