@@ -5430,7 +5430,7 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1791056953}
+  - 224: {fileID: 1791056953}
   - 212: {fileID: 1791056958}
   - 114: {fileID: 1791056957}
   - 114: {fileID: 1791056956}
@@ -5443,18 +5443,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1791056953
-Transform:
+--- !u!224 &1791056953
+RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1791056952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8753724, y: -0.9845574, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3794154, y: 0.37941536, z: 0.37941536}
   m_Children: []
   m_Father: {fileID: 1139070597}
   m_RootOrder: 1
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.8753724, y: -0.9845574}
+  m_SizeDelta: {x: 1.08, y: 1.15}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1791056954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5493,13 +5498,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionTag: 
-  Sound: H
-  UseExtended: 0
+  ActionTag: SoundTutorialPrompt
+  Sound: PromptAppears
+  UseExtended: 1
   ChangesSprite: 0
   MovesObject: 0
   CreatesObject: 0
-  PlaysSound: 0
+  PlaysSound: 1
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
