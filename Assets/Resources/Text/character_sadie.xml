@@ -6,7 +6,7 @@
 			<Type>Derivative</Type>
 			<Text>Where is it, again...?</Text>
 			<TextType>Floating</TextType>
-			<Next>tutorial_04</Next>
+			<Next>tutorial_04_sound</Next>
 			<NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 		<Interaction>
