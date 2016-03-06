@@ -91,5 +91,36 @@
 		  <TextType>Floating</TextType>
 		  <SpecialActions>ReturnSelected</SpecialActions>
 		</Interaction>
+		<Interaction>
+		  <Name>default_cant_use</Name>
+		  <Type>Derivative</Type>
+		  <ANDTags>holdingHook</ANDTags>
+		  <Text>I don't want to stab that.</Text>
+		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
+		</Interaction>
+		<Interaction>
+		  <Name>default_cant_use</Name>
+		  <Type>Derivative</Type>
+		  <ANDTags>holdingMopHead</ANDTags>
+		  <Text>Clean something I don't have to? No way.</Text>
+		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
+		</Interaction>
+		<Interaction>
+		  <Name>default_cant_give</Name>
+		  <Type>Derivative</Type>
+		  <Text>I don't think they'd want that.</Text>
+		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
+		</Interaction>
+		<Interaction>
+		  <Name>default_cant_give</Name>
+		  <Type>Derivative</Type>
+		  <ANDTags>holdingHook</ANDTags>
+		  <Text>I'd really rather hold on to it.</Text>
+		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
+		</Interaction>
 	</Interactions>
 </InteractionList>
