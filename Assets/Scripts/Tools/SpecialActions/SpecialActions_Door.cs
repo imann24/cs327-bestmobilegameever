@@ -4,9 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SpecialActions_Door : SpecialActions {
-	private GameObject Quartermaster;
-	private GameObject Shipmaster;
-	private GameObject Firstmate;
+	private GameObject Sadie;
 	private string next;
 
 	public override void DoSpecialAction(string actionTag) {
@@ -15,7 +13,7 @@ public class SpecialActions_Door : SpecialActions {
 			next = "tutorial_cutscene_start";
 			//StartCoroutine(NextScene());
 			break;
-		case "ExitTutorial":
+		case "SoundOpenDoor":
 			next = "tutorial_cutscene_exit_QM";
 			if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit"); }
 			break;
@@ -23,12 +21,18 @@ public class SpecialActions_Door : SpecialActions {
 			if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log(actionTag + " isn't defined in SpecialActions_Cutscene_Handler."); }
 			break;
 		}
-	}
+//	}
 
-	private void nextInteraction() {
-		Interactable interactor = gameObject.GetComponent<Interactable>();
-		List<Interaction> iList = interactor.Interactions.FindAll(i => (i.iName == next) && (i.iType == InteractionType.Derivative));
-		if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Attempting to run interaction, interactor: " + interactor + "list: " + iList); }
-		InteractionManager.HandleInteractionList(interactor, iList);
+	IEnumerator NextScene() {
+		GameManager.UIManager.LockScreen();
+		DontDestroyOnLoad(gameObject);
+		ScreenFader.FadeOut();
+		yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene("Scenes/Development/WorldScene");
+		ScreenFader.FadeIn();
+		yield return new WaitForSeconds(1f);
+		Sadie = GameObject.Find("Sadie");
+		GameManager.UIManager.UnlockScreen();
+		NextInteraction(next);
 	}
 }
