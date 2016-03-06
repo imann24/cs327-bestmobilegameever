@@ -19,6 +19,7 @@
 			<Type>Derivative</Type>
 			<Text>Hand?! Hand... oh, right! Crap! Still gotta clean off the Captain's hand...</Text>
 			<Image>SadiePortrait</Image>
+			<SpecialActions>SoundTutorialPrompt</SpecialActions>
 			<Next>tutorial_03</Next>
 		</Interaction>
 		<Interaction>
@@ -27,6 +28,12 @@
 			<Text>**Tap the screen to move Sadie**</Text>
 			<Next>tutorial_sadie</Next>
 			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>tutorial_04_sound</Name>
+			<Type>Derivative</Type>
+			<SpecialActions>SoundTutorialPrompt</SpecialActions>
+			<Next>tutorial_04</Next>
 		</Interaction>
 		<Interaction>
 			<Name>tutorial_04</Name>

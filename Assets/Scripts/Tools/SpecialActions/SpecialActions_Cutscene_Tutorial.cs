@@ -3,19 +3,24 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SpecialActions_Cutscene_Tutorial : SpecialActions {
-    public AudioSource Yawn;
     private GameObject Quartermaster, Shipmaster, Firstmate;
     private string next;
 
     void Start() {
         ScreenFader.FadeOut(0);
-        Yawn.Play();
+        EventController.Event("PlayerYawn");
         next = "tutorial_start";
         Invoke("doNext", 1f);
     }
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
+			case "SoundTutorialPrompt":
+				EventController.Event("PromptAppears");
+			break;
+			case "PlayOrangeSplatSound":
+				EventController.Event("OrangeImpact");
+			break;
             case "ExitTutorialRoom":
                 next = "tutorial_cutscene_start";
                 StartCoroutine(NextScene());
@@ -41,7 +46,10 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         }
     }
 
-    private void doNext() { NextInteraction(next); }
+    private void doNext() {
+        NextInteraction(next);
+        EventController.Event("PromptAppears");
+    }
 
     IEnumerator npcExit(GameObject npc) {
         GameManager.UIManager.LockScreen();
@@ -59,7 +67,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         DontDestroyOnLoad(gameObject);
         ScreenFader.FadeOut();
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Scenes/Development/SiennaTest2");
+        SceneManager.LoadScene("Scenes/WorldScene");
         ScreenFader.FadeIn();
         yield return new WaitForSeconds(1f);
         Quartermaster = GameObject.Find("Quartermaster");
