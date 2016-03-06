@@ -7,12 +7,18 @@
       <Next>examine_hook_dirty</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
+	<Interaction>
+		<Name>pick_up_dirty_hook_0</Name>
+		<Type>Derivative</Type>
+		<SpecialActions>SoundTutorialPrompt</SpecialActions>
+		<Next>pick_up_dirty_hook_1</Next>
+	</Interaction>
     <Interaction>
       <Name>pick_up_dirty_hook_1</Name>
       <Type>Derivative</Type>
       <Text>**Swipe upward from the bottom of the screen to pull up your inventory**</Text>
       <GiveItems>Hook_Dirty</GiveItems>
-      <SpecialActions>Destroy</SpecialActions>
+      <SpecialActions>Destroy|SoundTutorialPrompt</SpecialActions>
       <Next>pick_up_dirty_hook_2</Next>
     </Interaction>
     <Interaction>
@@ -25,7 +31,13 @@
       <Type>Derivative</Type>
 	  <NONETags>tutorialExaminedHook</NONETags>
 	  <GiveTags>tutorialExaminedHook</GiveTags>
-      <Text>Swipe downward to close your inventory</Text>
+      <SpecialActions>SoundTutorialPrompt</SpecialActions>
+	  <Next>pick_up_dirty_hook_4</Next>
+    </Interaction>
+    <Interaction>
+      <Name>pick_up_dirty_hook_4</Name>
+      <Type>Derivative</Type>
+      <Text>**Swipe downward to close your inventory**</Text>
     </Interaction>
     <Interaction>
       <Name>use_rag</Name>

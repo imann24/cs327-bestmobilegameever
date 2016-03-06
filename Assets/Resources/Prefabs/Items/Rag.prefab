@@ -86,6 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActionTag: SoundCleaningHook
+  Sound: RagOnHand
   UseExtended: 1
   ChangesSprite: 0
   MovesObject: 0
@@ -96,7 +97,6 @@ MonoBehaviour:
   ObjectToCreate: {fileID: 0}
   MoveToPosition: {x: 0, y: 0}
   CreateAtPosition: {x: 0, y: 0}
-  Sound: {fileID: 0}
   SoundDelay: 0
 --- !u!222 &22279662
 CanvasRenderer:
@@ -172,6 +172,10 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0a1393ebc7ea6db43bf2a2ecb4cbbce6, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Name
+      value: Rag1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127314}

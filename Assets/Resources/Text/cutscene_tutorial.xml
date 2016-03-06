@@ -4,12 +4,6 @@
 		<Interaction>
 			<Name>tutorial_start</Name>
 			<Type>Derivative</Type>
-			<SpecialActions>PlayPromptSound</SpecialActions>
-			<Next>tutorial_00</Next>
-		</Interaction>
-		<Interaction>
-			<Name>tutorial_00</Name>
-			<Type>Derivative</Type>
 			<Text>**Tap the screen anywhere to advance dialogue text**</Text>
 			<Next>tutorial_01</Next>
 		</Interaction>
@@ -25,7 +19,7 @@
 			<Type>Derivative</Type>
 			<Text>Hand?! Hand... oh, right! Crap! Still gotta clean off the Captain's hand...</Text>
 			<Image>SadiePortrait</Image>
-			<SpecialActions>PlayPromptSound</SpecialActions>
+			<SpecialActions>SoundTutorialPrompt</SpecialActions>
 			<Next>tutorial_03</Next>
 		</Interaction>
 		<Interaction>
@@ -38,7 +32,7 @@
 		<Interaction>
 			<Name>tutorial_04_sound</Name>
 			<Type>Derivative</Type>
-			<SpecialActions>PlayPromptSound</SpecialActions>
+			<SpecialActions>SoundTutorialPrompt</SpecialActions>
 			<Next>tutorial_04</Next>
 		</Interaction>
 		<Interaction>

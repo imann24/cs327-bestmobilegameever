@@ -67,7 +67,7 @@
 		  <Text>I really shouldn't have left this on the floor...</Text>
 		  <TextType>Floating</TextType>
 		  <NextInteractor>Hook_Dirty</NextInteractor>
-		  <Next>pick_up_dirty_hook_1</Next>
+		  <Next>pick_up_dirty_hook_0</Next>
 		</Interaction>
 		<Interaction>
 		  <Name>examine_hook_dirty</Name>

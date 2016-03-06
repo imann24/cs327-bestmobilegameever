@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11455780}
   - 114: {fileID: 11445172}
   - 225: {fileID: 22554456}
+  - 114: {fileID: 11466466}
   m_Layer: 5
   m_Name: Hook_Dirty
   m_TagString: Untagged
@@ -31,8 +32,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316cc03b6bf3401448bd2364280d16d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HasTag: has_hook
-  HoldTag: hold_hook
+  HasTag: hasHookDirty
+  HoldTag: holdingHookDirty
 --- !u!114 &11455780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -44,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionPath: Hook_Dirty
-  Debugging: 1
+  InteractionPath: item_hook_dirty
+  Debugging: 0
 --- !u!114 &11459022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,6 +74,30 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11466466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: SoundTutorialPrompt
+  Sound: PromptAppears
+  UseExtended: 1
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 1
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  MoveToPosition: {x: 0, y: 0}
+  CreateAtPosition: {x: 0, y: 0}
+  SoundDelay: 0
 --- !u!222 &22279288
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -116,19 +141,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: InteractionPath
-      value: Hook_Dirty
+      value: item_hook_dirty
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Debugging
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: HasTag
-      value: has_hook
+      value: hasHookDirty
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: HoldTag
-      value: hold_hook
+      value: holdingHookDirty
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
