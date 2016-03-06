@@ -269,8 +269,6 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
-<<<<<<< HEAD
-=======
 		},
 		{
 			“FileName”:"Captain_Talk_A_1",
@@ -316,7 +314,6 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
->>>>>>> master
 		}
 	]
 }

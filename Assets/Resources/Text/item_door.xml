@@ -2,7 +2,7 @@
 <InteractionList>
   <Interactions>
     <Interaction>
-      <Name>door_click_to_tutorial_room</Name>
+      <Name>door_exit</Name>
       <Type>Click</Type>
 	  <ALLTags>hasHook</ALLTags>
 	  <Next>exit_tutorial_room</Next>
@@ -10,7 +10,7 @@
 	  <SpecialActions>SoundOpenDoor</SpecialActions>
     </Interaction>
     <Interaction>
-      <Name>examine</Name>
+      <Name>door_cant_exit</Name>
       <Type>Click</Type>
 	  <NONETags>hasHook</NONETags>
 	  <Next>examine_tutorial_door</Next>
