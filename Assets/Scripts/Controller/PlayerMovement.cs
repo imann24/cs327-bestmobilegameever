@@ -31,7 +31,8 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Flip(){ //Flip player character
 		flipped = !flipped;
-		transform.localScale = new Vector3 (transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
+        sprite.flipX = !sprite.flipX;
 	}
 
 	public void MoveTowards(Vector2 location, bool person){

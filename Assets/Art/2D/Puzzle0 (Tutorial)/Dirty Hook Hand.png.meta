@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: fe45c2df9a582524dab8050d5cea29cb
-timeCreated: 1456792602
+timeCreated: 1457146599
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Dirty Hook Hand
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +39,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +50,34 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Dirty Hook Hand
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 408
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 149, y: 100}
+        - {x: 118, y: 100}
+        - {x: 118, y: 98}
+        - {x: 79, y: -61}
+        - {x: 40, y: 21}
+        - {x: -70, y: 92}
+        - {x: -204, y: 87}
+        - {x: -204, y: -70}
+        - {x: -65, y: -67}
+        - {x: -51, y: -56}
+        - {x: 24, y: -100}
+        - {x: 162, y: -100}
+        - {x: 202, y: -90}
+        - {x: 204, y: -78}
+        - {x: 204, y: 38}
+        - {x: 197, y: 65}
     outline: []
   spritePackingTag: 
   userData: 

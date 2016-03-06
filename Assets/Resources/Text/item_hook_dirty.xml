@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <Next>examine_hook_dirty</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>pick_up_dirty_hook_1</Name>
+      <Type>Derivative</Type>
+      <Text>**Swipe upward from the bottom of the screen to pull up your inventory**</Text>
+      <GiveItems>Hook_Dirty</GiveItems>
+      <SpecialActions>Destroy</SpecialActions>
+      <Next>pick_up_dirty_hook_2</Next>
+    </Interaction>
+    <Interaction>
+      <Name>pick_up_dirty_hook_2</Name>
+      <Type>Derivative</Type>
+      <Text>**Tap on an object in your inventory to examine it further**</Text>
+    </Interaction>
+    <Interaction>
+      <Name>pick_up_dirty_hook_3</Name>
+      <Type>Derivative</Type>
+	  <NONETags>tutorialExaminedHook</NONETags>
+	  <GiveTags>tutorialExaminedHook</GiveTags>
+      <Text>Swipe downward to close your inventory</Text>
+    </Interaction>
+    <Interaction>
+      <Name>use_rag</Name>
+      <Type>UseItem</Type>
+	  <ALLTags>holdingRag</ALLTags>
+      <Next>use_rag_hook</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>default_cant_use</Name>
+      <Type>UseItem</Type>
+	  <NONETags>holdingRag</NONETags>
+      <Next>default_cant_use</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+  </Interactions>
+</InteractionList>

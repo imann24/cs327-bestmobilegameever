@@ -387,7 +387,7 @@ public class InteractionManager : MonoBehaviour {
 	static void DisplayInteraction(Interactable interactor, Interaction interaction){
 		if (interaction.HasText) {
 			if (interaction.iTextType == TextType.Floating) {
-				interactor.GetComponentInChildren<SpeechBubble> ().Say (interaction.iText);
+				interactor.GetComponentInChildren<SpeechBubble> ().Say (interactor, interaction);
 			} else {
 				GameManager.InteractionManager.AddInteractionText (interactor, interaction);
 			}

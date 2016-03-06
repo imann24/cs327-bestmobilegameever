@@ -13,7 +13,7 @@
 			<Name>examine_rag</Name>
 			<Type>Derivative</Type>
 			<NONETags>hasRag</NONETags>
-			<Text>I think I'll take this.</Text>
+			<Text>Aha! Just what I needed.</Text>
 			<TextType>Floating</TextType>
 			<Next>take</Next>
 			<NextInteractor>Rag</NextInteractor>
@@ -22,7 +22,14 @@
 			<Name>examine_rag</Name>
 			<Type>Derivative</Type>
 			<ALLTags>hasRag</ALLTags>
-			<Text>It's just a rag.</Text>
+			<Text>I've spent way to much time scrubbing things with rags like this.</Text>
+			<TextType>Floating</TextType>
+			<Next>examine_rag_1</Next>
+		</Interaction>
+		<Interaction>
+			<Name>examine_rag_1</Name>
+			<Type>Derivative</Type>
+			<Text>But hey, it's part of the job description.</Text>
 			<TextType>Floating</TextType>
 		</Interaction>
 		<Interaction>
@@ -30,10 +37,90 @@
 			<Type>Derivative</Type>
 			<Text>Let's see...</Text>
 			<TextType>Floating</TextType>
-			<TakeItems>Rag|Hook_Dirty</TakeItems>
-			<GiveItems>Hook_Clean</GiveItems>
-			<Next>exit_tutorial_room</Next>
-			<NextInteractor>Cutscene_Handler</NextInteractor>
+			<Next>clean_hook</Next>
+			<NextInteractor>Rag</NextInteractor>
+		</Interaction>
+		<Interaction>
+			<Name>cleaned_hook</Name>
+			<Type>Derivative</Type>
+			<Text>Nice. Now this thing will be on the Captain's wrist before he knows it. Better get it up there quick.</Text>
+			<Image>SadiePortrait</Image>
+		</Interaction>
+		<Interaction>
+			<Name>examine_tutorial_door</Name>
+			<Type>Derivative</Type>
+			<NONETags>hasHookDirty</NONETags>
+			<Text>I'd better not leave here without the Captain's hook hand.</Text>
+			<TextType>Floating</TextType>
+		</Interaction>
+		<Interaction>
+			<Name>examine_tutorial_door</Name>
+			<Type>Derivative</Type>
+			<ALLTags>hasHookDirty</ALLTags>
+			<Text>I really need to clean this hook hand first.</Text>
+			<TextType>Floating</TextType>
+		</Interaction>
+		<Interaction>
+		  <Name>examine_hook_dirty</Name>
+		  <Type>Derivative</Type>
+		  <NONETags>hasHookDirty</NONETags>
+		  <Text>I really shouldn't have left this on the floor...</Text>
+		  <TextType>Floating</TextType>
+		  <NextInteractor>Hook_Dirty</NextInteractor>
+		  <Next>pick_up_dirty_hook_1</Next>
+		</Interaction>
+		<Interaction>
+		  <Name>examine_hook_dirty</Name>
+		  <Type>Derivative</Type>
+		  <ALLTags>hasHookDirty</ALLTags>
+		  <Text>The Captain's hook hand. I was supposed to clean it... last night. Oops.</Text>
+		  <TextType>Floating</TextType>
+		  <NextInteractor>Hook_Dirty</NextInteractor>
+		  <Next>pick_up_dirty_hook_3</Next>
+		</Interaction>
+		<Interaction>
+		  <Name>examine_bottle</Name>
+		  <Type>Derivative</Type>
+		  <Text>I can't reach that.</Text>
+		  <TextType>Floating</TextType>
+		</Interaction>
+		<Interaction>
+		  <Name>default_cant_use</Name>
+		  <Type>Derivative</Type>
+		  <Text>Nah.</Text>
+		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
+		</Interaction>
+		<Interaction>
+		  <Name>default_cant_use</Name>
+		  <Type>Derivative</Type>
+		  <ANDTags>holdingHook</ANDTags>
+		  <Text>I don't want to stab that.</Text>
+		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
+		</Interaction>
+		<Interaction>
+		  <Name>default_cant_use</Name>
+		  <Type>Derivative</Type>
+		  <ANDTags>holdingMopHead</ANDTags>
+		  <Text>Clean something I don't have to? No way.</Text>
+		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
+		</Interaction>
+		<Interaction>
+		  <Name>default_cant_give</Name>
+		  <Type>Derivative</Type>
+		  <Text>I don't think they'd want that.</Text>
+		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
+		</Interaction>
+		<Interaction>
+		  <Name>default_cant_give</Name>
+		  <Type>Derivative</Type>
+		  <ANDTags>holdingHook</ANDTags>
+		  <Text>I'd really rather hold on to it.</Text>
+		  <TextType>Floating</TextType>
+		  <SpecialActions>ReturnSelected</SpecialActions>
 		</Interaction>
 	</Interactions>
 </InteractionList>
