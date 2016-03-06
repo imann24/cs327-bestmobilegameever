@@ -21,7 +21,7 @@
     <Interaction>
       <Name>move_to_door_and_exit</Name>
       <Type>Derivative</Type>
-      <SpecialActions>ComeHere</SpecialActions>
+      <SpecialActions>ComeHere|SoundOpenDoor</SpecialActions>
 	  <Next>exit_tutorial_room</Next>
 	  <NextInteractor>Cutscene_Handler</NextInteractor>
     </Interaction>

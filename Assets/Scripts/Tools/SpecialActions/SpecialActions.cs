@@ -9,7 +9,7 @@ public class SpecialActions : MonoBehaviour {
     // Always HideInInspector so they don't show in scripts that inherit them
     // The SpecialActionsEditor handles what is shown
     [HideInInspector]
-    public string ActionTag = null;
+    public string ActionTag = null, Sound;
     [HideInInspector]
     public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound;
     [HideInInspector]
@@ -18,9 +18,6 @@ public class SpecialActions : MonoBehaviour {
     public GameObject ObjectToMove, ObjectToCreate;
     [HideInInspector]
     public Vector2 MoveToPosition, CreateAtPosition;
-    [HideInInspector]
-    public AudioClip Sound;
-    //public AudioSource Sound;
     [HideInInspector]
     public float SoundDelay = 0;
 
@@ -35,19 +32,19 @@ public class SpecialActions : MonoBehaviour {
         if (ChangesSprite) { ChangeSprite(NewSprite); }
         if (MovesObject) { MoveObject(ObjectToMove, MoveToPosition); }
         if (CreatesObject) { CreateObject(ObjectToCreate, CreateAtPosition); }
-        if (PlaysSound) { PlaySound(Sound, SoundDelay); }
+        if (PlaysSound) {
+            if (SoundDelay == 0) { PlaySound(Sound); }
+            else { Invoke("PlaySound", SoundDelay); }
+        }
     }
 
     #region useful functions
     public void ChangeSprite(Sprite sprite) { GetComponent<SpriteRenderer>().sprite = sprite; }
 
     
-    public void PlaySound(AudioClip sound, float delay = 0f) {
-        AudioSource audioSource = AudioController.Instance.gameObject.AddComponent<AudioSource>();
-        audioSource.clip = sound;
-        audioSource.Play();
-        if (delay == 0) { audioSource.Play(); }
-        else { audioSource.PlayDelayed(delay); }
+    public void PlaySound(string sound = null) {
+        if (sound == null) { EventController.Event(Sound); }
+        else { EventController.Event(sound); }
     }
 
 
@@ -135,7 +132,7 @@ public class SpecialActionsEditor : Editor {
 
                 thisScript.PlaysSound = GUILayout.Toggle(thisScript.PlaysSound, "Play Sound");
                 if (thisScript.PlaysSound) {
-                    thisScript.Sound = EditorGUILayout.ObjectField("Sound", thisScript.Sound, typeof(AudioClip), true) as AudioClip;
+                    thisScript.Sound = EditorGUILayout.TextField(thisScript.Sound);
                     thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
                 }
             }

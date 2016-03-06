@@ -31,6 +31,7 @@ GameObject:
   - 114: {fileID: 11433090}
   - 65: {fileID: 6593312}
   - 54: {fileID: 5407024}
+  - 114: {fileID: 11437616}
   m_Layer: 0
   m_Name: Rag
   m_TagString: Untagged
@@ -112,6 +113,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionPath: item_rag
   Debugging: 0
+--- !u!114 &11437616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: SoundTutorialPrompt
+  Sound: PromptAppears
+  UseExtended: 1
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 1
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  MoveToPosition: {x: 0, y: 0}
+  CreateAtPosition: {x: 0, y: 0}
+  SoundDelay: 0
 --- !u!114 &11451978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,7 +248,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Name
-      value: Ragggg
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
