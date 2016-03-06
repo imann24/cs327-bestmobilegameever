@@ -13,16 +13,12 @@ public class SpecialActions_Door : SpecialActions {
 			next = "tutorial_cutscene_start";
 			//StartCoroutine(NextScene());
 			break;
-		case "SoundOpenDoor":
-			next = "tutorial_cutscene_exit_QM";
-			if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit"); }
-			break;
 		default:
 			if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log(actionTag + " isn't defined in SpecialActions_Cutscene_Handler."); }
 			break;
 		}
-//	}
-
+	}
+		/**
 	IEnumerator NextScene() {
 		GameManager.UIManager.LockScreen();
 		DontDestroyOnLoad(gameObject);
@@ -34,5 +30,5 @@ public class SpecialActions_Door : SpecialActions {
 		Sadie = GameObject.Find("Sadie");
 		GameManager.UIManager.UnlockScreen();
 		NextInteraction(next);
-	}
+	}**/
 }
