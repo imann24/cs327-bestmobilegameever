@@ -890,8 +890,9 @@ Prefab:
     - target: {fileID: 11424186, guid: ef01b2d5f31556946a4d4aa8fa6af69b, type: 2}
       propertyPath: Yawn
       value: 
-      objectReference: {fileID: 8220172, guid: 1e17509371b566f42953c56bfa8ab75e, type: 2}
-    m_RemovedComponents: []
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11424186, guid: ef01b2d5f31556946a4d4aa8fa6af69b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ef01b2d5f31556946a4d4aa8fa6af69b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &307802876
@@ -1144,7 +1145,7 @@ MonoBehaviour:
   ObjectToCreate: {fileID: 103198, guid: 9d601837006151945ad8ff2cd835a8e6, type: 2}
   MoveToPosition: {x: 0, y: 0}
   CreateAtPosition: {x: -2.98, y: 4.4}
-  Sound: {fileID: 8260090, guid: 1e17509371b566f42953c56bfa8ab75e, type: 2}
+  Sound: {fileID: 1992695291}
   SoundDelay: 0.5
 --- !u!114 &394091165
 MonoBehaviour:
@@ -1398,7 +1399,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!1 &562137471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4647,7 +4648,7 @@ Transform:
   - {fileID: 1384794428}
   - {fileID: 1758415718}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &1605458504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4816,7 +4817,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1 &1639231914
 GameObject:
   m_ObjectHideFlags: 0
@@ -5585,7 +5586,7 @@ GameObject:
   - 114: {fileID: 1761889247}
   - 54: {fileID: 1761889246}
   - 65: {fileID: 1761889245}
-  - 114: {fileID: 1761889249}
+  - 114: {fileID: 1761889244}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -5605,6 +5606,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2065786938}
   m_RootOrder: 0
+--- !u!114 &1761889244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761889242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: SoundOpenDoor
+  UseExtended: 1
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 1
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  MoveToPosition: {x: 0, y: 0}
+  CreateAtPosition: {x: 0, y: 0}
+  Sound: {fileID: 8300000, guid: 98f40eac6d371e547a633b2acec95a8f, type: 3}
+  SoundDelay: 0
 --- !u!65 &1761889245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5675,30 +5700,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &1761889249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1761889242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionTag: SoundOpenDoor
-  UseExtended: 1
-  ChangesSprite: 0
-  MovesObject: 0
-  CreatesObject: 0
-  PlaysSound: 1
-  NewSprite: {fileID: 0}
-  ObjectToMove: {fileID: 0}
-  ObjectToCreate: {fileID: 0}
-  MoveToPosition: {x: 0, y: 0}
-  CreateAtPosition: {x: 0, y: 0}
-  Sound: {fileID: 8289722, guid: 1e17509371b566f42953c56bfa8ab75e, type: 2}
-  SoundDelay: 0
 --- !u!1 &1783540752
 GameObject:
   m_ObjectHideFlags: 0
@@ -6781,7 +6782,7 @@ Transform:
   - {fileID: 62082782}
   - {fileID: 1992695290}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 8
 --- !u!1 &1921816506
 GameObject:
   m_ObjectHideFlags: 0
@@ -7239,6 +7240,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1994986795 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 189456, guid: ef01b2d5f31556946a4d4aa8fa6af69b, type: 2}
+  m_PrefabInternal: {fileID: 298849196}
+--- !u!114 &1994986796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994986795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55905b758b106d94ca07e30052304159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: 
+  UseExtended: 0
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 0
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  MoveToPosition: {x: 0, y: 0}
+  CreateAtPosition: {x: 0, y: 0}
+  Sound: {fileID: 0}
+  SoundDelay: 0
+  Yawn: {fileID: 8300000, guid: e3ebc57c8470e1c438638d1d7d057ead, type: 3}
 --- !u!1 &1998745376
 GameObject:
   m_ObjectHideFlags: 0
@@ -7512,7 +7542,7 @@ Transform:
   - {fileID: 1887175108}
   - {fileID: 347004818}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 11
 --- !u!1 &2122933886
 GameObject:
   m_ObjectHideFlags: 0
@@ -7556,7 +7586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &2122933889
 MonoBehaviour:
   m_ObjectHideFlags: 0
