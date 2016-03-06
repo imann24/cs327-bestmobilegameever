@@ -94,7 +94,7 @@
 		<Interaction>
 		  <Name>default_cant_use</Name>
 		  <Type>Derivative</Type>
-		  <ANDTags>holdingHook</ANDTags>
+		  <ALLTags>holdingHook</ALLTags>
 		  <Text>I don't want to stab that.</Text>
 		  <TextType>Floating</TextType>
 		  <SpecialActions>ReturnSelected</SpecialActions>
@@ -102,7 +102,7 @@
 		<Interaction>
 		  <Name>default_cant_use</Name>
 		  <Type>Derivative</Type>
-		  <ANDTags>holdingMopHead</ANDTags>
+		  <ALLTags>holdingMopHead</ALLTags>
 		  <Text>Clean something I don't have to? No way.</Text>
 		  <TextType>Floating</TextType>
 		  <SpecialActions>ReturnSelected</SpecialActions>
@@ -117,7 +117,7 @@
 		<Interaction>
 		  <Name>default_cant_give</Name>
 		  <Type>Derivative</Type>
-		  <ANDTags>holdingHook</ANDTags>
+		  <ALLTags>holdingHook</ALLTags>
 		  <Text>I'd really rather hold on to it.</Text>
 		  <TextType>Floating</TextType>
 		  <SpecialActions>ReturnSelected</SpecialActions>
