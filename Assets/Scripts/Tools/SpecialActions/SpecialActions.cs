@@ -11,17 +11,23 @@ public class SpecialActions : MonoBehaviour {
     [HideInInspector]
     public string ActionTag = null;
     [HideInInspector]
-    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject;
+    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound;
     [HideInInspector]
     public Sprite NewSprite;
     [HideInInspector]
     public GameObject ObjectToMove, ObjectToCreate;
     [HideInInspector]
     public Vector2 MoveToPosition, CreateAtPosition;
+    [HideInInspector]
+    public AudioSource Sound;
+    [HideInInspector]
+    public float SoundDelay = 0;
 
     public void Awake() {
         SpecialActions[] scripts = GetComponents<SpecialActions>();
-        foreach (SpecialActions script in scripts) { actionScripts.Add(script.ActionTag, script); }
+        foreach (SpecialActions script in scripts) {
+            if (script.ActionTag != null) { actionScripts.Add(script.ActionTag, script); }
+        }
     }
 
     public void DoSpecialActions(List<string> actionList){
@@ -59,8 +65,12 @@ public class SpecialActions : MonoBehaviour {
         if (ChangesSprite) { GetComponent<SpriteRenderer>().sprite = NewSprite; }
         if (MovesObject) { ObjectToMove.transform.position = new Vector3(MoveToPosition.x, MoveToPosition.y, ObjectToMove.transform.position.z); }
         if (CreatesObject) {
-            GameObject newObject = (GameObject)Instantiate(ObjectToCreate, new Vector3(CreateAtPosition.x, CreateAtPosition.y, 0), Quaternion.identity);
+            GameObject newObject = (GameObject)Instantiate(ObjectToCreate, new Vector3(CreateAtPosition.x, CreateAtPosition.y, gameObject.transform.position.z), Quaternion.identity);
             newObject.name = ObjectToCreate.name;
+        }
+        if (PlaysSound) {
+            if (SoundDelay == 0) { Sound.Play(); }
+            else { Sound.PlayDelayed(SoundDelay); }
         }
     }
 
@@ -101,6 +111,12 @@ public class SpecialActionsEditor : Editor {
                 if (thisScript.CreatesObject) {
                     thisScript.ObjectToCreate = EditorGUILayout.ObjectField("Object Prefab", thisScript.ObjectToCreate, typeof(GameObject), true) as GameObject;
                     thisScript.CreateAtPosition = EditorGUILayout.Vector2Field("Position", thisScript.CreateAtPosition);
+                }
+
+                thisScript.PlaysSound = GUILayout.Toggle(thisScript.PlaysSound, "Play Sound");
+                if (thisScript.PlaysSound) {
+                    thisScript.Sound = EditorGUILayout.ObjectField("Sound", thisScript.Sound, typeof(AudioSource), true) as AudioSource;
+                    thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
                 }
             }
         }

@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Interactable : MonoBehaviour, IPointerClickHandler {
+public class Interactable : MonoBehaviour, IPointerClickHandler, IDragHandler {
 
 	public List<Interaction> Interactions { get; private set; }
 	public string InteractionPath;
@@ -35,6 +35,13 @@ public class Interactable : MonoBehaviour, IPointerClickHandler {
 	{
 		InteractionManager.HandleClick (this);
 	}
+
+	#region IDragHandler implementation
+	public void OnDrag (PointerEventData eventData)
+	{
+		//transform.position = Camera.main.ScreenToWorldPoint( Input.mousePosition);
+	}
+	#endregion
 
 	public void DoSpecialActions(List<string> actionsToDo){
 		GetComponent<SpecialActions> ().DoSpecialActions (actionsToDo);

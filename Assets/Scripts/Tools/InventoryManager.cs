@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
+public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IDragHandler, IBeginDragHandler{
 
 	[SerializeField]
 	private GameObject ToggleButton = null;
@@ -13,6 +13,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	private Sprite ShowButton = null;
 	[SerializeField]
 	private Sprite HideButton = null;
+	private Vector2 dragAnchor;
 
 	public GameObject Selected { get; private set; }
 	public bool PanelShowing { get; private set; }
@@ -125,8 +126,8 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	/// </summary>
 	public void Hide(){
 		PanelShowing = false;
-		ToggleButton.GetComponent<Image> ().sprite = ShowButton;
 		StartCoroutine("ChangeHeight", new Vector2(0,-105));
+		ToggleButton.GetComponent<Image> ().sprite = ShowButton;
 	}
 
 	/// <summary>
@@ -156,6 +157,44 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	{
 		if (Selected != null && PanelShowing)
 			Hide ();
+	}
+
+	#endregion
+
+	#region IBeginDragHandler implementation
+
+	public void OnBeginDrag (PointerEventData eventData)
+	{
+		Debug.Log ("started drag");
+		dragAnchor = Input.mousePosition;
+		Debug.Log (dragAnchor.y);
+		//Toggle ();
+	}
+
+	#endregion
+
+	#region IDragHandler implementation
+
+	public void OnDrag (PointerEventData eventData)
+	{
+		if (dragAnchor.y > Input.mousePosition.y && PanelShowing) {
+			dragAnchor = Input.mousePosition;
+			Debug.Log (dragAnchor.y);
+			Hide ();
+		}
+		if (dragAnchor.y < Input.mousePosition.y && !PanelShowing) {
+			dragAnchor = Input.mousePosition;
+			Debug.Log (dragAnchor.y);
+			Show ();
+		}
+	}
+
+	#endregion
+
+	#region IPointerClickHandler implementation
+
+	public void OnPointerClick (PointerEventData eventData)
+	{
 	}
 
 	#endregion

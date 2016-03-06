@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: a06f681b2928cb340b9516c06efe64da
-timeCreated: 1456792602
+timeCreated: 1457146557
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Hammock
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +39,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +50,82 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Hammock
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 779
+        width: 589
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 252.5, y: -55}
+        - {x: 287.5, y: 72}
+        - {x: 294.5, y: 96}
+        - {x: 294.5, y: 119}
+        - {x: 291.5, y: 122}
+        - {x: 274.5, y: 122}
+        - {x: 266.5, y: 117}
+        - {x: 173.5, y: 107}
+        - {x: 114.5, y: 103}
+        - {x: 74.5, y: 101}
+        - {x: 34.5, y: 100}
+        - {x: -33.5, y: 99}
+        - {x: -34.5, y: 100}
+        - {x: -94.5, y: 102}
+        - {x: -149.5, y: 105}
+        - {x: -269.5, y: 117}
+        - {x: -275.5, y: 122}
+        - {x: -291.5, y: 122}
+        - {x: -294.5, y: 119}
+        - {x: -294.5, y: 98}
+        - {x: -278.5, y: 38}
+        - {x: -241.5, y: -100}
+        - {x: -237.5, y: -115}
+        - {x: -233.5, y: -121}
+        - {x: -231.5, y: -122}
+        - {x: 231.5, y: -122}
+        - {x: 238.5, y: -112}
+        - {x: 241.5, y: -96}
+      - - {x: -225.5, y: -51}
+        - {x: -236.5, y: -10}
+        - {x: -243.5, y: 16}
+        - {x: -259.5, y: 76}
+        - {x: -264.5, y: 94}
+        - {x: -266.5, y: 100}
+        - {x: -252.5, y: 86}
+        - {x: -229.5, y: 68}
+        - {x: -215.5, y: 57}
+        - {x: -181.5, y: 36}
+        - {x: -150.5, y: 20}
+        - {x: -123.5, y: 8}
+        - {x: -112.5, y: 4}
+        - {x: -91.5, y: -3}
+        - {x: -80.5, y: -6}
+        - {x: -51.5, y: -12}
+        - {x: -36.5, y: -14}
+        - {x: -25.5, y: -15}
+        - {x: 22.5, y: -15}
+        - {x: 33.5, y: -14}
+        - {x: 59.5, y: -10}
+        - {x: 95.5, y: -2}
+        - {x: 112.5, y: 5}
+        - {x: 148.5, y: 19}
+        - {x: 160.5, y: 26}
+        - {x: 183.5, y: 38}
+        - {x: 199.5, y: 49}
+        - {x: 228.5, y: 69}
+        - {x: 245.5, y: 83}
+        - {x: 260.5, y: 95}
+        - {x: 262.5, y: 91}
+        - {x: 232.5, y: -21}
+        - {x: 225.5, y: -47}
+        - {x: 220.5, y: -66}
+        - {x: 219.5, y: -70}
+        - {x: -220.5, y: -70}
     outline: []
   spritePackingTag: 
   userData: 
