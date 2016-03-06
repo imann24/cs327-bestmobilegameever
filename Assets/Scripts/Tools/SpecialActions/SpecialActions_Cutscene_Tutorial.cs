@@ -16,6 +16,18 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
+			case "PlayPromptSound":
+				EventController.Event("PromptAppears");
+			break;
+			case "PlayOrangeSplatSound":
+				EventController.Event("OrangeImpact");
+			break;
+			case "PlayRagDropSound":
+				EventController.Event("RagDrop");
+			break;
+			case "PlayRubbingSound":
+				EventController.Event("RagOnHand");
+			break;
             case "ExitTutorialRoom":
                 next = "tutorial_cutscene_start";
                 StartCoroutine(NextScene());
