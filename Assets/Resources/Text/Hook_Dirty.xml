@@ -12,14 +12,14 @@
             <Type>Derivative</Type>
             <Text>**Swipe upward from the bottom of the screen to pull up your inventory**</Text>
             <GiveItems>Hook_Dirty</GiveItems>
-            <GiveTags>hasHookDirty</GiveTags>
+            <GiveTags>hasHookDirty|pick_hook_tut_finished</GiveTags>
             <SpecialActions>Destroy</SpecialActions>
             <Next>pick_up_dirty_hook_2</Next>
         </Interaction>
         <Interaction>
             <Name>pick_up_dirty_hook_2</Name>
             <Type>Derivative</Type>
-            <ALLTags>pick_hook_tut_finished</ALLTags>
+            <ALLTags>pick_hook_tut_finished</ALLTags> 
             <Text>**Tap on an object in your inventory to examine it further**</Text>
             <GiveTags>hasHookDirty</GiveTags>
             <Next>examine_hook_dirty</Next>
