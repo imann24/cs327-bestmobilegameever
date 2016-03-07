@@ -471,7 +471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &211733753
 RectTransform:
   m_ObjectHideFlags: 0
@@ -488,7 +488,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 530, y: 0}
+  m_SizeDelta: {x: 530, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211733754
 MonoBehaviour:
@@ -4751,7 +4751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1435567516
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4971,7 +4971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1464444078
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5039,6 +5039,7 @@ GameObject:
   - 23: {fileID: 1500725303}
   - 195: {fileID: 1500725302}
   - 114: {fileID: 1500725301}
+  - 65: {fileID: 1500725307}
   m_Layer: 8
   m_Name: Sadie
   m_TagString: Untagged
@@ -5136,6 +5137,18 @@ Transform:
   - {fileID: 1453126126}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!65 &1500725307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500725300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.22, y: 2, z: 6.75}
+  m_Center: {x: -0, y: 0, z: 3.33}
 --- !u!1 &1570659959
 GameObject:
   m_ObjectHideFlags: 0
