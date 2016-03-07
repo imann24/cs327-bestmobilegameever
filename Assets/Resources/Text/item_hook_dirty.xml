@@ -23,10 +23,10 @@
 		<NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
-		<Name>default_cant_use</Name>
+		<Name>DefaultCannotUse</Name>
 		<Type>UseItem</Type>
 		<NONETags>holdingRag</NONETags>
-		<Next>default_cant_use</Next>
+		<Next>DefaultCannotUse</Next>
 		<NextInteractor>Sadie</NextInteractor>
     </Interaction>
   </Interactions>

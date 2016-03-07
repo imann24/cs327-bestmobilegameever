@@ -85,29 +85,29 @@
 		  <Text>The Captain's hook hand, all clean and shiny.</Text>
 		  <TextType>Floating</TextType>
 		</Interaction>
-		<Interaction>
-		  <Name>examine_bottle</Name>
-		  <Type>Derivative</Type>
-		  <Text>I can't reach that.</Text>
-		  <TextType>Floating</TextType>
-		</Interaction>
-		<Interaction>
-			<Name>throw_orange</Name>
-            <Type>Derivative</Type>
-            <Text>When you're short, you gotta improvise.</Text>
-            <TextType>Floating</TextType>
-		</Interaction>
+    <Interaction>
+      <Name>default_bottle</Name>
+      <Type>Derivative</Type>
+      <Text>I can't reach it.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>throw_orange</Name>
+      <Type>Derivative</Type>
+      <Text>When you're short, you gotta improvise.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_orange</Name>
+      <Type>Derivative</Type>
+      <Text>No scurvy here.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
 	<!-- EndRegion -->
-  <!-- Region DEFAULTS-->
+  <!-- Region DefaultCannotUse-->
 		<Interaction>
-		  <Name>default_cant_use</Name>
-		  <Type>Derivative</Type>
-		  <Text>Nah.</Text>
-		  <TextType>Floating</TextType>
-		  <SpecialActions>ReturnSelected</SpecialActions>
-		</Interaction>
-		<Interaction>
-		  <Name>default_cant_use</Name>
+		  <Name>DefaultCannotUse</Name>
 		  <Type>Derivative</Type>
 		  <ALLTags>holdingHook</ALLTags>
 		  <Text>I don't want to stab that.</Text>
@@ -115,28 +115,39 @@
 		  <SpecialActions>ReturnSelected</SpecialActions>
 		</Interaction>
 		<Interaction>
-		  <Name>default_cant_use</Name>
+		  <Name>DefaultCannotUse</Name>
 		  <Type>Derivative</Type>
 		  <ALLTags>holdingMopHead</ALLTags>
 		  <Text>Clean something I don't have to? No way.</Text>
 		  <TextType>Floating</TextType>
 		  <SpecialActions>ReturnSelected</SpecialActions>
 		</Interaction>
-		<Interaction>
-		  <Name>default_cant_give</Name>
-		  <Type>Derivative</Type>
-		  <Text>I don't think they'd want that.</Text>
-		  <TextType>Floating</TextType>
-		  <SpecialActions>ReturnSelected</SpecialActions>
-		</Interaction>
-		<Interaction>
-		  <Name>default_cant_give</Name>
-		  <Type>Derivative</Type>
-		  <ALLTags>holdingHook</ALLTags>
-		  <Text>I'd really rather hold on to it.</Text>
-		  <TextType>Floating</TextType>
-		  <SpecialActions>ReturnSelected</SpecialActions>
-		</Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <NONETags>holdingHook|holdingMopHead</NONETags>
+      <Text>Nah.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <!-- EndRegion -->
+  <!-- Region DefaultCannotGive -->
+    <Interaction>
+      <Name>DefaultCannotGive</Name>
+      <Type>Derivative</Type>
+      <NONETags>holdingHook</NONETags>
+      <Text>I don't think they'd want that.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotGive</Name>
+      <Type>Derivative</Type>
+      <ALLTags>holdingHook</ALLTags>
+      <Text>I'd really rather hold on to it.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
   <!-- EndRegion -->
 	</Interactions>
 </InteractionList>

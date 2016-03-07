@@ -68,6 +68,11 @@
       <Type>Derivative</Type>
       <Text>**Swipe downward to close your inventory**</Text>
     </Interaction>
+    <Interaction>
+      <Name>tutorial_items_04</Name>
+      <Type>Derivative</Type>
+      <Text>**Drag one item in your inventory on top of another to combine them for a new item!**</Text>
+    </Interaction>
   <!-- EndRegion -->
   <!-- Region Cutscene -->
     <Interaction>

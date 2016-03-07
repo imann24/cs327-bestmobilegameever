@@ -16,7 +16,7 @@ public class SpeechBubble : MonoBehaviour {
         int length = interaction.iText.Length;
         float time = length / 20;
         time = Mathf.Max(time, 0.5f);
-        time = Mathf.Min(time, 2f);
+        time = Mathf.Min(time, 1.5f);
         GameManager.UIManager.LockScreen();
         Invoke("nextInteraction", time);
 

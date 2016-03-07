@@ -7,11 +7,11 @@
 			<Next>examine_hook</Next>
 			<NextInteractor>Sadie</NextInteractor>
 		</Interaction>
-		<Interaction>
-			<Name>default_cant_use</Name>
-			<Type>UseItem</Type>
-			<Next>default_cant_use</Next>
-			<NextInteractor>Sadie</NextInteractor>
-		</Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>UseItem</Type>
+      <Next>DefaultCannotUse</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
 	</Interactions>
 </InteractionList>
