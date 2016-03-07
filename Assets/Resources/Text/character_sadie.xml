@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <InteractionList>
 	<Interactions>
+	<!-- Region TUTORIAL INTERACTIONS -->
 		<Interaction>
 			<Name>tutorial_sadie</Name>
 			<Type>Derivative</Type>
@@ -67,7 +68,7 @@
 		  <Text>I really shouldn't have left this on the floor...</Text>
 		  <TextType>Floating</TextType>
 		  <NextInteractor>Hook_Dirty</NextInteractor>
-		  <Next>pick_up_dirty_hook_0</Next>
+		  <Next>get</Next>
 		</Interaction>
 		<Interaction>
 		  <Name>examine_hook_dirty</Name>
@@ -75,8 +76,14 @@
 		  <ALLTags>hasHookDirty</ALLTags>
 		  <Text>The Captain's hook hand. I was supposed to clean it... last night. Oops.</Text>
 		  <TextType>Floating</TextType>
-		  <NextInteractor>Hook_Dirty</NextInteractor>
-		  <Next>pick_up_dirty_hook_3</Next>
+		  <NextInteractor>Cutscene_Handler</NextInteractor>
+		  <Next>tutorial_items_02</Next>
+		</Interaction>
+		<Interaction>
+		  <Name>examine_hook</Name>
+		  <Type>Derivative</Type>
+		  <Text>The Captain's hook hand, all clean and shiny.</Text>
+		  <TextType>Floating</TextType>
 		</Interaction>
 		<Interaction>
 		  <Name>examine_bottle</Name>
@@ -84,6 +91,14 @@
 		  <Text>I can't reach that.</Text>
 		  <TextType>Floating</TextType>
 		</Interaction>
+		<Interaction>
+			<Name>throw_orange</Name>
+            <Type>Derivative</Type>
+            <Text>When you're short, you gotta improvise.</Text>
+            <TextType>Floating</TextType>
+		</Interaction>
+	<!-- EndRegion -->
+  <!-- Region DEFAULTS-->
 		<Interaction>
 		  <Name>default_cant_use</Name>
 		  <Type>Derivative</Type>
@@ -122,5 +137,6 @@
 		  <TextType>Floating</TextType>
 		  <SpecialActions>ReturnSelected</SpecialActions>
 		</Interaction>
+  <!-- EndRegion -->
 	</Interactions>
 </InteractionList>
