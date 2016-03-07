@@ -4855,7 +4855,7 @@ Transform:
   - {fileID: 47074411}
   - {fileID: 1964442396}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1501173402
 GameObject:
   m_ObjectHideFlags: 0
@@ -4955,16 +4955,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 471834, guid: 6ed7d06dceb582b4e82247c9b9998f36, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 5093310, guid: 6ed7d06dceb582b4e82247c9b9998f36, type: 2}
-      propertyPath: m_IsKinematic
-      value: 1
+    - target: {fileID: 21244914, guid: 6ed7d06dceb582b4e82247c9b9998f36, type: 2}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11493744, guid: 6ed7d06dceb582b4e82247c9b9998f36, type: 2}
-      propertyPath: orangePrefab
-      value: 
-      objectReference: {fileID: 169374, guid: ee6e6b179cd21934c8924ae21d9e9c03, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ed7d06dceb582b4e82247c9b9998f36, type: 2}
   m_IsPrefabParent: 0
@@ -5150,30 +5146,6 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 111028, guid: 6ed7d06dceb582b4e82247c9b9998f36, type: 2}
   m_PrefabInternal: {fileID: 1578392487}
---- !u!114 &1642854236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1642854235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionTag: 
-  Sound: 
-  UseExtended: 0
-  ChangesSprite: 0
-  MovesObject: 0
-  CreatesObject: 0
-  PlaysSound: 0
-  NewSprite: {fileID: 0}
-  ObjectToMove: {fileID: 0}
-  ObjectToCreate: {fileID: 0}
-  MoveToPosition: {x: 0, y: 0}
-  CreateAtPosition: {x: 0, y: 0}
-  SoundDelay: 0
 --- !u!1 &1672189783
 GameObject:
   m_ObjectHideFlags: 0
@@ -6333,7 +6305,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1940668285}
-  - 114: {fileID: 1940668287}
   - 60: {fileID: 1940668286}
   m_Layer: 0
   m_Name: Ground
@@ -6372,17 +6343,6 @@ PolygonCollider2D:
       - {x: 0.42704687, y: -0.39925784}
       - {x: -0.43089458, y: -0.3847894}
       - {x: -0.42612946, y: 0.5750557}
---- !u!114 &1940668287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1940668284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1a67f2f56082b44a4d7abdef2bba41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1964442396 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400024, guid: b786ddebe59e00949b97ea8e16955840, type: 3}

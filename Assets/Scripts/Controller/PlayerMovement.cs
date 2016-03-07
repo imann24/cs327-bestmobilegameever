@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour {
 	public float camMoveOffset = 1f;
 	public bool moving = false;
 
-
 	private bool flipped = false;
 
 	public static PlayerMovement Instance
@@ -31,8 +30,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Flip(){ //Flip player character
 		flipped = !flipped;
-        SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
-        sprite.flipX = !sprite.flipX;
+		transform.localScale = new Vector3 (transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
 	}
 
 	public void MoveTowards(Vector2 location, bool person){
