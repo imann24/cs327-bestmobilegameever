@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class SpecialActions : MonoBehaviour {
     private Dictionary<string, SpecialActions> actionScripts = new Dictionary<string, SpecialActions>();
@@ -105,6 +107,7 @@ public class SpecialActions : MonoBehaviour {
     #endregion
 }
 
+#if UNITY_EDITOR
 #region editor
 [CustomEditor(typeof(SpecialActions))]
 public class SpecialActionsEditor : Editor {
@@ -140,3 +143,4 @@ public class SpecialActionsEditor : Editor {
     }
 }
 #endregion
+#endif

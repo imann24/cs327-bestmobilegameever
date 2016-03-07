@@ -66,12 +66,13 @@ public class OrangeThrowing : MonoBehaviour {
 			if (Input.GetKeyUp (KeyCode.F)) {
 				done = true;
 			}
+
 			#if !UNITY_EDITOR
-			if (heldTouch) {
-				if (heldTouch.phase = TouchPhase.Ended) {
+			//if (heldTouch) {
+				if (heldTouch.phase == TouchPhase.Ended) {
 					done = true;
 				}
-			}
+			//}
 			#endif
 			yield return null;
 		}

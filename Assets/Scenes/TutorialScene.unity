@@ -4961,6 +4961,10 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11493744, guid: 6ed7d06dceb582b4e82247c9b9998f36, type: 2}
+      propertyPath: orangePrefab
+      value: 
+      objectReference: {fileID: 169374, guid: ee6e6b179cd21934c8924ae21d9e9c03, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ed7d06dceb582b4e82247c9b9998f36, type: 2}
   m_IsPrefabParent: 0
