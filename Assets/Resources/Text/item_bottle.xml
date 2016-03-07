@@ -12,6 +12,7 @@
       <Type>UseItem</Type>
 	  <ALLTags>holdingOrange</ALLTags>
 	  <TakeItems>Orange</TakeItems>
+      <NextInteractor>Sadie</NextInteractor>
       <SpecialActions>Destroy|CreateRag</SpecialActions>
     </Interaction>
     <Interaction>
