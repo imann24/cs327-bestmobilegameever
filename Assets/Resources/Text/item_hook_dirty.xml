@@ -11,7 +11,7 @@
 		<Name>get</Name>
 		<Type>Derivative</Type>
 		<GiveItems>Hook_Dirty</GiveItems>
-		<SpecialActions>Destroy|SoundTutorialPrompt</SpecialActions>
+		<SpecialActions>Destroy</SpecialActions>
 		<Next>tutorial_items</Next>
 		<NextInteractor>Cutscene_Handler</NextInteractor>
 	</Interaction>

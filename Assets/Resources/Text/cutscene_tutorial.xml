@@ -46,8 +46,14 @@
     <Interaction>
       <Name>tutorial_items</Name>
       <Type>Derivative</Type>
+      <SpecialActions>SoundTutorialPrompt|HideInventory</SpecialActions>
+      <Next>tutorial_items_00</Next>
+    </Interaction>
+    <Interaction>
+      <Name>tutorial_items_00</Name>
+      <Type>Derivative</Type>
       <Text>**Swipe upward from the bottom of the screen to pull up your inventory**</Text>
-      <SpecialActions>SoundTutorialPrompt</SpecialActions>
+      <SpecialActions>SoundTutorialPrompt|HideInventory</SpecialActions>
       <Next>tutorial_items_01</Next>
     </Interaction>
     <Interaction>

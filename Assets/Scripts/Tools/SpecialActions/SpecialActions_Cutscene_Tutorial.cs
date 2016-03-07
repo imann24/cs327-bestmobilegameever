@@ -22,6 +22,8 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
                 Quartermaster = GameObject.Find("Quartermaster");
                 Shipmaster = GameObject.Find("Shipmaster");
                 Firstmate = GameObject.Find("Firstmate");
+                GameManager.InventoryManager.GiveItem("Hook_Clean");
+                GameManager.InventoryManager.Hide();
                 NextInteraction("tutorial_cutscene_start");
             }
             else { Debug.LogWarning("Scene not recognized by Cutscene_Handler"); }
@@ -33,6 +35,9 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 			case "SoundTutorialPrompt":
 				EventController.Event("PromptAppears");
 			break;
+            case "HideInventory":
+                GameManager.InventoryManager.Hide();
+                break;
             case "ExitTutorialRoom":
                 next = "tutorial_cutscene_start";
                 StartCoroutine(NextScene());
@@ -77,6 +82,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     IEnumerator NextScene() {
         GameManager.UIManager.LockScreen();
         ScreenFader.FadeOut();
+        GameManager.InventoryManager.Hide();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Scenes/WorldScene");
         ScreenFader.FadeIn();
