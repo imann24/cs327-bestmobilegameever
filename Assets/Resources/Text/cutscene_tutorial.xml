@@ -86,6 +86,7 @@
       <Text>I know what you’ve been up to! You can’t fool me!</Text>
       <Image>QuartermasterPortraitFaded</Image>
       <Image2>ShipmasterPortrait</Image2>
+      <SpecialActions>FadeIn</SpecialActions>
       <Next>tutorial_cutscene_01</Next>
     </Interaction>
     <Interaction>
