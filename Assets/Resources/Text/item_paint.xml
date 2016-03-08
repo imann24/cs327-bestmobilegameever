@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InteractionList>
+	<Interactions>
+		<Interaction>
+			<Name>examine</Name>
+			<Type>Click</Type>
+			<Next>examine_paint</Next>
+			<NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+    <Interaction>
+      <Name>take</Name>
+      <Type>Derivative</Type>
+      <GiveItems>Paint_White</GiveItems>
+      <SpecialActions>Destroy</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>use_mop</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingMopHead</ALLTags>
+      <Next>use_paint_mop</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>UseItem</Type>
+      <NONETags>holdingMopHead</NONETags>
+      <Next>DefaultCannotUse</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+	</Interactions>
+</InteractionList>

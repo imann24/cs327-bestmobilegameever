@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <InteractionList>
 	<Interactions>
-	<!-- Region TUTORIAL INTERACTIONS -->
+	<!-- Region Tutorial Interactions -->
 		<Interaction>
 			<Name>tutorial_sadie</Name>
 			<Type>Derivative</Type>
@@ -105,6 +105,107 @@
       <TextType>Floating</TextType>
     </Interaction>
 	<!-- EndRegion -->
+  <!-- Region Firstmate P1 Interactions-->
+    <!-- Region Item Interactions -->
+    <Interaction>
+      <Name>examine_mop_head</Name>
+      <Type>Derivative</Type>
+      <Text>examine text</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_mop_handle</Name>
+      <Type>Derivative</Type>
+      <Text>examine text</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_paint_mop</Name>
+      <Type>Derivative</Type>
+      <Text>use text</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_paint</Name>
+      <Type>Derivative</Type>
+      <NONETags>hasPaintWhite|hasPaintRed</NONETags>
+      <Text>examine text</Text>
+      <TextType>Floating</TextType>
+      <NextInteractor>Paint_White</NextInteractor>
+      <Next>take</Next>
+    </Interaction>
+    <Interaction>
+      <Name>examine_paint</Name>
+      <Type>Derivative</Type>
+      <ALLTags>hasPaintWhite</ALLTags>
+      <Text>examine text</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_rope</Name>
+      <Type>Derivative</Type>
+      <NONETags>hasRope</NONETags>
+      <Text>examine text</Text>
+      <TextType>Floating</TextType>
+      <NextInteractor>Rope</NextInteractor>
+      <Next>take</Next>
+    </Interaction>
+    <Interaction>
+      <Name>examine_rope</Name>
+      <Type>Derivative</Type>
+      <ALLTags>hasRope</ALLTags>
+      <Text>examine text</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_portrait</Name>
+      <Type>Derivative</Type>
+      <NONETags>portraitPainted|portraitDressed</NONETags>
+      <Text>examine text</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_portrait</Name>
+      <Type>Derivative</Type>
+      <ALLTags>portraitPainted</ALLTags>
+      <Text>examine text</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_paint_portrait</Name>
+      <Type>Derivative</Type>
+      <NONETags>portraitPainted|firstmateQuestInProgress1</NONETags>
+      <Text>text</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>use_paint_portrait</Name>
+      <Type>Derivative</Type>
+      <ALLTags>firstmateQuestInProgress1</ALLTags>
+      <NONETags>portraitPainted</NONETags>
+      <Text>text</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>paint</Next>
+      <NextInteractor>Captain_Portrait</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>use_paint_portrait</Name>
+      <Type>Derivative</Type>
+      <ANYTags>portraitPainted|portraitDressed</ANYTags>
+      <Text>It's perfect just the way it is.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>examine_ink</Name>
+      <Type>Derivative</Type>
+      <Text>Eugh.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <!-- EndRegion -->
+  <!-- EndRegion -->
   <!-- Region DefaultCannotUse-->
 		<Interaction>
 		  <Name>DefaultCannotUse</Name>

@@ -359,6 +359,7 @@
     <Interaction>
       <Name>tutorial_cutscene_35</Name>
       <Type>Derivative</Type>
+      <GiveTags>firstmateIntro|quartermasterIntro|shipmasterIntro</GiveTags>
       <Text>Did the first mate say something about a service?</Text>
       <Image>SadiePortrait</Image>
     </Interaction>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <Next>examine_mop_handle</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>UseItem</Type>
+      <Next>DefaultCannotUse</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+  </Interactions>
+</InteractionList>

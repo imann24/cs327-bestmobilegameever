@@ -192,6 +192,8 @@ MonoBehaviour:
   maxX: 5
   minY: 0
   maxY: 10
+  hasOrange: 0
+  toThrow: 0
 --- !u!114 &11497104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -234,7 +236,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6e34b017b22071149be9e3a9ac053b72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
 --- !u!223 &22368806
 Canvas:
