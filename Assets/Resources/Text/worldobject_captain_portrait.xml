@@ -19,6 +19,8 @@
       <Type>Derivative</Type>
       <GiveTags>portraitPainted</GiveTags>
       <SpecialActions>ChangeToPainted</SpecialActions>
+      <Next>use_paint_portrait_success</Next>
+      <NextInteractor>Sadie</NextInteractor>
     </Interaction>
 		<Interaction>
 			<Name>dress</Name>
