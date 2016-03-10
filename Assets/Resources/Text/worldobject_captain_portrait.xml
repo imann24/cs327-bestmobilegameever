@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InteractionList>
+	<Interactions>
+		<Interaction>
+			<Name>examine</Name>
+			<Type>Click</Type>
+      <Next>examine_portrait</Next>
+      <NextInteractor>Sadie</NextInteractor>
+		</Interaction>
+    <Interaction>
+      <Name>use_paint</Name>
+      <Type>UseItem</Type>
+      <ANYTags>holdingPaintWhite|holdingPaintRed</ANYTags>
+      <Next>use_paint_portrait</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>paint</Name>
+      <Type>Derivative</Type>
+      <GiveTags>portraitPainted</GiveTags>
+      <SpecialActions>ChangeToPainted</SpecialActions>
+      <Next>use_paint_portrait_success</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+		<Interaction>
+			<Name>dress</Name>
+			<Type>Derivative</Type>
+			<GiveTags>portraitDressed</GiveTags>
+			<TakeTags>portraitPainted</TakeTags>
+			<SpecialActions>ChangeToDressed</SpecialActions>
+		</Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>UseItem</Type>
+      <NONETags>holdingPaintWhite|holdingPaintRed</NONETags>
+      <Next>DefaultCannotUse</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+	</Interactions>
+</InteractionList>

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class SpecialActions : MonoBehaviour {
     private Dictionary<string, SpecialActions> actionScripts = new Dictionary<string, SpecialActions>();
@@ -9,7 +11,7 @@ public class SpecialActions : MonoBehaviour {
     // Always HideInInspector so they don't show in scripts that inherit them
     // The SpecialActionsEditor handles what is shown
     [HideInInspector]
-    public string ActionTag = null;
+    public string ActionTag = null, Sound;
     [HideInInspector]
     public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound;
     [HideInInspector]
@@ -18,8 +20,6 @@ public class SpecialActions : MonoBehaviour {
     public GameObject ObjectToMove, ObjectToCreate;
     [HideInInspector]
     public Vector2 MoveToPosition, CreateAtPosition;
-    [HideInInspector]
-    public AudioSource Sound;
     [HideInInspector]
     public float SoundDelay = 0;
 
@@ -30,7 +30,44 @@ public class SpecialActions : MonoBehaviour {
         }
     }
 
-    public void DoSpecialActions(List<string> actionList){
+    private void DoExtendedAction() {
+        if (ChangesSprite) { ChangeSprite(NewSprite); }
+        if (MovesObject) { MoveObject(ObjectToMove, MoveToPosition); }
+        if (CreatesObject) { CreateObject(ObjectToCreate, CreateAtPosition); }
+        if (PlaysSound) {
+            if (SoundDelay == 0) { PlaySound(Sound); }
+            else { Invoke("PlaySound", SoundDelay); }
+        }
+    }
+
+    #region useful functions
+    public void ChangeSprite(Sprite sprite) { GetComponent<SpriteRenderer>().sprite = sprite; }
+
+    
+    public void PlaySound(string sound = null) {
+        if (sound == null) { EventController.Event(Sound); }
+        else { EventController.Event(sound); }
+    }
+
+
+    public void MoveObject(GameObject obj, Vector2 newPos) { obj.transform.position = new Vector3(newPos.x, newPos.y, obj.transform.position.z); }
+
+    public void CreateObject(GameObject obj, Vector2 pos) {
+        GameObject newObject = (GameObject)Instantiate(obj, new Vector3(pos.x, pos.y, gameObject.transform.position.z), Quaternion.identity);
+        newObject.name = obj.name;
+    }
+
+    public void NextInteraction(string name, Interactable interactor = null)
+    {
+        if (interactor == null) { interactor = gameObject.GetComponent<Interactable>(); }
+        List<Interaction> iList = interactor.Interactions.FindAll(i => (i.iName == name) && (i.iType == InteractionType.Derivative));
+        if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Attempting to run interaction with name '" + name + "' that belongs to " + interactor); }
+        InteractionManager.HandleInteractionList(interactor, iList);
+    }
+    #endregion
+
+    #region defaults
+    public void DoSpecialActions(List<string> actionList) {
 		bool destroy = false;
 		foreach (string action in actionList) {
 			switch (action) {
@@ -59,36 +96,19 @@ public class SpecialActions : MonoBehaviour {
 		if (destroy) {
 			Destroy (gameObject);
 		}
-	}
-
-    public void DoExtendedAction() {
-        if (ChangesSprite) { GetComponent<SpriteRenderer>().sprite = NewSprite; }
-        if (MovesObject) { ObjectToMove.transform.position = new Vector3(MoveToPosition.x, MoveToPosition.y, ObjectToMove.transform.position.z); }
-        if (CreatesObject) {
-            GameObject newObject = (GameObject)Instantiate(ObjectToCreate, new Vector3(CreateAtPosition.x, CreateAtPosition.y, gameObject.transform.position.z), Quaternion.identity);
-            newObject.name = ObjectToCreate.name;
-        }
-        if (PlaysSound) {
-            if (SoundDelay == 0) { Sound.Play(); }
-            else { Sound.PlayDelayed(SoundDelay); }
-        }
-    }
-
-    public void NextInteraction(string name, Interactable interactor = null) {
-        if (interactor == null) { interactor = gameObject.GetComponent<Interactable>(); }
-        List<Interaction> iList = interactor.Interactions.FindAll(i => (i.iName == name) && (i.iType == InteractionType.Derivative));
-        if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Attempting to run interaction with name '" + name + "' that belongs to " + interactor); }
-        InteractionManager.HandleInteractionList(interactor, iList);
     }
 
     //override this function in subclasses for specific actions.
     public virtual void DoSpecialAction(string actionTag) {
-		if (gameObject.GetComponent<Interactable> ().Debugging) {
-			Debug.Log (actionTag + " is not defined. Using default SpecialActions script.");
-		}
-	}
+        if (gameObject.GetComponent<Interactable>().Debugging) {
+            Debug.Log(actionTag + " is not defined. Using default SpecialActions script.");
+        }
+    }
+    #endregion
 }
 
+#if UNITY_EDITOR
+#region editor
 [CustomEditor(typeof(SpecialActions))]
 public class SpecialActionsEditor : Editor {
     public override void OnInspectorGUI() {
@@ -115,10 +135,12 @@ public class SpecialActionsEditor : Editor {
 
                 thisScript.PlaysSound = GUILayout.Toggle(thisScript.PlaysSound, "Play Sound");
                 if (thisScript.PlaysSound) {
-                    thisScript.Sound = EditorGUILayout.ObjectField("Sound", thisScript.Sound, typeof(AudioSource), true) as AudioSource;
+                    thisScript.Sound = EditorGUILayout.TextField(thisScript.Sound);
                     thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
                 }
             }
         }
     }
 }
+#endregion
+#endif

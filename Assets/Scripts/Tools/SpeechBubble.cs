@@ -13,8 +13,12 @@ public class SpeechBubble : MonoBehaviour {
 	public void Say(Interactable interactor, Interaction interaction) {
         this.interactor = interactor;
         this.interaction = interaction;
+        int length = interaction.iText.Length;
+        float time = length / 20;
+        time = Mathf.Max(time, 0.5f);
+        time = Mathf.Min(time, 1.5f);
         GameManager.UIManager.LockScreen();
-        Invoke("nextInteraction", 2f);
+        Invoke("nextInteraction", time);
 
         GameObject go = Instantiate (floatingText);
 		go.GetComponent<Text> ().text = interaction.iText;

@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 2315b9133a13db44ab0329995f4ac023
+timeCreated: 1457473411
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CaptainPortrait
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CaptainPortrait
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 391
+        height: 476
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 113.5, y: -220}
+        - {x: 107.5, y: -224}
+        - {x: 108.5, y: -238}
+        - {x: 123.5, y: -238}
+        - {x: 152.5, y: -232}
+        - {x: 187.5, y: -229}
+        - {x: 191.5, y: -209}
+        - {x: 185.5, y: -199}
+        - {x: 195.5, y: -184}
+        - {x: 195.5, y: -154}
+        - {x: 189.5, y: -151}
+        - {x: 174.5, y: -139}
+        - {x: 179.5, y: -70}
+        - {x: 185.5, y: -39}
+        - {x: 182.5, y: -32}
+        - {x: 165.5, y: -30}
+        - {x: 175.5, y: -11}
+        - {x: 174.5, y: 10}
+        - {x: 174.5, y: 14}
+        - {x: 185.5, y: 35}
+        - {x: 174.5, y: 118}
+        - {x: 178.5, y: 156}
+        - {x: 195.5, y: 151}
+        - {x: 195.5, y: 184}
+        - {x: 189.5, y: 192}
+        - {x: 194.5, y: 224}
+        - {x: 165.5, y: 233}
+        - {x: 110.5, y: 238}
+        - {x: 107.5, y: 226}
+        - {x: 113.5, y: 220}
+        - {x: 22.5, y: 238}
+        - {x: 8.5, y: 238}
+        - {x: 2.5, y: 215}
+        - {x: -4.5, y: 236}
+        - {x: -8.5, y: 238}
+        - {x: -38.5, y: 238}
+        - {x: -99.5, y: 221}
+        - {x: -105.5, y: 236}
+        - {x: -125.5, y: 238}
+        - {x: -136.5, y: 238}
+        - {x: -186.5, y: 227}
+        - {x: -193.5, y: 224}
+        - {x: -195.5, y: 213}
+        - {x: -195.5, y: 151}
+        - {x: -179.5, y: 155}
+        - {x: -175.5, y: 106}
+        - {x: -187.5, y: 35}
+        - {x: -166.5, y: 27}
+        - {x: -175.5, y: 14}
+        - {x: -175.5, y: -14}
+        - {x: -164.5, y: -30}
+        - {x: -182.5, y: -32}
+        - {x: -185.5, y: -40}
+        - {x: -178.5, y: -156}
+        - {x: -194.5, y: -152}
+        - {x: -195.5, y: -154}
+        - {x: -195.5, y: -185}
+        - {x: -187.5, y: -227}
+        - {x: -183.5, y: -228}
+        - {x: -168.5, y: -227}
+        - {x: -134.5, y: -237}
+        - {x: -110.5, y: -236}
+        - {x: -108.5, y: -226}
+        - {x: -72.5, y: -226}
+        - {x: -31.5, y: -238}
+        - {x: -5.5, y: -238}
+        - {x: 7.5, y: -224}
+        - {x: 7.5, y: -238}
+        - {x: 28.5, y: -238}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

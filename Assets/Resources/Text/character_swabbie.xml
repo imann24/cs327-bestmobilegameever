@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<InteractionList>
+  <Interactions>
+    <!-- Region Get Mop Interaction -->
+    <Interaction>
+      <Name>get_mop_00</Name>
+      <Type>Click</Type>
+      <ALLTags>firstmateQuestInProgress1</ALLTags>
+      <NONETags>swabbieGaveMop</NONETags>
+      <Text>What can I do fer you?</Text>
+      <TextType>Monologue</TextType>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SwabbiePortrait</Image2>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_00</Name>
+      <Type>Click</Type>
+      <ALLTags>firstmateQuestInProgress1</ALLTags>
+      <NONETags>swabbieGaveMop</NONETags>
+      <Text>Nice mop.</Text>
+      <Next>get_mop_10</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_00</Name>
+      <Type>Click</Type>
+      <ALLTags>firstmateQuestInProgress1</ALLTags>
+      <NONETags>swabbieGaveMop</NONETags>
+      <Text>I’ll take over.</Text>
+      <Next>get_mop_20</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_00</Name>
+      <Type>Click</Type>
+      <ALLTags>firstmateQuestInProgress1</ALLTags>
+      <NONETags>swabbieGaveMop</NONETags>
+      <Type>Derivative</Type>
+      <Text>Nevermind.</Text>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_10</Name>
+      <Type>Derivative</Type>
+      <Text>Nice mop. Can I have it?</Text>
+      <Image>SadiePortrait</Image>
+      <Image2>SwabbiePortraitFaded</Image2>
+      <Next>get_mop_11</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_11</Name>
+      <Type>Derivative</Type>
+      <Text>Nay, lass. This ‘ere deck needs cleanin’.</Text>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SwabbiePortrait</Image2>
+      <Next>get_mop_12</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_12</Name>
+      <Type>Derivative</Type>
+      <Text>But you’re not even mopping.</Text>
+      <Image>SadiePortrait</Image>
+      <Image2>SwabbiePortraitFaded</Image2>
+      <Next>get_mop_13</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_13</Name>
+      <Type>Derivative</Type>
+      <Text>Aye.</Text>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SwabbiePortrait</Image2>
+      <Next>get_mop_14</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_14</Name>
+      <Type>Derivative</Type>
+      <Text>...</Text>
+      <Image>SadiePortrait</Image>
+      <Image2>SwabbiePortraitFaded</Image2>
+      <Next>get_mop_15</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_15</Name>
+      <Type>Derivative</Type>
+      <Text>...</Text>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SwabbiePortrait</Image2>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_20</Name>
+      <Type>Derivative</Type>
+      <Text>Hey, pal. Why don’t you let me take over that job for you?</Text>
+      <Image>SadiePortrait</Image>
+      <Image2>SwabbiePortraitFaded</Image2>
+      <Next>get_mop_21</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_21</Name>
+      <Type>Derivative</Type>
+      <Text>Well, that’s mighty kind of you, lass. Here, take this mop.</Text>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SwabbiePortrait</Image2>
+      <SpecialActions>ChangeToNoMop</SpecialActions>
+      <Next>get_mop_22</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_22</Name>
+      <Type>Derivative</Type>
+      <Text>Thanks, I gue-- hey! This mop is broken! Talk about a rotten deal.</Text>
+      <Image>SadiePortrait</Image>
+      <Image2>SwabbiePortraitFaded</Image2>
+      <GiveItems>Mop_Head|Mop_Handle</GiveItems>
+      <GiveTags>swabbieGaveMop</GiveTags>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region Other Firstmate Puzzle Interactions -->
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <NONETags>firstmateQuestInProgress1|swabbieGaveMop</NONETags>
+      <Text>How's it goin', lass?</Text>
+      <TextType>Floating</TextType>
+      <Next>swabbie_response</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>use_mop</Name>
+      <Type>UseItem</Type>
+      <ANYTags>holdingMopHead|holdingMopHandle</ANYTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>flee_0</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <ALLTags>swabbieGaveMop</ALLTags>
+      <Next>flee_0</Next>
+    </Interaction>
+    <Interaction>
+      <Name>flee_0</Name>
+      <Type>Derivative</Type>
+      <Text>That mop you gave me was broken. It’s useless!</Text>
+      <Image>SadiePortrait</Image>
+      <Image2>SwabbiePortraitFaded</Image2>
+      <Next>flee_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>flee_1</Name>
+      <Type>Derivative</Type>
+      <Text>Ah… well, y’see…</Text>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SwabbiePortrait</Image2>
+      <SpecialActions>SwabbieFlee|Destroy</SpecialActions>
+    </Interaction>
+    <!-- EndRegion -->
+  </Interactions>
+</InteractionList>

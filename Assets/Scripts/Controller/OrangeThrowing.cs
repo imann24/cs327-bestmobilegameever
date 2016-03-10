@@ -9,11 +9,11 @@ public class OrangeThrowing : MonoBehaviour {
 	public float minY;
 	public float maxY;
 
-	private bool hasOrange = false;
+	public bool hasOrange = false;
+	public bool toThrow = false;
 	private GameObject heldOrange;
 	private bool throwing = false;
 
-	private Touch heldTouch;
 	// Update is called once per frame
 	#if UNITY_EDITOR 
 	void Update () {
@@ -26,10 +26,9 @@ public class OrangeThrowing : MonoBehaviour {
 		}
 	}
 	#endif
-	public void Activate(Touch currentTouch){
+	public void Activate(){
 		if (!hasOrange) {
 			if (!throwing) {
-				heldTouch = currentTouch;
 				GetNewOrange ();
 			}
 		}
@@ -66,13 +65,11 @@ public class OrangeThrowing : MonoBehaviour {
 			if (Input.GetKeyUp (KeyCode.F)) {
 				done = true;
 			}
-			#if !UNITY_EDITOR
-			if (heldTouch) {
-				if (heldTouch.phase = TouchPhase.Ended) {
-					done = true;
-				}
+
+			if (toThrow) {
+				toThrow = false;
+				done = true;
 			}
-			#endif
 			yield return null;
 		}
 		heldOrange.transform.parent = null;
