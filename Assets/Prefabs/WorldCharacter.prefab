@@ -14,7 +14,7 @@ GameObject:
   - 65: {fileID: 6532970}
   - 114: {fileID: 11449154}
   m_Layer: 0
-  m_Name: Sadie
+  m_Name: WorldCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
