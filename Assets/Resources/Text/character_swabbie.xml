@@ -150,5 +150,11 @@
       <SpecialActions>SwabbieFlee|Destroy</SpecialActions>
     </Interaction>
     <!-- EndRegion -->
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotGive</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
   </Interactions>
 </InteractionList>

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -17,9 +18,9 @@ public class SpecialActions : MonoBehaviour {
     [HideInInspector]
     public Sprite NewSprite;
     [HideInInspector]
-    public GameObject ObjectToMove, ObjectToCreate;
+    public GameObject ObjectToMove, ObjectToCreate, CreateAtWaypoint, MoveToWaypoint;
     [HideInInspector]
-    public Vector2 MoveToPosition, CreateAtPosition;
+    public Vector3 MoveToPosition, CreateAtPosition;
     [HideInInspector]
     public float SoundDelay = 0;
 
@@ -41,14 +42,17 @@ public class SpecialActions : MonoBehaviour {
     }
 
     #region useful functions
-    public void ChangeSprite(Sprite sprite) { GetComponent<SpriteRenderer>().sprite = sprite; }
-
+    public void ChangeSprite(Sprite sprite) {
+        if (GetComponentInChildren<SpriteRenderer>() != null) { GetComponentInChildren<SpriteRenderer>().sprite = sprite; }
+        else if (GetComponent<Image>() != null) { GetComponent<Image>().sprite = sprite; }
+        else if (GetComponent<SpriteRenderer>() != null) { GetComponent<SpriteRenderer>().sprite = sprite; }
+        else if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("No valid sprite or image."); }
+    }
     
     public void PlaySound(string sound = null) {
         if (sound == null) { EventController.Event(Sound); }
         else { EventController.Event(sound); }
     }
-
 
     public void MoveObject(GameObject obj, Vector2 newPos) { obj.transform.position = new Vector3(newPos.x, newPos.y, obj.transform.position.z); }
 
@@ -124,13 +128,17 @@ public class SpecialActionsEditor : Editor {
                 thisScript.MovesObject = GUILayout.Toggle(thisScript.MovesObject, "Move Object");
                 if (thisScript.MovesObject) {
                     thisScript.ObjectToMove = EditorGUILayout.ObjectField("Object", thisScript.ObjectToMove, typeof(GameObject), true) as GameObject;
-                    thisScript.MoveToPosition = EditorGUILayout.Vector2Field("Target Position", thisScript.MoveToPosition);
+                    thisScript.MoveToWaypoint = EditorGUILayout.ObjectField("Waypoint", thisScript.MoveToWaypoint, typeof(GameObject), true) as GameObject;
+                    if (thisScript.MoveToWaypoint != null) { thisScript.MoveToPosition = thisScript.MoveToWaypoint.transform.position; }
+                    else { thisScript.MoveToPosition = thisScript.gameObject.transform.position;  }
                 }
 
                 thisScript.CreatesObject = GUILayout.Toggle(thisScript.CreatesObject, "Create Object");
                 if (thisScript.CreatesObject) {
                     thisScript.ObjectToCreate = EditorGUILayout.ObjectField("Object Prefab", thisScript.ObjectToCreate, typeof(GameObject), true) as GameObject;
-                    thisScript.CreateAtPosition = EditorGUILayout.Vector2Field("Position", thisScript.CreateAtPosition);
+                    thisScript.CreateAtWaypoint = EditorGUILayout.ObjectField("Waypoint", thisScript.CreateAtWaypoint, typeof(GameObject), true) as GameObject;
+                    if (thisScript.CreateAtWaypoint != null) { thisScript.CreateAtPosition = thisScript.CreateAtWaypoint.transform.position; }
+                    else { thisScript.CreateAtPosition = thisScript.gameObject.transform.position; }
                 }
 
                 thisScript.PlaysSound = GUILayout.Toggle(thisScript.PlaysSound, "Play Sound");

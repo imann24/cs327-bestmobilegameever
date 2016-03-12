@@ -22,8 +22,7 @@
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
-      <Type>UseItem</Type>
-      <NONETags>holdingMopHead</NONETags>
+      <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>

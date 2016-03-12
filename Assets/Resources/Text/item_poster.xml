@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <Next>examine_poster</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>decrease</Name>
+      <Type>Derivative</Type>
+      <NONETags>postersTwo|postersOne</NONETags>
+      <GiveTags>postersTwo</GiveTags>
+      <SpecialActions>ReturnSelected|ChangeToTwo</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>decrease</Name>
+      <Type>Derivative</Type>
+      <ALLTags>postersTwo</ALLTags>
+      <GiveTags>postersOne</GiveTags>
+      <TakeTags>postersTwo</TakeTags>
+      <SpecialActions>ReturnSelected|ChangeToOne</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>decrease</Name>
+      <Type>Derivative</Type>
+      <ALLTags>postersOne</ALLTags>
+      <GiveTags>postersGiven</GiveTags>
+      <TakeTags>postersOne</TakeTags>
+      <TakeItems>Poster</TakeItems>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotUse</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+	</Interactions>
+</InteractionList>

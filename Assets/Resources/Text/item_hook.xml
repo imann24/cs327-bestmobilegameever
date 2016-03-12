@@ -8,8 +8,15 @@
 			<NextInteractor>Sadie</NextInteractor>
 		</Interaction>
     <Interaction>
-      <Name>DefaultCannotUse</Name>
+      <Name>use_mop_handle</Name>
       <Type>UseItem</Type>
+      <ALLTags>holdingMopHandle</ALLTags>
+      <Next>use_hook_handle</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>

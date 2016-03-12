@@ -348,8 +348,62 @@
       <TakeTags>firstmateQuestInProgress1</TakeTags>
       <TakeItems>Mop_Head</TakeItems>
       <SpecialActions>ChangeToMop</SpecialActions>
+      <Next>firstmate_propaganda_00</Next>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region Part Two Start -->
+    <Interaction>
+      <Name>TEST_PART_2</Name>
+      <Type>Click</Type>
+      <ALLTags>firstmatePart2</ALLTags>
+      <TakeTags>firstmatePart2</TakeTags>
+      <Next>firstmate_propaganda_00</Next>
+    </Interaction>
+    <Interaction>
+      <Name>firstmate_propaganda_00</Name>
+      <Type>Derivative</Type>
+      <Image>FirstmatePortraitMop</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>Take these and hand them out!</Text>
+      <GiveItems>Poster</GiveItems>
+    </Interaction>
+    <!-- EndRegion-->
+    <!-- Region Part Two Mid -->
+    <Interaction>
+      <Name>firstmate_propaganda_mid_00</Name>
+      <Type>Click</Type>
+      <ALLTags>hasPoster</ALLTags>
+      <NONETags>postersGiven</NONETags>
+      <Image>FirstmatePortraitMop</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>Go hand out those flyers already!</Text>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region Part Two End -->
+    <Interaction>
+      <Name>firstmate_quest_end_00</Name>
+      <Type>Click</Type>
+      <Image>FirstmatePortraitMop</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <ALLTags>postersGiven</ALLTags>
+      <TakeTags>postersGiven|ojPosterGiven|riggerPosterGiven|secondmatePosterGiven</TakeTags>
+      <Text>You did it! Wonderful!</Text>
     </Interaction>
     <!-- EndRegion -->
   <!-- EndRegion-->
+    <Interaction>
+      <Name>firstmate_default</Name>
+      <Type>Click</Type>
+      <NONETags>firstmateIntro|firstmateQuestInProgress1|hasPoster|firstmatePart2</NONETags>
+      <Image>FirstmatePortraitMop</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>I have nothing to say to you.</Text>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotGive</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
   </Interactions>
 </InteractionList>

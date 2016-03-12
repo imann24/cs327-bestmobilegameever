@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: dd76c671274d47d4e8fe9fd773347388
-timeCreated: 1457468488
+timeCreated: 1457672040
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Poster3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +39,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +50,64 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Poster3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 345
+        height: 417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150.5, y: -53.5}
+        - {x: 153.5, y: -40.5}
+        - {x: 156.5, y: -16.5}
+        - {x: 168.5, y: 84.5}
+        - {x: 172.5, y: 106.5}
+        - {x: 172.5, y: 133.5}
+        - {x: 167.5, y: 133.5}
+        - {x: 170.5, y: 144.5}
+        - {x: 163.5, y: 147.5}
+        - {x: 131.5, y: 150.5}
+        - {x: 125.5, y: 154.5}
+        - {x: 125.5, y: 178.5}
+        - {x: 124.5, y: 181.5}
+        - {x: 120.5, y: 190.5}
+        - {x: 117.5, y: 191.5}
+        - {x: 73.5, y: 195.5}
+        - {x: 71.5, y: 200.5}
+        - {x: 66.5, y: 208.5}
+        - {x: 31.5, y: 208.5}
+        - {x: -50.5, y: 197.5}
+        - {x: -90.5, y: 192.5}
+        - {x: -120.5, y: 191.5}
+        - {x: -132.5, y: 188.5}
+        - {x: -172.5, y: 183.5}
+        - {x: -172.5, y: 153.5}
+        - {x: -169.5, y: 126.5}
+        - {x: -162.5, y: 79.5}
+        - {x: -161.5, y: 53.5}
+        - {x: -156.5, y: 35.5}
+        - {x: -157.5, y: 32.5}
+        - {x: -154.5, y: 12.5}
+        - {x: -142.5, y: -84.5}
+        - {x: -136.5, y: -134.5}
+        - {x: -135.5, y: -151.5}
+        - {x: -133.5, y: -173.5}
+        - {x: -115.5, y: -182.5}
+        - {x: -100.5, y: -182.5}
+        - {x: -51.5, y: -187.5}
+        - {x: -40.5, y: -187.5}
+        - {x: -24.5, y: -192.5}
+        - {x: 21.5, y: -197.5}
+        - {x: 103.5, y: -208.5}
+        - {x: 130.5, y: -208.5}
+        - {x: 134.5, y: -191.5}
+        - {x: 134.5, y: -175.5}
+        - {x: 141.5, y: -125.5}
     outline: []
   spritePackingTag: 
   userData: 

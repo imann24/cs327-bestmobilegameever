@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <InteractionList>
-  <Interactions>
+	<Interactions>
     <Interaction>
       <Name>examine</Name>
       <Type>Click</Type>
-      <Next>examine_rope</Next>
-      <NextInteractor>Sadie</NextInteractor>
+      <Text>Hi</Text>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
-      <Next>DefaultCannotUse</Next>
+      <Next>DefaultCannotGive</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
-  </Interactions>
+	</Interactions>
 </InteractionList>

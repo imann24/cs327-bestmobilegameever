@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+  <!-- Region Firstmate Puzzle -->
+  <!-- Region Get Attention-->
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <NONETags>riggerHit|riggerDown</NONETags>
+      <Next>talk_rigger</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>hit</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingOrange</ALLTags>
+      <GiveTags>riggerHit</GiveTags>
+      <TakeItems>Orange</TakeItems>
+      <Next>rigger_intro</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_intro</Name>
+      <Type>Derivative</Type>
+      <Text>Oh, hi there! Nothing to see here!</Text>
+    </Interaction>
+  <!-- EndRegion -->
+  <!-- Region Help Out -->
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <ALLTags>riggerHit|hasPoster</ALLTags>
+      <Image>RiggerPortrait</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>Help me out here!</Text>
+    </Interaction>
+    <Interaction>
+      <Name>give_pole_hook</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoleHook|riggerHit</ALLTags>
+      <Image>RiggerPortrait</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>Thanks! I think I can reach it now.</Text>
+      <TakeItems>Pole_Hook</TakeItems>
+      <Next>rigger_descend</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give</Name>
+      <Type>UseItem</Type>
+      <NONETags>riggerHit|holdingOrange</NONETags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>talk_rigger</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_descend</Name>
+      <Type>Derivative</Type>
+      <Image>RiggerPortrait</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>Mind if I keep this pole? It makes me feel more...stable. You can have the hook back. Take this rope too.</Text>
+      <GiveTags>riggerDown</GiveTags>
+      <TakeTags>riggerHit</TakeTags>
+      <GiveItems>Hook|Rope</GiveItems>
+    </Interaction>
+  <!-- EndRegion -->
+  <!-- Region Give Poster -->
+    <Interaction>
+      <Name>give_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster|riggerDown</ALLTags>
+      <NONETags>riggerPosterGiven</NONETags>
+      <GiveTags>riggerPosterGiven</GiveTags>
+      <Image>RiggerPortrait</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>Thanks for the flyer.</Text>
+      <Next>give_poster_success</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_success</Name>
+      <Type>Derivative</Type>
+      <Next>decrease</Next>
+      <NextInteractor>Poster</NextInteractor>
+    </Interaction>
+  <!-- EndRegion -->
+  <!-- EndRegion -->
+  <!-- Region Default -->
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotGive</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+  <!-- EndRegion -->
+  </Interactions>
+</InteractionList>

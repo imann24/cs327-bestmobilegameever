@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractionList>
-  <Interactions>
+	<Interactions>
     <Interaction>
       <Name>examine</Name>
       <Type>Click</Type>
-      <Next>examine_mop_handle</Next>
+      <Next>examine_chalk</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
-      <Name>use_hook</Name>
-      <Type>UseItem</Type>
-      <Next>use_hook_handle</Next>
-      <NextInteractor>Sadie</NextInteractor>
+      <Name>take</Name>
+      <Type>Derivative</Type>
+      <GiveItems>Chalk</GiveItems>
+      <SpecialActions>Destroy</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
@@ -19,5 +19,5 @@
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
-  </Interactions>
+	</Interactions>
 </InteractionList>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <Text>Choose Quest State</Text>
+      <TakeItems>Hook|Mop_Head|Mop_Handle|Paint</TakeItems>
+      <TakeTags>firstmateQuestInProgress1|firstmateQuestInProgress2|firstmateIntro</TakeTags>
+      <Next>choose</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <Text>Nevermind</Text>
+    </Interaction>
+    <Interaction>
+      <Name>choose</Name>
+      <Type>Derivative</Type>
+      <Text>Firstmate Intro</Text>
+      <GiveItems>Hook</GiveItems>
+      <GiveTags>firstmateIntro</GiveTags>
+    </Interaction>
+    <Interaction>
+      <Name>choose</Name>
+      <Type>Derivative</Type>
+      <Text>Firstmate Quest 1</Text>
+      <GiveItems>Hook</GiveItems>
+      <GiveTags>firstmateQuestInProgress1</GiveTags>
+    </Interaction>
+    <Interaction>
+      <Name>choose</Name>
+      <Type>Derivative</Type>
+      <Text>Firstmate Quest 2</Text>
+      <GiveItems>Hook|Mop_Handle|Paint</GiveItems>
+      <GiveTags>firstmatePart2</GiveTags>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotGive</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+	</Interactions>
+</InteractionList>
