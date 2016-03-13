@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 44177cf19ec0bfe4386baaabe1fdb88a
-timeCreated: 1457468482
+timeCreated: 1457909678
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SecondMate
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +39,62 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: SecondMate
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 210
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: -317}
+        - {x: 4, y: -334}
+        - {x: 4, y: -336}
+        - {x: 71, y: -336}
+        - {x: 62, y: -312}
+        - {x: 61, y: -101}
+        - {x: 75, y: -120}
+        - {x: 104, y: -108}
+        - {x: 105, y: -76}
+        - {x: 105, y: 134}
+        - {x: 91, y: 147}
+        - {x: 67, y: 174}
+        - {x: 64, y: 255}
+        - {x: 81, y: 336}
+        - {x: 73, y: 336}
+        - {x: 57, y: 315}
+        - {x: 48, y: 271}
+        - {x: -73, y: 336}
+        - {x: -79, y: 336}
+        - {x: -78, y: 306}
+        - {x: -64, y: 175}
+        - {x: -105, y: 137}
+        - {x: -105, y: 30}
+        - {x: -101, y: -101}
+        - {x: -95, y: -114}
+        - {x: -65, y: -124}
+        - {x: -59, y: -313}
+        - {x: -70, y: -334}
+        - {x: -70, y: -336}
+        - {x: -5, y: -336}
+        - {x: -5, y: -333}
+        - {x: -13, y: -94}
+        - {x: 14, y: -94}
     outline: []
   spritePackingTag: 
   userData: 
