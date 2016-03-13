@@ -519,6 +519,7 @@ GameObject:
   - 114: {fileID: 121791379}
   - 114: {fileID: 121791378}
   - 114: {fileID: 121791377}
+  - 114: {fileID: 121791381}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -665,6 +666,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121791375}
+--- !u!114 &121791381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121791375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c57681f738bbd4aa48bf85a1ceea95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactor: {fileID: 2123311285}
 --- !u!1 &140597435
 GameObject:
   m_ObjectHideFlags: 0
@@ -7213,6 +7226,12 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2098981821}
+--- !u!114 &2123311285 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11438484, guid: ef01b2d5f31556946a4d4aa8fa6af69b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1053209791}
+  m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
 --- !u!1 &2144203730
 GameObject:
   m_ObjectHideFlags: 0
