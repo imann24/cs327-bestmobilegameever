@@ -85,6 +85,7 @@
       <Image2>RiggerPortrait</Image2>
       <Text>Thanks! I think I can reach it now.</Text>
       <TakeItems>Pole_Hook</TakeItems>
+      <SpecialActions>RiggerDescend</SpecialActions>
       <Next>rigger_descend</Next>
     </Interaction>
     <Interaction>

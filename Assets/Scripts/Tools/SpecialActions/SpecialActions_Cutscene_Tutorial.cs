@@ -32,6 +32,9 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
+            case "TestSceneChange":
+                StartCoroutine(TestSceneChange());
+                break;
 			case "SoundTutorialPrompt":
 				EventController.Event("PromptAppears");
 			break;
@@ -92,5 +95,16 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         Firstmate = GameObject.Find("Firstmate");
         GameManager.UIManager.UnlockScreen();
         NextInteraction(next);
+    }
+
+    IEnumerator TestSceneChange() {
+        GameManager.UIManager.LockScreen();
+        ScreenFader.FadeOut();
+        GameManager.InventoryManager.Hide();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Scenes/Development/SiennaTestOld");
+        ScreenFader.FadeIn();
+        yield return new WaitForSeconds(1f);
+        GameManager.UIManager.UnlockScreen();
     }
 }

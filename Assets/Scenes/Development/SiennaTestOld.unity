@@ -813,7 +813,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 356650325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.49, y: -1.44, z: 0}
+  m_LocalPosition: {x: -0.2, y: 4.77, z: 0}
   m_LocalScale: {x: 0.8733841, y: 0.7067749, z: 1}
   m_Children:
   - {fileID: 673205868}
@@ -837,6 +837,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -1223,7 +1224,6 @@ Transform:
   - {fileID: 1791508370}
   - {fileID: 648383597}
   - {fileID: 1614422183}
-  - {fileID: 1723044735}
   m_Father: {fileID: 2065786938}
   m_RootOrder: 1
 --- !u!1 &528538191
@@ -1424,6 +1424,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -3942,7 +3943,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1170966085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.95, y: 0, z: 0}
+  m_LocalPosition: {x: 24.38, y: 1.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1641367315}
@@ -3999,6 +4000,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -4230,7 +4232,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1262092778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27, y: 4.18, z: 0}
+  m_LocalPosition: {x: 9, y: -0.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1153980243}
@@ -4255,6 +4257,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 21300000, guid: eb7602dd0b3f5e84ba96fd6af808b81f, type: 3}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -4368,15 +4371,16 @@ MonoBehaviour:
   MovesObject: 1
   CreatesObject: 1
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
-  ObjectToCreate: {fileID: 1723044734}
+  ObjectToCreate: {fileID: 143042, guid: e13c6ce8c49c04d4195733914a2bb481, type: 2}
   CreateAtWaypoint: {fileID: 0}
   MoveToWaypoint: {fileID: 1170966085}
   SoundDelay: 0
-  MoveSpeed: 5
-  MoveToPosition: {x: -2.95, y: 0, z: 0}
-  CreateAtPosition: {x: -0.27, y: 4.18, z: 0}
+  MoveSpeed: 6
+  MoveToPosition: {x: 24.38, y: 1.16, z: 0}
+  CreateAtPosition: {x: 9, y: -0.78, z: 0}
 --- !u!1 &1268492767
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,7 +4577,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1314587695}
   m_Layer: 0
-  m_Name: CreateWaypoint
+  m_Name: Waypoint_RiggerDescend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4586,7 +4590,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1314587694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.81, y: 1.76, z: 0}
+  m_LocalPosition: {x: 11.33, y: 2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1641367315}
@@ -4644,6 +4648,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 21300000, guid: 1da24b4761da2fc43818cf23a5e573e6, type: 3}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -4921,7 +4926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1385439669
 Transform:
   m_ObjectHideFlags: 0
@@ -4953,6 +4958,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -5620,6 +5626,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -6425,6 +6432,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -6536,7 +6544,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1717370177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.81, y: 1.09, z: 0}
+  m_LocalPosition: {x: 12.8, y: 4.65, z: 0}
   m_LocalScale: {x: 0.86095166, y: 0.7846877, z: 1}
   m_Children:
   - {fileID: 1676766416}
@@ -6553,21 +6561,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionTag: 
+  ActionTag: RiggerDescend
   Sound: 
-  UseExtended: 0
+  UseExtended: 1
   ChangesSprite: 0
-  MovesObject: 0
+  MovesObject: 1
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
   CreateAtWaypoint: {fileID: 0}
-  MoveToWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 1314587694}
   SoundDelay: 0
-  MoveSpeed: 0
-  MoveToPosition: {x: 0, y: 0, z: 0}
+  MoveSpeed: 2
+  MoveToPosition: {x: 11.33, y: 2.04, z: 0}
   CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!65 &1717370181
 BoxCollider:
@@ -6764,107 +6773,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1723044734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1723044735}
-  - 114: {fileID: 1723044739}
-  - 212: {fileID: 1723044738}
-  - 65: {fileID: 1723044737}
-  - 54: {fileID: 1723044736}
-  m_Layer: 0
-  m_Name: Ink_Puddle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1723044735
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1723044734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27, y: 4.18, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 515877487}
-  m_RootOrder: 5
---- !u!54 &1723044736
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1723044734}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1723044737
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1723044734}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 1.06, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &1723044738
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1723044734}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d4bc3886db0118c4ea89eb8f689e5a65, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!114 &1723044739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1723044734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InteractionPath: worldobject_ink_puddle
-  Debugging: 0
 --- !u!1 &1783540752
 GameObject:
   m_ObjectHideFlags: 0
@@ -7024,6 +6932,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -8586,6 +8495,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 21300002, guid: 808cf9a27a13e47a5876cbaa0d9c13bb, type: 3}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -8614,6 +8524,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 21300000, guid: 0c8b667efccbd454081ce3914f0d1de5, type: 3}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 1791508369}
@@ -8789,6 +8700,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -8816,6 +8728,7 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 1
+  UseNavMesh: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}

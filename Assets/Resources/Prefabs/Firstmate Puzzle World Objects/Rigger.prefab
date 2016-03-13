@@ -14,6 +14,7 @@ GameObject:
   - 65: {fileID: 6554306}
   - 114: {fileID: 11487700}
   - 23: {fileID: 2368024}
+  - 114: {fileID: 11441920}
   m_Layer: 0
   m_Name: Rigger
   m_TagString: Untagged
@@ -75,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.063, y: 0.279, z: -1.045}
+  m_LocalPosition: {x: 3.57, y: 0.27, z: 0.36}
   m_LocalScale: {x: 0.4, y: 0.05, z: 0.25}
   m_Children:
   - {fileID: 407164}
@@ -164,6 +165,34 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &11441920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: RiggerDescend
+  Sound: 
+  UseExtended: 1
+  ChangesSprite: 0
+  MovesObject: 1
+  CreatesObject: 0
+  PlaysSound: 0
+  UseNavMesh: 0
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
+  SoundDelay: 0
+  MoveSpeed: 3
+  MoveToPosition: {x: 1.83, y: 0.2, z: -0.59}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11468234
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -11,7 +11,7 @@
       <Name>take</Name>
       <Type>Derivative</Type>
       <GiveItems>Paint_White</GiveItems>
-      <SpecialActions>Destroy</SpecialActions>
+      <SpecialActions>SoundPickUp|Destroy</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>use_mop</Name>

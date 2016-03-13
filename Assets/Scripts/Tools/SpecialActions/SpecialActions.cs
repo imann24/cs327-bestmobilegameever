@@ -14,13 +14,13 @@ public class SpecialActions : MonoBehaviour {
     [HideInInspector]
     public string ActionTag = null, Sound;
     [HideInInspector]
-    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound;
+    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound, UseNavMesh;
     [HideInInspector]
     public Sprite NewSprite;
     [HideInInspector]
     public GameObject ObjectToMove, ObjectToCreate, CreateAtWaypoint, MoveToWaypoint;
     [HideInInspector]
-    public float SoundDelay = 0, Speed = 1;
+    public float SoundDelay = 0, MoveSpeed = 2;
     [HideInInspector]
     public Vector3 MoveToPosition, CreateAtPosition;
 
@@ -36,18 +36,22 @@ public class SpecialActions : MonoBehaviour {
     void Update() {
         if (isMoving) {
             if (transform.position != MoveToPosition) {
-                float step = GetComponent<SpecialActions>().Speed * Time.deltaTime;
+                Debug.Log("I'm moving! (" + gameObject + ")");
+                float step = MoveSpeed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, MoveToPosition, step);
             }
-            else { isMoving = false; }
+            else {
+                isMoving = false;
+                if (GetComponent<NavMeshAgent>() != null) { GetComponent<NavMeshAgent>().enabled = true; }
+                if (GetComponentInChildren<NavMeshObstacle>() != null) { GetComponentInChildren<NavMeshObstacle>().enabled = true; }
+            }
         }
     }
 
     private void DoExtendedAction() {
         if (ChangesSprite) { ChangeSprite(NewSprite); }
         if (MovesObject) {
-            Move(ObjectToMove, MoveToPosition);
-            //MoveObject(ObjectToMove, MoveToPosition); }
+            Move(ObjectToMove, MoveToPosition, MoveSpeed);
         }
         if (CreatesObject) { CreateObject(ObjectToCreate, CreateAtPosition); }
         if (PlaysSound) {
@@ -69,14 +73,16 @@ public class SpecialActions : MonoBehaviour {
         else { EventController.Event(sound); }
     }
 
-    public void MoveObject(GameObject obj, Vector2 newPos) { obj.transform.position = new Vector3(newPos.x, newPos.y, obj.transform.position.z); }
-
-    public void Move(GameObject obj, Vector3 pos) {
-        if (obj == null) {
-            obj = gameObject;
+    public void Move(GameObject obj, Vector3 pos, float speed = 2) {
+        if (obj == null) { obj = gameObject; }
+        if (UseNavMesh && obj.GetComponent<NoahMove>() != null) { obj.GetComponent<NoahMove>().GoTo(pos); }
+        else {
+            if (obj.GetComponent<NavMeshAgent>() != null) { obj.GetComponent<NavMeshAgent>().enabled = false; }
+            if (obj.GetComponentInChildren<NavMeshObstacle>() != null) { obj.GetComponentInChildren<NavMeshObstacle>().enabled = false; }
+            obj.GetComponent<SpecialActions>().MoveSpeed = speed;
+            obj.GetComponent<SpecialActions>().MoveToPosition = pos;
+            obj.GetComponent<SpecialActions>().isMoving = true;
         }
-        obj.GetComponent<SpecialActions>().isMoving = true;
-        obj.GetComponent<SpecialActions>().MoveToPosition = pos;
     }
 
 
@@ -151,10 +157,12 @@ public class SpecialActionsEditor : Editor {
 
                 thisScript.MovesObject = GUILayout.Toggle(thisScript.MovesObject, "Move Object");
                 if (thisScript.MovesObject) {
+                    thisScript.UseNavMesh = GUILayout.Toggle(thisScript.UseNavMesh, "Use Nav Mesh");
                     thisScript.ObjectToMove = EditorGUILayout.ObjectField("Object", thisScript.ObjectToMove, typeof(GameObject), true) as GameObject;
                     thisScript.MoveToWaypoint = EditorGUILayout.ObjectField("Waypoint", thisScript.MoveToWaypoint, typeof(GameObject), true) as GameObject;
                     if (thisScript.MoveToWaypoint != null) { thisScript.MoveToPosition = thisScript.MoveToWaypoint.transform.position; }
                     else { thisScript.MoveToPosition = thisScript.gameObject.transform.position;  }
+                    thisScript.MoveSpeed = EditorGUILayout.FloatField(thisScript.MoveSpeed);
                 }
 
                 thisScript.CreatesObject = GUILayout.Toggle(thisScript.CreatesObject, "Create Object");
@@ -168,7 +176,7 @@ public class SpecialActionsEditor : Editor {
                 thisScript.PlaysSound = GUILayout.Toggle(thisScript.PlaysSound, "Play Sound");
                 if (thisScript.PlaysSound) {
                     thisScript.Sound = EditorGUILayout.TextField(thisScript.Sound);
-                    thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
+                    //thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
                 }
             }
         }

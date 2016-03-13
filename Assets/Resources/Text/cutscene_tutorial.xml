@@ -324,7 +324,7 @@
     <Interaction>
       <Name>tutorial_cutscene_30</Name>
       <Type>Derivative</Type>
-      <Text>Those who wish to mourn his untimely passing should follow me to the helm, where we may lay roses and candles in his memory!</Text>
+      <Text>Those who wish to mourn their untimely passing should follow me to the helm, where we may lay roses and candles in their memory!</Text>
       <Image>FirstmatePortrait</Image>
       <Next>tutorial_cutscene_31</Next>
     </Interaction>
@@ -362,6 +362,7 @@
       <GiveTags>firstmateIntro|quartermasterIntro|shipmasterIntro</GiveTags>
       <Text>Did the first mate say something about a service?</Text>
       <Image>SadiePortrait</Image>
+      <SpecialActions>TestSceneChange</SpecialActions>
     </Interaction>
   <!-- EndRegion -->
   </Interactions>
