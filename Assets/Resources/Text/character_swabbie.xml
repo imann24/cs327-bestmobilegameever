@@ -147,7 +147,7 @@
       <Text>Ah… well, y’see…</Text>
       <Image>SadiePortraitFaded</Image>
       <Image2>SwabbiePortrait</Image2>
-      <SpecialActions>SwabbieFlee|Destroy</SpecialActions>
+      <SpecialActions>SwabbieFlee</SpecialActions>
     </Interaction>
     <!-- EndRegion -->
     <Interaction>

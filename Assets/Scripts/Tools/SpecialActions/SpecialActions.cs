@@ -20,9 +20,11 @@ public class SpecialActions : MonoBehaviour {
     [HideInInspector]
     public GameObject ObjectToMove, ObjectToCreate, CreateAtWaypoint, MoveToWaypoint;
     [HideInInspector]
-    public Vector3 MoveToPosition, CreateAtPosition;
+    public float SoundDelay = 0, Speed = 1;
     [HideInInspector]
-    public float SoundDelay = 0;
+    public Vector3 MoveToPosition, CreateAtPosition;
+
+    private bool isMoving;
 
     public void Awake() {
         SpecialActions[] scripts = GetComponents<SpecialActions>();
@@ -31,9 +33,22 @@ public class SpecialActions : MonoBehaviour {
         }
     }
 
+    void Update() {
+        if (isMoving) {
+            if (transform.position != MoveToPosition) {
+                float step = GetComponent<SpecialActions>().Speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, MoveToPosition, step);
+            }
+            else { isMoving = false; }
+        }
+    }
+
     private void DoExtendedAction() {
         if (ChangesSprite) { ChangeSprite(NewSprite); }
-        if (MovesObject) { MoveObject(ObjectToMove, MoveToPosition); }
+        if (MovesObject) {
+            Move(ObjectToMove, MoveToPosition);
+            //MoveObject(ObjectToMove, MoveToPosition); }
+        }
         if (CreatesObject) { CreateObject(ObjectToCreate, CreateAtPosition); }
         if (PlaysSound) {
             if (SoundDelay == 0) { PlaySound(Sound); }
@@ -56,7 +71,16 @@ public class SpecialActions : MonoBehaviour {
 
     public void MoveObject(GameObject obj, Vector2 newPos) { obj.transform.position = new Vector3(newPos.x, newPos.y, obj.transform.position.z); }
 
-    public void CreateObject(GameObject obj, Vector2 pos) {
+    public void Move(GameObject obj, Vector3 pos) {
+        if (obj == null) {
+            obj = gameObject;
+        }
+        obj.GetComponent<SpecialActions>().isMoving = true;
+        obj.GetComponent<SpecialActions>().MoveToPosition = pos;
+    }
+
+
+public void CreateObject(GameObject obj, Vector2 pos) {
         GameObject newObject = (GameObject)Instantiate(obj, new Vector3(pos.x, pos.y, gameObject.transform.position.z), Quaternion.identity);
         newObject.name = obj.name;
     }

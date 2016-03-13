@@ -345,7 +345,7 @@
       <Image>FirstmatePortrait</Image>
       <Image2>SadiePortraitFaded</Image2>
       <Text>Fantastique! I’m in love, simply in love! I knew I could count on you, ma cherie!</Text>
-      <TakeTags>firstmateQuestInProgress1</TakeTags>
+      <TakeTags>firstmateQuestInProgress1|portraitShown</TakeTags>
       <TakeItems>Mop_Head</TakeItems>
       <SpecialActions>ChangeToMop</SpecialActions>
       <Next>firstmate_propaganda_00</Next>
