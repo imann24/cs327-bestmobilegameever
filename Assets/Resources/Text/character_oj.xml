@@ -11,23 +11,31 @@
     <Interaction>
       <Name>oj_intro_00</Name>
       <Type>Click</Type>
+      <ALLTags>hasPoster</ALLTags>
+      <NONETags>ojPosterGiven</NONETags>
+      <Text>Will you take this?</Text>
+      <Next>oj_intro_01</Next>
+    </Interaction>
+    <Interaction>
+      <Name>oj_intro_00</Name>
+      <Type>Click</Type>
       <Text>Nevermind.</Text>
     </Interaction>
   <!-- EndRegion -->
   <!-- Region Firstmate Puzzle -->
     <!-- Region Before Chalk Requested -->
     <Interaction>
-      <Name>oj_intro_00</Name>
-      <Type>Click</Type>
-      <ALLTags>hasPoster</ALLTags>
-      <NONETags>ojChalkRequested|ojChalkGiven|ojPosterGiven</NONETags>
-      <Text>Will you take this?</Text>
-      <Next>oj_intro_01</Next>
+      <Name>oj_intro_01</Name>
+      <Type>Derivative</Type>
+      <NONETags>ojChalkGiven</NONETags>
+      <Text>No! Get me some chalk!</Text>
+      <GiveTags>ojChalkRequested</GiveTags>
     </Interaction>
     <Interaction>
       <Name>oj_intro_01</Name>
       <Type>Derivative</Type>
-      <Text>No! Get me some chalk!</Text>
+      <ALLTags>ojChalkGiven</ALLTags>
+      <Text>Hm...you did get me that chalk. Ok, hand it over.</Text>
       <GiveTags>ojChalkRequested</GiveTags>
     </Interaction>
     <Interaction>
@@ -93,6 +101,14 @@
       <Type>Derivative</Type>
       <Next>decrease</Next>
       <NextInteractor>Poster</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster|ojPosterGiven</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_poster_again</Next>
+      <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <!-- EndRegion -->
   <!-- EndRegion -->

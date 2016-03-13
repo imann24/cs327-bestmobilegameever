@@ -304,6 +304,12 @@
       <Text>She can't hear me.</Text>
       <TextType>Floating</TextType>
     </Interaction>
+    <Interaction>
+      <Name>give_poster_again</Name>
+      <Type>Derivative</Type>
+      <Text>They already got one.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
   <!-- EndRegion -->
   <!-- Region DefaultCannotUse-->
 		<Interaction>

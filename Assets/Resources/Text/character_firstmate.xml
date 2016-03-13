@@ -394,7 +394,7 @@
     <Interaction>
       <Name>firstmate_default</Name>
       <Type>Click</Type>
-      <NONETags>firstmateIntro|firstmateQuestInProgress1|hasPoster|firstmatePart2</NONETags>
+      <NONETags>firstmateIntro|firstmateQuestInProgress1|hasPoster|postersGiven</NONETags>
       <Image>FirstmatePortraitMop</Image>
       <Image2>SadiePortraitFaded</Image2>
       <Text>I have nothing to say to you.</Text>
