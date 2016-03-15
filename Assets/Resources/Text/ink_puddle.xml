@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+		<Interaction>
+			<Name>examnine</Name>
+			<Type>Click</Type>
+			<Text>Great. How is this gonna get cleaned up?</Text>
+		</Interaction>
+	</Interactions>
+</InteractionList>
