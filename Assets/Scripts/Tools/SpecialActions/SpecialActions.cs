@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class SpecialActions : MonoBehaviour {
     private Dictionary<string, SpecialActions> actionScripts = new Dictionary<string, SpecialActions>();
@@ -11,15 +14,17 @@ public class SpecialActions : MonoBehaviour {
     [HideInInspector]
     public string ActionTag = null, Sound;
     [HideInInspector]
-    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound;
+    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound, UseNavMesh;
     [HideInInspector]
     public Sprite NewSprite;
     [HideInInspector]
-    public GameObject ObjectToMove, ObjectToCreate;
+    public GameObject ObjectToMove, ObjectToCreate, CreateAtWaypoint, MoveToWaypoint;
     [HideInInspector]
-    public Vector2 MoveToPosition, CreateAtPosition;
+    public float SoundDelay = 0, MoveSpeed = 2;
     [HideInInspector]
-    public float SoundDelay = 0;
+    public Vector3 MoveToPosition, CreateAtPosition;
+
+    private bool isMoving;
 
     public void Awake() {
         SpecialActions[] scripts = GetComponents<SpecialActions>();
@@ -28,9 +33,26 @@ public class SpecialActions : MonoBehaviour {
         }
     }
 
+    void Update() {
+        if (isMoving) {
+            if (transform.position != MoveToPosition) {
+                Debug.Log("I'm moving! (" + gameObject + ")");
+                float step = MoveSpeed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, MoveToPosition, step);
+            }
+            else {
+                isMoving = false;
+                if (GetComponent<NavMeshAgent>() != null) { GetComponent<NavMeshAgent>().enabled = true; }
+                if (GetComponentInChildren<NavMeshObstacle>() != null) { GetComponentInChildren<NavMeshObstacle>().enabled = true; }
+            }
+        }
+    }
+
     private void DoExtendedAction() {
         if (ChangesSprite) { ChangeSprite(NewSprite); }
-        if (MovesObject) { MoveObject(ObjectToMove, MoveToPosition); }
+        if (MovesObject) {
+            Move(ObjectToMove, MoveToPosition, MoveSpeed);
+        }
         if (CreatesObject) { CreateObject(ObjectToCreate, CreateAtPosition); }
         if (PlaysSound) {
             if (SoundDelay == 0) { PlaySound(Sound); }
@@ -39,18 +61,32 @@ public class SpecialActions : MonoBehaviour {
     }
 
     #region useful functions
-    public void ChangeSprite(Sprite sprite) { GetComponent<SpriteRenderer>().sprite = sprite; }
-
+    public void ChangeSprite(Sprite sprite) {
+        if (GetComponentInChildren<SpriteRenderer>() != null) { GetComponentInChildren<SpriteRenderer>().sprite = sprite; }
+        else if (GetComponent<Image>() != null) { GetComponent<Image>().sprite = sprite; }
+        else if (GetComponent<SpriteRenderer>() != null) { GetComponent<SpriteRenderer>().sprite = sprite; }
+        else if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("No valid sprite or image."); }
+    }
     
     public void PlaySound(string sound = null) {
         if (sound == null) { EventController.Event(Sound); }
         else { EventController.Event(sound); }
     }
 
+    public void Move(GameObject obj, Vector3 pos, float speed = 2) {
+        if (obj == null) { obj = gameObject; }
+        if (UseNavMesh && obj.GetComponent<NoahMove>() != null) { obj.GetComponent<NoahMove>().GoTo(pos); }
+        else {
+            if (obj.GetComponent<NavMeshAgent>() != null) { obj.GetComponent<NavMeshAgent>().enabled = false; }
+            if (obj.GetComponentInChildren<NavMeshObstacle>() != null) { obj.GetComponentInChildren<NavMeshObstacle>().enabled = false; }
+            obj.GetComponent<SpecialActions>().MoveSpeed = speed;
+            obj.GetComponent<SpecialActions>().MoveToPosition = pos;
+            obj.GetComponent<SpecialActions>().isMoving = true;
+        }
+    }
 
-    public void MoveObject(GameObject obj, Vector2 newPos) { obj.transform.position = new Vector3(newPos.x, newPos.y, obj.transform.position.z); }
 
-    public void CreateObject(GameObject obj, Vector2 pos) {
+public void CreateObject(GameObject obj, Vector2 pos) {
         GameObject newObject = (GameObject)Instantiate(obj, new Vector3(pos.x, pos.y, gameObject.transform.position.z), Quaternion.identity);
         newObject.name = obj.name;
     }
@@ -105,6 +141,7 @@ public class SpecialActions : MonoBehaviour {
     #endregion
 }
 
+#if UNITY_EDITOR
 #region editor
 [CustomEditor(typeof(SpecialActions))]
 public class SpecialActionsEditor : Editor {
@@ -120,23 +157,30 @@ public class SpecialActionsEditor : Editor {
 
                 thisScript.MovesObject = GUILayout.Toggle(thisScript.MovesObject, "Move Object");
                 if (thisScript.MovesObject) {
+                    thisScript.UseNavMesh = GUILayout.Toggle(thisScript.UseNavMesh, "Use Nav Mesh");
                     thisScript.ObjectToMove = EditorGUILayout.ObjectField("Object", thisScript.ObjectToMove, typeof(GameObject), true) as GameObject;
-                    thisScript.MoveToPosition = EditorGUILayout.Vector2Field("Target Position", thisScript.MoveToPosition);
+                    thisScript.MoveToWaypoint = EditorGUILayout.ObjectField("Waypoint", thisScript.MoveToWaypoint, typeof(GameObject), true) as GameObject;
+                    if (thisScript.MoveToWaypoint != null) { thisScript.MoveToPosition = thisScript.MoveToWaypoint.transform.position; }
+                    else { thisScript.MoveToPosition = thisScript.gameObject.transform.position;  }
+                    thisScript.MoveSpeed = EditorGUILayout.FloatField(thisScript.MoveSpeed);
                 }
 
                 thisScript.CreatesObject = GUILayout.Toggle(thisScript.CreatesObject, "Create Object");
                 if (thisScript.CreatesObject) {
                     thisScript.ObjectToCreate = EditorGUILayout.ObjectField("Object Prefab", thisScript.ObjectToCreate, typeof(GameObject), true) as GameObject;
-                    thisScript.CreateAtPosition = EditorGUILayout.Vector2Field("Position", thisScript.CreateAtPosition);
+                    thisScript.CreateAtWaypoint = EditorGUILayout.ObjectField("Waypoint", thisScript.CreateAtWaypoint, typeof(GameObject), true) as GameObject;
+                    if (thisScript.CreateAtWaypoint != null) { thisScript.CreateAtPosition = thisScript.CreateAtWaypoint.transform.position; }
+                    else { thisScript.CreateAtPosition = thisScript.gameObject.transform.position; }
                 }
 
                 thisScript.PlaysSound = GUILayout.Toggle(thisScript.PlaysSound, "Play Sound");
                 if (thisScript.PlaysSound) {
                     thisScript.Sound = EditorGUILayout.TextField(thisScript.Sound);
-                    thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
+                    //thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
                 }
             }
         }
     }
 }
 #endregion
+#endif

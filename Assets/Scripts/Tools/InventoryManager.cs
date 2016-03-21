@@ -30,6 +30,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 			Show ();
 			GameObject itemToGive = InventoryItem.Create (item);
 			if (itemToGive) {
+				this.gameObject.SetActive (true);
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
 				return true;
 			} else {

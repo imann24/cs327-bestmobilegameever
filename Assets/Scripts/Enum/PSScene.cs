@@ -3,5 +3,8 @@
 	MainGame,
 	OptionsMenu,
 	Credits,
-	TutorialScene
+	TutorialScene,
+	MovementDemo,
+	DevelopmentSceneList,
+	CharacterSpritesDemo
 }

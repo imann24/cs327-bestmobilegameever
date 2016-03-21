@@ -26,28 +26,23 @@
 			<Type>Derivative</Type>
 			<GiveItems>Rag</GiveItems>
 			<SpecialActions>Destroy|SoundTutorialPrompt</SpecialActions>
-			<Next>take_prompt</Next>
-		</Interaction>
-		<Interaction>
-			<Name>take_prompt</Name>
-			<Type>Derivative</Type>
-			<Text>**Drag one item in your inventory on top of another to combine them for a new item!**</Text>
-		</Interaction>
-		<Interaction>
-			<Name>default_cant_use</Name>
-			<Type>UseItem</Type>
-			<NONETags>holdingHookDirty</NONETags>
-			<Next>default_cant_use</Next>
-			<NextInteractor>Sadie</NextInteractor>
+      <NextInteractor>Cutscene_Handler</NextInteractor>
+			<Next>tutorial_items_04</Next>
 		</Interaction>
 		<Interaction>
 			<Name>clean_hook</Name>
 			<Type>Derivative</Type>
 			<TakeItems>Rag|Hook_Dirty</TakeItems>
-			<GiveItems>Hook_Clean</GiveItems>
+			<GiveItems>Hook</GiveItems>
 			<SpecialActions>SoundCleaningHook</SpecialActions>
 			<Next>cleaned_hook</Next>
 			<NextInteractor>Sadie</NextInteractor>
 		</Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotUse</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
 	</Interactions>
 </InteractionList>

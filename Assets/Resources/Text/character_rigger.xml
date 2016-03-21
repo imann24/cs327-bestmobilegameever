@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+  <!-- Region Firstmate Puzzle -->
+  <!-- Region Get Attention-->
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <NONETags>riggerHit|riggerDown</NONETags>
+      <MaxDistance>10</MaxDistance>
+      <Next>talk_rigger</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>give</Name>
+      <Type>UseItem</Type>
+      <NONETags>riggerHit|riggerDown|holdingOrange</NONETags>
+      <MaxDistance>10</MaxDistance>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>talk_rigger</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>hit</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingOrange</ALLTags>
+      <GiveTags>riggerHit</GiveTags>
+      <TakeItems>Orange</TakeItems>
+      <Next>rigger_hit</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <MaxDistance>10</MaxDistance>
+      <ALLTags>riggerHit</ALLTags>
+      <NONETags>hasPoster</NONETags>
+      <Text>Sorry, can't talk now!</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <ALLTags>riggerDown</ALLTags>
+      <Next>rigger_choice</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_hit</Name>
+      <Type>Derivative</Type>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>Ow!</Text>
+      <Next>rigger_choice</Next>
+    </Interaction>
+  <!-- EndRegion -->
+  <!-- Region Help Out -->
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <MaxDistance>10</MaxDistance>
+      <ALLTags>riggerHit|hasPoster</ALLTags>
+      <Next>rigger_choice</Next>
+    </Interaction>
+    <Interaction>
+      <Name>help_me</Name>
+      <Type>Derivative</Type>
+      <ALLTags>riggerHit|hasPoster</ALLTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>Help me out here!</Text>
+    </Interaction>
+    <Interaction>
+      <Name>give_mop_handle</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingMopHandle|riggerHit</ALLTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>I won't be able to grab it with that.</Text>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>give_pole_hook</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoleHook|riggerHit</ALLTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>Thanks! I think I can reach it now.</Text>
+      <TakeItems>Pole_Hook</TakeItems>
+      <SpecialActions>RiggerDescend</SpecialActions>
+      <Next>rigger_descend</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_descend</Name>
+      <Type>Derivative</Type>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>Mind if I keep this pole? It makes me feel more...stable. You can have the hook back. Take this rope too.</Text>
+      <GiveTags>riggerDown</GiveTags>
+      <TakeTags>riggerHit</TakeTags>
+      <GiveItems>Hook|Rope</GiveItems>
+    </Interaction>
+  <!-- EndRegion -->
+  <!-- Region Give Poster -->
+    <Interaction>
+      <Name>give_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster|riggerHit</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>rigger_choice_30</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster|riggerDown</ALLTags>
+      <NONETags>riggerPosterGiven</NONETags>
+      <GiveTags>riggerPosterGiven</GiveTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>Thanks for the flyer.</Text>
+      <Next>give_poster_success</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster|riggerPosterGiven</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_poster_again</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_success</Name>
+      <Type>Derivative</Type>
+      <Next>decrease</Next>
+      <NextInteractor>Poster</NextInteractor>
+    </Interaction>
+  <!-- EndRegion -->
+  <!-- EndRegion -->
+  <!-- Region Default Convo Options -->
+    <!-- Region Default Greeting -->
+    <Interaction>
+      <Name>rigger_choice</Name>
+      <Type>Derivative</Type>
+      <ALLTags>riggerHit</ALLTags>
+      <TextType>Monologue</TextType>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>Hi there.</Text>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_choice</Name>
+      <Type>Derivative</Type>
+      <ALLTags>riggerDown</ALLTags>
+      <TextType>Monologue</TextType>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>Thanks for helping me out. How can I help you?</Text>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region What are you doing up there? -->
+    <Interaction>
+      <Name>rigger_choice</Name>
+      <Type>Derivative</Type>
+      <NONETags>riggerDown</NONETags>
+      <Text>What are you doing up there?</Text>
+      <Next>rigger_choice_10</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_choice_10</Name>
+      <Type>Derivative</Type>
+      <Image>SadiePortrait</Image>
+      <Image2>RiggerPortraitFaded</Image2>
+      <Text>What are you doing up there? It seems awfully high.</Text>
+      <Next>rigger_choice_11</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_choice_11</Name>
+      <Type>Derivative</Type>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>Don't worry about it.</Text>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region Afraid of heights? -->
+    <!-- EndRegion -->
+    <!-- Region Have a flyer. -->
+    <Interaction>
+      <Name>rigger_choice</Name>
+      <Type>Derivative</Type>
+      <ALLTags>hasPoster</ALLTags>
+      <NONETags>riggerPosterGiven</NONETags>
+      <Text>Here, take this flyer.</Text>
+      <Next>rigger_choice_30</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_choice_30</Name>
+      <Type>Derivative</Type>
+      <Image>SadiePortrait</Image>
+      <Image2>RiggerPortraitFaded</Image2>
+      <Text>I've got a flyer for you, courtesy of First Mate Bart.</Text>
+      <Next>rigger_choice_31</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_choice_31</Name>
+      <Type>Derivative</Type>
+      <NONETags>riggerDown</NONETags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>I can't come down yet. I gotta get this lantern.</Text>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_choice_31</Name>
+      <Type>Derivative</Type>
+      <ALLTags>riggerDown</ALLTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>RiggerPortrait</Image2>
+      <Text>Great! Hand it on over.</Text>
+    </Interaction>
+    <!-- EndRegion-->
+    <Interaction>
+      <Name>rigger_choice</Name>
+      <Type>Derivative</Type>
+      <Text>Nevermind.</Text>
+    </Interaction>
+  <!-- EndRegion -->
+  <!-- Region Default -->
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotGive</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+  <!-- EndRegion -->
+  </Interactions>
+</InteractionList>

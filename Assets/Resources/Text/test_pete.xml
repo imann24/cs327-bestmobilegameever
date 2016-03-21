@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <Text>Choose Quest State</Text>
+      <TakeItems>Hook|Mop_Handle|Poster</TakeItems>
+      <TakeTags>firstmateQuestInProgress1|firstmateIntro</TakeTags>
+      <Next>choose</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <Text>Test Item Tags</Text>
+      <Next>item_tags</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <Text>Nevermind</Text>
+    </Interaction>
+  <!-- Region Choose Quest State -->
+    <!-- Region Firstmate -->
+    <Interaction>
+      <Name>choose</Name>
+      <Type>Derivative</Type>
+      <Text>Firstmate Intro</Text>
+      <GiveItems>Hook</GiveItems>
+      <GiveTags>firstmateIntro</GiveTags>
+    </Interaction>
+    <Interaction>
+      <Name>choose</Name>
+      <Type>Derivative</Type>
+      <Text>Firstmate Quest 1</Text>
+      <GiveItems>Hook</GiveItems>
+      <GiveTags>firstmateQuestInProgress1</GiveTags>
+    </Interaction>
+    <Interaction>
+      <Name>choose</Name>
+      <Type>Derivative</Type>
+      <Text>Firstmate Quest 2</Text>
+      <GiveItems>Hook|Mop_Handle|Poster</GiveItems>
+    </Interaction>
+    <!-- EndRegion -->
+  <!-- EndRegion -->
+  <!-- Region Test Item Tags -->
+    <Interaction>
+      <Name>item_tags</Name>
+      <Type>Derivative</Type>
+      <Text>Give Mop Head</Text>
+      <GiveItems>Mop_Head</GiveItems>
+    </Interaction>
+    <Interaction>
+      <Name>item_tags</Name>
+      <Type>Derivative</Type>
+      <ALLTags>hasMopHead</ALLTags>
+      <Text>Take Mop Head</Text>
+      <TakeItems>Mop_Head</TakeItems>
+    </Interaction>
+    <Interaction>
+      <Name>use_mop_head</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingMopHead</ALLTags>
+      <Text>Taking mop head.</Text>
+      <TakeItems>Mop_Head</TakeItems>
+    </Interaction>
+  <!-- EndRegion -->
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotGive</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+	</Interactions>
+</InteractionList>

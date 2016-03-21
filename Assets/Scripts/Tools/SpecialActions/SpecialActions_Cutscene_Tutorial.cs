@@ -4,23 +4,43 @@ using System.Collections;
 
 public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     private GameObject Quartermaster, Shipmaster, Firstmate;
+    private static SpecialActions_Cutscene_Tutorial _instance = null;
     private string next;
 
     void Start() {
-        ScreenFader.FadeOut(0);
-        EventController.Event("PlayerYawn");
-        next = "tutorial_start";
-        Invoke("doNext", 1f);
+        if (_instance != null) { Destroy(gameObject); }
+        else {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+            ScreenFader.FadeOut(0);
+            if (SceneManager.GetActiveScene().name == "TutorialScene") {
+                EventController.Event("PlayerYawn");
+                next = "tutorial_start";
+                Invoke("doNext", 1f);
+            }
+            else if (SceneManager.GetActiveScene().name == "WorldScene") {
+                Quartermaster = GameObject.Find("Quartermaster");
+                Shipmaster = GameObject.Find("Shipmaster");
+                Firstmate = GameObject.Find("Firstmate");
+                GameManager.InventoryManager.GiveItem("Hook_Clean");
+                GameManager.InventoryManager.Hide();
+                NextInteraction("tutorial_cutscene_start");
+            }
+            else { Debug.LogWarning("Scene not recognized by Cutscene_Handler"); }
+        }
     }
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
+            case "TestSceneChange":
+                StartCoroutine(TestSceneChange());
+                break;
 			case "SoundTutorialPrompt":
 				EventController.Event("PromptAppears");
 			break;
-			case "PlayOrangeSplatSound":
-				EventController.Event("OrangeImpact");
-			break;
+            case "HideInventory":
+                GameManager.InventoryManager.Hide();
+                break;
             case "ExitTutorialRoom":
                 next = "tutorial_cutscene_start";
                 StartCoroutine(NextScene());
@@ -47,8 +67,8 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     }
 
     private void doNext() {
-        NextInteraction(next);
         EventController.Event("PromptAppears");
+        NextInteraction(next);
     }
 
     IEnumerator npcExit(GameObject npc) {
@@ -64,8 +84,8 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     
     IEnumerator NextScene() {
         GameManager.UIManager.LockScreen();
-        DontDestroyOnLoad(gameObject);
         ScreenFader.FadeOut();
+        GameManager.InventoryManager.Hide();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Scenes/WorldScene");
         ScreenFader.FadeIn();
@@ -75,5 +95,16 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         Firstmate = GameObject.Find("Firstmate");
         GameManager.UIManager.UnlockScreen();
         NextInteraction(next);
+    }
+
+    IEnumerator TestSceneChange() {
+        GameManager.UIManager.LockScreen();
+        ScreenFader.FadeOut();
+        GameManager.InventoryManager.Hide();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Scenes/Development/SiennaTestOld");
+        ScreenFader.FadeIn();
+        yield return new WaitForSeconds(1f);
+        GameManager.UIManager.UnlockScreen();
     }
 }

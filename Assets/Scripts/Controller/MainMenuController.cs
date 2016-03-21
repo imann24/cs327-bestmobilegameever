@@ -34,4 +34,10 @@ public class MainMenuController : MonoBehaviour {
 
 	}
 
+	public void LoadDevelopScenesList () {
+
+		SceneController.LoadDevelopSceneListScene();
+
+	}
+
 }
