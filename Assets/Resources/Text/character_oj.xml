@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+  <!-- Region Intro -->
+    <Interaction>
+      <Name>oj_intro_00</Name>
+      <Type>Click</Type>
+      <Text>Orange please!</Text>
+      <GiveItems>Orange</GiveItems>
+    </Interaction>
+    <Interaction>
+      <Name>oj_intro_00</Name>
+      <Type>Click</Type>
+      <ALLTags>hasPoster</ALLTags>
+      <NONETags>ojPosterGiven</NONETags>
+      <Text>Will you take this?</Text>
+      <Next>oj_intro_01</Next>
+    </Interaction>
+    <Interaction>
+      <Name>oj_intro_00</Name>
+      <Type>Click</Type>
+      <Text>Nevermind.</Text>
+    </Interaction>
+  <!-- EndRegion -->
+  <!-- Region Firstmate Puzzle -->
+    <!-- Region Before Chalk Requested -->
+    <Interaction>
+      <Name>oj_intro_01</Name>
+      <Type>Derivative</Type>
+      <NONETags>ojChalkGiven</NONETags>
+      <Text>No! Get me some chalk!</Text>
+      <GiveTags>ojChalkRequested</GiveTags>
+    </Interaction>
+    <Interaction>
+      <Name>oj_intro_01</Name>
+      <Type>Derivative</Type>
+      <ALLTags>ojChalkGiven</ALLTags>
+      <Text>Hm...you did get me that chalk. Ok, hand it over.</Text>
+      <GiveTags>ojChalkRequested</GiveTags>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingChalk</ALLTags>
+      <NONETags>ojChalkRequested</NONETags>
+      <GiveTags>ojChalkGiven</GiveTags>
+      <TakeItems>Chalk</TakeItems>
+      <Image>OrangeGuyPortrait</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>How did you know?</Text>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster</ALLTags>
+      <NONETags>ojChalkGiven|ojPosterGiven</NONETags>
+      <GiveTags>ojChalkRequested</GiveTags>
+      <Image>OrangeGuyPortrait</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>i don't want that. Get me some chalk.</Text>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region After Chalk Requested-->
+    <Interaction>
+      <Name>give_chalk</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingChalk|ojChalkRequested</ALLTags>
+      <TakeTags>ojChalkRequested</TakeTags>
+      <GiveTags>ojChalkGiven</GiveTags>
+      <TakeItems>Chalk</TakeItems>
+      <Image>OrangeGuyPortrait</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>Perfect.</Text>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region After Chalk Received -->
+    <Interaction>
+      <Name>give_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster|ojChalkGiven</ALLTags>
+      <NONETags>ojPosterGiven</NONETags>
+      <TakeTags>ojChalkGiven</TakeTags>
+      <GiveTags>ojPosterGiven</GiveTags>
+      <Image>OrangeGuyPortrait</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>OK, I guess I'll take it.</Text>
+      <Next>give_poster_success</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_success</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyPortrait</Image>
+      <Image2>SadiePortraitFaded</Image2>
+      <Text>Now leave me!</Text>
+      <Next>posters_given</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_success</Name>
+      <Type>Derivative</Type>
+      <Next>decrease</Next>
+      <NextInteractor>Poster</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster|ojPosterGiven</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_poster_again</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <!-- EndRegion -->
+  <!-- EndRegion -->
+  <!-- Region Defaults -->
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotGive</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+  <!-- EndRegion -->
+	</Interactions>
+</InteractionList>

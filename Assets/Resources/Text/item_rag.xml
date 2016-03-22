@@ -33,15 +33,14 @@
 			<Name>clean_hook</Name>
 			<Type>Derivative</Type>
 			<TakeItems>Rag|Hook_Dirty</TakeItems>
-			<GiveItems>Hook_Clean</GiveItems>
+			<GiveItems>Hook</GiveItems>
 			<SpecialActions>SoundCleaningHook</SpecialActions>
 			<Next>cleaned_hook</Next>
 			<NextInteractor>Sadie</NextInteractor>
 		</Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
-      <Type>UseItem</Type>
-      <NONETags>holdingHookDirty</NONETags>
+      <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>

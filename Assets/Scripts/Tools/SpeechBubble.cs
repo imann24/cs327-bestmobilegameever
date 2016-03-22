@@ -23,6 +23,7 @@ public class SpeechBubble : MonoBehaviour {
         GameObject go = Instantiate (floatingText);
 		go.GetComponent<Text> ().text = interaction.iText;
 		go.GetComponent<Text> ().color = speechColor;
+        go.GetComponent<FloatingText>().ScrollSpeed = go.GetComponent<FloatingText>().ScrollSpeed / time;
 		go.transform.SetParent (transform);
 		go.transform.localScale = Vector3.one;
 		go.GetComponent<RectTransform> ().localPosition = Vector3.zero;

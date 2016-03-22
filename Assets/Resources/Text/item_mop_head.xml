@@ -16,8 +16,7 @@
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
-      <Type>UseItem</Type>
-      <NONETags>holdingPaintWhite</NONETags>
+      <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>

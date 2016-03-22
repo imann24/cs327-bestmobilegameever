@@ -9,7 +9,7 @@
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
-      <Type>UseItem</Type>
+      <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>

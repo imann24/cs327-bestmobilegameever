@@ -147,8 +147,14 @@
       <Text>Ah… well, y’see…</Text>
       <Image>SadiePortraitFaded</Image>
       <Image2>SwabbiePortrait</Image2>
-      <SpecialActions>SwabbieFlee|Destroy</SpecialActions>
+      <SpecialActions>SwabbieFlee</SpecialActions>
     </Interaction>
     <!-- EndRegion -->
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotGive</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
   </Interactions>
 </InteractionList>

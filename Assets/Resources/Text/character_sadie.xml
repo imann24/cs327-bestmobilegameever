@@ -114,16 +114,11 @@
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
-      <Name>examine_mop_handle</Name>
-      <Type>Derivative</Type>
-      <Text>examine text</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
       <Name>use_paint_mop</Name>
       <Type>Derivative</Type>
       <Text>This mop is already gray…</Text>
       <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>examine_paint</Name>
@@ -139,22 +134,6 @@
       <Type>Derivative</Type>
       <ALLTags>hasPaintWhite</ALLTags>
       <Text>Dreary and gray. Reminds me of home.</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
-      <Name>examine_rope</Name>
-      <Type>Derivative</Type>
-      <NONETags>hasRope</NONETags>
-      <Text>examine text</Text>
-      <TextType>Floating</TextType>
-      <NextInteractor>Rope</NextInteractor>
-      <Next>take</Next>
-    </Interaction>
-    <Interaction>
-      <Name>examine_rope</Name>
-      <Type>Derivative</Type>
-      <ALLTags>hasRope</ALLTags>
-      <Text>Can’t get enough rope - ahem - I mean, line on a ship.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
@@ -227,6 +206,110 @@
       <TextType>Floating</TextType>
     </Interaction>
     <!-- EndRegion -->
+  <!-- EndRegion -->
+  <!-- Region Firstmate P2 Interactions -->
+    <Interaction>
+      <Name>examine_chalkboard</Name>
+      <Type>Derivative</Type>
+      <Text>It's a chalkboard.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk_chalkboard</Name>
+      <Type>Derivative</Type>
+      <Text>The cannoneer would be pissed if I messed with that. Better not.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>examine_lifeboat</Name>
+      <Type>Derivative</Type>
+      <NONETags>lifeboatSecured</NONETags>
+      <Text>Looks precarious.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_lifeboat</Name>
+      <Type>Derivative</Type>
+      <ALLTags>lifeboatSecured</ALLTags>
+      <Text>Nice and secure.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_rope_lifeboat</Name>
+      <Type>Derivative</Type>
+      <Text>Alright, let's fix it.</Text>
+      <TextType>Floating</TextType>
+      <Next>secure</Next>
+      <NextInteractor>Lifeboat</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>examine_rope</Name>
+      <Type>Derivative</Type>
+      <Text>Can’t get enough rope - ahem - I mean, line on a ship.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_mop_handle</Name>
+      <Type>Derivative</Type>
+      <Text>A broken mop handle.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_hook_handle</Name>
+      <Type>Derivative</Type>
+      <Text>Let's combine them!</Text>
+      <TextType>Floating</TextType>
+      <TakeItems>Mop_Handle|Hook</TakeItems>
+      <GiveItems>Pole_Hook</GiveItems>
+    </Interaction>
+    <Interaction>
+      <Name>examine_chalk</Name>
+      <Type>Derivative</Type>
+      <NONETags>hasChalk</NONETags>
+      <Text>Chalk! Cool!</Text>
+      <TextType>Floating</TextType>
+      <Next>take</Next>
+      <NextInteractor>Chalk</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>examine_chalk</Name>
+      <Type>Derivative</Type>
+      <ALLTags>hasChalk</ALLTags>
+      <Text>It's a piece of chalk.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_pole_hook</Name>
+      <Type>Derivative</Type>
+      <Text>Long and grabby.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_poster</Name>
+      <Type>Derivative</Type>
+      <Text>Propaganda for the first mate.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>posters_given</Name>
+      <Type>Derivative</Type>
+      <ALLTags>postersGiven</ALLTags>
+      <Text>That looks like all of them. Better let Bart know.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>talk_rigger</Name>
+      <Type>Derivative</Type>
+      <Text>She can't hear me.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_again</Name>
+      <Type>Derivative</Type>
+      <Text>They already got one.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
   <!-- EndRegion -->
   <!-- Region DefaultCannotUse-->
 		<Interaction>

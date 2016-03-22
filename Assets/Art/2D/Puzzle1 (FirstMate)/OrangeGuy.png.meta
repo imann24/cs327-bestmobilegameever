@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 7db45a74fe1bd404fab2528a48ae7d9a
-timeCreated: 1457468484
+timeCreated: 1457650958
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: OrangeGuy
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +39,68 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: OrangeGuy
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 334
+        width: 198
+        height: 690
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -78}
+        - {x: 18, y: -345}
+        - {x: 89, y: -345}
+        - {x: 89, y: -327}
+        - {x: 82, y: -316}
+        - {x: 70, y: -313}
+        - {x: 76, y: -110}
+        - {x: 89, y: -110}
+        - {x: 95, y: -107}
+        - {x: 99, y: -102}
+        - {x: 99, y: 130}
+        - {x: 98, y: 135}
+        - {x: 80, y: 149}
+        - {x: 43, y: 161}
+        - {x: 70, y: 189}
+        - {x: 81, y: 235}
+        - {x: 75, y: 265}
+        - {x: 38, y: 310}
+        - {x: 3, y: 323}
+        - {x: 0, y: 341}
+        - {x: -1, y: 345}
+        - {x: -17, y: 345}
+        - {x: -47, y: 338}
+        - {x: -56, y: 300}
+        - {x: -92, y: 264}
+        - {x: -88, y: 193}
+        - {x: -59, y: 162}
+        - {x: -81, y: 149}
+        - {x: -99, y: 135}
+        - {x: -99, y: -102}
+        - {x: -92, y: -109}
+        - {x: -86, y: -111}
+        - {x: -75, y: -111}
+        - {x: -69, y: -106}
+        - {x: -69, y: -345}
+        - {x: 5, y: -345}
+        - {x: 2, y: -320}
+        - {x: -8, y: -315}
+        - {x: -18, y: -313}
     outline: []
   spritePackingTag: 
   userData: 

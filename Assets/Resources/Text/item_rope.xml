@@ -8,14 +8,8 @@
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
-      <Name>take</Name>
-      <Type>Derivative</Type>
-      <GiveItems>Rope</GiveItems>
-      <SpecialActions>Destroy</SpecialActions>
-    </Interaction>
-    <Interaction>
       <Name>DefaultCannotUse</Name>
-      <Type>UseItem</Type>
+      <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
