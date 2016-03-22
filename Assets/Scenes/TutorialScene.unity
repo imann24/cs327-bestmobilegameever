@@ -1052,7 +1052,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf791becdd972674387bfb92da6eac53, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
 --- !u!1001 &303856687
 Prefab:
   m_ObjectHideFlags: 0
@@ -1371,7 +1370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   InteractionPath: worldobject_item_bottle
 =======
   InteractionPath: worldobject_bottle
@@ -7308,7 +7306,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2098981821}
-<<<<<<< HEAD
 --- !u!114 &2123311285 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11438484, guid: ef01b2d5f31556946a4d4aa8fa6af69b,
