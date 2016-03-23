@@ -2,31 +2,31 @@
 <InteractionList>
   <Interactions>
     <Interaction>
-		<Name>examine</Name>
-		<Type>Click</Type>
-		<Next>examine_hook_dirty</Next>
-		<NextInteractor>Sadie</NextInteractor>
-    </Interaction>
-	<Interaction>
-		<Name>get</Name>
-		<Type>Derivative</Type>
-		<GiveItems>Hook_Dirty</GiveItems>
-		<SpecialActions>Destroy</SpecialActions>
-		<Next>tutorial_items</Next>
-		<NextInteractor>Cutscene_Handler</NextInteractor>
-	</Interaction>
-    <Interaction>
-		<Name>use_rag</Name>
-		<Type>UseItem</Type>
-		<ALLTags>holdingRag</ALLTags>
-		<Next>use_rag_hook</Next>
-		<NextInteractor>Sadie</NextInteractor>
+		  <Name>examine</Name>
+		  <Type>Click</Type>
+		  <Next>examine_hook_dirty</Next>
+		  <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
-		<Name>DefaultCannotUse</Name>
-		<Type>Derivative</Type>
-		<Next>DefaultCannotUse</Next>
-		<NextInteractor>Sadie</NextInteractor>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <NONETags>hasHookDirty</NONETags>
+      <ALLTags>tutorialTappedHook</ALLTags>
+      <GiveItems>Hook_Dirty</GiveItems>
+      <SpecialActions>Destroy</SpecialActions>
+    </Interaction>
+    <Interaction>
+		  <Name>use_rag</Name>
+		  <Type>UseItem</Type>
+		  <ALLTags>holdingRag</ALLTags>
+		  <Next>use_rag_hook</Next>
+		  <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+		  <Name>DefaultCannotUse</Name>
+		  <Type>Derivative</Type>
+		  <Next>DefaultCannotUse</Next>
+		  <NextInteractor>Sadie</NextInteractor>
     </Interaction>
   </Interactions>
 </InteractionList>

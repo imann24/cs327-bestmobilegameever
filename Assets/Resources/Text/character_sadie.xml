@@ -7,7 +7,7 @@
 			<Type>Derivative</Type>
 			<Text>Where is it, again...?</Text>
 			<TextType>Floating</TextType>
-			<Next>tutorial_04_sound</Next>
+			<Next>tutorial_03_sound</Next>
 			<NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 		<Interaction>
@@ -61,14 +61,24 @@
 			<Text>I really need to clean this hook hand first.</Text>
 			<TextType>Floating</TextType>
 		</Interaction>
+    <Interaction>
+      <Name>examine_hook_dirty</Name>
+      <Type>Derivative</Type>
+      <NONETags>hasHookDirty|tutorialTappedHook</NONETags>
+      <GiveTags>tutorialTappedHook</GiveTags>
+      <SpecialActions>ComeHere</SpecialActions>
+      <NextInteractor>Cutscene_Handler</NextInteractor>
+      <Next>tutorial_04_sound</Next>
+    </Interaction>
 		<Interaction>
 		  <Name>examine_hook_dirty</Name>
 		  <Type>Derivative</Type>
 		  <NONETags>hasHookDirty</NONETags>
+      <ALLTags>tutorialTappedHook</ALLTags>
 		  <Text>I really shouldn't have left this on the floor...</Text>
 		  <TextType>Floating</TextType>
-		  <NextInteractor>Hook_Dirty</NextInteractor>
-		  <Next>get</Next>
+      <Next>tutorial_items</Next>
+      <NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 		<Interaction>
 		  <Name>examine_hook_dirty</Name>
