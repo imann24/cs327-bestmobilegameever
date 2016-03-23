@@ -115,11 +115,13 @@ public void CreateObject(GameObject obj, Vector2 pos) {
 				//TODO: Implement Joel's movement system
 				//GameManager.Instance.playerCharacter.GetComponent<Movement> ().MoveTo (transform.position);
 				break;
-            case "FadeIn":
-                ScreenFader.FadeIn();
+			case "FadeIn":
+				Fader.FadeOut ();
+				//ScreenFader.FadeIn();
                 break;
-            case "FadeOut":
-                ScreenFader.FadeOut();
+			case "FadeOut":
+				Fader.FadeIn ();
+                //ScreenFader.FadeOut();
                 break;
 			default:
                 if (actionScripts.ContainsKey(action)) { actionScripts[action].DoExtendedAction(); }

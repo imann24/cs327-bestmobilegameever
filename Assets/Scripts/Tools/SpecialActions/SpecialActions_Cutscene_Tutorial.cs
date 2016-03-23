@@ -74,10 +74,12 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 
     IEnumerator npcExit(GameObject npc) {
         GameManager.UIManager.LockScreen();
-        ScreenFader.FadeOut(1f);
+		Fader.FadeIn (1f);
+		//ScreenFader.FadeOut(1f);
         yield return new WaitForSeconds(1f);
         Destroy(npc);
-        ScreenFader.FadeIn(1f);
+		Fader.FadeOut (1f);
+        //ScreenFader.FadeIn(1f);
         yield return new WaitForSeconds(1f);
         GameManager.UIManager.UnlockScreen();
         NextInteraction(next);
@@ -85,11 +87,13 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     
     IEnumerator NextScene() {
         GameManager.UIManager.LockScreen();
-        ScreenFader.FadeOut();
+		Fader.FadeIn ();
+        //ScreenFader.FadeOut();
         GameManager.InventoryManager.Hide();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Scenes/WorldScene");
-        ScreenFader.FadeIn();
+		Fader.FadeOut ();
+        //ScreenFader.FadeIn();
         yield return new WaitForSeconds(1f);
         Quartermaster = GameObject.Find("Quartermaster");
         Shipmaster = GameObject.Find("Shipmaster");
@@ -100,11 +104,13 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 
     IEnumerator TestSceneChange() {
         GameManager.UIManager.LockScreen();
-        ScreenFader.FadeOut();
+		Fader.FadeIn ();
+        //ScreenFader.FadeOut();
         GameManager.InventoryManager.Hide();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Scenes/Development/SiennaTestOld");
-        ScreenFader.FadeIn();
+        //ScreenFader.FadeIn();
+		Fader.FadeOut();
         yield return new WaitForSeconds(1f);
         GameManager.UIManager.UnlockScreen();
     }

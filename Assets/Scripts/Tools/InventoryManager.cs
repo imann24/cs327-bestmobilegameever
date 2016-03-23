@@ -70,6 +70,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		GameManager.InventoryManager.ReturnSelected ();
 		InventoryItem itemToTake = GetComponentsInChildren<InventoryItem> ().FirstOrDefault (i => i.gameObject.name == item);
 		if (itemToTake != null) {
+			GameManager.TakeTag (itemToTake.GetComponent<InventoryItem> ().HasTag);
 			Destroy (itemToTake.gameObject);
 			return true;
 		} else {

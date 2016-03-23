@@ -15,12 +15,12 @@ public class Fader : MonoBehaviour {
 		}
 	}
 		
-	public static void FadeIn( float time){
+	public static void FadeIn( float time = 2f){
 		Screen.CrossFadeAlpha (1f, time, false);
 		Screen.GetComponent<Fader>().Invoke ("Enable", time);
 	}
 
-	public static void FadeOut( float time){
+	public static void FadeOut( float time = 2f){
 		Screen.CrossFadeAlpha (0f, time, false);
 		Screen.GetComponent<Fader>().Invoke("Disable", time);
 	}
