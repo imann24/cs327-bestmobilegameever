@@ -76,7 +76,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &108196
 GameObject:
   m_ObjectHideFlags: 1
@@ -1306,6 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765871281ee79c14c9d0668b66aab972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanInteract: 1
   tapToContinue: {fileID: 124972}
 --- !u!114 &11415006
 MonoBehaviour:
@@ -5479,6 +5480,10 @@ Prefab:
       propertyPath: tapToContinue
       value: 
       objectReference: {fileID: 124972}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 115826}

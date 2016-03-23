@@ -12,8 +12,9 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         else {
             _instance = this;
             DontDestroyOnLoad(gameObject);
-            ScreenFader.FadeOut(0);
-            if (SceneManager.GetActiveScene().name == "TutorialScene") {
+            //ScreenFader.FadeOut(0);
+			ScreenFader.FadeOut(2);
+			if (SceneManager.GetActiveScene().name == "TutorialScene" || SceneManager.GetActiveScene().name == "TutorialSceneWithNavMesh") {
                 EventController.Event("PlayerYawn");
                 next = "tutorial_start";
                 Invoke("doNext", 1f);
@@ -102,7 +103,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         ScreenFader.FadeOut();
         GameManager.InventoryManager.Hide();
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Scenes/Development/SiennaTestOld");
+        SceneManager.LoadScene("Scenes/WorldScene2");
         ScreenFader.FadeIn();
         yield return new WaitForSeconds(1f);
         GameManager.UIManager.UnlockScreen();

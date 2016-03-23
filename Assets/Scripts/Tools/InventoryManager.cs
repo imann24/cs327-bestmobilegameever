@@ -26,6 +26,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	/// </summary>
 	/// <returns><c>true</c>, if item was given, <c>false</c> otherwise.</returns>
 	public bool GiveItem(string item){
+		GameManager.InventoryManager.gameObject.SetActive (true);
 		if (FirstEmptySlot) {
 			Show ();
 			GameObject itemToGive = InventoryItem.Create (item);

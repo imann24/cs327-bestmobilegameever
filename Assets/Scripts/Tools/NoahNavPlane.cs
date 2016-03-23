@@ -7,7 +7,8 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 	NavMeshAgent Player;
 	// Use this for initialization
 	void Start () {
-		Player = GameObject.Find ("Sadie").GetComponent<NavMeshAgent>();
+		Player = GameManager.PlayerCharacter.GetComponent<NavMeshAgent>();
+		//Player = GameObject.Find ("Sadie").GetComponent<NavMeshAgent>();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +22,9 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 
 	public void OnPointerClick (PointerEventData eventData)
 	{
+		#if DEBUG
+		Debug.Log("Clicked on Nav Floor.");
+		#endif
 		NavMeshPath path = new NavMeshPath ();
 		Vector3 destination = eventData.pointerCurrentRaycast.worldPosition;
 		Player.GetComponent<NavMeshAgent> ().CalculatePath (destination, path);
