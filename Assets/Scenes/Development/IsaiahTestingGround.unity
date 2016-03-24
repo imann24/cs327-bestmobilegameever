@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAudioListener: 0
+  Volume: 1
   ShortestSweetenerPlayFrequenecy: 10
   LongestSweetenerPlayFrequenecy: 25
 --- !u!4 &977978628
@@ -467,6 +468,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1902429642}
   - 114: {fileID: 1902429641}
+  - 114: {fileID: 1902429643}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -486,6 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueController: {fileID: 1757560721}
+  CreditsController: {fileID: 1902429643}
 --- !u!4 &1902429642
 Transform:
   m_ObjectHideFlags: 0
@@ -498,6 +501,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1902429643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1902429640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfaef462e4a624e478075eb37e1791b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreditsFilePath: Text/Credits
 --- !u!1 &1963919185
 GameObject:
   m_ObjectHideFlags: 0
