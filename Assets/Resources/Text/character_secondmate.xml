@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+  <!-- Region Before Securing Lifeboat -->
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <NONETags>lifeboatSecured</NONETags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SecondMatePortrait</Image2>
+      <Text>Don't speak to me, peasant!</Text>
+      <Next>lifeboat</Next>
+    </Interaction>
+    <Interaction>
+      <Name>use_poster</Name>
+      <Type>UseItem</Type>
+      <NONETags>lifeboatSecured</NONETags>
+      <ALLTags>holdingPoster</ALLTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SecondMatePortrait</Image2>
+      <Text>Don't speak to me, peasant!</Text>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>lifeboat</Next>
+    </Interaction>
+    <Interaction>
+      <Name>lifeboat</Name>
+      <Type>Derivative</Type>
+      <ALLTags>hasPoster</ALLTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SecondMatePortrait</Image2>
+      <Text>I must secure this lifeboat!</Text>
+    </Interaction>
+    <Interaction>
+      <Name>use_rope</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingRope</ALLTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SecondMatePortrait</Image2>
+      <Text>What do you expect me to do with that?</Text>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+  <!-- EndRegion -->
+  <!-- Region After Securing Lifeboat -->
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <ALLTags>lifeboatSecured</ALLTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SecondMatePortrait</Image2>
+      <Text>You secured it? Good job, peasant. You have earned my approval.</Text>
+      <Next>choice</Next>
+    </Interaction>
+    <Interaction>
+      <Name>choice</Name>
+      <Type>Derivative</Type>
+      <TextType>Monologue</TextType>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SecondMatePortrait</Image2>
+      <Text>Must you continue to waste my time?</Text>
+    </Interaction>
+    <!-- Region Firstmate's pretty cool, huh? -->
+    <Interaction>
+      <Name>choice</Name>
+      <Type>Derivative</Type>
+      <Text>Firstmate's pretty cool, huh?</Text>
+      <Next>choice_10</Next>
+    </Interaction>
+    <Interaction>
+      <Name>choice_10</Name>
+      <Type>Derivative</Type>
+      <Image>SadiePortrait</Image>
+      <Image2>SecondMatePortraitFaded</Image2>
+      <Text>I see you worship Bart.</Text>
+      <Next>choice_11</Next>
+    </Interaction>
+    <Interaction>
+      <Name>choice_11</Name>
+      <Type>Derivative</Type>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SecondMatePortrait</Image2>
+      <Text>Bartholomieu! He's the best.</Text>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region Have a poster -->
+    <Interaction>
+      <Name>choice</Name>
+      <Type>Derivative</Type>
+      <NONETags>secondmatePosterGiven</NONETags>
+      <Text>Have a poster.</Text>
+      <Next>choice_20</Next>
+    </Interaction>
+    <Interaction>
+      <Name>choice_20</Name>
+      <Type>Derivative</Type>
+      <Image>SadiePortrait</Image>
+      <Image2>SecondMatePortraitFaded</Image2>
+      <Text>Here, have a poster.</Text>
+      <Next>choice_21</Next>
+    </Interaction>
+    <Interaction>
+      <Name>choice_21</Name>
+      <Type>Derivative</Type>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SecondMatePortrait</Image2>
+      <Text>I suppose it would be ungracious to refuse after you helped me out. Fine! Hand over whatever drivel you have written.</Text>
+    </Interaction>
+    <!-- EndRegion -->
+    <Interaction>
+      <Name>choice</Name>
+      <Type>Derivative</Type>
+      <Text>Nevermind.</Text>
+    </Interaction>
+    <!-- Region Give Poster -->
+    <Interaction>
+      <Name>use_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster|lifeboatSecured</ALLTags>
+      <NONETags>secondmatePosterGiven</NONETags>
+      <GiveTags>secondmatePosterGiven</GiveTags>
+      <Image>SadiePortraitFaded</Image>
+      <Image2>SecondMatePortrait</Image2>
+      <Text>It is from the great Bartholomieu! Wonderful!</Text>
+      <Next>give_poster_success</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_success</Name>
+      <Type>Derivative</Type>
+      <Next>decrease</Next>
+      <NextInteractor>Poster</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>use_poster</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingPoster|secondmatePosterGiven</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_poster_again</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <!-- EndRegion -->
+  <!-- EndRegion -->
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotGive</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+	</Interactions>
+</InteractionList>

@@ -29,6 +29,18 @@ public static class SceneController {
 	public static void LoadTutorialScene () {
 		LoadScene(PSScene.TutorialScene);
 	}
+		
+	public static void LoadMovementDemoScene () {
+		LoadScene(PSScene.MovementDemo);
+	}
+
+	public static void LoadDevelopSceneListScene () {
+		LoadScene(PSScene.DevelopmentSceneList);
+	}
+
+	public static void LoadCharacterSpritesDemo () {
+		LoadScene(PSScene.CharacterSpritesDemo);
+	}
 
 	// Uses an enum to load a scene
 	// For this to work: build settings must correspond to the PSScene Enum order

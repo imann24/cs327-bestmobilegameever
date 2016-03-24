@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
 	GameObject tapToContinue = null;
 
+	public GameObject screenFader;
+
     void Awake() {
         if (_instance == null) {
             _instance = this;

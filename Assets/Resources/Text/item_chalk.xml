@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <Next>examine_chalk</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>take</Name>
+      <Type>Derivative</Type>
+      <GiveItems>Chalk</GiveItems>
+      <SpecialActions>Destroy</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotUse</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+	</Interactions>
+</InteractionList>

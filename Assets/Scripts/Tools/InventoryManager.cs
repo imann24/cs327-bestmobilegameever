@@ -26,10 +26,12 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	/// </summary>
 	/// <returns><c>true</c>, if item was given, <c>false</c> otherwise.</returns>
 	public bool GiveItem(string item){
+		GameManager.InventoryManager.gameObject.SetActive (true);
 		if (FirstEmptySlot) {
 			Show ();
 			GameObject itemToGive = InventoryItem.Create (item);
 			if (itemToGive) {
+				this.gameObject.SetActive (true);
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
 				return true;
 			} else {
@@ -68,6 +70,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		GameManager.InventoryManager.ReturnSelected ();
 		InventoryItem itemToTake = GetComponentsInChildren<InventoryItem> ().FirstOrDefault (i => i.gameObject.name == item);
 		if (itemToTake != null) {
+			GameManager.TakeTag (itemToTake.GetComponent<InventoryItem> ().HasTag);
 			Destroy (itemToTake.gameObject);
 			return true;
 		} else {

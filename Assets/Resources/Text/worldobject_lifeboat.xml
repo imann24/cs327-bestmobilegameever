@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <Next>examine_lifeboat</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>use_rope</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingRope</ALLTags>
+      <Next>use_rope_lifeboat</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>secure</Name>
+      <Type>Derivative</Type>
+      <TakeItems>Rope</TakeItems>
+      <GiveTags>lifeboatSecured</GiveTags>
+      <SpecialActions>ChangeToSecured</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotUse</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+	</Interactions>
+</InteractionList>

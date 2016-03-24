@@ -327,7 +327,10 @@ public class InteractionManager : MonoBehaviour {
 				Interaction defaultError = GameManager.InventoryManager.Selected.GetComponent<Interactable> ().Interactions.Find (i => i.iName == "DefaultCannotUse");
 				if (defaultError != null) {
 					HandleInteraction (selected.GetComponent<Interactable> (), defaultError);
+				} else if (selected.GetComponent<Interactable> ().Debugging) {
+					Debug.Log (selected.name + " doesn't have a 'DefaultCannotUse' interaction in its XML.");
 				}
+
 			}
 		} else if(target.Debugging) {Debug.Log("There is no selected item to use on " + target.gameObject.name);}
 	}
