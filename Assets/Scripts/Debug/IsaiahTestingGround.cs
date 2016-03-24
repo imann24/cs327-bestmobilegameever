@@ -11,9 +11,23 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 	public ConversationDisplayController DialogueController;
 
+	public CreditsController CreditsController;
+
 	// Use this for initialization
 	void Start () {
-		testConversationDisplay();
+		testCreditObjects();
+	}
+
+	// Objects to test credit generation
+	void testCreditObjects () {
+		CreditGroup credits = new CreditGroup("Programmers", "Arnold", "Tony Stark");
+		Debug.Log(credits);
+
+		CreditGroup[] allCredits = CreditsController.GenerateCredits();
+
+		for (int i = 0; i < allCredits.Length; i++) {
+			Debug.Log(allCredits[i]);
+		}
 	}
 
 	// Used to test the visual conversation class
