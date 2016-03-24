@@ -15,6 +15,11 @@ public class CreditGroup {
 		this.Credits = generateCredits(credits);
 	}
 
+	public CreditGroup (params string[] creditsStartingWithTitle) {
+		this.Title = creditsStartingWithTitle[0];
+		this.Credits = generateCredits(ArrayUtil.RemoveFirst(creditsStartingWithTitle));
+	}
+
 	Credit[] generateCredits (params string[] creditNames) {
 		Credit[] credits = new Credit[creditNames.Length];
 
@@ -23,6 +28,13 @@ public class CreditGroup {
 		}
 
 		return credits;
+	}
+
+	public override string ToString () {
+
+		return "[CreditGroup] " + Title + ":\n" +
+			ArrayUtil.ToString(Credits);
+
 	}
 		
 }
