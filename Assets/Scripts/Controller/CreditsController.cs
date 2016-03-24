@@ -2,7 +2,17 @@
 using System.Collections;
 
 public class CreditsController : MonoBehaviour {
+
 	public string CreditsFilePath = "Text/Credits";
+
+	public Transform CreditsRect;
+	public GameObject CreditGroupPrefab;
+
+	void Start () {
+		SetCredits(
+			GenerateCredits()
+		);
+	}
 
 	public void BackToOptionsMenu () {
         SceneController.LoadMainMenu();
@@ -23,4 +33,32 @@ public class CreditsController : MonoBehaviour {
 
 		return allCredits;
 	}
+
+
+	public void SetCredits (CreditGroup[] CreditGroups) {
+		ClearCredits();
+
+		foreach (CreditGroup creditGroup in CreditGroups) {
+			AddCreditGroup(creditGroup);
+		}
+	}
+
+	public void ClearCredits () {
+		for (int i = 0; i < CreditsRect.childCount; i++) {
+			Destroy(CreditsRect.GetChild(i));
+		}
+	}
+		
+	public void AddCreditGroup (CreditGroup creditGroup) {
+		Transform visualCreditGroup = ((GameObject) Instantiate(CreditGroupPrefab)).transform;
+
+		VisualCreditGroup visualCreditGroupController = visualCreditGroup.GetComponent<VisualCreditGroup>();
+
+		visualCreditGroup.SetParent(CreditsRect);
+
+		visualCreditGroup.localScale = new Vector3(1, 1, 1);
+
+		visualCreditGroupController.Set(creditGroup);
+	}
+
 }

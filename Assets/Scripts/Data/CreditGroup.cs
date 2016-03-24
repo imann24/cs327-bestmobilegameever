@@ -30,6 +30,19 @@ public class CreditGroup {
 		return credits;
 	}
 
+	public string GetAllCredits () {
+		string allCredits = "";
+
+		for (int i = 0; i < Credits.Length; i++) {
+			allCredits += Credits[i].Name;
+
+			if (i < Credits.Length - 1) {
+				allCredits += "\n";
+			}
+		}
+
+		return allCredits;
+	}
 	public override string ToString () {
 
 		return "[CreditGroup] " + Title + ":\n" +
