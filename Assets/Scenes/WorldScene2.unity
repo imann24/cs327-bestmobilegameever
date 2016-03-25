@@ -1583,7 +1583,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468338, guid: 6f194b15fc0458f43b024de5be739df0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.51
+      value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 468338, guid: 6f194b15fc0458f43b024de5be739df0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4771,7 +4771,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6e34b017b22071149be9e3a9ac053b72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5785,7 +5785,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 488144, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.68
+      value: -2.96
       objectReference: {fileID: 0}
     - target: {fileID: 488144, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5810,6 +5810,30 @@ Prefab:
     - target: {fileID: 488144, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546362, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
+      propertyPath: m_Size.x
+      value: 0.99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546362, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
+      propertyPath: m_Size.z
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546362, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
+      propertyPath: m_Center.x
+      value: 0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 20841320, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
+      propertyPath: m_Extents.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333528, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546362, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 508349a10fe5fbf48b4793279b80b5be, type: 2}
