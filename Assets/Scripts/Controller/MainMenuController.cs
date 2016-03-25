@@ -18,8 +18,12 @@ public class MainMenuController : MonoBehaviour {
 
 	public void LaunchGame () {
 
-		SceneController.LoadTutorialScene();
+		SceneController.LoadMainGame();
 
+	}
+
+	public void LaunchTutorial () {
+		SceneController.LoadTutorialScene();
 	}
 		
 	public void LoadOptionsMenu () {
@@ -32,6 +36,10 @@ public class MainMenuController : MonoBehaviour {
 
 		SceneController.LoadDevelopSceneListScene();
 
+	}
+
+	public void LoadCreditsMenu () {
+		SceneController.LoadCredits();
 	}
 
 }
