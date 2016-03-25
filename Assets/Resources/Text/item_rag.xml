@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <InteractionList>
 	<Interactions>
+    <Interaction>
+      <Name>fall</Name>
+      <Type>Derivative</Type>
+      <SpecialActions>RagFall</SpecialActions>
+      <Next>throw_orange</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
 		<Interaction>
 			<Name>examine</Name>
 			<Type>Click</Type>
