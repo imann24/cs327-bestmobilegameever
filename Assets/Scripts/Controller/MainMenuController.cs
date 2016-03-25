@@ -9,6 +9,9 @@ using System.Collections;
 public class MainMenuController : MonoBehaviour {
 	static bool FIRST_LOAD = true;
 
+	public GameObject NewGameButton;
+	public GameObject NewGameConfirmationPanel;
+
 	void Start () {
 		if (FIRST_LOAD) {
 			FIRST_LOAD = false;
@@ -37,6 +40,24 @@ public class MainMenuController : MonoBehaviour {
 		SceneController.LoadDevelopSceneListScene();
 
 	}
+
+	public void ShowConfirmationPanel(){
+		NewGameConfirmationPanel.SetActive (true);
+	}
+
+	public void HideConfirmationPanel(){
+
+		NewGameConfirmationPanel.SetActive (false);
+	}
+
+	public void StartNewGame(){
+
+		new SaveLoad().ClearSave(); 
+
+		LaunchGame();
+
+	}
+
 
 	public void LoadCreditsMenu () {
 		SceneController.LoadCredits();
