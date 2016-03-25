@@ -27,6 +27,9 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
                 GameManager.InventoryManager.Hide();
                 NextInteraction("tutorial_cutscene_start");
             }
+            else if (SceneManager.GetActiveScene().name == "WorldScene2") {
+                GameManager.GiveTag("firstmateIntro");
+            }
             else { Debug.LogWarning("Scene not recognized by Cutscene_Handler"); }
         }
     }
