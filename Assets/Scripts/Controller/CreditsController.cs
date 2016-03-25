@@ -8,10 +8,10 @@ public class CreditsController : MonoBehaviour {
 	public Transform CreditsRect;
 	public GameObject CreditGroupPrefab;
 
+	bool _creditsAreAutoMoving = true;
+
 	void Start () {
-		SetCredits(
-			GenerateCredits()
-		);
+		init();	
 	}
 
 	public void BackToOptionsMenu () {
@@ -61,4 +61,21 @@ public class CreditsController : MonoBehaviour {
 		visualCreditGroupController.Set(creditGroup);
 	}
 
+	IEnumerator LerpCredtsLeft () {
+		while (_creditsAreAutoMoving) {
+
+			CreditsRect.position += Vector3.left * Time.deltaTime;
+
+			yield return new WaitForEndOfFrame();
+		}
+	}
+
+	void init () {
+
+		SetCredits(
+			GenerateCredits()
+		);
+
+		StartCoroutine(LerpCredtsLeft());
+	}
 }
