@@ -166,7 +166,7 @@
       <Type>Derivative</Type>
       <Image>SadiePortraitFaded</Image>
       <Image2>SecondMatePortrait</Image2>
-      <Text>Bartholomew? Aye, I do - as should you! He has the untameable spirit of a pirate and the dashing beauty of a captain.All lesser creatures are blessed to look upon him!</Text>
+      <Text>All lesser creatures are blessed to look upon him!</Text>
       <Next>choice_bart_03</Next>
     </Interaction>
     <Interaction>
@@ -205,7 +205,7 @@
     <Interaction>
       <Name>use_poster</Name>
       <Type>UseItem</Type>
-      <NONETags>lifeboatSecured</NONETags>
+      <NONETags>lifeboatSecured|secondmatePosterGiven</NONETags>
       <ALLTags>holdingPoster</ALLTags>
       <Image>SadiePortrait</Image>
       <Image2>SecondMatePortraitFaded</Image2>
@@ -217,6 +217,7 @@
       <Name>use_poster</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingPoster|lifeboatSecured</ALLTags>
+      <NONETags>secondmatePosterGiven</NONETags>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>choice_poster_00</Next>
     </Interaction>
@@ -242,6 +243,7 @@
       <Type>Derivative</Type>
       <Image>SadiePortraitFaded</Image>
       <Image2>SecondMatePortrait</Image2>
+      <GiveTags>secondmateTalked</GiveTags>
       <Text>Avast ye! Can’t you see I’m working?</Text>
       <Next>choice_poster_11</Next>
     </Interaction>
@@ -291,6 +293,7 @@
       <Image>SadiePortraitFaded</Image>
       <Image2>SecondMatePortrait</Image2>
       <Text>It’s from Bartholomew? Why didn’t you say something!? Give me that!</Text>
+      <GiveTags>secondmatePosterGiven</GiveTags>
       <Next>decrease</Next>
       <NextInteractor>Poster</NextInteractor>
     </Interaction>
@@ -304,7 +307,7 @@
     </Interaction>
     <!-- EndRegion -->
     <Interaction>
-      <Name>choice</Name>
+      <Name>choice_first</Name>
       <Type>Derivative</Type>
       <Text>(Leave)</Text>
       <Next>choice_leave</Next>
@@ -312,9 +315,15 @@
     <Interaction>
       <Name>choice</Name>
       <Type>Derivative</Type>
+      <Text>(Leave)</Text>
+      <Next>choice_leave</Next>
+    </Interaction>
+    <Interaction>
+      <Name>choice_leave</Name>
+      <Type>Derivative</Type>
       <Image>SadiePortrait</Image>
       <Image2>SecondMatePortraitFaded</Image2>
-      <Next>Pfft. I didn’t want to talk to you either.</Next>
+      <Text>Pfft. I didn’t want to talk to you either.</Text>
     </Interaction>
   <!-- EndRegion -->
     <Interaction>

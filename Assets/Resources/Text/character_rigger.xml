@@ -80,7 +80,7 @@
       <Type>UseItem</Type>
       <ALLTags>holdingOrange</ALLTags>
       <NONETags>riggerHit</NONETags>
-      <GiveTags>riggerHit</GiveTags>
+      <GiveTags>riggerHit|riggerTalked</GiveTags>
       <TakeItems>Orange</TakeItems>
       <Next>rigger_hit_00</Next>
     </Interaction>
