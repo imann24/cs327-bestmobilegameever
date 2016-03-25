@@ -36,7 +36,7 @@ public class SpecialActions : MonoBehaviour {
     void Update() {
         if (isMoving) {
             if (transform.position != MoveToPosition) {
-                Debug.Log("I'm moving! (" + gameObject + ")");
+                //Debug.Log("I'm moving! (" + gameObject + ")");
                 float step = MoveSpeed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, MoveToPosition, step);
             }
