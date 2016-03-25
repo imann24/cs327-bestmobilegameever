@@ -21,12 +21,12 @@ public class MainMenuController : MonoBehaviour {
 		SceneController.LoadTutorialScene();
 
 	}
-
+		
 	public void LoadOptionsMenu () {
 
 		SceneController.LoadOptionsMenu();
 
-	}
+	} 
 
 	public void LoadDevelopScenesList () {
 
