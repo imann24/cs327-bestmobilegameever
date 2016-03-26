@@ -48,9 +48,7 @@ public class AudioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		PlayMusic();
-
 	}
 
 	void OnDestroy () {
@@ -173,9 +171,7 @@ public class AudioController : MonoBehaviour {
 			if (isAudioListener) {
 				AddAudioListener();
 			}
-
-			// TODO: Enable after tracks have been delivered
-			// initCyclingAudio();
+			initCyclingAudio();
 	
 		}
 	}
@@ -316,7 +312,7 @@ public class AudioController : MonoBehaviour {
 	}
 
 	// Used to loop through lists of tracks in pseudo-random order
-	void startTrackCycling () {
+	public void StartTrackCycling () {
 		_sweetenerCoroutine = cycleTracksFrequenecyRange(
 			_sweeteners,
 			ShortestSweetenerPlayFrequenecy,
@@ -333,11 +329,25 @@ public class AudioController : MonoBehaviour {
 		);
 	}
 
+	public void StopTrackCycling () {
+		StopCoroutine(_sweetenerCoroutine);
+		StopCoroutine(_swellCoroutine);
+	}
+
 	void initCyclingAudio () {
-		//TODO: Init Queue's with sound files once they're delivered
 		_sweeteners = new RandomizedQueue<AudioFile>();
 		_swells = new RandomizedQueue<AudioFile>();
-		startTrackCycling();
+		// Init Queue's with sound files
+		List<AudioFile> list = new List<AudioFile>();
+		// Get all deck music
+		playEvents.TryGetValue ("onesoundtrackevery100to200seconds",out list);
+		foreach (AudioFile track in list) {
+			_swells.Enqueue (track);
+		}
+		playEvents.TryGetValue ("every8to20seconds",out list);
+		foreach (AudioFile track in list) {
+			_sweeteners.Enqueue (track);
+		}
 	}
 
 	// Plays audio files back to back
@@ -361,7 +371,6 @@ public class AudioController : MonoBehaviour {
 	IEnumerator cycleTracksFrequenecyRange (RandomizedQueue<AudioFile> files, float minFrequency, float maxFrequency) {
 		while (_coroutinesActive) {
 			Play(files.Cycle());
-
 			yield return new WaitForSeconds(
 				UnityEngine.Random.Range(
 					minFrequency, 
@@ -370,7 +379,6 @@ public class AudioController : MonoBehaviour {
 			);
 		}
 	}
-
 
 	// Starts an arbitrary amount of coroutines
 	void startCoroutines (params IEnumerator[] coroutines) {
