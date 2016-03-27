@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 	void Awake (){
 		if(instance){
 			PlayerController.Instance.transform.position = gameObject.transform.position;
+			PlayerController.Instance.transform.localScale = gameObject.transform.localScale;
 			DestroyImmediate(gameObject);
 			return;
 		}

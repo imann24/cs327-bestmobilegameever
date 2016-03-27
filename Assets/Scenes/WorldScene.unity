@@ -358,7 +358,7 @@ MonoBehaviour:
   textPanel: {fileID: 261116613}
   leftImage: {fileID: 27782048}
   rightImage: {fileID: 1292646141}
-  dimBackground: {fileID: 0}
+  dimBackground: {fileID: 1927767952}
 --- !u!222 &39062234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3723,7 +3723,7 @@ Transform:
   - {fileID: 738654469}
   - {fileID: 1731522346}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &1069479524
 GameObject:
   m_ObjectHideFlags: 0
@@ -5229,7 +5229,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1920350664}
     m_Modifications:
     - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5261,23 +5261,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 348.5
       objectReference: {fileID: 0}
     - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 231
       objectReference: {fileID: 0}
     - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 697
       objectReference: {fileID: 0}
     - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 462
       objectReference: {fileID: 0}
     - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_AnchorMin.x
@@ -5297,11 +5297,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 11477344, guid: bf791becdd972674387bfb92da6eac53, type: 2}
       propertyPath: m_Enabled
@@ -5311,9 +5311,27 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11479374, guid: bf791becdd972674387bfb92da6eac53, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bf791becdd972674387bfb92da6eac53, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &1651946798 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22438106, guid: bf791becdd972674387bfb92da6eac53,
+    type: 2}
+  m_PrefabInternal: {fileID: 1651946797}
 --- !u!1 &1662232943
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,7 +5577,7 @@ Transform:
   m_LocalScale: {x: 20, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &1702055416
 GameObject:
   m_ObjectHideFlags: 0
@@ -6664,6 +6682,7 @@ RectTransform:
   - {fileID: 2039373024}
   - {fileID: 804931409}
   - {fileID: 297686061}
+  - {fileID: 1651946798}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
@@ -6685,7 +6704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanInteract: 1
   tapToContinue: {fileID: 297686060}
-  DimBackground: {fileID: 0}
+  DimBackground: {fileID: 1927767952}
 --- !u!114 &1920350666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6744,6 +6763,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1927767952 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 177696, guid: bf791becdd972674387bfb92da6eac53, type: 2}
+  m_PrefabInternal: {fileID: 1651946797}
+--- !u!114 &1927767953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1927767952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f347d47a2796cdc43b271889699c6c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2003776972
 GameObject:
   m_ObjectHideFlags: 0
