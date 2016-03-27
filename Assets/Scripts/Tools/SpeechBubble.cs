@@ -6,6 +6,10 @@ public class SpeechBubble : MonoBehaviour {
     private Interactable interactor;
     private Interaction interaction;
 
+	private WorldController controller;
+
+
+
     public Color speechColor = Color.white;
 	[SerializeField]
 	private GameObject floatingText = null;
@@ -26,6 +30,7 @@ public class SpeechBubble : MonoBehaviour {
 
 		GameObject go = Instantiate (floatingText,new Vector3(0,-12,0), Quaternion.Euler(new Vector3(90,0,0))) as GameObject;
 		go.GetComponent<Text> ().text = interaction.iText;
+
 		go.GetComponent<Text> ().color = speechColor;
         go.GetComponent<FloatingText>().ScrollSpeed = go.GetComponent<FloatingText>().ScrollSpeed / time;
 		go.transform.SetParent (transform);

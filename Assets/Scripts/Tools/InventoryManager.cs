@@ -15,16 +15,20 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	private Sprite HideButton = null;
 	private Vector2 dragAnchor;
 
+	//public GameObject DimBackground;
+
 	public GameObject Selected { get; private set; }
 	public bool PanelShowing { get; private set; }
 
 	private InventorySlot[] slots { get { return GetComponentsInChildren<InventorySlot> (); } }
 	public InventorySlot FirstEmptySlot { get { return slots.FirstOrDefault (slot => slot.Contents == null); } }
 
+
 	/// <summary>
 	/// Gives the item.
 	/// </summary>
 	/// <returns><c>true</c>, if item was given, <c>false</c> otherwise.</returns>
+
 	public bool GiveItem(string item){
 		GameManager.InventoryManager.gameObject.SetActive (true);
 		if (FirstEmptySlot) {
@@ -120,6 +124,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	/// </summary>
 	public void Show(){
 		PanelShowing = true;
+		//DimBackground.SetActive (true); //I fucked with this
 		ToggleButton.GetComponent<Image> ().sprite = HideButton;
 		StartCoroutine ("ChangeHeight", Vector2.zero);
 	}
@@ -129,6 +134,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	/// </summary>
 	public void Hide(){
 		PanelShowing = false;
+		//DimBackground.SetActive (false); //I fucked with this
 		StartCoroutine("ChangeHeight", new Vector2(0,-105));
 		ToggleButton.GetComponent<Image> ().sprite = ShowButton;
 	}
