@@ -14,7 +14,7 @@ public class SpecialActions : MonoBehaviour {
     [HideInInspector]
     public string ActionTag = null, Sound;
     [HideInInspector]
-    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound, UseNavMesh;
+    public bool UseExtended, ChangesSprite, MovesObject, CreatesObject, PlaysSound, UseNavMesh, DestroyOnArrive;
     [HideInInspector]
     public Sprite NewSprite;
     [HideInInspector]
@@ -34,6 +34,9 @@ public class SpecialActions : MonoBehaviour {
     }
 
     void Update() {
+        if (DestroyOnArrive) {
+            if (transform.position == MoveToPosition) Destroy(gameObject);
+        }
         if (isMoving) {
             if (transform.position != MoveToPosition) {
                 //Debug.Log("I'm moving! (" + gameObject + ")");
@@ -67,20 +70,20 @@ public class SpecialActions : MonoBehaviour {
         else if (GetComponent<SpriteRenderer>() != null) { GetComponent<SpriteRenderer>().sprite = sprite; }
         else if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("No valid sprite or image."); }
     }
-    
+
     public void PlaySound(string sound = null) {
         if (sound == null) { EventController.Event(Sound); }
         else { EventController.Event(sound); }
     }
 
-    public void Move(GameObject obj, Vector3 pos, float speed = 2) {
+    public void Move(GameObject obj, Vector3 pos, float speed = 2, bool useNavMesh = false) {
         if (obj == null) { obj = gameObject; }
-        if (UseNavMesh && obj.GetComponent<NoahMove>() != null) { obj.GetComponent<NoahMove>().GoTo(pos); }
+        obj.GetComponent<SpecialActions>().MoveSpeed = speed;
+        obj.GetComponent<SpecialActions>().MoveToPosition = pos;
+        if ((UseNavMesh || useNavMesh) && obj.GetComponent<NoahMove>() != null) { obj.GetComponent<NoahMove>().GoTo(pos); }
         else {
             if (obj.GetComponent<NavMeshAgent>() != null) { obj.GetComponent<NavMeshAgent>().enabled = false; }
             if (obj.GetComponentInChildren<NavMeshObstacle>() != null) { obj.GetComponentInChildren<NavMeshObstacle>().enabled = false; }
-            obj.GetComponent<SpecialActions>().MoveSpeed = speed;
-            obj.GetComponent<SpecialActions>().MoveToPosition = pos;
             obj.GetComponent<SpecialActions>().isMoving = true;
         }
     }

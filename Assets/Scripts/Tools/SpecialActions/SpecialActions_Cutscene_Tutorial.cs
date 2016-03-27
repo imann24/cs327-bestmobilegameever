@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SpecialActions_Cutscene_Tutorial : SpecialActions {
+    public bool Testing = false;
     private GameObject Quartermaster, Shipmaster, Firstmate;
     private static SpecialActions_Cutscene_Tutorial _instance = null;
     private string next;
@@ -12,32 +13,51 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         else {
             _instance = this;
             DontDestroyOnLoad(gameObject);
-            //ScreenFader.FadeOut(0);
 			Fader.FadeOut(2);
 			if (SceneManager.GetActiveScene().name == "TutorialScene" || SceneManager.GetActiveScene().name == "TutorialSceneWithNavMesh") {
                 EventController.Event("PlayerYawn");
                 next = "tutorial_start";
                 Invoke("doNext", 1f);
             }
-            else if (SceneManager.GetActiveScene().name == "WorldScene") {
-                Quartermaster = GameObject.Find("Quartermaster");
-                Shipmaster = GameObject.Find("Shipmaster");
-                Firstmate = GameObject.Find("Firstmate");
-                GameManager.InventoryManager.GiveItem("Hook_Clean");
-                GameManager.InventoryManager.Hide();
-                NextInteraction("tutorial_cutscene_start");
+            else if (SceneManager.GetActiveScene().name == "WorldScene2") {
+                if (Testing) {
+                    Firstmate = GameObject.Find("Firstmate");
+                    Firstmate.transform.position = Firstmate.transform.Find("Exit").position;
+                    Destroy(GameObject.Find("Shipmaster"));
+                    Destroy(GameObject.Find("Quartermaster"));
+                }
+                else {
+                    setupTutorialCutscene();
+                    NextInteraction(next);
+                }
             }
+            /*
             else if (SceneManager.GetActiveScene().name == "WorldScene2") {
                 GameManager.GiveTag("firstmateIntro");
             }
+            */
             else { Debug.LogWarning("Scene not recognized by Cutscene_Handler"); }
         }
     }
 
+    private void setupTutorialCutscene() {
+        Quartermaster = GameObject.Find("Quartermaster");
+        Shipmaster = GameObject.Find("Shipmaster");
+        Firstmate = GameObject.Find("Firstmate");
+        foreach (Transform child in GameObject.Find("WorldObjects").transform) {
+            if (child.gameObject == GameObject.Find("MajorCharacters")) { child.gameObject.SetActive(true); }
+            else { child.gameObject.SetActive(false); }
+        }
+        GameManager.InventoryManager.TakeItem("Hook");
+        GameManager.InventoryManager.GiveItem("Hook");
+        GameManager.InventoryManager.Hide();
+        next = "tutorial_cutscene_start";
+    }
+
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
-            case "TestSceneChange":
-                StartCoroutine(TestSceneChange());
+            case "EndTutorialCutscene":
+                StartCoroutine(EndTutorialCutscene());
                 break;
 			case "SoundTutorialPrompt":
 				EventController.Event("PromptAppears");
@@ -46,7 +66,6 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
                 GameManager.InventoryManager.Hide();
                 break;
             case "ExitTutorialRoom":
-                next = "tutorial_cutscene_start";
                 StartCoroutine(NextScene());
                 break;
             case "QuartermasterExit":
@@ -75,15 +94,19 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         NextInteraction(next);
     }
 
+    private void destroyQM() { Destroy(Quartermaster); }
+    private void destroySM() { Destroy(Shipmaster); }
+
     IEnumerator npcExit(GameObject npc) {
         GameManager.UIManager.LockScreen();
-		Fader.FadeIn (1f);
-		//ScreenFader.FadeOut(1f);
-        yield return new WaitForSeconds(1f);
-        Destroy(npc);
-		Fader.FadeOut (1f);
-        //ScreenFader.FadeIn(1f);
-        yield return new WaitForSeconds(1f);
+		//Fader.FadeIn (1f);
+        Vector3 exit = npc.transform.Find("Exit").position;
+        Move(npc, exit, 4, true);
+        if (npc == Quartermaster) Invoke("destroyQM", 6f);
+        else if (npc == Shipmaster) Invoke("destroySM", 6f);
+        yield return new WaitForSeconds(2f);
+		//Fader.FadeOut (1f);
+        //yield return new WaitForSeconds(1f);
         GameManager.UIManager.UnlockScreen();
         NextInteraction(next);
     }
@@ -91,29 +114,26 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     IEnumerator NextScene() {
         GameManager.UIManager.LockScreen();
 		Fader.FadeIn ();
-        //ScreenFader.FadeOut();
         GameManager.InventoryManager.Hide();
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Scenes/WorldScene");
-		Fader.FadeOut ();
-        //ScreenFader.FadeIn();
+        SceneManager.LoadScene("Scenes/WorldScene2");
+        setupTutorialCutscene();
+        Fader.FadeOut ();
         yield return new WaitForSeconds(1f);
-        Quartermaster = GameObject.Find("Quartermaster");
-        Shipmaster = GameObject.Find("Shipmaster");
-        Firstmate = GameObject.Find("Firstmate");
         GameManager.UIManager.UnlockScreen();
         NextInteraction(next);
     }
 
-    IEnumerator TestSceneChange() {
+    IEnumerator EndTutorialCutscene() {
         GameManager.UIManager.LockScreen();
 		Fader.FadeIn ();
-        //ScreenFader.FadeOut();
         GameManager.InventoryManager.Hide();
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Scenes/Development/SiennaTestOld");
-        //ScreenFader.FadeIn();
-		Fader.FadeOut();
+        foreach (Transform child in GameObject.Find("WorldObjects").transform) {
+            child.gameObject.SetActive(true);
+        }
+        GameObject.Find("Test_Pete").SetActive(false);
+        Fader.FadeOut();
         yield return new WaitForSeconds(1f);
         GameManager.UIManager.UnlockScreen();
     }
