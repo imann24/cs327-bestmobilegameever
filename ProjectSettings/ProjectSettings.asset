@@ -174,8 +174,8 @@ PlayerSettings:
     m_Icons:
     - serializedVersion: 2
       m_Icon: {fileID: 2800000, guid: a222cd814df474de2a48faba82b325e1, type: 3}
-      m_Width: 128
-      m_Height: 128
+      m_Width: 0
+      m_Height: 0
   m_BuildTargetBatching:
   - m_BuildTarget: iPhone
     m_StaticBatching: 0
