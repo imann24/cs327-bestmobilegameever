@@ -111,7 +111,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         //ScreenFader.FadeOut();
         GameManager.InventoryManager.Hide();
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Scenes/Development/SiennaTestOld");
+        SceneManager.LoadScene("Scenes/WorldScene2");
         //ScreenFader.FadeIn();
 		Fader.FadeOut();
         yield return new WaitForSeconds(1f);
