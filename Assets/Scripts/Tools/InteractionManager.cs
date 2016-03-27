@@ -245,11 +245,14 @@ public class InteractionManager : MonoBehaviour {
 	private GameObject leftImage = null;
 	[SerializeField]
 	private GameObject rightImage = null;
+	[SerializeField]
+	private GameObject dimBackground=null;
 
 	void AddInteractionText(Interactable interactor, Interaction interaction){
 		if (interaction.HasText) {
 			GameObject newText;
 			textPanel.SetActive (true);
+			GameManager.InteractionManager.dimBackground.SetActive (true);
 			if (interaction.HasImage) {
 				ShowLeftImage (interaction.iImage);
 			}
@@ -305,6 +308,7 @@ public class InteractionManager : MonoBehaviour {
 		ClearTextPanel ();
 		GameManager.UIManager.DisableTapToContinue ();
 		textPanel.SetActive (false);
+		GameManager.InteractionManager.dimBackground.SetActive (false); 
 		rightImage.SetActive (false);
 		leftImage.SetActive (false);
 	}
@@ -381,6 +385,7 @@ public class InteractionManager : MonoBehaviour {
 
 	public static void HandleInteraction(Interactable interactor, Interaction interaction){
 		if (interaction.HasText) {
+			
 			DisplayInteraction (interactor, interaction);
 		} else {
 			CompleteInteraction (interactor, interaction);
@@ -392,6 +397,7 @@ public class InteractionManager : MonoBehaviour {
 			if (interaction.iTextType == TextType.Floating) {
 				interactor.GetComponentInChildren<SpeechBubble> ().Say (interactor, interaction);
 			} else {
+				
 				GameManager.InteractionManager.AddInteractionText (interactor, interaction);
 			}
 		}
