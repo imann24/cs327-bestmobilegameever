@@ -99,14 +99,11 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 
     IEnumerator npcExit(GameObject npc) {
         GameManager.UIManager.LockScreen();
-		//Fader.FadeIn (1f);
         Vector3 exit = npc.transform.Find("Exit").position;
         Move(npc, exit, 4, true);
         if (npc == Quartermaster) Invoke("destroyQM", 6f);
         else if (npc == Shipmaster) Invoke("destroySM", 6f);
-        yield return new WaitForSeconds(2f);
-		//Fader.FadeOut (1f);
-        //yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         GameManager.UIManager.UnlockScreen();
         NextInteraction(next);
     }
@@ -117,9 +114,9 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         GameManager.InventoryManager.Hide();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Scenes/WorldScene2");
+        yield return new WaitForSeconds(1f);
         setupTutorialCutscene();
         Fader.FadeOut ();
-        yield return new WaitForSeconds(1f);
         GameManager.UIManager.UnlockScreen();
         NextInteraction(next);
     }

@@ -111,13 +111,14 @@ MonoBehaviour:
   CreatesObject: 0
   PlaysSound: 0
   UseNavMesh: 0
+  DestroyOnArrive: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
   CreateAtWaypoint: {fileID: 0}
-  MoveToWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 159078, guid: 3613650a95a6dea4a8393f795ec5227b, type: 2}
   SoundDelay: 0
-  MoveSpeed: 3
+  MoveSpeed: 4
   MoveToPosition: {x: 5.04, y: -8.66, z: 3.95}
   CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &21244584
