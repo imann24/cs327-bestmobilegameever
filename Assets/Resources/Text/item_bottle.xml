@@ -22,8 +22,8 @@
 	    <ALLTags>holdingOrange</ALLTags>
 	    <TakeItems>Orange</TakeItems>
       <SpecialActions>Destroy|CreateRag</SpecialActions>
-      <NextInteractor>Sadie</NextInteractor>
-      <Next>throw_orange</Next>
+      <NextInteractor>Rag</NextInteractor>
+      <Next>fall</Next>
     </Interaction>
     <Interaction>
       <Name>examine</Name>

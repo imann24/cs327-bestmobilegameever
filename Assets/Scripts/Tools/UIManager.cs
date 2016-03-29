@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
 	GameObject tapToContinue = null;
 
-	public GameObject screenFader;
+	public GameObject DimBackground;
 
     void Awake() {
         if (_instance == null) {
@@ -24,13 +24,16 @@ public class UIManager : MonoBehaviour {
     }
 
     public void EnableTapToContinue(Interactable interactor, Interaction interaction){
+		
         CanInteract = false;
 		tapToContinue.SetActive (true);
+		DimBackground.SetActive (true);
 		tapToContinue.GetComponent<InteractionButton> ().interactor = interactor;
 		tapToContinue.GetComponent<InteractionButton> ().interaction = interaction;
 	}
 
 	public void DisableTapToContinue(){
+		DimBackground.SetActive (false);
         CanInteract = true;
 		tapToContinue.SetActive (false);
 	}

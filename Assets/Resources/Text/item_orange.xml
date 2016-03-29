@@ -92,7 +92,7 @@
     <Interaction>
       <Name>TutorialText1</Name>
       <Type>Derivative</Type>
-      <Text>**Tap and drag your finger away from Sadie to to throw an orange in the opposite direction**</Text>
+      <Text>**Drag an item from your inventory onto an object or character in the world to use it.**</Text>
       <SpecialActions>Destroy</SpecialActions>
       <GiveItems>Orange</GiveItems>
     </Interaction>

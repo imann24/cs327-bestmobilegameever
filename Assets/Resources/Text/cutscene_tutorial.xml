@@ -367,7 +367,7 @@
       <GiveTags>firstmateIntro|quartermasterIntro|shipmasterIntro</GiveTags>
       <Text>Did the first mate say something about a service?</Text>
       <Image>SadiePortrait</Image>
-      <SpecialActions>TestSceneChange</SpecialActions>
+      <SpecialActions>EndTutorialCutscene</SpecialActions>
     </Interaction>
   <!-- EndRegion -->
   </Interactions>

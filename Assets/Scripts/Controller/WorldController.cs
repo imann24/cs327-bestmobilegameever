@@ -9,8 +9,13 @@ public class WorldController : MonoBehaviour {
 	public static WorldController Instance;
 	public PlayerData SaveFile;
 
+
+
+
+
 	void Awake () {
 		init();
+
 	}
 
 	// Use this for initialization
