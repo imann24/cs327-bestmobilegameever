@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CreditsController : MonoBehaviour {
@@ -7,6 +8,9 @@ public class CreditsController : MonoBehaviour {
 
 	public Transform CreditsRect;
 	public GameObject CreditGroupPrefab;
+	public ScrollRect CreditsScroll;
+
+	public float MoveSpeed = 100;
 
 	bool _creditsAreAutoMoving = true;
 
@@ -61,10 +65,22 @@ public class CreditsController : MonoBehaviour {
 		visualCreditGroupController.Set(creditGroup);
 	}
 
-	IEnumerator LerpCredtsLeft () {
+	public void HaltMovement () {
+		_creditsAreAutoMoving = false;
+	}
+		
+	public void CheckForScrollEnd (float scrollBarValue) {
+		if (scrollBarValue == 1) {
+			_creditsAreAutoMoving = false;
+		}
+	}
+
+	IEnumerator LerpCredtsLeft (float waitTime = 0.75f) {
+		yield return new WaitForSeconds (waitTime);
+
 		while (_creditsAreAutoMoving) {
 
-			CreditsRect.position += Vector3.left * Time.deltaTime;
+			CreditsRect.position += Vector3.left * Time.deltaTime * MoveSpeed;
 
 			yield return new WaitForEndOfFrame();
 		}
@@ -78,4 +94,7 @@ public class CreditsController : MonoBehaviour {
 
 		StartCoroutine(LerpCredtsLeft());
 	}
+		
+
+
 }
