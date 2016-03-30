@@ -328,11 +328,12 @@ public class InteractionManager : MonoBehaviour {
 			if (prevalidatedUseInteractions.Count > 0) {
 				HandleInteractionList (target, prevalidatedUseInteractions);
 			} else {
-				Interaction defaultError = GameManager.InventoryManager.Selected.GetComponent<Interactable> ().Interactions.Find (i => i.iName == "DefaultCannotUse");
+                Interaction defaultError = target.Interactions.Find(i => i.iName == "DefaultCannotUse");
+                    //GameManager.InventoryManager.Selected.GetComponent<Interactable> ().Interactions.Find (i => i.iName == "DefaultCannotUse");
 				if (defaultError != null) {
 					HandleInteraction (selected.GetComponent<Interactable> (), defaultError);
-				} else if (selected.GetComponent<Interactable> ().Debugging) {
-					Debug.Log (selected.name + " doesn't have a 'DefaultCannotUse' interaction in its XML.");
+				} else if (target.Debugging) {
+					Debug.Log (target.name + " doesn't have a 'DefaultCannotUse' interaction in its XML.");
 				}
 
 			}
