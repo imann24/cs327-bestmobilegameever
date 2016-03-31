@@ -37,7 +37,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 			if (itemToGive) {
 				this.gameObject.SetActive (true);
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
-				itemToGive.GetComponent<Image> ().preserveAspect = true; //fuck
+				itemToGive.GetComponent<Image> ().preserveAspect = true; 
 				return true;
 			} else {
 				#if (DEBUG)
