@@ -1741,6 +1741,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22450468, guid: cda27dba463ae4e448e10731ef5f9891, type: 2}
       propertyPath: m_SizeDelta.x
+<<<<<<< HEAD
       value: 77.27273
       objectReference: {fileID: 0}
     - target: {fileID: 22450468, guid: cda27dba463ae4e448e10731ef5f9891, type: 2}
@@ -1990,6 +1991,13 @@ Prefab:
     - target: {fileID: 11434508, guid: cda27dba463ae4e448e10731ef5f9891, type: 2}
       propertyPath: m_ReferenceResolution.x
       value: 950
+=======
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450468, guid: cda27dba463ae4e448e10731ef5f9891, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+>>>>>>> origin/master
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cda27dba463ae4e448e10731ef5f9891, type: 2}
