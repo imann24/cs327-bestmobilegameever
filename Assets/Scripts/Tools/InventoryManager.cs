@@ -15,7 +15,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	private Sprite HideButton = null;
 	private Vector2 dragAnchor;
 
-	//public GameObject DimBackground;
+
 
 	public GameObject Selected { get; private set; }
 	public bool PanelShowing { get; private set; }
@@ -37,6 +37,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 			if (itemToGive) {
 				this.gameObject.SetActive (true);
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
+				itemToGive.GetComponent<Image> ().preserveAspect = true; //fuck
 				return true;
 			} else {
 				#if (DEBUG)
