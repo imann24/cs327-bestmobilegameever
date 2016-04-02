@@ -5,9 +5,9 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
-    private static UIManager _instance = null;
+    public static UIManager _instance = null;
     public bool CanInteract = true;
-
+	public bool paused = false;
     [SerializeField]
 	GameObject tapToContinue = null;
 
@@ -22,6 +22,30 @@ public class UIManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+	void Update(){
+		if (paused) {
+			CanInteract = false;
+		} else {
+			CanInteract = true;
+		}
+	}
+
+	public void Matey(){
+		//Do matey sound
+	}
+	public void Pause(){
+		paused = !paused;
+	}
+
+	public void Quit(){
+		ScreenFader.FadeOut ();
+		Invoke ("ReturnToMainMenu", 2f);
+	}
+
+	void ReturnToMainMenu(){
+		SceneController.LoadMainMenu ();
+	}
 
     public void EnableTapToContinue(Interactable interactor, Interaction interaction){
 		

@@ -17,7 +17,8 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 			if (SceneManager.GetActiveScene().name == "TutorialScene" || SceneManager.GetActiveScene().name == "TutorialSceneWithNavMesh") {
                 EventController.Event("PlayerYawn");
                 next = "tutorial_start";
-                Invoke("doNext", 1f);
+                //EventController.Event("PromptAppears");
+                NextInteraction(next);
             }
             else if (SceneManager.GetActiveScene().name == "WorldScene2") {
                 if (Testing) {
@@ -87,11 +88,6 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log(actionTag + " isn't defined in SpecialActions_Cutscene_Handler."); }
                 break;
         }
-    }
-
-    private void doNext() {
-        EventController.Event("PromptAppears");
-        NextInteraction(next);
     }
 
     private void destroyQM() { Destroy(Quartermaster); }
