@@ -20,11 +20,12 @@ public class MainMenuController : MonoBehaviour {
 			EventController.Event("menuMusicStart");
 
 		}
-		if (new SaveLoad ().HasSaveData ()) { //when there is data to save
+		/**
+		if (new SaveLoad ().HasSaveData ()) { 
 			LaunchGameButton.GetComponent<Button> ().interactable = true; 
 		} else {
 			LaunchGameButton.GetComponent<Button> ().interactable = false; 
-		}
+		} **/
 
 	}
 
