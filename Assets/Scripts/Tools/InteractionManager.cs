@@ -363,7 +363,7 @@ public class InteractionManager : MonoBehaviour {
 		Debug.Log("Valid Interactions: " + string.Join(" ", validInteractions.Select(i=>i.iName).ToArray()));
 		Debug.Log("Distance Threshold: " + interactionDistance.ToString());
 		#endif
-		List<Interaction> tooFar = validInteractions.FindAll (i => interactionDistance > i.iMaxDist);
+		List<Interaction> tooFar = validInteractions.FindAll (i => interactionDistance > 3f);
 		List<Interaction> closeEnough = validInteractions.Except (tooFar).ToList ();
 		if (tooFar.Count == 0) {
 			foreach (Interaction interaction in closeEnough) {
@@ -379,8 +379,11 @@ public class InteractionManager : MonoBehaviour {
 			}
 		} else {
 			//from tooFar, find all interactions with an alternative, and from that get all interactions from the master list whose name matches that alternative, and add that to the close enough interactions.
+			Vector3 v = interactor.gameObject.transform.position + new Vector3 (1, 0,0);
+			GameObject.Find ("Sadie").GetComponent<NoahMove> ().GoTo (v); 
 			List<Interaction> alternatives = tooFar.Where (x => x.iTooFar != null).SelectMany (y => validInteractions.FindAll (z => z.iName == y.iTooFar)).Union(closeEnough).Distinct().ToList();
 			HandleInteractionList (interactor, alternatives);
+
 		}
 	}
 
