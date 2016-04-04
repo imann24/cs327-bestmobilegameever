@@ -21,6 +21,7 @@
 		  <ALLTags>holdingRag</ALLTags>
 		  <Next>use_rag_hook</Next>
 		  <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
 		  <Name>DefaultCannotUse</Name>
