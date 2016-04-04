@@ -6,7 +6,6 @@
       <Type>Click</Type>
 	    <ALLTags>hasHook</ALLTags>
 	    <SpecialActions>SoundOpenDoor</SpecialActions>
-      <IgnoreDistance>true</IgnoreDistance>
       <MaxDistance>100</MaxDistance>
       <TooFar>move_to_door_and_exit</TooFar>
 	  <Next>exit_tutorial_room</Next>

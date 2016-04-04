@@ -14,8 +14,8 @@ public static class EventList {
 		}
 	}
 
-	const string START_MUSIC = "musicStart";
-	const string STOP_MUSIC = "musicStop";
+	const string START_MUSIC = "menuMusicStart";
+	const string STOP_MUSIC = "menuMusicStop";
 	const string START_CONVERSATION = "OpenDialogue";
 	public const string HIDE_TEXT_BOX = "hide();";
 

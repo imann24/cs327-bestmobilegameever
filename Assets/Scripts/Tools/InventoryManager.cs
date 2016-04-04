@@ -120,6 +120,11 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		Selected = item;
 	}
 
+	// Toggles the gameobject on and off
+	public void ToggleActive (bool isActive) {
+		gameObject.SetActive(isActive);
+	}
+
 	/// <summary>
 	/// Show the inventory panel.
 	/// </summary>

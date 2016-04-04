@@ -105,6 +105,7 @@
       <Image>QuartermasterPortraitFaded</Image>
       <Image2>ShipmasterPortrait</Image2>
       <SpecialActions>FadeIn</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>tutorial_cutscene_01</Next>
     </Interaction>
     <Interaction>
