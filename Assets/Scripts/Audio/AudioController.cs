@@ -3,7 +3,7 @@
  * Description: Used to control the audio in the game
  * Is a Singleton (only one instance can exist at once)
  * Attached to a GameObject that stores all AudioSources and AudioListeners for the game
- * Dependencies: AudioFile, AudioLoader, AudioList, AudioUtil, RandomizedQueue<AudioFile>
+ * Dependencies: AudioFile, AudioLoader, AudioList, AudioUtil, RandomizedQueue<AudioFile>, EventList, PSScene
  */
 using UnityEngine;
 using System;
@@ -48,7 +48,7 @@ public class AudioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayMusic();
+		PlayMainMenuMusic();
 	}
 
 	void OnDestroy () {
@@ -56,12 +56,21 @@ public class AudioController : MonoBehaviour {
 		UnsubscribeEvents();
 	}
 		
+
+	void OnLevelWasLoaded (int level) {
+		if ((PSScene) level == PSScene.MainMenu) {
+			PlayMainMenuMusic();
+		} else {
+			StopMainMenuMusic();
+		}
+	}
+
 	// The generic music loop
-	public void PlayMusic () {
+	public void PlayMainMenuMusic () {
 		EventController.Event(PSEventType.StartMusic);
 	}
 
-	public void StopMusic () {
+	public void StopMainMenuMusic () {
 		EventController.Event(PSEventType.StopMusic);
 	}
 		
@@ -82,7 +91,6 @@ public class AudioController : MonoBehaviour {
 	}
 
 	public void Stop (AudioFile file) {
-
 		if (ChannelExists(file.Channel)) {
 			AudioSource source = GetChannel(file.Channel);
 
