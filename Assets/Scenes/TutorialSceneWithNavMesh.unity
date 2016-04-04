@@ -778,7 +778,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22436040, guid: d73038a8c28bae94f9b384c8cf6dac97, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22436040, guid: d73038a8c28bae94f9b384c8cf6dac97, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -826,10 +826,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22499458, guid: d73038a8c28bae94f9b384c8cf6dac97, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 73.949585
       objectReference: {fileID: 0}
     - target: {fileID: 22499458, guid: d73038a8c28bae94f9b384c8cf6dac97, type: 2}
       propertyPath: m_SizeDelta.y
+      value: 15.686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423550, guid: d73038a8c28bae94f9b384c8cf6dac97, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423550, guid: d73038a8c28bae94f9b384c8cf6dac97, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 176226, guid: d73038a8c28bae94f9b384c8cf6dac97, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
