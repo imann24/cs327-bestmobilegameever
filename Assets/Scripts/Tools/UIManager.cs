@@ -14,6 +14,23 @@ public class UIManager : MonoBehaviour {
 	public GameObject DimBackground;
 	public GameObject HelpTextBox;
 
+
+	void OnLevelWasLoaded (int level) {
+		if (PSSceneUtil.InGame(level)) {
+			ShowInventoryPanel();
+		} else {
+			HideInventoryPanel();
+		}
+	}
+
+	void HideInventoryPanel () {
+		GameManager.InventoryManager.ToggleActive(false);
+	}
+
+	void ShowInventoryPanel () {
+		GameManager.InventoryManager.ToggleActive(true);
+	}
+
     void Awake() {
         if (_instance == null) {
             _instance = this;
