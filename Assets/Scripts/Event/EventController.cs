@@ -21,6 +21,9 @@ public static class EventController {
 	public delegate void InteractionEventAction (InteractionID interaction);
 	public static event InteractionEventAction OnInteractionEvent;
 
+	public delegate void NamedTextEventAction (string key, string text);
+	public static event NamedTextEventAction OnNamedTextEvent;
+
 	static Dictionary<PSEventType, string> eventMapping;
 
 	static EventController () {
@@ -52,6 +55,12 @@ public static class EventController {
 	public static void Event (InteractionID interaction) {
 		if (OnInteractionEvent != null) {
 			OnInteractionEvent(interaction);
+		}
+	}
+
+	public static void Event (string key, string text) {
+		if (OnNamedTextEvent != null) {
+			OnNamedTextEvent(key, text);
 		}
 	}
 

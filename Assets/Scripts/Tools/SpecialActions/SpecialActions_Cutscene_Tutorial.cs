@@ -15,10 +15,10 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
             DontDestroyOnLoad(gameObject);
 			Fader.FadeOut(2);
 			if (SceneManager.GetActiveScene().name == "TutorialScene" || SceneManager.GetActiveScene().name == "TutorialSceneWithNavMesh") {
-                EventController.Event("PlayerYawn");
+				EventController.Event("PlayerYawn");
                 next = "tutorial_start";
                 //EventController.Event("PromptAppears");
-                NextInteraction(next);
+				NextInteraction(next, null, true, true);
             }
             else if (SceneManager.GetActiveScene().name == "WorldScene2") {
                 if (Testing) {
