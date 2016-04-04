@@ -66,9 +66,9 @@ public class Interaction {
 	public string _maxDist { private get; set; }
 	public float iMaxDist { 
 		get {
-			float md = 1000000f;
+			float md = 3f;
 			bool valid = _maxDist != null && float.TryParse (_maxDist, out md); 
-			return valid ? md : 1000000f;
+			return valid ? md : 3f;
 		}
 	}
 
@@ -383,7 +383,7 @@ public class InteractionManager : MonoBehaviour {
 		if (forceIgnoreDistance) {
 			tooFar = new List<Interaction>();
 		} else {
-			tooFar = validInteractions.FindAll (i => interactionDistance > 3f && !i.IgnoreDistance);
+			tooFar = validInteractions.FindAll (i => interactionDistance > i.iMaxDist && !i.IgnoreDistance);
 		}
 		List<Interaction> closeEnough = validInteractions.Except (tooFar).ToList ();
 

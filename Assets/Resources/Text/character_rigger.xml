@@ -7,7 +7,7 @@
       <Name>talk</Name>
       <Type>Click</Type>
       <NONETags>riggerHit|riggerDown|hasPoster</NONETags>
-      <MaxDistance>10</MaxDistance>
+      <MaxDistance>3</MaxDistance>
       <Image>SadiePortrait</Image>
       <Image2>RiggerPortraitFaded</Image2>
       <Text>What’s the weather like up there?</Text>
