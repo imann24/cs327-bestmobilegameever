@@ -33,6 +33,11 @@ public class SpecialActions : MonoBehaviour {
         }
     }
 
+	// Gets the position of the interaction
+	public virtual Vector3 GetPosition () {
+		return transform.position;
+	}
+
     void Update() {
         if (DestroyOnArrive) {
             if (transform.position == MoveToPosition) Destroy(gameObject);

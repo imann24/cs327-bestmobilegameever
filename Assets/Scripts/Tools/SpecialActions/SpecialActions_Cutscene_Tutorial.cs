@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SpecialActions_Cutscene_Tutorial : SpecialActions {
-    public bool Testing = false;
+	public Transform TutorialRoomDoor;
+
+	public bool Testing = false;
     private GameObject Quartermaster, Shipmaster, Firstmate;
     private static SpecialActions_Cutscene_Tutorial _instance = null;
     private string next;
@@ -41,6 +43,15 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         }
     }
 
+	// Override  in the tutorial scene to pass the position of the door
+	public override Vector3 GetPosition () {
+		if ((PSScene)SceneManager.GetActiveScene().buildIndex == PSScene.TutorialScene) {
+			return TutorialRoomDoor.position;
+		} else {
+			return base.GetPosition();
+		}
+			
+	}
     private void setupTutorialCutscene() {
         Quartermaster = GameObject.Find("Quartermaster");
         Shipmaster = GameObject.Find("Shipmaster");

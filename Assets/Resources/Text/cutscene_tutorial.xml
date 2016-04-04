@@ -96,6 +96,7 @@
       <Name>exit_tutorial_room</Name>
       <Type>Derivative</Type>
       <SpecialActions>ExitTutorialRoom</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_start</Name>

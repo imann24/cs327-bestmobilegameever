@@ -179,6 +179,10 @@ Prefab:
       propertyPath: Debugging
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11424186, guid: ef01b2d5f31556946a4d4aa8fa6af69b, type: 2}
+      propertyPath: TutorialRoomDoor
+      value: 
+      objectReference: {fileID: 2005114666}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef01b2d5f31556946a4d4aa8fa6af69b, type: 2}
   m_IsPrefabParent: 0

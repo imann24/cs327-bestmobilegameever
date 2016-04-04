@@ -401,15 +401,27 @@ public class InteractionManager : MonoBehaviour {
 			}
 		} else {
 			if (!forceSuppressMovement) {
-				//from tooFar, find all interactions with an alternative, and from that get all interactions from the master list whose name matches that alternative, and add that to the close enough interactions.
-				Vector3 v = interactor.gameObject.transform.position + new Vector3 (1, 0,0);
 
+
+				Vector3 v = getPositionOfInteractable(interactor) + new Vector3 (1, 0,0);
+				Debug.Log("Moving to this: " + interactor);
 				GameObject.Find ("Sadie").GetComponent<NoahMove> ().GoTo (v); 
 			}
 
+			//from tooFar, find all interactions with an alternative, and from that get all interactions from the master list whose name matches that alternative, and add that to the close enough interactions.
 			List<Interaction> alternatives = tooFar.Where (x => x.iTooFar != null).SelectMany (y => validInteractions.FindAll (z => z.iName == y.iTooFar)).Union(closeEnough).Distinct().ToList();
 
 			HandleInteractionList (interactor, alternatives);
+		}
+	}
+
+	static Vector3 getPositionOfInteractable (Interactable interactable) {
+		SpecialActions specialActionsOfInteractable = interactable.GetComponent<SpecialActions>();
+
+		if (specialActionsOfInteractable == null) {
+			return interactable.transform.position;
+		} else {
+			return specialActionsOfInteractable.GetPosition();
 		}
 	}
 
