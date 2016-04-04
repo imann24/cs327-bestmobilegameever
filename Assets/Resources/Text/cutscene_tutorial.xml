@@ -6,7 +6,7 @@
       <Name>tutorial_start</Name>
       <Type>Derivative</Type>
       <Text>**Tap the screen anywhere to advance dialogue text**</Text>
-      <TextBox>Tap Screen to Move Sadie</TextBox>
+      <TextBox>Try tapping the hook</TextBox>
       <Next>tutorial_01</Next>
       <IgnoreDistance>true</IgnoreDistance>
     </Interaction>

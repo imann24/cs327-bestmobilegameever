@@ -1,5 +1,4 @@
-﻿#define DEBUG
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -388,8 +387,6 @@ public class InteractionManager : MonoBehaviour {
 		}
 		List<Interaction> closeEnough = validInteractions.Except (tooFar).ToList ();
 
-		Debug.Log("****" + ArrayUtil.ToString(interactionList.ToArray()));
-		Debug.Log("****>" + ArrayUtil.ToString(closeEnough.ToArray()));
 		if (tooFar.Count == 0) {
 			foreach (Interaction interaction in closeEnough) {
 				if (interaction.HasText) {

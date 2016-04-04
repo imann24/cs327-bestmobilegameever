@@ -96,7 +96,6 @@ public void CreateObject(GameObject obj, Vector2 pos) {
 
 	public void NextInteraction(string name, Interactable interactor = null, bool forceSuppressMovement = false, bool forceIgnoreDistance = false)
     {
-		Debug.Log("****" + name);
         if (interactor == null) { interactor = gameObject.GetComponent<Interactable>(); }
         List<Interaction> iList = interactor.Interactions.FindAll(i => (i.iName == name) && (i.iType == InteractionType.Derivative));
         if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Attempting to run interaction with name '" + name + "' that belongs to " + interactor); }
