@@ -476,6 +476,249 @@
 			“Type”: "Ambience",
 			“Channel”:3,
 			"Volume": 60
+		},
+		{
+			“FileName”:"Rigger_Talk_A",
+			“EventNames”:["RiggerTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rigger_Talk_B",
+			“EventNames”:["RiggerTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rigger_Talk_C",
+			“EventNames”:["RiggerTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Swabbie_Talk_A",
+			“EventNames”:["SwabbieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Swabbie_Talk_B",
+			“EventNames”:["SwabbieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Swabbie_Talk_C",
+			“EventNames”:["SwabbieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_A",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_B",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_C",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_D",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_E",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Angry_A",
+			“EventNames”:["SadieAngry"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Confused_A",
+			“EventNames”:["SadieConfused"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_A",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_B",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_C",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_D",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_E",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_F",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Laugh_A",
+			“EventNames”:["SadieLaugh"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Suprised_A",
+			“EventNames”:["SadieSuprised"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Deck_Soundtrack_C_2",
+			“EventNames”:["onesoundtrackevery100to200seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Music",
+			“Channel”:1,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Climb_Out_Hammock",
+			“EventNames”:["ClimbOutHammock"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"GUI_Click_A",
+			“EventNames”:["GUI Click"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"GUI_Click_B",
+			“EventNames”:["GUI Click"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"GUI_Click_C",
+			“EventNames”:["GUI Click"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Hook_On_Pole_A",
+			“EventNames”:["HookOnPole"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
 		}
 	]
 }
