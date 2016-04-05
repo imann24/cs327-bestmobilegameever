@@ -674,6 +674,51 @@
 			“Type”: "Music",
 			“Channel”:1,
 			"Volume": 100
+		},
+		{
+			“FileName”:"Climb_Out_Hammock",
+			“EventNames”:["ClimbOutHammock"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"GUI_Click_A",
+			“EventNames”:["GUI Click"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"GUI_Click_B",
+			“EventNames”:["GUI Click"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"GUI_Click_C",
+			“EventNames”:["GUI Click"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Hook_On_Pole_A",
+			“EventNames”:["HookOnPole"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
 		}
 	]
 }
