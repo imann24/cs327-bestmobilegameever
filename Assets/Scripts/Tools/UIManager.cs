@@ -58,7 +58,8 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void Quit(){
-		ScreenFader.FadeOut ();
+		ScreenFader.FadeOut (); 
+		//reset tags
 		Invoke ("ReturnToMainMenu", 2f);
 	}
 
