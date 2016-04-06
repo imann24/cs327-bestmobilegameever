@@ -30,6 +30,7 @@ public class MainMenuController : MonoBehaviour {
 	}
 
 	public void LaunchGame () {
+		Debug.Log ("Please print out");
 		SceneController.LoadMainGame();
 	} 
 

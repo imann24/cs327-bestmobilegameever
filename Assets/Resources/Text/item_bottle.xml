@@ -24,6 +24,7 @@
       <SpecialActions>Destroy|CreateRag</SpecialActions>
       <NextInteractor>Rag</NextInteractor>
       <Next>fall</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>examine</Name>

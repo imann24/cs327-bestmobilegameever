@@ -14,13 +14,17 @@ public static class EventList {
 		}
 	}
 
-	const string START_MUSIC = "musicStart";
-	const string STOP_MUSIC = "musicStop";
+	const string START_MUSIC = "menuMusicStart";
+	const string STOP_MUSIC = "menuMusicStop";
 	const string START_CONVERSATION = "OpenDialogue";
+	public const string HIDE_TEXT_BOX = "hide();";
+
+	public const string HELP_TEXT_BOX = "TextBox";
 
 	public static string[] events = {
 		START_MUSIC,
 		STOP_MUSIC,
-		START_CONVERSATION
+		START_CONVERSATION,
+		HIDE_TEXT_BOX
 	};
 }

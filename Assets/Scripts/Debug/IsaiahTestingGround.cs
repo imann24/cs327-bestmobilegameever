@@ -8,14 +8,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class IsaiahTestingGround : MonoBehaviour {
-
 	public ConversationDisplayController DialogueController;
 
 	public CreditsController CreditsController;
 
 	// Use this for initialization
 	void Start () {
-		testCreditObjects();
+		
 	}
 
 	// Objects to test credit generation
@@ -101,8 +100,18 @@ public class IsaiahTestingGround : MonoBehaviour {
 
 	}
 
+	bool shown = false;
+
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			if (shown) {
+				EventController.Event(PSEventType.HideTextBox);
+			} else {
+				EventController.Event(EventList.HELP_TEXT_BOX, "Hey");
+			}
+
+			shown = !shown;
+		}
 	}
 }

@@ -6,7 +6,9 @@
       <Name>tutorial_start</Name>
       <Type>Derivative</Type>
       <Text>**Tap the screen anywhere to advance dialogue text**</Text>
+      <TextBox>Try tapping the hook</TextBox>
       <Next>tutorial_01</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_01</Name>
@@ -14,6 +16,7 @@
       <Text>We KNOW you've had a hand in this! Don't you lie!</Text>
       <Next>tutorial_02</Next>
       <SpecialActions>FadeIn</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_02</Name>
@@ -23,28 +26,28 @@
       <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_sadie</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_03_sound</Name>
       <Type>Derivative</Type>
       <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_03</Next>
-    </Interaction>
-    <Interaction>
-      <Name>tutorial_03</Name>
-      <Type>Derivative</Type>
-      <Text>**Tap the screen to move Sadie**</Text>
-    </Interaction>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>>
     <Interaction>
       <Name>tutorial_04_sound</Name>
       <Type>Derivative</Type>
       <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_04</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_04</Name>
       <Type>Derivative</Type>
       <Text>**Tap an object to pick it up**</Text>
+      <IgnoreDistance>true</IgnoreDistance>
+      <TextBox>hide();</TextBox>
     </Interaction>
   <!-- EndRegion -->
   <!-- Region Item Tutorials -->
@@ -53,6 +56,7 @@
       <Type>Derivative</Type>
       <SpecialActions>SoundTutorialPrompt|HideInventory</SpecialActions>
       <Next>tutorial_items_00</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_items_00</Name>
@@ -60,11 +64,13 @@
       <Text>**Swipe upward from the bottom of the screen to pull up your inventory**</Text>
       <SpecialActions>SoundTutorialPrompt|HideInventory</SpecialActions>
       <Next>tutorial_items_01</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_items_01</Name>
       <Type>Derivative</Type>
       <Text>**Tap on an object in your inventory to examine it further**</Text>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_items_02</Name>
@@ -90,6 +96,7 @@
       <Name>exit_tutorial_room</Name>
       <Type>Derivative</Type>
       <SpecialActions>ExitTutorialRoom</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_start</Name>
@@ -98,6 +105,7 @@
       <Image>QuartermasterPortraitFaded</Image>
       <Image2>ShipmasterPortrait</Image2>
       <SpecialActions>FadeIn</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>tutorial_cutscene_01</Next>
     </Interaction>
     <Interaction>

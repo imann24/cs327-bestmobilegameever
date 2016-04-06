@@ -6,5 +6,6 @@
 public enum PSEventType {
 	StartMusic,
 	StopMusic,
-	StartConversation
+	StartConversation,
+	HideTextBox
 }

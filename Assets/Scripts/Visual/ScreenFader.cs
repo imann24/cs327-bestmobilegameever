@@ -15,6 +15,15 @@ public class ScreenFader : MonoBehaviour {
         }
     }
 
-    public static void FadeOut(float time = 2f) { fade.CrossFadeAlpha(1f, time, true); }
-    public static void FadeIn(float time = 2f) { fade.CrossFadeAlpha(0f, time, true); }
+    public static void FadeOut(float time = 2f) { 
+		if (fade != null) {
+			fade.CrossFadeAlpha(1f, time, true); 
+		}
+	}
+    
+	public static void FadeIn(float time = 2f) { 
+		if (fade != null) {
+			fade.CrossFadeAlpha(0f, time, true); 
+		}
+	}
 }
