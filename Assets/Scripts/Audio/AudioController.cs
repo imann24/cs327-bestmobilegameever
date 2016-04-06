@@ -64,7 +64,10 @@ public class AudioController : MonoBehaviour {
 		} else if ((PSScene)level == PSScene.MainGame) {
 			StopMainMenuMusic();
 			StartTrackCycling();
-		}else {
+		}else if ((PSScene)level == PSScene.TutorialScene) {
+			StopMainMenuMusic();
+			StartTrackCycling();
+		} else {
 			StopMainMenuMusic();
 		}
 	}
