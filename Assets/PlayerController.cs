@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 		if(instance){
 			PlayerController.Instance.transform.position = gameObject.transform.position;
 			PlayerController.Instance.transform.localScale = gameObject.transform.localScale;
+			Camera.main.GetComponent<CameraFollower> ().target = PlayerController.Instance.transform;
 			DestroyImmediate(gameObject);
 			return;
 		}
