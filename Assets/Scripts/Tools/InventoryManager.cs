@@ -139,7 +139,8 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	/// </summary>
 	public void Hide(){
 		PanelShowing = false;
-		StartCoroutine("ChangeHeight", new Vector2(0,-105));
+		Vector2 newPos = new Vector2 (0, 15 - GetComponent<RectTransform> ().rect.height);
+		StartCoroutine ("ChangeHeight", newPos);
 		ToggleButton.GetComponent<Image> ().sprite = ShowButton;
 	}
 

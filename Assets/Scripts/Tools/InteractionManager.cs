@@ -285,6 +285,7 @@ public class InteractionManager : MonoBehaviour {
 				newText.GetComponentInChildren<Text> ().text = interaction.iText;
 				newText.GetComponent<InteractionButton> ().interactor = interactor;
 				newText.GetComponent<InteractionButton> ().interaction = interaction;
+				newText.transform.localScale = Vector3.one;
 				break;
 			default:
 				#if (DEBUG)
