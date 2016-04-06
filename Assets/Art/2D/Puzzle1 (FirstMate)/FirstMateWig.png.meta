@@ -1,0 +1,119 @@
+fileFormatVersion: 2
+guid: 1da24b4761da2fc43818cf23a5e573e6
+timeCreated: 1457473380
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FirstMateWig
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 250
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: FirstMateWig
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 238
+        height: 886
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -91}
+        - {x: 18, y: -443}
+        - {x: 102, y: -443}
+        - {x: 101, y: -419}
+        - {x: 87, y: -411}
+        - {x: 69, y: -411}
+        - {x: 83, y: -100}
+        - {x: 83, y: -53}
+        - {x: 77, y: 15}
+        - {x: 83, y: 142}
+        - {x: 81, y: -34}
+        - {x: 83, y: -46}
+        - {x: 91, y: -59}
+        - {x: 109, y: -60}
+        - {x: 114, y: -57}
+        - {x: 119, y: -21}
+        - {x: 119, y: 246}
+        - {x: 97, y: 262}
+        - {x: 44, y: 279}
+        - {x: 53, y: 307}
+        - {x: 65, y: 342}
+        - {x: 58, y: 405}
+        - {x: -26, y: 443}
+        - {x: -50, y: 443}
+        - {x: -55, y: 433}
+        - {x: -54, y: 429}
+        - {x: -68, y: 392}
+        - {x: -68, y: 344}
+        - {x: -64, y: 337}
+        - {x: -59, y: 338}
+        - {x: -56, y: 330}
+        - {x: -53, y: 313}
+        - {x: -41, y: 295}
+        - {x: -20, y: 258}
+        - {x: -99, y: 261}
+        - {x: -119, y: 248}
+        - {x: -119, y: -58}
+        - {x: -95, y: -63}
+        - {x: -84, y: -55}
+        - {x: -83, y: 136}
+        - {x: -70, y: 46}
+        - {x: -81, y: -14}
+        - {x: -84, y: -100}
+        - {x: -82, y: -103}
+        - {x: -69, y: -98}
+        - {x: -68, y: -443}
+        - {x: 16, y: -443}
+        - {x: 15, y: -419}
+        - {x: 1, y: -411}
+        - {x: -17, y: -411}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

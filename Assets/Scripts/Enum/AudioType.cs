@@ -6,5 +6,7 @@
 public enum AudioType {
 	Music,
 	FX,
-	VO
+	VO,
+	Ambience,
+	Sweetener
 }

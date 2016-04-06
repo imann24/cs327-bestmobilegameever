@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>use_mop_on_mop</Name>
+      <Type>UseItem</Type>
+      <ALLTags>hold_mop</ALLTags>
+      <NONETags>has_mop</NONETags>
+      <Text>You use the mop on the mop.</Text>
+      <Image>mop</Image>
+      <TakeItems>mop</TakeItems>
+    </Interaction>
+    <Interaction>
+      <Name>click_mop</Name>
+      <Type>Click</Type>
+      <ALLTags>intro</ALLTags>
+      <NONETags>has_mop</NONETags>
+      <Text>It's a mop.</Text>
+      <Image>mop</Image>
+      <GiveItems>mop</GiveItems>
+      <SpecialActions>Confirm</SpecialActions>
+      <MaxDistance>10</MaxDistance>
+      <TooFar>go_to_mop</TooFar>
+    </Interaction>
+    <Interaction>
+      <Name>go_to_mop</Name>
+      <Type>Derivative</Type>
+      <SpecialActions>ComeHere</SpecialActions>
+    </Interaction>
+  </Interactions>
+</InteractionList>

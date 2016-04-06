@@ -7,21 +7,15 @@ using System.Collections;
 
 public class WorldController : MonoBehaviour {
 	public static WorldController Instance;
-	public ConversationDisplayController DialogueDisplay;
 	public PlayerData SaveFile;
 
-	public bool DialogueActive {
-		get {
-			if (ConversationDisplayController.Instance == null) {
-				return false;
-			} else {
-				return ConversationDisplayController.Instance.Active;
-			}
-		}
-	}
+
+
+
 
 	void Awake () {
 		init();
+
 	}
 
 	// Use this for initialization
@@ -35,10 +29,15 @@ public class WorldController : MonoBehaviour {
 
 	}
 
+	public void ExitToMainMenu () {
+
+		SceneController.LoadMainMenu();
+
+	}
+
 	void init () {
 		Instance = this;
 		//TODO: Insert initialization/world loading code here
-		DialogueDisplay.Init();
 		getGameProgress();
 	}
 

@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour {
 	public float camMoveOffset = 1f;
 	public bool moving = false;
 
-
 	private bool flipped = false;
 
 	public static PlayerMovement Instance
@@ -31,8 +30,10 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Flip(){ //Flip player character
 		flipped = !flipped;
+        SpeechBubble speechBubble = gameObject.GetComponentInChildren<SpeechBubble>();
 		transform.localScale = new Vector3 (transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-	}
+        speechBubble.transform.localScale = new Vector3(speechBubble.transform.localScale.x * -1, speechBubble.transform.localScale.y, speechBubble.transform.localScale.z);
+    }
 
 	public void MoveTowards(Vector2 location, bool person){
 		if (!moving) {
@@ -56,6 +57,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+
 	IEnumerator MovePlayerAndLerpCam(Vector2 endLocation){
 		moving = true;
 		float percentComplete = 0f;
@@ -78,6 +80,7 @@ public class PlayerMovement : MonoBehaviour {
 				Camera.main.transform.position = Vector3.Lerp (startPos, endCamPos, percentComplete);
 			}
 			//Move Player
+
 			transform.position = Vector2.MoveTowards (transform.position, endLocation, moveSpeed * Time.deltaTime);
 
 			yield return new WaitForFixedUpdate();

@@ -5,24 +5,33 @@
 			“EventNames”:["testStart"],
 			"StopEventNames":["testStop"],
 			“Loop”:false,
-			“Type”:“FX”,
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
 		{
-			“FileName”:"TitleMenu_Soundtrack_1",
+			“FileName”:"TitleMenu_Soundtrack_2",
 			“EventNames”:["menuMusicStart"],
 			"StopEventNames":["menuMusicStop"],
 			“Loop”:true,
 			“Type”: "Music",
 			“Channel”:1,
-			"Volume": 80
+			"Volume": 60
 		},
 		{
-			“FileName”:"Deck_Soundtrack_A_2",
-			“EventNames”:["gameMusicStart"],
-			"StopEventNames":["gameMusicStop"],
-			“Loop”:true,
+			“FileName”:"Deck_Soundtrack_A_3",
+			“EventNames”:["onesoundtrackevery100to200seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Music",
+			“Channel”:1,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Deck_Soundtrack_B_1",
+			“EventNames”:["onesoundtrackevery100to200seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
 			“Type”: "Music",
 			“Channel”:1,
 			"Volume": 100
@@ -48,6 +57,663 @@
 		{
 			“FileName”:"Placeholder_Speak_1",
 			“EventNames”:["OpenDialogue"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Crowd_Chatter",
+			“EventNames”:["ChatterStart"],
+			"StopEventNames":["ChatterStop"],
+			“Loop”:true,
+			“Type”: "Ambience",
+			“Channel”:1,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Door_Close_2",
+			“EventNames”:["DoorClose"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Door_Open_2",
+			“EventNames”:["DoorOpen"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"FirstMate_Speech_A_1",
+			“EventNames”:["FirstMateSpeech"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"FirstMate_Speech_B_1",
+			“EventNames”:["FirstMateSpeech"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"FirstMate_Speech_C_1",
+			“EventNames”:["FirstMateSpeech"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"FirstMate_Speech_D_1",
+			“EventNames”:["FirstMateSpeech"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"FirstMate_Speech_E_1",
+			“EventNames”:["FirstMateSpeech"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Mop_On_Firstmate_1",
+			“EventNames”:["MopOnFirstmate"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Mop_On_Floor_A_1",
+			“EventNames”:["MopOnFloor"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Mop_On_Floor_B_1",
+			“EventNames”:["MopOnFloor"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Mop_On_Floor_C_1",
+			“EventNames”:["MopOnFloor"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Mop_On_Floor_D_1",
+			“EventNames”:["MopOnFloor"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Mop_Pick_Up_1",
+			“EventNames”:["MopPickUp"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Orange_Splat_A_1",
+			“EventNames”:["OrangeImpact"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Orange_Splat_B_1",
+			“EventNames”:["OrangeImpact"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Paint_On_Painting_1",
+			“EventNames”:["PaintOnPainting"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"PaintBucket_Pick_Up",
+			“EventNames”:["PaintbucketPickUp"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Pick_Up_Rope",
+			“EventNames”:["PickUpRope"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Player_Yawn_1",
+			“EventNames”:["PlayerYawn"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Prompt_Appears_1",
+			“EventNames”:["PromptAppears"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rag_Drop_1",
+			“EventNames”:["RagDrop"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rag_On_Hand_1",
+			“EventNames”:["RagOnHand"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rope_On_Lifeboat_1",
+			“EventNames”:["RopeOnLifeboat"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Captain_Talk_A_1",
+			“EventNames”:["Captaintalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Cabingirl_Talk_A_1",
+			“EventNames”:["Cabingirltalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Quartermaster_Talk_A_1",
+			“EventNames”:["Quartermastertalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_A_1",
+			“EventNames”:["Shipmastertalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Firstmate_Talk_A_1",
+			“EventNames”:["Firstmatetalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_A_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_B_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_C_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_D_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_E_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_F_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_G_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_H_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_I_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_J_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_K_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_L_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_M_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_N_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_O_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_AmbientSweetener_P_1",
+			“EventNames”:["every8to20seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Sweetener",
+			“Channel”:4,
+			"Volume": 50
+		},
+		{
+			“FileName”:"Shipdeck_Ambience_1",
+			“EventNames”:["enterscene"],
+			"StopEventNames":["exitscene"],
+			“Loop”:true,
+			“Type”: "Ambience",
+			“Channel”:3,
+			"Volume": 60
+		},
+		{
+			“FileName”:"Rigger_Talk_A",
+			“EventNames”:["RiggerTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rigger_Talk_B",
+			“EventNames”:["RiggerTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rigger_Talk_C",
+			“EventNames”:["RiggerTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Swabbie_Talk_A",
+			“EventNames”:["SwabbieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Swabbie_Talk_B",
+			“EventNames”:["SwabbieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Swabbie_Talk_C",
+			“EventNames”:["SwabbieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_A",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_B",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_C",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_D",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Ahoy_E",
+			“EventNames”:["SadieAhoy"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Angry_A",
+			“EventNames”:["SadieAngry"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Confused_A",
+			“EventNames”:["SadieConfused"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_A",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_B",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_C",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_D",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_E",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Exclaim_F",
+			“EventNames”:["SadieTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Laugh_A",
+			“EventNames”:["SadieLaugh"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Suprised_A",
+			“EventNames”:["SadieSuprised"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Deck_Soundtrack_C_2",
+			“EventNames”:["onesoundtrackevery100to200seconds"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "Music",
+			“Channel”:1,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Climb_Out_Hammock",
+			“EventNames”:["ClimbOutHammock"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"GUI_Click_A",
+			“EventNames”:["GUI Click"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"GUI_Click_B",
+			“EventNames”:["GUI Click"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"GUI_Click_C",
+			“EventNames”:["GUI Click"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Hook_On_Pole_A",
+			“EventNames”:["HookOnPole"],
 			"StopEventNames":[],
 			“Loop”:false,
 			“Type”: "FX",

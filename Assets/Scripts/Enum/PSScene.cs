@@ -1,5 +1,11 @@
 ﻿public enum PSScene {
+	SplashScreen,
 	MainMenu,
 	MainGame,
-	OptionsMenu
+	OptionsMenu,
+	Credits,
+	TutorialScene,
+	MovementDemo,
+	DevelopmentSceneList,
+	CharacterSpritesDemo
 }

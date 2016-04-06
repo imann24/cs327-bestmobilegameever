@@ -1,111 +1,105 @@
-﻿using UnityEngine;
+﻿#define DEBUG
+
+using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
-using System.Linq;
 
 public class UIManager : MonoBehaviour {
+    public static UIManager _instance = null;
+    public bool CanInteract = true;
+	public bool paused = false;
+    [SerializeField]
+	GameObject tapToContinue = null;
 
-	public static UIManager Instance { get; private set; }
+	public GameObject DimBackground;
+	public GameObject HelpTextBox;
 
-	public bool IsInventoryShowing { get; private set; }
-	public bool IsOptionsShowing { get; private set; }
-	public bool IsSettingsShowing { get; private set; }
-	public bool IsInteractionShowing { get; private set; }
 
-	void Awake(){//use the singleton pattern to avoid multiple interfaces.
-		if (Instance == null) {
-			Instance = this;
-		} else if (this != Instance) {
-			Destroy (gameObject);
-			if (GameManager.DEBUGGING) {
-				Debug.Log ("Too Many UIManagers!");
-			}
-		}
-	}
-
-	void Start(){
-		ShowInventory ();
-	}
-
-	public void ShowInventory(){
-		IsInventoryShowing = true;
-		transform.FindChild ("InventoryPanel").gameObject.GetComponent<RectTransform> ().anchoredPosition = new Vector2 (0, -5);
-		transform.FindChild ("InventoryPanel/Toggle/Text").gameObject.GetComponent<Text> ().text = "Hide";
-	}
-
-	public void HideInventory(){
-		IsInventoryShowing = false;
-		transform.FindChild ("InventoryPanel").gameObject.GetComponent<RectTransform> ().anchoredPosition = new Vector2 (0, -90);
-		transform.FindChild ("InventoryPanel/Toggle/Text").gameObject.GetComponent<Text> ().text = "Show";
-	}
-
-	public void ToggleInventory(){
-		if (IsInventoryShowing) {
-			HideInventory ();
+	void OnLevelWasLoaded (int level) {
+		if (PSSceneUtil.InGame(level)) {
+			ShowInventoryPanel();
 		} else {
-			ShowInventory ();
+			HideInventoryPanel();
 		}
 	}
 
-	public List<InventorySlot> GetInventorySlots(){
-		return transform.FindChild ("InventoryPanel").gameObject.GetComponentsInChildren<InventorySlot> ().ToList ();
+	void HideInventoryPanel () {
+		GameManager.InventoryManager.ToggleActive(false);
 	}
 
-	public void ShowSelected(GameObject selected){
-		transform.FindChild ("SelectionPanel/SelectionImage").gameObject.GetComponent<Image> ().sprite = selected.GetComponent<Interactable> ().InventoryImage;
+	void ShowInventoryPanel () {
+		GameManager.InventoryManager.ToggleActive(true);
 	}
 
-	public void Deselect(){
-		transform.FindChild ("SelectionPanel/SelectionImage").gameObject.GetComponent<Image> ().sprite = null;
-	}
+    void Awake() {
+        if (_instance == null) {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+			spawnTextBox();
+        }
+        else if (this != _instance) {
+            Destroy(gameObject);
+        }
+    }
 
-	public void ShowOptions(){
-		IsOptionsShowing = true;
-		transform.FindChild ("OptionsMenu").gameObject.SetActive (true);
-	}
-
-	public void CloseOptions(){
-		IsOptionsShowing = false;
-		transform.FindChild ("OptionsMenu").gameObject.SetActive (false);
-	}
-
-	public void ShowSettings(){
-		IsSettingsShowing = true;
-		transform.FindChild ("SettingsPanel").gameObject.SetActive (true);
-		CloseOptions ();
-	}
-
-	public void CloseSettings(){
-		IsSettingsShowing = false;
-		transform.FindChild ("SettingsPanel").gameObject.SetActive (false);
-		ShowOptions ();
-	}
-
-	public void ShowInteractionPanel(){
-		IsInteractionShowing = true;
-		transform.FindChild ("InteractionPanel").gameObject.SetActive (true);
-		if (GameManager.DEBUGGING) {
-			Debug.Log ("showing interaction panel");
+	void Update(){
+		if (paused) {
+			CanInteract = false;
+		} else {
+			CanInteract = true;
 		}
 	}
+
+	public void Matey(){
+		//Do matey sound
+	}
+	public void Pause(){
+		paused = !paused;
+	}
+
+	public void Quit(){
+		ScreenFader.FadeOut (); 
+		//reset tags
+		Invoke ("ReturnToMainMenu", 2f);
+	}
+
+	void ReturnToMainMenu(){
+		SceneController.LoadMainMenu ();
+	}
+
+    public void EnableTapToContinue(Interactable interactor, Interaction interaction){
 		
-	public void ChangeInteractionImage(Sprite newImage){
-		transform.FindChild ("InteractionPanel/InteractionImagePanel/InteractionImage").gameObject.GetComponent<Image> ().sprite = newImage;
+        CanInteract = false;
+		tapToContinue.SetActive (true);
+		DimBackground.SetActive (true);
+		tapToContinue.GetComponent<InteractionButton> ().interactor = interactor;
+		tapToContinue.GetComponent<InteractionButton> ().interaction = interaction;
 	}
 
-	public void CloseInteractionPanel(){
-		IsInteractionShowing = false;
-		GameObject interactionTextPanel = transform.FindChild ("InteractionPanel/InteractionTextPanel").gameObject;
-		List<Transform> interactionTransforms = interactionTextPanel.GetComponentsInChildren<Transform> ().ToList ();
-		foreach (Transform t in interactionTransforms) {
-			if (t != interactionTextPanel.transform) {
-				Destroy (t.gameObject);
-			}
-		}
-		transform.FindChild ("InteractionPanel").gameObject.SetActive (false);
-		if (GameManager.DEBUGGING) {
-			Debug.Log ("closing interaction panel");
-		}
+	public void DisableTapToContinue(){
+		DimBackground.SetActive (false);
+        CanInteract = true;
+		tapToContinue.SetActive (false);
+	}
+
+	public void LockScreen() {
+        CanInteract = false;
+        tapToContinue.SetActive (true);
+		tapToContinue.GetComponent<Button> ().enabled = false;
+	}
+
+	public void UnlockScreen() {
+        CanInteract = true;
+        tapToContinue.GetComponent<Button> ().enabled = true;
+		tapToContinue.SetActive (false);
+	}
+
+	void spawnTextBox() {
+
+		GameObject textBox;
+
+		// Spawns the text box turned off
+		(textBox = (GameObject)Instantiate(HelpTextBox)).SetActive(false);
+		DontDestroyOnLoad(textBox);
 	}
 }

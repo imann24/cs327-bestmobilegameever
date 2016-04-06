@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,49 +9,90 @@ using System.IO;
 using System;
 
 public enum InteractionType{
-	Click, 
+	Click,
 	Orange,
 	UseItem,
+	DropItem,
 	Derivative}
+
+public enum TextType{
+	Option,
+	Floating,
+	Monologue
+}
 
 public class Interaction {
 	[XmlElement("Name")]
-	public string iName;
+	public string _name { private get; set; }
+	public string iName { get { return (_name == null) ? string.Empty : _name; } }
 
 	[XmlElement("Type")]
 	public string _type { private get; set; }
-	public InteractionType iType {
+	public InteractionType iType { 
 		get {
-			if (Enum.IsDefined (typeof(InteractionType), _type)) {
-				return (InteractionType)Enum.Parse (typeof(InteractionType), _type);
-			} else {
-				if (GameManager.DEBUGGING) {
-					Debug.Log (_type + " is not a valid InteractionType.");
-				}
-				return InteractionType.Click;
-			}
+			bool realType = _type != null && Enum.IsDefined (typeof(InteractionType), _type);
+			return realType ? (InteractionType)Enum.Parse (typeof(InteractionType), _type) : InteractionType.Click;
 		}
 	}
-		
+
 	[XmlElement("ALLTags")]
 	public string _allTags { private get; set;}
-	public List<string> iAllTags { get { return (_allTags.Length == 0) ? new List<string>() : _allTags.Split ('|').ToList (); } }
+	public List<string> iAllTags { 
+		get { 
+			bool noTags = _allTags == null || _allTags == string.Empty;
+			return noTags ? new List<string> () : _allTags.Split ('|').ToList ();
+		}
+	}
 
 	[XmlElement("ANYTags")]
 	public string _anyTags { private get; set;}
-	public List<string> iAnyTags { get { return (_anyTags.Length == 0) ? new List<string>() : _anyTags.Split ('|').ToList (); } }
+	public List<string> iAnyTags { 
+		get { 
+			bool noTags = _anyTags == null || _anyTags == string.Empty;
+			return noTags ? new List<string> () : _anyTags.Split ('|').ToList ();
+		}
+	}
 
 	[XmlElement("NONETags")]
 	public string _noneTags { private get; set;}
-	public List<string> iNoneTags { get { return (_noneTags.Length == 0) ? new List<string>() : _noneTags.Split ('|').ToList (); } }
+	public List<string> iNoneTags { 
+		get { 
+			bool noTags = _noneTags == null || _noneTags == string.Empty;
+			return noTags ? new List<string> () : _noneTags.Split ('|').ToList ();
+		}
+	}
+
+	[XmlElement("MaxDistance")]
+	public string _maxDist { private get; set; }
+	public float iMaxDist { 
+		get {
+			float md = 3f;
+			bool valid = _maxDist != null && float.TryParse (_maxDist, out md); 
+			return valid ? md : 3f;
+		}
+	}
+
+	[XmlElement("TooFar")]
+	public string _tooFar { private get; set; }
+	public string iTooFar { get { return (_tooFar == null) ? "DefaultTooFar" : _tooFar; } }
 
 	[XmlElement("Text")]
-	public string iText;
-	public bool HasText { get { return iText != null; } }
+	public string _text { private get; set; }
+	public bool HasText { get { return _text != null && _text != string.Empty; } }
+	public string iText { get { return HasText ? _text : null; } }
+
+	[XmlElement("TextType")]
+	public string _textType { private get; set; }
+	public TextType iTextType { 
+		get {
+			bool realType = _textType != null && Enum.IsDefined (typeof(TextType), _textType);
+			return realType ? (TextType)Enum.Parse (typeof(TextType), _textType) : TextType.Option;
+		}
+	}
 
 	[XmlElement("Image")]
 	public string _image { private get; set; }
-	public bool HasImage { get { return iImage != null; } }
+	public bool HasImage { get { return _image != null && iImage != null; } }
 	public Sprite iImage {
 		get {
 			Texture2D image = Resources.Load<Texture2D> (string.Concat ("Visual/", _image));
@@ -59,48 +101,123 @@ public class Interaction {
 				Vector2 pivot = Vector2.zero;
 				return Sprite.Create (image, rect, pivot);
 			} else {
+				#if (DEBUG)
+					Debug.Log ("Could not find a texture named " + _image + ". Check the Resources/Visual folder.");
+				#endif
+				return null;
+			}
+		}
+	}
+
+	[XmlElement("Image2")]
+	public string _image2 { private get; set; }
+	public bool HasImage2 { get { return _image2 != null && iImage2 != null; } }
+	public Sprite iImage2 {
+		get {
+			Texture2D image = Resources.Load<Texture2D> (string.Concat ("Visual/", _image2));
+			if (image != null) {
+				Rect rect = new Rect (0, 0, image.width, image.height);
+				Vector2 pivot = Vector2.zero;
+				return Sprite.Create (image, rect, pivot);
+			} else {
+				#if (DEBUG)
+				Debug.Log ("Could not find a texture named " + _image2 + ". Check the Resources/Visual folder.");
+				#endif
 				return null;
 			}
 		}
 	}
 
 	[XmlElement("Next")]
-	public string iNext;
+	public string _next { private get; set; }
+	public bool HasNext { get { return _next != null && _next != string.Empty; } }
+	public string iNext { get { return HasNext ? _next : null; } }
+
+	[XmlElement("NextInteractor")]
+	public string _nextInteractor { private get; set; }
+	public bool NextNotSelf { get { return _nextInteractor != null && _nextInteractor != string.Empty; } }
+	public string iNextInteractor { get { return NextNotSelf ? _nextInteractor : null; } }
 
 	[XmlElement("GiveTags")]
 	public string _giveTags { private get; set;}
-	public List<string> iGiveTags { get { return (_giveTags == "") ? new List<string>() : _giveTags.Split ('|').ToList (); } }
+	public List<string> iGiveTags { 
+		get { 
+			bool noTags = _giveTags == null || _giveTags == string.Empty;
+			return noTags ? new List<string> () : _giveTags.Split ('|').ToList ();
+		}
+	}
 
 	[XmlElement("TakeTags")]
 	public string _takeTags { private get; set;}
-	public List<string> iTakeTags { get { return (_takeTags == "") ? new List<string>() : _takeTags.Split ('|').ToList (); } }
+	public List<string> iTakeTags { 
+		get { 
+			bool noTags = _takeTags == null || _takeTags == string.Empty;
+			return noTags ? new List<string> () : _takeTags.Split ('|').ToList ();
+		}
+	}
 
 	[XmlElement("GiveItems")]
 	public string _giveItems { private get; set;}
-	public List<string> iGiveItems { get { return (_giveItems == "") ? new List<string>() : _giveItems.Split ('|').ToList (); } }
+	public List<string> iGiveItems { 
+		get { 
+			bool noTags = _giveItems == null || _giveItems == string.Empty;
+			return noTags ? new List<string> () : _giveItems.Split ('|').ToList ();
+		}
+	}
 
 	[XmlElement("TakeItems")]
 	public string _takeItems { private get; set;}
-	public List<string> iTakeItems { get { return (_takeItems == "") ? new List<string>() : _takeItems.Split ('|').ToList (); } }
+	public List<string> iTakeItems { 
+		get { 
+			bool noTags = _takeItems == null || _takeItems == string.Empty;
+			return noTags ? new List<string> () : _takeItems.Split ('|').ToList ();
+		}
+	}
 
 	[XmlElement("SpecialActions")]
 	public string _specialActions { private get; set;}
-	public List<string> iSpecialActions { get { return (_specialActions == "") ? new List<string>() : _specialActions.Split ('|').ToList (); } }
+	public List<string> iSpecialActions { 
+		get { 
+			bool noTags = _specialActions == null || _specialActions == string.Empty;
+			return noTags ? new List<string> () : _specialActions.Split ('|').ToList ();
+		}
+	}
+
+
+	// A static text box containing prompts
+	[XmlElement("TextBox")]
+	public string TextBoxText;
+
+	// A booean for whether or not the interactable is distance specific
+	[XmlElement("IgnoreDistance")]
+	public string _ignoreDistance {private get; set;}
+	public bool IgnoreDistance {
+		get {
+			return Convert.ToBoolean(_ignoreDistance);
+		}
+	}
 
 	public bool IsValid {
 		get {
-			bool hasALL = TagManager.Instance.HasAllTags (iAllTags);
-			bool hasANY = TagManager.Instance.HasAnyTags (iAnyTags);
-			bool hasNONE = TagManager.Instance.HasNoneTags (iNoneTags);
-			if (GameManager.DEBUGGING) {
-				Debug.Log ("Checking Validity. ALL: " + hasALL.ToString() + " ANY: " + hasANY.ToString() + " NONE: " + hasNONE.ToString());
-			}
+			bool hasALL = GameManager.HasAllTags (iAllTags);
+			bool hasANY = GameManager.HasAnyTags (iAnyTags);
+			bool hasNONE = GameManager.HasNoneTags (iNoneTags);
+			#if (DEBUG)
+				Debug.Log ("Checking Validity for " + iName + ". ALL: " + hasALL.ToString() + " ANY: " + hasANY.ToString() + " NONE: " + hasNONE.ToString() + " -- Returning " + (hasALL && hasANY && hasNONE).ToString());
+			#endif
 			return (hasALL && hasANY && hasNONE);
 		}
 	}
 
 	override public string ToString(){
-		return "Name: " + iName + " Type: " + iType.ToString ();// + " AnyTags: " + string.Join (" ", iAnyTags.ToArray ());
+		return "Name: " + iName +
+			" Type: " + iType +
+			" ALLTags: " + string.Join (" ", iAllTags.ToArray ()) +
+			" ANYTags: " + string.Join (" ", iAnyTags.ToArray ()) +
+			" NONETags: " + string.Join (" ", iNoneTags.ToArray ()) +
+			" MaxDist: " + iMaxDist.ToString () +
+			" HasText: " + HasText +
+			" HasImage " + HasImage;
 	}
 }
 
@@ -114,6 +231,10 @@ public class InteractionList{
 	public static List<Interaction> Load(string path){
 		TextAsset _xml = Resources.Load<TextAsset> (path);
 
+		if (_xml == null) {
+			return new List<Interaction> ();
+		}
+
 		XmlSerializer serializer = new XmlSerializer (typeof(InteractionList));
 
 		StringReader reader = new StringReader (_xml.text);
@@ -121,60 +242,244 @@ public class InteractionList{
 		InteractionList iList = serializer.Deserialize (reader) as InteractionList;
 
 		reader.Close ();
-	
+
 		return iList.List;
 	}
 }
 
-public class InteractionManager{
-	//currently singleton. May remove if all methods end up static and this becomes a utility class.
-	private InteractionManager _instance;
-	public InteractionManager Instance {
-		get {
-			if (_instance == null) {
-				_instance = new InteractionManager ();
+public class InteractionManager : MonoBehaviour {
+
+	[SerializeField]
+	private GameObject monologueDisplay = null;
+	[SerializeField]
+	private GameObject optionDisplay = null;
+	[SerializeField]
+	private GameObject textPanel = null;
+	[SerializeField]
+	private GameObject leftImage = null;
+	[SerializeField]
+	private GameObject rightImage = null;
+	[SerializeField]
+	private GameObject dimBackground=null;
+
+	void AddInteractionText(Interactable interactor, Interaction interaction){
+		if (interaction.HasText) {
+			GameObject newText;
+			textPanel.SetActive (true);
+			GameManager.InteractionManager.dimBackground.SetActive (true);
+			if (interaction.HasImage) {
+				ShowLeftImage (interaction.iImage);
 			}
-			return _instance;
+			if (interaction.HasImage2) {
+				ShowRightImage (interaction.iImage2);
+			}
+			switch (interaction.iTextType) {
+			case TextType.Monologue:
+				newText = Instantiate (monologueDisplay) as GameObject;
+				newText.transform.SetParent (textPanel.transform);
+				newText.GetComponentInChildren<Text> ().text = interaction.iText;
+				break;
+			case TextType.Option:
+				newText = Instantiate (optionDisplay) as GameObject;
+				newText.transform.SetParent (textPanel.transform);
+				newText.GetComponentInChildren<Text> ().text = interaction.iText;
+				newText.GetComponent<InteractionButton> ().interactor = interactor;
+				newText.GetComponent<InteractionButton> ().interaction = interaction;
+				newText.transform.localScale = Vector3.one;
+				break;
+			default:
+				#if (DEBUG)
+				Debug.Log (interaction.iName + " isn't an option or a monologue.");
+				#endif
+				break;
+			}
+		} else {
+			#if (DEBUG)
+			Debug.Log(interaction.iName + " in " + interactor.gameObject.name + " doesn't have text. Why are you trying to add it?");
+			#endif
 		}
 	}
 
-	public static void HandleInteractions(Interactable interactor, List<Interaction> possibleInteractions){
-		List<Interaction> validInteractions = possibleInteractions.FindAll (interaction => interaction.IsValid);
-		if (GameManager.DEBUGGING) {
-			Debug.Log ("Searching for valid interactions. Number of valid interactions:" + validInteractions.Count);
+	void ShowLeftImage(Sprite image){
+		leftImage.SetActive (true);
+		leftImage.transform.FindChild ("InteractionImage").GetComponent<Image> ().sprite = image;
+	}
+
+	void ShowRightImage(Sprite image){
+		rightImage.SetActive (true);
+		rightImage.transform.FindChild ("InteractionImage").GetComponent<Image> ().sprite = image;
+	}
+		
+	void ClearTextPanel(){
+		List<Transform> textObjects = textPanel.GetComponentsInChildren<Transform> ().ToList ();
+		foreach (Transform t in textObjects) {
+			if (textPanel.transform != t) {
+				Destroy (t.gameObject);
+			}
 		}
-		foreach (Interaction interaction in validInteractions) {
-			if (interaction.HasText) {
-				UIManager.Instance.CloseInteractionPanel ();
-				UIManager.Instance.ShowInteractionPanel ();
-				InteractionButton.Generate (interactor, interaction, possibleInteractions);
-				if (interaction.HasImage) {
-					UIManager.Instance.ChangeInteractionImage (interaction.iImage);
-				}
+	}
+
+	public void ClearInteractions(){
+		ClearTextPanel ();
+		GameManager.UIManager.DisableTapToContinue ();
+		textPanel.SetActive (false);
+		GameManager.InteractionManager.dimBackground.SetActive (false); 
+		rightImage.SetActive (false);
+		leftImage.SetActive (false);
+	}
+
+	public static void HandleClick(Interactable clicked){
+		List<Interaction> clickInteractions = clicked.Interactions.FindAll (i => i.iType == InteractionType.Click);
+		if(clicked.Debugging) {Debug.Log ("Clicked on " + clicked.gameObject.name + ". Valid interactions: " + string.Join (" ", clickInteractions.Select(i=>i.iName).ToArray ()));}
+		HandleInteractionList (clicked, 
+			clickInteractions);
+	}
+
+	public static void HandleUseItem(Interactable target){
+		GameObject selected = GameManager.InventoryManager.Selected;
+		if (selected != null) {
+			List<Interaction> prevalidatedUseInteractions = target.Interactions.FindAll (i => i.iType == InteractionType.UseItem && i.IsValid);
+			if (target.Debugging) {Debug.Log ("Used " + GameManager.InventoryManager.Selected.name +" on " + target.gameObject.name + ". Valid interactions: " + string.Join (" ", prevalidatedUseInteractions.Select(i=>i.iName).ToArray ()));}
+			if (prevalidatedUseInteractions.Count > 0) {
+				HandleInteractionList (target, prevalidatedUseInteractions);
 			} else {
-				TagManager.Instance.TakeTags (interaction.iTakeTags);
-				TagManager.Instance.GiveTags (interaction.iGiveTags);
-				InventoryManager.Instance.TakeItems (interaction.iTakeItems);
-				InventoryManager.Instance.GiveItems (interaction.iGiveItems);
-				interactor.DoSpecialActions (interaction.iSpecialActions);
+                Interaction defaultError = target.Interactions.Find(i => i.iName == "DefaultCannotUse");
+                    //GameManager.InventoryManager.Selected.GetComponent<Interactable> ().Interactions.Find (i => i.iName == "DefaultCannotUse");
+				if (defaultError != null) {
+					HandleInteraction (selected.GetComponent<Interactable> (), defaultError);
+				} else if (target.Debugging) {
+					Debug.Log (target.name + " doesn't have a 'DefaultCannotUse' interaction in its XML.");
+				}
+
 			}
+		} else if(target.Debugging) {Debug.Log("There is no selected item to use on " + target.gameObject.name);}
+	}
+
+	public static void HandleOrange(Interactable orangeHit){
+		List<Interaction> orangeInteractions = orangeHit.Interactions.FindAll (i => i.iType == InteractionType.Orange);
+		if (orangeHit.Debugging) {Debug.Log ("Hit " + orangeHit.gameObject.name + " with an orange. Valid interactions: " + string.Join(" ", orangeInteractions.Select(i=>i.iName).ToArray()));}
+		HandleInteractionList (orangeHit, orangeInteractions);
+	}
+
+	public static void HandleDrop(Interactable dropped){
+		List<Interaction> droppedInteractions = dropped.Interactions.FindAll (i => i.iType == InteractionType.Orange);
+		if (dropped.Debugging) {Debug.Log ("Dropped " + dropped.gameObject.name + ". Valid interactions: " + string.Join(" ", droppedInteractions.Select(i=>i.iName).ToArray()));}
+		if (droppedInteractions.Count > 0) {
+			HandleInteractionList (dropped, droppedInteractions);
+		} else {
+			dropped.DoSpecialActions (new List<string> { "ReturnSelected" });
 		}
 	}
 
-	public static void CompleteInteraction(Interactable completer, Interaction completed){
-		UIManager.Instance.CloseInteractionPanel ();
-		TagManager.Instance.TakeTags (completed.iTakeTags);
-		TagManager.Instance.GiveTags (completed.iGiveTags);
-		InventoryManager.Instance.TakeItems (completed.iTakeItems);
-		InventoryManager.Instance.GiveItems (completed.iGiveItems);
-		completer.DoSpecialActions (completed.iSpecialActions);
-		if (completed.iNext != "") {
-			List<Interaction> nameMatches = completer.Interactions.FindAll (interaction => (interaction.iName == completed.iNext) &&
-			                                (interaction.iType == InteractionType.Derivative));
-			if (GameManager.DEBUGGING) {
-				Debug.Log ("Checking next interactions. Possible Next Count: " + completer.Interactions.Count + " Matches: " + nameMatches.Count);
+	public static void HandleInteractionList(Interactable interactor, List<Interaction> interactionList, bool forceSuppressMovement = false, bool forceIgnoreDistance = false){
+		
+		List<Interaction> validInteractions = interactionList.FindAll (i => i.IsValid);
+		float interactionDistance = Vector3.Distance (interactor.transform.position, GameManager.PlayerCharacter.transform.position);
+		#if (DEBUG)
+		Debug.Log("Valid Interactions: " + string.Join(" ", validInteractions.Select(i=>i.iName).ToArray()));
+		Debug.Log("Distance Threshold: " + interactionDistance.ToString());
+		#endif
+		List<Interaction> tooFar = null;
+
+		if (forceIgnoreDistance) {
+			tooFar = new List<Interaction>();
+		} else {
+			tooFar = validInteractions.FindAll (i => interactionDistance > i.iMaxDist && !i.IgnoreDistance);
+		}
+		List<Interaction> closeEnough = validInteractions.Except (tooFar).ToList ();
+
+		if (tooFar.Count == 0) {
+			foreach (Interaction interaction in closeEnough) {
+				if (interaction.HasText) {
+					DisplayInteraction (interactor, interaction);
+				} else {
+					CompleteInteraction (interactor, interaction);
+				}
 			}
-			HandleInteractions (completer, nameMatches);
+			List<Interaction> displayed = closeEnough.Where (i => i.HasText && i.iTextType != TextType.Floating).ToList();
+			if(displayed.Count () == 1) {
+				GameManager.UIManager.EnableTapToContinue (interactor, displayed.Single ());
+			}
+		} else {
+			if (!forceSuppressMovement) {
+
+
+				Vector3 v = getPositionOfInteractable(interactor) + new Vector3 (1, 0,0);
+				Debug.Log("Moving to this: " + interactor);
+				GameObject.Find ("Sadie").GetComponent<NoahMove> ().GoTo (v); 
+			}
+
+			//from tooFar, find all interactions with an alternative, and from that get all interactions from the master list whose name matches that alternative, and add that to the close enough interactions.
+			List<Interaction> alternatives = tooFar.Where (x => x.iTooFar != null).SelectMany (y => validInteractions.FindAll (z => z.iName == y.iTooFar)).Union(closeEnough).Distinct().ToList();
+
+			HandleInteractionList (interactor, alternatives);
 		}
 	}
+
+	static Vector3 getPositionOfInteractable (Interactable interactable) {
+		SpecialActions specialActionsOfInteractable = interactable.GetComponent<SpecialActions>();
+
+		if (specialActionsOfInteractable == null) {
+			return interactable.transform.position;
+		} else {
+			return specialActionsOfInteractable.GetPosition();
+		}
+	}
+
+	public static void HandleInteraction(Interactable interactor, Interaction interaction){
+		if (interaction.HasText) {
+			
+			DisplayInteraction (interactor, interaction);
+		} else {
+			CompleteInteraction (interactor, interaction);
+		}
+	}
+
+	static void DisplayInteraction(Interactable interactor, Interaction interaction){
+		if (interaction.HasText) {
+			if (interaction.iTextType == TextType.Floating) {
+				interactor.GetComponentInChildren<SpeechBubble> ().Say (interactor, interaction);
+			} else {
+				
+				GameManager.InteractionManager.AddInteractionText (interactor, interaction);
+			}
+		}
+
+		CheckForTextBoxText(interaction);
+	}
+
+	// Checks for text to be displayed in the help text box
+	static void CheckForTextBoxText (Interaction interaction) {
+
+		if (interaction.TextBoxText == EventList.HIDE_TEXT_BOX) {
+		
+			EventController.Event(PSEventType.HideTextBox);
+
+		} else if (!string.IsNullOrEmpty(interaction.TextBoxText)) {
+
+			EventController.Event(EventList.HELP_TEXT_BOX, interaction.TextBoxText);
+
+		}
+	}
+
+	public static void CompleteInteraction(Interactable interactor, Interaction interaction){
+		if (interactor.Debugging) {
+			Debug.Log ("Completing " + interaction.iName + " for " + interactor.gameObject.name);
+		}
+		GameManager.TakeTags (interaction.iTakeTags);
+		GameManager.GiveTags (interaction.iGiveTags);
+		GameManager.InventoryManager.TakeItemList (interaction.iTakeItems);
+		GameManager.InventoryManager.GiveItemList (interaction.iGiveItems);
+		interactor.DoSpecialActions (interaction.iSpecialActions);
+		if (interaction.HasNext) {
+			Interactable nextInteractor = interaction.NextNotSelf ? GameObject.Find (interaction.iNextInteractor).GetComponent<Interactable> () : interactor;
+			List<Interaction> nextInteractions = nextInteractor.Interactions.FindAll (i => i.iType == InteractionType.Derivative && i.iName == interaction.iNext);
+			if (interactor.Debugging) {
+				Debug.Log ("Getting next interactions for " + interaction.iName + ". Valid interactions: " + nextInteractions.Count);
+			}
+			HandleInteractionList (nextInteractor, nextInteractions);
+		}
+	}
+
+
 }

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+		  <Name>examine</Name>
+		  <Type>Click</Type>
+		  <Next>examine_hook_dirty</Next>
+		  <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <NONETags>hasHookDirty</NONETags>
+      <ALLTags>tutorialTappedHook</ALLTags>
+      <GiveItems>Hook_Dirty</GiveItems>
+      <SpecialActions>Destroy</SpecialActions>
+    </Interaction>
+    <Interaction>
+		  <Name>use_rag</Name>
+		  <Type>UseItem</Type>
+		  <ALLTags>holdingRag</ALLTags>
+		  <Next>use_rag_hook</Next>
+		  <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
+		  <Name>DefaultCannotUse</Name>
+		  <Type>Derivative</Type>
+		  <Next>DefaultCannotUse</Next>
+		  <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+  </Interactions>
+</InteractionList>
