@@ -154,6 +154,26 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		}
 	}
 
+	// Gets a report on the current items in the inventory
+	public InventoryReport GetReport () {
+		return new InventoryReport (	
+			PollItemsInInventory ().ToArray()
+		);
+	}
+
+	// Gets a list of the current items stored in inventory
+	public List<InventoryItem> PollItemsInInventory () {
+		List<InventoryItem> items = new List<InventoryItem>();
+
+		foreach (InventorySlot slot in slots) {
+			if (slot.HasInventoryItem()) {
+				items.Add(slot.GetInventoryItem());
+			}
+		}
+
+		return items;
+	}
+
 	#region IPointerEnterHandler implementation
 
 	public void OnPointerEnter (PointerEventData eventData)

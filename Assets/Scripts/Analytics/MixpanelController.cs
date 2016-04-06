@@ -76,16 +76,62 @@ public class MixpanelController : MonoBehaviour
 	
 	//establishes the in game event references that send MixPanel events
 	void LinkToEvents () {
-		
+		EventController.OnNamedEvent += handleNamedEvents;	
 	}
 
 
 
 	//unlinks from the game event references
 	void UnlinkFromEvents () {
-		
+		EventController.OnNamedEvent -= handleNamedEvents;	
 	}
-		
+
+	void handleNamedEvents (string eventName) {
+		switch (eventName) {
+
+		case EventList.INVENTORY_ITEM_COLLECTED:
+			sendInventoryEvent(eventName, GameManager.InventoryManager.GetReport());
+			break;
+
+		case EventList.INVENTORY_ITEM_DESTROYED:
+			sendInventoryEvent(eventName, GameManager.InventoryManager.GetReport());
+			break;
+
+		case EventList.MATEY_BUTTON_CLICKED:
+			sendSimpleNamedEvent(eventName);
+			break;
+
+		case EventList.PLAY_BUTTON_CLICKED:
+			sendSimpleNamedEvent(eventName);
+			break;
+
+		case EventList.SOUND_TOGGLED_ON_OF:
+			sendSimpleNamedEvent(eventName);
+			break;
+
+		case EventList.GAME_END_SCREEN_REACHED:
+			sendSimpleNamedEvent(eventName);
+			break;
+		}
+	}
+
+	// Send an empty event with no added properties
+	void sendSimpleNamedEvent (string eventName) {
+		Mixpanel.SendEvent (
+			name,
+			null
+		);
+	}
+
+	// Send an inventory event (containing a full status on the inventory
+	// TODO: Add an inventory report class: containing fall status of inventory in a dict
+	void sendInventoryEvent (string eventName, InventoryReport inventoryReport) {
+		Mixpanel.SendEvent (
+			name,
+			inventoryReport.Get()
+		);
+	}
+
 	#region Example event 
 	// Example event
 	// Parameters for the function are a handy way to have an event take in multiple Properties
