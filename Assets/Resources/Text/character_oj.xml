@@ -5,6 +5,7 @@
     <Interaction>
       <Name>oj_intro_00</Name>
       <Type>Click</Type>
+      <NONETags>hasOrange</NONETags>
       <Text>Orange please!</Text>
       <GiveItems>Orange</GiveItems>
     </Interaction>

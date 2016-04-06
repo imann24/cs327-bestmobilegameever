@@ -35,6 +35,12 @@ public class SaveLoad {
 		}
 
 	}
+
+	public bool HasSaveData(){
+		return true;
+	}
+		
+
 	public void ClearSave(){
 
 		if (File.Exists (Application.persistentDataPath + "/Save.sav")) {

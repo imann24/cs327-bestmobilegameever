@@ -144,4 +144,13 @@ public static class ArrayUtil {
 		return sum;
 	}
 
+	public static string [] CopyColumn (string[,] matrix, int columnIndex) {
+		string[] column = new string[matrix.GetLength(1)];
+		for (int y = 0; y < column.Length; y++) {
+			column[y] = matrix[columnIndex, y];
+		}
+
+		return column;
+	}
+
 }

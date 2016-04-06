@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public static class SceneController {
+	
+
 
 	public static void LoadMainMenu () {
 		LoadScene(PSScene.MainMenu);
@@ -19,7 +21,7 @@ public static class SceneController {
 
 	public static void LoadOptionsMenu () {
 		LoadScene(PSScene.OptionsMenu);
-	}
+	} 
 
 
 	public static void LoadCredits () {

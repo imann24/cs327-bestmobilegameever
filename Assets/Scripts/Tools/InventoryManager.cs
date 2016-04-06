@@ -15,23 +15,29 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	private Sprite HideButton = null;
 	private Vector2 dragAnchor;
 
+
+
 	public GameObject Selected { get; private set; }
 	public bool PanelShowing { get; private set; }
 
 	private InventorySlot[] slots { get { return GetComponentsInChildren<InventorySlot> (); } }
 	public InventorySlot FirstEmptySlot { get { return slots.FirstOrDefault (slot => slot.Contents == null); } }
 
+
 	/// <summary>
 	/// Gives the item.
 	/// </summary>
 	/// <returns><c>true</c>, if item was given, <c>false</c> otherwise.</returns>
+
 	public bool GiveItem(string item){
+		GameManager.InventoryManager.gameObject.SetActive (true);
 		if (FirstEmptySlot) {
 			Show ();
 			GameObject itemToGive = InventoryItem.Create (item);
 			if (itemToGive) {
 				this.gameObject.SetActive (true);
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
+				itemToGive.GetComponent<Image> ().preserveAspect = true; 
 				return true;
 			} else {
 				#if (DEBUG)
@@ -69,6 +75,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		GameManager.InventoryManager.ReturnSelected ();
 		InventoryItem itemToTake = GetComponentsInChildren<InventoryItem> ().FirstOrDefault (i => i.gameObject.name == item);
 		if (itemToTake != null) {
+			GameManager.TakeTag (itemToTake.GetComponent<InventoryItem> ().HasTag);
 			Destroy (itemToTake.gameObject);
 			return true;
 		} else {
@@ -111,6 +118,11 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	/// <param name="item">Item.</param>
 	public void Select(GameObject item){
 		Selected = item;
+	}
+
+	// Toggles the gameobject on and off
+	public void ToggleActive (bool isActive) {
+		gameObject.SetActive(isActive);
 	}
 
 	/// <summary>

@@ -6,7 +6,7 @@
       <Type>Click</Type>
 	    <ALLTags>hasHook</ALLTags>
 	    <SpecialActions>SoundOpenDoor</SpecialActions>
-	    <MaxDistance>100</MaxDistance>
+      <MaxDistance>100</MaxDistance>
       <TooFar>move_to_door_and_exit</TooFar>
 	  <Next>exit_tutorial_room</Next>
 	  <NextInteractor>Cutscene_Handler</NextInteractor>
@@ -21,6 +21,7 @@
     <Interaction>
       <Name>move_to_door_and_exit</Name>
       <Type>Derivative</Type>
+      <IgnoreDistance>true</IgnoreDistance>
       <SpecialActions>ComeHere|SoundOpenDoor</SpecialActions>
 	  <Next>exit_tutorial_room</Next>
 	  <NextInteractor>Cutscene_Handler</NextInteractor>
