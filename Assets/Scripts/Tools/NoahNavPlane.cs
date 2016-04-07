@@ -32,24 +32,26 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 
 	public void OnPointerClick (PointerEventData eventData)
 	{
-		#if DEBUG
-		Debug.Log("Clicked on Nav Floor.");
-		#endif
-		NavMeshPath path = new NavMeshPath ();
-		Vector3 destination = eventData.pointerCurrentRaycast.worldPosition;
-		Player.GetComponent<NavMeshAgent> ().CalculatePath (destination, path);
-		//if(path.status == NavMeshPathStatus.PathComplete){
-		if (destination.x > Player.transform.position.x) {
-			if (flipped) {
-				Flip ();
+		if (!UIManager._instance.paused){
+			#if DEBUG
+			Debug.Log("Clicked on Nav Floor.");
+			#endif
+			NavMeshPath path = new NavMeshPath ();
+			Vector3 destination = eventData.pointerCurrentRaycast.worldPosition;
+			Player.GetComponent<NavMeshAgent> ().CalculatePath (destination, path);
+			//if(path.status == NavMeshPathStatus.PathComplete){
+			if (destination.x > Player.transform.position.x) {
+				if (flipped) {
+					Flip ();
+				}
+			} else {
+				if (!flipped) {
+					Flip ();
+				}
 			}
-		} else {
-			if (!flipped) {
-				Flip ();
-			}
-		}
 
-		Player.SetDestination (destination);
-		//}
+			Player.SetDestination (destination);
+			//}
+		}
 	}
 }

@@ -3,7 +3,7 @@
  * Description: Used to control the audio in the game
  * Is a Singleton (only one instance can exist at once)
  * Attached to a GameObject that stores all AudioSources and AudioListeners for the game
- * Dependencies: AudioFile, AudioLoader, AudioList, AudioUtil, RandomizedQueue<AudioFile>
+ * Dependencies: AudioFile, AudioLoader, AudioList, AudioUtil, RandomizedQueue<AudioFile>, EventList, PSScene
  */
 using UnityEngine;
 using System;
@@ -48,9 +48,7 @@ public class AudioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		PlayMusic();
-
+		PlayMainMenuMusic();
 	}
 
 	void OnDestroy () {
@@ -58,12 +56,28 @@ public class AudioController : MonoBehaviour {
 		UnsubscribeEvents();
 	}
 		
+
+	void OnLevelWasLoaded (int level) {
+		if ((PSScene)level == PSScene.MainMenu) {
+			StopTrackCycling();
+			PlayMainMenuMusic();
+		} else if ((PSScene)level == PSScene.MainGame) {
+			StopMainMenuMusic();
+			StartTrackCycling();
+		}else if ((PSScene)level == PSScene.TutorialScene) {
+			StopMainMenuMusic();
+			StartTrackCycling();
+		} else {
+			StopMainMenuMusic();
+		}
+	}
+
 	// The generic music loop
-	public void PlayMusic () {
+	public void PlayMainMenuMusic () {
 		EventController.Event(PSEventType.StartMusic);
 	}
 
-	public void StopMusic () {
+	public void StopMainMenuMusic () {
 		EventController.Event(PSEventType.StopMusic);
 	}
 		
@@ -84,7 +98,6 @@ public class AudioController : MonoBehaviour {
 	}
 
 	public void Stop (AudioFile file) {
-
 		if (ChannelExists(file.Channel)) {
 			AudioSource source = GetChannel(file.Channel);
 
@@ -173,9 +186,7 @@ public class AudioController : MonoBehaviour {
 			if (isAudioListener) {
 				AddAudioListener();
 			}
-
-			// TODO: Enable after tracks have been delivered
-			// initCyclingAudio();
+			initCyclingAudio();
 	
 		}
 	}
@@ -316,7 +327,7 @@ public class AudioController : MonoBehaviour {
 	}
 
 	// Used to loop through lists of tracks in pseudo-random order
-	void startTrackCycling () {
+	public void StartTrackCycling () {
 		_sweetenerCoroutine = cycleTracksFrequenecyRange(
 			_sweeteners,
 			ShortestSweetenerPlayFrequenecy,
@@ -333,11 +344,25 @@ public class AudioController : MonoBehaviour {
 		);
 	}
 
+	public void StopTrackCycling () {
+		StopCoroutine(_sweetenerCoroutine);
+		StopCoroutine(_swellCoroutine);
+	}
+
 	void initCyclingAudio () {
-		//TODO: Init Queue's with sound files once they're delivered
 		_sweeteners = new RandomizedQueue<AudioFile>();
 		_swells = new RandomizedQueue<AudioFile>();
-		startTrackCycling();
+		// Init Queue's with sound files
+		List<AudioFile> list = new List<AudioFile>();
+		// Get all deck music
+		playEvents.TryGetValue ("onesoundtrackevery100to200seconds",out list);
+		foreach (AudioFile track in list) {
+			_swells.Enqueue (track);
+		}
+		playEvents.TryGetValue ("every8to20seconds",out list);
+		foreach (AudioFile track in list) {
+			_sweeteners.Enqueue (track);
+		}
 	}
 
 	// Plays audio files back to back
@@ -361,7 +386,6 @@ public class AudioController : MonoBehaviour {
 	IEnumerator cycleTracksFrequenecyRange (RandomizedQueue<AudioFile> files, float minFrequency, float maxFrequency) {
 		while (_coroutinesActive) {
 			Play(files.Cycle());
-
 			yield return new WaitForSeconds(
 				UnityEngine.Random.Range(
 					minFrequency, 
@@ -370,7 +394,6 @@ public class AudioController : MonoBehaviour {
 			);
 		}
 	}
-
 
 	// Starts an arbitrary amount of coroutines
 	void startCoroutines (params IEnumerator[] coroutines) {

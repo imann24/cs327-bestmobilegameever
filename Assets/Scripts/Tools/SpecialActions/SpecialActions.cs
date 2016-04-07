@@ -33,6 +33,11 @@ public class SpecialActions : MonoBehaviour {
         }
     }
 
+	// Gets the position of the interaction
+	public virtual Vector3 GetPosition () {
+		return transform.position;
+	}
+
     void Update() {
         if (DestroyOnArrive) {
             if (transform.position == MoveToPosition) Destroy(gameObject);
@@ -94,17 +99,18 @@ public void CreateObject(GameObject obj, Vector2 pos) {
         newObject.name = obj.name;
     }
 
-    public void NextInteraction(string name, Interactable interactor = null)
+	public void NextInteraction(string name, Interactable interactor = null, bool forceSuppressMovement = false, bool forceIgnoreDistance = false)
     {
         if (interactor == null) { interactor = gameObject.GetComponent<Interactable>(); }
         List<Interaction> iList = interactor.Interactions.FindAll(i => (i.iName == name) && (i.iType == InteractionType.Derivative));
         if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Attempting to run interaction with name '" + name + "' that belongs to " + interactor); }
-        InteractionManager.HandleInteractionList(interactor, iList);
+		InteractionManager.HandleInteractionList(interactor, iList, forceSuppressMovement, forceIgnoreDistance);
     }
     #endregion
 
     #region defaults
     public void DoSpecialActions(List<string> actionList) {
+		Debug.Log(ArrayUtil.ToString(actionList.ToArray()));
 		bool destroy = false;
 		foreach (string action in actionList) {
 			switch (action) {

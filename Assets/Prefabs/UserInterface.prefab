@@ -2974,8 +2974,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanInteract: 1
+  paused: 0
   tapToContinue: {fileID: 124972}
   DimBackground: {fileID: 135308}
+  HelpTextBox: {fileID: 199078, guid: bdf0d7362b58c408d8309d9530576f89, type: 2}
 --- !u!114 &11469820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5646,6 +5648,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HelpTextBox
+      value: 
+      objectReference: {fileID: 199078, guid: bdf0d7362b58c408d8309d9530576f89, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 115826}

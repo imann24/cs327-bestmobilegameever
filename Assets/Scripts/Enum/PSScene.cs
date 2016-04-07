@@ -1,4 +1,5 @@
 ﻿public enum PSScene {
+	SplashScreen,
 	MainMenu,
 	MainGame,
 	OptionsMenu,

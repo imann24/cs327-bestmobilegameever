@@ -66,9 +66,9 @@ public class Interaction {
 	public string _maxDist { private get; set; }
 	public float iMaxDist { 
 		get {
-			float md = 1000000f;
+			float md = 3f;
 			bool valid = _maxDist != null && float.TryParse (_maxDist, out md); 
-			return valid ? md : 1000000f;
+			return valid ? md : 3f;
 		}
 	}
 
@@ -183,6 +183,20 @@ public class Interaction {
 		}
 	}
 
+
+	// A static text box containing prompts
+	[XmlElement("TextBox")]
+	public string TextBoxText;
+
+	// A booean for whether or not the interactable is distance specific
+	[XmlElement("IgnoreDistance")]
+	public string _ignoreDistance {private get; set;}
+	public bool IgnoreDistance {
+		get {
+			return Convert.ToBoolean(_ignoreDistance);
+		}
+	}
+
 	public bool IsValid {
 		get {
 			bool hasALL = GameManager.HasAllTags (iAllTags);
@@ -271,6 +285,7 @@ public class InteractionManager : MonoBehaviour {
 				newText.GetComponentInChildren<Text> ().text = interaction.iText;
 				newText.GetComponent<InteractionButton> ().interactor = interactor;
 				newText.GetComponent<InteractionButton> ().interaction = interaction;
+				newText.transform.localScale = Vector3.one;
 				break;
 			default:
 				#if (DEBUG)
@@ -328,11 +343,12 @@ public class InteractionManager : MonoBehaviour {
 			if (prevalidatedUseInteractions.Count > 0) {
 				HandleInteractionList (target, prevalidatedUseInteractions);
 			} else {
-				Interaction defaultError = GameManager.InventoryManager.Selected.GetComponent<Interactable> ().Interactions.Find (i => i.iName == "DefaultCannotUse");
+                Interaction defaultError = target.Interactions.Find(i => i.iName == "DefaultCannotUse");
+                    //GameManager.InventoryManager.Selected.GetComponent<Interactable> ().Interactions.Find (i => i.iName == "DefaultCannotUse");
 				if (defaultError != null) {
 					HandleInteraction (selected.GetComponent<Interactable> (), defaultError);
-				} else if (selected.GetComponent<Interactable> ().Debugging) {
-					Debug.Log (selected.name + " doesn't have a 'DefaultCannotUse' interaction in its XML.");
+				} else if (target.Debugging) {
+					Debug.Log (target.name + " doesn't have a 'DefaultCannotUse' interaction in its XML.");
 				}
 
 			}
@@ -355,15 +371,23 @@ public class InteractionManager : MonoBehaviour {
 		}
 	}
 
-	public static void HandleInteractionList(Interactable interactor, List<Interaction> interactionList){
+	public static void HandleInteractionList(Interactable interactor, List<Interaction> interactionList, bool forceSuppressMovement = false, bool forceIgnoreDistance = false){
+		
 		List<Interaction> validInteractions = interactionList.FindAll (i => i.IsValid);
 		float interactionDistance = Vector3.Distance (interactor.transform.position, GameManager.PlayerCharacter.transform.position);
 		#if (DEBUG)
 		Debug.Log("Valid Interactions: " + string.Join(" ", validInteractions.Select(i=>i.iName).ToArray()));
 		Debug.Log("Distance Threshold: " + interactionDistance.ToString());
 		#endif
-		List<Interaction> tooFar = validInteractions.FindAll (i => interactionDistance > i.iMaxDist);
+		List<Interaction> tooFar = null;
+
+		if (forceIgnoreDistance) {
+			tooFar = new List<Interaction>();
+		} else {
+			tooFar = validInteractions.FindAll (i => interactionDistance > i.iMaxDist && !i.IgnoreDistance);
+		}
 		List<Interaction> closeEnough = validInteractions.Except (tooFar).ToList ();
+
 		if (tooFar.Count == 0) {
 			foreach (Interaction interaction in closeEnough) {
 				if (interaction.HasText) {
@@ -377,9 +401,28 @@ public class InteractionManager : MonoBehaviour {
 				GameManager.UIManager.EnableTapToContinue (interactor, displayed.Single ());
 			}
 		} else {
+			if (!forceSuppressMovement) {
+
+
+				Vector3 v = getPositionOfInteractable(interactor) + new Vector3 (1, 0,0);
+				Debug.Log("Moving to this: " + interactor);
+				GameObject.Find ("Sadie").GetComponent<NoahMove> ().GoTo (v); 
+			}
+
 			//from tooFar, find all interactions with an alternative, and from that get all interactions from the master list whose name matches that alternative, and add that to the close enough interactions.
 			List<Interaction> alternatives = tooFar.Where (x => x.iTooFar != null).SelectMany (y => validInteractions.FindAll (z => z.iName == y.iTooFar)).Union(closeEnough).Distinct().ToList();
+
 			HandleInteractionList (interactor, alternatives);
+		}
+	}
+
+	static Vector3 getPositionOfInteractable (Interactable interactable) {
+		SpecialActions specialActionsOfInteractable = interactable.GetComponent<SpecialActions>();
+
+		if (specialActionsOfInteractable == null) {
+			return interactable.transform.position;
+		} else {
+			return specialActionsOfInteractable.GetPosition();
 		}
 	}
 
@@ -400,6 +443,22 @@ public class InteractionManager : MonoBehaviour {
 				
 				GameManager.InteractionManager.AddInteractionText (interactor, interaction);
 			}
+		}
+
+		CheckForTextBoxText(interaction);
+	}
+
+	// Checks for text to be displayed in the help text box
+	static void CheckForTextBoxText (Interaction interaction) {
+
+		if (interaction.TextBoxText == EventList.HIDE_TEXT_BOX) {
+		
+			EventController.Event(PSEventType.HideTextBox);
+
+		} else if (!string.IsNullOrEmpty(interaction.TextBoxText)) {
+
+			EventController.Event(EventList.HELP_TEXT_BOX, interaction.TextBoxText);
+
 		}
 	}
 
