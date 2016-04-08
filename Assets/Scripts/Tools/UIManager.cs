@@ -58,13 +58,24 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void Quit(){
-		ScreenFader.FadeOut (); 
-		//reset tags
-		Invoke ("ReturnToMainMenu", 2f);
+		ScreenFader.FadeOut ();
+		Invoke ("ReturnToMainMenu", 0.5f);
 	}
 
 	void ReturnToMainMenu(){
+		GameObject gm = GameObject.Find ("GameManager");
+		GameObject sadie = GameObject.Find ("Sadie");
+		GameObject cs = GameObject.Find ("Cutscene_Handler");
+
+		Destroy (gm);
+		Destroy (sadie);
+		Destroy (cs);
+
+		EventController.Event (PSEventType.HideTextBox);
+
 		SceneController.LoadMainMenu ();
+
+		Destroy (this.gameObject);
 	}
 
     public void EnableTapToContinue(Interactable interactor, Interaction interaction){
