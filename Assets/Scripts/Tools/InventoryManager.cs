@@ -23,7 +23,6 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	private InventorySlot[] slots { get { return GetComponentsInChildren<InventorySlot> (); } }
 	public InventorySlot FirstEmptySlot { get { return slots.FirstOrDefault (slot => slot.Contents == null); } }
 
-
 	/// <summary>
 	/// Gives the item.
 	/// </summary>
@@ -38,6 +37,9 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 				this.gameObject.SetActive (true);
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
 				itemToGive.GetComponent<Image> ().preserveAspect = true; 
+
+				EventController.Event(EventList.INVENTORY_ITEM_COLLECTED, item);
+
 				return true;
 			} else {
 				#if (DEBUG)
@@ -77,6 +79,9 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		if (itemToTake != null) {
 			GameManager.TakeTag (itemToTake.GetComponent<InventoryItem> ().HasTag);
 			Destroy (itemToTake.gameObject);
+
+			EventController.Event(EventList.INVENTORY_ITEM_DESTROYED, item);
+
 			return true;
 		} else {
 			#if (DEBUG)
@@ -153,6 +158,26 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		} else {
 			Show ();
 		}
+	}
+
+	// Gets a report on the current items in the inventory
+	public InventoryReport GetReport () {
+		return new InventoryReport (	
+			PollItemsInInventory ().ToArray()
+		);
+	}
+
+	// Gets a list of the current items stored in inventory
+	public List<InventoryItem> PollItemsInInventory () {
+		List<InventoryItem> items = new List<InventoryItem>();
+
+		foreach (InventorySlot slot in slots) {
+			if (slot.HasInventoryItem()) {
+				items.Add(slot.GetInventoryItem());
+			}
+		}
+
+		return items;
 	}
 
 	#region IPointerEnterHandler implementation

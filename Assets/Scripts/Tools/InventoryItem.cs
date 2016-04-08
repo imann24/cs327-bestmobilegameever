@@ -7,6 +7,12 @@ using System.Linq;
 
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
+	public string Name {
+		get {
+			return gameObject.name;
+		}
+	}
+
 	public string HasTag;
 	public string HoldTag;
 	InventorySlot homeSlot;
