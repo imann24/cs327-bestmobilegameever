@@ -60,8 +60,7 @@ public class MixpanelController : MonoBehaviour
 
 		// Note that versionNumber is not static, this enables it to be set through the inspector - but also means we have to pull the instance
 		AddSuperProperties ("Version", MixpanelController.instance.versionNumber);
-
-		GamePlay(true);
+	
 	}
 
 	//updates the playerprefs count of time to track between game sessions
@@ -118,7 +117,7 @@ public class MixpanelController : MonoBehaviour
 	// Send an empty event with no added properties
 	void sendSimpleNamedEvent (string eventName) {
 		Mixpanel.SendEvent (
-			name,
+			eventName,
 			null
 		);
 	}
@@ -127,7 +126,7 @@ public class MixpanelController : MonoBehaviour
 	// TODO: Add an inventory report class: containing fall status of inventory in a dict
 	void sendInventoryEvent (string eventName, InventoryReport inventoryReport) {
 		Mixpanel.SendEvent (
-			name,
+			eventName,
 			inventoryReport.Get()
 		);
 	}

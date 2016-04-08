@@ -23,7 +23,6 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	private InventorySlot[] slots { get { return GetComponentsInChildren<InventorySlot> (); } }
 	public InventorySlot FirstEmptySlot { get { return slots.FirstOrDefault (slot => slot.Contents == null); } }
 
-
 	/// <summary>
 	/// Gives the item.
 	/// </summary>
@@ -38,6 +37,9 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 				this.gameObject.SetActive (true);
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
 				itemToGive.GetComponent<Image> ().preserveAspect = true; 
+
+				EventController.Event(EventList.INVENTORY_ITEM_COLLECTED);
+
 				return true;
 			} else {
 				#if (DEBUG)
@@ -77,6 +79,9 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		if (itemToTake != null) {
 			GameManager.TakeTag (itemToTake.GetComponent<InventoryItem> ().HasTag);
 			Destroy (itemToTake.gameObject);
+
+			EventController.Event(EventList.INVENTORY_ITEM_DESTROYED);
+
 			return true;
 		} else {
 			#if (DEBUG)
