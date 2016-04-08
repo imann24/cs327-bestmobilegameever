@@ -38,7 +38,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
 				itemToGive.GetComponent<Image> ().preserveAspect = true; 
 
-				EventController.Event(EventList.INVENTORY_ITEM_COLLECTED);
+				EventController.Event(EventList.INVENTORY_ITEM_COLLECTED, item);
 
 				return true;
 			} else {
@@ -80,7 +80,7 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 			GameManager.TakeTag (itemToTake.GetComponent<InventoryItem> ().HasTag);
 			Destroy (itemToTake.gameObject);
 
-			EventController.Event(EventList.INVENTORY_ITEM_DESTROYED);
+			EventController.Event(EventList.INVENTORY_ITEM_DESTROYED, item);
 
 			return true;
 		} else {

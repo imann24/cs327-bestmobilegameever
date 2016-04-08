@@ -76,6 +76,7 @@ public class MixpanelController : MonoBehaviour
 	//establishes the in game event references that send MixPanel events
 	void LinkToEvents () {
 		EventController.OnNamedEvent += handleNamedEvents;	
+		EventController.OnNamedTextEvent += handleNamedTextEvents;
 	}
 
 
@@ -83,18 +84,11 @@ public class MixpanelController : MonoBehaviour
 	//unlinks from the game event references
 	void UnlinkFromEvents () {
 		EventController.OnNamedEvent -= handleNamedEvents;	
+		EventController.OnNamedTextEvent -= handleNamedTextEvents;
 	}
 
 	void handleNamedEvents (string eventName) {
 		switch (eventName) {
-
-		case EventList.INVENTORY_ITEM_COLLECTED:
-			sendInventoryEvent(eventName, GameManager.InventoryManager.GetReport());
-			break;
-
-		case EventList.INVENTORY_ITEM_DESTROYED:
-			sendInventoryEvent(eventName, GameManager.InventoryManager.GetReport());
-			break;
 
 		case EventList.MATEY_BUTTON_CLICKED:
 			sendSimpleNamedEvent(eventName);
@@ -111,6 +105,28 @@ public class MixpanelController : MonoBehaviour
 		case EventList.GAME_END_SCREEN_REACHED:
 			sendSimpleNamedEvent(eventName);
 			break;
+		}
+	}
+
+	void handleNamedTextEvents (string eventName, string text) {
+		InventoryReport report;
+
+		switch (eventName) {
+
+
+		case EventList.INVENTORY_ITEM_COLLECTED:
+			report = GameManager.InventoryManager.GetReport();
+			report.AddItemCollected(text);
+			sendInventoryEvent(eventName, report);
+			break;
+
+		case EventList.INVENTORY_ITEM_DESTROYED:
+			report = GameManager.InventoryManager.GetReport();
+			report.AddItemDestroyed(text);
+			sendInventoryEvent(eventName, report);
+			break;
+
+
 		}
 	}
 
