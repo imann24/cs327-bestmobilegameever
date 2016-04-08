@@ -48,7 +48,8 @@ public class AudioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayMainMenuMusic();
+		//PlayMainMenuMusic();
+		OnLevelWasLoaded(Application.loadedLevel);
 	}
 
 	void OnDestroy () {
