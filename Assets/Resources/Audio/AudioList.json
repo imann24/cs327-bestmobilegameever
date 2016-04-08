@@ -68,7 +68,7 @@
 			“EventNames”:["ChatterStart"],
 			"StopEventNames":["ChatterStop"],
 			“Loop”:true,
-			“Type”: "Ambience",
+			“Type”: "FX",
 			“Channel”:1,
 			"Volume": 100
 		},
@@ -329,7 +329,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -338,7 +338,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -347,7 +347,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -356,7 +356,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -365,7 +365,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -374,7 +374,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -383,7 +383,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -392,7 +392,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -401,7 +401,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -410,7 +410,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -419,7 +419,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -428,7 +428,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -437,7 +437,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -446,7 +446,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -455,7 +455,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -464,7 +464,7 @@
 			“EventNames”:["every8to20seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "Sweetener",
+			“Type”: "FX",
 			“Channel”:4,
 			"Volume": 50
 		},
@@ -473,7 +473,7 @@
 			“EventNames”:["enterscene"],
 			"StopEventNames":["exitscene"],
 			“Loop”:true,
-			“Type”: "Ambience",
+			“Type”: "FX",
 			“Channel”:3,
 			"Volume": 60
 		},
