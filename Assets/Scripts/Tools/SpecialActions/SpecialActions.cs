@@ -110,7 +110,6 @@ public void CreateObject(GameObject obj, Vector2 pos) {
 
     #region defaults
     public void DoSpecialActions(List<string> actionList) {
-		Debug.Log(ArrayUtil.ToString(actionList.ToArray()));
 		bool destroy = false;
 		foreach (string action in actionList) {
 			switch (action) {

@@ -20,4 +20,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler{
 			GameManager.InventoryManager.Selected.GetComponent<InventoryItem> ().MoveTo (this);
 		}
 	}
+
+	public bool HasInventoryItem () {
+		return GetComponentInChildren<InventoryItem>() != null;
+	}
+
+	public InventoryItem GetInventoryItem () {
+		return GetComponentInChildren<InventoryItem>();
+	}
 }
