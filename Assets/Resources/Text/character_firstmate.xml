@@ -276,7 +276,7 @@
       <Name>firstmate_give_mop_fail_00</Name>
       <Type>UseItem</Type>
       <ALLTags>firstmateQuestInProgress1|holdingMopHead</ALLTags>
-      <NONETags>portraitShown</NONETags>
+      <NONETags>mopInked</NONETags>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
       <Text>Oh? Have you found it? Let me...</Text>
@@ -309,7 +309,7 @@
     <Interaction>
       <Name>firstmate_give_mop_success_00</Name>
       <Type>UseItem</Type>
-      <ALLTags>firstmateQuestInProgress1|holdingMopHead|portraitShown</ALLTags>
+      <ALLTags>firstmateQuestInProgress1|holdingMopHead|mopInked</ALLTags>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
       <Text>Back again? What have you found this time? Let me see, now.</Text>

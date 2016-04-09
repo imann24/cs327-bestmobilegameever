@@ -216,6 +216,18 @@
       <Text>Eugh.</Text>
       <TextType>Floating</TextType>
     </Interaction>
+    <Interaction>
+      <Name>use_mop_ink</Name>
+      <Type>Derivative</Type>
+      <Text>Ick. That just made the mop all inky.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_mop_ink_again</Name>
+      <Type>Derivative</Type>
+      <Text>It's futile.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
     <!-- EndRegion -->
     <!-- Region Other -->
     <Interaction>

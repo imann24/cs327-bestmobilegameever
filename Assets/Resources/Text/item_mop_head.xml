@@ -8,6 +8,14 @@
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
+      <Name>ink</Name>
+      <Type>Derivative</Type>
+      <SpecialActions>ChangeToInked</SpecialActions>
+      <Next>use_mop_ink</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
       <Name>use_paint</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingPaintWhite</ALLTags>
