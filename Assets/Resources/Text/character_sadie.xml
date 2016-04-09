@@ -219,19 +219,6 @@
   <!-- EndRegion -->
   <!-- Region Firstmate P2 Interactions -->
     <Interaction>
-      <Name>examine_chalkboard</Name>
-      <Type>Derivative</Type>
-      <Text>It's a chalkboard.</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
-      <Name>use_chalk_chalkboard</Name>
-      <Type>Derivative</Type>
-      <Text>The cannoneer would be pissed if I messed with that. Better not.</Text>
-      <TextType>Floating</TextType>
-      <SpecialActions>ReturnSelected</SpecialActions>
-    </Interaction>
-    <Interaction>
       <Name>examine_lifeboat</Name>
       <Type>Derivative</Type>
       <NONETags>lifeboatSecured</NONETags>
@@ -270,22 +257,35 @@
       <Type>Derivative</Type>
       <Text>Let's combine them!</Text>
       <TextType>Floating</TextType>
-      <TakeItems>Mop_Handle|Hook</TakeItems>
-      <GiveItems>Pole_Hook</GiveItems>
+      <Next>combine</Next>
+      <NextInteractor>Mop_Handle</NextInteractor>
     </Interaction>
     <Interaction>
-      <Name>examine_chalk</Name>
+      <Name>examine_chalkboard</Name>
       <Type>Derivative</Type>
-      <NONETags>hasChalk</NONETags>
+      <ALLTags>ChalkTaken</ALLTags>
+      <Text>It's a chalkboard.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_chalkboard</Name>
+      <Type>Derivative</Type>
+      <NONETags>ChalkTaken</NONETags>
       <Text>Chalk! Cool!</Text>
       <TextType>Floating</TextType>
-      <Next>take</Next>
-      <NextInteractor>Chalk</NextInteractor>
+      <Next>take_chalk</Next>
+      <NextInteractor>Chalkboard</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk_chalkboard</Name>
+      <Type>Derivative</Type>
+      <Text>The cannoneer would be pissed if I messed with that. Better not.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>examine_chalk</Name>
       <Type>Derivative</Type>
-      <ALLTags>hasChalk</ALLTags>
       <Text>It's a piece of chalk.</Text>
       <TextType>Floating</TextType>
     </Interaction>
