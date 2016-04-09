@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
 
 	void Start(){
 		PlayerTags.Add ("intro");
-		//InventoryManager.Show ();
+		InventoryManager.Hide();
 	}
 
     public static bool InteractionActive {
