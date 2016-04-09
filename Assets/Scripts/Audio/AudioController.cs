@@ -69,7 +69,7 @@ public class AudioController : MonoBehaviour {
 			StopMainMenuMusic();
 			StartTrackCycling();
 		} else {
-			StopMainMenuMusic();
+			//StopMainMenuMusic();
 		}
 	}
 
