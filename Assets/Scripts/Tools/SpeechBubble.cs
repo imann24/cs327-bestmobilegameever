@@ -23,7 +23,6 @@ public class SpeechBubble : MonoBehaviour {
         GameManager.UIManager.LockScreen();
 
 		GameObject go = Instantiate (floatingText,new Vector3(0,-12,0), Quaternion.Euler(new Vector3(90,0,0))) as GameObject;
-        go.GetComponent<FloatingText>().BaseLifeSpan = 10;
 		go.GetComponent<Text> ().text = interaction.iText;
 
 		go.GetComponent<Text> ().color = speechColor;
