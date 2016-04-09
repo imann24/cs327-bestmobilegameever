@@ -719,6 +719,393 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
+		},
+		{
+			“FileName”:"Octopus_Scurry",
+			“EventNames”:["Octopus_Scurry"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Matey_A",
+			“EventNames”:["MateyButton"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Matey_B",
+			“EventNames”:["MateyButton"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Matey_C",
+			“EventNames”:["MateyButton"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Matey_D",
+			“EventNames”:["MateyButton"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"OJ_Talk_A",
+			“EventNames”:["OJTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"OJ_Talk_B",
+			“EventNames”:["OJTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"OJ_Talk_C",
+			“EventNames”:["OJTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"OJ_Talk_D",
+			“EventNames”:["OJTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"OJ_Talk_E",
+			“EventNames”:["OJTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"OJ_Talk_F",
+			“EventNames”:["OJTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Quartermaster_Talk_A",
+			“EventNames”:["QuartermasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Quartermaster_Talk_B",
+			“EventNames”:["QuartermasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Quartermaster_Talk_C",
+			“EventNames”:["QuartermasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Quartermaster_Talk_D",
+			“EventNames”:["QuartermasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Quartermaster_Talk_E",
+			“EventNames”:["QuartermasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Quartermaster_Talk_F",
+			“EventNames”:["QuartermasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Quartermaster_Talk_G",
+			“EventNames”:["QuartermasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
 		}
+		{
+			“FileName”:"Shipmaster_Talk_A",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_B",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_C",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_D",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_E",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_F",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_G",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_H",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_I",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_J",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Shipmaster_Talk_K",
+			“EventNames”:["ShipmasterTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Firstmate_Crying",
+			“EventNames”:["FirstmateStartCrying"],
+			"StopEventNames":[FirstmateStopsCrying],
+			“Loop”:true,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Sadie_Walk",
+			“EventNames”:["SadieStartsWalking"],
+			"StopEventNames":[SadieStopsWalking],
+			“Loop”:true,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Crowd_Chatter_Muffled",
+			“EventNames”:["MuffledCrowdStart"],
+			"StopEventNames":[MuffledCrowdStop],
+			“Loop”:true,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Tutorial_Ambience_1",
+			“EventNames”:["EnterTutorial"],
+			"StopEventNames":[ExitTutorial],
+			“Loop”:true,
+			“Type”: "Ambience",
+			“Channel”:3,
+			"Volume": 60
+		},
+		{
+			“FileName”:"Secondmate_Talk_A",
+			“EventNames”:["SecondmateTalks"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Secondmate_Talk_B",
+			“EventNames”:["SecondmateTalks"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Secondmate_Talk_C",
+			“EventNames”:["SecondmateTalks"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Secondmate_Talk_D",
+			“EventNames”:["SecondmateTalks"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Secondmate_Talk_E",
+			“EventNames”:["SecondmateTalks"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Firstmate_Muffled_A",
+			“EventNames”:["FirstmateMuffledTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Firstmate_Muffled_A",
+			“EventNames”:["FirstmateMuffledTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Firstmate_Muffled_C",
+			“EventNames”:["FirstmateMuffledTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Firstmate_Muffled_D",
+			“EventNames”:["FirstmateMuffledTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Firstmate_Muffled_E",
+			“EventNames”:["FirstmateMuffledTalk"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
 	]
 }
