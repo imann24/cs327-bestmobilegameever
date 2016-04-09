@@ -54,7 +54,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dd76c671274d47d4e8fe9fd773347388, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48c6d4d6d1b60c7428a92954f49e17d0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -80,12 +80,17 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
-  NewSprite: {fileID: 21300000, guid: 25e1feea8ce4c97418a0e89afa583797, type: 3}
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 21300000, guid: 634f0cfb1ac657b4093929f54c2aca9e, type: 3}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
-  MoveToPosition: {x: 0, y: 0}
-  CreateAtPosition: {x: 0, y: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
   SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11449994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,12 +122,17 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 0
-  NewSprite: {fileID: 21300000, guid: 7c92eef80f4b2154ab46397727037c4c, type: 3}
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 21300000, guid: 3878180deec4fdc479e694367fc958f1, type: 3}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
-  MoveToPosition: {x: 0, y: 0}
-  CreateAtPosition: {x: 0, y: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
   SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!222 &22241142
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -163,7 +173,12 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 48c6d4d6d1b60c7428a92954f49e17d0,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 152932}

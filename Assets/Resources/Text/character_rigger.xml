@@ -81,6 +81,7 @@
       <ALLTags>holdingOrange</ALLTags>
       <NONETags>riggerHit</NONETags>
       <GiveTags>riggerHit|riggerTalked</GiveTags>
+      <SpecialActions>SoundOrange</SpecialActions>
       <TakeItems>Orange</TakeItems>
       <Next>rigger_hit_00</Next>
     </Interaction>

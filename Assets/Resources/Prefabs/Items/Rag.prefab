@@ -40,7 +40,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0f66b537d1ccff44c8d6bd44637cc788, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c5c53e8ee3b1b64ebbb0b2688ba2d92, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -92,12 +92,17 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 1
+  UseNavMesh: 0
+  DestroyOnArrive: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
-  MoveToPosition: {x: 0, y: 0}
-  CreateAtPosition: {x: 0, y: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
   SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!222 &22279662
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -150,7 +155,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0f66b537d1ccff44c8d6bd44637cc788,
+      objectReference: {fileID: 21300000, guid: 4c5c53e8ee3b1b64ebbb0b2688ba2d92,
         type: 3}
     - target: {fileID: 0}
       propertyPath: InteractionPath
