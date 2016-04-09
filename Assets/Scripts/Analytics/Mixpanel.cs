@@ -14,7 +14,7 @@ using UnityEngine;
 public static class Mixpanel
 {
 	// allow or prevent events from being sent while in the unity editor
-	public static bool sendEventsInEditor = true;
+	public static bool sendEventsInEditor = false;
 
 	// Set this to your Mixpanel token.
 	public static string Token;
