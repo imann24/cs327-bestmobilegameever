@@ -36,6 +36,7 @@ public class MainMenuController : MonoBehaviour {
 
 
 	public void LaunchTutorial () {
+		EventController.Event(EventList.PLAY_BUTTON_CLICKED);
 		SceneController.LoadTutorialScene();
 	}
 		

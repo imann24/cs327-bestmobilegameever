@@ -49,8 +49,9 @@ public class UIManager : MonoBehaviour {
 			CanInteract = true;
 		}
 	}
-
+		
 	public void Matey(){
+		EventController.Event(EventList.MATEY_BUTTON_CLICKED);
 		//Do matey sound
 	}
 	public void Pause(){

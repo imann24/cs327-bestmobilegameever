@@ -1,1 +1,0 @@
-Visual assets, e.g. Sprites that need to be loaded at runtime

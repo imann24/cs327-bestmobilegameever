@@ -46,8 +46,8 @@
       <NONETags>ojChalkRequested</NONETags>
       <GiveTags>ojChalkGiven</GiveTags>
       <TakeItems>Chalk</TakeItems>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>OrangeGuyN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>How did you know?</Text>
     </Interaction>
     <Interaction>
@@ -56,8 +56,8 @@
       <ALLTags>holdingPoster</ALLTags>
       <NONETags>ojChalkGiven|ojPosterGiven</NONETags>
       <GiveTags>ojChalkRequested</GiveTags>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>OrangeGuyN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>i don't want that. Get me some chalk.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
@@ -70,8 +70,8 @@
       <TakeTags>ojChalkRequested</TakeTags>
       <GiveTags>ojChalkGiven</GiveTags>
       <TakeItems>Chalk</TakeItems>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>OrangeGuyN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Perfect.</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -83,16 +83,16 @@
       <NONETags>ojPosterGiven</NONETags>
       <TakeTags>ojChalkGiven</TakeTags>
       <GiveTags>ojPosterGiven</GiveTags>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>OrangeGuyN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>OK, I guess I'll take it.</Text>
       <Next>give_poster_success</Next>
     </Interaction>
     <Interaction>
       <Name>give_poster_success</Name>
       <Type>Derivative</Type>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>OrangeGuyN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Now leave me!</Text>
       <Next>posters_given</Next>
       <NextInteractor>Sadie</NextInteractor>

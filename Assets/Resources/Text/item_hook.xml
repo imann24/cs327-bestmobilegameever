@@ -6,6 +6,7 @@
 			<Type>Click</Type>
 			<Next>examine_hook</Next>
 			<NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
 		</Interaction>
     <Interaction>
       <Name>use_mop_handle</Name>
@@ -13,12 +14,14 @@
       <ALLTags>holdingMopHandle</ALLTags>
       <Next>use_hook_handle</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
 	</Interactions>
 </InteractionList>
