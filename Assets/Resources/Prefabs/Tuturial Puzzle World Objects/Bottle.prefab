@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionPath: item_bottle
+  InteractionPath: worldobject_bottle
   Debugging: 0
 --- !u!114 &11453284
 MonoBehaviour:
@@ -167,6 +167,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 1161daca8c5f7154999b4c99f810af10,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: InteractionPath
+      value: worldobject_bottle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 138536}

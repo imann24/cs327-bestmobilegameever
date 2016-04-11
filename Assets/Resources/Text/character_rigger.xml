@@ -33,14 +33,14 @@
       <Type>Click</Type>
       <ALLTags>hasPoster</ALLTags>
       <NONETags>riggerHit|riggerDown</NONETags>
-      <MaxDistance>10</MaxDistance>
+      <MaxDistance>3</MaxDistance>
       <Next>talk_cant_hear_10</Next>
     </Interaction>
     <Interaction>
       <Name>give</Name>
       <Type>UseItem</Type>
       <NONETags>riggerHit|riggerDown|holdingOrange</NONETags>
-      <MaxDistance>10</MaxDistance>
+      <MaxDistance>3</MaxDistance>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>talk_cant_hear_10</Next>
     </Interaction>
