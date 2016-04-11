@@ -7,6 +7,7 @@
 	    <ALLTags>hasHook</ALLTags>
 	    <SpecialActions>SoundOpenDoor</SpecialActions>
 	    <MaxDistance>100</MaxDistance>
+      <IgnoreDistance>true</IgnoreDistance>
       <TooFar>move_to_door_and_exit</TooFar>
 	  <Next>exit_tutorial_room</Next>
 	  <NextInteractor>Cutscene_Handler</NextInteractor>
