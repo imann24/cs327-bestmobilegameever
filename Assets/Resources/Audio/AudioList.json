@@ -881,7 +881,7 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
-		}
+		},
 		{
 			“FileName”:"Shipmaster_Talk_A",
 			“EventNames”:["ShipmasterTalk"],
@@ -1072,15 +1072,6 @@
 			"Volume": 100
 		},
 		{
-			“FileName”:"Firstmate_Muffled_A",
-			“EventNames”:["FirstmateMuffledTalk"],
-			"StopEventNames":[],
-			“Loop”:false,
-			“Type”: "FX",
-			“Channel”:2,
-			"Volume": 100
-		},
-		{
 			“FileName”:"Firstmate_Muffled_C",
 			“EventNames”:["FirstmateMuffledTalk"],
 			"StopEventNames":[],
@@ -1106,6 +1097,6 @@
 			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
-		},
+		}
 	]
 }
