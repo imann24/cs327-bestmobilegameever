@@ -6,6 +6,7 @@
       <Type>Click</Type>
       <Next>examine_ink</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>use_mop</Name>

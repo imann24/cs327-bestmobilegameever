@@ -15,6 +15,7 @@
       <NONETags>hasOrange|hasHookDirty</NONETags>
       <Next>take_orange_fail</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>take</Name>
@@ -31,6 +32,7 @@
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   </Interactions>
 </InteractionList>

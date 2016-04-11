@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractionList>
-  <Interactions>
+	<Interactions>
     <Interaction>
       <Name>examine</Name>
       <Type>Click</Type>
-      <Next>examine_mop_head</Next>
+      <Next>examine_lantern</Next>
       <NextInteractor>Sadie</NextInteractor>
       <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
-      <Name>ink</Name>
-      <Type>Derivative</Type>
-      <SpecialActions>ChangeToInked</SpecialActions>
-      <Next>use_mop_ink</Next>
+      <Name>use_pole</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingMopHandle|holdingPoleHook</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>use_pole_lantern</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <MaxDistance>10</MaxDistance>
+    </Interaction>
+    <Interaction>
+      <Name>light</Name>
+      <Type>Derivative</Type>
+      <SpecialActions>ChangeToLit</SpecialActions>
       <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
@@ -23,5 +30,5 @@
       <NextInteractor>Sadie</NextInteractor>
       <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
-  </Interactions>
+	</Interactions>
 </InteractionList>

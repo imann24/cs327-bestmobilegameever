@@ -6,18 +6,21 @@
       <Type>Click</Type>
       <Next>examine_mop_handle</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>use_hook</Name>
       <Type>UseItem</Type>
       <Next>use_hook_handle</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>combine</Name>
@@ -25,6 +28,7 @@
       <TakeItems>Mop_Handle|Hook</TakeItems>
       <GiveItems>Pole_Hook</GiveItems>
       <SpecialActions>SoundPoleHook</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   </Interactions>
 </InteractionList>
