@@ -19,5 +19,12 @@
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
+    <Interaction>
+      <Name>combine</Name>
+      <Type>Derivative</Type>
+      <TakeItems>Mop_Handle|Hook</TakeItems>
+      <GiveItems>Pole_Hook</GiveItems>
+      <SpecialActions>SoundPoleHook</SpecialActions>
+    </Interaction>
   </Interactions>
 </InteractionList>

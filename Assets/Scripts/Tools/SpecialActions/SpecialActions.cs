@@ -63,7 +63,7 @@ public class SpecialActions : MonoBehaviour {
         }
         if (CreatesObject) { CreateObject(ObjectToCreate, CreateAtPosition); }
         if (PlaysSound) {
-            if (SoundDelay == 0) { PlaySound(Sound); }
+            if (SoundDelay == 0) { PlaySound(); }
             else { Invoke("PlaySound", SoundDelay); }
         }
     }
@@ -76,9 +76,8 @@ public class SpecialActions : MonoBehaviour {
         else if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("No valid sprite or image."); }
     }
 
-    public void PlaySound(string sound = null) {
-        if (sound == null) { EventController.Event(Sound); }
-        else { EventController.Event(sound); }
+    public void PlaySound() {
+        EventController.Event(Sound);
     }
 
     public void Move(GameObject obj, Vector3 pos, float speed = 2, bool useNavMesh = false) {
@@ -186,7 +185,7 @@ public class SpecialActionsEditor : Editor {
                 thisScript.PlaysSound = GUILayout.Toggle(thisScript.PlaysSound, "Play Sound");
                 if (thisScript.PlaysSound) {
                     thisScript.Sound = EditorGUILayout.TextField(thisScript.Sound);
-                    //thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
+                    thisScript.SoundDelay = EditorGUILayout.FloatField(thisScript.SoundDelay);
                 }
             }
         }

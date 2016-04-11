@@ -14,6 +14,7 @@
 			<Type>Click</Type>
 			<Next>examine_rag</Next>
 			<NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
 		</Interaction>
 		<Interaction>
 			<Name>use</Name>
@@ -21,21 +22,14 @@
 			<ALLTags>holdingHookDirty</ALLTags>
 			<Next>use_rag_hook</Next>
 			<NextInteractor>Sadie</NextInteractor>
-		</Interaction>
-		<Interaction>
-			<Name>use</Name>
-			<Type>UseItem</Type>
-			<NONETags>holdingHookDirty</NONETags>
-			<Next>default_cant_use</Next>
-			<NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
 		</Interaction>
 		<Interaction>
 			<Name>take</Name>
 			<Type>Derivative</Type>
 			<GiveItems>Rag</GiveItems>
 			<SpecialActions>Destroy|SoundTutorialPrompt</SpecialActions>
-      <NextInteractor>Cutscene_Handler</NextInteractor>
-			<Next>tutorial_items_04</Next>
+      <TextBox>Drag one item in your inventory on top of another to combine them for a new item!</TextBox>
 		</Interaction>
 		<Interaction>
 			<Name>clean_hook</Name>
@@ -52,6 +46,7 @@
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
 	</Interactions>
 </InteractionList>

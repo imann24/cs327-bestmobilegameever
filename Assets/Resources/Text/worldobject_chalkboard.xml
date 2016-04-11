@@ -8,6 +8,13 @@
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
+      <Name>take_chalk</Name>
+      <Type>Derivative</Type>
+      <GiveTags>ChalkTaken</GiveTags>
+      <GiveItems>Chalk</GiveItems>
+      <SpecialActions>TakeChalk</SpecialActions>
+    </Interaction>
+    <Interaction>
       <Name>use_chalk</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingChalk</ALLTags>
