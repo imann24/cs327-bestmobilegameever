@@ -6,19 +6,22 @@
       <Type>Click</Type>
       <Next>examine_mop_head</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
-      <Name>use_paint</Name>
-      <Type>UseItem</Type>
-      <ALLTags>holdingPaintWhite</ALLTags>
-      <Next>use_paint_mop</Next>
+      <Name>ink</Name>
+      <Type>Derivative</Type>
+      <SpecialActions>ChangeToInked</SpecialActions>
+      <Next>use_mop_ink</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   </Interactions>
 </InteractionList>

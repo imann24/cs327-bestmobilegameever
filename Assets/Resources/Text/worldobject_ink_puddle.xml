@@ -6,12 +6,32 @@
       <Type>Click</Type>
       <Next>examine_ink</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
+      <Name>use_mop</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingMopHead</ALLTags>
+      <NONETags>mopInked</NONETags>
+      <GiveTags>mopInked</GiveTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>ink</Next>
+      <NextInteractor>Mop_Head</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>use_mop</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingMopHead|mopInked</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>use_mop_ink_again</Next>
+      <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
 	</Interactions>
 </InteractionList>

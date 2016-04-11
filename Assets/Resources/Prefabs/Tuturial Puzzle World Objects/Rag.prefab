@@ -104,12 +104,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActionTag: RagFall
-  Sound: 
+  Sound: RagDrop
   UseExtended: 1
   ChangesSprite: 0
   MovesObject: 1
   CreatesObject: 0
-  PlaysSound: 0
+  PlaysSound: 1
   UseNavMesh: 0
   DestroyOnArrive: 0
   NewSprite: {fileID: 0}
@@ -117,7 +117,7 @@ MonoBehaviour:
   ObjectToCreate: {fileID: 0}
   CreateAtWaypoint: {fileID: 0}
   MoveToWaypoint: {fileID: 159078, guid: 3613650a95a6dea4a8393f795ec5227b, type: 2}
-  SoundDelay: 0
+  SoundDelay: 0.75
   MoveSpeed: 4
   MoveToPosition: {x: 5.04, y: -8.66, z: 3.95}
   CreateAtPosition: {x: 0, y: 0, z: 0}
