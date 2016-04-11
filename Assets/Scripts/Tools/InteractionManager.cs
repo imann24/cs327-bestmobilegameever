@@ -385,6 +385,7 @@ public class InteractionManager : MonoBehaviour {
 			tooFar = new List<Interaction>();
 		} else {
 			tooFar = validInteractions.FindAll (i => interactionDistance > i.iMaxDist && !i.IgnoreDistance);
+			Debug.Log(ListUtil.ToString(tooFar));
 		}
 		List<Interaction> closeEnough = validInteractions.Except (tooFar).ToList ();
 
