@@ -121,6 +121,7 @@
       <Image>QuartermasterAFade</Image>
       <Image2>ShipmasterA</Image2>
       <Next>tutorial_cutscene_02</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_02</Name>
@@ -129,6 +130,7 @@
       <Image>QuartermasterN</Image>
       <Image2>ShipmasterAFade</Image2>
       <Next>tutorial_cutscene_03</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_03</Name>
@@ -137,6 +139,7 @@
       <Image>QuartermasterNFade</Image>
       <Image2>ShipmasterA</Image2>
       <Next>tutorial_cutscene_04</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_04</Name>
@@ -144,6 +147,7 @@
       <Text>Hear, hear! No evildoings shall be gotten away with under the watchful eye of yours truly.</Text>
       <Image>FirstMateN</Image>
       <Next>tutorial_cutscene_05</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_05</Name>
@@ -152,6 +156,7 @@
       <Image>QuartermasterA</Image>
       <Image2>ShipmasterAFade</Image2>
       <Next>tutorial_cutscene_06</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_06</Name>
@@ -159,6 +164,7 @@
       <Text>Ah, mon coeur! You wound me with your wicked words!</Text>
       <Image>FirstMateS</Image>
       <Next>tutorial_cutscene_07</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_07</Name>
@@ -167,6 +173,7 @@
       <Image>QuartermasterN</Image>
       <Image2>ShipmasterAFade</Image2>
       <Next>tutorial_cutscene_08</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_08</Name>
@@ -175,6 +182,7 @@
       <Image>QuartermasterH</Image>
       <Image2>ShipmasterAFade</Image2>
       <Next>tutorial_cutscene_09</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_09</Name>
@@ -183,6 +191,7 @@
       <Image>QuartermasterA</Image>
       <Image2>ShipmasterAFade</Image2>
       <SpecialActions>QuartermasterExit</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_QM</Name>
@@ -190,6 +199,7 @@
       <Text>That… woman! I just - I can’t- Oooooogh! She is everything that’s wrong with piracy, and nothing that’s right!</Text>
       <Image2>ShipmasterA</Image2>
       <Next>tutorial_cutscene_10</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_10</Name>
@@ -198,6 +208,7 @@
       <Image>FirstMateS</Image>
       <Image2>ShipmasterAFade</Image2>
       <Next>tutorial_cutscene_11</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_11</Name>
@@ -206,6 +217,7 @@
       <Image>FirstMateSFade</Image>
       <Image2>ShipmasterN</Image2>
       <SpecialActions>ShipmasterExit</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_SM</Name>
@@ -213,6 +225,7 @@
       <Text>Hear me, mes amis! Lend me your ears! Our dear, dashing, clever captain has perished!</Text>
       <Image>FirstMateS</Image>
       <Next>tutorial_cutscene_12</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_12</Name>
@@ -220,6 +233,7 @@
       <Text>Those who wish to mourn their untimely passing should follow me to the helm, where we shall hold a service in their memory!</Text>
       <Image>FirstMateN</Image>
       <SpecialActions>FirstmateExit</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_FM</Name>
@@ -227,6 +241,7 @@
       <Text>The captain is… dead? What am I supposed to do now?</Text>
       <Image>SadieS</Image>
       <Next>tutorial_cutscene_13</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_13</Name>
@@ -235,6 +250,7 @@
       <Text>Did the first mate say something about a service?</Text>
       <Image>SadieN</Image>
       <SpecialActions>EndTutorialCutscene</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   <!-- EndRegion -->
   </Interactions>
