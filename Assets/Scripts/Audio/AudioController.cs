@@ -48,7 +48,8 @@ public class AudioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayMainMenuMusic();
+		//PlayMainMenuMusic();
+		OnLevelWasLoaded(Application.loadedLevel);
 	}
 
 	void OnDestroy () {
@@ -68,7 +69,7 @@ public class AudioController : MonoBehaviour {
 			StopMainMenuMusic();
 			StartTrackCycling();
 		} else {
-			StopMainMenuMusic();
+			//StopMainMenuMusic();
 		}
 	}
 
