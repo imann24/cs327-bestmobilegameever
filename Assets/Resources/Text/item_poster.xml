@@ -6,6 +6,7 @@
       <Type>Click</Type>
       <Next>examine_poster</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>decrease</Name>
@@ -13,6 +14,7 @@
       <NONETags>postersTwo|postersOne</NONETags>
       <GiveTags>postersTwo</GiveTags>
       <SpecialActions>ReturnSelected|ChangeToTwo</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>decrease</Name>
@@ -21,6 +23,7 @@
       <GiveTags>postersOne</GiveTags>
       <TakeTags>postersTwo</TakeTags>
       <SpecialActions>ReturnSelected|ChangeToOne</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>decrease</Name>
@@ -29,12 +32,25 @@
       <GiveTags>postersGiven</GiveTags>
       <TakeTags>postersOne</TakeTags>
       <TakeItems>Poster</TakeItems>
+      <Next>posters_given</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingChalk</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>use_chalk_poster</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
 	</Interactions>
 </InteractionList>
