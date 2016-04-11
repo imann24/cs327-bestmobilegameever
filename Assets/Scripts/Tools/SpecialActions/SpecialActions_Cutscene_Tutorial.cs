@@ -106,13 +106,13 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 
     IEnumerator npcExit(GameObject npc) {
         GameManager.UIManager.LockScreen();
-        Vector3 exit;
-        if (npc == Firstmate) exit = GameObject.Find("Waypoint_Firstmate").transform.position;
-        else exit = npc.transform.Find("Exit").position;
-        Move(npc, exit, 4, true);
-        if (npc == Quartermaster) Invoke("destroyQM", 6f);
-        else if (npc == Shipmaster) Invoke("destroySM", 6f);
-        yield return new WaitForSeconds(3f);
+        //Move(npc, exit, 4, true);
+        Fader.FadeIn(1);
+        yield return new WaitForSeconds(1f);
+        if (npc == Firstmate) npc.transform.position = GameObject.Find("Waypoint_Firstmate").transform.position;
+        else Destroy(npc);
+        Fader.FadeOut(1);
+        yield return new WaitForSeconds(1f);
         GameManager.UIManager.UnlockScreen();
         NextInteraction(next);
     }
