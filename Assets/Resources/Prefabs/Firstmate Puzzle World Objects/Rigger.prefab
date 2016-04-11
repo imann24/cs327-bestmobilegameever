@@ -15,7 +15,6 @@ GameObject:
   - 114: {fileID: 11487700}
   - 23: {fileID: 2368024}
   - 114: {fileID: 11431332}
-  - 114: {fileID: 11441920}
   - 114: {fileID: 11445448}
   m_Layer: 0
   m_Name: Rigger
@@ -195,35 +194,6 @@ MonoBehaviour:
   SoundDelay: 0
   MoveSpeed: 2
   MoveToPosition: {x: 0, y: 0, z: 0}
-  CreateAtPosition: {x: 0, y: 0, z: 0}
---- !u!114 &11441920
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionTag: RiggerDescend
-  Sound: 
-  UseExtended: 1
-  ChangesSprite: 0
-  MovesObject: 1
-  CreatesObject: 0
-  PlaysSound: 0
-  UseNavMesh: 0
-  DestroyOnArrive: 0
-  NewSprite: {fileID: 0}
-  ObjectToMove: {fileID: 0}
-  ObjectToCreate: {fileID: 0}
-  CreateAtWaypoint: {fileID: 0}
-  MoveToWaypoint: {fileID: 109696, guid: 3613650a95a6dea4a8393f795ec5227b, type: 2}
-  SoundDelay: 0
-  MoveSpeed: 3
-  MoveToPosition: {x: -13.73, y: -1.47, z: 0.46}
   CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11445448
 MonoBehaviour:

@@ -20,6 +20,7 @@
     <Interaction>
       <Name>light</Name>
       <Type>Derivative</Type>
+      <GiveTags>lanternLit</GiveTags>
       <SpecialActions>ChangeToLit</SpecialActions>
       <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
