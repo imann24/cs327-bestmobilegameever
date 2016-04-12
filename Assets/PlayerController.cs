@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Awake (){
 		if(instance){
-			float offset = 4f;
+			float offset = 10f;
 			PlayerController.Instance.transform.position = gameObject.transform.position + Vector3.left * offset;
 			PlayerController.Instance.transform.localScale = gameObject.transform.localScale;
 			Camera.main.GetComponent<CameraFollower> ().target = PlayerController.Instance.transform;
