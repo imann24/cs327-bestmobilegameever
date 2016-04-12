@@ -11,15 +11,16 @@
     <Interaction>
       <Name>use_pole</Name>
       <Type>UseItem</Type>
-      <ALLTags>holdingMopHandle|holdingPoleHook</ALLTags>
+      <ANYTags>holdingMopHandle|holdingPoleHook</ANYTags>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>use_pole_lantern</Next>
       <NextInteractor>Sadie</NextInteractor>
-      <MaxDistance>10</MaxDistance>
+      <MaxDistance>3</MaxDistance>
     </Interaction>
     <Interaction>
       <Name>light</Name>
       <Type>Derivative</Type>
+      <GiveTags>lanternLit</GiveTags>
       <SpecialActions>ChangeToLit</SpecialActions>
       <IgnoreDistance>true</IgnoreDistance>
     </Interaction>

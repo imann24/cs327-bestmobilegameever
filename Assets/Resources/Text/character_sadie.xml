@@ -208,8 +208,6 @@
       <Type>Derivative</Type>
       <Text>Neat-o.</Text>
       <TextType>Floating</TextType>
-      <Next>combine</Next>
-      <NextInteractor>Mop_Handle</NextInteractor>
     </Interaction>
     <Interaction>
       <Name>examine_chalkboard</Name>
@@ -304,6 +302,12 @@
       <Text>They already have one of these. Duh.</Text>
       <TextType>Floating</TextType>
       <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_talk</Name>
+      <Type>Derivative</Type>
+      <Text>She's up pretty high. I probably shouldn't bother her.</Text>
+      <TextType>Floating</TextType>
     </Interaction>
   <!-- EndRegion -->
   <!-- Region DefaultCannotUse-->

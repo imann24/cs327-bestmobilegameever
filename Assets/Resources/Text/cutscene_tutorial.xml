@@ -7,7 +7,6 @@
       <Type>Derivative</Type>
       <SpecialActions>SoundKnock|SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_00</Next>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_00</Name>
@@ -17,7 +16,6 @@
       <Image>SadieNFade</Image>
       <Image2>Unknown</Image2>
       <Next>tutorial_choice</Next>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_choice</Name>
@@ -27,21 +25,18 @@
       <Image>SadieN</Image>
       <Image>UnknownFade</Image>
       <Next>tutorial_01</Next>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_choice</Name>
       <Type>Derivative</Type>
       <Text>Just a lowly cabin girl.</Text>
       <Next>tutorial_01</Next>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_choice</Name>
       <Type>Derivative</Type>
       <Text>Who are you?</Text>
       <Next>tutorial_02</Next>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_01</Name>
@@ -51,7 +46,6 @@
       <Image2>Unknown</Image2>
       <Next>tutorial_03</Next>
       <TextBox>hide();</TextBox>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_02</Name>
@@ -61,7 +55,6 @@
       <Image2>Unknown</Image2>
       <Next>tutorial_03</Next>
       <TextBox>hide();</TextBox>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_03</Name>
@@ -71,7 +64,6 @@
       <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_sadie</Next>
       <NextInteractor>Sadie</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   <!-- EndRegion -->
   <!-- Region Item Tutorials -->
@@ -80,7 +72,6 @@
       <Type>Derivative</Type>
       <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <TextBox>Tap an object in your inventory to examine it</TextBox>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_items_00</Name>
@@ -88,13 +79,11 @@
       <Text>**Swipe upward from the bottom of the screen to pull up your inventory**</Text>
       <SpecialActions>SoundTutorialPrompt|HideInventory</SpecialActions>
       <Next>tutorial_items_01</Next>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_items_04</Name>
       <Type>Derivative</Type>
       <Text>**Drag one item in your inventory on top of another to combine them for a new item!**</Text>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   <!-- EndRegion -->
   <!-- Region Cutscene -->
@@ -102,7 +91,6 @@
       <Name>exit_tutorial_room</Name>
       <Type>Derivative</Type>
       <SpecialActions>ExitTutorialRoom</SpecialActions>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_start</Name>
@@ -111,13 +99,12 @@
       <Image>QuartermasterA</Image>
       <Image2>ShipmasterAFade</Image2>
       <SpecialActions>FadeIn</SpecialActions>
-      <IgnoreDistance>true</IgnoreDistance>
       <Next>tutorial_cutscene_01</Next>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_01</Name>
       <Type>Derivative</Type>
-      <Text>We all know what kind of  cheating, no-good scoundrel you are! It’s no coincidence! You killed the captain!</Text>
+      <Text>We all know what kind of cheating, no-good scoundrel you are! It’s no coincidence! You killed the captain!</Text>
       <Image>QuartermasterAFade</Image>
       <Image2>ShipmasterA</Image2>
       <Next>tutorial_cutscene_02</Next>

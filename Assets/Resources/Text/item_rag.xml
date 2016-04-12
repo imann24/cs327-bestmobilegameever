@@ -7,14 +7,12 @@
       <SpecialActions>RagFall</SpecialActions>
       <Next>throw_orange</Next>
       <NextInteractor>Sadie</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
 		<Interaction>
 			<Name>examine</Name>
 			<Type>Click</Type>
 			<Next>examine_rag</Next>
 			<NextInteractor>Sadie</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
 		</Interaction>
 		<Interaction>
 			<Name>use</Name>
@@ -22,7 +20,6 @@
 			<ALLTags>holdingHookDirty</ALLTags>
 			<Next>use_rag_hook</Next>
 			<NextInteractor>Sadie</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
 		</Interaction>
 		<Interaction>
 			<Name>take</Name>
@@ -39,7 +36,6 @@
 			<SpecialActions>SoundCleaningHook</SpecialActions>
 			<Next>cleaned_hook</Next>
 			<NextInteractor>Sadie</NextInteractor>
-			<IgnoreDistance>true</IgnoreDistance>
 		</Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
