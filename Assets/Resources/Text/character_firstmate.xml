@@ -526,15 +526,6 @@
     <Interaction>
       <Name>firstmate_propaganda_mid_00_choice</Name>
       <Type>Derivative</Type>
-      <ALLTags>postersGiven</ALLTags>
-      <Image>FirstMateMopNFade</Image>
-      <Image2>SadieN</Image2>
-      <Text>All done!</Text>
-      <Next>firstmate_quest_end_00</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_propaganda_mid_00_choice</Name>
-      <Type>Derivative</Type>
       <ALLTags>hasPoster</ALLTags>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
@@ -578,8 +569,9 @@
     <!-- EndRegion -->
     <!-- Region Part Two End -->
     <Interaction>
-      <Name>firstmate_quest_end_00</Name>
+      <Name>firstmate_propaganda_mid_00_choice</Name>
       <Type>Derivative</Type>
+      <ALLTags>postersGiven</ALLTags>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
       <Text>Your posters have been posted. Posthaste.</Text>
@@ -612,6 +604,8 @@
     <Interaction>
       <Name>firstmate_quest_end_03_choice</Name>
       <Type>Derivative</Type>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>I think I’ll pass.</Text>
       <Next>firstmate_quest_end_04</Next>
     </Interaction>

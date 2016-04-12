@@ -381,11 +381,11 @@ public class InteractionManager : MonoBehaviour {
 		#endif
 		List<Interaction> tooFar = null;
 
-		if (forceIgnoreDistance) {
+		if (forceIgnoreDistance || interactor.gameObject.GetComponent<InventoryItem>() != null) {
 			tooFar = new List<Interaction>();
 		} else {
-			tooFar = validInteractions.FindAll (i => interactionDistance > i.iMaxDist && !i.IgnoreDistance);
-			Debug.Log(ListUtil.ToString(tooFar));
+			tooFar = validInteractions.FindAll (i => interactionDistance > i.iMaxDist && !i.IgnoreDistance && i.iType != InteractionType.Derivative);
+            if (interactor.Debugging) Debug.Log(ListUtil.ToString(tooFar));
 		}
 		List<Interaction> closeEnough = validInteractions.Except (tooFar).ToList ();
 
@@ -403,12 +403,14 @@ public class InteractionManager : MonoBehaviour {
 			}
 		} else {
 			if (!forceSuppressMovement) {
-
-
-				Vector3 v = getPositionOfInteractable(interactor) + new Vector3 (1, 0,0);
-				Debug.Log("Moving to this: " + interactor);
-				GameObject.Find ("Sadie").GetComponent<NoahMove> ().GoTo (v); 
-			}
+                Vector2 playerPos = new Vector2(GameManager.PlayerCharacter.transform.position.x, GameManager.PlayerCharacter.transform.position.z);
+                Vector2 targetPos = new Vector2(getPositionOfInteractable(interactor).x, getPositionOfInteractable(interactor).z);
+                targetPos += ((playerPos - targetPos).normalized * 1.5f);
+                GameManager.PlayerCharacter.GetComponent<NoahMove>().GoToInteraction(targetPos, interactor, interactionList);
+                if (interactor.Debugging) Debug.Log("Moving to this: " + interactor);
+                //Vector3 v = getPositionOfInteractable(interactor) + new Vector3 (1, 0,0);
+                //GameObject.Find ("Sadie").GetComponent<NoahMove> ().GoTo (v); 
+            }
 
 			//from tooFar, find all interactions with an alternative, and from that get all interactions from the master list whose name matches that alternative, and add that to the close enough interactions.
 			List<Interaction> alternatives = tooFar.Where (x => x.iTooFar != null).SelectMany (y => validInteractions.FindAll (z => z.iName == y.iTooFar)).Union(closeEnough).Distinct().ToList();

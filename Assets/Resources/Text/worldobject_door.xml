@@ -8,7 +8,6 @@
 	    <SpecialActions>SoundOpenDoor</SpecialActions>
 	    <Next>exit_tutorial_room</Next>
 	    <NextInteractor>Cutscene_Handler</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>door_cant_exit</Name>
@@ -23,6 +22,7 @@
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   </Interactions>
 </InteractionList>

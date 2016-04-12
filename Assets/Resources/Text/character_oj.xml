@@ -15,9 +15,10 @@
     <Interaction>
       <Name>oj_intro_01</Name>
       <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelN</Image>
-      <Image2>SadieNFade</Image2>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>...</Text>
+      <Next>oj_intro_02</Next>
     </Interaction>
     <Interaction>
       <Name>oj_intro_02</Name>
@@ -94,7 +95,7 @@
       <Type>Derivative</Type>
       <ALLTags>hasPoster</ALLTags>
       <NONETags>ojPosterGiven</NONETags>
-      <Text>(Offer poster)</Text>
+      <Text>I need to give you this poster.</Text>
       <Next>give_poster_0</Next>
     </Interaction>
     <Interaction>
@@ -109,9 +110,6 @@
       <Name>give_poster_0</Name>
       <Type>Derivative</Type>
       <NONETags>ojChalkRequested|ojChalkGiven</NONETags>
-      <Image>OrangeGuyBarrelNFade</Image>
-      <Image2>SadieN</Image2>
-      <Text>I need to give you something.</Text>
       <Next>give_poster_01</Next>
     </Interaction>
     <Interaction>
@@ -138,14 +136,15 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <GiveTags>ojTalked</GiveTags>
       <Text>Bring me a stone white and fine as snow, the type with which one may draw meaning.</Text>
-      <GiveTags>ojChalkRequested</GiveTags>
       <Next>give_poster_02</Next>
     </Interaction>
     <Interaction>
       <Name>give_poster_02</Name>
       <Type>Derivative</Type>
       <NONETags>ojChalkRequested</NONETags>
+      <GiveTags>ojChalkRequested</GiveTags>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
       <Text>...Excuse me?</Text>
@@ -187,7 +186,7 @@
       <Name>give_poster_07</Name>
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
-      <Image2>SadieAFade</Image2>
+      <Image2>SadieNFade</Image2>
       <Text>Aye.</Text>
       <Next>give_poster_08</Next>
     </Interaction>
@@ -203,7 +202,7 @@
       <Name>give_poster_09</Name>
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
-      <Image2>SadieAFade</Image2>
+      <Image2>SadieNFade</Image2>
       <Text>Aye.</Text>
       <Next>give_poster_10</Next>
     </Interaction>
