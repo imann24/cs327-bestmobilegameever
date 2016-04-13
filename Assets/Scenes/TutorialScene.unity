@@ -1152,8 +1152,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
-=======
->>>>>>> master
 --- !u!1 &315798301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,9 +1369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractionPath: worldobject_item_bottle
-=======
   InteractionPath: worldobject_bottle
->>>>>>> master
   Debugging: 0
 --- !u!212 &365935838
 SpriteRenderer:
@@ -7312,7 +7308,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1053209791}
   m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
-=======
 --- !u!1 &2128932057
 GameObject:
   m_ObjectHideFlags: 0
@@ -7430,7 +7425,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionPath: character_sadie
   Debugging: 0
->>>>>>> master
 --- !u!1 &2144203730
 GameObject:
   m_ObjectHideFlags: 0
