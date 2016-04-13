@@ -98,13 +98,14 @@ public class MixpanelController : MonoBehaviour
 			sendSimpleNamedEvent(eventName);
 			break;
 
-		case EventList.SOUND_TOGGLED_ON_OF:
+		case EventList.SOUND_TOGGLED_ON_OFF:
 			sendSimpleNamedEvent(eventName);
 			break;
 
 		case EventList.GAME_END_SCREEN_REACHED:
 			sendSimpleNamedEvent(eventName);
 			break;
+
 		}
 	}
 
