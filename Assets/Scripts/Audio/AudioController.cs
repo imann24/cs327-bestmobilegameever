@@ -190,7 +190,7 @@ public class AudioController : MonoBehaviour {
 			initCyclingAudio ();
 	
 		} else { 
-			this = Instance;
+			//this = Instance;
 		}
 	}
 
