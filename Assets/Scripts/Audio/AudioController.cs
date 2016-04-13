@@ -50,7 +50,6 @@ public class AudioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//PlayMainMenuMusic();
 		OnLevelWasLoaded(Application.loadedLevel);
 	}
 
@@ -71,7 +70,6 @@ public class AudioController : MonoBehaviour {
 			StopMainMenuMusic();
 			StartTrackCycling();
 		} else {
-			//StopMainMenuMusic();
 		}
 	}
 
@@ -174,23 +172,25 @@ public class AudioController : MonoBehaviour {
 	void Init () {
 
 		// Singleton method returns a bool depending on whether this object is the instance of the class
-		if (SingletonUtil.TryInit(ref Instance, this, gameObject)) {
+		if (SingletonUtil.TryInit (ref Instance, this, gameObject)) {
 				
-			loader = new AudioLoader(path);
-			fileList = loader.Load();
-			fileList.Init();
+			loader = new AudioLoader (path);
+			fileList = loader.Load ();
+			fileList.Init ();
 
-			InitFileDictionary(fileList);
+			InitFileDictionary (fileList);
 
-			AddAudioEvents();
+			AddAudioEvents ();
 
-			SubscribeEvents();
+			SubscribeEvents ();
 
 			if (isAudioListener) {
-				AddAudioListener();
+				AddAudioListener ();
 			}
-			initCyclingAudio();
+			initCyclingAudio ();
 	
+		} else { 
+			this = Instance;
 		}
 	}
 
