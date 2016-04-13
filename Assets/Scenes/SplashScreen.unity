@@ -163,6 +163,7 @@ GameObject:
   - 223: {fileID: 102185215}
   - 114: {fileID: 102185214}
   - 114: {fileID: 102185213}
+  - 114: {fileID: 102185217}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -223,7 +224,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &102185216
 RectTransform:
@@ -243,6 +244,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &102185217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 102185212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc295dbf35eb8a4eb81a32a3f11b007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 130458011}
+  logo: {fileID: 16074149}
+  lifeTime: 2
+  fadeTime: 2
 --- !u!1 &130458008
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +269,6 @@ GameObject:
   - 224: {fileID: 130458009}
   - 222: {fileID: 130458012}
   - 114: {fileID: 130458011}
-  - 114: {fileID: 130458010}
   m_Layer: 5
   m_Name: ScreenFader
   m_TagString: Untagged
@@ -280,20 +295,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 259, y: 130.21478}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &130458010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 130458008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc295dbf35eb8a4eb81a32a3f11b007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  background: {fileID: 130458011}
-  logo: {fileID: 16074149}
-  fadeTime: 2
 --- !u!114 &130458011
 MonoBehaviour:
   m_ObjectHideFlags: 0
