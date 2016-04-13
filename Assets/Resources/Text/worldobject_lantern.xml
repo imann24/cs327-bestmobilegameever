@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractionList>
+	<Interactions>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <Next>examine_lantern</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
+      <Name>use_pole</Name>
+      <Type>UseItem</Type>
+      <ANYTags>holdingMopHandle|holdingPoleHook</ANYTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>use_pole_lantern</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <MaxDistance>3</MaxDistance>
+    </Interaction>
+    <Interaction>
+      <Name>light</Name>
+      <Type>Derivative</Type>
+      <GiveTags>lanternLit</GiveTags>
+      <SpecialActions>ChangeToLit</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotUse</Name>
+      <Type>Derivative</Type>
+      <Next>DefaultCannotUse</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+	</Interactions>
+</InteractionList>

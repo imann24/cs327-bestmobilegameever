@@ -29,6 +29,16 @@
       <GiveTags>postersGiven</GiveTags>
       <TakeTags>postersOne</TakeTags>
       <TakeItems>Poster</TakeItems>
+      <Next>posters_given</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingChalk</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>use_chalk_poster</Next>
+      <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>

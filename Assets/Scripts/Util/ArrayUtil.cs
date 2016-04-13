@@ -63,7 +63,11 @@ public static class ArrayUtil {
 		string arrayAsString = "";
 
 		for (int i = 0; i < source.Length; i++) {
-			arrayAsString += source[i] + ",\n";
+			arrayAsString += source[i];
+
+			if (i < source.Length - 1) {
+				arrayAsString += ",\n";
+			}
 		}
 
 		return arrayAsString;

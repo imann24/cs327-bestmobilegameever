@@ -48,7 +48,8 @@ public class AudioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayMainMenuMusic();
+		//PlayMainMenuMusic();
+		OnLevelWasLoaded(Application.loadedLevel);
 	}
 
 	void OnDestroy () {
@@ -68,7 +69,7 @@ public class AudioController : MonoBehaviour {
 			StopMainMenuMusic();
 			StartTrackCycling();
 		} else {
-			StopMainMenuMusic();
+			//StopMainMenuMusic();
 		}
 	}
 
@@ -193,10 +194,14 @@ public class AudioController : MonoBehaviour {
 
 	void InitFileDictionary (AudioList audioFiles) {
 		for (int i = 0; i < audioFiles.Length; i++) {
-			files.Add (
-				audioFiles[i].FileName,
-				audioFiles[i]
-			);
+			try {
+				files.Add (
+					audioFiles[i].FileName,
+					audioFiles[i]
+				);
+			} catch {
+				Debug.Log(audioFiles[i].FileName + " already exists in the dictionary");
+			}
 		}
 	}
 		

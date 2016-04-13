@@ -92,12 +92,17 @@ MonoBehaviour:
   MovesObject: 0
   CreatesObject: 0
   PlaysSound: 1
+  UseNavMesh: 0
+  DestroyOnArrive: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
-  MoveToPosition: {x: 0, y: 0}
-  CreateAtPosition: {x: 0, y: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
   SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!222 &22279662
 CanvasRenderer:
   m_ObjectHideFlags: 1

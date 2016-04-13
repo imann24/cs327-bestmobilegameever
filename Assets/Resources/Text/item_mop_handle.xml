@@ -10,6 +10,15 @@
     <Interaction>
       <Name>use_hook</Name>
       <Type>UseItem</Type>
+      <ALLTags>holdingHook</ALLTags>
+      <Next>combine</Next>
+    </Interaction>
+    <Interaction>
+      <Name>combine</Name>
+      <Type>Derivative</Type>
+      <TakeItems>Mop_Handle|Hook</TakeItems>
+      <GiveItems>Pole_Hook</GiveItems>
+      <SpecialActions>SoundPoleHook</SpecialActions>
       <Next>use_hook_handle</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>

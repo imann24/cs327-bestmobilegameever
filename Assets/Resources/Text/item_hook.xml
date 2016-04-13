@@ -11,8 +11,8 @@
       <Name>use_mop_handle</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingMopHandle</ALLTags>
-      <Next>use_hook_handle</Next>
-      <NextInteractor>Sadie</NextInteractor>
+      <Next>combine</Next>
+      <NextInteractor>Mop_Handle</NextInteractor>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>

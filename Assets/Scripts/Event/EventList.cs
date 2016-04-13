@@ -21,6 +21,19 @@ public static class EventList {
 
 	public const string HELP_TEXT_BOX = "TextBox";
 
+	#region MixPanel Events
+
+	public const string PLAY_BUTTON_CLICKED = "Play Button Clicked";
+	public const string MATEY_BUTTON_CLICKED = "Matey Button Clicked";
+	public const string GAME_END_SCREEN_REACHED = "Game End Screen Reached";
+	public const string SOUND_TOGGLED_ON_OFF = "Sound Toggled On/Off";
+	public const string OFF = "Off";
+	public const string ON = "On";
+	public const string INVENTORY_ITEM_DESTROYED = "Inventory Item Destroyed";
+	public const string INVENTORY_ITEM_COLLECTED = "Inventory Item Collected";
+
+	#endregion
+
 	public static string[] events = {
 		START_MUSIC,
 		STOP_MUSIC,
