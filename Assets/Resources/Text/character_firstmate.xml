@@ -11,6 +11,7 @@
       <Image2>SadieNFade</Image2>
       <Text>Ah, there you are! You must be my new assistant, yes? Thank goodness! You mustn’t keep your future captain waiting… but I will forgive you just this once.</Text>
       <Next>firstmate_intro_01</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_01</Name>
@@ -19,6 +20,7 @@
       <Image2>SadieN</Image2>
       <Text>I’m not here to -</Text>
       <Next>firstmate_intro_02</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02</Name>
@@ -27,6 +29,7 @@
       <Image2>SadieNFade</Image2>
       <Text>Now, before I take you on as my partner, let me ask you this, ma cherie - what makes a captain, in your view?</Text>
       <Next>firstmate_intro_02_choice</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02_choice</Name>
@@ -35,6 +38,7 @@
       <Image2>SadieN</Image2>
       <Text>The vote of the crew?</Text>
       <Next>firstmate_intro_031</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_031</Name>
@@ -43,12 +47,14 @@
       <Image2>SadieN</Image2>
       <Text>The vote of -</Text>
       <Next>firstmate_intro_04</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02_choice</Name>
       <Type>Derivative</Type>
       <Text>Skilled leadership?</Text>
       <Next>firstmate_intro_032</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_032</Name>
@@ -57,12 +63,14 @@
       <Image2>SadieN</Image2>
       <Text>Skilled lead -</Text>
       <Next>firstmate_intro_04</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02_choice</Name>
       <Type>Derivative</Type>
       <Text>Not sinking the ship?</Text>
       <Next>firstmate_intro_033</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_033</Name>
@@ -71,6 +79,7 @@
       <Image2>SadieN</Image2>
       <Text>Not sink -</Text>
       <Next>firstmate_intro_04</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_04</Name>
@@ -79,6 +88,7 @@
       <Image2>SadieNFade</Image2>
       <Text>I see... that’s quite charming, however, I’m afraid it lacks a certain... je ne sais quoi.</Text>
       <Next>firstmate_intro_05</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_05</Name>
@@ -87,6 +97,7 @@
       <Image2>SadieNFade</Image2>
       <Text>We are pirates, mon amie, pirates! We sail for glory, for riches, for lavish silks and the golden gleam of treasure!</Text>
       <Next>firstmate_intro_06</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_06</Name>
@@ -95,6 +106,7 @@
       <Image2>SadieNFade</Image2>
       <Text>So, for your first task as my dear assistant, you must help me become the very image of a true captain.</Text>
       <Next>firstmate_intro_07</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_07</Name>
@@ -103,6 +115,7 @@
       <Image2>SadieNFade</Image2>
       <Text>I require a mark of authority, that speaks to my noble status on this ship. Something smooth and majestic to crown a true captain! Do you understand?</Text>
       <Next>firstmate_intro_08</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_08</Name>
@@ -111,6 +124,7 @@
       <Image2>SadieN</Image2>
       <Text>Hm? Oh, yeah, sure.</Text>
       <Next>firstmate_intro_09</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_09</Name>
@@ -119,6 +133,7 @@
       <Image2>SadieNFade</Image2>
       <Text>Excellent! With such disorder on our noble vessel, I had feared no one would hear my plight… but you are a gem among scoundrels, truly!</Text>
       <Next>firstmate_intro_10</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_10</Name>
@@ -127,6 +142,7 @@
       <Image2>SadieN</Image2>
       <Text>That’s me. A dirty, rotten gem of a pirate.</Text>
       <Next>firstmate_intro_11</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_11</Name>
@@ -136,6 +152,7 @@
       <Text>Surely you can find something here, can you not? Go ahead and get to it! Chop chop!</Text>
       <TakeTags>firstmateIntro</TakeTags>
       <GiveTags>firstmateQuestInProgress1</GiveTags>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region Waiting for Wig -->
@@ -509,15 +526,6 @@
     <Interaction>
       <Name>firstmate_propaganda_mid_00_choice</Name>
       <Type>Derivative</Type>
-      <ALLTags>postersGiven</ALLTags>
-      <Image>FirstMateMopNFade</Image>
-      <Image2>SadieN</Image2>
-      <Text>All done!</Text>
-      <Next>firstmate_quest_end_00</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_propaganda_mid_00_choice</Name>
-      <Type>Derivative</Type>
       <ALLTags>hasPoster</ALLTags>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
@@ -561,8 +569,9 @@
     <!-- EndRegion -->
     <!-- Region Part Two End -->
     <Interaction>
-      <Name>firstmate_quest_end_00</Name>
+      <Name>firstmate_propaganda_mid_00_choice</Name>
       <Type>Derivative</Type>
+      <ALLTags>postersGiven</ALLTags>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
       <Text>Your posters have been posted. Posthaste.</Text>
@@ -595,6 +604,8 @@
     <Interaction>
       <Name>firstmate_quest_end_03_choice</Name>
       <Type>Derivative</Type>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>I think I’ll pass.</Text>
       <Next>firstmate_quest_end_04</Next>
     </Interaction>

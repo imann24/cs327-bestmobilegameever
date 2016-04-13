@@ -8,7 +8,6 @@
       <TextBox>hide();</TextBox>
 		  <Next>examine_hook_dirty</Next>
 		  <NextInteractor>Sadie</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>examine</Name>
@@ -25,7 +24,6 @@
 		  <ALLTags>holdingRag</ALLTags>
 		  <Next>use_rag_hook</Next>
 		  <NextInteractor>Sadie</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
 		  <Name>DefaultCannotUse</Name>

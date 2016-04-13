@@ -6,14 +6,12 @@
       <Type>Click</Type>
       <Next>examine_chalk</Next>
       <NextInteractor>Sadie</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
 	</Interactions>
 </InteractionList>

@@ -6,6 +6,7 @@
       <Type>Click</Type>
       <Next>examine_lifeboat</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>use_rope</Name>
@@ -20,12 +21,14 @@
       <TakeItems>Rope</TakeItems>
       <GiveTags>lifeboatSecured</GiveTags>
       <SpecialActions>ChangeToSecured</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
 	</Interactions>
 </InteractionList>
