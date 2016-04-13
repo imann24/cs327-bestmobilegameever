@@ -22,6 +22,8 @@ public static class SettingsUtil {
 			AudioUtil.MuteActionFromBool(muted),
 			AudioType.Music
 		);
+
+		checkForAllSoundOnOrOff();
 	}
 
 	public static void ToggleFXMuted (bool muted) {
@@ -34,6 +36,8 @@ public static class SettingsUtil {
 			AudioUtil.MuteActionFromBool(muted),
 			AudioType.FX
 		);
+
+		checkForAllSoundOnOrOff();
 	}
 
 	public static void ToggleVOMuted (bool muted) {
@@ -76,5 +80,11 @@ public static class SettingsUtil {
 
 	static bool IsMuted (string key) {
 		return PlayerPrefsUtil.GetBool(key);
+	}
+
+	static void checkForAllSoundOnOrOff () {
+		if (MusicMuted == FXMuted) {
+			EventController.Event(EventList.SOUND_TOGGLED_ON_OFF);
+		}
 	}
 }
