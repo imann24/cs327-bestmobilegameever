@@ -34,6 +34,7 @@ public class AudioController : MonoBehaviour {
 	RandomizedQueue<AudioFile> _swells;
 	RandomizedQueue<AudioFile> _sweeteners;
 	RandomizedQueue<AudioFile> _GUIclicks;
+	RandomizedQueue<AudioFile> _matey;
 	IEnumerator _swellCoroutine;
 	IEnumerator _sweetenerCoroutine;
 
@@ -359,10 +360,15 @@ public class AudioController : MonoBehaviour {
 		Play (_GUIclicks.Cycle ());
 	}
 
+	public void Matey () {
+		Play (_matey.Cycle ());
+	}
+
 	void initCyclingAudio () {
 		_sweeteners = new RandomizedQueue<AudioFile>();
 		_swells = new RandomizedQueue<AudioFile>();
 		_GUIclicks = new RandomizedQueue<AudioFile>();
+		_matey = new RandomizedQueue<AudioFile>();
 		// Init Queue's with sound files
 		List<AudioFile> list = new List<AudioFile>();
 		// Get all deck music
@@ -374,9 +380,15 @@ public class AudioController : MonoBehaviour {
 		foreach (AudioFile track in list) {
 			_sweeteners.Enqueue (track);
 		}
+		// Get all GUI click sounds
 		playEvents.TryGetValue ("GUI Click",out list);
 		foreach (AudioFile track in list) {
 			_GUIclicks.Enqueue (track);
+		}
+		// Get all matey sounds
+		playEvents.TryGetValue ("MateyButton",out list);
+		foreach (AudioFile track in list) {
+			_matey.Enqueue (track);
 		}
 	}
 
