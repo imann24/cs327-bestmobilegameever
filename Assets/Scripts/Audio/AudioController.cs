@@ -33,6 +33,7 @@ public class AudioController : MonoBehaviour {
 	// Audio Control Patterns
 	RandomizedQueue<AudioFile> _swells;
 	RandomizedQueue<AudioFile> _sweeteners;
+	RandomizedQueue<AudioFile> _GUIclicks;
 	IEnumerator _swellCoroutine;
 	IEnumerator _sweetenerCoroutine;
 
@@ -354,9 +355,14 @@ public class AudioController : MonoBehaviour {
 		StopCoroutine(_swellCoroutine);
 	}
 
+	public void ClickSound () {
+		Play (_GUIclicks.Cycle ());
+	}
+
 	void initCyclingAudio () {
 		_sweeteners = new RandomizedQueue<AudioFile>();
 		_swells = new RandomizedQueue<AudioFile>();
+		_GUIclicks = new RandomizedQueue<AudioFile>();
 		// Init Queue's with sound files
 		List<AudioFile> list = new List<AudioFile>();
 		// Get all deck music
@@ -367,6 +373,10 @@ public class AudioController : MonoBehaviour {
 		playEvents.TryGetValue ("every8to20seconds",out list);
 		foreach (AudioFile track in list) {
 			_sweeteners.Enqueue (track);
+		}
+		playEvents.TryGetValue ("GUI Click",out list);
+		foreach (AudioFile track in list) {
+			_GUIclicks.Enqueue (track);
 		}
 	}
 
