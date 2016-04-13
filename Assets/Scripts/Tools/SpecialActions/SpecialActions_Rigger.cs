@@ -7,13 +7,17 @@ public class SpecialActions_Rigger : SpecialActions {
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
             case "RiggerDescend":
-                next = "rigger_descend";
-                Invoke("doNext", 1f);
+                StartCoroutine(RiggerDescend());
                 break;
         }
     }
 
-    private void doNext() {
-        NextInteraction(next);
+    IEnumerator RiggerDescend() {
+        Fader.FadeIn();
+        yield return new WaitForSeconds(2f);
+        gameObject.transform.position = GameObject.Find("Waypoint_RiggerDescend").transform.position;
+        NextInteraction("light", GameObject.Find("Lantern").GetComponent<Interactable>());
+        Fader.FadeOut();
+        NextInteraction("rigger_descend");
     }
 }

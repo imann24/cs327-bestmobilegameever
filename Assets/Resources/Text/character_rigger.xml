@@ -33,14 +33,24 @@
       <Type>Click</Type>
       <ALLTags>hasPoster</ALLTags>
       <NONETags>riggerHit|riggerDown</NONETags>
-      <MaxDistance>10</MaxDistance>
+      <MaxDistance>3</MaxDistance>
       <Next>talk_cant_hear_10</Next>
     </Interaction>
     <Interaction>
       <Name>give</Name>
       <Type>UseItem</Type>
+      <NONETags>riggerDown|hasPoster|holdingPoster</NONETags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
+      <Next>rigger_talk</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>give</Name>
+      <Type>UseItem</Type>
+      <ANYTags>hasPoster|holdingPoster</ANYTags>
       <NONETags>riggerHit|riggerDown|holdingOrange</NONETags>
-      <MaxDistance>10</MaxDistance>
+      <MaxDistance>3</MaxDistance>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>talk_cant_hear_10</Next>
     </Interaction>
@@ -78,7 +88,7 @@
     <Interaction>
       <Name>hit</Name>
       <Type>UseItem</Type>
-      <ALLTags>holdingOrange</ALLTags>
+      <ALLTags>holdingOrange|hasPoster</ALLTags>
       <NONETags>riggerHit</NONETags>
       <GiveTags>riggerHit|riggerTalked</GiveTags>
       <SpecialActions>SoundOrange</SpecialActions>
@@ -259,15 +269,15 @@
       <Image2>CheifRiggerNFade</Image2>
       <Text>Sure. I want that hook back, though.</Text>
       <GiveItems>Hook</GiveItems>
-      <Next>rigger_choice_first</Next>
+      <Next>rigger_descend_02</Next>
     </Interaction>
     <Interaction>
-      <Name>rigger_choice_first</Name>
+      <Name>rigger_descend_02</Name>
       <Type>Derivative</Type>
-      <TextType>Monologue</TextType>
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
       <Text>Thanks. Now, what did you want?</Text>
+      <Next>rigger_choice</Next>
     </Interaction>
   <!-- EndRegion -->
   <!-- EndRegion -->
@@ -277,15 +287,10 @@
       <Name>talk</Name>
       <Type>Click</Type>
       <ALLTags>riggerDown</ALLTags>
-      <Next>rigger_choice</Next>
-    </Interaction>
-    <Interaction>
-      <Name>rigger_choice</Name>
-      <Type>Derivative</Type>
-      <TextType>Monologue</TextType>
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
       <Text>Thanks for helping me out. What can I do for you?</Text>
+      <Next>rigger_choice</Next>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region Give Poster -->
@@ -294,6 +299,7 @@
       <Type>UseItem</Type>
       <ALLTags>holdingPoster|riggerDown</ALLTags>
       <NONETags>riggerPosterGiven</NONETags>
+      <Text>The first mate wanted you to have this.</Text>
       <Next>rigger_descend_03</Next>
     </Interaction>
     <Interaction>
@@ -301,39 +307,19 @@
       <Type>Derivative</Type>
       <ALLTags>hasPoster</ALLTags>
       <NONETags>riggerPosterGiven</NONETags>
-      <Image>SadieN</Image>
-      <Image2>CheifRiggerNFade</Image2>
-      <Text>I have a flyer for you.</Text>
-      <Next>rigger_descend_03</Next>
-    </Interaction>
-    <Interaction>
-      <Name>rigger_choice_first</Name>
-      <Type>Derivative</Type>
-      <ALLTags>hasPoster</ALLTags>
-      <NONETags>riggerPosterGiven</NONETags>
-      <Image>SadieN</Image>
-      <Image2>CheifRiggerNFade</Image2>
-      <Text>I have a flyer for you.</Text>
+      <Text>The first mate wanted you to have this.</Text>
       <Next>rigger_descend_03</Next>
     </Interaction>
     <Interaction>
       <Name>rigger_descend_03</Name>
       <Type>Derivative</Type>
-      <Image>SadieN</Image>
-      <Image2>CheifRiggerNFade</Image2>
-      <Text>The first mate wanted you to have this.</Text>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerN</Image2>
+      <Text>Bartholomew sent something to *me*? Oh my.</Text>
       <Next>rigger_descend_04</Next>
     </Interaction>
     <Interaction>
       <Name>rigger_descend_04</Name>
-      <Type>Derivative</Type>
-      <Image>SadieNFade</Image>
-      <Image2>CheifRiggerN</Image2>
-      <Text>Bartholomew sent something to *me*? Oh my.</Text>
-      <Next>rigger_descend_05</Next>
-    </Interaction>
-    <Interaction>
-      <Name>rigger_descend_05</Name>
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
@@ -353,13 +339,7 @@
     <!-- EndRegion -->
     <!-- Region Afraid of heights? -->
     <Interaction>
-      <Name>rigger_choice_first</Name>
-      <Type>Derivative</Type>
-      <Text>You're afraid of heights?</Text>
-      <Next>rigger_choice_10</Next>
-    </Interaction>
-    <Interaction>
-      <Name>rigger_choice</Name>
+      <Name>rigger_choice_old</Name>
       <Type>Derivative</Type>
       <Text>You're afraid of heights?</Text>
       <Next>rigger_choice_10</Next>
@@ -422,45 +402,30 @@
     <!-- EndRegion -->
     <!-- Region Rope -->
     <Interaction>
-      <Name>rigger_choice_first</Name>
-      <Type>Derivative</Type>
-      <NONETags>hasRope|lifeboatSecured</NONETags>
-      <Text>Nice rope.</Text>
-      <Next>rigger_choice_20</Next>
-    </Interaction>
-    <Interaction>
       <Name>rigger_choice</Name>
       <Type>Derivative</Type>
       <NONETags>hasRope|lifeboatSecured</NONETags>
-      <Text>Nice rope.</Text>
+      <Text>Do you mind if I use that rope of yours?</Text>
       <Next>rigger_choice_20</Next>
     </Interaction>
     <Interaction>
       <Name>rigger_choice_20</Name>
       <Type>Derivative</Type>
-      <Image>SadieN</Image>
-      <Image2>CheifRiggerNFade</Image2>
-      <Text>Do you mind if I use that rope of yours?</Text>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerN</Image2>
+      <Text>You want what, again?</Text>
       <Next>rigger_choice_21</Next>
     </Interaction>
     <Interaction>
       <Name>rigger_choice_21</Name>
       <Type>Derivative</Type>
-      <Image>SadieNFade</Image>
-      <Image2>CheifRiggerN</Image2>
-      <Text>You want what, again?</Text>
+      <Image>SadieN</Image>
+      <Image2>CheifRiggerNFade</Image2>
+      <Text>Can I borrow that length of ‘line’, please?</Text>
       <Next>rigger_choice_22</Next>
     </Interaction>
     <Interaction>
       <Name>rigger_choice_22</Name>
-      <Type>Derivative</Type>
-      <Image>SadieN</Image>
-      <Image2>CheifRiggerNFade</Image2>
-      <Text>Can I borrow that length of ‘line’, please?</Text>
-      <Next>rigger_choice_23</Next>
-    </Interaction>
-    <Interaction>
-      <Name>rigger_choice_23</Name>
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
@@ -469,12 +434,9 @@
     </Interaction>
     <!-- EndRegion-->
     <Interaction>
-      <Name>rigger_choice_first</Name>
-      <Type>Derivative</Type>
-      <Text>Nevermind.</Text>
-    </Interaction>
-    <Interaction>
       <Name>rigger_choice</Name>
+      <Image>SadieN</Image>
+      <Image2>CheifRiggerNFade</Image2>
       <Type>Derivative</Type>
       <Text>Nevermind.</Text>
     </Interaction>
