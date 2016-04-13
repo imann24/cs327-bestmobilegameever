@@ -6,31 +6,23 @@
       <Type>Click</Type>
 	    <ALLTags>hasHook</ALLTags>
 	    <SpecialActions>SoundOpenDoor</SpecialActions>
-      <MaxDistance>100</MaxDistance>
-      <TooFar>move_to_door_and_exit</TooFar>
-	  <Next>exit_tutorial_room</Next>
-	  <NextInteractor>Cutscene_Handler</NextInteractor>
+	    <Next>exit_tutorial_room</Next>
+	    <NextInteractor>Cutscene_Handler</NextInteractor>
     </Interaction>
     <Interaction>
       <Name>door_cant_exit</Name>
       <Type>Click</Type>
-	  <NONETags>hasHook</NONETags>
-	  <Next>examine_tutorial_door</Next>
-	  <NextInteractor>Sadie</NextInteractor>
-    </Interaction>
-    <Interaction>
-      <Name>move_to_door_and_exit</Name>
-      <Type>Derivative</Type>
+	    <NONETags>hasHook</NONETags>
+	    <Next>examine_tutorial_door</Next>
+	    <NextInteractor>Sadie</NextInteractor>
       <IgnoreDistance>true</IgnoreDistance>
-      <SpecialActions>ComeHere|SoundOpenDoor</SpecialActions>
-	  <Next>exit_tutorial_room</Next>
-	  <NextInteractor>Cutscene_Handler</NextInteractor>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   </Interactions>
 </InteractionList>

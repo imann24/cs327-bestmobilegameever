@@ -7,7 +7,7 @@
 			<Type>Derivative</Type>
 			<Text>Where is it, again...?</Text>
 			<TextType>Floating</TextType>
-			<Next>tutorial_03_sound</Next>
+      <TextBox>Tap an item to interact with it</TextBox>
 			<NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 		<Interaction>
@@ -45,7 +45,7 @@
 			<Name>cleaned_hook</Name>
 			<Type>Derivative</Type>
 			<Text>Nice. Now this thing will be on the Captain's wrist before he knows it. Better get it up there quick.</Text>
-			<Image>SadiePortrait</Image>
+			<Image>SadieH</Image>
 		</Interaction>
 		<Interaction>
 			<Name>examine_tutorial_door</Name>
@@ -61,33 +61,21 @@
 			<Text>I really need to clean this hook hand first.</Text>
 			<TextType>Floating</TextType>
 		</Interaction>
-    <Interaction>
-      <Name>examine_hook_dirty</Name>
-      <Type>Derivative</Type>
-      <NONETags>hasHookDirty|tutorialTappedHook</NONETags>
-      <GiveTags>tutorialTappedHook</GiveTags>
-      <SpecialActions>ComeHere</SpecialActions>
-      <NextInteractor>Cutscene_Handler</NextInteractor>
-      <Next>tutorial_04_sound</Next>
-    </Interaction>
 		<Interaction>
-		  <Name>examine_hook_dirty</Name>
+		  <Name>take_hook_dirty</Name>
 		  <Type>Derivative</Type>
-		  <NONETags>hasHookDirty</NONETags>
-      <ALLTags>tutorialTappedHook</ALLTags>
 		  <Text>I really shouldn't have left this on the floor...</Text>
 		  <TextType>Floating</TextType>
+      <TextBox>Tap an item to examine it</TextBox>
       <Next>tutorial_items</Next>
       <NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 		<Interaction>
 		  <Name>examine_hook_dirty</Name>
 		  <Type>Derivative</Type>
-		  <ALLTags>hasHookDirty</ALLTags>
 		  <Text>The Captain's hook hand. I was supposed to clean it... last night. Oops.</Text>
 		  <TextType>Floating</TextType>
-		  <NextInteractor>Cutscene_Handler</NextInteractor>
-		  <Next>tutorial_items_02</Next>
+      <TextBox>hide();</TextBox>
 		</Interaction>
 		<Interaction>
 		  <Name>examine_hook</Name>
@@ -113,6 +101,27 @@
       <Type>Derivative</Type>
       <Text>No scurvy here.</Text>
       <TextType>Floating</TextType>
+      <TextBox>hide();</TextBox>
+    </Interaction>
+    <Interaction>
+      <Name>take_orange_fail</Name>
+      <Type>Derivative</Type>
+      <Text>I really need to find the Captain's hook hand...</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>take_orange</Name>
+      <Type>Derivative</Type>
+      <Text>Ah, an orange. A pirate's best friend.</Text>
+      <TextType>Floating</TextType>
+      <Next>take_orange_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>take_orange_1</Name>
+      <Type>Derivative</Type>
+      <Text>And not a bad projectile in a pinch.</Text>
+      <TextType>Floating</TextType>
+      <TextBox>Drag and drop an item from your inventory onto an object in the world to attempt to use it</TextBox>
     </Interaction>
 	<!-- EndRegion -->
   <!-- Region Firstmate P1 Interactions-->
@@ -120,91 +129,39 @@
     <Interaction>
       <Name>examine_mop_head</Name>
       <Type>Derivative</Type>
+      <NONETags>mopInked</NONETags>
       <Text>Hello again, old friend.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
-      <Name>use_paint_mop</Name>
+      <Name>examine_mop_head</Name>
       <Type>Derivative</Type>
-      <Text>This mop is already gray…</Text>
+      <ALLTags>mopInked</ALLTags>
+      <Text>An inky mop. Talk about counterproductive.</Text>
       <TextType>Floating</TextType>
-      <SpecialActions>ReturnSelected</SpecialActions>
-    </Interaction>
-    <Interaction>
-      <Name>examine_paint</Name>
-      <Type>Derivative</Type>
-      <NONETags>hasPaintWhite|hasPaintRed</NONETags>
-      <Text>Who left this out? Could be useful...</Text>
-      <TextType>Floating</TextType>
-      <NextInteractor>Paint_White</NextInteractor>
-      <Next>take</Next>
-    </Interaction>
-    <Interaction>
-      <Name>examine_paint</Name>
-      <Type>Derivative</Type>
-      <ALLTags>hasPaintWhite</ALLTags>
-      <Text>Dreary and gray. Reminds me of home.</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
-      <Name>examine_portrait</Name>
-      <Type>Derivative</Type>
-      <NONETags>portraitPainted|portraitDressed</NONETags>
-      <Text>That’s the captain.</Text>
-      <TextType>Floating</TextType>
-      <Next>examine_portrait_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>examine_portrait_1</Name>
-      <Type>Derivative</Type>
-      <NONETags>portraitPainted|portraitDressed</NONETags>
-      <Text>Well, that was the captain. Bart - er, the first mate - practically worships them.</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
-      <Name>examine_portrait</Name>
-      <Type>Derivative</Type>
-      <ALLTags>portraitPainted</ALLTags>
-      <Text>Guess I got to pull one last prank on you after all, Captain.</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
-      <Name>use_paint_portrait</Name>
-      <Type>Derivative</Type>
-      <NONETags>portraitPainted|firstmateQuestInProgress1</NONETags>
-      <Text>Why on earth would I want to paint over that?</Text>
-      <TextType>Floating</TextType>
-      <SpecialActions>ReturnSelected</SpecialActions>
-    </Interaction>
-    <Interaction>
-      <Name>use_paint_portrait</Name>
-      <Type>Derivative</Type>
-      <ALLTags>firstmateQuestInProgress1</ALLTags>
-      <NONETags>portraitPainted</NONETags>
-      <Text>Hm, I wonder…</Text>
-      <TextType>Floating</TextType>
-      <SpecialActions>ReturnSelected</SpecialActions>
-      <Next>paint</Next>
-      <NextInteractor>Captain_Portrait</NextInteractor>
-    </Interaction>
-    <Interaction>
-      <Name>use_paint_portrait_success</Name>
-      <Type>Derivative</Type>
-      <Text>Gorgeous.</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
-      <Name>use_paint_portrait</Name>
-      <Type>Derivative</Type>
-      <ANYTags>portraitPainted|portraitDressed</ANYTags>
-      <Text>It's perfect just the way it is.</Text>
-      <TextType>Floating</TextType>
-      <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>examine_ink</Name>
       <Type>Derivative</Type>
       <Text>Eugh.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_mop_ink</Name>
+      <Type>Derivative</Type>
+      <Text>Ick. That just made the mop all inky.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_mop_ink_again</Name>
+      <Type>Derivative</Type>
+      <Text>I don’t ink so. Haha.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_mop_handle</Name>
+      <Type>Derivative</Type>
+      <Text>You’re kidding. I can’t handle this.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <!-- EndRegion -->
@@ -219,36 +176,23 @@
   <!-- EndRegion -->
   <!-- Region Firstmate P2 Interactions -->
     <Interaction>
-      <Name>examine_chalkboard</Name>
-      <Type>Derivative</Type>
-      <Text>It's a chalkboard.</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
-      <Name>use_chalk_chalkboard</Name>
-      <Type>Derivative</Type>
-      <Text>The cannoneer would be pissed if I messed with that. Better not.</Text>
-      <TextType>Floating</TextType>
-      <SpecialActions>ReturnSelected</SpecialActions>
-    </Interaction>
-    <Interaction>
       <Name>examine_lifeboat</Name>
       <Type>Derivative</Type>
       <NONETags>lifeboatSecured</NONETags>
-      <Text>Looks precarious.</Text>
+      <Text>Doesn’t look very safe.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
       <Name>examine_lifeboat</Name>
       <Type>Derivative</Type>
       <ALLTags>lifeboatSecured</ALLTags>
-      <Text>Nice and secure.</Text>
+      <Text>Looks like it could save lives.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
       <Name>use_rope_lifeboat</Name>
       <Type>Derivative</Type>
-      <Text>Alright, let's fix it.</Text>
+      <Text>Workplace safety is paramount. They’ll be thanking me come inspection day.</Text>
       <TextType>Floating</TextType>
       <Next>secure</Next>
       <NextInteractor>Lifeboat</NextInteractor>
@@ -260,45 +204,83 @@
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
-      <Name>examine_mop_handle</Name>
-      <Type>Derivative</Type>
-      <Text>A broken mop handle.</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
       <Name>use_hook_handle</Name>
       <Type>Derivative</Type>
-      <Text>Let's combine them!</Text>
+      <Text>Neat-o.</Text>
       <TextType>Floating</TextType>
-      <TakeItems>Mop_Handle|Hook</TakeItems>
-      <GiveItems>Pole_Hook</GiveItems>
+    </Interaction>
+    <Interaction>
+      <Name>examine_chalkboard</Name>
+      <Type>Derivative</Type>
+      <ALLTags>ChalkTaken</ALLTags>
+      <Text>It's very clear.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_chalkboard</Name>
+      <Type>Derivative</Type>
+      <NONETags>ChalkTaken</NONETags>
+      <Text>Maybe I'll just borrow this chalk here.</Text>
+      <TextType>Floating</TextType>
+      <Next>take_chalk</Next>
+      <NextInteractor>Chalkboard</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk_poster</Name>
+      <Type>Derivative</Type>
+      <Text>Let’s just scribble some stink lines...</Text>
+      <TextType>Floating</TextType>
+      <Next>use_chalk_poster_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk_poster_1</Name>
+      <Type>Derivative</Type>
+      <Text>Heh. Classic.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk_chalkboard</Name>
+      <Type>Derivative</Type>
+      <Text>Believe it or not, I can read.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>examine_chalk</Name>
       <Type>Derivative</Type>
-      <NONETags>hasChalk</NONETags>
-      <Text>Chalk! Cool!</Text>
-      <TextType>Floating</TextType>
-      <Next>take</Next>
-      <NextInteractor>Chalk</NextInteractor>
-    </Interaction>
-    <Interaction>
-      <Name>examine_chalk</Name>
-      <Type>Derivative</Type>
-      <ALLTags>hasChalk</ALLTags>
-      <Text>It's a piece of chalk.</Text>
+      <Text>No sidewalks to draw on up here.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
       <Name>examine_pole_hook</Name>
       <Type>Derivative</Type>
-      <Text>Long and grabby.</Text>
+      <Text>What was the point of this again?</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_lantern</Name>
+      <Type>Derivative</Type>
+      <NONETags>lanternLit</NONETags>
+      <Text>I’ve got a bright idea...</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_lantern</Name>
+      <Type>Derivative</Type>
+      <ALLTags>lanternLit</ALLTags>
+      <Text>It's lit.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_pole_lantern</Name>
+      <Type>Derivative</Type>
+      <Text>Not quite long enough.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
       <Name>examine_poster</Name>
       <Type>Derivative</Type>
-      <Text>Propaganda for the first mate.</Text>
+      <Text>I think he spelled his own name wrong...</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
@@ -317,7 +299,14 @@
     <Interaction>
       <Name>give_poster_again</Name>
       <Type>Derivative</Type>
-      <Text>They already got one.</Text>
+      <Text>They already have one of these. Duh.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_talk</Name>
+      <Type>Derivative</Type>
+      <Text>She's up pretty high. I probably shouldn't bother her.</Text>
       <TextType>Floating</TextType>
     </Interaction>
   <!-- EndRegion -->
@@ -359,7 +348,7 @@
     <Interaction>
       <Name>DefaultCannotGive</Name>
       <Type>Derivative</Type>
-      <NONETags>holdingHook</NONETags>
+      <NONETags>holdingHook|holdingPoster</NONETags>
       <Text>I don't think they'd want that.</Text>
       <TextType>Floating</TextType>
       <SpecialActions>ReturnSelected</SpecialActions>
@@ -369,6 +358,14 @@
       <Type>Derivative</Type>
       <ALLTags>holdingHook</ALLTags>
       <Text>I'd really rather hold on to it.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>DefaultCannotGive</Name>
+      <Type>Derivative</Type>
+      <ALLTags>holdingPoster</ALLTags>
+      <Text>Wait. I should be giving these to people who actually matter.</Text>
       <TextType>Floating</TextType>
       <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>

@@ -6,39 +6,39 @@
       <Name>talk</Name>
       <Type>Click</Type>
       <NONETags>lifeboatSecured</NONETags>
-      <Next>choice</Next>
+      <Next>default</Next>
     </Interaction>
     <Interaction>
       <Name>talk</Name>
       <Type>Click</Type>
       <ALLTags>lifeboatSecured|lifeboatComment</ALLTags>
+      <Next>default</Next>
+    </Interaction>
+    <Interaction>
+      <Name>default</Name>
+      <Type>Derivative</Type>
+      <NONETags>lifeboatSecured</NONETags>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateA</Image2>
+      <Text>Arrr! Don’t bother me, you slime-swiller!</Text>
       <Next>choice</Next>
     </Interaction>
     <Interaction>
-      <Name>choice</Name>
+      <Name>default</Name>
       <Type>Derivative</Type>
-      <TextType>Monologue</TextType>
-      <NONETags>lifeboatSecured</NONETags>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
-      <Text>Arrr! Don’t bother me, you slime-swiller!</Text>
-    </Interaction>
-    <Interaction>
-      <Name>choice</Name>
-      <Type>Derivative</Type>
-      <TextType>Monologue</TextType>
       <ALLTags>lifeboatSecured</ALLTags>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateA</Image2>
       <Text>Arrr! Why do you continue to disturb me?</Text>
+      <Next>choice</Next>
     </Interaction>
     <!-- Region Offer Rope -->
     <Interaction>
       <Name>use_rope_00</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingRope</ALLTags>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
+      <Image>SadieN</Image>
+      <Image2>SecondMateNFade</Image2>
       <Text>This might help you with your lifeboat problem.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>use_rope_01</Next>
@@ -46,24 +46,24 @@
     <Interaction>
       <Name>use_rope_01</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Text>That is not - that is -</Text>
       <Next>use_rope_02</Next>
     </Interaction>
     <Interaction>
       <Name>use_rope_02</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Text>*Ahem* Do not interrupt my process, you scurvy lout!</Text>
       <Next>use_rope_03</Next>
     </Interaction>
     <Interaction>
       <Name>use_rope_03</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Text>If I have need of your services, I will inform you of such!</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -75,65 +75,50 @@
       <ALLTags>lifeboatSecured</ALLTags>
       <NONETags>lifeboatComment</NONETags>
       <GiveTags>lifeboatComment</GiveTags>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Text>You secured the lifeboat, did you?</Text>
       <Next>lifeboat_comment_00</Next>
     </Interaction>
     <Interaction>
       <Name>lifeboat_comment_00</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateH</Image2>
       <Text>Hm, yes - I judge your work to be sufficient.</Text>
       <Next>lifeboat_comment_01</Next>
     </Interaction>
     <Interaction>
       <Name>lifeboat_comment_01</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
+      <Image>SadieA</Image>
+      <Image2>SecondMateHFade</Image2>
       <Text>Sufficient? That was supposed to be your job.</Text>
       <Next>lifeboat_comment_02</Next>
     </Interaction>
     <Interaction>
       <Name>lifeboat_comment_02</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieAFade</Image>
+      <Image2>SecondMateA</Image2>
       <Text>Don’t speak back to me, bilge rat! You are testing my patience.</Text>
       <Next>lifeboat_comment_03</Next>
     </Interaction>
     <Interaction>
       <Name>lifeboat_comment_03</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieAFade</Image>
+      <Image2>SecondMateA</Image2>
       <Text>...</Text>
-      <Next>choice_first</Next>
+      <Next>lifeboat_comment_04</Next>
     </Interaction>
     <Interaction>
-      <Name>choice_first</Name>
+      <Name>lifeboat_comment_04</Name>
       <Type>Derivative</Type>
-      <TextType>Monologue</TextType>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Text>Why are you still here? I don’t have time for layabouts.</Text>
-    </Interaction>
-    <Interaction>
-      <Name>choice_first</Name>
-      <Type>Derivative</Type>
-      <ALLTags>lifeboatSecured</ALLTags>
-      <Text>(Ask about Bart)</Text>
-      <Next>choice_bart_00</Next>
-    </Interaction>
-    <Interaction>
-      <Name>choice_first</Name>
-      <Type>Derivative</Type>
-      <ALLTags>hasPoster</ALLTags>
-      <NONETags>secondmatePosterGiven</NONETags>
-      <Text>(Offer poster)</Text>
-      <Next>choice_poster_00</Next>
+      <Next>choice</Next>
     </Interaction>
   <!-- EndRegion -->
   <!-- Region Default Dialogue -->
@@ -142,62 +127,54 @@
       <Name>choice</Name>
       <Type>Derivative</Type>
       <ALLTags>lifeboatSecured</ALLTags>
-      <Text>(Ask about Bart)</Text>
-      <Next>choice_bart_00</Next>
-    </Interaction>
-    <Interaction>
-      <Name>choice_bart_00</Name>
-      <Type>Derivative</Type>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
       <Text>You seem to think very highly of the first mate.</Text>
       <Next>choice_bart_01</Next>
     </Interaction>
     <Interaction>
       <Name>choice_bart_01</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateH</Image2>
       <Text>Bartholomew? Aye, I do - as should you! He has the untameable spirit of a pirate and the dashing beauty of a captain.</Text>
       <Next>choice_bart_02</Next>
     </Interaction>
     <Interaction>
       <Name>choice_bart_02</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateH</Image2>
       <Text>All lesser creatures are blessed to look upon him!</Text>
       <Next>choice_bart_03</Next>
     </Interaction>
     <Interaction>
       <Name>choice_bart_03</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
+      <Image>SadieN</Image>
+      <Image2>SecondMateHFade</Image2>
       <Text>Oh yeah, I feel *so* blessed to be running his errands.</Text>
       <Next>choice_bart_04</Next>
     </Interaction>
     <Interaction>
       <Name>choice_bart_04</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Text>He - entrusted a task to *you*?! That’s -</Text>
       <Next>choice_bart_05</Next>
     </Interaction>
     <Interaction>
       <Name>choice_bart_05</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Text>That is, perhaps you are not quite the bilge rat you look, after all.</Text>
       <Next>choice_bart_06</Next>
     </Interaction>
     <Interaction>
       <Name>choice_bart_06</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
+      <Image>SadieN</Image>
+      <Image2>SecondMateNFade</Image2>
       <Text>Stop it, I’m blushing.</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -207,8 +184,8 @@
       <Type>UseItem</Type>
       <NONETags>lifeboatSecured|secondmatePosterGiven</NONETags>
       <ALLTags>holdingPoster</ALLTags>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
+      <Image>SadieN</Image>
+      <Image2>SecondMateNFade</Image2>
       <Text>Here, I’ve got this poster for you -</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>choice_poster_10</Next>
@@ -219,30 +196,22 @@
       <ALLTags>holdingPoster|lifeboatSecured</ALLTags>
       <NONETags>secondmatePosterGiven</NONETags>
       <SpecialActions>ReturnSelected</SpecialActions>
-      <Next>choice_poster_00</Next>
+      <Text>Here, I’ve got this poster for you from the first mate.</Text>
+      <Next>choice_poster_20</Next>
     </Interaction>
     <Interaction>
       <Name>choice</Name>
       <Type>Derivative</Type>
       <ALLTags>hasPoster</ALLTags>
-      <NONETags>secondmatePosterGiven</NONETags>
-      <Text>(Offer poster)</Text>
-      <Next>choice_poster_00</Next>
-    </Interaction>
-    <Interaction>
-      <Name>choice_poster_00</Name>
-      <Type>Derivative</Type>
-      <NONETags>lifeboatSecured</NONETags>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
-      <Text>I just need to give you this -</Text>
+      <NONETags>secondmatePosterGiven|lifeboatSecured</NONETags>
+      <Text>Here, I’ve got this poster for you -</Text>
       <Next>choice_poster_10</Next>
     </Interaction>
     <Interaction>
       <Name>choice_poster_10</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateA</Image2>
       <GiveTags>secondmateTalked</GiveTags>
       <Text>Avast ye! Can’t you see I’m working?</Text>
       <Next>choice_poster_11</Next>
@@ -250,48 +219,49 @@
     <Interaction>
       <Name>choice_poster_11</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
+      <Image>SadieN</Image>
+      <Image2>SecondMateAFade</Image2>
       <Text>Um...no? You’re just staring at Bart over there.</Text>
       <Next>choice_poster_12</Next>
     </Interaction>
     <Interaction>
       <Name>choice_poster_12</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateH</Image2>
       <Text>As well I should! He is true captain material. So sleek, so shiny…</Text>
       <Next>choice_poster_13</Next>
     </Interaction>
     <Interaction>
       <Name>choice_poster_13</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Text>*Ahem* I am, in fact, diligently contriving a strategy to fix this lifeboat’s precarious situation.</Text>
       <Next>choice_poster_14</Next>
     </Interaction>
     <Interaction>
       <Name>choice_poster_14</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Text>But I don’t expect you would understand such an intellectual process. So begone with you, cur!</Text>
     </Interaction>
     <Interaction>
-      <Name>choice_poster_00</Name>
+      <Name>choice</Name>
       <Type>Derivative</Type>
-      <ALLTags>lifeboatSecured</ALLTags>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
+      <ALLTags>hasPoster|lifeboatSecured</ALLTags>
+      <NONETags>secondmatePosterGiven</NONETags>
+      <Image>SadieN</Image>
+      <Image2>SecondMateNFade</Image2>
       <Text>Here, I’ve got this poster for you from the first mate.</Text>
       <Next>choice_poster_20</Next>
     </Interaction>
     <Interaction>
       <Name>choice_poster_20</Name>
       <Type>Derivative</Type>
-      <Image>SadiePortraitFaded</Image>
-      <Image2>SecondMatePortrait</Image2>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateH</Image2>
       <Text>It’s from Bartholomew? Why didn’t you say something!? Give me that!</Text>
       <GiveTags>secondmatePosterGiven</GiveTags>
       <Next>decrease</Next>
@@ -307,22 +277,10 @@
     </Interaction>
     <!-- EndRegion -->
     <Interaction>
-      <Name>choice_first</Name>
-      <Type>Derivative</Type>
-      <Text>(Leave)</Text>
-      <Next>choice_leave</Next>
-    </Interaction>
-    <Interaction>
       <Name>choice</Name>
       <Type>Derivative</Type>
-      <Text>(Leave)</Text>
-      <Next>choice_leave</Next>
-    </Interaction>
-    <Interaction>
-      <Name>choice_leave</Name>
-      <Type>Derivative</Type>
-      <Image>SadiePortrait</Image>
-      <Image2>SecondMatePortraitFaded</Image2>
+      <Image>SadieN</Image>
+      <Image2>SecondMateNFade</Image2>
       <Text>Pfft. I didn’t want to talk to you either.</Text>
     </Interaction>
   <!-- EndRegion -->

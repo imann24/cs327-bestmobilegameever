@@ -8,17 +8,26 @@
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
+      <Name>take_chalk</Name>
+      <Type>Derivative</Type>
+      <GiveTags>ChalkTaken</GiveTags>
+      <GiveItems>Chalk</GiveItems>
+      <SpecialActions>TakeChalk</SpecialActions>
+    </Interaction>
+    <Interaction>
       <Name>use_chalk</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingChalk</ALLTags>
       <Next>use_chalk_chalkboard</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
       <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
 	</Interactions>
 </InteractionList>

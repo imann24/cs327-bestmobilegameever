@@ -60,8 +60,7 @@ public class MixpanelController : MonoBehaviour
 
 		// Note that versionNumber is not static, this enables it to be set through the inspector - but also means we have to pull the instance
 		AddSuperProperties ("Version", MixpanelController.instance.versionNumber);
-
-		GamePlay(true);
+	
 	}
 
 	//updates the playerprefs count of time to track between game sessions
@@ -76,16 +75,79 @@ public class MixpanelController : MonoBehaviour
 	
 	//establishes the in game event references that send MixPanel events
 	void LinkToEvents () {
-		
+		EventController.OnNamedEvent += handleNamedEvents;	
+		EventController.OnNamedTextEvent += handleNamedTextEvents;
 	}
 
 
 
 	//unlinks from the game event references
 	void UnlinkFromEvents () {
-		
+		EventController.OnNamedEvent -= handleNamedEvents;	
+		EventController.OnNamedTextEvent -= handleNamedTextEvents;
 	}
-		
+
+	void handleNamedEvents (string eventName) {
+		switch (eventName) {
+
+		case EventList.MATEY_BUTTON_CLICKED:
+			sendSimpleNamedEvent(eventName);
+			break;
+
+		case EventList.PLAY_BUTTON_CLICKED:
+			sendSimpleNamedEvent(eventName);
+			break;
+
+		case EventList.SOUND_TOGGLED_ON_OFF:
+			sendSimpleNamedEvent(eventName);
+			break;
+
+		case EventList.GAME_END_SCREEN_REACHED:
+			sendSimpleNamedEvent(eventName);
+			break;
+
+		}
+	}
+
+	void handleNamedTextEvents (string eventName, string text) {
+		InventoryReport report;
+
+		switch (eventName) {
+
+
+		case EventList.INVENTORY_ITEM_COLLECTED:
+			report = GameManager.InventoryManager.GetReport();
+			report.AddItemCollected(text);
+			sendInventoryEvent(eventName, report);
+			break;
+
+		case EventList.INVENTORY_ITEM_DESTROYED:
+			report = GameManager.InventoryManager.GetReport();
+			report.AddItemDestroyed(text);
+			sendInventoryEvent(eventName, report);
+			break;
+
+
+		}
+	}
+
+	// Send an empty event with no added properties
+	void sendSimpleNamedEvent (string eventName) {
+		Mixpanel.SendEvent (
+			eventName,
+			null
+		);
+	}
+
+	// Send an inventory event (containing a full status on the inventory
+	// TODO: Add an inventory report class: containing fall status of inventory in a dict
+	void sendInventoryEvent (string eventName, InventoryReport inventoryReport) {
+		Mixpanel.SendEvent (
+			eventName,
+			inventoryReport.Get()
+		);
+	}
+
 	#region Example event 
 	// Example event
 	// Parameters for the function are a handy way to have an event take in multiple Properties

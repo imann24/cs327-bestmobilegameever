@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.89, y: -9.26, z: 7.26}
+  m_LocalPosition: {x: 4.89, y: -9.26, z: 8.34}
   m_LocalScale: {x: 0.3164425, y: 0.031644247, z: 0.31644243}
   m_Children:
   - {fileID: 401884}
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionPath: item_bottle
+  InteractionPath: worldobject_bottle
   Debugging: 0
 --- !u!114 &11453284
 MonoBehaviour:
@@ -104,13 +104,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActionTag: CreateRag
-  Sound: 
+  Sound: OrangeImpact
   UseExtended: 1
   ChangesSprite: 0
   MovesObject: 0
   CreatesObject: 1
-  PlaysSound: 0
+  PlaysSound: 1
   UseNavMesh: 0
+  DestroyOnArrive: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 104970, guid: 9d601837006151945ad8ff2cd835a8e6, type: 2}
@@ -119,7 +120,7 @@ MonoBehaviour:
   SoundDelay: 0
   MoveSpeed: 2
   MoveToPosition: {x: 0, y: 0, z: 0}
-  CreateAtPosition: {x: 4.89, y: -9.26, z: 7.26}
+  CreateAtPosition: {x: 4.89, y: -9.26, z: 8.34}
 --- !u!212 &21298838
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -146,7 +147,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4d1b7f94c30513848bcc49b51e54304b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1161daca8c5f7154999b4c99f810af10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -160,6 +161,15 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Name
       value: Bottle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1161daca8c5f7154999b4c99f810af10,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: InteractionPath
+      value: worldobject_bottle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

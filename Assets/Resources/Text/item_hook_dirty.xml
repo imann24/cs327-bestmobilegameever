@@ -4,6 +4,8 @@
     <Interaction>
 		  <Name>examine</Name>
 		  <Type>Click</Type>
+      <ALLTags>hasHookDirty</ALLTags>
+      <TextBox>hide();</TextBox>
 		  <Next>examine_hook_dirty</Next>
 		  <NextInteractor>Sadie</NextInteractor>
     </Interaction>
@@ -11,9 +13,10 @@
       <Name>examine</Name>
       <Type>Click</Type>
       <NONETags>hasHookDirty</NONETags>
-      <ALLTags>tutorialTappedHook</ALLTags>
       <GiveItems>Hook_Dirty</GiveItems>
       <SpecialActions>Destroy</SpecialActions>
+      <Next>take_hook_dirty</Next>
+      <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
 		  <Name>use_rag</Name>
@@ -21,13 +24,13 @@
 		  <ALLTags>holdingRag</ALLTags>
 		  <Next>use_rag_hook</Next>
 		  <NextInteractor>Sadie</NextInteractor>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
 		  <Name>DefaultCannotUse</Name>
 		  <Type>Derivative</Type>
 		  <Next>DefaultCannotUse</Next>
 		  <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   </Interactions>
 </InteractionList>

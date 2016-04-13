@@ -5,103 +5,122 @@
     <Interaction>
       <Name>oj_intro_00</Name>
       <Type>Click</Type>
-      <NONETags>hasOrange</NONETags>
-      <Text>Orange please!</Text>
-      <GiveItems>Orange</GiveItems>
-    </Interaction>
-    <Interaction>
-      <Name>oj_intro_00</Name>
-      <Type>Click</Type>
-      <ALLTags>hasPoster</ALLTags>
-      <NONETags>ojPosterGiven</NONETags>
-      <Text>Will you take this?</Text>
+      <NONETags>ojIntroComplete</NONETags>
+      <GiveTags>ojIntroComplete</GiveTags>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>...</Text>
       <Next>oj_intro_01</Next>
     </Interaction>
     <Interaction>
-      <Name>oj_intro_00</Name>
+      <Name>oj_intro_01</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>...</Text>
+      <Next>oj_intro_02</Next>
+    </Interaction>
+    <Interaction>
+      <Name>oj_intro_02</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelA</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Ye be eyein' me citrus?</Text>
+      <Next>oj_choice</Next>
+    </Interaction>
+    <Interaction>
+      <Name>oj_intro_03</Name>
       <Type>Click</Type>
-      <Text>Nevermind.</Text>
+      <ALLTags>ojIntroComplete</ALLTags>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>The fruit be mine.</Text>
+      <Next>oj_choice</Next>
     </Interaction>
   <!-- EndRegion -->
   <!-- Region Firstmate Puzzle -->
-    <!-- Region Before Chalk Requested -->
+    <!-- Region Ask for Orange -->
     <Interaction>
-      <Name>oj_intro_01</Name>
+      <Name>oj_choice</Name>
+      <Type>Derivative</Type>
+      <NONETags>hasOrange</NONETags>
+      <Text>Can I have one of those oranges?</Text>
+      <Next>oj_orange_00</Next>
+    </Interaction>
+    <Interaction>
+      <Name>oj_orange_00</Name>
       <Type>Derivative</Type>
       <NONETags>ojChalkGiven</NONETags>
-      <Text>No! Get me some chalk!</Text>
-      <GiveTags>ojChalkRequested</GiveTags>
+      <Image>OrangeGuyBarrelA</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>The fruit be mine.</Text>
+      <Next>oj_orange_01</Next>
     </Interaction>
     <Interaction>
-      <Name>oj_intro_01</Name>
+      <Name>oj_orange_01</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelAFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>Please?</Text>
+      <Next>oj_orange_02</Next>
+    </Interaction>
+    <Interaction>
+      <Name>oj_orange_02</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelA</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Nay.</Text>
+    </Interaction>
+    <Interaction>
+      <Name>oj_orange_00</Name>
       <Type>Derivative</Type>
       <ALLTags>ojChalkGiven</ALLTags>
-      <Text>Hm...you did get me that chalk. Ok, hand it over.</Text>
-      <GiveTags>ojChalkRequested</GiveTags>
+      <Image>OrangeGuyBarrelH</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Ye hallowed bearer of the pale stone.</Text>
+      <Next>oj_orange_11</Next>
     </Interaction>
     <Interaction>
-      <Name>give_chalk</Name>
-      <Type>UseItem</Type>
-      <ALLTags>holdingChalk</ALLTags>
-      <NONETags>ojChalkRequested</NONETags>
-      <GiveTags>ojChalkGiven</GiveTags>
-      <TakeItems>Chalk</TakeItems>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>How did you know?</Text>
+      <Name>oj_orange_11</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <GiveItems>Orange</GiveItems>
+      <Text>I bequeath ye one of me fine fruits. Treasure it as ye treasure yer life!</Text>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region Offer Poster -->
+    <Interaction>
+      <Name>oj_choice</Name>
+      <Type>Derivative</Type>
+      <ALLTags>hasPoster</ALLTags>
+      <NONETags>ojPosterGiven</NONETags>
+      <Text>I need to give you this poster.</Text>
+      <Next>give_poster_0</Next>
     </Interaction>
     <Interaction>
       <Name>give_poster</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingPoster</ALLTags>
-      <NONETags>ojChalkGiven|ojPosterGiven</NONETags>
-      <GiveTags>ojChalkRequested</GiveTags>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>i don't want that. Get me some chalk.</Text>
-      <SpecialActions>ReturnSelected</SpecialActions>
-    </Interaction>
-    <!-- EndRegion -->
-    <!-- Region After Chalk Requested-->
-    <Interaction>
-      <Name>give_chalk</Name>
-      <Type>UseItem</Type>
-      <ALLTags>holdingChalk|ojChalkRequested</ALLTags>
-      <TakeTags>ojChalkRequested</TakeTags>
-      <GiveTags>ojChalkGiven</GiveTags>
-      <TakeItems>Chalk</TakeItems>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Perfect.</Text>
-    </Interaction>
-    <!-- EndRegion -->
-    <!-- Region After Chalk Received -->
-    <Interaction>
-      <Name>give_poster</Name>
-      <Type>UseItem</Type>
-      <ALLTags>holdingPoster|ojChalkGiven</ALLTags>
       <NONETags>ojPosterGiven</NONETags>
-      <TakeTags>ojChalkGiven</TakeTags>
-      <GiveTags>ojPosterGiven</GiveTags>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>OK, I guess I'll take it.</Text>
-      <Next>give_poster_success</Next>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_poster_0</Next>
     </Interaction>
     <Interaction>
-      <Name>give_poster_success</Name>
+      <Name>give_poster_0</Name>
       <Type>Derivative</Type>
-      <Image>OrangeGuyPortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Now leave me!</Text>
-      <Next>posters_given</Next>
-      <NextInteractor>Sadie</NextInteractor>
+      <NONETags>ojChalkRequested|ojChalkGiven</NONETags>
+      <Next>give_poster_01</Next>
     </Interaction>
     <Interaction>
-      <Name>give_poster_success</Name>
+      <Name>give_poster_0</Name>
       <Type>Derivative</Type>
-      <Next>decrease</Next>
-      <NextInteractor>Poster</NextInteractor>
+      <ALLTags>ojChalkRequested</ALLTags>
+      <NONETags>ojChalkGiven</NONETags>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>I-</Text>
+      <Next>give_poster_01</Next>
     </Interaction>
     <Interaction>
       <Name>give_poster</Name>
@@ -111,7 +130,274 @@
       <Next>give_poster_again</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
+    <!-- Region Before Chalk Requested -->
+    <Interaction>
+      <Name>give_poster_01</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <GiveTags>ojTalked</GiveTags>
+      <Text>Bring me a stone white and fine as snow, the type with which one may draw meaning.</Text>
+      <Next>give_poster_02</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_02</Name>
+      <Type>Derivative</Type>
+      <NONETags>ojChalkRequested</NONETags>
+      <GiveTags>ojChalkRequested</GiveTags>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>...Excuse me?</Text>
+      <Next>give_poster_03</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_03</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>I said, bring me a stone white and fine as snow, the type with which one may draw meaning.</Text>
+      <Next>give_poster_04</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_04</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieA</Image2>
+      <Text>Look, I really don’t have time for-</Text>
+      <Next>give_poster_05</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_05</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieAFade</Image2>
+      <Text>Stone. White and fine as snow. With which one may draw meaning.</Text>
+      <Next>give_poster_06</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_06</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>...If I find you this ‘stone’ will you take the flyer?</Text>
+      <Next>give_poster_07</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_07</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Aye.</Text>
+      <Next>give_poster_08</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_08</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>And I won’t ever have to talk to you again?</Text>
+      <Next>give_poster_09</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_09</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Aye.</Text>
+      <Next>give_poster_10</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_10</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieH</Image2>
+      <Text>Be right back.</Text>
+    </Interaction>
     <!-- EndRegion -->
+    <!-- Region After Chalk Requested-->
+    <Interaction>
+      <Name>give_poster_02</Name>
+      <Type>Derivative</Type>
+      <ALLTags>ojChalkRequested</ALLTags>
+      <Image>OrangeGuyBarrelA</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>I won’t repeat myself again.</Text>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region After Chalk Received -->
+    <Interaction>
+      <Name>give_poster_0</Name>
+      <Type>Derivative</Type>
+      <ALLTags>ojChalkGiven</ALLTags>
+      <GiveTags>ojPosterGiven</GiveTags>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>I got you that chalk. Now please take this flyer off my hands.</Text>
+      <Next>give_poster_success</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_success</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Fine.</Text>
+    </Interaction>
+    <Interaction>
+      <Name>give_poster_success</Name>
+      <Type>Derivative</Type>
+      <Next>decrease</Next>
+      <NextInteractor>Poster</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- EndRegion -->
+    <!-- Region Offer Chalk -->
+    <!-- Region Unasked -->
+    <Interaction>
+      <Name>give_chalk</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingChalk</ALLTags>
+      <NONETags>ojChalkRequested</NONETags>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>The stone! How did you know?!</Text>
+      <Next>give_chalk_10</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_10</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>Um, did you want this chalk?</Text>
+      <Next>give_chalk_11</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_11</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelH</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Give it here!</Text>
+      <Next>give_chalk_12</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_12</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelHFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>Alright then...</Text>
+      <Next>give_chalk_13</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_13</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelH</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Ye have done me a great kindness this day. I owe you a debt that can never be repaid.</Text>
+      <Next>give_chalk_14</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_14</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelHFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>I, uh, sure.</Text>
+      <Next>give_chalk_15</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_15</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelHFade</Image>
+      <Image2>SadieH</Image2>
+      <Text>I have no idea what just happened but I’ll take it.</Text>
+      <GiveTags>ojChalkGiven</GiveTags>
+      <TakeItems>Chalk</TakeItems>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- Region Asked -->
+    <Interaction>
+      <Name>give_chalk</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingChalk|ojChalkRequested</ALLTags>
+      <TakeTags>ojChalkRequested</TakeTags>
+      <Image>OrangeGuyBarrelH</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>At last! The blessed marking stone!</Text>
+      <Next>give_chalk_20</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_20</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelHFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>It’s called ‘chalk’.</Text>
+      <Next>give_chalk_21</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_21</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelHFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>What did you need this for, anyhow?</Text>
+      <Next>give_chalk_22</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_22</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>That information be highly confidential. Ye need not trouble yerself over such trivial things.</Text>
+      <Next>give_chalk_23</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_23</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieH</Image2>
+      <Text>Let me guess. You’re drawing tiny faces and talking to them?</Text>
+      <Next>give_chalk_24</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_24</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieHFade</Image2>
+      <Text>...</Text>
+      <Next>give_chalk_25</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_25</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>That was a joke.</Text>
+      <Next>give_chalk_26</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_26</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>I think it’d be best if ye left now.</Text>
+      <Next>give_chalk_27</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk_27</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>Agreed.</Text>
+      <GiveTags>ojChalkGiven</GiveTags>
+      <TakeItems>Chalk</TakeItems>
+    </Interaction>
+    <!-- EndRegion -->
+    <!-- EndRegion -->
+    <Interaction>
+      <Name>oj_choice</Name>
+      <Type>Derivative</Type>
+      <Image>OrangeGuyBarrelNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>Nevermind.</Text>
+    </Interaction>
   <!-- EndRegion -->
   <!-- Region Defaults -->
     <Interaction>

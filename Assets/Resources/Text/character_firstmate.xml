@@ -7,141 +7,152 @@
       <Name>firstmate_intro_00</Name>
       <Type>Click</Type>
       <ALLTags>firstmateIntro</ALLTags>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Ah, there you are! You must be my new assistant, yes? Thank goodness! You mustn’t keep your future captain waiting… but I will forgive you just this once.</Text>
       <Next>firstmate_intro_01</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_01</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>I’m not here to -</Text>
       <Next>firstmate_intro_02</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Now, before I take you on as my partner, let me ask you this, ma cherie -- what makes a captain, in your view?</Text>
-      <TextType>Monologue</TextType>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Now, before I take you on as my partner, let me ask you this, ma cherie - what makes a captain, in your view?</Text>
+      <Next>firstmate_intro_02_choice</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
-      <Name>firstmate_intro_02</Name>
+      <Name>firstmate_intro_02_choice</Name>
       <Type>Derivative</Type>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>The vote of the crew?</Text>
       <Next>firstmate_intro_031</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_031</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>The vote of -</Text>
       <Next>firstmate_intro_04</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
-      <Name>firstmate_intro_02</Name>
+      <Name>firstmate_intro_02_choice</Name>
       <Type>Derivative</Type>
       <Text>Skilled leadership?</Text>
       <Next>firstmate_intro_032</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_032</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>Skilled lead -</Text>
       <Next>firstmate_intro_04</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
-      <Name>firstmate_intro_02</Name>
+      <Name>firstmate_intro_02_choice</Name>
       <Type>Derivative</Type>
       <Text>Not sinking the ship?</Text>
       <Next>firstmate_intro_033</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_033</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>Not sink -</Text>
       <Next>firstmate_intro_04</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_04</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>I see... that’s quite charming, however, I’m afraid it lacks a certain appeal.</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>I see... that’s quite charming, however, I’m afraid it lacks a certain... je ne sais quoi.</Text>
       <Next>firstmate_intro_05</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_05</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>We are pirates, mon amie, pirates! We sail for glory, for riches, for lavish silks and the golden gleam of treasure!</Text>
       <Next>firstmate_intro_06</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_06</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
-      <Text>*Yawn*</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>So, for your first task as my dear assistant, you must help me become the very image of a true captain.</Text>
       <Next>firstmate_intro_07</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_07</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>So, for your first task as my dear assistant, you must help me become the very image of a true captain. Do you understand?</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>I require a mark of authority, that speaks to my noble status on this ship. Something smooth and majestic to crown a true captain! Do you understand?</Text>
       <Next>firstmate_intro_08</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_08</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
-      <Text>Hm? Oh, yeah, sure. (Please stop talking.)</Text>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>Hm? Oh, yeah, sure.</Text>
       <Next>firstmate_intro_09</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_09</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Excellent! With such disorder on our noble vessel, I had feared no one would hear my plight… but you are a gem among scoundrels, truly! I knew you would take my side. This humble first mate is in your debt, ma cherie.</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Excellent! With such disorder on our noble vessel, I had feared no one would hear my plight… but you are a gem among scoundrels, truly!</Text>
       <Next>firstmate_intro_10</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_10</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>That’s me. A dirty, rotten gem of a pirate.</Text>
       <Next>firstmate_intro_11</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_11</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>I require a mark of authority, that speaks to my noble status on this ship. Something only a true captain would wear!</Text>
-      <Next>firstmate_intro_12</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_intro_12</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Surely you can find something here, can you not? Go ahead and get to it! Chop chop!</Text>
       <TakeTags>firstmateIntro</TakeTags>
       <GiveTags>firstmateQuestInProgress1</GiveTags>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region Waiting for Wig -->
@@ -149,125 +160,87 @@
       <Name>firstmate_quest_00</Name>
       <Type>Click</Type>
       <ALLTags>firstmateQuestInProgress1</ALLTags>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Have you found it yet, ma cherie? That regal something that will anoint me as a true captain?</Text>
-      <TextType>Monologue</TextType>
+      <Next>firstmate_quest_00_choice</Next>
     </Interaction>
     <Interaction>
-      <Name>firstmate_quest_00</Name>
-      <Type>Click</Type>
+      <Name>firstmate_quest_00_choice</Name>
+      <Type>Derivative</Type>
       <ALLTags>firstmateQuestInProgress1</ALLTags>
       <Text>What were you looking for again?</Text>
       <Next>firstmate_quest_10</Next>
     </Interaction>
     <Interaction>
-      <Name>firstmate_quest_00</Name>
-      <Type>Click</Type>
-      <ALLTags>firstmateQuestInProgress1|portraitPainted</ALLTags>
-      <NONETags>portraitShown</NONETags>
-      <Text>Have you seen that portrait over there?</Text>
-      <Next>firstmate_quest_20</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_quest_00</Name>
-      <Type>Click</Type>
+      <Name>firstmate_quest_00_choice</Name>
+      <Type>Derivative</Type>
       <ALLTags>firstmateQuestInProgress1</ALLTags>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>No, not yet.</Text>
       <Next>firstmate_quest_30</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_10</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
-      <Text>What were you looking for again?</Text>
-      <Next>firstmate_quest_11</Next>
+      <Image>FirstMateS</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>For shame, mon amie! Were you not listening?</Text>
+      <Next>firstmate_quest_12</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_11</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Alas, mon amie! Were you not listening? I must have some regal adornment that speaks to all my captainly qualities!</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Like all true captains, I have a charming physique worthy of my position. However…</Text>
       <Next>firstmate_quest_12</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_12</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Some captains may don a commanding pirate’s hat, or a glorious head of hair, or a sword whose gleam blinds all who look upon it…</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>I wish I had something a bit more human to adorn my sleek metal. Something to keep the sun from reflecting off of my head…</Text>
       <Next>firstmate_quest_13</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_13</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>I must have something worthy of my charming physique!</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Yes, something soft, and lusciously flowing in the wind! Something I was tragically made without…</Text>
       <Next>firstmate_quest_14</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_14</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Now get to it! Chop chop!</Text>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>So... you want a wig?</Text>
+      <Next>firstmate_quest_15</Next>
     </Interaction>
     <Interaction>
-      <Name>firstmate_quest_20</Name>
+      <Name>firstmate_quest_15</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
-      <Text>Check out Captain Duke’s wig in that portrait over there. Pretty nice, huh?</Text>
-      <Next>firstmate_quest_21</Next>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>A wig?! I never! How crude! I… well. I suppose, between you and I…</Text>
+      <Next>firstmate_quest_16</Next>
     </Interaction>
     <Interaction>
-      <Name>firstmate_quest_21</Name>
+      <Name>firstmate_quest_16</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Oh, my… I had no idea our late captain had such a lovely head of hair! I’m quite envious.</Text>
-      <Next>firstmate_quest_22</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_quest_22</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>But alas, we shall never see the captain’s face nor hair again… oh, woe! To think I never praised their beauty while they still lived!</Text>
-      <Next>firstmate_quest_23</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_quest_23</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Bloo hoo hoo!</Text>
-      <Next>firstmate_quest_24</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_quest_24</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
-      <Text>Um...there, there...?</Text>
-      <GiveTags>portraitShown</GiveTags>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Yes! Very well! It will do. Now hurry! Chop chop!</Text>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_30</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
-      <Text>No, not yet.</Text>
-      <Next>firstmate_quest_31</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_quest_31</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Well get to it! Chop chop!</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -276,9 +249,9 @@
       <Name>firstmate_give_mop_fail_00</Name>
       <Type>UseItem</Type>
       <ALLTags>firstmateQuestInProgress1|holdingMopHead</ALLTags>
-      <NONETags>portraitShown</NONETags>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <NONETags>mopInked</NONETags>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Oh? Have you found it? Let me...</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>firstmate_give_mop_fail_01</Next>
@@ -286,65 +259,49 @@
     <Interaction>
       <Name>firstmate_give_mop_fail_01</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Oh? Have you found it? Let me...</Text>
       <Next>firstmate_give_mop_fail_02</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_give_mop_fail_02</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Ahaha! Oh, la la! Ohohoho! You must be joking, ma cherie... I haven’t the slightest clue what that is.</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Ahaha! Oh, la la! Ohohoho! You must be joking, ma cherie... what a drab, grey mess that is!</Text>
       <Next>firstmate_give_mop_fail_03</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_give_mop_fail_03</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>And thus, I’m afraid that no captain would want anything to do with it! Hurry along now, and find something nice.</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>I’m afraid that no captain would want anything to do with it! Hurry along now, and find me something nice.</Text>
     </Interaction>
     <Interaction>
       <Name>firstmate_give_mop_success_00</Name>
       <Type>UseItem</Type>
-      <ALLTags>firstmateQuestInProgress1|holdingMopHead|portraitShown</ALLTags>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Back again? What have you found this time? Let me see, now.</Text>
+      <ALLTags>firstmateQuestInProgress1|holdingMopHead|mopInked</ALLTags>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>What have you brought me? Let me see, now.</Text>
       <Next>firstmate_give_mop_success_01</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_give_mop_success_01</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>One...ah...handcrafted wig for the would-be captain.</Text>
       <Next>firstmate_give_mop_success_02</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_give_mop_success_02</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Hm? This looks… so very familiar… yes, my eyes do not betray me!</Text>
-      <Next>firstmate_give_mop_success_03</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_give_mop_success_03</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>So pure, woven of such lovely fibers, like the foam of rushing tides that birthed Aphrodite herself! It’s the very image of captainly beauty!</Text>
-      <Next>firstmate_give_mop_success_04</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_give_mop_success_04</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortrait</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Fantastique! I’m in love, simply in love! I knew I could count on you, ma cherie!</Text>
+      <Image>FirstMateN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Hm? What is this? So sleek, woven of such lovely fibers, like the shining coat of a raven in flight! It’s the very image of captainly beauty! Fantastique!</Text>
       <TakeTags>firstmateQuestInProgress1|portraitShown</TakeTags>
       <TakeItems>Mop_Head</TakeItems>
       <SpecialActions>ChangeToMop</SpecialActions>
@@ -355,104 +312,80 @@
     <Interaction>
       <Name>firstmate_propaganda_00</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>You’ve been wonderful thus far, ma cherie, simply wonderful. Now, are you ready for your next task?</Text>
       <Next>firstmate_propaganda_01</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_01</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>Actually, I kind of have to g-</Text>
       <Next>firstmate_propaganda_02</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_02</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Excellent! Allow me to explain.</Text>
-      <Next>firstmate_propaganda_03</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_propaganda_03</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Now that I have the proper fittings of a captain, I must show my crew how qualified I am to lead them. And you can help me do just that!</Text>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Excellent! Allow me to explain. Now that I have the proper fittings of a captain, I must spread the good word.</Text>
       <Next>firstmate_propaganda_04</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_04</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>I have created these posters as a summons for the crew to gather for a rousing speech. And all important posters must be posted posthaste!</Text>
       <Next>firstmate_propaganda_05</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_05</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>They - what?</Text>
       <Next>firstmate_propaganda_06</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_06</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>You, my dearest assistant, must give these to the members of my crew. As such, I have chosen three whose support would be beneficial to our cause.</Text>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>You, my dearest assistant, are to take these posters to three important members of our good crew.</Text>
       <Next>firstmate_propaganda_07</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_07</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>I ask that you deliver one to the Second Mate - he is a strong ally to our cause, and quite fashionable. He should be nearby, I believe.</Text>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>One shall go to our Second Mate. He is a strong ally to our cause, and quite fashionable. He should be nearby, I believe.</Text>
       <Next>firstmate_propaganda_08</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_08</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Ah, and the Chief Rigger as well! She should be... somewhere, I’m certain. And lastly, er… Monsieur d’Orange.</Text>
-      <Next>firstmate_propaganda_09</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_propaganda_09</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
-      <Text>Uh… who?</Text>
-      <Next>firstmate_propaganda_10</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_propaganda_10</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>That gentleman with the fondness for oranges! You’ve seen him about, haven’t you? I suspect his support will be… healthy to have.</Text>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Ah, and the Chief Rigger as well! She should be... somewhere, I’m certain. And lastly, er… Monsieur d’Orange. His support would be, ah… healthy to have.</Text>
       <Next>firstmate_propaganda_11</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_11</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Now hurry, ma cherie! Be on your way! I must prepare for the ceremony. And rest assured - you will have a front row seat!</Text>
       <Next>firstmate_propaganda_12</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_12</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>I can’t wait.</Text>
       <GiveItems>Poster</GiveItems>
     </Interaction>
@@ -461,162 +394,141 @@
     <Interaction>
       <Name>firstmate_propaganda_mid_00</Name>
       <Type>Click</Type>
-      <TextType>Monologue</TextType>
       <ANYTags>hasPoster|postersGiven</ANYTags>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Ah, my favorite aide-de-camp. How goes the, how you say, spreading of the word?</Text>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Ah, my favorite aide-de-camp. How goes the campaigning?</Text>
+      <Next>firstmate_propaganda_mid_00_choice</Next>
     </Interaction>
     <!-- Region Rigger -->
     <Interaction>
-      <Name>firstmate_propaganda_mid_00</Name>
-      <Type>Click</Type>
+      <Name>firstmate_propaganda_mid_00_choice</Name>
+      <Type>Derivative</Type>
       <ALLTags>hasPoster|riggerTalked</ALLTags>
       <NONETags>postersGiven|riggerPosterGiven</NONETags>
-      <Text>I talked to Wendy, the rigger.</Text>
+      <Text>Chief Rigger Wendy is stuck up in the rigging again.</Text>
       <Next>firstmate_propaganda_mid_010</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_010</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
-      <Text>Chief Rigger Wendy is stuck up in the rigging again. She’s trying to grab a lantern hanging up there and won’t come down.</Text>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
+      <Text>She’s trying to grab a lantern hanging up there and won’t come down.</Text>
       <Next>firstmate_propaganda_mid_011</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_011</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>It sounds like she could use some assistance. Perhaps a polearm of some sort.</Text>
       <Next>firstmate_propaganda_mid_012</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_012</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>She needs to get the lantern down, not stab it.</Text>
       <Next>firstmate_propaganda_mid_013</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_013</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Ah, yes. Would not a pole arm help?</Text>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Indeed. Would not a pole arm help?</Text>
       <Next>firstmate_propaganda_mid_014</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_014</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>Oh. You do realize we organics can’t just replace body-parts on a whim, right?</Text>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region OJ -->
     <Interaction>
-      <Name>firstmate_propaganda_mid_00</Name>
-      <Type>Click</Type>
+      <Name>firstmate_propaganda_mid_00_choice</Name>
+      <Type>Derivative</Type>
       <ALLTags>hasPoster|ojTalked</ALLTags>
       <NONETags>postersGiven|ojPosterGiven</NONETags>
-      <Text>I talked to that orange...guy.</Text>
-      <Next>firstmate_propaganda_mid_020</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_propaganda_mid_020</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
       <Text>“Monsieur d’Orange” is at his riddles again.</Text>
       <Next>firstmate_propaganda_mid_021</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_021</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Eh… indeed. Well, ma cherie, you are famous for getting along well with him. Better than any other, at any rate.</Text>
       <Next>firstmate_propaganda_mid_022</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_022</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>Gee, thanks for your help.</Text>
       <Next>firstmate_propaganda_mid_023</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_023</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Bartholomieu always aims to please.</Text>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region Second Mate -->
     <Interaction>
-      <Name>firstmate_propaganda_mid_00</Name>
-      <Type>Click</Type>
+      <Name>firstmate_propaganda_mid_00_choice</Name>
+      <Type>Derivative</Type>
       <ALLTags>hasPoster|secondmateTalked</ALLTags>
       <NONETags>postersGiven|secondmatePosterGiven</NONETags>
-      <Text>I talked to the second mate.</Text>
-      <Next>firstmate_propaganda_mid_030</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_propaganda_mid_030</Name>
-      <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
       <Text>Your Second over there is too busy ogling you to take the poster.</Text>
       <Next>firstmate_propaganda_mid_031</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_031</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Ahahaha. Ma cherie, his healthy admiration for nobility and style is the very virtue he was promoted for!</Text>
       <Next>firstmate_propaganda_mid_032</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_032</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>Right… He said something about securing the lifeboat. I didn’t think -</Text>
       <Next>firstmate_propaganda_mid_033</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_033</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Ah, yes! The most important feature of any vessel! You should secure some line to tie it down with.</Text>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Ah, yes! The most important feature of any vessel! I believe it requires tying down</Text>
       <Next>firstmate_propaganda_mid_034</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_propaganda_mid_034</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
-      <Text>Quartermaster Bonney, however, refuses to talk to me, the brute, so you may have to look elsewhere to find some.</Text>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Quartermaster Bonney, however, refuses to talk to me, the brute, so you may have to look elsewhere to find some line.</Text>
     </Interaction>
     <!-- EndRegion -->
     <Interaction>
-      <Name>firstmate_propaganda_mid_00</Name>
-      <Type>Click</Type>
-      <ALLTags>postersGiven</ALLTags>
-      <Text>All done!</Text>
-      <Next>firstmate_quest_end_00</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_propaganda_mid_00</Name>
-      <Type>Click</Type>
+      <Name>firstmate_propaganda_mid_00_choice</Name>
+      <Type>Derivative</Type>
       <ALLTags>hasPoster</ALLTags>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>I'm on it, I'm on it.</Text>
     </Interaction>
     <!-- Region Give Poster -->
@@ -624,8 +536,8 @@
       <Name>firstmate_give_poster_00</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingPoster</ALLTags>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>I see you still have some posters to deliver.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>firstmate_give_poster_01</Next>
@@ -633,75 +545,78 @@
     <Interaction>
       <Name>firstmate_give_poster_01</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>Actually, I -</Text>
       <Next>firstmate_give_poster_02</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_give_poster_02</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Go in haste!</Text>
       <Next>firstmate_give_poster_03</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_give_poster_03</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>Alright, alright, already!</Text>
     </Interaction>
     <!-- EndRegion -->
     <!-- EndRegion -->
     <!-- Region Part Two End -->
     <Interaction>
-      <Name>firstmate_quest_end_00</Name>
+      <Name>firstmate_propaganda_mid_00_choice</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <ALLTags>postersGiven</ALLTags>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>Your posters have been posted. Posthaste.</Text>
       <Next>firstmate_quest_end_01</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_end_01</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Beg your pardon?</Text>
       <Next>firstmate_quest_end_02</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_end_02</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>I did the thing.</Text>
       <Next>firstmate_quest_end_03</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_end_03</Name>
       <Type>Derivative</Type>
-      <TextType>Monologue</TextType>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>Ah! Delightful, ma cherie, splendid! It seems the people are gathering for my speech. Please, take your rightful seat!</Text>
+      <Next>firstmate_quest_end_03_choice</Next>
     </Interaction>
     <Interaction>
-      <Name>firstmate_quest_end_03</Name>
+      <Name>firstmate_quest_end_03_choice</Name>
       <Type>Derivative</Type>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>I think I’ll pass.</Text>
       <Next>firstmate_quest_end_04</Next>
     </Interaction>
     <Interaction>
-      <Name>firstmate_quest_end_03</Name>
+      <Name>firstmate_quest_end_03_choice</Name>
       <Type>Derivative</Type>
       <Text>I think I’ve got a uh… thing. To do. Now. Yeah. Really important.</Text>
       <Next>firstmate_quest_end_04</Next>
     </Interaction>
     <Interaction>
-      <Name>firstmate_quest_end_03</Name>
+      <Name>firstmate_quest_end_03_choice</Name>
       <Type>Derivative</Type>
       <Text>I think you’ve got delusions of grandeur.</Text>
       <Next>firstmate_quest_end_04</Next>
@@ -709,16 +624,16 @@
     <Interaction>
       <Name>firstmate_quest_end_04</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMopFaded</Image>
-      <Image2>SadiePortrait</Image2>
+      <Image>FirstMateMopNFade</Image>
+      <Image2>SadieN</Image2>
       <Text>I th-</Text>
       <Next>firstmate_quest_end_05</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_quest_end_05</Name>
       <Type>Derivative</Type>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <TakeTags>postersGiven|ojPosterGiven|riggerPosterGiven|secondmatePosterGiven|riggerTalked|ojTalked|secondmateTalked</TakeTags>
       <Text>Ah-ah-ah-ah! There is no need for thanks. As a future Captain, I reward those who do me good service. Consider it my thanks. Please, take a seat!</Text>
     </Interaction>
@@ -729,8 +644,8 @@
       <Name>firstmate_default</Name>
       <Type>Click</Type>
       <NONETags>firstmateIntro|firstmateQuestInProgress1|hasPoster|postersGiven</NONETags>
-      <Image>FirstmatePortraitMop</Image>
-      <Image2>SadiePortraitFaded</Image2>
+      <Image>FirstMateMopN</Image>
+      <Image2>SadieNFade</Image2>
       <Text>I have nothing to say to you.</Text>
     </Interaction>
     <Interaction>
