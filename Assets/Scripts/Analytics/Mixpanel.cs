@@ -14,7 +14,7 @@ using UnityEngine;
 public static class Mixpanel
 {
 	// allow or prevent events from being sent while in the unity editor
-	public static bool sendEventsInEditor = false;
+	public static bool sendEventsInEditor = true;
 
 	// Set this to your Mixpanel token.
 	public static string Token;
@@ -135,7 +135,8 @@ public static class Mixpanel
 		PropsDict.Add("distinct_id", DistinctID);
 		PropsDict.Add("alias", Alias);
 		PropsDict.Add("token", Token);
-		
+
+
 		Dictionary<string, object> jsonDict = new Dictionary<string, object>();
 		jsonDict.Add("event", "$create_alias");
 		jsonDict.Add("properties", PropsDict);
@@ -148,6 +149,16 @@ public static class Mixpanel
 		if(EnableLogging)
 			Debug.Log("Mixpanel create alias url : " + url);
 		StartCoroutine(CreateAliasCoroutine(url));
+	}
+
+	static void addCustomSuperProperties (Dictionary<string, object> propsDict) {
+		propsDict.Add(
+			EventList.SOUND_TOGGLED_ON_OFF,
+			(SettingsUtil.FXMuted && SettingsUtil.MusicMuted) ? 
+				EventList.OFF :
+				EventList.ON
+		);
+
 	}
 
 	// Call this to send an event to Mixpanel.
@@ -165,6 +176,10 @@ public static class Mixpanel
 		Dictionary<string, object> propsDict = new Dictionary<string, object>();
 		propsDict.Add("distinct_id", DistinctID);
 		propsDict.Add("token", Token);
+
+		// Adds the custom properties for Pirate Squabbles
+		addCustomSuperProperties(propsDict);
+
 		//sets overall game play stats
 
 		foreach(var kvp in SuperProperties)
