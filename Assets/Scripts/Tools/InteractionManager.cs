@@ -256,9 +256,9 @@ public class InteractionManager : MonoBehaviour {
 	[SerializeField]
 	private GameObject textPanel = null;
 	[SerializeField]
-	private GameObject leftImage = null;
+	public GameObject leftImage = null;
 	[SerializeField]
-	private GameObject rightImage = null;
+	public GameObject rightImage = null;
 	[SerializeField]
 	private GameObject dimBackground=null;
 

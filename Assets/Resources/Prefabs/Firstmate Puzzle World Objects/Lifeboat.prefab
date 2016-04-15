@@ -43,8 +43,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.6, y: -2.36, z: 3.86}
-  m_LocalScale: {x: 1.877995, y: 0.1481457, z: 1.5238905}
+  m_LocalPosition: {x: 16.6, y: -3.59, z: 3.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 446574}
   m_Father: {fileID: 0}
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 102530}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.0010649023, y: 0, z: 0.013780614}
-  m_LocalScale: {x: 0.1883255, y: 0.4235053, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442310}
   m_RootOrder: 0
@@ -104,8 +104,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: -0.0000000037252903, y: -0.00000074505806, z: -0.000000059604645}
+  m_Size: {x: 4.311573, y: 1, z: 1.8596001}
+  m_Center: {x: 0.021139145, y: -0.00000071525574, z: -0.45798492}
 --- !u!114 &11475090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,19 +121,19 @@ MonoBehaviour:
   Sound: 
   UseExtended: 1
   ChangesSprite: 1
-  MovesObject: 0
+  MovesObject: 1
   CreatesObject: 0
   PlaysSound: 0
   UseNavMesh: 0
   DestroyOnArrive: 0
-  NewSprite: {fileID: 21300000, guid: a06f681b2928cb340b9516c06efe64da, type: 3}
+  NewSprite: {fileID: 21300000, guid: bf4f372144ecf4c348fd061fb7e17798, type: 3}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
   CreateAtWaypoint: {fileID: 0}
   MoveToWaypoint: {fileID: 0}
   SoundDelay: 0
   MoveSpeed: 0
-  MoveToPosition: {x: 0, y: 0, z: 0}
+  MoveToPosition: {x: 16.739569, y: -1.7818258, z: 3.1599998}
   CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11495056
 MonoBehaviour:
@@ -174,7 +174,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a06f681b2928cb340b9516c06efe64da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b13f02c0d0ac74c68960ec6541e042d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,7 +184,12 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b13f02c0d0ac74c68960ec6541e042d5,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 157390}
