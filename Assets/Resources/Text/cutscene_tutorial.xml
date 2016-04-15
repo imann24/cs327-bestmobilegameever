@@ -170,6 +170,14 @@
       <Image>QuartermasterA</Image>
       <Image2>ShipmasterAFade</Image2>
       <SpecialActions>QuartermasterExit</SpecialActions>
+      <Next>tutorial_cutscene_09_dup</Next>
+    </Interaction>
+    <Interaction>
+      <Name>tutorial_cutscene_09_dup</Name>
+      <Type>Derivative</Type>
+      <Text>I assure you, however, that you will regret addressing your superior with so little tact.</Text>
+      <Image>QuartermasterA</Image>
+      <Image2>ShipmasterAFade</Image2>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_QM</Name>
@@ -193,6 +201,14 @@
       <Image>FirstMateSFade</Image>
       <Image2>ShipmasterN</Image2>
       <SpecialActions>ShipmasterExit</SpecialActions>
+      <Next>tutorial_cutscene_11_dup</Next>
+    </Interaction>
+    <Interaction>
+      <Name>tutorial_cutscene_11_dup</Name>
+      <Type>Derivative</Type>
+      <Text>What? … oh, ah - no, that’s ok, Bart. I’m going to have to step up as Captain and set things straight. Just try not to cause any trouble. </Text>
+      <Image>FirstMateSFade</Image>
+      <Image2>ShipmasterN</Image2>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_SM</Name>
@@ -207,6 +223,13 @@
       <Text>Those who wish to mourn their untimely passing should follow me to the helm, where we shall hold a service in their memory!</Text>
       <Image>FirstMateN</Image>
       <SpecialActions>FirstmateExit</SpecialActions>
+      <Next>tutorial_cutscene_12_dup</Next>
+    </Interaction>
+    <Interaction>
+      <Name>tutorial_cutscene_12_dup</Name>
+      <Type>Derivative</Type>
+      <Text>Those who wish to mourn their untimely passing should follow me to the helm, where we shall hold a service in their memory!</Text>
+      <Image>FirstMateN</Image>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_FM</Name>
