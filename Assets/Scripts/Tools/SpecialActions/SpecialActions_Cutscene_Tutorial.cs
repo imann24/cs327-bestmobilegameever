@@ -10,6 +10,11 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     private static SpecialActions_Cutscene_Tutorial _instance = null;
     private string next;
 
+    public GameObject BG = null;
+    private GameObject portraitMoving = null;
+    private Vector3 portraitPosition;
+    private Vector3 portraitDestination;
+
     void Start() {
         if (_instance != null) { Destroy(gameObject); }
         else {
@@ -30,7 +35,23 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         }
     }
 
-	// Override  in the tutorial scene to pass the position of the door
+    void Update() {
+        if (portraitMoving != null) {
+            if ((portraitMoving.transform.position - portraitDestination).magnitude < 0.1f) {
+                GameManager.UIManager.UnlockScreen();
+                GameManager.InteractionManager.ClearInteractions();
+                NextInteraction(next);
+                portraitMoving.transform.position = portraitPosition;
+                portraitMoving = null;
+            }
+            else {
+                //Debug.Log("Moving portrait: " + portraitMoving + " to " + portraitDestination);
+                portraitMoving.transform.position = Vector3.MoveTowards(portraitMoving.transform.position, portraitDestination, (150 * Time.deltaTime));
+            }
+        }
+    }
+
+    // Override  in the tutorial scene to pass the position of the door
     /*
 	public override Vector3 GetPosition () {
 		if ((PSScene)SceneManager.GetActiveScene().buildIndex == PSScene.TutorialScene) {
@@ -52,24 +73,24 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         Quartermaster = GameObject.Find("Quartermaster");
         Shipmaster = GameObject.Find("Shipmaster");
         Firstmate = GameObject.Find("Firstmate");
-        if (Testing) {
-            Firstmate.transform.position = GameObject.Find("Waypoint_Firstmate").transform.position;
-            Destroy(Shipmaster);
-            Destroy(Quartermaster);
-        }
-        else {
-            GameObject.Find("Test_Pete").SetActive(false);
-            GameManager.InventoryManager.TakeItem("Hook");
-            GameManager.InventoryManager.GiveItem("Hook");
-            GameManager.InventoryManager.Hide();
-            next = "tutorial_cutscene_start";
-        }
+        Firstmate.transform.position = GameObject.Find("Waypoint_Firstmate").transform.position;
+        Destroy(Shipmaster);
+        Destroy(Quartermaster);
+
+        if (!Testing) { GameObject.Find("Test_Pete").SetActive(false); }
+        GameManager.InventoryManager.TakeItem("Hook");
+        GameManager.InventoryManager.GiveItem("Hook");
+        GameManager.InventoryManager.Hide();
+        next = "tutorial_cutscene_start";
+        
+        if (BG != null) BG.SetActive(true);
     }
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
             case "EndTutorialCutscene":
-                //StartCoroutine(EndTutorialCutscene());
+                //foreach (Graphic g in BG.GetComponentsInChildren<Graphic>()) { g.CrossFadeAlpha(0f, 2f, true); }
+                StartCoroutine(EndTutorialCutscene());
                 break;
 			case "SoundTutorialPrompt":
 				EventController.Event("PromptAppears");
@@ -82,17 +103,20 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
                 break;
             case "QuartermasterExit":
                 next = "tutorial_cutscene_exit_QM";
-                StartCoroutine(npcExit(Quartermaster));
+                portraitExit(-1);
+                //StartCoroutine(npcExit(Quartermaster));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Quartermaster"); }
                 break;
             case "ShipmasterExit":
                 next = "tutorial_cutscene_exit_SM";
-                StartCoroutine(npcExit(Shipmaster));
+                portraitExit(1);
+                //StartCoroutine(npcExit(Shipmaster));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Shipmaster"); }
                 break;
             case "FirstmateExit":
                 next = "tutorial_cutscene_exit_FM";
-                StartCoroutine(npcExit(Firstmate));
+                portraitExit(-1);
+                //StartCoroutine(npcExit(Firstmate));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Firstmate"); }
                 break;
             default:
@@ -101,20 +125,41 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         }
     }
 
-    private void destroyQM() { Destroy(Quartermaster); }
-    private void destroySM() { Destroy(Shipmaster); }
-
-    IEnumerator npcExit(GameObject npc) {
+    private void portraitExit(float dir) {
         GameManager.UIManager.LockScreen();
-        //Move(npc, exit, 4, true);
-        Fader.FadeIn(1);
+
+        if (dir > 0) { portraitMoving = GameManager.InteractionManager.rightImage; }
+        else { portraitMoving = GameManager.InteractionManager.leftImage; }
+
+        portraitPosition = portraitMoving.transform.position;
+        float dest = (portraitPosition.x + (dir * 300));
+        portraitDestination = new Vector3(dest, portraitPosition.y, portraitPosition.z);
+    }
+
+    /*
+        IEnumerator npcExit(GameObject npc) {
+            GameManager.UIManager.LockScreen();
+            //Move(npc, exit, 4, true);
+            Fader.FadeIn(1);
+            yield return new WaitForSeconds(1f);
+            if (npc == Firstmate) npc.transform.position = GameObject.Find("Waypoint_Firstmate").transform.position;
+            else Destroy(npc);
+            Fader.FadeOut(1);
+            yield return new WaitForSeconds(1f);
+            GameManager.UIManager.UnlockScreen();
+            NextInteraction(next);
+        }
+    */
+
+    IEnumerator EndTutorialCutscene() {
+        GameManager.UIManager.DimBackground.SetActive(true);
+        GameManager.UIManager.LockScreen();
+        Fader.FadeIn(1f);
         yield return new WaitForSeconds(1f);
-        if (npc == Firstmate) npc.transform.position = GameObject.Find("Waypoint_Firstmate").transform.position;
-        else Destroy(npc);
-        Fader.FadeOut(1);
-        yield return new WaitForSeconds(1f);
+        GameManager.UIManager.DimBackground.SetActive(false);
+        if (BG != null) BG.SetActive(false);
+        Fader.FadeOut(2f);
         GameManager.UIManager.UnlockScreen();
-        NextInteraction(next);
     }
     
     IEnumerator NextScene() {
@@ -128,19 +173,5 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         Fader.FadeOut ();
         GameManager.UIManager.UnlockScreen();
         NextInteraction(next);
-    }
-
-    IEnumerator EndTutorialCutscene() {
-        GameManager.UIManager.LockScreen();
-		Fader.FadeIn ();
-        GameManager.InventoryManager.Hide();
-        yield return new WaitForSeconds(2f);
-        foreach (Transform child in GameObject.Find("WorldObjects").transform) {
-            child.gameObject.SetActive(true);
-        }
-        //GameObject.Find("Test_Pete").SetActive(false);
-        Fader.FadeOut();
-        yield return new WaitForSeconds(1f);
-        GameManager.UIManager.UnlockScreen();
     }
 }
