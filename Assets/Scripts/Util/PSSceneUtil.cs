@@ -9,8 +9,6 @@ public class PSSceneUtil {
 
 	public static bool InGame (PSScene scene) {
 		return scene == PSScene.MainGame ||
-			scene == PSScene.CharacterSpritesDemo ||
-			scene == PSScene.MovementDemo ||
 			scene == PSScene.TutorialScene;
 	}
 
