@@ -16,7 +16,6 @@
       <Image>SadieNFade</Image>
       <Image2>Unknown</Image2>
       <Next>tutorial_choice</Next>
-      <SpecialActions>EndDemo</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>tutorial_choice</Name>
