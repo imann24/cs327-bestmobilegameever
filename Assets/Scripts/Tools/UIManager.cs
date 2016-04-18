@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour {
 			ShowInventoryPanel();
 		} else {
 			HideInventoryPanel();
+			CleanupScene();
 		}
 	}
 
@@ -64,6 +65,13 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void ReturnToMainMenu(){
+		CleanupScene();
+
+		SceneController.LoadMainMenu ();
+
+	}
+
+	void CleanupScene () {
 		GameObject gm = GameObject.Find ("GameManager");
 		GameObject sadie = GameObject.Find ("Sadie");
 		GameObject cs = GameObject.Find ("Cutscene_Handler");
@@ -74,9 +82,8 @@ public class UIManager : MonoBehaviour {
 
 		EventController.Event (PSEventType.HideTextBox);
 
-		SceneController.LoadMainMenu ();
-
 		Destroy (this.gameObject);
+
 	}
 
     public void EnableTapToContinue(Interactable interactor, Interaction interaction){
