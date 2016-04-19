@@ -94,7 +94,7 @@ MonoBehaviour:
   PlaysSound: 1
   UseNavMesh: 0
   DestroyOnArrive: 0
-  NewSprite: {fileID: 21300000, guid: 59f847744cbd7e94fab8291b2b540475, type: 3}
+  NewSprite: {fileID: 21300000, guid: bb4dfc50a05e7b54182224d330215c54, type: 3}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
   CreateAtWaypoint: {fileID: 0}

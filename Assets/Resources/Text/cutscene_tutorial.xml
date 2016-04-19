@@ -22,7 +22,7 @@
       <Image>SadieN</Image>
       <Text>And why do I feel like I'm forgetting something important?</Text>
       <TextBox>hide();</TextBox>
-      <SpecialActions>SoundKnock</SpecialActions>
+      <SpecialActions>SoundKnock|ClearBG</SpecialActions>
       <Next>tutorial_02</Next>
     </Interaction>
     <Interaction>
