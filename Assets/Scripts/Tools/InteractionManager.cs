@@ -199,7 +199,7 @@ public class Interaction {
 
 	[XmlElement("Speaker")]
 	public string _speaker { private get; set; }
-	public bool HasSpeaker { get { return _next != null && _speaker != string.Empty; } }
+	public bool HasSpeaker { get { return _speaker != null && _speaker != string.Empty; } }
 	public string iSpeaker { get { return HasNext ? _speaker : null; } }
 		
 	public bool IsValid {
@@ -278,6 +278,7 @@ public class InteractionManager : MonoBehaviour {
 			if (interaction.HasImage2) {
 				ShowRightImage (interaction.iImage2);
 			}
+			//Debug.Log (interaction.iName + " " + interaction.HasSpeaker.ToString ());
 			if (interaction.HasSpeaker) {
 				transform.FindChild ("Speaker").GetComponent<Text> ().text = interaction.iSpeaker;
 			}
@@ -483,7 +484,8 @@ public class InteractionManager : MonoBehaviour {
 				GameManager.InteractionManager.AddInteractionText (interactor, interaction);
 			}
 		}
-
+		GameManager.UIManager.StopAllCoroutines ();
+		GameManager.UIManager.StartCoroutine ("TapDelay");
 		CheckForTextBoxText(interaction);
 	}
 

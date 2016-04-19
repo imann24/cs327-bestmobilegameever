@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour {
 	public GameObject HelpTextBox;
 	public GameObject audioControllerWrap;
 
+	public float MinimumDialogueDuration = 0.5f;
+
 
 	void OnLevelWasLoaded (int level) {
 		audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
@@ -127,6 +129,12 @@ public class UIManager : MonoBehaviour {
         CanInteract = true;
         tapToContinue.GetComponent<Button> ().enabled = true;
 		tapToContinue.SetActive (false);
+	}
+
+	IEnumerator TapDelay() {
+		LockScreen ();
+		yield return new WaitForSeconds(MinimumDialogueDuration);
+		UnlockScreen();
 	}
 
 	void spawnTextBox() {

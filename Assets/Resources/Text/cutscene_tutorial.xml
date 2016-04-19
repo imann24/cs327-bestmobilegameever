@@ -25,6 +25,7 @@
       <Image>SadieN</Image>
       <Image>UnknownFade</Image>
       <Next>tutorial_01</Next>
+      <Speaker>It Worked!</Speaker>
     </Interaction>
     <Interaction>
       <Name>tutorial_choice</Name>
