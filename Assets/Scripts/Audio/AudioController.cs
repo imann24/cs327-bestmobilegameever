@@ -37,10 +37,12 @@ public class AudioController : MonoBehaviour {
 	RandomizedQueue<AudioFile> _matey;
 	RandomizedQueue<AudioFile> _ambienceMain;
 	RandomizedQueue<AudioFile> _ambienceTutorial;
+	RandomizedQueue<AudioFile> _swabbie;
 	IEnumerator _swellCoroutine;
 	IEnumerator _sweetenerCoroutine;
 	IEnumerator _ambienceTutorialCoroutine;
 	IEnumerator _ambienceMainCoroutine;
+	IEnumerator _swabbieCoroutine;
 
 	// Set to false to halt active coroutines
 	bool _coroutinesActive = true;
@@ -365,8 +367,12 @@ public class AudioController : MonoBehaviour {
 			_swellCoroutine
 		);
 
+		_swabbieCoroutine = cycleTracksContinuous (
+			_swabbie
+		);
+
 		if ((PSScene)Application.loadedLevel == PSScene.MainGame) {
-			startCoroutines(_ambienceMainCoroutine);
+			startCoroutines(_ambienceMainCoroutine,_swabbieCoroutine);
 		}
 		if ((PSScene)Application.loadedLevel == PSScene.TutorialScene) {
 			startCoroutines(_ambienceTutorialCoroutine);
@@ -378,6 +384,7 @@ public class AudioController : MonoBehaviour {
 		StopCoroutine(_swellCoroutine);
 		StopCoroutine(_ambienceMainCoroutine);
 		StopCoroutine(_ambienceTutorialCoroutine);
+		StopCoroutine(_swabbieCoroutine);
 	}
 
 	public void ClickSound () {
@@ -388,6 +395,10 @@ public class AudioController : MonoBehaviour {
 		Play (_matey.Cycle ());
 	}
 
+	public void SwabbieRrun () {
+		StopCoroutine (_swabbieCoroutine);
+	}
+
 	void initCyclingAudio () {
 		_sweeteners = new RandomizedQueue<AudioFile>();
 		_swells = new RandomizedQueue<AudioFile>();
@@ -395,6 +406,7 @@ public class AudioController : MonoBehaviour {
 		_matey = new RandomizedQueue<AudioFile>();
 		_ambienceMain = new RandomizedQueue<AudioFile>();
 		_ambienceTutorial = new RandomizedQueue<AudioFile>();
+		_swabbie = new RandomizedQueue<AudioFile>();
 		// Init Queue's with sound files
 		List<AudioFile> list = new List<AudioFile>();
 		// Get all deck music
@@ -424,6 +436,11 @@ public class AudioController : MonoBehaviour {
 		playEvents.TryGetValue ("enterscene",out list);
 		foreach (AudioFile track in list) {
 			_ambienceMain.Enqueue (track);
+		}
+		// Get swabbie mopping sound
+		playEvents.TryGetValue ("MopOnFloor",out list);
+		foreach (AudioFile track in list) {
+			_swabbie.Enqueue (track);
 		}
 	}
 
