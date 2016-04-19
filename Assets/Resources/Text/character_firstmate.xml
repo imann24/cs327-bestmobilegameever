@@ -10,8 +10,14 @@
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
       <Text>Ah, there you are! You must be my new assistant, yes? Thank goodness! You mustn’t keep your future captain waiting… but I will forgive you just this once.</Text>
-      <Next>firstmate_intro_01</Next>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
+      <Next>firstmate_intro_00_speech</Next>
       <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
+      <Name>firstmate_intro_00_speech</Name>
+      <Type>Derivative</Type>
+      <Next>firstmate_intro_01</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_01</Name>
@@ -28,8 +34,14 @@
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
       <Text>Now, before I take you on as my partner, let me ask you this, ma cherie - what makes a captain, in your view?</Text>
-      <Next>firstmate_intro_02_choice</Next>
+      <Next>firstmate_intro_02_speech</Next>
       <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
+      <Name>firstmate_intro_02_speech</Name>
+      <Type>Derivative</Type>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
+      <Next>firstmate_intro_02_choice</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02_choice</Name>
