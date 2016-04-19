@@ -12,9 +12,11 @@ public class NoahMove : MonoBehaviour {
     private bool isInteractionPending = false;
     private float minDistanceToInteract = 0.1f;
 
+	private Animator anim;
 
     // Use this for initialization
     void Start () {
+		anim = GetComponent<Animator> ();
 		navAgent = GetComponent<NavMeshAgent> ();
 	}
 
@@ -28,6 +30,8 @@ public class NoahMove : MonoBehaviour {
                 InteractionManager.HandleInteractionList(interactor, interactionList);
             }
         }
+			
+		anim.SetBool ("Walking", navAgent.hasPath);
     }
 
     public void GoTo(Vector3 targetPoint){
