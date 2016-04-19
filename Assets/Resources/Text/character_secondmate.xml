@@ -115,8 +115,8 @@
     <Interaction>
       <Name>lifeboat_comment_04</Name>
       <Type>Derivative</Type>
-      <Image>SadieNFade</Image>
-      <Image2>SecondMateN</Image2>
+      <Image>SadieAFade</Image>
+      <Image2>SecondMateA</Image2>
       <Text>Why are you still here? I don’t have time for layabouts.</Text>
       <Next>choice</Next>
     </Interaction>
@@ -280,7 +280,7 @@
       <Name>choice</Name>
       <Type>Derivative</Type>
       <Image>SadieN</Image>
-      <Image2>SecondMateNFade</Image2>
+      <Image2>SecondMateAFade</Image2>
       <Text>Pfft. I didn’t want to talk to you either.</Text>
     </Interaction>
   <!-- EndRegion -->
