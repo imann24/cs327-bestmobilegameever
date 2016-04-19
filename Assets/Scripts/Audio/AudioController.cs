@@ -33,6 +33,8 @@ public class AudioController : MonoBehaviour {
 	// Audio Control Patterns
 	RandomizedQueue<AudioFile> _swells;
 	RandomizedQueue<AudioFile> _sweeteners;
+	RandomizedQueue<AudioFile> _GUIclicks;
+	RandomizedQueue<AudioFile> _matey;
 	IEnumerator _swellCoroutine;
 	IEnumerator _sweetenerCoroutine;
 
@@ -48,7 +50,6 @@ public class AudioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//PlayMainMenuMusic();
 		OnLevelWasLoaded(Application.loadedLevel);
 	}
 
@@ -69,7 +70,6 @@ public class AudioController : MonoBehaviour {
 			StopMainMenuMusic();
 			StartTrackCycling();
 		} else {
-			//StopMainMenuMusic();
 		}
 	}
 
@@ -172,23 +172,25 @@ public class AudioController : MonoBehaviour {
 	void Init () {
 
 		// Singleton method returns a bool depending on whether this object is the instance of the class
-		if (SingletonUtil.TryInit(ref Instance, this, gameObject)) {
+		if (SingletonUtil.TryInit (ref Instance, this, gameObject)) {
 				
-			loader = new AudioLoader(path);
-			fileList = loader.Load();
-			fileList.Init();
+			loader = new AudioLoader (path);
+			fileList = loader.Load ();
+			fileList.Init ();
 
-			InitFileDictionary(fileList);
+			InitFileDictionary (fileList);
 
-			AddAudioEvents();
+			AddAudioEvents ();
 
-			SubscribeEvents();
+			SubscribeEvents ();
 
 			if (isAudioListener) {
-				AddAudioListener();
+				AddAudioListener ();
 			}
-			initCyclingAudio();
+			initCyclingAudio ();
 	
+		} else { 
+			//this = Instance;
 		}
 	}
 
@@ -354,9 +356,19 @@ public class AudioController : MonoBehaviour {
 		StopCoroutine(_swellCoroutine);
 	}
 
+	public void ClickSound () {
+		Play (_GUIclicks.Cycle ());
+	}
+
+	public void Matey () {
+		Play (_matey.Cycle ());
+	}
+
 	void initCyclingAudio () {
 		_sweeteners = new RandomizedQueue<AudioFile>();
 		_swells = new RandomizedQueue<AudioFile>();
+		_GUIclicks = new RandomizedQueue<AudioFile>();
+		_matey = new RandomizedQueue<AudioFile>();
 		// Init Queue's with sound files
 		List<AudioFile> list = new List<AudioFile>();
 		// Get all deck music
@@ -367,6 +379,16 @@ public class AudioController : MonoBehaviour {
 		playEvents.TryGetValue ("every8to20seconds",out list);
 		foreach (AudioFile track in list) {
 			_sweeteners.Enqueue (track);
+		}
+		// Get all GUI click sounds
+		playEvents.TryGetValue ("GUI Click",out list);
+		foreach (AudioFile track in list) {
+			_GUIclicks.Enqueue (track);
+		}
+		// Get all matey sounds
+		playEvents.TryGetValue ("MateyButton",out list);
+		foreach (AudioFile track in list) {
+			_matey.Enqueue (track);
 		}
 	}
 
