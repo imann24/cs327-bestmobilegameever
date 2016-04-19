@@ -38,6 +38,10 @@ public class AudioController : MonoBehaviour {
 	RandomizedQueue<AudioFile> _ambienceMain;
 	RandomizedQueue<AudioFile> _ambienceTutorial;
 	RandomizedQueue<AudioFile> _swabbie;
+	RandomizedQueue<AudioFile> _firstMate;
+	RandomizedQueue<AudioFile> _quarterMaster;
+	RandomizedQueue<AudioFile> _rigger;
+	RandomizedQueue<AudioFile> _swabbieSpeech;
 	IEnumerator _swellCoroutine;
 	IEnumerator _sweetenerCoroutine;
 	IEnumerator _ambienceTutorialCoroutine;
@@ -367,8 +371,10 @@ public class AudioController : MonoBehaviour {
 			_swellCoroutine
 		);
 
-		_swabbieCoroutine = cycleTracksContinuous (
-			_swabbie
+		_swabbieCoroutine = cycleTracksFrequenecyRange(
+			_swabbie,
+			ShortestSweetenerPlayFrequenecy,
+			LongestSweetenerPlayFrequenecy
 		);
 
 		if ((PSScene)Application.loadedLevel == PSScene.MainGame) {
@@ -395,7 +401,26 @@ public class AudioController : MonoBehaviour {
 		Play (_matey.Cycle ());
 	}
 
-	public void SwabbieRrun () {
+	public void VoiceEffect (string name) {
+		switch (name) {
+		case "FirstMateSpeech":
+			Play (_firstMate.Cycle ());
+			break;
+		case "QuarterMasterSpeech":
+			Play (_quarterMaster.Cycle ());
+			break;
+		case "SwabbieSpeech":
+			Play (_swabbieSpeech.Cycle ());
+			break;
+		case "RiggerSpeech":
+			Play (_rigger.Cycle ());
+			break;
+		default:
+			break;
+		}
+	}
+
+	public void SwabbieRun () {
 		StopCoroutine (_swabbieCoroutine);
 	}
 
@@ -407,6 +432,10 @@ public class AudioController : MonoBehaviour {
 		_ambienceMain = new RandomizedQueue<AudioFile>();
 		_ambienceTutorial = new RandomizedQueue<AudioFile>();
 		_swabbie = new RandomizedQueue<AudioFile>();
+		_firstMate = new RandomizedQueue<AudioFile>();
+		_swabbieSpeech = new RandomizedQueue<AudioFile>();
+		_quarterMaster = new RandomizedQueue<AudioFile>();
+		_rigger = new RandomizedQueue<AudioFile>();
 		// Init Queue's with sound files
 		List<AudioFile> list = new List<AudioFile>();
 		// Get all deck music
@@ -441,6 +470,26 @@ public class AudioController : MonoBehaviour {
 		playEvents.TryGetValue ("MopOnFloor",out list);
 		foreach (AudioFile track in list) {
 			_swabbie.Enqueue (track);
+		}
+		// Speaking voice effects
+		playEvents.TryGetValue ("FirstMateSpeech",out list);
+		foreach (AudioFile track in list) {
+			_firstMate.Enqueue (track);
+		}
+
+		playEvents.TryGetValue ("SwabbieTalk",out list);
+		foreach (AudioFile track in list) {
+			_swabbieSpeech.Enqueue (track);
+		}
+
+		playEvents.TryGetValue ("RiggerTalk",out list);
+		foreach (AudioFile track in list) {
+			_rigger.Enqueue (track);
+		}
+
+		playEvents.TryGetValue ("QuartermasterTalk",out list);
+		foreach (AudioFile track in list) {
+			_quarterMaster.Enqueue (track);
 		}
 	}
 
