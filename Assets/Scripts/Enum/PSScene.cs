@@ -5,7 +5,5 @@
 	OptionsMenu,
 	Credits,
 	TutorialScene,
-	MovementDemo,
-	DevelopmentSceneList,
-	CharacterSpritesDemo
+	DemoEnd
 }

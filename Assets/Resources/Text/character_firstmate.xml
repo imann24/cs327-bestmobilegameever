@@ -636,6 +636,7 @@
       <Image2>SadieNFade</Image2>
       <TakeTags>postersGiven|ojPosterGiven|riggerPosterGiven|secondmatePosterGiven|riggerTalked|ojTalked|secondmateTalked</TakeTags>
       <Text>Ah-ah-ah-ah! There is no need for thanks. As a future Captain, I reward those who do me good service. Consider it my thanks. Please, take a seat!</Text>
+      <SpecialActions>EndDemo</SpecialActions>
     </Interaction>
     <!-- EndRegion -->
   <!-- EndRegion-->

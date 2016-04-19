@@ -390,6 +390,23 @@ public class InteractionManager : MonoBehaviour {
 		List<Interaction> closeEnough = validInteractions.Except (tooFar).ToList ();
 
 		if (tooFar.Count == 0) {
+			if (isLeft(interactor) && GameObject.Find("Floor")!=null && GameObject.Find("Floor").GetComponent<NoahNavPlane>().flipped==false) { 
+				GameObject.Find("Floor").GetComponent<NoahNavPlane>().Flip();
+			}
+
+
+			if (!isLeft (interactor) && GameObject.Find ("Floor") != null  && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped == true) {
+				GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().Flip ();
+			}
+		
+			if (isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == true) {
+
+				GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().Flip ();
+			}
+
+			if (!isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == false) {
+				GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().Flip ();
+			} 
 			foreach (Interaction interaction in closeEnough) {
 				if (interaction.HasText) {
 					DisplayInteraction (interactor, interaction);
@@ -418,6 +435,16 @@ public class InteractionManager : MonoBehaviour {
 			HandleInteractionList (interactor, alternatives);
 		}
 	}
+
+	public static bool isLeft(Interactable interactor){ //left has smaller x value
+		if (interactor.transform.position.x < GameManager.PlayerCharacter.transform.position.x) {
+			return true;
+		}
+		return false;
+
+
+	}
+
 
 	static Vector3 getPositionOfInteractable (Interactable interactable) {
 		SpecialActions specialActionsOfInteractable = interactable.GetComponent<SpecialActions>();

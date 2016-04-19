@@ -34,6 +34,13 @@ public static class EventList {
 
 	#endregion
 
+
+	#region Special Actions
+
+	public const string END_DEMO = "EndDemo";
+
+	#endregion
+
 	public static string[] events = {
 		START_MUSIC,
 		STOP_MUSIC,
