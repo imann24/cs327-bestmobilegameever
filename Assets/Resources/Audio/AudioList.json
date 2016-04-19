@@ -1097,7 +1097,7 @@
 			“Type”: "VO",
 			“Channel”:2,
 			"Volume": 100
-		}
+		},
 		{
 			“FileName”:"Orange_Throw",
 			“EventNames”:["Orangethrow"],
