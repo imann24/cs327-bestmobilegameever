@@ -43,7 +43,7 @@
       <Name>get_mop_12</Name>
       <Type>Derivative</Type>
       <Text>But you’re not even mopping.</Text>
-      <Image>SadieN</Image>
+      <Image>SadieA</Image>
       <Image2>SwabbieNFade</Image2>
       <Next>get_mop_13</Next>
     </Interaction>
@@ -51,7 +51,7 @@
       <Name>get_mop_13</Name>
       <Type>Derivative</Type>
       <Text>Aye.</Text>
-      <Image>SadieNFade</Image>
+      <Image>SadieAFade</Image>
       <Image2>SwabbieN</Image2>
       <Next>get_mop_14</Next>
     </Interaction>

@@ -44,7 +44,7 @@
 		<Interaction>
 			<Name>cleaned_hook</Name>
 			<Type>Derivative</Type>
-			<Text>Nice. Now this thing will be on the Captain's wrist before he knows it. Better get it up there quick.</Text>
+			<Text>Nice. Now this thing will be on the Captain's wrist before they know it. Better get it to them quick.</Text>
 			<Image>SadieH</Image>
 		</Interaction>
 		<Interaction>
@@ -164,12 +164,32 @@
       <Text>You’re kidding. I can’t handle this.</Text>
       <TextType>Floating</TextType>
     </Interaction>
+    <Interaction>
+      <Name>use_mop_head_handle</Name>
+      <Type>Derivative</Type>
+      <Text>It's beyond repair.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
     <!-- EndRegion -->
     <!-- Region Other -->
     <Interaction>
       <Name>swabbie_response</Name>
       <Type>Derivative</Type>
       <Text>Can’t complain. Much.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>give_firstmate_hook</Name>
+      <Type>Derivative</Type>
+      <Text>He's already got a hook hand.</Text>
+      <TextType>Floating</TextType>
+      <Next>give_firstmate_hook_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_firstmate_hook_1</Name>
+      <Type>Derivative</Type>
+      <ALLTags>firstmateQuestInProgress1</ALLTags>
+      <Text>Better think of something else.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <!-- EndRegion -->
@@ -206,20 +226,20 @@
     <Interaction>
       <Name>use_hook_handle</Name>
       <Type>Derivative</Type>
-      <Text>Neat-o.</Text>
+      <Text>Neat. Now it's long AND grabby.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
       <Name>examine_chalkboard</Name>
       <Type>Derivative</Type>
-      <ALLTags>ChalkTaken</ALLTags>
-      <Text>It's very clear.</Text>
+      <ALLTags>chalkTaken</ALLTags>
+      <Text>Better not mess with it.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
       <Name>examine_chalkboard</Name>
       <Type>Derivative</Type>
-      <NONETags>ChalkTaken</NONETags>
+      <NONETags>chalkTaken</NONETags>
       <Text>Maybe I'll just borrow this chalk here.</Text>
       <TextType>Floating</TextType>
       <Next>take_chalk</Next>
@@ -228,6 +248,8 @@
     <Interaction>
       <Name>use_chalk_poster</Name>
       <Type>Derivative</Type>
+      <NONETags>postersStink</NONETags>
+      <GiveTags>postersStink</GiveTags>
       <Text>Let’s just scribble some stink lines...</Text>
       <TextType>Floating</TextType>
       <Next>use_chalk_poster_1</Next>
@@ -236,6 +258,29 @@
       <Name>use_chalk_poster_1</Name>
       <Type>Derivative</Type>
       <Text>Heh. Classic.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk_poster</Name>
+      <Type>Derivative</Type>
+      <ALLTags>postersStink|postersOne</ALLTags>
+      <Text>I'd love to spend all day messing with it -</Text>
+      <TextType>Floating</TextType>
+      <Next>use_chalk_poster_2</Next>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk_poster</Name>
+      <Type>Derivative</Type>
+      <ALLTags>postersStink</ALLTags>
+      <NONETags>postersOne</NONETags>
+      <Text>I'd love to spend all day messing with them -</Text>
+      <TextType>Floating</TextType>
+      <Next>use_chalk_poster_2</Next>
+    </Interaction>
+    <Interaction>
+      <Name>use_chalk_poster_2</Name>
+      <Type>Derivative</Type>
+      <Text>But I have more important things to do.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
@@ -261,7 +306,7 @@
       <Name>examine_lantern</Name>
       <Type>Derivative</Type>
       <NONETags>lanternLit</NONETags>
-      <Text>I’ve got a bright idea...</Text>
+      <Text>It's pretty far up.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
@@ -291,20 +336,14 @@
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
-      <Name>talk_rigger</Name>
-      <Type>Derivative</Type>
-      <Text>She can't hear me.</Text>
-      <TextType>Floating</TextType>
-    </Interaction>
-    <Interaction>
       <Name>give_poster_again</Name>
       <Type>Derivative</Type>
-      <Text>They already have one of these. Duh.</Text>
+      <Text>They already have one of these.</Text>
       <TextType>Floating</TextType>
       <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
     <Interaction>
-      <Name>rigger_talk</Name>
+      <Name>talk_rigger</Name>
       <Type>Derivative</Type>
       <Text>She's up pretty high. I probably shouldn't bother her.</Text>
       <TextType>Floating</TextType>

@@ -43,7 +43,7 @@
     <Interaction>
       <Name>oj_choice</Name>
       <Type>Derivative</Type>
-      <NONETags>hasOrange</NONETags>
+      <NONETags>hasOrange|riggerHit|riggerDown</NONETags>
       <Text>Can I have one of those oranges?</Text>
       <Next>oj_orange_00</Next>
     </Interaction>
@@ -155,7 +155,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
-      <Text>I said, bring me a stone white and fine as snow, the type with which one may draw meaning.</Text>
+      <Text>Yer ears be failing ye? Bring me a stone white and fine as snow, the type with which one may draw meaning.</Text>
       <Next>give_poster_04</Next>
     </Interaction>
     <Interaction>
@@ -171,47 +171,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieAFade</Image2>
-      <Text>Stone. White and fine as snow. With which one may draw meaning.</Text>
-      <Next>give_poster_06</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_poster_06</Name>
-      <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelNFade</Image>
-      <Image2>SadieN</Image2>
-      <Text>...If I find you this ‘stone’ will you take the flyer?</Text>
-      <Next>give_poster_07</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_poster_07</Name>
-      <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelN</Image>
-      <Image2>SadieNFade</Image2>
-      <Text>Aye.</Text>
-      <Next>give_poster_08</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_poster_08</Name>
-      <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelNFade</Image>
-      <Image2>SadieN</Image2>
-      <Text>And I won’t ever have to talk to you again?</Text>
-      <Next>give_poster_09</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_poster_09</Name>
-      <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelN</Image>
-      <Image2>SadieNFade</Image2>
-      <Text>Aye.</Text>
-      <Next>give_poster_10</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_poster_10</Name>
-      <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelNFade</Image>
-      <Image2>SadieH</Image2>
-      <Text>Be right back.</Text>
+      <Text>Return when ye've found it.</Text>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region After Chalk Requested-->
@@ -240,7 +200,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
-      <Text>Fine.</Text>
+      <Text>Aye, great stone-bearer, I accept yer offering.</Text>
     </Interaction>
     <Interaction>
       <Name>give_poster_success</Name>
@@ -256,7 +216,7 @@
     <Interaction>
       <Name>give_chalk</Name>
       <Type>UseItem</Type>
-      <ALLTags>holdingChalk</ALLTags>
+      <ALLTags>holdingChalk|hasPoster</ALLTags>
       <NONETags>ojChalkRequested</NONETags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
@@ -311,6 +271,7 @@
       <Text>I have no idea what just happened but I’ll take it.</Text>
       <GiveTags>ojChalkGiven</GiveTags>
       <TakeItems>Chalk</TakeItems>
+      <Next>oj_choice</Next>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region Asked -->
@@ -351,43 +312,20 @@
     <Interaction>
       <Name>give_chalk_23</Name>
       <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelNFade</Image>
-      <Image2>SadieH</Image2>
-      <Text>Let me guess. You’re drawing tiny faces and talking to them?</Text>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Text>Ye have done me a great kindness this day. I owe you a debt that can never be repaid.</Text>
       <Next>give_chalk_24</Next>
     </Interaction>
     <Interaction>
       <Name>give_chalk_24</Name>
       <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelN</Image>
-      <Image2>SadieHFade</Image2>
-      <Text>...</Text>
-      <Next>give_chalk_25</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_chalk_25</Name>
-      <Type>Derivative</Type>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
-      <Text>That was a joke.</Text>
-      <Next>give_chalk_26</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_chalk_26</Name>
-      <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelN</Image>
-      <Image2>SadieNFade</Image2>
-      <Text>I think it’d be best if ye left now.</Text>
-      <Next>give_chalk_27</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_chalk_27</Name>
-      <Type>Derivative</Type>
-      <Image>OrangeGuyBarrelNFade</Image>
-      <Image2>SadieN</Image2>
-      <Text>Agreed.</Text>
+      <Text>You're welcome, I guess.</Text>
       <GiveTags>ojChalkGiven</GiveTags>
       <TakeItems>Chalk</TakeItems>
+      <Next>oj_choice</Next>
     </Interaction>
     <!-- EndRegion -->
     <!-- EndRegion -->

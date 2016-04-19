@@ -4,13 +4,22 @@
     <Interaction>
       <Name>examine</Name>
       <Type>Click</Type>
+      <NONETags>chalkTaken</NONETags>
       <Next>examine_chalkboard</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <ALLTags>chalkTaken</ALLTags>
+      <Next>examine_chalkboard</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
       <Name>take_chalk</Name>
       <Type>Derivative</Type>
-      <GiveTags>ChalkTaken</GiveTags>
+      <GiveTags>chalkTaken</GiveTags>
       <GiveItems>Chalk</GiveItems>
       <SpecialActions>TakeChalk</SpecialActions>
     </Interaction>
