@@ -5,16 +5,33 @@
     <Interaction>
       <Name>tutorial_start</Name>
       <Type>Derivative</Type>
-      <SpecialActions>SoundKnock|SoundTutorialPrompt</SpecialActions>
+      <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_00</Next>
     </Interaction>
     <Interaction>
       <Name>tutorial_00</Name>
       <Type>Derivative</Type>
-      <Text>Hey, you! Who's in there?</Text>
+      <Image>SadieN</Image>
+      <Text>Ugh, where am I?</Text>
       <TextBox>Tap to advance dialogue text</TextBox>
+      <Next>tutorial_01</Next>
+    </Interaction>
+    <Interaction>
+      <Name>tutorial_01</Name>
+      <Type>Derivative</Type>
+      <Image>SadieN</Image>
+      <Text>And why do I feel like I'm forgetting something important?</Text>
+      <TextBox>hide();</TextBox>
+      <SpecialActions>SoundKnock</SpecialActions>
+      <Next>tutorial_02</Next>
+    </Interaction>
+    <Interaction>
+      <Name>tutorial_02</Name>
+      <Type>Derivative</Type>
+      <Text>Hey, you! Who's in there?</Text>
       <Image>SadieNFade</Image>
       <Image2>Unknown</Image2>
+      <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_choice</Next>
     </Interaction>
     <Interaction>
@@ -24,40 +41,40 @@
       <TextBox>Tap any dialogue choice</TextBox>
       <Image>SadieN</Image>
       <Image>UnknownFade</Image>
-      <Next>tutorial_01</Next>
+      <Next>tutorial_03</Next>
     </Interaction>
     <Interaction>
       <Name>tutorial_choice</Name>
       <Type>Derivative</Type>
       <Text>Just a lowly cabin girl.</Text>
-      <Next>tutorial_01</Next>
+      <Next>tutorial_03</Next>
     </Interaction>
     <Interaction>
       <Name>tutorial_choice</Name>
       <Type>Derivative</Type>
       <Text>Who are you?</Text>
-      <Next>tutorial_02</Next>
+      <Next>tutorial_04</Next>
     </Interaction>
     <Interaction>
-      <Name>tutorial_01</Name>
+      <Name>tutorial_03</Name>
       <Type>Derivative</Type>
       <Text>Well hurry up and get out here! We need a hand!</Text>
       <Image>SadieNFade</Image>
       <Image2>Unknown</Image2>
-      <Next>tutorial_03</Next>
+      <Next>tutorial_05</Next>
       <TextBox>hide();</TextBox>
     </Interaction>
     <Interaction>
-      <Name>tutorial_02</Name>
+      <Name>tutorial_04</Name>
       <Type>Derivative</Type>
       <Text>Does it matter? Hurry up and get out here! We need a hand!</Text>
       <Image>SadieNFade</Image>
       <Image2>Unknown</Image2>
-      <Next>tutorial_03</Next>
+      <Next>tutorial_05</Next>
       <TextBox>hide();</TextBox>
     </Interaction>
     <Interaction>
-      <Name>tutorial_03</Name>
+      <Name>tutorial_05</Name>
       <Type>Derivative</Type>
       <Text>Hand?! Hand... oh, right! Crap! Still gotta clean off the Captain's hook hand...</Text>
       <Image>SadieN</Image>
@@ -129,7 +146,7 @@
       <Name>tutorial_cutscene_04</Name>
       <Type>Derivative</Type>
       <Text>Hear, hear! No evildoings shall be gotten away with under the watchful eye of yours truly.</Text>
-      <Image>FirstMateN</Image>
+      <Image>FirstMateH</Image>
       <Next>tutorial_cutscene_05</Next>
     </Interaction>
     <Interaction>

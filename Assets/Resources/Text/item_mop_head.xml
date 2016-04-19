@@ -15,6 +15,14 @@
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
     <Interaction>
+      <Name>use_handle</Name>
+      <Type>UseItem</Type>
+      <ALLTags>holdingMopHandle</ALLTags>
+      <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>use_mop_head_handle</Next>
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
       <Name>DefaultCannotUse</Name>
       <Type>Derivative</Type>
       <Next>DefaultCannotUse</Next>
