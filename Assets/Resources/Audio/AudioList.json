@@ -1098,5 +1098,59 @@
 			“Channel”:2,
 			"Volume": 100
 		}
+		{
+			“FileName”:"Orange_Throw",
+			“EventNames”:["Orangethrow"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Unhook_Lantern_1",
+			“EventNames”:["UnhookLantern"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Door_Knock",
+			“EventNames”:["DoorKnock"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rigger_Climb_A",
+			“EventNames”:["RiggerClimb"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rigger_Climb_B",
+			“EventNames”:["RiggerClimb"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		},
+		{
+			“FileName”:"Rigger_Climb_C",
+			“EventNames”:["RiggerClimb"],
+			"StopEventNames":[],
+			“Loop”:false,
+			“Type”: "FX",
+			“Channel”:2,
+			"Volume": 100
+		}
 	]
 }

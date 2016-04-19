@@ -10,7 +10,13 @@ public class SplashStart : MonoBehaviour {
 	public float lifeTime = 2f; // How long the logos are onscreen before fade
 	public float fadeTime = 2f; // How long the fade takes
 
+	const float UNITY_LOGO_TIME_IOS = 4.5f; // Unity Logo seems to be overlaid over the first scene on iOS (while it loads consecutively on Android)
 	void Start () {
+
+		#if UNITY_IOS
+			lifeTime += UNITY_LOGO_TIME_IOS;
+		#endif
+
 		DontDestroyOnLoad(gameObject);
 		StartCoroutine(TimedFadeOut(lifeTime));
 		StartCoroutine(TimedToMainMenu(lifeTime + fadeTime));
