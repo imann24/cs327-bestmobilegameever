@@ -35,8 +35,12 @@ public class AudioController : MonoBehaviour {
 	RandomizedQueue<AudioFile> _sweeteners;
 	RandomizedQueue<AudioFile> _GUIclicks;
 	RandomizedQueue<AudioFile> _matey;
+	RandomizedQueue<AudioFile> _ambienceMain;
+	RandomizedQueue<AudioFile> _ambienceTutorial;
 	IEnumerator _swellCoroutine;
 	IEnumerator _sweetenerCoroutine;
+	IEnumerator _ambienceTutorialCoroutine;
+	IEnumerator _ambienceMainCoroutine;
 
 	// Set to false to halt active coroutines
 	bool _coroutinesActive = true;
@@ -44,13 +48,12 @@ public class AudioController : MonoBehaviour {
 	public float ShortestSweetenerPlayFrequenecy = 10;
 	public float LongestSweetenerPlayFrequenecy = 25;
 
+
 	void Awake () {
 		Init();
 	}
-
-	// Use this for initialization
+		
 	void Start () {
-		OnLevelWasLoaded(Application.loadedLevel);
 	}
 
 	void OnDestroy () {
@@ -63,9 +66,13 @@ public class AudioController : MonoBehaviour {
 		if ((PSScene)level == PSScene.MainMenu) {
 			StopTrackCycling();
 			PlayMainMenuMusic();
+			StopCoroutine (_ambienceTutorialCoroutine);
+			StopCoroutine (_ambienceMainCoroutine);
 		} else if ((PSScene)level == PSScene.MainGame) {
 			StopMainMenuMusic();
+			StopTrackCycling();
 			StartTrackCycling();
+			StopCoroutine (_ambienceTutorialCoroutine);
 		}else if ((PSScene)level == PSScene.TutorialScene) {
 			StopMainMenuMusic();
 			StartTrackCycling();
@@ -345,15 +352,32 @@ public class AudioController : MonoBehaviour {
 			_swells
 		);
 
+		_ambienceMainCoroutine = cycleTracksContinuous (
+			_ambienceMain
+		);
+
+		_ambienceTutorialCoroutine = cycleTracksContinuous (
+			_ambienceTutorial
+		);
+
 		startCoroutines(
 			_sweetenerCoroutine,
 			_swellCoroutine
 		);
+
+		if ((PSScene)Application.loadedLevel == PSScene.MainGame) {
+			startCoroutines(_ambienceMainCoroutine);
+		}
+		if ((PSScene)Application.loadedLevel == PSScene.TutorialScene) {
+			startCoroutines(_ambienceTutorialCoroutine);
+		}
 	}
 
 	public void StopTrackCycling () {
 		StopCoroutine(_sweetenerCoroutine);
 		StopCoroutine(_swellCoroutine);
+		StopCoroutine(_ambienceMainCoroutine);
+		StopCoroutine(_ambienceTutorialCoroutine);
 	}
 
 	public void ClickSound () {
@@ -369,6 +393,8 @@ public class AudioController : MonoBehaviour {
 		_swells = new RandomizedQueue<AudioFile>();
 		_GUIclicks = new RandomizedQueue<AudioFile>();
 		_matey = new RandomizedQueue<AudioFile>();
+		_ambienceMain = new RandomizedQueue<AudioFile>();
+		_ambienceTutorial = new RandomizedQueue<AudioFile>();
 		// Init Queue's with sound files
 		List<AudioFile> list = new List<AudioFile>();
 		// Get all deck music
@@ -389,6 +415,15 @@ public class AudioController : MonoBehaviour {
 		playEvents.TryGetValue ("MateyButton",out list);
 		foreach (AudioFile track in list) {
 			_matey.Enqueue (track);
+		}
+		// Get ambience
+		playEvents.TryGetValue ("EnterTutorial",out list);
+		foreach (AudioFile track in list) {
+			_ambienceTutorial.Enqueue (track);
+		}
+		playEvents.TryGetValue ("enterscene",out list);
+		foreach (AudioFile track in list) {
+			_ambienceMain.Enqueue (track);
 		}
 	}
 
