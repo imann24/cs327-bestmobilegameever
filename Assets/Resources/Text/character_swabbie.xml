@@ -77,6 +77,12 @@
       <Image>SadieNFade</Image>
       <Image2>SwabbieH</Image2>
       <SpecialActions>ChangeToNoMop</SpecialActions>
+      <Next>get_mop_21_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>get_mop_21_1</Name>
+      <Type>Derivative</Type>
+      <SpecialActions>StopMopping</SpecialActions>
       <Next>get_mop_22</Next>
     </Interaction>
     <Interaction>

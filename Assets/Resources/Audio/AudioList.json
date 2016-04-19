@@ -473,7 +473,7 @@
 			“EventNames”:["enterscene"],
 			"StopEventNames":["exitscene"],
 			“Loop”:true,
-			“Type”: "Ambience",
+			“Type”: "FX",
 			“Channel”:3,
 			"Volume": 60
 		},
@@ -1013,7 +1013,7 @@
 			“EventNames”:["EnterTutorial"],
 			"StopEventNames":["ExitTutorial"],
 			“Loop”:true,
-			“Type”: "Ambience",
+			“Type”: "FX",
 			“Channel”:3,
 			"Volume": 60
 		},

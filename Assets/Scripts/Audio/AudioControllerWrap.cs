@@ -22,6 +22,10 @@ public class AudioControllerWrap : MonoBehaviour {
 		audioController.ClickSound ();
 	}
 
+	public void SwabbieRun() {
+		audioController.SwabbieRrun ();
+	}
+
 	public void ToggleMute() {
 		audioController.ToggleFXMute();
 		audioController.ToggleMusicMute();
