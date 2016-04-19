@@ -45,13 +45,7 @@ public class MainMenuController : MonoBehaviour {
 		SceneController.LoadOptionsMenu();
 
 	} 
-
-	public void LoadDevelopScenesList () {
-
-		SceneController.LoadDevelopSceneListScene();
-
-	}
-
+		
 	public void ShowConfirmationPanel(){
 		NewGameConfirmationPanel.SetActive (true);
 	}

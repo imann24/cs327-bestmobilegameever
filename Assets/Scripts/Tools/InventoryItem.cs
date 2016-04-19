@@ -73,8 +73,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
 	public void OnDrag (PointerEventData eventData)
 	{
-		transform.position = Input.mousePosition;
-	}
+		transform.position = Input.mousePosition+new Vector3(0,15,0);
+	} 
 
 	#endregion
 

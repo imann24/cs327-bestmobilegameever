@@ -36,10 +36,6 @@ public static class AudioUtil {
 			return AudioType.Music;
 		case "VO":
 			return AudioType.VO;
-		//case "Ambience":
-			//return AudioType.Ambience;
-		//case "Sweetener":
-			//return AudioType.Sweetener;
 		default:
 			throw new System.Collections.Generic.KeyNotFoundException();
 		}
@@ -53,8 +49,6 @@ public static class AudioUtil {
 			return SettingsUtil.MusicMuted;
 		case AudioType.VO:
 			return SettingsUtil.VOMuted;
-		//case AudioType.Sweetener:
-			//return SettingsUtil.MusicMuted;
 		default:
 			throw new System.Collections.Generic.KeyNotFoundException();
 		}

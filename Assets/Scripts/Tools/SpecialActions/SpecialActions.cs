@@ -92,6 +92,9 @@ public class SpecialActions : MonoBehaviour {
         }
     }
 
+	void loadDemoEnd () {
+		SceneController.LoadDemoEnd();
+	}
 
 public void CreateObject(GameObject obj, Vector2 pos) {
         GameObject newObject = (GameObject)Instantiate(obj, new Vector3(pos.x, pos.y, gameObject.transform.position.z), Quaternion.identity);
@@ -130,6 +133,11 @@ public void CreateObject(GameObject obj, Vector2 pos) {
 				Fader.FadeIn ();
                 //ScreenFader.FadeOut();
                 break;
+
+			case EventList.END_DEMO:
+				loadDemoEnd();
+				break;
+	
 			default:
                 if (actionScripts.ContainsKey(action)) { actionScripts[action].DoExtendedAction(); }
                 DoSpecialAction (action);

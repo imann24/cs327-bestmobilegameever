@@ -32,16 +32,9 @@ public static class SceneController {
 		LoadScene(PSScene.TutorialScene);
 	}
 		
-	public static void LoadMovementDemoScene () {
-		LoadScene(PSScene.MovementDemo);
-	}
+	public static void LoadDemoEnd () {
 
-	public static void LoadDevelopSceneListScene () {
-		LoadScene(PSScene.DevelopmentSceneList);
-	}
-
-	public static void LoadCharacterSpritesDemo () {
-		LoadScene(PSScene.CharacterSpritesDemo);
+		LoadScene(PSScene.DemoEnd);
 	}
 
 	// Uses an enum to load a scene
@@ -51,4 +44,6 @@ public static class SceneController {
 		SceneManager.LoadScene((int) scene);	
 
 	}
+
+
 }
