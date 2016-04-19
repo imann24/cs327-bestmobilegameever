@@ -39,6 +39,9 @@ public class AudioController : MonoBehaviour {
 	RandomizedQueue<AudioFile> _ambienceTutorial;
 	RandomizedQueue<AudioFile> _swabbie;
 	RandomizedQueue<AudioFile> _firstMate;
+	RandomizedQueue<AudioFile> _quarterMaster;
+	RandomizedQueue<AudioFile> _rigger;
+	RandomizedQueue<AudioFile> _swabbieSpeech;
 	IEnumerator _swellCoroutine;
 	IEnumerator _sweetenerCoroutine;
 	IEnumerator _ambienceTutorialCoroutine;
@@ -403,6 +406,15 @@ public class AudioController : MonoBehaviour {
 		case "FirstMateSpeech":
 			Play (_firstMate.Cycle ());
 			break;
+		case "QuarterMasterSpeech":
+			Play (_quarterMaster.Cycle ());
+			break;
+		case "SwabbieSpeech":
+			Play (_swabbieSpeech.Cycle ());
+			break;
+		case "RiggerSpeech":
+			Play (_rigger.Cycle ());
+			break;
 		default:
 			break;
 		}
@@ -421,6 +433,9 @@ public class AudioController : MonoBehaviour {
 		_ambienceTutorial = new RandomizedQueue<AudioFile>();
 		_swabbie = new RandomizedQueue<AudioFile>();
 		_firstMate = new RandomizedQueue<AudioFile>();
+		_swabbieSpeech = new RandomizedQueue<AudioFile>();
+		_quarterMaster = new RandomizedQueue<AudioFile>();
+		_rigger = new RandomizedQueue<AudioFile>();
 		// Init Queue's with sound files
 		List<AudioFile> list = new List<AudioFile>();
 		// Get all deck music
@@ -460,6 +475,21 @@ public class AudioController : MonoBehaviour {
 		playEvents.TryGetValue ("FirstMateSpeech",out list);
 		foreach (AudioFile track in list) {
 			_firstMate.Enqueue (track);
+		}
+
+		playEvents.TryGetValue ("SwabbieTalk",out list);
+		foreach (AudioFile track in list) {
+			_swabbieSpeech.Enqueue (track);
+		}
+
+		playEvents.TryGetValue ("RiggerTalk",out list);
+		foreach (AudioFile track in list) {
+			_rigger.Enqueue (track);
+		}
+
+		playEvents.TryGetValue ("QuartermasterTalk",out list);
+		foreach (AudioFile track in list) {
+			_quarterMaster.Enqueue (track);
 		}
 	}
 
