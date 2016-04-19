@@ -13,7 +13,7 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 	void Start () {
 		Player = GameManager.PlayerCharacter.GetComponent<NavMeshAgent>();
 		speechBubble = Player.GetComponentInChildren<SpeechBubble>();
-		//Player = GameObject.Find ("Sadie").GetComponent<NavMeshAgent>();
+
 	}
 	
 	// Update is called once per frame
@@ -24,8 +24,12 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 	void OnMouseUp(){
 		//Debug.Log ("Mouse UP");
 	}
-	void Flip(){ //Flip player character
+
+	public void Flip(){ //Flip player character
 		flipped = !flipped;
+		Player = GameManager.PlayerCharacter.GetComponent<NavMeshAgent>();
+		speechBubble = Player.GetComponentInChildren<SpeechBubble>();
+	
 		Player.transform.localScale = new Vector3 (Player.transform.localScale.x * -1, Player.transform.localScale.y, Player.transform.localScale.z);
 		speechBubble.transform.localScale = new Vector3(speechBubble.transform.localScale.x * -1, speechBubble.transform.localScale.y, speechBubble.transform.localScale.z);
 	}
@@ -51,7 +55,7 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 			}
 
 			Player.SetDestination (destination);
-			//}
+
 		}
 	}
 }
