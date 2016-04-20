@@ -30,7 +30,7 @@
       <Type>Derivative</Type>
       <Text>Hey, you! Who's in there?</Text>
       <Image>SadieNFade</Image>
-      <Image2>Unknown</Image2>
+      <Image2>PirateQuestionMark</Image2>
       <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_choice</Next>
     </Interaction>
@@ -40,7 +40,7 @@
       <Text>It's me, Sadie.</Text>
       <TextBox>Tap any dialogue choice</TextBox>
       <Image>SadieN</Image>
-      <Image>UnknownFade</Image>
+      <Image>PirateQuestionMark</Image>
       <Next>tutorial_03</Next>
     </Interaction>
     <Interaction>
@@ -60,7 +60,7 @@
       <Type>Derivative</Type>
       <Text>Well hurry up and get out here! We need a hand!</Text>
       <Image>SadieNFade</Image>
-      <Image2>Unknown</Image2>
+      <Image2>PirateQuestionMark</Image2>
       <Next>tutorial_05</Next>
       <TextBox>hide();</TextBox>
     </Interaction>
@@ -69,7 +69,7 @@
       <Type>Derivative</Type>
       <Text>Does it matter? Hurry up and get out here! We need a hand!</Text>
       <Image>SadieNFade</Image>
-      <Image2>Unknown</Image2>
+      <Image2>PirateQuestionMark</Image2>
       <Next>tutorial_05</Next>
       <TextBox>hide();</TextBox>
     </Interaction>
