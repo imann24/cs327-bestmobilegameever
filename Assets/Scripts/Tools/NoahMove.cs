@@ -10,7 +10,7 @@ public class NoahMove : MonoBehaviour {
     private List<Interaction> interactionList;
     private Vector2 interactionPos;
     private bool isInteractionPending = false;
-    private float minDistanceToInteract = 0.1f;
+    private float minDistanceToInteract = 5f;
 
 	private Animator anim;
 
@@ -23,11 +23,14 @@ public class NoahMove : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (isInteractionPending) {
-            Vector2 currentPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
-            float close = (currentPos - interactionPos).sqrMagnitude;
-            if (close < minDistanceToInteract) {
+            if (navAgent.velocity.magnitude < 0.1f) {
                 isInteractionPending = false;
-                InteractionManager.HandleInteractionList(interactor, interactionList);
+                Vector2 currentPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
+                float close = (currentPos - interactionPos).sqrMagnitude;
+                if (close < minDistanceToInteract) {
+                    InteractionManager.HandleInteractionList(interactor, interactionList);
+                }
+                else GameManager.InventoryManager.ReturnSelected();
             }
         }
 
