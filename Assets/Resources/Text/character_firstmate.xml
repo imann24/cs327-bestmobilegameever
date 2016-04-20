@@ -8,15 +8,11 @@
       <Type>Click</Type>
       <ALLTags>firstmateIntro</ALLTags>
       <SpecialActions>FirstMateSpeech</SpecialActions>
-      <Next>firstmate_intro_00_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_intro_00_1</Name>
       <Image>FirstMateH</Image>
       <Image2>SadieNFade</Image2>
       <Text>Ah, there you are! You must be my new assistant, yes? Thank goodness! You mustn’t keep your future captain waiting… but I will forgive you just this once.</Text>
-      <Next>firstmate_intro_01</Next>
       <IgnoreDistance>true</IgnoreDistance>
+      <Next>firstmate_intro_01</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_01</Name>
