@@ -24,7 +24,7 @@
       <Type>UseItem</Type>
 	    <ALLTags>holdingOrange</ALLTags>
 	    <TakeItems>Orange</TakeItems>
-      <SpecialActions>Destroy|CreateRag</SpecialActions>
+      <SpecialActions>CreateRag|BreakBottle</SpecialActions>
       <NextInteractor>Rag</NextInteractor>
       <Next>fall</Next>
       <IgnoreDistance>true</IgnoreDistance>

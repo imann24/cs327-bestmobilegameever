@@ -616,7 +616,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 448178, guid: b431ab7c8111a824db11c0a9ddae9214, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453284, guid: b431ab7c8111a824db11c0a9ddae9214, type: 2}
+      propertyPath: CreateAtPosition.y
+      value: -3.83
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b431ab7c8111a824db11c0a9ddae9214, type: 2}
@@ -714,7 +718,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22418328, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 142.68594
+      value: 142.50055
       objectReference: {fileID: 0}
     - target: {fileID: 22438814, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: m_AnchorMin.y
@@ -1152,6 +1156,33 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 449870, guid: c0038b0bd95c24b648001c33e1ea90dc, type: 2}
   m_PrefabInternal: {fileID: 1344965703}
+--- !u!1 &1404462852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 142912, guid: b431ab7c8111a824db11c0a9ddae9214, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1404462853}
+  m_Layer: 0
+  m_Name: destroyed_bottle_waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1404462853
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 401884, guid: b431ab7c8111a824db11c0a9ddae9214, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1404462852}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 4.89, y: -3.83, z: 8.17}
+  m_LocalScale: {x: 0.3164425, y: 0.31644243, z: 0.031644247}
+  m_Children: []
+  m_Father: {fileID: 1816650983}
+  m_RootOrder: 3
 --- !u!1 &1423105200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,6 +1613,39 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1693519644}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1770953267 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 138536, guid: b431ab7c8111a824db11c0a9ddae9214, type: 2}
+  m_PrefabInternal: {fileID: 941688448}
+--- !u!114 &1770953268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770953267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: BreakBottle
+  Sound: 
+  UseExtended: 1
+  ChangesSprite: 1
+  MovesObject: 1
+  CreatesObject: 0
+  PlaysSound: 0
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 21300000, guid: 05603e7392ce64c18809ffdb7bee9083, type: 3}
+  ObjectToMove: {fileID: 1770953267}
+  ObjectToCreate: {fileID: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 1404462852}
+  SoundDelay: 0
+  MoveSpeed: 1
+  MoveToPosition: {x: 4.89, y: -3.83, z: 7.93}
+  CreateAtPosition: {x: 4.89, y: -3.83, z: 8.34}
 --- !u!1001 &1775823934
 Prefab:
   m_ObjectHideFlags: 0
@@ -1652,6 +1716,7 @@ Transform:
   - {fileID: 403545595}
   - {fileID: 354314409}
   - {fileID: 2005114666}
+  - {fileID: 1404462853}
   - {fileID: 941688449}
   m_Father: {fileID: 1955119902}
   m_RootOrder: 0
