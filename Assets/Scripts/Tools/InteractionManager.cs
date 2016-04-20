@@ -133,6 +133,11 @@ public class Interaction {
 	public bool HasNext { get { return _next != null && _next != string.Empty; } }
 	public string iNext { get { return HasNext ? _next : null; } }
 
+	[XmlElement("Speaker")]
+	public string _speaker { private get; set; }
+	public bool HasSpeaker { get { return _speaker != null && _speaker != string.Empty; } }
+	public string iSpeaker { get { return HasSpeaker ? _speaker : null; } }
+
 	[XmlElement("NextInteractor")]
 	public string _nextInteractor { private get; set; }
 	public bool NextNotSelf { get { return _nextInteractor != null && _nextInteractor != string.Empty; } }
@@ -273,6 +278,9 @@ public class InteractionManager : MonoBehaviour {
 			if (interaction.HasImage2) {
 				ShowRightImage (interaction.iImage2);
 			}
+			if (interaction.HasSpeaker) {
+				transform.FindChild ("Speaker").GetComponent<Text> ().text = interaction.iSpeaker;
+			}
 			switch (interaction.iTextType) {
 			case TextType.Monologue:
 				newText = Instantiate (monologueDisplay) as GameObject;
@@ -312,6 +320,7 @@ public class InteractionManager : MonoBehaviour {
 		
 	void ClearTextPanel(){
 		List<Transform> textObjects = textPanel.GetComponentsInChildren<Transform> ().ToList ();
+		transform.FindChild ("Speaker").GetComponent<Text> ().text = "";
 		foreach (Transform t in textObjects) {
 			if (textPanel.transform != t) {
 				Destroy (t.gameObject);
@@ -474,7 +483,8 @@ public class InteractionManager : MonoBehaviour {
 				GameManager.InteractionManager.AddInteractionText (interactor, interaction);
 			}
 		}
-
+		GameManager.UIManager.StopAllCoroutines ();
+		GameManager.UIManager.StartCoroutine ("TapDelay");
 		CheckForTextBoxText(interaction);
 	}
 
