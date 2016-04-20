@@ -434,7 +434,7 @@ public class InteractionManager : MonoBehaviour {
                 targetPos += ((playerPos - targetPos).normalized * 1.5f);
                 GameManager.PlayerCharacter.GetComponent<NoahMove>().GoToInteraction(targetPos, interactor, interactionList);
                 if (interactor.Debugging) Debug.Log("Moving to this: " + interactor);
-                //Vector3 v = getPositionOfInteractable(interactor) + new Vector3 (1, 0,0);
+                //Vector3 v = getPositionOfInteractable(interactor) + new Vector3 (1, 0,0); //
                 //GameObject.Find ("Sadie").GetComponent<NoahMove> ().GoTo (v); 
             }
 
