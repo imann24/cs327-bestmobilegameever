@@ -131,6 +131,12 @@ public class UIManager : MonoBehaviour {
 	}
 
 	IEnumerator TapDelay(){
+
+		// Added for debugging purposes
+		#if UNITY_EDITOR
+			MinTapDelay = 0;
+		#endif
+
 		LockScreen ();
 		yield return new WaitForSeconds (MinTapDelay);
 		UnlockScreen();
