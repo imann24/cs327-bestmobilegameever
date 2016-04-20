@@ -11,6 +11,12 @@
 			<NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 		<Interaction>
+      <Name>examine_hammock</Name>
+      <Type>Derivative</Type>
+      <Text>No time to sleep now.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
 			<Name>examine_rag</Name>
 			<Type>Derivative</Type>
 			<NONETags>hasRag</NONETags>

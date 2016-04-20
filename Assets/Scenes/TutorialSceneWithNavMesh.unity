@@ -85,6 +85,23 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 23800000, guid: 11e04576b8cd0974eb75445744c163d8, type: 2}
+--- !u!1 &114036092 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 168296, guid: c0038b0bd95c24b648001c33e1ea90dc, type: 2}
+  m_PrefabInternal: {fileID: 1344965703}
+--- !u!114 &114036095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 114036092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c2cd874b7ab374da77b1d23c36393e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractionPath: worldobject_hammock
+  Debugging: 0
 --- !u!1 &268553073
 GameObject:
   m_ObjectHideFlags: 0

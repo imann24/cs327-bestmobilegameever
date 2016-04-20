@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <Next>examine_hammock</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+  </Interactions>
+</InteractionList>
