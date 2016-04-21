@@ -403,6 +403,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 111206, guid: c1a2293718bcbdf45a56497c13c52889, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1a2293718bcbdf45a56497c13c52889, type: 2}
   m_IsPrefabParent: 0
@@ -592,6 +596,10 @@ Prefab:
     - target: {fileID: 11407140, guid: 9ad7074eff9289745a399878ba7afd08, type: 2}
       propertyPath: InteractionPath
       value: character_firstmate
+      objectReference: {fileID: 0}
+    - target: {fileID: 135460, guid: 9ad7074eff9289745a399878ba7afd08, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ad7074eff9289745a399878ba7afd08, type: 2}
@@ -1318,7 +1326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22418328, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 142.50055
+      value: 130.80046
       objectReference: {fileID: 0}
     - target: {fileID: 22438814, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: m_AnchorMin.y
