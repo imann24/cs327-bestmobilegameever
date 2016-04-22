@@ -293,6 +293,7 @@ public class InteractionManager : MonoBehaviour {
 				newText.GetComponentInChildren<Text> ().text = interaction.iText;
 				newText.GetComponent<InteractionButton> ().interactor = interactor;
 				newText.GetComponent<InteractionButton> ().interaction = interaction;
+				newText.GetComponent<InteractionButton> ().SetAsDialogueOption();
 				newText.transform.localScale = Vector3.one;
 				break;
 			default:
@@ -381,7 +382,7 @@ public class InteractionManager : MonoBehaviour {
 	}
 
 	public static void HandleInteractionList(Interactable interactor, List<Interaction> interactionList, bool forceSuppressMovement = false, bool forceIgnoreDistance = false){
-		
+
 		List<Interaction> validInteractions = interactionList.FindAll (i => i.IsValid);
 		float interactionDistance = Vector3.Distance (interactor.transform.position, GameManager.PlayerCharacter.transform.position);
 		#if (DEBUG)
@@ -424,9 +425,23 @@ public class InteractionManager : MonoBehaviour {
 				}
 			}
 			List<Interaction> displayed = closeEnough.Where (i => i.HasText && i.iTextType != TextType.Floating).ToList();
-			if(displayed.Count () == 1) {
+//			GameObject arrow = GameObject.Find ("Arrow");
+//			arrow.SetActive (true);
+
+
+
+			if (displayed.Count () == 1) {
+				
 				GameManager.UIManager.EnableTapToContinue (interactor, displayed.Single ());
-			}
+				UIManager._instance.ToggleDialogueArrows(false);
+
+
+			} else {
+				UIManager._instance.ToggleDialogueArrows(true);
+				//GameObject interactionButton = null;
+				//interactionButton.transform.GetChild (0).gameObject.SetActive (true);  
+
+			} 
 		} else {
 			if (!forceSuppressMovement) {
                 Vector2 playerPos = new Vector2(GameManager.PlayerCharacter.transform.position.x, GameManager.PlayerCharacter.transform.position.z);
