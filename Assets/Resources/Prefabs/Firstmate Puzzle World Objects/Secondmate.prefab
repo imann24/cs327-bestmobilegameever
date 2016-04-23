@@ -33,6 +33,7 @@ GameObject:
   - 65: {fileID: 6541174}
   - 114: {fileID: 11425386}
   - 23: {fileID: 2311234}
+  - 95: {fileID: 9596976}
   m_Layer: 0
   m_Name: Secondmate
   m_TagString: Untagged
@@ -127,6 +128,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.22, y: 2, z: 6.75}
   m_Center: {x: -0, y: 0, z: 3.33}
+--- !u!95 &9596976
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d711ccb54a415146a2900c01045038d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11403714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,6 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd1772dadda14f4298222de583a3616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionPos: {x: 0, y: 0}
+  isInteractionPending: 0
 --- !u!114 &11425386
 MonoBehaviour:
   m_ObjectHideFlags: 1

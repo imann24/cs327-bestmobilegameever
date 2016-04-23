@@ -8,10 +8,11 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 
 	public bool flipped = false;
 	private SpeechBubble speechBubble;
-
+	private NoahMove playerMove;
 	// Use this for initialization
 	void Start () {
 		Player = GameManager.PlayerCharacter.GetComponent<NavMeshAgent>();
+		playerMove = Player.GetComponent<NoahMove> ();
 		speechBubble = Player.GetComponentInChildren<SpeechBubble>();
 
 	}
@@ -44,6 +45,7 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 			Vector3 destination = eventData.pointerCurrentRaycast.worldPosition;
 			Player.GetComponent<NavMeshAgent> ().CalculatePath (destination, path);
 			//if(path.status == NavMeshPathStatus.PathComplete){
+
 			if (destination.x > Player.transform.position.x) {
 				if (flipped) {
 					Flip ();

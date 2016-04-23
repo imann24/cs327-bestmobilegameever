@@ -10,7 +10,8 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     private static SpecialActions_Cutscene_Tutorial _instance = null;
     private string next;
 
-    public GameObject BG = null;
+    public GameObject BGClouds = null;
+    public GameObject BGBlack = null;
     private GameObject portraitMoving = null;
     private Vector3 portraitPosition;
     private Vector3 portraitDestination;
@@ -22,9 +23,8 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
             DontDestroyOnLoad(gameObject);
 			Fader.FadeOut(2);
 			if (SceneManager.GetActiveScene().name == "TutorialScene" || SceneManager.GetActiveScene().name == "TutorialSceneWithNavMesh") {
-				//EventController.Event("PlayerYawn");
                 next = "tutorial_start";
-                //EventController.Event("PromptAppears");
+                if (BGBlack != null) BGBlack.SetActive(true);
 				NextInteraction(next, null, true, true);
             }
             else if (SceneManager.GetActiveScene().name == "WorldScene2") {
@@ -46,22 +46,10 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
             }
             else {
                 //Debug.Log("Moving portrait: " + portraitMoving + " to " + portraitDestination);
-                portraitMoving.transform.position = Vector3.MoveTowards(portraitMoving.transform.position, portraitDestination, (150 * Time.deltaTime));
+                portraitMoving.transform.position = Vector3.MoveTowards(portraitMoving.transform.position, portraitDestination, (250 * Time.deltaTime));
             }
         }
     }
-
-    // Override  in the tutorial scene to pass the position of the door
-    /*
-	public override Vector3 GetPosition () {
-		if ((PSScene)SceneManager.GetActiveScene().buildIndex == PSScene.TutorialScene) {
-			return TutorialRoomDoor.position;
-		} else {
-			return base.GetPosition();
-		}
-			
-	}
-    */
 
     private void setupTutorialCutscene() {
         /*
@@ -69,25 +57,30 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
             if (child.gameObject == GameObject.Find("MajorCharacters")) { child.gameObject.SetActive(true); }
             else { child.gameObject.SetActive(false); }
         }
-        */
+        
         Quartermaster = GameObject.Find("Quartermaster");
         Shipmaster = GameObject.Find("Shipmaster");
         Firstmate = GameObject.Find("Firstmate");
         Firstmate.transform.position = GameObject.Find("Waypoint_Firstmate").transform.position;
         Destroy(Shipmaster);
         Destroy(Quartermaster);
+        */
 
         if (!Testing) { GameObject.Find("Test_Pete").SetActive(false); }
         GameManager.InventoryManager.TakeItem("Hook");
         GameManager.InventoryManager.GiveItem("Hook");
         GameManager.InventoryManager.Hide();
         next = "tutorial_cutscene_start";
-        
-        if (BG != null) BG.SetActive(true);
+
+        if (BGClouds != null) BGClouds.SetActive(true);
+        else if (BGBlack != null) BGBlack.SetActive(true);
     }
 
     public override void DoSpecialAction(string actionTag) {
         switch (actionTag) {
+            case "ClearBG":
+                if (BGBlack != null) BGBlack.SetActive(false);
+                break;
             case "EndTutorialCutscene":
                 //foreach (Graphic g in BG.GetComponentsInChildren<Graphic>()) { g.CrossFadeAlpha(0f, 2f, true); }
                 StartCoroutine(EndTutorialCutscene());
@@ -132,24 +125,9 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         else { portraitMoving = GameManager.InteractionManager.leftImage; }
 
         portraitPosition = portraitMoving.transform.position;
-        float dest = (portraitPosition.x + (dir * 300));
+        float dest = (portraitPosition.x + (dir * 500));
         portraitDestination = new Vector3(dest, portraitPosition.y, portraitPosition.z);
     }
-
-    /*
-        IEnumerator npcExit(GameObject npc) {
-            GameManager.UIManager.LockScreen();
-            //Move(npc, exit, 4, true);
-            Fader.FadeIn(1);
-            yield return new WaitForSeconds(1f);
-            if (npc == Firstmate) npc.transform.position = GameObject.Find("Waypoint_Firstmate").transform.position;
-            else Destroy(npc);
-            Fader.FadeOut(1);
-            yield return new WaitForSeconds(1f);
-            GameManager.UIManager.UnlockScreen();
-            NextInteraction(next);
-        }
-    */
 
     IEnumerator EndTutorialCutscene() {
         GameManager.UIManager.DimBackground.SetActive(true);
@@ -157,7 +135,8 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         Fader.FadeIn(1f);
         yield return new WaitForSeconds(1f);
         GameManager.UIManager.DimBackground.SetActive(false);
-        if (BG != null) BG.SetActive(false);
+        if (BGClouds != null) BGClouds.SetActive(false);
+        else if (BGBlack != null) BGBlack.SetActive(false);
         Fader.FadeOut(2f);
         GameManager.UIManager.UnlockScreen();
     }

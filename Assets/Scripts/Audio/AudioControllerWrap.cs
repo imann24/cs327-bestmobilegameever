@@ -23,7 +23,7 @@ public class AudioControllerWrap : MonoBehaviour {
 	}
 
 	public void SwabbieRun() {
-		audioController.SwabbieRrun ();
+		audioController.SwabbieRun ();
 	}
 
 	public void ToggleMute() {

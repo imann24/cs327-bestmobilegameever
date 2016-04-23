@@ -8,13 +8,14 @@ public class NoahMove : MonoBehaviour {
 
     private Interactable interactor;
     private List<Interaction> interactionList;
-    private Vector2 interactionPos;
-    private bool isInteractionPending = false;
+    public Vector2 interactionPos;
+    public bool isInteractionPending = false;
     private float minDistanceToInteract = 0.1f;
 
-
+	private Animator anim;
     // Use this for initialization
     void Start () {
+		anim = GetComponent<Animator> ();
 		navAgent = GetComponent<NavMeshAgent> ();
 	}
 
@@ -28,6 +29,10 @@ public class NoahMove : MonoBehaviour {
                 InteractionManager.HandleInteractionList(interactor, interactionList);
             }
         }
+
+		if (anim != null) {
+			anim.SetBool ("Walking", navAgent.hasPath);
+		}
     }
 
     public void GoTo(Vector3 targetPoint){
@@ -39,6 +44,16 @@ public class NoahMove : MonoBehaviour {
         interactor = i;
         interactionList = iList;
         isInteractionPending = true;
+		NoahNavPlane navFloor = (NoahNavPlane)FindObjectOfType (typeof(NoahNavPlane));
+		if (interactionPos.x > transform.position.x) {
+			if (navFloor.flipped) {
+				navFloor.Flip ();
+			}
+		} else {
+			if (!navFloor.flipped) {
+				navFloor.Flip ();
+			}
+		} 
         GoTo(new Vector3(interactionPos.x, gameObject.transform.position.y, interactionPos.y));
     }
 }

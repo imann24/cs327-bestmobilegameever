@@ -11,6 +11,18 @@
 			<NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 		<Interaction>
+      <Name>examine_hammock</Name>
+      <Type>Derivative</Type>
+      <Text>No time to sleep now.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_porthole</Name>
+      <Type>Derivative</Type>
+      <Text>Beautiful day out today.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
 			<Name>examine_rag</Name>
 			<Type>Derivative</Type>
 			<NONETags>hasRag</NONETags>
@@ -39,6 +51,7 @@
 			<Text>Let's see...</Text>
 			<TextType>Floating</TextType>
 			<Next>clean_hook</Next>
+      <TextBox>hide();</TextBox>
 			<NextInteractor>Rag</NextInteractor>
 		</Interaction>
 		<Interaction>
@@ -46,6 +59,7 @@
 			<Type>Derivative</Type>
 			<Text>Nice. Now this thing will be on the Captain's wrist before they know it. Better get it to them quick.</Text>
 			<Image>SadieH</Image>
+      <Speaker>Cabin Girl Sadie</Speaker>
 		</Interaction>
 		<Interaction>
 			<Name>examine_tutorial_door</Name>
