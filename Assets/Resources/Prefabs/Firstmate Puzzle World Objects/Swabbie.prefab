@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11412024}
   - 114: {fileID: 11421898}
   - 114: {fileID: 11404990}
+  - 95: {fileID: 9534838}
   m_Layer: 0
   m_Name: Swabbie
   m_TagString: Untagged
@@ -78,7 +79,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.78, y: -0.111825824, z: -2.4}
+  m_LocalPosition: {x: 1.78, y: -1.02, z: -2.4}
   m_LocalScale: {x: 1.7382612, y: 0.049999993, z: 0.11846552}
   m_Children:
   - {fileID: 462064}
@@ -130,6 +131,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3038555, y: 1.9999996, z: 13.508448}
   m_Center: {x: 0.020230507, y: -0.000002384186, z: 1.069364}
+--- !u!95 &9534838
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10ce3f478753e72439ca8a8eccf83ea3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11402792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd1772dadda14f4298222de583a3616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionPos: {x: 0, y: 0}
+  isInteractionPending: 0
 --- !u!114 &11455090
 MonoBehaviour:
   m_ObjectHideFlags: 1
