@@ -30,8 +30,10 @@ public class NoahMove : MonoBehaviour {
                 InteractionManager.HandleInteractionList(interactor, interactionList);
             }
         }
-			
-		anim.SetBool ("Walking", navAgent.hasPath);
+
+		if (anim != null) {
+			anim.SetBool ("Walking", navAgent.hasPath);
+		}
     }
 
     public void GoTo(Vector3 targetPoint){

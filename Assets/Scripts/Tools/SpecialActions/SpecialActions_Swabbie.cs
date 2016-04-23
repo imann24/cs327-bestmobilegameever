@@ -9,7 +9,7 @@ public class SpecialActions_Swabbie : SpecialActions {
 			Invoke ("destroyMe", 3f);
             break;
 		case "StopMopping":
-			AudioControllerWrap audio = GameObject.Find ("AudioControllerWrap").GetComponent<AudioControllerWrap> ();
+			AudioController audio = GameObject.Find ("AudioController").GetComponent<AudioController> ();
 			audio.SwabbieRun ();
 			break;
         }

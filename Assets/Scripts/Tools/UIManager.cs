@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
@@ -17,6 +18,9 @@ public class UIManager : MonoBehaviour {
 	public GameObject HelpTextBox;
 	public GameObject audioControllerWrap;
 
+	public float MinTapDelay = 0.5f;
+
+	List<InteractionButton> dialogueOptions = new List<InteractionButton>();
 
 	void OnLevelWasLoaded (int level) {
 		audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
@@ -55,6 +59,20 @@ public class UIManager : MonoBehaviour {
 		}
 	}
 		
+	public void ToggleDialogueArrows (bool isActive) {
+		foreach (InteractionButton dialoge in dialogueOptions) {
+			dialoge.ToggleArrowActive(isActive);
+		}
+	}
+
+	public void AddDialogueOption (InteractionButton dialogueOption) {
+		dialogueOptions.Add(dialogueOption);
+	}
+
+	public void RemoveDialogueOption (InteractionButton dialogueOption) {
+		dialogueOptions.Remove(dialogueOption);
+	}
+
 	public void Matey(){
 		audioController.Matey ();
 		//Do matey sound
@@ -127,6 +145,18 @@ public class UIManager : MonoBehaviour {
         CanInteract = true;
         tapToContinue.GetComponent<Button> ().enabled = true;
 		tapToContinue.SetActive (false);
+	}
+
+	IEnumerator TapDelay(){
+
+		// Added for debugging purposes
+		#if UNITY_EDITOR
+			MinTapDelay = 0;
+		#endif
+
+		LockScreen ();
+		yield return new WaitForSeconds (MinTapDelay);
+		UnlockScreen();
 	}
 
 	void spawnTextBox() {

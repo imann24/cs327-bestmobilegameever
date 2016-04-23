@@ -7,9 +7,11 @@
       <Name>firstmate_intro_00</Name>
       <Type>Click</Type>
       <ALLTags>firstmateIntro</ALLTags>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Image>FirstMateH</Image>
       <Image2>SadieNFade</Image2>
       <Text>Ah, there you are! You must be my new assistant, yes? Thank goodness! You mustn’t keep your future captain waiting… but I will forgive you just this once.</Text>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>firstmate_intro_01</Next>
     </Interaction>
     <Interaction>
@@ -18,6 +20,7 @@
       <Image>FirstMateHFade</Image>
       <Image2>SadieN</Image2>
       <Text>You're not the -</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_02</Next>
     </Interaction>
     <Interaction>
@@ -27,6 +30,7 @@
       <Image2>SadieNFade</Image2>
       <Text>Now, before I take you on as my partner, let me ask you this, ma cherie - what makes a captain, in your view?</Text>
       <Next>firstmate_intro_02_choice</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02_choice</Name>
@@ -34,18 +38,21 @@
       <Image>FirstMateNFade</Image>
       <Image2>SadieN</Image2>
       <Text>The vote of the crew?</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_04</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02_choice</Name>
       <Type>Derivative</Type>
       <Text>Skilled leadership?</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_04</Next>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02_choice</Name>
       <Type>Derivative</Type>
       <Text>Not sinking the ship?</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_04</Next>
     </Interaction>
     <Interaction>
@@ -54,6 +61,7 @@
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
       <Text>I see... that’s quite charming, however, I’m afraid it lacks a certain... je ne sais quoi.</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_05</Next>
     </Interaction>
     <Interaction>
@@ -62,6 +70,7 @@
       <Image>FirstMateH</Image>
       <Image2>SadieNFade</Image2>
       <Text>We are pirates, mon amie, pirates! We sail for glory, for riches, for lavish silks and the golden gleam of treasure!</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_06</Next>
     </Interaction>
     <Interaction>
@@ -70,6 +79,7 @@
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
       <Text>And so, for your first task as my dear assistant, you must help me become the very image of a true captain.</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_07</Next>
     </Interaction>
     <Interaction>
@@ -86,6 +96,7 @@
       <Image>FirstMateNFade</Image>
       <Image2>SadieN</Image2>
       <Text>Hm? Oh, yeah, sure.</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_09</Next>
     </Interaction>
     <Interaction>
@@ -113,6 +124,7 @@
       <Type>Derivative</Type>
       <ALLTags>firstmateQuestInProgress1</ALLTags>
       <Text>What were you looking for again?</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_10</Next>
     </Interaction>
     <Interaction>
@@ -122,6 +134,7 @@
       <Image>FirstMateNFade</Image>
       <Image2>SadieN</Image2>
       <Text>No, not yet.</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_30</Next>
     </Interaction>
     <Interaction>
@@ -130,6 +143,7 @@
       <Image>FirstMateS</Image>
       <Image2>SadieNFade</Image2>
       <Text>For shame, mon amie! Were you not listening?</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_12</Next>
     </Interaction>
     <Interaction>
@@ -146,6 +160,7 @@
       <Image>FirstMateS</Image>
       <Image2>SadieNFade</Image2>
       <Text>I wish I had something a bit more human to adorn my sleek metal. Something to keep the sun from reflecting off of my head…</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_13</Next>
     </Interaction>
     <Interaction>
@@ -162,6 +177,7 @@
       <Image>FirstMateHFade</Image>
       <Image2>SadieN</Image2>
       <Text>So... you want a wig?</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_15</Next>
     </Interaction>
     <Interaction>
@@ -170,6 +186,7 @@
       <Image>FirstMateS</Image>
       <Image2>SadieNFade</Image2>
       <Text>A wig?! I never! How crude! I… well. I suppose, between you and me…</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_16</Next>
     </Interaction>
     <Interaction>
@@ -205,6 +222,7 @@
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
       <Text>Ahaha! Oh, la la! Ohohoho! You must be joking, ma cherie... what a drab, grey mess that is!</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_give_mop_fail_03</Next>
     </Interaction>
     <Interaction>
@@ -229,6 +247,7 @@
       <Image>FirstMateNFade</Image>
       <Image2>SadieN</Image2>
       <Text>One...ah...handcrafted wig for the would-be captain.</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_give_mop_success_02</Next>
     </Interaction>
     <Interaction>
@@ -258,6 +277,7 @@
       <Image>FirstMateMopHFade</Image>
       <Image2>SadieN</Image2>
       <Text>I'd really rather n-</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_04</Next>
     </Interaction>
     <Interaction>
@@ -274,6 +294,7 @@
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
       <Text>They - what?</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_06</Next>
     </Interaction>
     <Interaction>
@@ -282,6 +303,7 @@
       <Image>FirstMateMopH</Image>
       <Image2>SadieNFade</Image2>
       <Text>You, my dearest assistant, are to take these posters to three important members of our good crew.</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_07</Next>
     </Interaction>
     <Interaction>
@@ -290,6 +312,7 @@
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
       <Text>One shall go to our Second Mate. He is a strong ally to our cause, and quite fashionable. He should be nearby, I believe.</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_08</Next>
     </Interaction>
     <Interaction>
@@ -298,6 +321,7 @@
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
       <Text>Ah, and the Chief Rigger as well! She should be... somewhere, I’m certain. And lastly, er… Monsieur d’Orange. His support would be, ah… healthy to have.</Text>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_11</Next>
     </Interaction>
     <Interaction>

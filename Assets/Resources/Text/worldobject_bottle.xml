@@ -7,6 +7,7 @@
       <NONETags>bottleExamined</NONETags>
       <Text>Great. I can't reach that... maybe if I headbutt the wall hard enough?</Text>
       <Image>SadieS</Image>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Next>examine_bottle_2</Next>
       <MaxDistance>7</MaxDistance>
     </Interaction>
@@ -16,13 +17,14 @@
       <GiveTags>bottleExamined</GiveTags>
       <Text>That usually works... if you're trying to get a concussion. Better knock it down with something.</Text>
       <Image>SadieN</Image>
+      <Speaker>Cabin Girl Sadie</Speaker>
     </Interaction>
     <Interaction>
       <Name>use_orange_bottle</Name>
       <Type>UseItem</Type>
 	    <ALLTags>holdingOrange</ALLTags>
 	    <TakeItems>Orange</TakeItems>
-      <SpecialActions>Destroy|CreateRag</SpecialActions>
+      <SpecialActions>CreateRag|BreakBottle</SpecialActions>
       <NextInteractor>Rag</NextInteractor>
       <Next>fall</Next>
       <IgnoreDistance>true</IgnoreDistance>
