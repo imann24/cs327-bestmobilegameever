@@ -1,14 +1,24 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 072146d9bcbdc40958907aa2cc6de4ca
-timeCreated: 1461103607
-=======
-guid: f763ea75538d10d48b25c8e9254718c5
-timeCreated: 1461103424
->>>>>>> master
+timeCreated: 1461553651
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ChiefRiggerDangling_0
+    21300002: ChiefRiggerDangling_1
+    21300004: ChiefRiggerDangling_2
+    21300006: ChiefRiggerDangling_3
+    21300008: ChiefRiggerDangling_4
+    21300010: ChiefRiggerDangling_5
+    21300012: ChiefRiggerDangling_6
+    21300014: ChiefRiggerDangling_7
+    21300016: ChiefRiggerDangling_8
+    21300018: ChiefRiggerDangling_9
+    21300020: ChiefRiggerDangling_10
+    21300022: ChiefRiggerDangling_11
+    21300024: ChiefRiggerDangling_12
+    21300026: ChiefRiggerDangling_13
+    21300028: ChiefRiggerDangling_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,7 +45,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -43,7 +53,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,7 +64,501 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ChiefRiggerDangling_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3396
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: -174}
+        - {x: -59, y: -175}
+        - {x: -51, y: -175}
+        - {x: -51, y: -174}
+        - {x: -54, y: -171}
+        - {x: -56, y: -171}
+      - - {x: 118, y: -49}
+        - {x: 148, y: -25}
+        - {x: 149, y: -20}
+        - {x: 149, y: 29}
+        - {x: 113, y: 49}
+        - {x: 102, y: 36}
+        - {x: 110, y: 101}
+        - {x: 101, y: 141}
+        - {x: 98, y: 144}
+        - {x: 48, y: 173}
+        - {x: -150, y: 173}
+        - {x: -150, y: -108}
+        - {x: -55, y: -167}
+        - {x: -26, y: -170}
+        - {x: 9, y: -170}
+        - {x: 14, y: -167}
+        - {x: 131, y: -73}
+        - {x: 134, y: -53}
+    - name: ChiefRiggerDangling_1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3396
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: -174}
+        - {x: -57, y: -175}
+        - {x: -49, y: -175}
+        - {x: -49, y: -174}
+        - {x: -52, y: -171}
+        - {x: -54, y: -171}
+      - - {x: 108, y: 47}
+        - {x: 111, y: 34}
+        - {x: 54, y: 35}
+        - {x: 103, y: 97}
+        - {x: 99, y: 141}
+        - {x: 97, y: 143}
+        - {x: 85, y: 142}
+        - {x: 80, y: 135}
+        - {x: 79, y: 132}
+        - {x: -6, y: 124}
+        - {x: -19, y: 114}
+        - {x: -24, y: 104}
+        - {x: -16, y: 154}
+        - {x: -33, y: 175}
+        - {x: -66, y: 175}
+        - {x: -115, y: 95}
+        - {x: -150, y: 5}
+        - {x: -150, y: -83}
+        - {x: -36, y: -160}
+        - {x: 46, y: -160}
+        - {x: 148, y: -82}
+        - {x: 148, y: 52}
+        - {x: 113, y: 57}
+    - name: ChiefRiggerDangling_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3396
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55, y: -174}
+        - {x: -55, y: -175}
+        - {x: -47, y: -175}
+        - {x: -47, y: -174}
+        - {x: -50, y: -171}
+        - {x: -52, y: -171}
+      - - {x: 108, y: -44}
+        - {x: 137, y: -27}
+        - {x: 149, y: -13}
+        - {x: 149, y: 39}
+        - {x: 122, y: 55}
+        - {x: 102, y: 50}
+        - {x: 102, y: 94}
+        - {x: 100, y: 138}
+        - {x: 68, y: 175}
+        - {x: -127, y: 175}
+        - {x: -148, y: 130}
+        - {x: -148, y: -68}
+        - {x: -25, y: -158}
+        - {x: 39, y: -158}
+        - {x: 98, y: -109}
+        - {x: 149, y: -66}
+        - {x: 149, y: -48}
+    - name: ChiefRiggerDangling_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2696
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: -169}
+        - {x: -60, y: -173}
+        - {x: -60, y: -175}
+        - {x: -48, y: -175}
+        - {x: -48, y: -172}
+        - {x: -54, y: -169}
+      - - {x: 112, y: -52}
+        - {x: 145, y: -12}
+        - {x: 145, y: 35}
+        - {x: 144, y: 40}
+        - {x: 128, y: 51}
+        - {x: 111, y: 55}
+        - {x: 99, y: 51}
+        - {x: 98, y: 96}
+        - {x: 96, y: 140}
+        - {x: 94, y: 141}
+        - {x: 80, y: 141}
+        - {x: 75, y: 131}
+        - {x: -19, y: 131}
+        - {x: -33, y: 98}
+        - {x: -19, y: 155}
+        - {x: -35, y: 175}
+        - {x: -130, y: 175}
+        - {x: -150, y: 121}
+        - {x: -150, y: -127}
+        - {x: -67, y: -156}
+        - {x: 35, y: -156}
+        - {x: 137, y: -71}
+        - {x: 138, y: -57}
+        - {x: 131, y: -50}
+    - name: ChiefRiggerDangling_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2696
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56, y: -169}
+        - {x: -59, y: -173}
+        - {x: -59, y: -175}
+        - {x: -48, y: -175}
+        - {x: -48, y: -173}
+        - {x: -54, y: -169}
+      - - {x: 135, y: -25}
+        - {x: 147, y: -12}
+        - {x: 147, y: 35}
+        - {x: 146, y: 40}
+        - {x: 130, y: 51}
+        - {x: 113, y: 55}
+        - {x: 101, y: 51}
+        - {x: 100, y: 96}
+        - {x: 98, y: 140}
+        - {x: 67, y: 175}
+        - {x: -67, y: 175}
+        - {x: -102, y: 94}
+        - {x: -150, y: -40}
+        - {x: -150, y: -63}
+        - {x: -28, y: -156}
+        - {x: 40, y: -156}
+        - {x: 147, y: -64}
+        - {x: 147, y: -46}
+        - {x: 106, y: -42}
+    - name: ChiefRiggerDangling_5
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2696
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 155}
+        - {x: -42, y: 175}
+        - {x: -67, y: 175}
+        - {x: -118, y: 99}
+        - {x: -65, y: -52}
+        - {x: -148, y: -17}
+        - {x: -148, y: -84}
+        - {x: -103, y: -156}
+        - {x: 40, y: -156}
+        - {x: 149, y: -73}
+        - {x: 149, y: 45}
+        - {x: 99, y: 143}
+    - name: ChiefRiggerDangling_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1996
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60, y: -175}
+        - {x: -51, y: -175}
+        - {x: -52, y: -172}
+        - {x: -55, y: -171}
+        - {x: -59, y: -171}
+        - {x: -60, y: -173}
+      - - {x: 131, y: -48}
+        - {x: 99, y: -50}
+        - {x: 31, y: -63}
+        - {x: 142, y: -36}
+        - {x: 145, y: -32}
+        - {x: 145, y: 175}
+        - {x: 132, y: 175}
+        - {x: 80, y: 143}
+        - {x: 75, y: 133}
+        - {x: -19, y: 133}
+        - {x: -33, y: 100}
+        - {x: -20, y: 156}
+        - {x: -42, y: 175}
+        - {x: -70, y: 175}
+        - {x: -120, y: 101}
+        - {x: -150, y: 43}
+        - {x: -150, y: -114}
+        - {x: -30, y: -154}
+        - {x: 27, y: -154}
+        - {x: 145, y: -79}
+        - {x: 145, y: -78}
+        - {x: 139, y: -53}
+    - name: ChiefRiggerDangling_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1996
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: -175}
+        - {x: -49, y: -175}
+        - {x: -50, y: -172}
+        - {x: -53, y: -171}
+        - {x: -57, y: -171}
+        - {x: -58, y: -173}
+      - - {x: 113, y: 61}
+        - {x: 108, y: 51}
+        - {x: 111, y: 38}
+        - {x: 54, y: 39}
+        - {x: 103, y: 101}
+        - {x: 99, y: 145}
+        - {x: 97, y: 147}
+        - {x: 85, y: 146}
+        - {x: 80, y: 139}
+        - {x: 79, y: 136}
+        - {x: -7, y: 131}
+        - {x: -26, y: 108}
+        - {x: -13, y: 159}
+        - {x: -27, y: 175}
+        - {x: -123, y: 175}
+        - {x: -150, y: 106}
+        - {x: -150, y: -107}
+        - {x: -10, y: -156}
+        - {x: 10, y: -156}
+        - {x: 146, y: -66}
+        - {x: 148, y: -56}
+        - {x: 148, y: 43}
+    - name: ChiefRiggerDangling_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1996
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56, y: -175}
+        - {x: -47, y: -175}
+        - {x: -48, y: -172}
+        - {x: -51, y: -171}
+        - {x: -55, y: -171}
+        - {x: -56, y: -173}
+      - - {x: 150, y: 130}
+        - {x: 46, y: 175}
+        - {x: -105, y: 175}
+        - {x: -148, y: 60}
+        - {x: -148, y: -56}
+        - {x: -117, y: -75}
+        - {x: -51, y: -163}
+        - {x: -22, y: -166}
+        - {x: 13, y: -166}
+        - {x: 18, y: -163}
+        - {x: 135, y: -69}
+        - {x: 150, y: -46}
+    - name: ChiefRiggerDangling_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60, y: -169}
+        - {x: -61, y: -173}
+        - {x: -61, y: -175}
+        - {x: -47, y: -175}
+        - {x: -47, y: -171}
+        - {x: -55, y: -169}
+      - - {x: 149, y: -22}
+        - {x: 149, y: 40}
+        - {x: 108, y: 88}
+        - {x: 110, y: 107}
+        - {x: 101, y: 147}
+        - {x: 99, y: 152}
+        - {x: 44, y: 175}
+        - {x: -123, y: 175}
+        - {x: -150, y: 129}
+        - {x: -150, y: -93}
+        - {x: -62, y: -164}
+        - {x: 23, y: -164}
+        - {x: 132, y: -61}
+        - {x: 131, y: -49}
+        - {x: 118, y: -43}
+    - name: ChiefRiggerDangling_10
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1296
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: -169}
+        - {x: -59, y: -173}
+        - {x: -59, y: -175}
+        - {x: -45, y: -175}
+        - {x: -45, y: -171}
+        - {x: -53, y: -169}
+      - - {x: 150, y: -22}
+        - {x: 150, y: 36}
+        - {x: 116, y: 53}
+        - {x: 104, y: 42}
+        - {x: 130, y: 175}
+        - {x: -110, y: 175}
+        - {x: -150, y: 64}
+        - {x: -150, y: -54}
+        - {x: -119, y: -73}
+        - {x: -53, y: -161}
+        - {x: -36, y: -164}
+        - {x: 15, y: -164}
+        - {x: 138, y: -63}
+        - {x: 133, y: -49}
+        - {x: 120, y: -43}
+    - name: ChiefRiggerDangling_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1296
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56, y: -169}
+        - {x: -57, y: -173}
+        - {x: -57, y: -175}
+        - {x: -43, y: -175}
+        - {x: -43, y: -171}
+        - {x: -51, y: -169}
+      - - {x: 146, y: -42}
+        - {x: 150, y: -35}
+        - {x: 150, y: 139}
+        - {x: 13, y: 175}
+        - {x: -80, y: 175}
+        - {x: -148, y: 41}
+        - {x: -148, y: -54}
+        - {x: -117, y: -73}
+        - {x: -51, y: -161}
+        - {x: -22, y: -164}
+        - {x: 13, y: -164}
+        - {x: 18, y: -161}
+        - {x: 130, y: -74}
+        - {x: 140, y: -46}
+    - name: ChiefRiggerDangling_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 596
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 148, y: -17}
+        - {x: 149, y: -12}
+        - {x: 149, y: 37}
+        - {x: 113, y: 57}
+        - {x: 102, y: 44}
+        - {x: 110, y: 109}
+        - {x: 101, y: 149}
+        - {x: 98, y: 152}
+        - {x: 91, y: 153}
+        - {x: 2, y: 171}
+        - {x: -28, y: 175}
+        - {x: -64, y: 175}
+        - {x: -64, y: 168}
+        - {x: -98, y: 83}
+        - {x: -150, y: -24}
+        - {x: -150, y: -55}
+        - {x: -55, y: -159}
+        - {x: -49, y: -162}
+        - {x: 34, y: -162}
+        - {x: 130, y: -64}
+        - {x: 134, y: -45}
+        - {x: 118, y: -41}
+    - name: ChiefRiggerDangling_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 596
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150, y: -17}
+        - {x: 150, y: 38}
+        - {x: 115, y: 57}
+        - {x: 104, y: 44}
+        - {x: 130, y: 175}
+        - {x: -116, y: 175}
+        - {x: -150, y: 72}
+        - {x: -150, y: -52}
+        - {x: -119, y: -71}
+        - {x: -53, y: -159}
+        - {x: -47, y: -162}
+        - {x: 36, y: -162}
+        - {x: 132, y: -64}
+        - {x: 136, y: -45}
+        - {x: 120, y: -41}
+    - name: ChiefRiggerDangling_14
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 596
+        width: 600
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150, y: -33}
+        - {x: 150, y: 133}
+        - {x: 106, y: 150}
+        - {x: 74, y: 175}
+        - {x: -73, y: 175}
+        - {x: -148, y: 132}
+        - {x: -148, y: -98}
+        - {x: -51, y: -159}
+        - {x: -40, y: -162}
+        - {x: 27, y: -162}
+        - {x: 140, y: -60}
+        - {x: 135, y: -47}
+        - {x: 146, y: -40}
     outline: []
   spritePackingTag: 
   userData: 
