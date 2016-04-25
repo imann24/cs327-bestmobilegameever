@@ -28,7 +28,7 @@
 			"Volume": 100
 		},
 		{
-			“FileName”:"Deck_Soundtrack_B_1",
+			“FileName”:"Deck_Soundtrack_B_2",
 			“EventNames”:["onesoundtrackevery100to200seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
@@ -667,7 +667,7 @@
 			"Volume": 100
 		},
 		{
-			“FileName”:"Deck_Soundtrack_C_2",
+			“FileName”:"Deck_Soundtrack_C_4",
 			“EventNames”:["onesoundtrackevery100to200seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
