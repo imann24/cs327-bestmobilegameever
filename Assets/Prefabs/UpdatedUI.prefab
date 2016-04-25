@@ -79,7 +79,7 @@ GameObject:
   - 114: {fileID: 11498232}
   - 114: {fileID: 11475180}
   m_Layer: 5
-  m_Name: MateyButton
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ GameObject:
   - 114: {fileID: 11430046}
   - 114: {fileID: 11414840}
   m_Layer: 5
-  m_Name: QuitButton
+  m_Name: MateyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1245,6 +1245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactor: {fileID: 0}
+  Type: 0
 --- !u!114 &11402268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2222,30 +2223,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125210}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 11491942}
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11491942}
-        m_MethodName: Quit
+        m_MethodName: Matey
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2504,7 +2483,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3f6e4acc8faf04038a10a21ff61b8021, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e1b8feddeb854c31b4a46fb4a3d5464, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3664,7 +3643,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9e1b8feddeb854c31b4a46fb4a3d5464, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f6e4acc8faf04038a10a21ff61b8021, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4426,6 +4405,12 @@ MonoBehaviour:
   DimBackground: {fileID: 130512}
   HelpTextBox: {fileID: 199078, guid: bdf0d7362b58c408d8309d9530576f89, type: 2}
   audioControllerWrap: {fileID: 0}
+  MuteButtonGraphic: {fileID: 11493862}
+  MuteButtonWhenVolumeOff: {fileID: 21300000, guid: 1b5a28e0e2c0b49b487fd8982b6b2e50,
+    type: 3}
+  MuteButtonWhenVolumeOn: {fileID: 21300000, guid: 225a181fccc4c42a1ba7ffef1e2760be,
+    type: 3}
+  MinTapDelay: 0.5
 --- !u!114 &11491978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4607,12 +4592,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 11464256}
+  m_TargetGraphic: {fileID: 11439288}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 125210}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 11491942}
-        m_MethodName: Matey
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4623,7 +4619,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11491942}
-        m_MethodName: Matey
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6326,6 +6322,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: MuteButtonWhenVolumeOff
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b5a28e0e2c0b49b487fd8982b6b2e50,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178700}

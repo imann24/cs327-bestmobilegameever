@@ -8,6 +8,7 @@ TagManager:
   - Clickable
   - Ground
   - Boundary
+  - DontFlip
   layers:
   - Default
   - TransparentFX

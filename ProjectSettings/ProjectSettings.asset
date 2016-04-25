@@ -90,7 +90,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.woodpenny.piratesquabbles
-  bundleVersion: 0.17
+  bundleVersion: 0.19
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
@@ -173,9 +173,9 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: a222cd814df474de2a48faba82b325e1, type: 3}
-      m_Width: 0
-      m_Height: 0
+      m_Icon: {fileID: 2800000, guid: 62fcdd1e298574d95be9c1eaf825ee5d, type: 3}
+      m_Width: 128
+      m_Height: 128
   m_BuildTargetBatching:
   - m_BuildTarget: iPhone
     m_StaticBatching: 0

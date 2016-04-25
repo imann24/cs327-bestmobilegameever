@@ -13,6 +13,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Text>Ugh, where am I?</Text>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <TextBox>Tap to advance dialogue text</TextBox>
       <Next>tutorial_01</Next>
     </Interaction>
@@ -21,8 +22,9 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Text>And why do I feel like I'm forgetting something important?</Text>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <TextBox>hide();</TextBox>
-      <SpecialActions>SoundKnock|ClearBG</SpecialActions>
+      <SpecialActions>SoundKnock</SpecialActions>
       <Next>tutorial_02</Next>
     </Interaction>
     <Interaction>
@@ -30,7 +32,8 @@
       <Type>Derivative</Type>
       <Text>Hey, you! Who's in there?</Text>
       <Image>SadieNFade</Image>
-      <Image2>Unknown</Image2>
+      <Image2>PirateQuestionMark</Image2>
+      <Speaker>???</Speaker>
       <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_choice</Next>
     </Interaction>
@@ -40,7 +43,8 @@
       <Text>It's me, Sadie.</Text>
       <TextBox>Tap any dialogue choice</TextBox>
       <Image>SadieN</Image>
-      <Image>UnknownFade</Image>
+      <Image2>PirateQuestionMark</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Next>tutorial_03</Next>
     </Interaction>
     <Interaction>
@@ -60,7 +64,8 @@
       <Type>Derivative</Type>
       <Text>Well hurry up and get out here! We need a hand!</Text>
       <Image>SadieNFade</Image>
-      <Image2>Unknown</Image2>
+      <Image2>PirateQuestionMark</Image2>
+      <Speaker>???</Speaker>
       <Next>tutorial_05</Next>
       <TextBox>hide();</TextBox>
     </Interaction>
@@ -69,7 +74,8 @@
       <Type>Derivative</Type>
       <Text>Does it matter? Hurry up and get out here! We need a hand!</Text>
       <Image>SadieNFade</Image>
-      <Image2>Unknown</Image2>
+      <Image2>PirateQuestionMark</Image2>
+      <Speaker>???</Speaker>
       <Next>tutorial_05</Next>
       <TextBox>hide();</TextBox>
     </Interaction>
@@ -78,7 +84,8 @@
       <Type>Derivative</Type>
       <Text>Hand?! Hand... oh, right! Crap! Still gotta clean off the Captain's hook hand...</Text>
       <Image>SadieN</Image>
-      <SpecialActions>SoundTutorialPrompt</SpecialActions>
+      <SpecialActions>SoundTutorialPrompt|ClearBG</SpecialActions>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Next>tutorial_sadie</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
@@ -115,6 +122,7 @@
       <Text>These accusations are completely unfounded. You have no evidence whatsoever.</Text>
       <Image>QuartermasterA</Image>
       <Image2>ShipmasterAFade</Image2>
+      <Speaker>Quartermaster Bonney</Speaker>
       <SpecialActions>FadeIn</SpecialActions>
       <Next>tutorial_cutscene_01</Next>
     </Interaction>
@@ -124,6 +132,7 @@
       <Text>We all know what kind of cheating, no-good scoundrel you are! It’s no coincidence! You killed the captain!</Text>
       <Image>QuartermasterAFade</Image>
       <Image2>ShipmasterA</Image2>
+      <Speaker>Shipmaster Creesy</Speaker>
       <Next>tutorial_cutscene_02</Next>
     </Interaction>
     <Interaction>
@@ -132,6 +141,7 @@
       <Text>All I have ever done is preserve and protect the interests of this ship.</Text>
       <Image>QuartermasterN</Image>
       <Image2>ShipmasterAFade</Image2>
+      <Speaker>Quartermaster Bonney</Speaker>
       <Next>tutorial_cutscene_03</Next>
     </Interaction>
     <Interaction>
@@ -140,6 +150,7 @@
       <Text>All you’ve ever done is preserve your own shady interests! And I won’t let you get away with it anymore!</Text>
       <Image>QuartermasterNFade</Image>
       <Image2>ShipmasterA</Image2>
+      <Speaker>Shipmaster Creesy</Speaker>
       <Next>tutorial_cutscene_04</Next>
     </Interaction>
     <Interaction>
@@ -147,6 +158,7 @@
       <Type>Derivative</Type>
       <Text>Hear, hear! No evildoings shall be gotten away with under the watchful eye of yours truly.</Text>
       <Image>FirstMateH</Image>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Next>tutorial_cutscene_05</Next>
     </Interaction>
     <Interaction>
@@ -155,6 +167,7 @@
       <Text>Oh shut up, you fop. Go polish your gears elsewhere.</Text>
       <Image>QuartermasterA</Image>
       <Image2>ShipmasterAFade</Image2>
+      <Speaker>Quartermaster Bonney</Speaker>
       <Next>tutorial_cutscene_06</Next>
     </Interaction>
     <Interaction>
@@ -162,6 +175,7 @@
       <Type>Derivative</Type>
       <Text>Ah, mon coeur! You wound me with your wicked words!</Text>
       <Image>FirstMateS</Image>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Next>tutorial_cutscene_07</Next>
     </Interaction>
     <Interaction>
@@ -170,6 +184,7 @@
       <Text>Without me, this ship would be nothing. You think the captain was leading this mess? Hardly. I’ve been captaining this ship for years while they claimed the title for it.</Text>
       <Image>QuartermasterN</Image>
       <Image2>ShipmasterAFade</Image2>
+      <Speaker>Quartermaster Bonney</Speaker>
       <Next>tutorial_cutscene_08</Next>
     </Interaction>
     <Interaction>
@@ -178,6 +193,7 @@
       <Text>But if you truly harbor the delusion that residing in the brig will prevent me from doing my job, then I suppose I could entertain you.</Text>
       <Image>QuartermasterH</Image>
       <Image2>ShipmasterAFade</Image2>
+      <Speaker>Quartermaster Bonney</Speaker>
       <Next>tutorial_cutscene_09</Next>
     </Interaction>
     <Interaction>
@@ -186,6 +202,7 @@
       <Text>I assure you, however, that you will regret addressing your superior with so little tact.</Text>
       <Image>QuartermasterA</Image>
       <Image2>ShipmasterAFade</Image2>
+      <Speaker>Quartermaster Bonney</Speaker>
       <SpecialActions>QuartermasterExit</SpecialActions>
       <Next>tutorial_cutscene_09_dup</Next>
     </Interaction>
@@ -195,12 +212,14 @@
       <Text>I assure you, however, that you will regret addressing your superior with so little tact.</Text>
       <Image>QuartermasterA</Image>
       <Image2>ShipmasterAFade</Image2>
+      <Speaker>Quartermaster Bonney</Speaker>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_QM</Name>
       <Type>Derivative</Type>
       <Text>That… woman! I just - I can’t- Oooooogh! She is everything that’s wrong with piracy, and nothing that’s right!</Text>
       <Image2>ShipmasterA</Image2>
+      <Speaker>Shipmaster Creesy</Speaker>
       <Next>tutorial_cutscene_10</Next>
     </Interaction>
     <Interaction>
@@ -209,6 +228,7 @@
       <Text>I anguish at your sorrow, mademoiselle. But do not despair! I, Bartholomieu Disquefloppe IV, will carry your heavy burden as rightful captain of our beautiful ship.</Text>
       <Image>FirstMateS</Image>
       <Image2>ShipmasterAFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Next>tutorial_cutscene_11</Next>
     </Interaction>
     <Interaction>
@@ -217,6 +237,7 @@
       <Text>What? … oh, ah - no, that’s ok, Bart. I’m going to have to step up as Captain and set things straight. Just try not to cause any trouble. </Text>
       <Image>FirstMateSFade</Image>
       <Image2>ShipmasterN</Image2>
+      <Speaker>Shipmaster Creesy</Speaker>
       <SpecialActions>ShipmasterExit</SpecialActions>
       <Next>tutorial_cutscene_11_dup</Next>
     </Interaction>
@@ -226,12 +247,14 @@
       <Text>What? … oh, ah - no, that’s ok, Bart. I’m going to have to step up as Captain and set things straight. Just try not to cause any trouble. </Text>
       <Image>FirstMateSFade</Image>
       <Image2>ShipmasterN</Image2>
+      <Speaker>Shipmaster Creesy</Speaker>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_SM</Name>
       <Type>Derivative</Type>
       <Text>Hear me, mes amis! Lend me your ears! Our dear, dashing, clever captain has perished!</Text>
       <Image>FirstMateS</Image>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Next>tutorial_cutscene_12</Next>
     </Interaction>
     <Interaction>
@@ -239,6 +262,7 @@
       <Type>Derivative</Type>
       <Text>Those who wish to mourn their untimely passing should follow me to the helm, where we shall hold a service in their memory!</Text>
       <Image>FirstMateN</Image>
+      <Speaker>First Mate Bartholomew</Speaker>
       <SpecialActions>FirstmateExit</SpecialActions>
       <Next>tutorial_cutscene_12_dup</Next>
     </Interaction>
@@ -247,12 +271,14 @@
       <Type>Derivative</Type>
       <Text>Those who wish to mourn their untimely passing should follow me to the helm, where we shall hold a service in their memory!</Text>
       <Image>FirstMateN</Image>
+      <Speaker>First Mate Bartholomew</Speaker>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_FM</Name>
       <Type>Derivative</Type>
       <Text>The captain is… dead? What am I supposed to do now?</Text>
       <Image>SadieS</Image>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Next>tutorial_cutscene_13</Next>
     </Interaction>
     <Interaction>
@@ -261,6 +287,7 @@
       <GiveTags>firstmateIntro|quartermasterIntro|shipmasterIntro</GiveTags>
       <Text>Did the first mate say something about a service?</Text>
       <Image>SadieN</Image>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <SpecialActions>EndTutorialCutscene</SpecialActions>
     </Interaction>
   <!-- EndRegion -->

@@ -7,9 +7,9 @@
       <Name>talk</Name>
       <Type>Click</Type>
       <NONETags>riggerHit|riggerDown|hasPoster</NONETags>
-      <MaxDistance>3</MaxDistance>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
+      <IgnoreDistance>true</IgnoreDistance>
       <Text>What’s the weather like up there?</Text>
       <Next>talk_cant_hear_00</Next>
     </Interaction>
@@ -18,6 +18,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
+      <IgnoreDistance>true</IgnoreDistance>
       <Text>...</Text>
       <Next>talk_cant_hear_01</Next>
     </Interaction>
@@ -26,12 +27,14 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
+      <IgnoreDistance>true</IgnoreDistance>
       <Text>Guess she can’t hear me. Windy, then?</Text>
     </Interaction>
     <Interaction>
       <Name>talk</Name>
       <Type>Click</Type>
       <ALLTags>hasPoster</ALLTags>
+      <IgnoreDistance>true</IgnoreDistance>
       <NONETags>riggerHit|riggerDown</NONETags>
       <MaxDistance>3</MaxDistance>
       <Next>talk_cant_hear_10</Next>
@@ -59,6 +62,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
+      <IgnoreDistance>true</IgnoreDistance>
       <Text>Hey!</Text>
       <Next>talk_cant_hear_11</Next>
     </Interaction>
@@ -67,6 +71,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
+      <IgnoreDistance>true</IgnoreDistance>
       <Text>Wendy?</Text>
       <Next>talk_cant_hear_12</Next>
     </Interaction>
@@ -75,6 +80,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
+      <IgnoreDistance>true</IgnoreDistance>
       <Text>...</Text>
       <Next>talk_cant_hear_13</Next>
     </Interaction>
@@ -83,6 +89,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
+      <IgnoreDistance>true</IgnoreDistance>
       <Text>Head in the clouds, as always. I’ll have to get her attention somehow…</Text>
     </Interaction>
     <Interaction>
@@ -91,6 +98,7 @@
       <ALLTags>holdingOrange|hasPoster</ALLTags>
       <NONETags>riggerHit</NONETags>
       <GiveTags>riggerHit|riggerTalked</GiveTags>
+      <IgnoreDistance>true</IgnoreDistance>
       <SpecialActions>SoundOrange</SpecialActions>
       <TakeItems>Orange</TakeItems>
       <Next>rigger_hit_00</Next>
@@ -101,6 +109,7 @@
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerA</Image2>
       <Text>Hey! I could’ve fallen!</Text>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>rigger_hit_01</Next>
     </Interaction>
     <Interaction>
@@ -109,6 +118,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerAFade</Image2>
       <Text>Can I talk to you for a moment?</Text>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>rigger_hit_02</Next>
     </Interaction>
     <Interaction>
@@ -117,6 +127,7 @@
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
       <Text>I’m a little bit busy right now! I’ve gotta get that lantern so I can replace the candle in it, but… I can’t reach it from here.</Text>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>rigger_hit_03</Next>
     </Interaction>
     <Interaction>
@@ -125,6 +136,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
       <Text>Can’t you just climb a little higher?</Text>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>rigger_hit_04</Next>
     </Interaction>
     <Interaction>
@@ -134,6 +146,7 @@
       <Image2>CheifRiggerS</Image2>
       <Text>...no.</Text>
       <Next>rigger_hit_05</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>rigger_hit_05</Name>
@@ -141,6 +154,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerSFade</Image2>
       <Text>Well, that's just swell. Hang tight, I'll see what I can do.</Text>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   <!-- EndRegion -->
   <!-- Region Help Out -->
@@ -150,6 +164,7 @@
       <MaxDistance>10</MaxDistance>
       <ALLTags>riggerHit</ALLTags>
       <Next>talk_stuck_00</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>talk_stuck_00</Name>
@@ -158,6 +173,7 @@
       <Image2>CheifRiggerN</Image2>
       <Text>Hey, can you maybe help me out here? I’m kind of, um… stuck.</Text>
       <Next>talk_stuck_01</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>talk_stuck_01</Name>
@@ -166,6 +182,7 @@
       <Image2>CheifRiggerNFade</Image2>
       <Text>I'm trying.</Text>
       <Next>talk_stuck_02</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>talk_stuck_02</Name>
@@ -173,6 +190,7 @@
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerS</Image2>
       <Text>Just get me something I can unhook that lantern with. Um, without climbing any higher, if that’s ok.</Text>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>give_mop_handle_00</Name>
@@ -183,6 +201,7 @@
       <Text>I got something to extend your reach.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>give_mop_handle_01</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>give_mop_handle_01</Name>
@@ -190,6 +209,7 @@
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerS</Image2>
       <Text>Uh. I could reach it with that, but it’s kind of hard to grab anything with just a blunt stick. I really don’t want to break it...</Text>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>give_hook_00</Name>
@@ -200,6 +220,7 @@
       <Text>Can you use this?</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>give_hook_01</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>give_hook_01</Name>
@@ -207,6 +228,7 @@
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
       <Text>I can’t reach the lantern with just that. Heck, I can’t reach YOU to take it!</Text>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>give_00</Name>
@@ -217,6 +239,7 @@
       <Image2>CheifRiggerNFade</Image2>
       <Text>Hey, I’ve got something for you.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>give_01</Next>
     </Interaction>
     <Interaction>
@@ -225,6 +248,7 @@
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
       <Text>Can you not try to give me something small while I’m dangling hundreds of feet above open ground?</Text>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>give_02</Next>
     </Interaction>
     <Interaction>
@@ -233,6 +257,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
       <Text>You're not actually that high, you know.</Text>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>give_03</Next>
     </Interaction>
     <Interaction>
@@ -241,6 +266,7 @@
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
       <Text>Shhh! I’m trying to focus on not falling.</Text>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>give_pole_hook_00</Name>
@@ -251,6 +277,7 @@
       <Text>Here, try this.</Text>
       <TakeItems>Pole_Hook</TakeItems>
       <Next>give_pole_hook_01</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>give_pole_hook_01</Name>
@@ -261,6 +288,7 @@
       <GiveTags>riggerDown</GiveTags>
       <TakeTags>riggerHit</TakeTags>
       <SpecialActions>RiggerDescend</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>rigger_descend</Name>
@@ -269,6 +297,7 @@
       <Image2>CheifRiggerN</Image2>
       <Text>Really sorry about that. Now, what did you want?</Text>
       <Next>rigger_choice</Next>
+      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
   <!-- EndRegion -->
   <!-- EndRegion -->

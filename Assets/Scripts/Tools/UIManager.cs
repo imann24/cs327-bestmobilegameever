@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
@@ -17,7 +18,13 @@ public class UIManager : MonoBehaviour {
 	public GameObject HelpTextBox;
 	public GameObject audioControllerWrap;
 
+	public Image MuteButtonGraphic;
+	public Sprite MuteButtonWhenVolumeOff;
+	public Sprite MuteButtonWhenVolumeOn;
+
 	public float MinTapDelay = 0.5f;
+
+	List<InteractionButton> dialogueOptions = new List<InteractionButton>();
 
 	void OnLevelWasLoaded (int level) {
 		audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
@@ -42,6 +49,7 @@ public class UIManager : MonoBehaviour {
             _instance = this;
             DontDestroyOnLoad(gameObject);
 			spawnTextBox();
+			setMuteButtonBasedOnSettings();
         }
         else if (this != _instance) {
             Destroy(gameObject);
@@ -56,6 +64,20 @@ public class UIManager : MonoBehaviour {
 		}
 	}
 		
+	public void ToggleDialogueArrows (bool isActive) {
+		foreach (InteractionButton dialoge in dialogueOptions) {
+			dialoge.ToggleArrowActive(isActive);
+		}
+	}
+
+	public void AddDialogueOption (InteractionButton dialogueOption) {
+		dialogueOptions.Add(dialogueOption);
+	}
+
+	public void RemoveDialogueOption (InteractionButton dialogueOption) {
+		dialogueOptions.Remove(dialogueOption);
+	}
+
 	public void Matey(){
 		audioController.Matey ();
 		//Do matey sound
@@ -64,6 +86,7 @@ public class UIManager : MonoBehaviour {
 	public void ToggleMute(){
 		audioController.ToggleFXMute ();
 		audioController.ToggleMusicMute ();
+		setMuteButtonBasedOnSettings();
 		//Mute button
 	}
 
@@ -131,6 +154,12 @@ public class UIManager : MonoBehaviour {
 	}
 
 	IEnumerator TapDelay(){
+
+		// Added for debugging purposes
+		#if UNITY_EDITOR
+			MinTapDelay = 0;
+		#endif
+
 		LockScreen ();
 		yield return new WaitForSeconds (MinTapDelay);
 		UnlockScreen();
@@ -143,5 +172,11 @@ public class UIManager : MonoBehaviour {
 		// Spawns the text box turned off
 		(textBox = (GameObject)Instantiate(HelpTextBox)).SetActive(false);
 		DontDestroyOnLoad(textBox);
+	}
+		
+	void setMuteButtonBasedOnSettings () {
+		MuteButtonGraphic.sprite = (SettingsUtil.FXMuted && SettingsUtil.MusicMuted) ? 
+			MuteButtonWhenVolumeOff :
+			MuteButtonWhenVolumeOn;
 	}
 }

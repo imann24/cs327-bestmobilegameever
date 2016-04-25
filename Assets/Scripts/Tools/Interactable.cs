@@ -10,7 +10,9 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IDragHandler {
 	public List<Interaction> Interactions { get; private set; }
 	public string InteractionPath;
 	public bool Debugging;
-
+	public bool flipped=false;
+	public NavMeshAgent agent;
+	private SpeechBubble speechBubble;
 	void Awake(){
 		Interactions = InteractionList.Load ("Text/" + InteractionPath);
 		if (GetComponent<SpecialActions> () == null) {
@@ -46,4 +48,18 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IDragHandler {
 	public void DoSpecialActions(List<string> actionsToDo){
 		GetComponent<SpecialActions> ().DoSpecialActions (actionsToDo);
 	}
+
+	public void Flip(){ //Flip player character
+		if(gameObject.GetComponent<NavMeshAgent>()!=null && gameObject.tag!="DontFlip" ) 
+		{
+			agent = gameObject.GetComponent<NavMeshAgent>();
+
+			flipped = !flipped;
+			speechBubble = agent.GetComponentInChildren<SpeechBubble> ();
+			agent.transform.localScale = new Vector3 (agent.transform.localScale.x * -1, agent.transform.localScale.y, agent.transform.localScale.z);
+			speechBubble.transform.localScale = new Vector3 (speechBubble.transform.localScale.x * -1, speechBubble.transform.localScale.y, speechBubble.transform.localScale.z);
+
+		}
+	}
+
 }
