@@ -1,18 +1,28 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 5934df210ee1544abb974b838f16b46d
-timeCreated: 1461103629
-=======
-guid: f732650c82495684fa6fe6586793264e
-timeCreated: 1461103421
->>>>>>> master
+timeCreated: 1461553750
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ChiefRiggerIdle_0
+    21300002: ChiefRiggerIdle_1
+    21300004: ChiefRiggerIdle_2
+    21300006: ChiefRiggerIdle_3
+    21300008: ChiefRiggerIdle_4
+    21300010: ChiefRiggerIdle_5
+    21300012: ChiefRiggerIdle_6
+    21300014: ChiefRiggerIdle_7
+    21300016: ChiefRiggerIdle_8
+    21300018: ChiefRiggerIdle_9
+    21300020: ChiefRiggerIdle_10
+    21300022: ChiefRiggerIdle_11
+    21300024: ChiefRiggerIdle_12
+    21300026: ChiefRiggerIdle_13
+    21300028: ChiefRiggerIdle_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -35,7 +45,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -43,7 +53,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,7 +64,569 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ChiefRiggerIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3496
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 150}
+        - {x: -87, y: 106}
+        - {x: -105, y: 86}
+        - {x: -105, y: 49}
+        - {x: -99, y: 41}
+        - {x: -88, y: 48}
+        - {x: -38, y: 0}
+        - {x: -18, y: -14}
+        - {x: -9, y: -145}
+        - {x: 46, y: -145}
+        - {x: 64, y: -144}
+        - {x: 65, y: -142}
+        - {x: 65, y: -135}
+        - {x: 64, y: -132}
+        - {x: 57, y: -126}
+        - {x: 65, y: -115}
+        - {x: 70, y: -145}
+        - {x: 86, y: -145}
+        - {x: 103, y: 4}
+        - {x: 103, y: 97}
+        - {x: 54, y: 150}
+    - name: ChiefRiggerIdle_1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 3496
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 65, y: 150}
+        - {x: -95, y: 150}
+        - {x: -105, y: 143}
+        - {x: -105, y: -45}
+        - {x: -55, y: -145}
+        - {x: 66, y: -145}
+        - {x: 67, y: -142}
+        - {x: 70, y: -135}
+        - {x: 59, y: -125}
+        - {x: 85, y: 51}
+        - {x: 70, y: -142}
+        - {x: 75, y: -145}
+        - {x: 82, y: -145}
+        - {x: 86, y: -135}
+        - {x: 105, y: -68}
+        - {x: 105, y: 129}
+    - name: ChiefRiggerIdle_2
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 3496
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: -150}
+        - {x: 49, y: -147}
+        - {x: 45, y: -147}
+        - {x: 44, y: -150}
+      - - {x: 57, y: 150}
+        - {x: -39, y: 150}
+        - {x: -95, y: 102}
+        - {x: -104, y: 81}
+        - {x: -104, y: 55}
+        - {x: -102, y: 44}
+        - {x: -91, y: 40}
+        - {x: -85, y: 46}
+        - {x: -42, y: 5}
+        - {x: -6, y: -145}
+        - {x: 46, y: -145}
+        - {x: 67, y: -144}
+        - {x: 68, y: -142}
+        - {x: 68, y: -135}
+        - {x: 67, y: -132}
+        - {x: 60, y: -126}
+        - {x: 70, y: -127}
+        - {x: 73, y: -145}
+        - {x: 85, y: -145}
+        - {x: 94, y: -142}
+        - {x: 105, y: -16}
+        - {x: 105, y: 109}
+    - name: ChiefRiggerIdle_3
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 3496
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -150}
+        - {x: 51, y: -150}
+        - {x: 51, y: -148}
+        - {x: 49, y: -146}
+        - {x: 44, y: -148}
+      - - {x: -74, y: 150}
+        - {x: -103, y: 135}
+        - {x: -103, y: 40}
+        - {x: -95, y: 39}
+        - {x: -84, y: 45}
+        - {x: -42, y: -2}
+        - {x: -5, y: -142}
+        - {x: -4, y: -145}
+        - {x: 69, y: -145}
+        - {x: 70, y: -142}
+        - {x: 73, y: -135}
+        - {x: 62, y: -125}
+        - {x: 76, y: -111}
+        - {x: 73, y: -142}
+        - {x: 75, y: -145}
+        - {x: 82, y: -145}
+        - {x: 88, y: -143}
+        - {x: 105, y: -41}
+        - {x: 105, y: 108}
+        - {x: 57, y: 150}
+    - name: ChiefRiggerIdle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2896
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: -150}
+        - {x: 10, y: -150}
+        - {x: 9, y: -147}
+        - {x: 4, y: -145}
+        - {x: 1, y: -145}
+        - {x: -2, y: -149}
+      - - {x: 41, y: -144}
+        - {x: 36, y: -149}
+        - {x: 36, y: -150}
+        - {x: 47, y: -150}
+        - {x: 47, y: -145}
+        - {x: 45, y: -144}
+      - - {x: 55, y: 98}
+        - {x: 49, y: 150}
+        - {x: 0, y: 150}
+        - {x: -2, y: 147}
+        - {x: -3, y: 143}
+        - {x: 0, y: 119}
+        - {x: -26, y: 89}
+        - {x: -65, y: 106}
+        - {x: -100, y: 106}
+        - {x: -105, y: 88}
+        - {x: -105, y: 46}
+        - {x: -94, y: 42}
+        - {x: -88, y: 48}
+        - {x: -45, y: 7}
+        - {x: -9, y: -143}
+        - {x: 43, y: -143}
+        - {x: 64, y: -142}
+        - {x: 65, y: -140}
+        - {x: 65, y: -133}
+        - {x: 64, y: -130}
+        - {x: 57, y: -124}
+        - {x: 67, y: -125}
+        - {x: 70, y: -143}
+        - {x: 82, y: -143}
+        - {x: 104, y: 30}
+        - {x: 104, y: 89}
+        - {x: 92, y: 92}
+    - name: ChiefRiggerIdle_5
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 2896
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: -145}
+        - {x: 0, y: -146}
+        - {x: 0, y: -150}
+        - {x: 11, y: -150}
+        - {x: 11, y: -148}
+        - {x: 9, y: -145}
+      - - {x: 38, y: -149}
+        - {x: 38, y: -150}
+        - {x: 49, y: -150}
+        - {x: 49, y: -148}
+        - {x: 46, y: -144}
+        - {x: 44, y: -144}
+      - - {x: 105, y: 93}
+        - {x: 58, y: 150}
+        - {x: -57, y: 150}
+        - {x: -98, y: 127}
+        - {x: -105, y: 100}
+        - {x: -105, y: 47}
+        - {x: -94, y: 44}
+        - {x: -87, y: 48}
+        - {x: -46, y: 1}
+        - {x: -8, y: -140}
+        - {x: -7, y: -143}
+        - {x: 66, y: -143}
+        - {x: 67, y: -140}
+        - {x: 70, y: -133}
+        - {x: 59, y: -123}
+        - {x: 71, y: -132}
+        - {x: 71, y: -139}
+        - {x: 75, y: -143}
+        - {x: 79, y: -143}
+        - {x: 83, y: -139}
+        - {x: 84, y: -132}
+        - {x: 105, y: 43}
+    - name: ChiefRiggerIdle_6
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 2896
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: -150}
+        - {x: 13, y: -150}
+        - {x: 12, y: -147}
+        - {x: 7, y: -145}
+        - {x: 4, y: -145}
+        - {x: 1, y: -149}
+      - - {x: 44, y: -144}
+        - {x: 39, y: -149}
+        - {x: 39, y: -150}
+        - {x: 50, y: -150}
+        - {x: 50, y: -145}
+        - {x: 48, y: -144}
+      - - {x: -8, y: 150}
+        - {x: -22, y: 99}
+        - {x: -77, y: 114}
+        - {x: -104, y: 93}
+        - {x: -104, y: 57}
+        - {x: -98, y: 46}
+        - {x: -91, y: 47}
+        - {x: -85, y: 50}
+        - {x: -49, y: 5}
+        - {x: -6, y: -140}
+        - {x: -5, y: -143}
+        - {x: 23, y: -143}
+        - {x: 67, y: -142}
+        - {x: 68, y: -140}
+        - {x: 68, y: -133}
+        - {x: 67, y: -130}
+        - {x: 60, y: -124}
+        - {x: 68, y: -113}
+        - {x: 73, y: -143}
+        - {x: 89, y: -143}
+        - {x: 105, y: -6}
+        - {x: 105, y: 99}
+        - {x: 54, y: 150}
+    - name: ChiefRiggerIdle_7
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 2896
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -145}
+        - {x: 3, y: -146}
+        - {x: 3, y: -150}
+        - {x: 14, y: -150}
+        - {x: 14, y: -148}
+        - {x: 12, y: -145}
+      - - {x: 41, y: -149}
+        - {x: 41, y: -150}
+        - {x: 52, y: -150}
+        - {x: 52, y: -148}
+        - {x: 49, y: -144}
+        - {x: 47, y: -144}
+      - - {x: -66, y: 150}
+        - {x: -103, y: 115}
+        - {x: -103, y: -75}
+        - {x: -45, y: -143}
+        - {x: 69, y: -143}
+        - {x: 73, y: -141}
+        - {x: 68, y: -124}
+        - {x: 74, y: -143}
+        - {x: 82, y: -143}
+        - {x: 87, y: -140}
+        - {x: 105, y: 10}
+        - {x: 105, y: 131}
+        - {x: 65, y: 150}
+    - name: ChiefRiggerIdle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2296
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: -143}
+        - {x: -2, y: -146}
+        - {x: -3, y: -150}
+        - {x: 13, y: -150}
+        - {x: 13, y: -148}
+        - {x: 5, y: -143}
+      - - {x: 34, y: -150}
+        - {x: 33, y: -147}
+        - {x: 18, y: -147}
+        - {x: 17, y: -150}
+      - - {x: 34, y: -150}
+        - {x: 48, y: -150}
+        - {x: 47, y: -144}
+        - {x: 46, y: -142}
+        - {x: 42, y: -142}
+        - {x: 34, y: -147}
+      - - {x: -3, y: 150}
+        - {x: -5, y: 142}
+        - {x: -23, y: 92}
+        - {x: -57, y: 107}
+        - {x: -88, y: 110}
+        - {x: -105, y: 89}
+        - {x: -105, y: 51}
+        - {x: -93, y: 47}
+        - {x: -88, y: 52}
+        - {x: -52, y: 7}
+        - {x: -9, y: -138}
+        - {x: -8, y: -141}
+        - {x: 20, y: -141}
+        - {x: 64, y: -140}
+        - {x: 65, y: -138}
+        - {x: 65, y: -131}
+        - {x: 64, y: -128}
+        - {x: 57, y: -122}
+        - {x: 65, y: -111}
+        - {x: 70, y: -141}
+        - {x: 86, y: -141}
+        - {x: 103, y: 4}
+        - {x: 103, y: 100}
+        - {x: 54, y: 150}
+    - name: ChiefRiggerIdle_9
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 2296
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: -143}
+        - {x: 0, y: -146}
+        - {x: -1, y: -150}
+        - {x: 15, y: -150}
+        - {x: 15, y: -146}
+        - {x: 8, y: -143}
+      - - {x: 35, y: -150}
+        - {x: 34, y: -147}
+        - {x: 19, y: -147}
+        - {x: 18, y: -150}
+      - - {x: 35, y: -149}
+        - {x: 35, y: -150}
+        - {x: 49, y: -150}
+        - {x: 49, y: -146}
+        - {x: 46, y: -142}
+        - {x: 44, y: -142}
+      - - {x: 53, y: 150}
+        - {x: -56, y: 150}
+        - {x: -105, y: 109}
+        - {x: -105, y: -100}
+        - {x: -68, y: -141}
+        - {x: 79, y: -141}
+        - {x: 84, y: -138}
+        - {x: 104, y: 60}
+        - {x: 104, y: 87}
+        - {x: 97, y: 91}
+    - name: ChiefRiggerIdle_10
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 2296
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: -143}
+        - {x: 1, y: -146}
+        - {x: 0, y: -150}
+        - {x: 16, y: -150}
+        - {x: 16, y: -148}
+        - {x: 8, y: -143}
+      - - {x: 37, y: -150}
+        - {x: 36, y: -147}
+        - {x: 21, y: -147}
+        - {x: 20, y: -150}
+      - - {x: 37, y: -150}
+        - {x: 51, y: -150}
+        - {x: 50, y: -144}
+        - {x: 49, y: -142}
+        - {x: 45, y: -142}
+        - {x: 37, y: -147}
+      - - {x: 0, y: 150}
+        - {x: -2, y: 142}
+        - {x: -20, y: 92}
+        - {x: -27, y: 100}
+        - {x: -87, y: 117}
+        - {x: -103, y: 93}
+        - {x: -104, y: 85}
+        - {x: -104, y: 58}
+        - {x: -97, y: 49}
+        - {x: -91, y: 49}
+        - {x: -85, y: 52}
+        - {x: -49, y: 7}
+        - {x: -6, y: -138}
+        - {x: -5, y: -141}
+        - {x: 23, y: -141}
+        - {x: 67, y: -140}
+        - {x: 68, y: -138}
+        - {x: 68, y: -131}
+        - {x: 67, y: -128}
+        - {x: 60, y: -122}
+        - {x: 68, y: -111}
+        - {x: 73, y: -141}
+        - {x: 89, y: -141}
+        - {x: 105, y: -4}
+        - {x: 105, y: 101}
+        - {x: 57, y: 150}
+    - name: ChiefRiggerIdle_11
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 2296
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61, y: 150}
+        - {x: -103, y: 106}
+        - {x: -103, y: -77}
+        - {x: -11, y: -141}
+        - {x: 73, y: -141}
+        - {x: 73, y: -139}
+        - {x: 68, y: -122}
+        - {x: 74, y: -141}
+        - {x: 82, y: -141}
+        - {x: 87, y: -138}
+        - {x: 105, y: 40}
+        - {x: 105, y: 93}
+        - {x: 56, y: 150}
+    - name: ChiefRiggerIdle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1696
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60, y: 150}
+        - {x: -105, y: 132}
+        - {x: -105, y: 53}
+        - {x: -93, y: 49}
+        - {x: -88, y: 54}
+        - {x: -52, y: 9}
+        - {x: -9, y: -136}
+        - {x: -8, y: -139}
+        - {x: 20, y: -139}
+        - {x: 64, y: -138}
+        - {x: 65, y: -136}
+        - {x: 65, y: -129}
+        - {x: 64, y: -126}
+        - {x: 57, y: -120}
+        - {x: 65, y: -109}
+        - {x: 70, y: -139}
+        - {x: 84, y: -139}
+        - {x: 103, y: 11}
+        - {x: 103, y: 120}
+        - {x: 91, y: 150}
+    - name: ChiefRiggerIdle_13
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1696
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: 150}
+        - {x: -73, y: 150}
+        - {x: -105, y: 121}
+        - {x: -105, y: -102}
+        - {x: -70, y: -139}
+        - {x: 79, y: -139}
+        - {x: 84, y: -136}
+        - {x: 104, y: 62}
+        - {x: 104, y: 91}
+        - {x: 99, y: 97}
+    - name: ChiefRiggerIdle_14
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1696
+        width: 420
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 150}
+        - {x: -22, y: 103}
+        - {x: -61, y: 112}
+        - {x: -85, y: 113}
+        - {x: -104, y: 89}
+        - {x: -104, y: 64}
+        - {x: -102, y: 58}
+        - {x: -97, y: 51}
+        - {x: -91, y: 51}
+        - {x: -85, y: 54}
+        - {x: -49, y: 9}
+        - {x: -6, y: -136}
+        - {x: -5, y: -139}
+        - {x: 23, y: -139}
+        - {x: 67, y: -138}
+        - {x: 68, y: -136}
+        - {x: 68, y: -129}
+        - {x: 67, y: -126}
+        - {x: 60, y: -120}
+        - {x: 68, y: -109}
+        - {x: 73, y: -139}
+        - {x: 87, y: -139}
+        - {x: 105, y: 4}
+        - {x: 105, y: 104}
+        - {x: 54, y: 150}
     outline: []
   spritePackingTag: 
   userData: 
