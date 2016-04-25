@@ -10,7 +10,7 @@
 			"Volume": 100
 		},
 		{
-			“FileName”:"TitleMenu_Soundtrack_2",
+			“FileName”:"TitleMenu_Soundtrack_3",
 			“EventNames”:["menuMusicStart"],
 			"StopEventNames":["menuMusicStop"],
 			“Loop”:true,

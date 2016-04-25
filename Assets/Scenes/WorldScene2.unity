@@ -1326,7 +1326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22418328, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 130.7449
+      value: 130.80046
       objectReference: {fileID: 0}
     - target: {fileID: 22438814, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: m_AnchorMin.y
@@ -4601,11 +4601,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6554306, guid: 8eb89d7b8bf016d4989a90e22d12c40d, type: 2}
       propertyPath: m_Size.x
-      value: 3.755492
+      value: 6.025444
       objectReference: {fileID: 0}
     - target: {fileID: 6554306, guid: 8eb89d7b8bf016d4989a90e22d12c40d, type: 2}
       propertyPath: m_Size.y
-      value: 15.107489
+      value: 21.051397
       objectReference: {fileID: 0}
     - target: {fileID: 6554306, guid: 8eb89d7b8bf016d4989a90e22d12c40d, type: 2}
       propertyPath: m_Size.z
@@ -4613,11 +4613,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6554306, guid: 8eb89d7b8bf016d4989a90e22d12c40d, type: 2}
       propertyPath: m_Center.x
-      value: 0.36989212
+      value: -0.7650852
       objectReference: {fileID: 0}
     - target: {fileID: 6554306, guid: 8eb89d7b8bf016d4989a90e22d12c40d, type: 2}
       propertyPath: m_Center.y
-      value: 6.5537357
+      value: 9.52569
       objectReference: {fileID: 0}
     - target: {fileID: 6554306, guid: 8eb89d7b8bf016d4989a90e22d12c40d, type: 2}
       propertyPath: m_Center.z
