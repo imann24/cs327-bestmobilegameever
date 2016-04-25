@@ -18,9 +18,11 @@ public class SpecialActions_Rigger : SpecialActions {
 
 		Fader.FadeIn();
 
+		float offset = 10f;
+
         yield return new WaitForSeconds(2f);
 		collider.isTrigger = true;
-		gameObject.transform.position = GameObject.Find("Waypoint_RiggerDescend").transform.position;
+		gameObject.transform.position = GameObject.Find("Waypoint_RiggerDescend").transform.position + Vector3.back * offset;
 		collider.isTrigger = false;
         NextInteraction("light", GameObject.Find("Lantern").GetComponent<Interactable>());
         Fader.FadeOut();
