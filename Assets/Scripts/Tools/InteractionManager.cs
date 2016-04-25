@@ -404,7 +404,7 @@ public class InteractionManager : MonoBehaviour {
 			if (isLeft (interactor) && interactor.gameObject.name!="Sadie" && !isFacing(interactor) && interactor.gameObject.tag!="DontFlip"  )
 			{
 				
-				if(interactor.GetComponent<Interactable>().flipped ){ //on the left
+				if(interactor.GetComponent<Interactable>().flipped ){ 
 					
 					interactor.GetComponent<Interactable> ().Flip ();
 				}
@@ -416,7 +416,7 @@ public class InteractionManager : MonoBehaviour {
 			}
 			if (!isLeft (interactor) && interactor.gameObject.name!="Sadie" && !isFacing(interactor)  && interactor.gameObject.tag!="DontFlip") 
 			{ //interactor on the right
-				Debug.Log("flipping right: "+interactor.gameObject.name);
+				
 				if (!interactor.GetComponent<Interactable> ().flipped) { //if interactor is facing right
 					
 					interactor.GetComponent<Interactable> ().Flip ();
