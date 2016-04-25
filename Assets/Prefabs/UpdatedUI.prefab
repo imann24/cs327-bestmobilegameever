@@ -4406,7 +4406,7 @@ MonoBehaviour:
   HelpTextBox: {fileID: 199078, guid: bdf0d7362b58c408d8309d9530576f89, type: 2}
   audioControllerWrap: {fileID: 0}
   MuteButtonGraphic: {fileID: 11493862}
-  MuteButtonWhenVolumeOff: {fileID: 21300000, guid: 027938a2573aea7498d4a80bb98d8ac2,
+  MuteButtonWhenVolumeOff: {fileID: 21300000, guid: e9bc9c281986b4f58bf899af0efba77b,
     type: 3}
   MuteButtonWhenVolumeOn: {fileID: 21300000, guid: 225a181fccc4c42a1ba7ffef1e2760be,
     type: 3}
