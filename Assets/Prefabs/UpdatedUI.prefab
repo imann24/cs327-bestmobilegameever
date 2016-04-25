@@ -1245,6 +1245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactor: {fileID: 0}
+  Type: 0
 --- !u!114 &11402268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4404,6 +4405,11 @@ MonoBehaviour:
   DimBackground: {fileID: 130512}
   HelpTextBox: {fileID: 199078, guid: bdf0d7362b58c408d8309d9530576f89, type: 2}
   audioControllerWrap: {fileID: 0}
+  MuteButtonGraphic: {fileID: 11493862}
+  MuteButtonWhenVolumeOff: {fileID: 21300000, guid: e9bc9c281986b4f58bf899af0efba77b,
+    type: 3}
+  MuteButtonWhenVolumeOn: {fileID: 21300000, guid: 225a181fccc4c42a1ba7ffef1e2760be,
+    type: 3}
   MinTapDelay: 0.5
 --- !u!114 &11491978
 MonoBehaviour:
