@@ -718,7 +718,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22418328, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 142.66704
+      value: 111.29597
       objectReference: {fileID: 0}
     - target: {fileID: 22438814, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: m_AnchorMin.y
@@ -1951,7 +1951,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 90f2a345e771f834fbc16582af92626f, type: 2}
+  - {fileID: 2100000, guid: eacf41b0f04cfb64c9a7493b6bf9b9b2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
