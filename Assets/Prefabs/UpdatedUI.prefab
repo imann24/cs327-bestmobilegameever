@@ -4406,7 +4406,7 @@ MonoBehaviour:
   HelpTextBox: {fileID: 199078, guid: bdf0d7362b58c408d8309d9530576f89, type: 2}
   audioControllerWrap: {fileID: 0}
   MuteButtonGraphic: {fileID: 11493862}
-  MuteButtonWhenVolumeOff: {fileID: 21300000, guid: e9bc9c281986b4f58bf899af0efba77b,
+  MuteButtonWhenVolumeOff: {fileID: 21300000, guid: 1b5a28e0e2c0b49b487fd8982b6b2e50,
     type: 3}
   MuteButtonWhenVolumeOn: {fileID: 21300000, guid: 225a181fccc4c42a1ba7ffef1e2760be,
     type: 3}
@@ -6322,6 +6322,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: MuteButtonWhenVolumeOff
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b5a28e0e2c0b49b487fd8982b6b2e50,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178700}
