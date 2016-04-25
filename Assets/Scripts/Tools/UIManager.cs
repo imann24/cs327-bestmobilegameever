@@ -18,6 +18,10 @@ public class UIManager : MonoBehaviour {
 	public GameObject HelpTextBox;
 	public GameObject audioControllerWrap;
 
+	public Image MuteButtonGraphic;
+	public Sprite MuteButtonWhenVolumeOff;
+	public Sprite MuteButtonWhenVolumeOn;
+
 	public float MinTapDelay = 0.5f;
 
 	List<InteractionButton> dialogueOptions = new List<InteractionButton>();
@@ -45,6 +49,7 @@ public class UIManager : MonoBehaviour {
             _instance = this;
             DontDestroyOnLoad(gameObject);
 			spawnTextBox();
+			setMuteButtonBasedOnSettings();
         }
         else if (this != _instance) {
             Destroy(gameObject);
@@ -81,6 +86,7 @@ public class UIManager : MonoBehaviour {
 	public void ToggleMute(){
 		audioController.ToggleFXMute ();
 		audioController.ToggleMusicMute ();
+		setMuteButtonBasedOnSettings();
 		//Mute button
 	}
 
@@ -166,5 +172,11 @@ public class UIManager : MonoBehaviour {
 		// Spawns the text box turned off
 		(textBox = (GameObject)Instantiate(HelpTextBox)).SetActive(false);
 		DontDestroyOnLoad(textBox);
+	}
+		
+	void setMuteButtonBasedOnSettings () {
+		MuteButtonGraphic.sprite = (SettingsUtil.FXMuted && SettingsUtil.MusicMuted) ? 
+			MuteButtonWhenVolumeOff :
+			MuteButtonWhenVolumeOn;
 	}
 }
