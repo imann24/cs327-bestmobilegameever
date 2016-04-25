@@ -1033,7 +1033,7 @@ Prefab:
     - target: {fileID: 11491942, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: MuteButtonWhenVolumeOff
       value: 
-      objectReference: {fileID: 21300000, guid: 027938a2573aea7498d4a80bb98d8ac2,
+      objectReference: {fileID: 21300000, guid: e9bc9c281986b4f58bf899af0efba77b,
         type: 3}
     - target: {fileID: 11491942, guid: f394adcb0b35ce546905a551020123ab, type: 2}
       propertyPath: MuteButtonWhenVolumeOn
