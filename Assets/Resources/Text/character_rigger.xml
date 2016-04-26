@@ -337,15 +337,7 @@
       <Text>Oh, wow, that might actually work!</Text>
       <GiveTags>riggerDown</GiveTags>
       <TakeTags>riggerHit</TakeTags>
-      <SpecialActions>RiggerDescend</SpecialActions>
-      <Next>rigger_descend_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>rigger_descend_1</Name>
-      <Type>Derivative</Type>
-      <Image>SadieNFade</Image>
-      <Image2>CheifRiggerH</Image2>
-      <SpecialActions>RiggerSpeech</SpecialActions>
+      <SpecialActions>RiggerDescend|RiggerSpeech</SpecialActions>
       <Next>rigger_descend</Next>
     </Interaction>
     <Interaction>

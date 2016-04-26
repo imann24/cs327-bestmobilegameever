@@ -271,35 +271,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 186182, guid: 9615aafedda9d8c49a7c3a0a1008abb5, type: 2}
   m_PrefabInternal: {fileID: 367425420}
---- !u!114 &367425422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 367425421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionTag: 
-  Sound: 
-  UseExtended: 1
-  ChangesSprite: 0
-  MovesObject: 0
-  CreatesObject: 0
-  PlaysSound: 0
-  UseNavMesh: 0
-  DestroyOnArrive: 0
-  NewSprite: {fileID: 0}
-  ObjectToMove: {fileID: 0}
-  ObjectToCreate: {fileID: 0}
-  CreateAtWaypoint: {fileID: 0}
-  MoveToWaypoint: {fileID: 0}
-  SoundDelay: 0
-  MoveSpeed: 2
-  MoveToPosition: {x: 0, y: 0, z: 0}
-  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &367425423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,35 +285,6 @@ MonoBehaviour:
   ActionTag: 
   Sound: 
   UseExtended: 0
-  ChangesSprite: 0
-  MovesObject: 0
-  CreatesObject: 0
-  PlaysSound: 0
-  UseNavMesh: 0
-  DestroyOnArrive: 0
-  NewSprite: {fileID: 0}
-  ObjectToMove: {fileID: 0}
-  ObjectToCreate: {fileID: 0}
-  CreateAtWaypoint: {fileID: 0}
-  MoveToWaypoint: {fileID: 0}
-  SoundDelay: 0
-  MoveSpeed: 2
-  MoveToPosition: {x: 0, y: 0, z: 0}
-  CreateAtPosition: {x: 0, y: 0, z: 0}
---- !u!114 &367425424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 367425421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionTag: 
-  Sound: 
-  UseExtended: 1
   ChangesSprite: 0
   MovesObject: 0
   CreatesObject: 0
