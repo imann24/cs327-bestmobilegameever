@@ -28,6 +28,7 @@
 			<NONETags>hasRag</NONETags>
 			<Text>Aha! Just what I needed.</Text>
 			<TextType>Floating</TextType>
+      <TextBox>Drag one item in your inventory on top of another to combine them for a new item!</TextBox>
 			<Next>take</Next>
 			<NextInteractor>Rag</NextInteractor>
 		</Interaction>
@@ -101,6 +102,13 @@
       <Name>default_bottle</Name>
       <Type>Derivative</Type>
       <Text>I can't reach it.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>examine_bottle</Name>
+      <Type>Derivative</Type>
+      <Text>Bullseye.</Text>
       <TextType>Floating</TextType>
       <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
@@ -182,6 +190,18 @@
       <Name>use_mop_head_handle</Name>
       <Type>Derivative</Type>
       <Text>It's beyond repair.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_barrel</Name>
+      <Type>Derivative</Type>
+      <Text>Nothing useful in there.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_cannon</Name>
+      <Type>Derivative</Type>
+      <Text>Boom.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <!-- EndRegion -->

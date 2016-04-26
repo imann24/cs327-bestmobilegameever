@@ -26,7 +26,6 @@
 			<Type>Derivative</Type>
 			<GiveItems>Rag</GiveItems>
 			<SpecialActions>Destroy|SoundTutorialPrompt</SpecialActions>
-      <TextBox>Drag one item in your inventory on top of another to combine them for a new item!</TextBox>
 		</Interaction>
 		<Interaction>
 			<Name>clean_hook</Name>
