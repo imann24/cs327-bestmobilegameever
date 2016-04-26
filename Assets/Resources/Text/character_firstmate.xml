@@ -10,6 +10,7 @@
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Image>FirstMateH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Ah, there you are! You must be my new assistant, yes? Thank goodness! You mustn’t keep your future captain waiting… but I will forgive you just this once.</Text>
       <IgnoreDistance>true</IgnoreDistance>
       <Next>firstmate_intro_01</Next>
@@ -19,6 +20,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>You're not the -</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_02</Next>
@@ -28,6 +30,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Now, before I take you on as my partner, let me ask you this, ma cherie - what makes a captain, in your view?</Text>
       <Next>firstmate_intro_02_choice</Next>
       <IgnoreDistance>true</IgnoreDistance>
@@ -37,6 +40,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>The vote of the crew?</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_04</Next>
@@ -60,6 +64,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>I see... that’s quite charming, however, I’m afraid it lacks a certain... je ne sais quoi.</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_05</Next>
@@ -69,6 +74,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>We are pirates, mon amie, pirates! We sail for glory, for riches, for lavish silks and the golden gleam of treasure!</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_06</Next>
@@ -78,6 +84,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>And so, for your first task as my dear assistant, you must help me become the very image of a true captain.</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_07</Next>
@@ -87,6 +94,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>I require a mark of authority that speaks to my noble status on this ship. Something smooth and majestic to crown a true captain! Do you understand?</Text>
       <Next>firstmate_intro_08</Next>
     </Interaction>
@@ -96,6 +104,7 @@
       <Image>FirstMateNFade</Image>
       <Image2>SadieN</Image2>
       <Text>Hm? Oh, yeah, sure.</Text>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_09</Next>
     </Interaction>
@@ -104,6 +113,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Excellent! Surely you can find something here, can you not? Go ahead and get to it! Chop chop!</Text>
       <TakeTags>firstmateIntro</TakeTags>
       <GiveTags>firstmateQuestInProgress1</GiveTags>
@@ -116,6 +126,7 @@
       <ALLTags>firstmateQuestInProgress1</ALLTags>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Have you found it yet, ma cherie? That regal something that will anoint me as a true captain?</Text>
       <Next>firstmate_quest_00_choice</Next>
     </Interaction>
@@ -133,6 +144,7 @@
       <ALLTags>firstmateQuestInProgress1</ALLTags>
       <Image>FirstMateNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>No, not yet.</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_30</Next>
@@ -142,6 +154,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateS</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>For shame, mon amie! Were you not listening?</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_12</Next>
@@ -151,6 +164,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Like all true captains, I have a charming physique worthy of my position. However…</Text>
       <Next>firstmate_quest_12</Next>
     </Interaction>
@@ -159,6 +173,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateS</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>I wish I had something a bit more human to adorn my sleek metal. Something to keep the sun from reflecting off of my head…</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_13</Next>
@@ -168,6 +183,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Yes, something soft, and lusciously flowing in the wind! Something I was tragically made without…</Text>
       <Next>firstmate_quest_14</Next>
     </Interaction>
@@ -176,6 +192,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>So... you want a wig?</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_15</Next>
@@ -185,6 +202,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateS</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>A wig?! I never! How crude! I… well. I suppose, between you and me…</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_16</Next>
@@ -194,6 +212,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Yes! Very well! It will do. Now hurry! Chop chop!</Text>
     </Interaction>
     <Interaction>
@@ -201,6 +220,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateS</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Well get to it! Chop chop!</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -212,6 +232,7 @@
       <NONETags>mopInked</NONETags>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Oh? Have you found it? Let me...</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>firstmate_give_mop_fail_02</Next>
@@ -221,6 +242,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Ahaha! Oh, la la! Ohohoho! You must be joking, ma cherie... what a drab, grey mess that is!</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_give_mop_fail_03</Next>
@@ -230,6 +252,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateS</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>I’m afraid that no captain would want anything to do with it! Hurry along now, and find me something nice.</Text>
     </Interaction>
     <Interaction>
@@ -238,6 +261,7 @@
       <ALLTags>firstmateQuestInProgress1|holdingMopHead|mopInked</ALLTags>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>What have you brought me? Let me see, now.</Text>
       <Next>firstmate_give_mop_success_01</Next>
     </Interaction>
@@ -246,6 +270,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>One...ah...handcrafted wig for the would-be captain.</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_give_mop_success_02</Next>
@@ -255,6 +280,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Hm? What is this? So sleek, woven of such lovely fibers, like the shining coat of a raven in flight! It’s the very image of captainly beauty! Fantastique!</Text>
       <TakeTags>firstmateQuestInProgress1|portraitShown</TakeTags>
       <TakeItems>Mop_Head</TakeItems>
@@ -268,6 +294,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>You’ve been wonderful thus far, ma cherie, simply wonderful. Now, for your next task, you must help me spread the good word!</Text>
       <Next>firstmate_propaganda_01</Next>
     </Interaction>
@@ -276,6 +303,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I'd really rather n-</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_04</Next>
@@ -285,6 +313,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>I have created these posters as a summons for the crew to gather for a rousing speech. And all important posters must be posted posthaste!</Text>
       <Next>firstmate_propaganda_05</Next>
     </Interaction>
@@ -293,6 +322,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>They - what?</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_06</Next>
@@ -302,6 +332,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>You, my dearest assistant, are to take these posters to three important members of our good crew.</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_07</Next>
@@ -311,6 +342,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>One shall go to our Second Mate. He is a strong ally to our cause, and quite fashionable. He should be nearby, I believe.</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_08</Next>
@@ -320,6 +352,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Ah, and the Chief Rigger as well! She should be... somewhere, I’m certain. And lastly, er… Monsieur d’Orange. His support would be, ah… healthy to have.</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_11</Next>
@@ -329,6 +362,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Now hurry, ma cherie! Be on your way! I must prepare for my speech. And rest assured - you will have a front row seat!</Text>
       <Next>firstmate_propaganda_12</Next>
     </Interaction>
@@ -337,6 +371,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I can’t wait.</Text>
       <GiveItems>Poster</GiveItems>
     </Interaction>
@@ -348,6 +383,7 @@
       <ANYTags>hasPoster|postersGiven</ANYTags>
       <Image>FirstMateMopH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Ah, my favorite aide-de-camp. How goes the campaigning?</Text>
       <Next>firstmate_propaganda_mid_00_choice</Next>
     </Interaction>
@@ -365,6 +401,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>She’s trying to grab a lantern hanging up there and won’t come down.</Text>
       <Next>firstmate_propaganda_mid_011</Next>
     </Interaction>
@@ -373,6 +410,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>It sounds like she could use some assistance. Perhaps a polearm of some sort.</Text>
       <Next>firstmate_propaganda_mid_012</Next>
     </Interaction>
@@ -381,6 +419,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieA</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>She needs to get the lantern down, not stab it.</Text>
       <Next>firstmate_propaganda_mid_013</Next>
     </Interaction>
@@ -389,6 +428,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopN</Image>
       <Image2>SadieAFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Indeed. Would not a pole arm help?</Text>
       <Next>firstmate_propaganda_mid_014</Next>
     </Interaction>
@@ -397,6 +437,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Oh. You do realize the rest of us can’t just replace body-parts on a whim, right?</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -414,6 +455,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopS</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Eh… indeed. Well, ma cherie, you are famous for getting along with him. Better than any other, at any rate.</Text>
       <Next>firstmate_propaganda_mid_022</Next>
     </Interaction>
@@ -422,6 +464,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopSFade</Image>
       <Image2>SadieA</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Gee, thanks for your help.</Text>
       <Next>firstmate_propaganda_mid_023</Next>
     </Interaction>
@@ -430,6 +473,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopH</Image>
       <Image2>SadieAFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Bartholomew always aims to please.</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -447,6 +491,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Ahahaha. Ma cherie, his healthy admiration for nobility and style is nothing to scoff at!</Text>
       <Next>firstmate_propaganda_mid_032</Next>
     </Interaction>
@@ -455,6 +500,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Right… He said something about securing the lifeboat, but he's not -</Text>
       <Next>firstmate_propaganda_mid_033</Next>
     </Interaction>
@@ -463,6 +509,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Ah, yes! He has been entrusted with the task of tying it down.</Text>
       <Next>firstmate_propaganda_mid_034</Next>
     </Interaction>
@@ -471,6 +518,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopS</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Alas, Quartermaster Bonney is refusing to talk to me, the brute, so we are at a loss for the proper tools.</Text>
       <Next>firstmate_propaganda_mid_035</Next>
     </Interaction>
@@ -479,6 +527,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Perhaps you could lend your aid in the endeavor?</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -488,6 +537,7 @@
       <ALLTags>hasPoster</ALLTags>
       <Image>FirstMateMopHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I'm on it, I'm on it.</Text>
     </Interaction>
     <!-- Region Give Poster -->
@@ -497,6 +547,7 @@
       <ALLTags>holdingPoster</ALLTags>
       <Image>FirstMateMopS</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>I see you still have some posters to deliver.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>firstmate_give_poster_01</Next>
@@ -507,6 +558,7 @@
       <Image>FirstMateMopSFade</Image>
       <Image2>SadieN</Image2>
       <Text>Actually, I -</Text>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Next>firstmate_give_poster_02</Next>
     </Interaction>
     <Interaction>
@@ -515,6 +567,7 @@
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
       <Text>Go in haste!</Text>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Next>firstmate_give_poster_03</Next>
     </Interaction>
     <Interaction>
@@ -522,6 +575,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Alright, alright, already!</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -533,6 +587,7 @@
       <ALLTags>postersGiven</ALLTags>
       <Image>FirstMateMopHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Your posters have been posted. Posthaste.</Text>
       <Next>firstmate_quest_end_01</Next>
     </Interaction>
@@ -541,6 +596,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Beg your pardon?</Text>
       <Next>firstmate_quest_end_02</Next>
     </Interaction>
@@ -549,6 +605,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I did the thing.</Text>
       <Next>firstmate_quest_end_03</Next>
     </Interaction>
@@ -557,6 +614,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Ah! Delightful, ma cherie, splendid! It seems the people are gathering for my speech. Please, take your rightful seat!</Text>
       <Next>firstmate_quest_end_03_choice</Next>
     </Interaction>
@@ -565,6 +623,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I think I’ll pass.</Text>
       <Next>firstmate_quest_end_04</Next>
     </Interaction>
@@ -585,6 +644,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I th-</Text>
       <Next>firstmate_quest_end_05</Next>
     </Interaction>
@@ -593,6 +653,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <TakeTags>postersGiven|ojPosterGiven|riggerPosterGiven|secondmatePosterGiven|riggerTalked|ojTalked|secondmateTalked</TakeTags>
       <Text>Ah-ah-ah-ah! There is no need for thanks. As a future Captain, I reward those who do me good service. Consider it my thanks. Please, take a seat!</Text>
       <SpecialActions>EndDemo</SpecialActions>
@@ -606,6 +667,7 @@
       <NONETags>firstmateIntro|firstmateQuestInProgress1|hasPoster|postersGiven</NONETags>
       <Image>FirstMateMopN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>I have nothing to say to you.</Text>
     </Interaction>
     <Interaction>

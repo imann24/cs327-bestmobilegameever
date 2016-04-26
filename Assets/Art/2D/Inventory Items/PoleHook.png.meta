@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 90a1e61ba06952044b035106ebbcca27
-timeCreated: 1460162420
+timeCreated: 1461649068
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PoleHook_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,18 +39,40 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 130, y: 130, z: 130, w: 130}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: PoleHook_0
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 151
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 102, y: 97}
+        - {x: 89, y: 97}
+        - {x: 84, y: 94}
+        - {x: 84, y: 91}
+        - {x: 56, y: 79}
+        - {x: -122, y: -81}
+        - {x: -122, y: -107}
+        - {x: -88, y: -107}
+        - {x: 118, y: 17}
+        - {x: 118, y: 89}
+        - {x: 110, y: 96}
     outline: []
   spritePackingTag: 
   userData: 
