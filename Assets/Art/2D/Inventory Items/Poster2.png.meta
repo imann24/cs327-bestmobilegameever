@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 3878180deec4fdc479e694367fc958f1
-timeCreated: 1460162402
+timeCreated: 1461649146
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Poster2_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +39,70 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 70, y: 70, z: 70, w: 70}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Poster2_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 46
+        width: 440
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 140, y: -45}
+        - {x: 142, y: -45}
+        - {x: 143, y: -6}
+        - {x: 143, y: 26}
+        - {x: 145, y: 92}
+        - {x: 146, y: 105}
+        - {x: 146, y: 159}
+        - {x: 143, y: 166}
+        - {x: 132, y: 170}
+        - {x: 99, y: 168}
+        - {x: 96, y: 172}
+        - {x: 94, y: 195}
+        - {x: 91, y: 199}
+        - {x: 87, y: 200}
+        - {x: 86, y: 208}
+        - {x: 67, y: 208}
+        - {x: 7, y: 201}
+        - {x: -42, y: 197}
+        - {x: -80, y: 192}
+        - {x: -150, y: 185}
+        - {x: -155, y: 183}
+        - {x: -155, y: 175}
+        - {x: -154, y: 160}
+        - {x: -145, y: 82}
+        - {x: -145, y: 76}
+        - {x: -142, y: 41}
+        - {x: -140, y: 20}
+        - {x: -137, y: 2}
+        - {x: -124, y: -133}
+        - {x: -122, y: -158}
+        - {x: -119, y: -171}
+        - {x: -111, y: -184}
+        - {x: -45, y: -186}
+        - {x: 20, y: -191}
+        - {x: 66, y: -191}
+        - {x: 88, y: -190}
+        - {x: 99, y: -191}
+        - {x: 135, y: -191}
+        - {x: 138, y: -190}
+        - {x: 138, y: -160}
+        - {x: 140, y: -101}
     outline: []
   spritePackingTag: 
   userData: 

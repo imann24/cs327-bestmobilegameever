@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: c8bb28e3afedf1c42bfef24c6356e8da
-timeCreated: 1460162432
+timeCreated: 1461648952
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Clean Hook Hand_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +39,46 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 40, y: 40, z: 40, w: 40}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Clean Hook Hand_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 65
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: 78}
+        - {x: -104, y: 102}
+        - {x: -205, y: 102}
+        - {x: -205, y: -67}
+        - {x: -85, y: -70}
+        - {x: -69, y: -63}
+        - {x: -54, y: -54}
+        - {x: -33, y: -34}
+        - {x: -28, y: -18}
+        - {x: -1, y: -63}
+        - {x: 37, y: -102}
+        - {x: 157, y: -102}
+        - {x: 205, y: -74}
+        - {x: 205, y: 63}
+        - {x: 186, y: 102}
+        - {x: 115, y: 102}
+        - {x: 114, y: 101}
     outline: []
   spritePackingTag: 
   userData: 

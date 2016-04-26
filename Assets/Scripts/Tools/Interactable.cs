@@ -35,6 +35,7 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IDragHandler {
 
 	public void OnPointerClick (PointerEventData eventData)
 	{
+		GameManager.InventoryManager.Hide ();
 		InteractionManager.HandleClick (this);
 	}
 

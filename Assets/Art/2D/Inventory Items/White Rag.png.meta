@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 4c5c53e8ee3b1b64ebbb0b2688ba2d92
-timeCreated: 1460162406
+timeCreated: 1461649218
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: White Rag_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +39,52 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 30, y: 30, z: 30, w: 30}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: White Rag_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 87
+        width: 450
+        height: 448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 137, y: -145}
+        - {x: 154, y: -98}
+        - {x: 213, y: -91}
+        - {x: 217, y: -91}
+        - {x: 217, y: -77}
+        - {x: 159, y: -12}
+        - {x: 95, y: 65}
+        - {x: 71, y: 72}
+        - {x: -5, y: 72}
+        - {x: -11, y: 69}
+        - {x: -61, y: 33}
+        - {x: -103, y: -15}
+        - {x: -225, y: -92}
+        - {x: -225, y: -97}
+        - {x: -222, y: -102}
+        - {x: -211, y: -105}
+        - {x: -114, y: -117}
+        - {x: -107, y: -145}
+        - {x: -64, y: -145}
+        - {x: -61, y: -144}
+        - {x: 30, y: -105}
+        - {x: 63, y: -136}
+        - {x: 123, y: -145}
     outline: []
   spritePackingTag: 
   userData: 

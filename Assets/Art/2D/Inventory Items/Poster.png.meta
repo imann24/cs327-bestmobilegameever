@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 634f0cfb1ac657b4093929f54c2aca9e
-timeCreated: 1460162408
+timeCreated: 1461649108
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Poster_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +39,53 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 80, y: 80, z: 80, w: 80}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Poster_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 86
+        width: 380
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 118, y: -180}
+        - {x: 120, y: -179}
+        - {x: 120, y: -95}
+        - {x: 118, y: -93}
+        - {x: 120, y: -89}
+        - {x: 120, y: 165}
+        - {x: 119, y: 168}
+        - {x: 113, y: 167}
+        - {x: 114, y: 173}
+        - {x: 114, y: 176}
+        - {x: 112, y: 178}
+        - {x: -56, y: 178}
+        - {x: -58, y: 176}
+        - {x: -66, y: 178}
+        - {x: -126, y: 178}
+        - {x: -128, y: 176}
+        - {x: -128, y: 75}
+        - {x: -126, y: 73}
+        - {x: -128, y: 68}
+        - {x: -128, y: -178}
+        - {x: -126, y: -180}
+        - {x: -62, y: -180}
+        - {x: -54, y: -178}
+        - {x: -43, y: -180}
     outline: []
   spritePackingTag: 
   userData: 

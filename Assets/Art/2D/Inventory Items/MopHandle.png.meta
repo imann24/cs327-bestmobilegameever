@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 623cbd843d9fdc840851c681c3cfe5b6
-timeCreated: 1460162408
+timeCreated: 1461648988
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: MopHandle_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +39,36 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 170, y: 170, z: 170, w: 170}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: MopHandle_0
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 177
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67, y: 78}
+        - {x: -95, y: -62}
+        - {x: -95, y: -80}
+        - {x: -90, y: -82}
+        - {x: -78, y: -82}
+        - {x: 93, y: 58}
+        - {x: 93, y: 78}
     outline: []
   spritePackingTag: 
   userData: 
