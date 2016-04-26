@@ -106,6 +106,13 @@
       <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
     <Interaction>
+      <Name>examine_bottle</Name>
+      <Type>Derivative</Type>
+      <Text>Bullseye.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
       <Name>throw_orange</Name>
       <Type>Derivative</Type>
       <Text>When you're short, you gotta improvise.</Text>
