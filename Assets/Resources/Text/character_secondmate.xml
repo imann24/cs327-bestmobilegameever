@@ -6,19 +6,13 @@
       <Name>talk</Name>
       <Type>Click</Type>
       <NONETags>lifeboatSecured</NONETags>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateA</Image2>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>default</Next>
     </Interaction>
     <Interaction>
       <Name>default</Name>
-      <Type>Derivative</Type>
-      <NONETags>lifeboatSecured</NONETags>
-      <Image>SadieNFade</Image>
-      <Image2>SecondMateA</Image2>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
-      <Next>default_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>default_1</Name>
       <Type>Derivative</Type>
       <NONETags>lifeboatSecured</NONETags>
       <Image>SadieNFade</Image>
@@ -33,7 +27,7 @@
       <ALLTags>lifeboatSecured</ALLTags>
       <Image>SadieNFade</Image>
       <Image2>SecondMateA</Image2>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>default_2</Next>
     <Interaction>
       <Name>default_2</Name>
@@ -62,7 +56,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>use_rope_01_1</Next>
     </Interaction>
      <Interaction>
@@ -102,7 +96,7 @@
       <GiveTags>lifeboatComment</GiveTags>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>lifeboat_comment_00_1</Next>
     </Interaction>
     <Interaction>
@@ -131,7 +125,7 @@
       <Image2>SecondMateHFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Sufficient? That was supposed to be your job.</Text>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>lifeboat_comment_02</Next>
     </Interaction>
     <Interaction>
@@ -150,7 +144,7 @@
       <Image2>SecondMateA</Image2>
       <Speaker>Second Mate</Speaker>
       <Text>...</Text>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>lifeboat_comment_04</Next>
     </Interaction>
     <Interaction>
@@ -170,7 +164,7 @@
       <Type>Derivative</Type>
       <ALLTags>lifeboatSecured</ALLTags>
       <Text>You seem to think very highly of the first mate.</Text>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>choice_bart_01</Next>
     </Interaction>
     <Interaction>
@@ -198,7 +192,7 @@
       <Image2>SecondMateHFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Oh yeah, I feel *so* blessed to be running his errands.</Text>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>choice_bart_04</Next>
     </Interaction>
     <Interaction>
@@ -267,7 +261,7 @@
       <Image>SadieNFade</Image>
       <Image2>SecondMateA</Image2>
       <GiveTags>secondmateTalked</GiveTags>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>choice_poster_10_1</Next>
     </Interaction>
     <Interaction>
@@ -286,7 +280,7 @@
       <Image2>SecondMateAFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Um...no? You’re just staring at Bart over there.</Text>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>choice_poster_12</Next>
     </Interaction>
     <Interaction>
@@ -331,7 +325,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
-      <SpecialActions>QuartermasterSpeech</SpecialActions>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <GiveTags>secondmatePosterGiven</GiveTags>
       <Next>choice_poster_20_1</Next>
     </Interaction>
