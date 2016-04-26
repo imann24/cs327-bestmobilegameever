@@ -24,7 +24,7 @@
       <Text>And why do I feel like I'm forgetting something important?</Text>
       <Speaker>Cabin Girl Sadie</Speaker>
       <TextBox>hide();</TextBox>
-      <SpecialActions>SoundKnock|ClearBG</SpecialActions>
+      <SpecialActions>SoundKnock</SpecialActions>
       <Next>tutorial_02</Next>
     </Interaction>
     <Interaction>
@@ -84,8 +84,8 @@
       <Type>Derivative</Type>
       <Text>Hand?! Hand... oh, right! Crap! Still gotta clean off the Captain's hook hand...</Text>
       <Image>SadieN</Image>
+      <SpecialActions>SoundTutorialPrompt|ClearBG</SpecialActions>
       <Speaker>Cabin Girl Sadie</Speaker>
-      <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_sadie</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>

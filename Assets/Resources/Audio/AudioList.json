@@ -10,7 +10,7 @@
 			"Volume": 100
 		},
 		{
-			“FileName”:"TitleMenu_Soundtrack_2",
+			“FileName”:"TitleMenu_Soundtrack_3",
 			“EventNames”:["menuMusicStart"],
 			"StopEventNames":["menuMusicStop"],
 			“Loop”:true,
@@ -19,7 +19,7 @@
 			"Volume": 60
 		},
 		{
-			“FileName”:"Deck_Soundtrack_A_3",
+			“FileName”:"Deck_Soundtrack_A_4",
 			“EventNames”:["onesoundtrackevery100to200seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
@@ -28,7 +28,7 @@
 			"Volume": 100
 		},
 		{
-			“FileName”:"Deck_Soundtrack_B_1",
+			“FileName”:"Deck_Soundtrack_B_2",
 			“EventNames”:["onesoundtrackevery100to200seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
@@ -667,7 +667,7 @@
 			"Volume": 100
 		},
 		{
-			“FileName”:"Deck_Soundtrack_C_2",
+			“FileName”:"Deck_Soundtrack_C_4",
 			“EventNames”:["onesoundtrackevery100to200seconds"],
 			"StopEventNames":[],
 			“Loop”:false,
