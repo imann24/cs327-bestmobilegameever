@@ -132,7 +132,6 @@
       <ALLTags>firstmateQuestInProgress1</ALLTags>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
-<<<<<<< HEAD
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_quest_00_1</Next>
     </Interaction>
@@ -142,9 +141,7 @@
       <ALLTags>firstmateQuestInProgress1</ALLTags>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
-=======
       <Speaker>First Mate Bartholomew</Speaker>
->>>>>>> master
       <Text>Have you found it yet, ma cherie? That regal something that will anoint me as a true captain?</Text>
       <Next>firstmate_quest_00_choice</Next>
     </Interaction>
@@ -248,11 +245,8 @@
       <NONETags>mopInked</NONETags>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
-<<<<<<< HEAD
-=======
       <Speaker>First Mate Bartholomew</Speaker>
       <Text>Oh? Have you found it? Let me...</Text>
->>>>>>> master
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>firstmate_give_mop_fail_01</Next>
     </Interaction>
@@ -295,7 +289,6 @@
       <ALLTags>firstmateQuestInProgress1|holdingMopHead|mopInked</ALLTags>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
-<<<<<<< HEAD
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_give_mop_success_00_1</Next>
     </Interaction>
@@ -304,9 +297,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
-=======
       <Speaker>First Mate Bartholomew</Speaker>
->>>>>>> master
       <Text>What have you brought me? Let me see, now.</Text>
       <Next>firstmate_give_mop_success_01</Next>
     </Interaction>
@@ -425,7 +416,6 @@
       <ANYTags>hasPoster|postersGiven</ANYTags>
       <Image>FirstMateMopH</Image>
       <Image2>SadieNFade</Image2>
-<<<<<<< HEAD
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_mid_00_1</Next>
     </Interaction>
@@ -434,9 +424,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopH</Image>
       <Image2>SadieNFade</Image2>
-=======
       <Speaker>First Mate Bartholomew</Speaker>
->>>>>>> master
       <Text>Ah, my favorite aide-de-camp. How goes the campaigning?</Text>
       <Next>firstmate_propaganda_mid_00_choice</Next>
     </Interaction>
@@ -606,11 +594,8 @@
       <ALLTags>holdingPoster</ALLTags>
       <Image>FirstMateMopS</Image>
       <Image2>SadieNFade</Image2>
-<<<<<<< HEAD
-=======
       <Speaker>First Mate Bartholomew</Speaker>
       <Text>I see you still have some posters to deliver.</Text>
->>>>>>> master
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>firstmate_give_poster_00_1</Next>
     </Interaction>
@@ -636,11 +621,8 @@
       <Image>FirstMateMopSFade</Image>
       <Image2>SadieN</Image2>
       <Text>Actually, I -</Text>
-<<<<<<< HEAD
       <SpecialActions>FirstMateSpeech</SpecialActions>
-=======
       <Speaker>Cabin Girl Sadie</Speaker>
->>>>>>> master
       <Next>firstmate_give_poster_02</Next>
     </Interaction>
     <Interaction>
