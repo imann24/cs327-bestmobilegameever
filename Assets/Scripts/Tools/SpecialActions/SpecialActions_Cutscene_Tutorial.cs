@@ -66,14 +66,16 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         Destroy(Quartermaster);
         */
 
-        if (!Testing) { GameObject.Find("Test_Pete").SetActive(false); }
+        if (!Testing) {
+            GameObject.Find("Test_Pete").SetActive(false);
+            if (BGClouds != null) BGClouds.SetActive(true);
+            else if (BGBlack != null) BGBlack.SetActive(true);
+        }
         GameManager.InventoryManager.TakeItem("Hook");
         GameManager.InventoryManager.GiveItem("Hook");
         GameManager.InventoryManager.Hide();
         next = "tutorial_cutscene_start";
 
-        if (BGClouds != null) BGClouds.SetActive(true);
-        else if (BGBlack != null) BGBlack.SetActive(true);
     }
 
     public override void DoSpecialAction(string actionTag) {

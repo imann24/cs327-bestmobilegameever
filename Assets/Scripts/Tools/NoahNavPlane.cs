@@ -45,7 +45,7 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 			Vector3 destination = eventData.pointerCurrentRaycast.worldPosition;
 			Player.GetComponent<NavMeshAgent> ().CalculatePath (destination, path);
 			//if(path.status == NavMeshPathStatus.PathComplete){
-
+			GameManager.InventoryManager.Hide();
 			if (destination.x > Player.transform.position.x) {
 				if (flipped) {
 					Flip ();

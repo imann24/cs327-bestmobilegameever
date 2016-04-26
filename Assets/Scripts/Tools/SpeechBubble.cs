@@ -18,6 +18,16 @@ public class SpeechBubble : MonoBehaviour {
 	}
 
 	public void Say(Interactable interactor, Interaction interaction) {
+		if (transform.parent.localScale.x < 0 && transform.localScale.x > 0) 
+		{
+			gameObject.transform.localScale = new Vector3 (gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+
+		} 
+		else if (transform.parent.localScale.x > 0 && transform.localScale.x < 0) 
+		{
+			gameObject.transform.localScale = new Vector3 (gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+
+		}  
         this.interactor = interactor;
         this.interaction = interaction;
         GameManager.UIManager.LockScreen();
