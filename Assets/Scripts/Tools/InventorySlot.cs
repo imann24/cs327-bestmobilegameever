@@ -17,6 +17,10 @@ public class InventorySlot : MonoBehaviour, IDropHandler{
 			#if (DEBUG)
 			Debug.Log("Moving " + GameManager.InventoryManager.Selected.name);
 			#endif
+
+			// Removes the holding tag so the game no longer assumes you're holding the item
+			GameManager.TakeTag (GameManager.InventoryManager.Selected.GetComponent<InventoryItem> ().HoldTag);
+
 			GameManager.InventoryManager.Selected.GetComponent<InventoryItem> ().MoveTo (this);
 		}
 	}
