@@ -367,8 +367,7 @@
       <ALLTags>riggerDown</ALLTags>
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
-      <Speaker>Chief Rigger Wendy</Speaker>
-      <Text>Thanks for helping me out. What can I do for you?</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>talk_1</Next>
     </Interaction>
     <Interaction>
@@ -376,7 +375,8 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
-      <SpecialActions>RiggerSpeech</SpecialActions>
+      <Speaker>Chief Rigger Wendy</Speaker>
+      <Text>Thanks for helping me out. What can I do for you?</Text>
       <Next>rigger_choice</Next>
     </Interaction>
     <!-- EndRegion -->
