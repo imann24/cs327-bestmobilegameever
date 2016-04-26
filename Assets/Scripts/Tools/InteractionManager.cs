@@ -449,9 +449,12 @@ public class InteractionManager : MonoBehaviour {
 		
 
 
-			if (displayed.Count () == 1) {
-				
-				GameManager.UIManager.EnableTapToContinue (interactor, displayed.Single ());
+			if (displayed.Count () <= 1) {
+
+				if (displayed.Count() > 0) {
+					GameManager.UIManager.EnableTapToContinue (interactor, displayed.Single ());
+				}
+
 				UIManager._instance.ToggleDialogueArrows(false);
 
 
