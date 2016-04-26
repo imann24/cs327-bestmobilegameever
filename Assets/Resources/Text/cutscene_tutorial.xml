@@ -6,6 +6,12 @@
       <Name>tutorial_start</Name>
       <Type>Derivative</Type>
       <SpecialActions>SoundTutorialPrompt</SpecialActions>
+      <Next>tutorial_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>tutorial_00_1</Name>
+      <Type>Derivative</Type>
+      <SpecialActions>SadieConfused</SpecialActions>
       <Next>tutorial_00</Next>
     </Interaction>
     <Interaction>
@@ -35,6 +41,15 @@
       <Image2>PirateQuestionMark</Image2>
       <Speaker>???</Speaker>
       <SpecialActions>SoundTutorialPrompt</SpecialActions>
+      <Next>tutorial_choice_1</Next>
+    </Interaction>
+     <Interaction>
+      <Name>tutorial_choice_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>PirateQuestionMark</Image2>
+      <Speaker>???</Speaker>
+      <SpecialActions>SadieTalk</SpecialActions>
       <Next>tutorial_choice</Next>
     </Interaction>
     <Interaction>
@@ -63,6 +78,7 @@
       <Name>tutorial_03</Name>
       <Type>Derivative</Type>
       <Text>Well hurry up and get out here! We need a hand!</Text>
+      <SpecialActions>SadieAhoy</SpecialActions>
       <Image>SadieNFade</Image>
       <Image2>PirateQuestionMark</Image2>
       <Speaker>???</Speaker>
@@ -73,6 +89,7 @@
       <Name>tutorial_04</Name>
       <Type>Derivative</Type>
       <Text>Does it matter? Hurry up and get out here! We need a hand!</Text>
+      <SpecialActions>SadieTalk</SpecialActions>
       <Image>SadieNFade</Image>
       <Image2>PirateQuestionMark</Image2>
       <Speaker>???</Speaker>

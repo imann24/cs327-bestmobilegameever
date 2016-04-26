@@ -122,7 +122,6 @@
       <Name>talk</Name>
       <Type>Click</Type>
       <NONETags>firstmateQuestInProgress1|swabbieGaveMop</NONETags>
-      <SpecialActions>SwabbieSpeech</SpecialActions>
       <Text>How's it goin', lass?</Text>
       <TextType>Floating</TextType>
       <Next>swabbie_response</Next>

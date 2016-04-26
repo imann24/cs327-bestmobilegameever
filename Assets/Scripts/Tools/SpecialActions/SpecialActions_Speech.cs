@@ -21,6 +21,18 @@ public class SpecialActions_Speech : SpecialActions {
 		case "SwabbieSpeech":
 			audio.VoiceEffect("SwabbieSpeech");
 			break;
+		case "OJSpeech":
+			audio.VoiceEffect("OJSpeech");
+			break;
+		case "SaddieAhoy":
+			audio.VoiceEffect("SaddieAhoy");
+			break;
+		case "SaddieTalk":
+			audio.VoiceEffect("SaddieTalk");
+			break;
+		case "SaddieConfused":
+			EventController.Event ("SadieConfused");
+			break;
         }
     }
 
