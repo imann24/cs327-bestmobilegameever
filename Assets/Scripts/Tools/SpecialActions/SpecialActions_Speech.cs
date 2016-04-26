@@ -9,12 +9,11 @@ public class SpecialActions_Speech : SpecialActions {
 		case "FirstMateSpeech":
 			audio.VoiceEffect("FirstMateSpeech");
             break;
-		case "QuarterMasterSpeech":
-			audio.VoiceEffect("SecondMateSpeech");
+		case "QuartermasterSpeech":
+			audio.VoiceEffect("QuartermasterSpeech");
 			break;
 		case "RiggerSpeech":
 			audio.VoiceEffect ("RiggerSpeech");
-			Debug.Log ("Rigerrrrrr");
 			break;
 		case "SwabbieSpeech":
 			audio.VoiceEffect("SwabbieSpeech");

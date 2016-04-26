@@ -462,6 +462,7 @@
     <!-- EndRegion-->
     <Interaction>
       <Name>rigger_choice</Name>
+      <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>

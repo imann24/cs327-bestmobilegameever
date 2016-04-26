@@ -406,7 +406,7 @@ public class AudioController : MonoBehaviour {
 		case "FirstMateSpeech":
 			Play (_firstMate.Cycle ());
 			break;
-		case "QuarterMasterSpeech":
+		case "QuartermasterSpeech":
 			Play (_quarterMaster.Cycle ());
 			break;
 		case "SwabbieSpeech":
