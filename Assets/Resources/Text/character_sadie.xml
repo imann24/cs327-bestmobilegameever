@@ -184,6 +184,18 @@
       <Text>It's beyond repair.</Text>
       <TextType>Floating</TextType>
     </Interaction>
+    <Interaction>
+      <Name>examine_barrel</Name>
+      <Type>Derivative</Type>
+      <Text>Nothing useful in there.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_cannon</Name>
+      <Type>Derivative</Type>
+      <Text>Boom.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
     <!-- EndRegion -->
     <!-- Region Other -->
     <Interaction>
