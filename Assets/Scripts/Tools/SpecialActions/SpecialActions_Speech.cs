@@ -13,7 +13,8 @@ public class SpecialActions_Speech : SpecialActions {
 			audio.VoiceEffect("SecondMateSpeech");
 			break;
 		case "RiggerSpeech":
-			audio.VoiceEffect("RiggerSpeech");
+			audio.VoiceEffect ("RiggerSpeech");
+			Debug.Log ("Rigerrrrrr");
 			break;
 		case "SwabbieSpeech":
 			audio.VoiceEffect("SwabbieSpeech");
