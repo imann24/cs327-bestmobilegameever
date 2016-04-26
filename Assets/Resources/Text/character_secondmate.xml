@@ -6,13 +6,25 @@
       <Name>talk</Name>
       <Type>Click</Type>
       <NONETags>lifeboatSecured</NONETags>
-      <Image>SadieNFade</Image>
-      <Image2>SecondMateA</Image2>
-      <SpecialActions>SecondMateSpeech</SpecialActions>
+      <Next>default</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Click</Type>
+      <ALLTags>lifeboatSecured|lifeboatComment</ALLTags>
       <Next>default</Next>
     </Interaction>
     <Interaction>
       <Name>default</Name>
+      <Type>Derivative</Type>
+      <NONETags>lifeboatSecured</NONETags>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateA</Image2>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
+      <Next>default_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>default_1</Name>
       <Type>Derivative</Type>
       <NONETags>lifeboatSecured</NONETags>
       <Image>SadieNFade</Image>
