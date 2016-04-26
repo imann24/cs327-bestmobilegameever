@@ -28,6 +28,7 @@
 			<NONETags>hasRag</NONETags>
 			<Text>Aha! Just what I needed.</Text>
 			<TextType>Floating</TextType>
+      <TextBox>Drag one item in your inventory on top of another to combine them for a new item!</TextBox>
 			<Next>take</Next>
 			<NextInteractor>Rag</NextInteractor>
 		</Interaction>
