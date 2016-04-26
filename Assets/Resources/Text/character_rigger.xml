@@ -93,6 +93,14 @@
       <GiveTags>riggerHit|riggerTalked</GiveTags>
       <SpecialActions>SoundOrange</SpecialActions>
       <TakeItems>Orange</TakeItems>
+      <Next>rigger_hit_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_hit_00_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerA</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_hit_00</Next>
     </Interaction>
     <Interaction>
@@ -109,6 +117,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerAFade</Image2>
       <Text>Can I talk to you for a moment?</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_hit_02</Next>
     </Interaction>
     <Interaction>
@@ -125,6 +134,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
       <Text>Can’t you just climb a little higher?</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_hit_04</Next>
     </Interaction>
     <Interaction>
@@ -149,6 +159,7 @@
       <Type>Click</Type>
       <MaxDistance>10</MaxDistance>
       <ALLTags>riggerHit</ALLTags>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>talk_stuck_00</Next>
     </Interaction>
     <Interaction>
@@ -165,6 +176,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
       <Text>I'm trying.</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>talk_stuck_02</Next>
     </Interaction>
     <Interaction>
@@ -182,6 +194,14 @@
       <Image2>CheifRiggerNFade</Image2>
       <Text>I got something to extend your reach.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_mop_handle_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_mop_handle_00_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerS</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_mop_handle_01</Next>
     </Interaction>
     <Interaction>
@@ -199,7 +219,15 @@
       <Image2>CheifRiggerNFade</Image2>
       <Text>Can you use this?</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
-      <Next>give_hook_01</Next>
+      <Next>give_hook_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_hook_00_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerN</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
+      <Next>give_mop_handle_01</Next>
     </Interaction>
     <Interaction>
       <Name>give_hook_01</Name>
@@ -217,6 +245,14 @@
       <Image2>CheifRiggerNFade</Image2>
       <Text>Hey, I’ve got something for you.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_01_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_01_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerN</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_01</Next>
     </Interaction>
     <Interaction>
@@ -233,6 +269,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
       <Text>You're not actually that high, you know.</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_03</Next>
     </Interaction>
     <Interaction>
@@ -250,6 +287,14 @@
       <Image2>CheifRiggerNFade</Image2>
       <Text>Here, try this.</Text>
       <TakeItems>Pole_Hook</TakeItems>
+      <Next>give_pole_hook_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_pole_hook_00_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerH</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_pole_hook_01</Next>
     </Interaction>
     <Interaction>
@@ -261,6 +306,15 @@
       <GiveTags>riggerDown</GiveTags>
       <TakeTags>riggerHit</TakeTags>
       <SpecialActions>RiggerDescend</SpecialActions>
+      <Next>rigger_descend_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_descend_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerH</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
+      <Next>rigger_descend</Next>
     </Interaction>
     <Interaction>
       <Name>rigger_descend</Name>
@@ -281,6 +335,14 @@
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
       <Text>Thanks for helping me out. What can I do for you?</Text>
+      <Next>talk_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerN</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_choice</Next>
     </Interaction>
     <!-- EndRegion -->
@@ -291,6 +353,7 @@
       <ALLTags>holdingPoster|riggerDown</ALLTags>
       <NONETags>riggerPosterGiven</NONETags>
       <Text>The first mate wanted you to have this.</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_descend_03</Next>
     </Interaction>
     <Interaction>
@@ -299,6 +362,7 @@
       <ALLTags>hasPoster</ALLTags>
       <NONETags>riggerPosterGiven</NONETags>
       <Text>The first mate wanted you to have this.</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_descend_03</Next>
     </Interaction>
     <Interaction>
@@ -326,6 +390,7 @@
       <Type>Derivative</Type>
       <NONETags>hasRope|lifeboatSecured</NONETags>
       <Text>Do you mind if I use that rope of yours?</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_choice_20</Next>
     </Interaction>
     <Interaction>
@@ -342,6 +407,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
       <Text>Can I borrow that length of ‘line’, please?</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_choice_22</Next>
     </Interaction>
     <Interaction>
