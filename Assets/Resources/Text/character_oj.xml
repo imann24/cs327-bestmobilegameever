@@ -9,6 +9,7 @@
       <GiveTags>ojIntroComplete</GiveTags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>...</Text>
       <Next>oj_intro_01</Next>
     </Interaction>
@@ -17,6 +18,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>...</Text>
       <Next>oj_intro_02</Next>
     </Interaction>
@@ -25,6 +27,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelA</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>Ye be eyein' me citrus?</Text>
       <Next>oj_choice</Next>
     </Interaction>
@@ -34,6 +37,7 @@
       <ALLTags>ojIntroComplete</ALLTags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>The fruit be mine.</Text>
       <Next>oj_choice</Next>
     </Interaction>
@@ -53,6 +57,7 @@
       <NONETags>ojChalkGiven</NONETags>
       <Image>OrangeGuyBarrelA</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>The fruit be mine.</Text>
       <Next>oj_orange_01</Next>
     </Interaction>
@@ -61,6 +66,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelAFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Please?</Text>
       <Next>oj_orange_02</Next>
     </Interaction>
@@ -69,6 +75,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelA</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>Nay.</Text>
     </Interaction>
     <Interaction>
@@ -77,6 +84,7 @@
       <ALLTags>ojChalkGiven</ALLTags>
       <Image>OrangeGuyBarrelH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>Ye hallowed bearer of the pale stone.</Text>
       <Next>oj_orange_11</Next>
     </Interaction>
@@ -85,6 +93,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <GiveItems>Orange</GiveItems>
       <Text>I bequeath ye one of me fine fruits. Treasure it as ye treasure yer life!</Text>
     </Interaction>
@@ -95,6 +104,7 @@
       <Type>Derivative</Type>
       <ALLTags>hasPoster</ALLTags>
       <NONETags>ojPosterGiven</NONETags>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I need to give you this poster.</Text>
       <Next>give_poster_0</Next>
     </Interaction>
@@ -119,6 +129,7 @@
       <NONETags>ojChalkGiven</NONETags>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I-</Text>
       <Next>give_poster_01</Next>
     </Interaction>
@@ -136,6 +147,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <GiveTags>ojTalked</GiveTags>
       <Text>Bring me a stone white and fine as snow, the type with which one may draw meaning.</Text>
       <Next>give_poster_02</Next>
@@ -147,6 +159,7 @@
       <GiveTags>ojChalkRequested</GiveTags>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>...Excuse me?</Text>
       <Next>give_poster_03</Next>
     </Interaction>
@@ -155,6 +168,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>Yer ears be failing ye? Bring me a stone white and fine as snow, the type with which one may draw meaning.</Text>
       <Next>give_poster_04</Next>
     </Interaction>
@@ -163,6 +177,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieA</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Look, I really don’t have time for-</Text>
       <Next>give_poster_05</Next>
     </Interaction>
@@ -171,6 +186,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieAFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>Return when ye've found it.</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -181,6 +197,7 @@
       <ALLTags>ojChalkRequested</ALLTags>
       <Image>OrangeGuyBarrelA</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>I won’t repeat myself again.</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -192,6 +209,7 @@
       <GiveTags>ojPosterGiven</GiveTags>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I got you that chalk. Now please take this flyer off my hands.</Text>
       <Next>give_poster_success</Next>
     </Interaction>
@@ -200,6 +218,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>Aye, great stone-bearer, I accept yer offering.</Text>
     </Interaction>
     <Interaction>
@@ -220,6 +239,7 @@
       <NONETags>ojChalkRequested</NONETags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>The stone! How did you know?!</Text>
       <Next>give_chalk_10</Next>
     </Interaction>
@@ -228,6 +248,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Um, did you want this chalk?</Text>
       <Next>give_chalk_11</Next>
     </Interaction>
@@ -236,6 +257,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>Give it here!</Text>
       <Next>give_chalk_12</Next>
     </Interaction>
@@ -244,6 +266,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Alright then...</Text>
       <Next>give_chalk_13</Next>
     </Interaction>
@@ -252,6 +275,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>Ye have done me a great kindness this day. I owe you a debt that can never be repaid.</Text>
       <Next>give_chalk_14</Next>
     </Interaction>
@@ -260,6 +284,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I, uh, sure.</Text>
       <Next>give_chalk_15</Next>
     </Interaction>
@@ -268,6 +293,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelHFade</Image>
       <Image2>SadieH</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I have no idea what just happened but I’ll take it.</Text>
       <GiveTags>ojChalkGiven</GiveTags>
       <TakeItems>Chalk</TakeItems>
@@ -282,6 +308,7 @@
       <TakeTags>ojChalkRequested</TakeTags>
       <Image>OrangeGuyBarrelH</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>At last! The blessed marking stone!</Text>
       <Next>give_chalk_20</Next>
     </Interaction>
@@ -290,6 +317,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>It’s called ‘chalk’.</Text>
       <Next>give_chalk_21</Next>
     </Interaction>
@@ -298,6 +326,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelHFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>What did you need this for, anyhow?</Text>
       <Next>give_chalk_22</Next>
     </Interaction>
@@ -306,6 +335,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>That information be highly confidential. Ye need not trouble yerself over such trivial things.</Text>
       <Next>give_chalk_23</Next>
     </Interaction>
@@ -314,6 +344,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
       <Text>Ye have done me a great kindness this day. I owe you a debt that can never be repaid.</Text>
       <Next>give_chalk_24</Next>
     </Interaction>
@@ -322,6 +353,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>You're welcome, I guess.</Text>
       <GiveTags>ojChalkGiven</GiveTags>
       <TakeItems>Chalk</TakeItems>
@@ -334,6 +366,7 @@
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Nevermind.</Text>
     </Interaction>
   <!-- EndRegion -->

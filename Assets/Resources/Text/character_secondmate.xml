@@ -20,6 +20,7 @@
       <NONETags>lifeboatSecured</NONETags>
       <Image>SadieNFade</Image>
       <Image2>SecondMateA</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>Arrr! Don’t bother me, you slime-swiller!</Text>
       <Next>choice</Next>
     </Interaction>
@@ -29,6 +30,7 @@
       <ALLTags>lifeboatSecured</ALLTags>
       <Image>SadieNFade</Image>
       <Image2>SecondMateA</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>Arrr! Why do you continue to disturb me?</Text>
       <Next>choice</Next>
     </Interaction>
@@ -39,6 +41,7 @@
       <ALLTags>holdingRope</ALLTags>
       <Image>SadieN</Image>
       <Image2>SecondMateNFade</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>This might help you with your lifeboat problem.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>use_rope_01</Next>
@@ -48,6 +51,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>That is not - that is -</Text>
       <Next>use_rope_02</Next>
     </Interaction>
@@ -56,6 +60,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>*Ahem* Do not interrupt my process, you scurvy lout!</Text>
       <Next>use_rope_03</Next>
     </Interaction>
@@ -64,6 +69,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>If I have need of your services, I will inform you of such!</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -77,6 +83,7 @@
       <GiveTags>lifeboatComment</GiveTags>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>You secured the lifeboat, did you?</Text>
       <Next>lifeboat_comment_00</Next>
     </Interaction>
@@ -85,6 +92,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>Hm, yes - I judge your work to be sufficient.</Text>
       <Next>lifeboat_comment_01</Next>
     </Interaction>
@@ -93,6 +101,7 @@
       <Type>Derivative</Type>
       <Image>SadieA</Image>
       <Image2>SecondMateHFade</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Sufficient? That was supposed to be your job.</Text>
       <Next>lifeboat_comment_02</Next>
     </Interaction>
@@ -101,6 +110,7 @@
       <Type>Derivative</Type>
       <Image>SadieAFade</Image>
       <Image2>SecondMateA</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>Don’t speak back to me, bilge rat! You are testing my patience.</Text>
       <Next>lifeboat_comment_03</Next>
     </Interaction>
@@ -109,6 +119,7 @@
       <Type>Derivative</Type>
       <Image>SadieAFade</Image>
       <Image2>SecondMateA</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>...</Text>
       <Next>lifeboat_comment_04</Next>
     </Interaction>
@@ -117,6 +128,7 @@
       <Type>Derivative</Type>
       <Image>SadieAFade</Image>
       <Image2>SecondMateA</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>Why are you still here? I don’t have time for layabouts.</Text>
       <Next>choice</Next>
     </Interaction>
@@ -135,6 +147,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>Bartholomew? Aye, I do - as should you! He has the untameable spirit of a pirate and the dashing beauty of a captain.</Text>
       <Next>choice_bart_02</Next>
     </Interaction>
@@ -143,6 +156,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>All lesser creatures are blessed to look upon him!</Text>
       <Next>choice_bart_03</Next>
     </Interaction>
@@ -151,6 +165,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>SecondMateHFade</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Oh yeah, I feel *so* blessed to be running his errands.</Text>
       <Next>choice_bart_04</Next>
     </Interaction>
@@ -159,6 +174,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>He - entrusted a task to *you*?! That’s -</Text>
       <Next>choice_bart_05</Next>
     </Interaction>
@@ -167,6 +183,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>That is, perhaps you are not quite the bilge rat you look, after all.</Text>
       <Next>choice_bart_06</Next>
     </Interaction>
@@ -175,6 +192,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>SecondMateNFade</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Stop it, I’m blushing.</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -186,6 +204,7 @@
       <ALLTags>holdingPoster</ALLTags>
       <Image>SadieN</Image>
       <Image2>SecondMateNFade</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Here, I’ve got this poster for you -</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>choice_poster_10</Next>
@@ -196,6 +215,9 @@
       <ALLTags>holdingPoster|lifeboatSecured</ALLTags>
       <NONETags>secondmatePosterGiven</NONETags>
       <SpecialActions>ReturnSelected</SpecialActions>
+      <Image>SadieN</Image>
+      <Image2>SecondMateNFade</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Here, I’ve got this poster for you from the first mate.</Text>
       <Next>choice_poster_20</Next>
     </Interaction>
@@ -212,6 +234,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateA</Image2>
+      <Speaker>Second Mate</Speaker>
       <GiveTags>secondmateTalked</GiveTags>
       <Text>Avast ye! Can’t you see I’m working?</Text>
       <Next>choice_poster_11</Next>
@@ -221,6 +244,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>SecondMateAFade</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Um...no? You’re just staring at Bart over there.</Text>
       <Next>choice_poster_12</Next>
     </Interaction>
@@ -229,6 +253,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>As well I should! He is true captain material. So sleek, so shiny…</Text>
       <Next>choice_poster_13</Next>
     </Interaction>
@@ -237,6 +262,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>*Ahem* I am, in fact, diligently contriving a strategy to fix this lifeboat’s precarious situation.</Text>
       <Next>choice_poster_14</Next>
     </Interaction>
@@ -245,6 +271,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>But I don’t expect you would understand such an intellectual process. So begone with you, cur!</Text>
     </Interaction>
     <Interaction>
@@ -254,6 +281,7 @@
       <NONETags>secondmatePosterGiven</NONETags>
       <Image>SadieN</Image>
       <Image2>SecondMateNFade</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Here, I’ve got this poster for you from the first mate.</Text>
       <Next>choice_poster_20</Next>
     </Interaction>
@@ -262,6 +290,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>It’s from Bartholomew? Why didn’t you say something!? Give me that!</Text>
       <GiveTags>secondmatePosterGiven</GiveTags>
       <Next>decrease</Next>
@@ -281,6 +310,7 @@
       <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>SecondMateAFade</Image2>
+      <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Pfft. I didn’t want to talk to you either.</Text>
     </Interaction>
   <!-- EndRegion -->

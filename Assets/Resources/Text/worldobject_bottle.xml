@@ -4,7 +4,7 @@
     <Interaction>
       <Name>examine_bottle_1</Name>
       <Type>Click</Type>
-      <NONETags>bottleExamined</NONETags>
+      <NONETags>bottleExamined|bottleBroken</NONETags>
       <Text>Great. I can't reach that... maybe if I headbutt the wall hard enough?</Text>
       <Image>SadieS</Image>
       <Speaker>Cabin Girl Sadie</Speaker>
@@ -23,6 +23,7 @@
       <Name>use_orange_bottle</Name>
       <Type>UseItem</Type>
 	    <ALLTags>holdingOrange</ALLTags>
+      <GiveTags>bottleBroken</GiveTags>
 	    <TakeItems>Orange</TakeItems>
       <SpecialActions>CreateRag|BreakBottle</SpecialActions>
       <NextInteractor>Rag</NextInteractor>
@@ -33,7 +34,16 @@
       <Name>examine</Name>
       <Type>Click</Type>
       <ALLTags>bottleExamined</ALLTags>
+      <NONETags>bottleBroken</NONETags>
       <Next>default_bottle</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
+      <ALLTags>bottleBroken</ALLTags>>
+      <Next>examine_bottle</Next>
       <NextInteractor>Sadie</NextInteractor>
       <IgnoreDistance>true</IgnoreDistance>
     </Interaction>

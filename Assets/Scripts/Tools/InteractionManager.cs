@@ -415,7 +415,7 @@ public class InteractionManager : MonoBehaviour {
 				}
 			}
 			if (!isLeft (interactor) && interactor.gameObject.name!="Sadie" && !isFacing(interactor)  && interactor.gameObject.tag!="DontFlip") 
-			{ //interactor on the right
+			{
 				
 				if (!interactor.GetComponent<Interactable> ().flipped) { //if interactor is facing right
 					
@@ -466,7 +466,7 @@ public class InteractionManager : MonoBehaviour {
                 Vector2 playerPos = new Vector2(GameManager.PlayerCharacter.transform.position.x, GameManager.PlayerCharacter.transform.position.z);
                 Vector2 targetPos = new Vector2(getPositionOfInteractable(interactor).x, getPositionOfInteractable(interactor).z);
                 targetPos += ((playerPos - targetPos).normalized * 1.5f);
-                GameManager.PlayerCharacter.GetComponent<NoahMove>().GoToInteraction(targetPos, interactor, interactionList);
+                GameManager.PlayerCharacter.GetComponent<NoahMove>().GoToInteraction(targetPos, interactor, validInteractions);
                 if (interactor.Debugging) Debug.Log("Moving to this: " + interactor);
                 //Vector3 v = getPositionOfInteractable(interactor) + new Vector3 (1, 0,0); //
                 //GameObject.Find ("Sadie").GetComponent<NoahMove> ().GoTo (v); 
