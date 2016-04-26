@@ -33,13 +33,14 @@ public class InventoryManager : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		if (FirstEmptySlot) {
 			Show ();
 			GameObject itemToGive = InventoryItem.Create (item);
+			Debug.Log ("inventory object " + itemToGive.name);
 			if (itemToGive) {
 				this.gameObject.SetActive (true);
 				itemToGive.GetComponent<InventoryItem> ().MoveTo (FirstEmptySlot);
 				itemToGive.GetComponent<Image> ().preserveAspect = true; 
-
+				itemToGive.transform.localScale = Vector3.one;
 				EventController.Event(EventList.INVENTORY_ITEM_COLLECTED, item);
-
+				Hide ();
 				return true;
 			} else {
 				#if (DEBUG)

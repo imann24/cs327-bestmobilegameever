@@ -8,12 +8,12 @@ public class NoahMove : MonoBehaviour {
 
     private Interactable interactor;
     private List<Interaction> interactionList;
-    private Vector2 interactionPos;
-    private bool isInteractionPending = false;
-    private float minDistanceToInteract = 0.1f;
+    public Vector2 interactionPos;
+    public bool isInteractionPending = false;
+    private float minDistanceToInteract;
+    private Vector2 lastPosition;
 
 	private Animator anim;
-
     // Use this for initialization
     void Start () {
 		anim = GetComponent<Animator> ();
@@ -23,11 +23,22 @@ public class NoahMove : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (isInteractionPending) {
-            Vector2 currentPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
-            float close = (currentPos - interactionPos).sqrMagnitude;
-            if (close < minDistanceToInteract) {
+            if (Input.GetMouseButtonDown(0)) {
                 isInteractionPending = false;
-                InteractionManager.HandleInteractionList(interactor, interactionList);
+                GameManager.InventoryManager.ReturnSelected();
+            }
+            else {
+                Vector2 currentPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
+                float speed = (lastPosition - currentPos).magnitude * Time.deltaTime;
+                lastPosition = currentPos;
+
+                if (speed < 0.00001f) {
+                    float distance = (currentPos - interactionPos).sqrMagnitude;
+                    if (distance <= minDistanceToInteract) {
+                        InteractionManager.HandleInteractionList(interactor, interactionList);
+                        isInteractionPending = false;
+                    }
+                }
             }
         }
 
@@ -45,6 +56,22 @@ public class NoahMove : MonoBehaviour {
         interactor = i;
         interactionList = iList;
         isInteractionPending = true;
+        lastPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
+
+        foreach (Interaction interaction in interactionList) {
+            minDistanceToInteract = Mathf.Max(0.1f, interaction.iMaxDist);
+        }
+
+        NoahNavPlane navFloor = (NoahNavPlane)FindObjectOfType (typeof(NoahNavPlane));
+		if (interactionPos.x > transform.position.x) {
+			if (navFloor.flipped) {
+				navFloor.Flip ();
+			}
+		} else {
+			if (!navFloor.flipped) {
+				navFloor.Flip ();
+			}
+		} 
         GoTo(new Vector3(interactionPos.x, gameObject.transform.position.y, interactionPos.y));
     }
 }

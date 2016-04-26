@@ -14,7 +14,9 @@ GameObject:
   - 65: {fileID: 6589814}
   - 114: {fileID: 11499672}
   - 23: {fileID: 2331044}
-  - 114: {fileID: 11440200}
+  - 114: {fileID: 11465976}
+  - 114: {fileID: 11412038}
+  - 95: {fileID: 9580124}
   m_Layer: 0
   m_Name: Firstmate
   m_TagString: Untagged
@@ -128,6 +130,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.044107, y: 2, z: 3.5252852}
   m_Center: {x: -0.014657497, y: 0, z: 1.6443533}
+--- !u!95 &9580124
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102676}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e54e2adaa6175254b92c56973faf1acc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11412038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: FirstMateSpeech
+  Sound: FirstMateSpeech
+  UseExtended: 1
+  ChangesSprite: 0
+  MovesObject: 1
+  CreatesObject: 0
+  PlaysSound: 1
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
+  SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 13.1895685, y: -2.261826, z: 4.8999996}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11416858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,35 +189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechColor: {r: 1, g: 1, b: 1, a: 1}
   floatingText: {fileID: 169042, guid: 01097cf6c56696d46ba0004c8b498314, type: 2}
---- !u!114 &11440200
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 102676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionTag: ChangeToMop
-  Sound: MopOnFirstmate
-  UseExtended: 1
-  ChangesSprite: 1
-  MovesObject: 0
-  CreatesObject: 0
-  PlaysSound: 1
-  UseNavMesh: 0
-  DestroyOnArrive: 0
-  NewSprite: {fileID: 21300000, guid: 1da24b4761da2fc43818cf23a5e573e6, type: 3}
-  ObjectToMove: {fileID: 0}
-  ObjectToCreate: {fileID: 0}
-  CreateAtWaypoint: {fileID: 0}
-  MoveToWaypoint: {fileID: 0}
-  SoundDelay: 0
-  MoveSpeed: 2
-  MoveToPosition: {x: 0, y: 0, z: 0}
-  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11455924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd1772dadda14f4298222de583a3616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionPos: {x: 0, y: 0}
+  isInteractionPending: 0
 --- !u!114 &11456112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,6 +218,35 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11465976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb490cc09cc0349fc96627b4f6799626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: 
+  Sound: 
+  UseExtended: 0
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 0
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
+  SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11466272
 MonoBehaviour:
   m_ObjectHideFlags: 1

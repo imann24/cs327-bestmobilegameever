@@ -46,7 +46,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
             }
             else {
                 //Debug.Log("Moving portrait: " + portraitMoving + " to " + portraitDestination);
-                portraitMoving.transform.position = Vector3.MoveTowards(portraitMoving.transform.position, portraitDestination, (150 * Time.deltaTime));
+                portraitMoving.transform.position = Vector3.MoveTowards(portraitMoving.transform.position, portraitDestination, (250 * Time.deltaTime));
             }
         }
     }
@@ -66,14 +66,16 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         Destroy(Quartermaster);
         */
 
-        if (!Testing) { GameObject.Find("Test_Pete").SetActive(false); }
+        if (!Testing) {
+            GameObject.Find("Test_Pete").SetActive(false);
+            if (BGClouds != null) BGClouds.SetActive(true);
+            else if (BGBlack != null) BGBlack.SetActive(true);
+        }
         GameManager.InventoryManager.TakeItem("Hook");
         GameManager.InventoryManager.GiveItem("Hook");
         GameManager.InventoryManager.Hide();
         next = "tutorial_cutscene_start";
 
-        if (BGClouds != null) BGClouds.SetActive(true);
-        else if (BGBlack != null) BGBlack.SetActive(true);
     }
 
     public override void DoSpecialAction(string actionTag) {
@@ -125,7 +127,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
         else { portraitMoving = GameManager.InteractionManager.leftImage; }
 
         portraitPosition = portraitMoving.transform.position;
-        float dest = (portraitPosition.x + (dir * 300));
+        float dest = (portraitPosition.x + (dir * 500));
         portraitDestination = new Vector3(dest, portraitPosition.y, portraitPosition.z);
     }
 

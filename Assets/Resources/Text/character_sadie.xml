@@ -11,11 +11,24 @@
 			<NextInteractor>Cutscene_Handler</NextInteractor>
 		</Interaction>
 		<Interaction>
+      <Name>examine_hammock</Name>
+      <Type>Derivative</Type>
+      <Text>No time to sleep now.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_porthole</Name>
+      <Type>Derivative</Type>
+      <Text>Beautiful day out today.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
 			<Name>examine_rag</Name>
 			<Type>Derivative</Type>
 			<NONETags>hasRag</NONETags>
 			<Text>Aha! Just what I needed.</Text>
 			<TextType>Floating</TextType>
+      <TextBox>Drag one item in your inventory on top of another to combine them for a new item!</TextBox>
 			<Next>take</Next>
 			<NextInteractor>Rag</NextInteractor>
 		</Interaction>
@@ -39,6 +52,7 @@
 			<Text>Let's see...</Text>
 			<TextType>Floating</TextType>
 			<Next>clean_hook</Next>
+      <TextBox>hide();</TextBox>
 			<NextInteractor>Rag</NextInteractor>
 		</Interaction>
 		<Interaction>
@@ -46,6 +60,7 @@
 			<Type>Derivative</Type>
 			<Text>Nice. Now this thing will be on the Captain's wrist before they know it. Better get it to them quick.</Text>
 			<Image>SadieH</Image>
+      <Speaker>Cabin Girl Sadie</Speaker>
 		</Interaction>
 		<Interaction>
 			<Name>examine_tutorial_door</Name>
@@ -87,6 +102,13 @@
       <Name>default_bottle</Name>
       <Type>Derivative</Type>
       <Text>I can't reach it.</Text>
+      <TextType>Floating</TextType>
+      <SpecialActions>ReturnSelected</SpecialActions>
+    </Interaction>
+    <Interaction>
+      <Name>examine_bottle</Name>
+      <Type>Derivative</Type>
+      <Text>Bullseye.</Text>
       <TextType>Floating</TextType>
       <SpecialActions>ReturnSelected</SpecialActions>
     </Interaction>
@@ -168,6 +190,18 @@
       <Name>use_mop_head_handle</Name>
       <Type>Derivative</Type>
       <Text>It's beyond repair.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_barrel</Name>
+      <Type>Derivative</Type>
+      <Text>Nothing useful in there.</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>examine_cannon</Name>
+      <Type>Derivative</Type>
+      <Text>Boom.</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <!-- EndRegion -->

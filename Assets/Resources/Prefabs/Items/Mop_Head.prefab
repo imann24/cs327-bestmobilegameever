@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionPath: item_mop_head
   Debugging: 0
+  flipped: 0
+  agent: {fileID: 0}
 --- !u!114 &11471446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +96,7 @@ MonoBehaviour:
   PlaysSound: 1
   UseNavMesh: 0
   DestroyOnArrive: 0
-  NewSprite: {fileID: 21300000, guid: bb4dfc50a05e7b54182224d330215c54, type: 3}
+  NewSprite: {fileID: 21300000, guid: 0e8cd190252ff47e38ebfaf13991bee6, type: 3}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
   CreateAtWaypoint: {fileID: 0}
@@ -149,6 +151,18 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 210d34f3cd074d84a8661db326d1ddb2,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 107174}
