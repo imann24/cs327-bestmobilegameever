@@ -115,15 +115,15 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
                 //StartCoroutine(npcExit(Firstmate));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Firstmate"); }
                 break;
-			case "SaddieAhoy":
-				audio.VoiceEffect("SaddieAhoy");
+			case "SadieAhoy":
+				audio.VoiceEffect("SadieAhoy");
 				break;
-			case "SaddieTalk":
-				audio.VoiceEffect("SaddieTalk");
+			case "SadieTalk":
+				audio.VoiceEffect("SadieTalk");
 				break;
-			case "SaddieConfused":
+			case "SadieConfused":
 				EventController.Event ("SadieConfused");
-				Debug.Log("I'm confused.");
+				//Debug.Log("I'm confused.");
 				break;
             default:
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log(actionTag + " isn't defined in SpecialActions_Cutscene_Handler."); }
