@@ -6,12 +6,14 @@
       <Name>talk</Name>
       <Type>Click</Type>
       <NONETags>lifeboatSecured</NONETags>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>default</Next>
     </Interaction>
     <Interaction>
       <Name>talk</Name>
       <Type>Click</Type>
       <ALLTags>lifeboatSecured|lifeboatComment</ALLTags>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>default</Next>
     </Interaction>
     <Interaction>
@@ -51,6 +53,14 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
+      <Next>use_rope_01_1</Next>
+    </Interaction>
+     <Interaction>
+      <Name>use_rope_01_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Speaker>Second Mate</Speaker>
       <Text>That is not - that is -</Text>
       <Next>use_rope_02</Next>
@@ -83,6 +93,15 @@
       <GiveTags>lifeboatComment</GiveTags>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
+      <Next>lifeboat_comment_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>lifeboat_comment_00_1</Name>
+      <Type>Derivative</Type>
+      <ALLTags>lifeboatSecured</ALLTags>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateN</Image2>
       <Speaker>Second Mate</Speaker>
       <Text>You secured the lifeboat, did you?</Text>
       <Next>lifeboat_comment_00</Next>
@@ -103,6 +122,7 @@
       <Image2>SecondMateHFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Sufficient? That was supposed to be your job.</Text>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>lifeboat_comment_02</Next>
     </Interaction>
     <Interaction>
@@ -121,6 +141,7 @@
       <Image2>SecondMateA</Image2>
       <Speaker>Second Mate</Speaker>
       <Text>...</Text>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>lifeboat_comment_04</Next>
     </Interaction>
     <Interaction>
@@ -140,6 +161,7 @@
       <Type>Derivative</Type>
       <ALLTags>lifeboatSecured</ALLTags>
       <Text>You seem to think very highly of the first mate.</Text>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>choice_bart_01</Next>
     </Interaction>
     <Interaction>
@@ -167,6 +189,7 @@
       <Image2>SecondMateHFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Oh yeah, I feel *so* blessed to be running his errands.</Text>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>choice_bart_04</Next>
     </Interaction>
     <Interaction>
@@ -234,8 +257,16 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateA</Image2>
-      <Speaker>Second Mate</Speaker>
       <GiveTags>secondmateTalked</GiveTags>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
+      <Next>choice_poster_10_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>choice_poster_10_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateA</Image2>
+      <Speaker>Second Mate</Speaker>
       <Text>Avast ye! Can’t you see I’m working?</Text>
       <Next>choice_poster_11</Next>
     </Interaction>
@@ -246,6 +277,7 @@
       <Image2>SecondMateAFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Um...no? You’re just staring at Bart over there.</Text>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>choice_poster_12</Next>
     </Interaction>
     <Interaction>
@@ -287,6 +319,15 @@
     </Interaction>
     <Interaction>
       <Name>choice_poster_20</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>SecondMateH</Image2>
+      <SpecialActions>SecondMateSpeech</SpecialActions>
+      <GiveTags>secondmatePosterGiven</GiveTags>
+      <Next>choice_poster_20_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>choice_poster_20_1</Name>
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
