@@ -5,13 +5,7 @@
     <Interaction>
       <Name>tutorial_start</Name>
       <Type>Derivative</Type>
-      <SpecialActions>SoundTutorialPrompt</SpecialActions>
-      <Next>tutorial_00_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>tutorial_00_1</Name>
-      <Type>Derivative</Type>
-      <SpecialActions>SadieConfused</SpecialActions>
+      <SpecialActions>SoundTutorialPrompt|SadieConfused</SpecialActions>
       <Next>tutorial_00</Next>
     </Interaction>
     <Interaction>
