@@ -102,6 +102,14 @@
       <MaxDistance>8</MaxDistance>
       <SpecialActions>SoundOrange</SpecialActions>
       <TakeItems>Orange</TakeItems>
+      <Next>rigger_hit_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_hit_00_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerA</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_hit_00</Next>
     </Interaction>
     <Interaction>
@@ -120,6 +128,7 @@
       <Image2>CheifRiggerAFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Can I talk to you for a moment?</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_hit_02</Next>
     </Interaction>
     <Interaction>
@@ -138,6 +147,7 @@
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Can’t you just climb a little higher?</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_hit_04</Next>
     </Interaction>
     <Interaction>
@@ -164,6 +174,7 @@
       <Type>Click</Type>
       <MaxDistance>3</MaxDistance>
       <ALLTags>riggerHit</ALLTags>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>talk_stuck_00</Next>
     </Interaction>
     <Interaction>
@@ -182,6 +193,7 @@
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I'm trying.</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>talk_stuck_02</Next>
     </Interaction>
     <Interaction>
@@ -201,6 +213,14 @@
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I got something to extend your reach.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_mop_handle_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_mop_handle_00_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerS</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_mop_handle_01</Next>
       <MaxDistance>3</MaxDistance>
     </Interaction>
@@ -221,6 +241,14 @@
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Can you use this?</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_hook_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_hook_00_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerN</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_hook_01</Next>
       <MaxDistance>3</MaxDistance>
     </Interaction>
@@ -242,6 +270,14 @@
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Hey, I’ve got something for you.</Text>
       <SpecialActions>ReturnSelected</SpecialActions>
+      <Next>give_01_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_01_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerN</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <MaxDistance>3</MaxDistance>
       <Next>give_01</Next>
     </Interaction>
@@ -261,6 +297,7 @@
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>You're not actually that high, you know.</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_03</Next>
     </Interaction>
     <Interaction>
@@ -280,6 +317,14 @@
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Here, try this.</Text>
       <TakeItems>Pole_Hook</TakeItems>
+      <Next>give_pole_hook_00_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_pole_hook_00_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerH</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_pole_hook_01</Next>
       <MaxDistance>3</MaxDistance>
     </Interaction>
@@ -292,7 +337,8 @@
       <Text>Oh, wow, that might actually work!</Text>
       <GiveTags>riggerDown</GiveTags>
       <TakeTags>riggerHit</TakeTags>
-      <SpecialActions>RiggerDescend</SpecialActions>
+      <SpecialActions>RiggerDescend|RiggerSpeech</SpecialActions>
+      <Next>rigger_descend</Next>
     </Interaction>
     <Interaction>
       <Name>rigger_descend</Name>
@@ -313,6 +359,14 @@
       <ALLTags>riggerDown</ALLTags>
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
+      <SpecialActions>RiggerSpeech</SpecialActions>
+      <Next>talk_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk_1</Name>
+      <Type>Derivative</Type>
+      <Image>SadieNFade</Image>
+      <Image2>CheifRiggerN</Image2>
       <Speaker>Chief Rigger Wendy</Speaker>
       <Text>Thanks for helping me out. What can I do for you?</Text>
       <Next>rigger_choice</Next>
@@ -328,6 +382,7 @@
       <Image2>CheifRiggerN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>The first mate wanted you to have this.</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_descend_03</Next>
     </Interaction>
     <Interaction>
@@ -336,6 +391,7 @@
       <ALLTags>hasPoster</ALLTags>
       <NONETags>riggerPosterGiven</NONETags>
       <Text>The first mate wanted you to have this.</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_descend_03</Next>
     </Interaction>
     <Interaction>
@@ -364,6 +420,7 @@
       <Type>Derivative</Type>
       <NONETags>hasRope|lifeboatSecured</NONETags>
       <Text>Do you mind if I use that rope of yours?</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_choice_20</Next>
     </Interaction>
     <Interaction>
@@ -382,6 +439,7 @@
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Can I borrow that length of ‘line’, please?</Text>
+      <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>rigger_choice_22</Next>
     </Interaction>
     <Interaction>
@@ -396,6 +454,7 @@
     <!-- EndRegion-->
     <Interaction>
       <Name>rigger_choice</Name>
+      <Type>Derivative</Type>
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
