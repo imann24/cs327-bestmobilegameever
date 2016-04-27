@@ -15,9 +15,9 @@ GameObject:
   - 114: {fileID: 11486678}
   - 23: {fileID: 2367492}
   - 114: {fileID: 11412024}
-  - 114: {fileID: 11421898}
   - 114: {fileID: 11404990}
   - 95: {fileID: 9534838}
+  - 114: {fileID: 11487710}
   m_Layer: 0
   m_Name: Swabbie
   m_TagString: Untagged
@@ -243,35 +243,6 @@ MonoBehaviour:
   MoveSpeed: 2
   MoveToPosition: {x: 0, y: 0, z: 0}
   CreateAtPosition: {x: 0, y: 0, z: 0}
---- !u!114 &11421898
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionTag: ChangeToNoMop
-  Sound: 
-  UseExtended: 1
-  ChangesSprite: 1
-  MovesObject: 0
-  CreatesObject: 0
-  PlaysSound: 0
-  UseNavMesh: 0
-  DestroyOnArrive: 0
-  NewSprite: {fileID: 21300000, guid: eb7602dd0b3f5e84ba96fd6af808b81f, type: 3}
-  ObjectToMove: {fileID: 0}
-  ObjectToCreate: {fileID: 0}
-  CreateAtWaypoint: {fileID: 0}
-  MoveToWaypoint: {fileID: 0}
-  SoundDelay: 0
-  MoveSpeed: 0
-  MoveToPosition: {x: 0, y: 0, z: 0}
-  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11443974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,6 +282,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionPath: character_swabbie
   Debugging: 1
+  flipped: 0
+  agent: {fileID: 0}
+--- !u!114 &11487710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: ChangeToNoMop
+  Sound: 
+  UseExtended: 1
+  ChangesSprite: 1
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 0
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 21300000, guid: eb7602dd0b3f5e84ba96fd6af808b81f, type: 3}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
+  SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!195 &19593052
 NavMeshAgent:
   m_ObjectHideFlags: 1
