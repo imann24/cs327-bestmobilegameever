@@ -24,13 +24,13 @@ public class SpecialActions_Speech : SpecialActions {
 		case "OJSpeech":
 			audio.VoiceEffect("OJSpeech");
 			break;
-		case "SaddieAhoy":
-			audio.VoiceEffect("SaddieAhoy");
+		case "SadieAhoy":
+			audio.VoiceEffect("SadieAhoy");
 			break;
-		case "SaddieTalk":
-			audio.VoiceEffect("SaddieTalk");
+		case "SadieTalk":
+			audio.VoiceEffect("SadieTalk");
 			break;
-		case "SaddieConfused":
+		case "SadieConfused":
 			EventController.Event ("SadieConfused");
 			break;
         }
