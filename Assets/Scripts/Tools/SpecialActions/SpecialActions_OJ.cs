@@ -9,6 +9,12 @@ public class SpecialActions_OJ : SpecialActions {
 		case "OJSpeech":
 			audio.VoiceEffect("OJSpeech");
 			break;
+        case "OJUp":
+            gameObject.GetComponent<OrangeGuyController>().OrangeOut();
+            break;
+        case "OJDown":
+            gameObject.GetComponent<OrangeGuyController>().OrangeIn();
+            break;
         }
     }
 
