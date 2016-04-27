@@ -212,17 +212,9 @@
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I got something to extend your reach.</Text>
-      <SpecialActions>ReturnSelected</SpecialActions>
-      <Next>give_mop_handle_00_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_mop_handle_00_1</Name>
-      <Type>Derivative</Type>
-      <Image>SadieNFade</Image>
-      <Image2>CheifRiggerS</Image2>
-      <SpecialActions>RiggerSpeech</SpecialActions>
-      <Next>give_mop_handle_01</Next>
+      <SpecialActions>ReturnSelected|RiggerSpeech</SpecialActions>
       <MaxDistance>5</MaxDistance>
+      <Next>give_mop_handle_01</Next>
     </Interaction>
     <Interaction>
       <Name>give_mop_handle_01</Name>
@@ -240,17 +232,9 @@
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Can you use this?</Text>
-      <SpecialActions>ReturnSelected</SpecialActions>
-      <Next>give_hook_00_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_hook_00_1</Name>
-      <Type>Derivative</Type>
-      <Image>SadieNFade</Image>
-      <Image2>CheifRiggerN</Image2>
-      <SpecialActions>RiggerSpeech</SpecialActions>
-      <Next>give_hook_01</Next>
+      <SpecialActions>ReturnSelected|RiggerSpeech</SpecialActions>
       <MaxDistance>5</MaxDistance>
+      <Next>give_hook_01</Next>
     </Interaction>
     <Interaction>
       <Name>give_hook_01</Name>
@@ -269,15 +253,7 @@
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Hey, I’ve got something for you.</Text>
-      <SpecialActions>ReturnSelected</SpecialActions>
-      <Next>give_01_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_01_1</Name>
-      <Type>Derivative</Type>
-      <Image>SadieNFade</Image>
-      <Image2>CheifRiggerN</Image2>
-      <SpecialActions>RiggerSpeech</SpecialActions>
+      <SpecialActions>ReturnSelected|RiggerSpeech</SpecialActions>
       <MaxDistance>5</MaxDistance>
       <Next>give_01</Next>
     </Interaction>
