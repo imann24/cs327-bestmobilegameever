@@ -44,8 +44,8 @@ public class AudioController : MonoBehaviour {
 	RandomizedQueue<AudioFile> _secondMate;
 	RandomizedQueue<AudioFile> _swabbieSpeech;
 	RandomizedQueue<AudioFile> _oj;
-	RandomizedQueue<AudioFile> _saddieAhoy;
-	RandomizedQueue<AudioFile> _saddieTalk;
+	RandomizedQueue<AudioFile> _sadieAhoy;
+	RandomizedQueue<AudioFile> _sadieTalk;
 	IEnumerator _swellCoroutine;
 	IEnumerator _sweetenerCoroutine;
 	IEnumerator _ambienceTutorialCoroutine;
@@ -425,11 +425,11 @@ public class AudioController : MonoBehaviour {
 		case "OJSpeech":
 			Play (_oj.Cycle ());
 			break;
-		case "SaddieAhoy":
-			Play (_saddieAhoy.Cycle ());
+		case "SadieAhoy":
+			Play (_sadieAhoy.Cycle ());
 			break;
-		case "SaddieTalk":
-			Play (_saddieTalk.Cycle ());
+		case "SadieTalk":
+			Play (_sadieTalk.Cycle ());
 			break;
 		default:
 			break;
@@ -454,8 +454,8 @@ public class AudioController : MonoBehaviour {
 		_rigger = new RandomizedQueue<AudioFile>();
 		_secondMate = new RandomizedQueue<AudioFile>();
 		_oj = new RandomizedQueue<AudioFile>();
-		_saddieAhoy = new RandomizedQueue<AudioFile>();
-		_saddieTalk = new RandomizedQueue<AudioFile>();
+		_sadieAhoy = new RandomizedQueue<AudioFile>();
+		_sadieTalk = new RandomizedQueue<AudioFile>();
 		// Init Queue's with sound files
 		List<AudioFile> list = new List<AudioFile>();
 		// Get all deck music
@@ -524,12 +524,12 @@ public class AudioController : MonoBehaviour {
 
 		playEvents.TryGetValue ("SadieAhoy",out list);
 		foreach (AudioFile track in list) {
-			_saddieAhoy.Enqueue (track);
+			_sadieAhoy.Enqueue (track);
 		}
 
 		playEvents.TryGetValue ("SadieTalk",out list);
 		foreach (AudioFile track in list) {
-			_saddieTalk.Enqueue (track);
+			_sadieTalk.Enqueue (track);
 		}
 	}
 
