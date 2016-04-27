@@ -23,6 +23,7 @@
       <Type>UseItem</Type>
       <ALLTags>holdingMopHead|mopInked</ALLTags>
       <SpecialActions>ReturnSelected</SpecialActions>
+      <IgnoreDistance>true</IgnoreDistance>
       <Next>use_mop_ink_again</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>

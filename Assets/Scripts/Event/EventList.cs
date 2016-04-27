@@ -34,6 +34,11 @@ public static class EventList {
 
 	#endregion
 
+	#region Animation Events
+
+	public const string FIRST_MATE_PUT_ON_WIG = "FirstMateWig";
+
+	#endregion
 
 	#region Special Actions
 
