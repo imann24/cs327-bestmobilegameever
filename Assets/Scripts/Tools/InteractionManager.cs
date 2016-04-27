@@ -188,6 +188,10 @@ public class Interaction {
 		}
 	}
 
+	[XmlElement("Event")]
+	public string _event { private get; set;}
+	public bool HasEvent { get { return _event != null && _event != string.Empty; } }
+	public string iEvent { get {return _event;}}
 
 	// A static text box containing prompts
 	[XmlElement("TextBox")]
@@ -576,6 +580,11 @@ public class InteractionManager : MonoBehaviour {
 		if (interactor.Debugging) {
 			Debug.Log ("Completing " + interaction.iName + " for " + interactor.gameObject.name);
 		}
+
+		if (interaction.HasEvent) {
+			EventController.Event(interaction.iEvent);
+		}
+
 		GameManager.TakeTags (interaction.iTakeTags);
 		GameManager.GiveTags (interaction.iGiveTags);
 		GameManager.InventoryManager.TakeItemList (interaction.iTakeItems);
