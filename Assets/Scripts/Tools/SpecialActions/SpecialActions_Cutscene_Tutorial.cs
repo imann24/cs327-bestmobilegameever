@@ -79,6 +79,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
     }
 
     public override void DoSpecialAction(string actionTag) {
+		AudioController audio = GameObject.Find ("AudioController").GetComponent<AudioController> ();
         switch (actionTag) {
             case "ClearBG":
                 if (BGBlack != null) BGBlack.SetActive(false);
@@ -114,6 +115,16 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
                 //StartCoroutine(npcExit(Firstmate));
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log("Exit Firstmate"); }
                 break;
+			case "SaddieAhoy":
+				audio.VoiceEffect("SaddieAhoy");
+				break;
+			case "SaddieTalk":
+				audio.VoiceEffect("SaddieTalk");
+				break;
+			case "SaddieConfused":
+				EventController.Event ("SadieConfused");
+				Debug.Log("I'm confused.");
+				break;
             default:
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log(actionTag + " isn't defined in SpecialActions_Cutscene_Handler."); }
                 break;
