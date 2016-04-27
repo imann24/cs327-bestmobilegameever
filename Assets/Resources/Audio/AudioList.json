@@ -482,7 +482,7 @@
 			“EventNames”:["RiggerTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -491,7 +491,7 @@
 			“EventNames”:["RiggerTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -500,7 +500,7 @@
 			“EventNames”:["RiggerTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -509,7 +509,7 @@
 			“EventNames”:["SwabbieTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -518,7 +518,7 @@
 			“EventNames”:["SwabbieTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -527,7 +527,7 @@
 			“EventNames”:["SwabbieTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -536,7 +536,7 @@
 			“EventNames”:["SadieAhoy"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -545,7 +545,7 @@
 			“EventNames”:["SadieAhoy"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -554,7 +554,7 @@
 			“EventNames”:["SadieAhoy"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -563,7 +563,7 @@
 			“EventNames”:["SadieAhoy"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -572,7 +572,7 @@
 			“EventNames”:["SadieAhoy"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -581,7 +581,7 @@
 			“EventNames”:["SadieAngry"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -590,7 +590,7 @@
 			“EventNames”:["SadieConfused"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -599,7 +599,7 @@
 			“EventNames”:["SadieTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -608,7 +608,7 @@
 			“EventNames”:["SadieTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -617,7 +617,7 @@
 			“EventNames”:["SadieTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -626,7 +626,7 @@
 			“EventNames”:["SadieTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -635,7 +635,7 @@
 			“EventNames”:["SadieTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -644,7 +644,7 @@
 			“EventNames”:["SadieTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -653,7 +653,7 @@
 			“EventNames”:["SadieLaugh"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -824,7 +824,7 @@
 			“EventNames”:["QuartermasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -833,7 +833,7 @@
 			“EventNames”:["QuartermasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -842,7 +842,7 @@
 			“EventNames”:["QuartermasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -851,7 +851,7 @@
 			“EventNames”:["QuartermasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -860,7 +860,7 @@
 			“EventNames”:["QuartermasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -869,7 +869,7 @@
 			“EventNames”:["QuartermasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -878,7 +878,7 @@
 			“EventNames”:["QuartermasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -1022,7 +1022,7 @@
 			“EventNames”:["SecondmateTalks"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -1031,7 +1031,7 @@
 			“EventNames”:["SecondmateTalks"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -1040,7 +1040,7 @@
 			“EventNames”:["SecondmateTalks"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -1058,7 +1058,7 @@
 			“EventNames”:["SecondmateTalks"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},

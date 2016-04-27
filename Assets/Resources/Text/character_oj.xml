@@ -25,6 +25,7 @@
       <Image>OrangeGuyBarrelNFade</Image>
       <Image2>SadieN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Text>...</Text>
       <Next>oj_intro_02</Next>
     </Interaction>
@@ -43,6 +44,15 @@
       <ALLTags>ojIntroComplete</ALLTags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
+      <SpecialActions>OJSpeech</SpecialActions>
+      <Next>oj_intro_03_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>oj_intro_03_1</Name>
+      <Type>Derivative</Type>
+      <ALLTags>ojIntroComplete</ALLTags>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
       <Speaker>OJ</Speaker>
       <Text>The fruit be mine.</Text>
       <Next>oj_choice</Next>
@@ -55,6 +65,7 @@
       <Type>Derivative</Type>
       <NONETags>hasOrange|riggerHit|riggerDown</NONETags>
       <Text>Can I have one of those oranges?</Text>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>oj_orange_00</Next>
     </Interaction>
     <Interaction>
@@ -74,6 +85,7 @@
       <Image2>SadieN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Please?</Text>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>oj_orange_02</Next>
     </Interaction>
     <Interaction>
@@ -128,6 +140,7 @@
       <Name>give_poster_0</Name>
       <Type>Derivative</Type>
       <NONETags>ojChalkRequested|ojChalkGiven</NONETags>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>give_poster_01</Next>
     </Interaction>
     <Interaction>
@@ -139,6 +152,7 @@
       <Image2>SadieN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I-</Text>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>give_poster_01</Next>
     </Interaction>
     <Interaction>
@@ -169,6 +183,7 @@
       <Image2>SadieN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>...Excuse me?</Text>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>give_poster_03</Next>
     </Interaction>
     <Interaction>
@@ -187,6 +202,7 @@
       <Image2>SadieA</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Look, I really don’t have time for-</Text>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>give_poster_05</Next>
     </Interaction>
     <Interaction>
@@ -221,6 +237,7 @@
       <Image2>SadieN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I got you that chalk. Now please take this flyer off my hands.</Text>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>give_poster_success</Next>
     </Interaction>
     <Interaction>
@@ -267,6 +284,7 @@
       <Image2>SadieN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Um, did you want this chalk?</Text>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>give_chalk_11</Next>
     </Interaction>
     <Interaction>
@@ -285,6 +303,7 @@
       <Image2>SadieN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Alright then...</Text>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>give_chalk_13</Next>
     </Interaction>
     <Interaction>
@@ -345,6 +364,7 @@
       <Image2>SadieN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>What did you need this for, anyhow?</Text>
+      <SpecialActions>OJSpeech</SpecialActions>
       <Next>give_chalk_22</Next>
     </Interaction>
     <Interaction>

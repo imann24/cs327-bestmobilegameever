@@ -4,12 +4,17 @@ using System.Collections;
 public class SpecialActions_Rigger : SpecialActions {
     private string next;
 	string inRiggingKey = "inRigging";
+	AudioController audio;
 
     public override void DoSpecialAction(string actionTag) {
 		switch (actionTag) {
             case "RiggerDescend":
                 StartCoroutine(RiggerDescend());
                 break;
+			case "RiggerSpeech":
+				audio = GameObject.Find ("AudioController").GetComponent<AudioController> ();
+				audio.VoiceEffect ("RiggerSpeech");
+				break;
         }
     }
 
