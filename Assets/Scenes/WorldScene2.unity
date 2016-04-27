@@ -535,6 +535,7 @@ GameObject:
   - 114: {fileID: 182354829}
   - 114: {fileID: 182354827}
   - 95: {fileID: 182354826}
+  - 114: {fileID: 182354824}
   m_Layer: 0
   m_Name: Swabbie
   m_TagString: Untagged
@@ -542,6 +543,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &182354824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182354823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ad674fa8d25ab48834bc6cbb43126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: ChangeToNoMop
+  Sound: 
+  UseExtended: 1
+  ChangesSprite: 1
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 0
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 21300000, guid: 5b9774d5687d88c4ea939ff385dfd66b, type: 3}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
+  SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!95 &182354826
 Animator:
   serializedVersion: 3
