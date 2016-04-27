@@ -9,6 +9,8 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 	public bool flipped = false;
 	private SpeechBubble speechBubble;
 	private NoahMove playerMove;
+	public bool moving = false;
+	private Vector3 destination;
 	// Use this for initialization
 	void Start () {
 		Player = GameManager.PlayerCharacter.GetComponent<NavMeshAgent>();
@@ -19,7 +21,18 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (moving) {
+			if (Player.velocity.x > 0) {
+				if (flipped) {
+					Flip ();
+				}
+			} else {
+				if (!flipped) {
+					Flip ();
+				}
+			}
+		}
+		moving = Player.hasPath;
 	}
 
 	void OnMouseUp(){
@@ -42,19 +55,10 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 			Debug.Log("Clicked on Nav Floor.");
 			#endif
 			NavMeshPath path = new NavMeshPath ();
-			Vector3 destination = eventData.pointerCurrentRaycast.worldPosition;
+			destination = eventData.pointerCurrentRaycast.worldPosition;
 			Player.GetComponent<NavMeshAgent> ().CalculatePath (destination, path);
 			//if(path.status == NavMeshPathStatus.PathComplete){
 			GameManager.InventoryManager.Hide();
-			if (destination.x > Player.transform.position.x) {
-				if (flipped) {
-					Flip ();
-				}
-			} else {
-				if (!flipped) {
-					Flip ();
-				}
-			}
 
 			Player.SetDestination (destination);
 

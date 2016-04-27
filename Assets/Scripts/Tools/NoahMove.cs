@@ -22,28 +22,29 @@ public class NoahMove : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (isInteractionPending) {
-            if (Input.GetMouseButtonDown(0)) {
-                isInteractionPending = false;
-                GameManager.InventoryManager.ReturnSelected();
-            }
-            else {
-                Vector2 currentPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
-                float speed = (lastPosition - currentPos).magnitude * Time.deltaTime;
-                lastPosition = currentPos;
+		if (gameObject.CompareTag ("Player")) {
+			if (isInteractionPending) {
+				if (Input.GetMouseButtonDown (0)) {
+					isInteractionPending = false;
+					GameManager.InventoryManager.ReturnSelected ();
+				} else {
+					Vector2 currentPos = new Vector2 (gameObject.transform.position.x, gameObject.transform.position.z);
+					float speed = (lastPosition - currentPos).magnitude * Time.deltaTime;
+					lastPosition = currentPos;
 
-                if (speed < 0.00001f) {
-                    float distance = (currentPos - interactionPos).sqrMagnitude;
-                    if (distance <= minDistanceToInteract) {
-                        InteractionManager.HandleInteractionList(interactor, interactionList);
-                        isInteractionPending = false;
-                    }
-                }
-            }
-        }
+					if (speed < 0.00001f) {
+						float distance = (currentPos - interactionPos).sqrMagnitude;
+						if (distance <= minDistanceToInteract) {
+							InteractionManager.HandleInteractionList (interactor, interactionList);
+							isInteractionPending = false;
+						}
+					}
+				}
+			}
 
-		if (anim != null) {
-			anim.SetBool ("Walking", navAgent.hasPath);
+			if (anim != null) {
+				anim.SetBool ("Walking", navAgent.hasPath);
+			}
 		}
     }
 
