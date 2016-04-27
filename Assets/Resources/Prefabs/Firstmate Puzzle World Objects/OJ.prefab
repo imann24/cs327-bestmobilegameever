@@ -67,6 +67,7 @@ GameObject:
   - 23: {fileID: 2381408}
   - 95: {fileID: 9546996}
   - 114: {fileID: 11471370}
+  - 114: {fileID: 11465778}
   m_Layer: 0
   m_Name: OJ
   m_TagString: DontFlip
@@ -112,8 +113,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154670}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0.02, y: 0, z: 3.47}
-  m_LocalScale: {x: 2.6367207, y: 4.247848, z: 23.630493}
+  m_LocalPosition: {x: 0.02, y: 0, z: 6.1}
+  m_LocalScale: {x: 2.3884943, y: 3.8479466, z: 21.405869}
   m_Children: []
   m_Father: {fileID: 453268}
   m_RootOrder: 0
@@ -179,12 +180,12 @@ MeshRenderer:
   m_GameObject: {fileID: 158422}
   m_Enabled: 0
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
+  m_UseLightProbes: 0
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
@@ -221,8 +222,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2574153, y: 2, z: 7.128025}
-  m_Center: {x: -0.10837436, y: 0, z: 3.4245577}
+  m_Size: {x: 3.2574153, y: 2, z: 6.706818}
+  m_Center: {x: -0.10837436, y: 0, z: 3.2139482}
 --- !u!65 &6557838
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -299,6 +300,35 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &11465778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d4e2badd54e4b52818c70e0a513ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: 
+  Sound: 
+  UseExtended: 0
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 0
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
+  SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11471370
 MonoBehaviour:
   m_ObjectHideFlags: 1
