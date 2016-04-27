@@ -887,7 +887,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -896,7 +896,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -905,7 +905,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -914,7 +914,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -923,7 +923,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -932,7 +932,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -941,7 +941,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -950,7 +950,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -959,7 +959,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -968,7 +968,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -977,7 +977,7 @@
 			“EventNames”:["ShipmasterTalk"],
 			"StopEventNames":[],
 			“Loop”:false,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},
@@ -986,7 +986,7 @@
 			“EventNames”:["FirstmateStartCrying"],
 			"StopEventNames":["FirstmateStopsCrying"],
 			“Loop”:true,
-			“Type”: "VO",
+			“Type”: "FX",
 			“Channel”:2,
 			"Volume": 100
 		},

@@ -130,6 +130,9 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 			case "FirstMateSpeech":
 				audio.VoiceEffect("FirstMateSpeech");
 				break;
+			case "ShipmasterSpeech":
+				audio.VoiceEffect("ShipmasterSpeech");
+				break;
             default:
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log(actionTag + " isn't defined in SpecialActions_Cutscene_Handler."); }
                 break;
