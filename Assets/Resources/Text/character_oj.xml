@@ -3,8 +3,14 @@
 	<Interactions>
   <!-- Region Intro -->
     <Interaction>
-      <Name>oj_intro_00</Name>
+      <Name>oj_up</Name>
       <Type>Click</Type>
+      <SpecialActions>OJUp</SpecialActions>
+      <Next>talk</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Derivative</Type>
       <NONETags>ojIntroComplete</NONETags>
       <GiveTags>ojIntroComplete</GiveTags>
       <Image>OrangeGuyBarrelN</Image>
@@ -32,8 +38,8 @@
       <Next>oj_choice</Next>
     </Interaction>
     <Interaction>
-      <Name>oj_intro_03</Name>
-      <Type>Click</Type>
+      <Name>talk</Name>
+      <Type>Derivative</Type>
       <ALLTags>ojIntroComplete</ALLTags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
@@ -77,6 +83,7 @@
       <Image2>SadieNFade</Image2>
       <Speaker>OJ</Speaker>
       <Text>Nay.</Text>
+      <SpecialActions>OJDown</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>oj_orange_00</Name>
@@ -96,6 +103,7 @@
       <Speaker>OJ</Speaker>
       <GiveItems>Orange</GiveItems>
       <Text>I bequeath ye one of me fine fruits. Treasure it as ye treasure yer life!</Text>
+      <SpecialActions>OJDown</SpecialActions>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region Offer Poster -->
@@ -113,7 +121,7 @@
       <Type>UseItem</Type>
       <ALLTags>holdingPoster</ALLTags>
       <NONETags>ojPosterGiven</NONETags>
-      <SpecialActions>ReturnSelected</SpecialActions>
+      <SpecialActions>ReturnSelected|OJUp</SpecialActions>
       <Next>give_poster_0</Next>
     </Interaction>
     <Interaction>
@@ -137,7 +145,7 @@
       <Name>give_poster</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingPoster|ojPosterGiven</ALLTags>
-      <SpecialActions>ReturnSelected</SpecialActions>
+      <SpecialActions>ReturnSelected|OJUp</SpecialActions>
       <Next>give_poster_again</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
@@ -188,6 +196,7 @@
       <Image2>SadieAFade</Image2>
       <Speaker>OJ</Speaker>
       <Text>Return when ye've found it.</Text>
+      <SpecialActions>OJDown</SpecialActions>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region After Chalk Requested-->
@@ -199,6 +208,7 @@
       <Image2>SadieNFade</Image2>
       <Speaker>OJ</Speaker>
       <Text>I won’t repeat myself again.</Text>
+      <SpecialActions>OJDown</SpecialActions>
     </Interaction>
     <!-- EndRegion -->
     <!-- Region After Chalk Received -->
@@ -220,6 +230,7 @@
       <Image2>SadieNFade</Image2>
       <Speaker>OJ</Speaker>
       <Text>Aye, great stone-bearer, I accept yer offering.</Text>
+      <SpecialActions>OJDown</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>give_poster_success</Name>
@@ -233,8 +244,14 @@
     <!-- Region Offer Chalk -->
     <!-- Region Unasked -->
     <Interaction>
-      <Name>give_chalk</Name>
+      <Name>oj_up</Name>
       <Type>UseItem</Type>
+      <SpecialActions>OJUp</SpecialActions>
+      <Next>give_chalk</Next>
+    </Interaction>
+    <Interaction>
+      <Name>give_chalk</Name>
+      <Type>Derivative</Type>
       <ALLTags>holdingChalk|hasPoster</ALLTags>
       <NONETags>ojChalkRequested</NONETags>
       <Image>OrangeGuyBarrelN</Image>
@@ -303,7 +320,7 @@
     <!-- Region Asked -->
     <Interaction>
       <Name>give_chalk</Name>
-      <Type>UseItem</Type>
+      <Type>Derivative</Type>
       <ALLTags>holdingChalk|ojChalkRequested</ALLTags>
       <TakeTags>ojChalkRequested</TakeTags>
       <Image>OrangeGuyBarrelH</Image>
@@ -368,6 +385,7 @@
       <Image2>SadieN</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Nevermind.</Text>
+      <SpecialActions>OJDown</SpecialActions>
     </Interaction>
   <!-- EndRegion -->
   <!-- Region Defaults -->
