@@ -5,7 +5,7 @@
     <Interaction>
       <Name>tutorial_start</Name>
       <Type>Derivative</Type>
-      <SpecialActions>SoundTutorialPrompt|SadieConfused</SpecialActions>
+      <SpecialActions>SoundTutorialPrompt</SpecialActions>
       <Next>tutorial_00</Next>
     </Interaction>
     <Interaction>
@@ -43,7 +43,6 @@
       <Image>SadieNFade</Image>
       <Image2>PirateQuestionMark</Image2>
       <Speaker>???</Speaker>
-      <SpecialActions>SadieTalk</SpecialActions>
       <Next>tutorial_choice</Next>
     </Interaction>
     <Interaction>
@@ -125,7 +124,7 @@
     <Interaction>
       <Name>exit_tutorial_room</Name>
       <Type>Derivative</Type>
-      <SpecialActions>ExitTutorialRoom</SpecialActions>
+      <SpecialActions>ExitTutorialRoom|QuartermasterSpeech</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_start</Name>
@@ -144,6 +143,7 @@
       <Image>QuartermasterAFade</Image>
       <Image2>ShipmasterA</Image2>
       <Speaker>Shipmaster Creesy</Speaker>
+      <SpecialActions>QuartermasterSpeech</SpecialActions>
       <Next>tutorial_cutscene_02</Next>
     </Interaction>
     <Interaction>
@@ -162,6 +162,7 @@
       <Image>QuartermasterNFade</Image>
       <Image2>ShipmasterA</Image2>
       <Speaker>Shipmaster Creesy</Speaker>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>tutorial_cutscene_04</Next>
     </Interaction>
     <Interaction>
@@ -169,6 +170,7 @@
       <Type>Derivative</Type>
       <Text>Hear, hear! No evildoings shall be gotten away with under the watchful eye of yours truly.</Text>
       <Image>FirstMateH</Image>
+      <SpecialActions>QuartermasterSpeech</SpecialActions>
       <Speaker>First Mate Bartholomew</Speaker>
       <Next>tutorial_cutscene_05</Next>
     </Interaction>
@@ -179,12 +181,14 @@
       <Image>QuartermasterA</Image>
       <Image2>ShipmasterAFade</Image2>
       <Speaker>Quartermaster Bonney</Speaker>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>tutorial_cutscene_06</Next>
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_06</Name>
       <Type>Derivative</Type>
       <Text>Ah, mon coeur! You wound me with your wicked words!</Text>
+      <SpecialActions>QuartermasterSpeech</SpecialActions>
       <Image>FirstMateS</Image>
       <Speaker>First Mate Bartholomew</Speaker>
       <Next>tutorial_cutscene_07</Next>
@@ -231,6 +235,7 @@
       <Text>That… woman! I just - I can’t- Oooooogh! She is everything that’s wrong with piracy, and nothing that’s right!</Text>
       <Image2>ShipmasterA</Image2>
       <Speaker>Shipmaster Creesy</Speaker>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>tutorial_cutscene_10</Next>
     </Interaction>
     <Interaction>
@@ -262,6 +267,13 @@
     </Interaction>
     <Interaction>
       <Name>tutorial_cutscene_exit_SM</Name>
+      <Type>Derivative</Type>
+      <Image>FirstMateS</Image>
+      <SpecialActions>FirstMateSpeech</SpecialActions>
+      <Next>tutorial_cutscene_exit_SM_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>tutorial_cutscene_exit_SM_1</Name>
       <Type>Derivative</Type>
       <Text>Hear me, mes amis! Lend me your ears! Our dear, dashing, clever captain has perished!</Text>
       <Image>FirstMateS</Image>

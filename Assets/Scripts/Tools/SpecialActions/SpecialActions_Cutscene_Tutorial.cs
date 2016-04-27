@@ -123,7 +123,12 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 				break;
 			case "SadieConfused":
 				EventController.Event ("SadieConfused");
-				//Debug.Log("I'm confused.");
+				break;
+			case "QuartermasterSpeech":
+				audio.VoiceEffect("QuartermasterSpeech");
+				break;
+			case "FirstMateSpeech":
+				audio.VoiceEffect("FirstMateSpeech");
 				break;
             default:
                 if (gameObject.GetComponent<Interactable>().Debugging) { Debug.Log(actionTag + " isn't defined in SpecialActions_Cutscene_Handler."); }
