@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class SpecialActions_Swabbie : SpecialActions {
+	const string GIVE_UP_MOP_ANIMATOR_KEY = "GiveAwayMop";
 
     public override void DoSpecialAction(string actionTag) {
 		AudioController audio;
@@ -16,6 +17,9 @@ public class SpecialActions_Swabbie : SpecialActions {
 		case "SwabbieSpeech":
 			audio = GameObject.Find ("AudioController").GetComponent<AudioController> ();
 			audio.VoiceEffect ("SwabbieSpeech");
+			break;
+		case GIVE_UP_MOP_ANIMATOR_KEY:
+			GetComponent<Animator>().SetTrigger(actionTag);
 			break;
         }
     }
