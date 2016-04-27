@@ -133,14 +133,12 @@ public class UIManager : MonoBehaviour {
 		DimBackground.SetActive (true);
 		if (interactor != null) tapToContinue.GetComponent<InteractionButton> ().interactor = interactor;
 		if (interaction != null) tapToContinue.GetComponent<InteractionButton> ().interaction = interaction;
-		Debug.Log("Enabling tap to continue");
 	}
 
 	public void DisableTapToContinue(){
 		DimBackground.SetActive (false);
         CanInteract = true;
 		tapToContinue.SetActive (false);
-		Debug.Log("Disabling tap to continue");
 	}
 
 	public void LockScreen() {

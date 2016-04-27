@@ -448,8 +448,6 @@ public class InteractionManager : MonoBehaviour {
 			}
 			List<Interaction> displayed = closeEnough.Where (i => i.HasText && i.iTextType != TextType.Floating).ToList();
 		
-
-			Debug.Log(displayed.Count());
 			int singleTextDisplayed = 1;
 
 			if (displayed.Count () == singleTextDisplayed) {
