@@ -33,6 +33,9 @@ public class SpecialActions_Speech : SpecialActions {
 		case "SadieConfused":
 			EventController.Event ("SadieConfused");
 			break;
+        case "ChangeToMop":
+            gameObject.GetComponent<Animator>().SetTrigger("Mop");
+            break;
         }
     }
 
