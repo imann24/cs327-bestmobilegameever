@@ -34,6 +34,7 @@ GameObject:
   - 114: {fileID: 11425386}
   - 23: {fileID: 2311234}
   - 95: {fileID: 9596976}
+  - 114: {fileID: 11418512}
   m_Layer: 0
   m_Name: Secondmate
   m_TagString: Untagged
@@ -123,7 +124,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157038}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.22, y: 2, z: 6.75}
@@ -182,6 +183,35 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &11418512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb490cc09cc0349fc96627b4f6799626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: 
+  Sound: 
+  UseExtended: 0
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 0
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
+  SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11423198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,6 +238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionPath: character_secondmate
   Debugging: 0
+  flipped: 0
+  agent: {fileID: 0}
 --- !u!114 &11452616
 MonoBehaviour:
   m_ObjectHideFlags: 1
