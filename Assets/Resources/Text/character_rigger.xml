@@ -10,7 +10,7 @@
       <Image>SadieN</Image>
       <Image2>CheifRiggerNFade</Image2>
       <Speaker>Cabin Girl Sadie</Speaker>
-      <MaxDistance>3</MaxDistance>
+      <MaxDistance>5</MaxDistance>
       <Text>What’s the weather like up there?</Text>
       <Next>talk_cant_hear_00</Next>
     </Interaction>
@@ -37,7 +37,7 @@
       <ALLTags>hasPoster</ALLTags>
       <IgnoreDistance>true</IgnoreDistance>
       <NONETags>riggerHit|riggerDown</NONETags>
-      <MaxDistance>3</MaxDistance>
+      <MaxDistance>5</MaxDistance>
       <Next>talk_cant_hear_10</Next>
     </Interaction>
     <Interaction>
@@ -45,7 +45,7 @@
       <Type>UseItem</Type>
       <NONETags>riggerDown|hasPoster|holdingPoster</NONETags>
       <SpecialActions>ReturnSelected</SpecialActions>
-      <MaxDistance>3</MaxDistance>
+      <MaxDistance>5</MaxDistance>
       <Next>talk_rigger</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
@@ -54,7 +54,7 @@
       <Type>UseItem</Type>
       <ANYTags>hasPoster|holdingPoster</ANYTags>
       <NONETags>riggerHit|riggerDown|holdingOrange</NONETags>
-      <MaxDistance>3</MaxDistance>
+      <MaxDistance>5</MaxDistance>
       <SpecialActions>ReturnSelected</SpecialActions>
       <Next>talk_cant_hear_10</Next>
     </Interaction>
@@ -172,7 +172,7 @@
     <Interaction>
       <Name>talk</Name>
       <Type>Click</Type>
-      <MaxDistance>3</MaxDistance>
+      <MaxDistance>5</MaxDistance>
       <ALLTags>riggerHit</ALLTags>
       <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>talk_stuck_00</Next>
@@ -222,7 +222,7 @@
       <Image2>CheifRiggerS</Image2>
       <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_mop_handle_01</Next>
-      <MaxDistance>3</MaxDistance>
+      <MaxDistance>5</MaxDistance>
     </Interaction>
     <Interaction>
       <Name>give_mop_handle_01</Name>
@@ -250,7 +250,7 @@
       <Image2>CheifRiggerN</Image2>
       <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_hook_01</Next>
-      <MaxDistance>3</MaxDistance>
+      <MaxDistance>5</MaxDistance>
     </Interaction>
     <Interaction>
       <Name>give_hook_01</Name>
@@ -278,7 +278,7 @@
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>
       <SpecialActions>RiggerSpeech</SpecialActions>
-      <MaxDistance>3</MaxDistance>
+      <MaxDistance>5</MaxDistance>
       <Next>give_01</Next>
     </Interaction>
     <Interaction>
@@ -317,16 +317,9 @@
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>Here, try this.</Text>
       <TakeItems>Pole_Hook</TakeItems>
-      <Next>give_pole_hook_00_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>give_pole_hook_00_1</Name>
-      <Type>Derivative</Type>
-      <Image>SadieNFade</Image>
-      <Image2>CheifRiggerH</Image2>
       <SpecialActions>RiggerSpeech</SpecialActions>
       <Next>give_pole_hook_01</Next>
-      <MaxDistance>3</MaxDistance>
+      <MaxDistance>5</MaxDistance>
     </Interaction>
     <Interaction>
       <Name>give_pole_hook_01</Name>
@@ -337,11 +330,16 @@
       <Text>Oh, wow, that might actually work!</Text>
       <GiveTags>riggerDown</GiveTags>
       <TakeTags>riggerHit</TakeTags>
-      <SpecialActions>RiggerDescend|RiggerSpeech</SpecialActions>
-      <Next>rigger_descend</Next>
+      <SpecialActions>RiggerDescend</SpecialActions>
     </Interaction>
     <Interaction>
       <Name>rigger_descend</Name>
+      <Type>Derivative</Type>
+      <SpecialActions>RiggerSpeech</SpecialActions>
+      <Next>rigger_descend_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>rigger_descend_1</Name>
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>CheifRiggerN</Image2>

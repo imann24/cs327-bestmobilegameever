@@ -22,7 +22,7 @@
       <NONETags>lifeboatSecured</NONETags>
       <Image>SadieNFade</Image>
       <Image2>SecondMateA</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>Arrr! Don’t bother me, you slime-swiller!</Text>
       <Next>choice</Next>
     </Interaction>
@@ -32,7 +32,7 @@
       <ALLTags>lifeboatSecured</ALLTags>
       <Image>SadieNFade</Image>
       <Image2>SecondMateA</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>Arrr! Why do you continue to disturb me?</Text>
       <Next>choice</Next>
     </Interaction>
@@ -61,7 +61,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>That is not - that is -</Text>
       <Next>use_rope_02</Next>
     </Interaction>
@@ -70,7 +70,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>*Ahem* Do not interrupt my process, you scurvy lout!</Text>
       <Next>use_rope_03</Next>
     </Interaction>
@@ -79,7 +79,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>If I have need of your services, I will inform you of such!</Text>
     </Interaction>
     <!-- EndRegion -->
@@ -102,7 +102,7 @@
       <ALLTags>lifeboatSecured</ALLTags>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>You secured the lifeboat, did you?</Text>
       <Next>lifeboat_comment_00</Next>
     </Interaction>
@@ -111,7 +111,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>Hm, yes - I judge your work to be sufficient.</Text>
       <Next>lifeboat_comment_01</Next>
     </Interaction>
@@ -130,7 +130,7 @@
       <Type>Derivative</Type>
       <Image>SadieAFade</Image>
       <Image2>SecondMateA</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>Don’t speak back to me, bilge rat! You are testing my patience.</Text>
       <Next>lifeboat_comment_03</Next>
     </Interaction>
@@ -139,7 +139,7 @@
       <Type>Derivative</Type>
       <Image>SadieAFade</Image>
       <Image2>SecondMateA</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>...</Text>
       <SpecialActions>SecondMateSpeech</SpecialActions>
       <Next>lifeboat_comment_04</Next>
@@ -149,7 +149,7 @@
       <Type>Derivative</Type>
       <Image>SadieAFade</Image>
       <Image2>SecondMateA</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>Why are you still here? I don’t have time for layabouts.</Text>
       <Next>choice</Next>
     </Interaction>
@@ -169,7 +169,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>Bartholomew? Aye, I do - as should you! He has the untameable spirit of a pirate and the dashing beauty of a captain.</Text>
       <Next>choice_bart_02</Next>
     </Interaction>
@@ -178,7 +178,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>All lesser creatures are blessed to look upon him!</Text>
       <Next>choice_bart_03</Next>
     </Interaction>
@@ -197,7 +197,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>He - entrusted a task to *you*?! That’s -</Text>
       <Next>choice_bart_05</Next>
     </Interaction>
@@ -206,7 +206,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>That is, perhaps you are not quite the bilge rat you look, after all.</Text>
       <Next>choice_bart_06</Next>
     </Interaction>
@@ -266,7 +266,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateA</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>Avast ye! Can’t you see I’m working?</Text>
       <Next>choice_poster_11</Next>
     </Interaction>
@@ -285,7 +285,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>As well I should! He is true captain material. So sleek, so shiny…</Text>
       <Next>choice_poster_13</Next>
     </Interaction>
@@ -294,7 +294,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>*Ahem* I am, in fact, diligently contriving a strategy to fix this lifeboat’s precarious situation.</Text>
       <Next>choice_poster_14</Next>
     </Interaction>
@@ -303,7 +303,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateN</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>But I don’t expect you would understand such an intellectual process. So begone with you, cur!</Text>
     </Interaction>
     <Interaction>
@@ -331,7 +331,7 @@
       <Type>Derivative</Type>
       <Image>SadieNFade</Image>
       <Image2>SecondMateH</Image2>
-      <Speaker>Second Mate</Speaker>
+      <Speaker>Second Mate Charles</Speaker>
       <Text>It’s from Bartholomew? Why didn’t you say something!? Give me that!</Text>
       <GiveTags>secondmatePosterGiven</GiveTags>
       <Next>decrease</Next>

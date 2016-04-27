@@ -37,7 +37,8 @@ public class NoahMove : MonoBehaviour {
 						if (distance <= minDistanceToInteract) {
 							InteractionManager.HandleInteractionList (interactor, interactionList);
 							isInteractionPending = false;
-						}
+                            GameManager.InventoryManager.ReturnSelected();
+                        }
 					}
 				}
 			}
