@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class SpecialActions_Rigger : SpecialActions {
+    public GameObject Waypoint = null;
     private string next;
 	string inRiggingKey = "inRigging";
 	AudioController audio;
@@ -27,7 +28,8 @@ public class SpecialActions_Rigger : SpecialActions {
 
         yield return new WaitForSeconds(2f);
 		collider.isTrigger = true;
-		gameObject.transform.position = GameObject.Find("Waypoint_RiggerDescend").transform.position + Vector3.back * offset;
+        gameObject.GetComponent<NavMeshAgent>().enabled = true;
+		gameObject.transform.position = Waypoint.transform.position; // + Vector3.back * offset;
 		collider.isTrigger = false;
         NextInteraction("light", GameObject.Find("Lantern").GetComponent<Interactable>());
         Fader.FadeOut();

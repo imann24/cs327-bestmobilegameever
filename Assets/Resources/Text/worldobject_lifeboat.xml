@@ -12,6 +12,7 @@
       <Name>use_rope</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingRope</ALLTags>
+      <MaxDistance>5</MaxDistance>
       <Next>use_rope_lifeboat</Next>
       <NextInteractor>Sadie</NextInteractor>
     </Interaction>
@@ -21,7 +22,6 @@
       <TakeItems>Rope</TakeItems>
       <GiveTags>lifeboatSecured</GiveTags>
       <SpecialActions>ChangeToSecured</SpecialActions>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>DefaultCannotUse</Name>

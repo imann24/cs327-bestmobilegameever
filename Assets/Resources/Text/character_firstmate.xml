@@ -9,7 +9,6 @@
       <ALLTags>firstmateIntro</ALLTags>
       <Image>FirstMateH</Image>
       <Image2>SadieNFade</Image2>
-      <IgnoreDistance>true</IgnoreDistance>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_intro_00_1</Next>
     </Interaction>
@@ -21,7 +20,6 @@
       <Image2>SadieNFade</Image2>
       <Speaker>First Mate Bartholomew</Speaker>
       <Text>Ah, there you are! You must be my new assistant, yes? Thank goodness! You mustn’t keep your future captain waiting… but I will forgive you just this once.</Text>
-      <IgnoreDistance>true</IgnoreDistance>
       <Next>firstmate_intro_01</Next>
     </Interaction>
     <Interaction>
@@ -42,7 +40,6 @@
       <Speaker>First Mate Bartholomew</Speaker>
       <Text>Now, before I take you on as my partner, let me ask you this, ma cherie - what makes a captain, in your view?</Text>
       <Next>firstmate_intro_02_choice</Next>
-      <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>firstmate_intro_02_choice</Name>
@@ -237,17 +234,12 @@
     </Interaction>
     <!-- EndRegion -->
     <!-- Region Give Mop -->
-
     <Interaction>
       <Name>firstmate_give_mop_fail_00</Name>
       <Type>UseItem</Type>
       <ALLTags>firstmateQuestInProgress1|holdingMopHead</ALLTags>
       <NONETags>mopInked</NONETags>
-      <Image>FirstMateN</Image>
-      <Image2>SadieNFade</Image2>
-      <Speaker>First Mate Bartholomew</Speaker>
-      <Text>Oh? Have you found it? Let me...</Text>
-      <SpecialActions>ReturnSelected</SpecialActions>
+      <SpecialActions>ReturnSelected|FirstMateSpeech</SpecialActions>
       <Next>firstmate_give_mop_fail_01</Next>
     </Interaction>
     <Interaction>
@@ -255,14 +247,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateN</Image>
       <Image2>SadieNFade</Image2>
-      <SpecialActions>FirstMateSpeech</SpecialActions>
-      <Next>firstmate_give_mop_fail_01_1</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_give_mop_fail_01_1</Name>
-      <Type>Derivative</Type>
-      <Image>FirstMateN</Image>
-      <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>Oh? Have you found it? Let me...</Text>
       <Next>firstmate_give_mop_fail_02</Next>
     </Interaction>
@@ -528,7 +513,7 @@
       <Type>Derivative</Type>
       <ALLTags>hasPoster|secondmateTalked</ALLTags>
       <NONETags>postersGiven|secondmatePosterGiven</NONETags>
-      <Text>The second mate over there is too busy ogling you to take the poster.</Text>
+      <Text>The second mate is too busy ogling you to take the poster.</Text>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_propaganda_mid_031</Next>
     </Interaction>
@@ -592,11 +577,7 @@
       <Name>firstmate_give_poster_00</Name>
       <Type>UseItem</Type>
       <ALLTags>holdingPoster</ALLTags>
-      <Image>FirstMateMopS</Image>
-      <Image2>SadieNFade</Image2>
-      <Speaker>First Mate Bartholomew</Speaker>
-      <Text>I see you still have some posters to deliver.</Text>
-      <SpecialActions>ReturnSelected</SpecialActions>
+      <SpecialActions>ReturnSelected|FirstMateSpeech</SpecialActions>
       <Next>firstmate_give_poster_00_1</Next>
     </Interaction>
     <Interaction>
@@ -604,14 +585,7 @@
       <Type>Derivative</Type>
       <Image>FirstMateMopS</Image>
       <Image2>SadieNFade</Image2>
-      <SpecialActions>FirstMateSpeech</SpecialActions>
-      <Next>firstmate_give_poster_00_2</Next>
-    </Interaction>
-    <Interaction>
-      <Name>firstmate_give_poster_00_2</Name>
-      <Type>Derivative</Type>
-      <Image>FirstMateMopS</Image>
-      <Image2>SadieNFade</Image2>
+      <Speaker>First Mate Bartholomew</Speaker>
       <Text>I see you still have some posters to deliver.</Text>
       <Next>firstmate_give_poster_01</Next>
     </Interaction>

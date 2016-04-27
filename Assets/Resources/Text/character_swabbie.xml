@@ -20,7 +20,7 @@
       <Text>What can I do fer you?</Text>
       <Image>SadieNFade</Image>
       <Image2>SwabbieN</Image2>
-      <Speaker>Swabbie</Speaker>
+      <Speaker>Winslow the Swabbie</Speaker>
       <Next>choice</Next>
     </Interaction>
     <Interaction>
@@ -51,7 +51,7 @@
       <Text>Nay, lass. This ‘ere deck needs cleanin’.</Text>
       <Image>SadieNFade</Image>
       <Image2>SwabbieN</Image2>
-      <Speaker>Swabbie</Speaker>
+      <Speaker>Winslow the Swabbie</Speaker>
       <Next>get_mop_12</Next>
     </Interaction>
     <Interaction>
@@ -70,7 +70,7 @@
       <Text>Aye.</Text>
       <Image>SadieAFade</Image>
       <Image2>SwabbieN</Image2>
-      <Speaker>Swabbie</Speaker>
+      <Speaker>Winslow the Swabbie</Speaker>
       <Next>get_mop_14</Next>
     </Interaction>
     <Interaction>
@@ -88,7 +88,7 @@
       <Text>...</Text>
       <Image>SadieNFade</Image>
       <Image2>SwabbieN</Image2>
-      <Speaker>Swabbie</Speaker>
+      <Speaker>Winslow the Swabbie</Speaker>
     </Interaction>
     <Interaction>
       <Name>get_mop_21</Name>
@@ -96,7 +96,7 @@
       <Text>Well, that’s mighty kind of you, lass. Here, take this mop.</Text>
       <Image>SadieNFade</Image>
       <Image2>SwabbieH</Image2>
-      <Speaker>Swabbie</Speaker>
+      <Speaker>Winslow the Swabbie</Speaker>
       <SpecialActions>ChangeToNoMop</SpecialActions>
       <Next>get_mop_21_1</Next>
     </Interaction>
@@ -156,7 +156,7 @@
       <Text>Ah… well, y’see…</Text>
       <Image>SadieAFade</Image>
       <Image2>SwabbieS</Image2>
-      <Speaker>Swabbie</Speaker>
+      <Speaker>Winslow the Swabbie</Speaker>
       <SpecialActions>SwabbieFlee</SpecialActions>
     </Interaction>
     <!-- EndRegion -->
