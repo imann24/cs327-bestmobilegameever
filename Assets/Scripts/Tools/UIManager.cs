@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour {
 
     [SerializeField]
 	GameObject tapToContinue = null;
+	CanvasGroup tapToContinueFunctionality;
+
 	public AudioController audioController = null;
 
 	public GameObject DimBackground;
@@ -47,6 +49,7 @@ public class UIManager : MonoBehaviour {
     void Awake() {
         if (_instance == null) {
             _instance = this;
+			setReferences();
             DontDestroyOnLoad(gameObject);
 			spawnTextBox();
 			setMuteButtonBasedOnSettings();
@@ -133,14 +136,21 @@ public class UIManager : MonoBehaviour {
 		DimBackground.SetActive (true);
 		if (interactor != null) tapToContinue.GetComponent<InteractionButton> ().interactor = interactor;
 		if (interaction != null) tapToContinue.GetComponent<InteractionButton> ().interaction = interaction;
+		toggleTapToContinueFunctionality(true);
 	}
 
-	public void DisableTapToContinue(){
+	public void DisableTapToContinue(bool shouldLockScreen = false){
 		DimBackground.SetActive (false);
         CanInteract = true;
 		tapToContinue.SetActive (false);
-	}
 
+		if (shouldLockScreen) {
+			LockScreen();
+			toggleTapToContinueFunctionality(false);
+			DimBackground.SetActive(true);
+		}
+	}
+		
 	public void LockScreen() {
         CanInteract = false;
         tapToContinue.SetActive (true);
@@ -152,6 +162,7 @@ public class UIManager : MonoBehaviour {
         tapToContinue.GetComponent<Button> ().enabled = true;
 		tapToContinue.SetActive (false);
 	}
+		
 
 	[System.Obsolete]
 	IEnumerator TapDelay(){
@@ -164,6 +175,12 @@ public class UIManager : MonoBehaviour {
 		LockScreen ();
 		yield return new WaitForSeconds (MinTapDelay);
 		UnlockScreen();
+	}
+
+	void toggleTapToContinueFunctionality (bool isActive) {
+		tapToContinueFunctionality.blocksRaycasts = isActive;
+		tapToContinueFunctionality.interactable = isActive;
+		tapToContinue.GetComponent<Button>().enabled = isActive;
 	}
 
 	void spawnTextBox() {
@@ -179,5 +196,11 @@ public class UIManager : MonoBehaviour {
 		MuteButtonGraphic.sprite = (SettingsUtil.FXMuted && SettingsUtil.MusicMuted) ? 
 			MuteButtonWhenVolumeOff :
 			MuteButtonWhenVolumeOn;
+	}
+
+	void setReferences () {
+		if (tapToContinue != null) {
+			tapToContinueFunctionality = tapToContinue.GetComponent<CanvasGroup>();
+		}
 	}
 }
