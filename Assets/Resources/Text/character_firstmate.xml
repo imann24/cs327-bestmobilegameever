@@ -276,6 +276,7 @@
       <Image2>SadieNFade</Image2>
       <SpecialActions>FirstMateSpeech</SpecialActions>
       <Next>firstmate_give_mop_success_00_1</Next>
+      <Event>FirstMateWig</Event>
     </Interaction>
     <Interaction>
       <Name>firstmate_give_mop_success_00_1</Name>
