@@ -484,7 +484,7 @@ public class InteractionManager : MonoBehaviour {
 
 		}
 
-		if (shouldDisableTapToContinue) UIManager._instance.DisableTapToContinue();
+		if (shouldDisableTapToContinue) UIManager._instance.DisableTapToContinue(true);
 	}
 
 	public static bool isLeft(Interactable interactor){ //left has smaller x value
