@@ -126,13 +126,13 @@ public class UIManager : MonoBehaviour {
 
 	}
 
-    public void EnableTapToContinue(Interactable interactor, Interaction interaction){
+    public void EnableTapToContinue(Interactable interactor = null, Interaction interaction = null){
 		
         CanInteract = false;
 		tapToContinue.SetActive (true);
 		DimBackground.SetActive (true);
-		tapToContinue.GetComponent<InteractionButton> ().interactor = interactor;
-		tapToContinue.GetComponent<InteractionButton> ().interaction = interaction;
+		if (interactor != null) tapToContinue.GetComponent<InteractionButton> ().interactor = interactor;
+		if (interaction != null) tapToContinue.GetComponent<InteractionButton> ().interaction = interaction;
 	}
 
 	public void DisableTapToContinue(){
@@ -153,6 +153,7 @@ public class UIManager : MonoBehaviour {
 		tapToContinue.SetActive (false);
 	}
 
+	[System.Obsolete]
 	IEnumerator TapDelay(){
 
 		// Added for debugging purposes

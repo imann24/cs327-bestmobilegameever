@@ -382,6 +382,7 @@ public class InteractionManager : MonoBehaviour {
 	}
 
 	public static void HandleInteractionList(Interactable interactor, List<Interaction> interactionList, bool forceSuppressMovement = false, bool forceIgnoreDistance = false){
+		bool shouldDisableTapToContinue = false;
 
 		List<Interaction> validInteractions = interactionList.FindAll (i => i.IsValid);
 		float interactionDistance = Vector3.Distance (interactor.transform.position, GameManager.PlayerCharacter.transform.position);
@@ -447,19 +448,16 @@ public class InteractionManager : MonoBehaviour {
 			}
 			List<Interaction> displayed = closeEnough.Where (i => i.HasText && i.iTextType != TextType.Floating).ToList();
 		
+			int singleTextDisplayed = 1;
 
+			if (displayed.Count () == singleTextDisplayed) {
 
-			if (displayed.Count () <= 1) {
-
-				if (displayed.Count() > 0) {
-					GameManager.UIManager.EnableTapToContinue (interactor, displayed.Single ());
-				}
-
+				GameManager.UIManager.EnableTapToContinue (interactor, displayed.Single ());
 				UIManager._instance.ToggleDialogueArrows(false);
-
-
-			} else {
+				UIManager._instance.EnableTapToContinue();
+			} else if (displayed.Count () > singleTextDisplayed) {
 				UIManager._instance.ToggleDialogueArrows(true);
+				shouldDisableTapToContinue = true;
 				//GameObject interactionButton = null;
 				//interactionButton.transform.GetChild (0).gameObject.SetActive (true);  
 
@@ -479,7 +477,10 @@ public class InteractionManager : MonoBehaviour {
 			List<Interaction> alternatives = tooFar.Where (x => x.iTooFar != null).SelectMany (y => validInteractions.FindAll (z => z.iName == y.iTooFar)).Union(closeEnough).Distinct().ToList();
 
 			HandleInteractionList (interactor, alternatives);
+
 		}
+
+		if (shouldDisableTapToContinue) UIManager._instance.DisableTapToContinue();
 	}
 
 	public static bool isLeft(Interactable interactor){ //left has smaller x value
@@ -553,7 +554,7 @@ public class InteractionManager : MonoBehaviour {
 			}
 		}
 		GameManager.UIManager.StopAllCoroutines ();
-		GameManager.UIManager.StartCoroutine ("TapDelay");
+		// GameManager.UIManager.StartCoroutine ("TapDelay");
 		CheckForTextBoxText(interaction);
 	}
 
