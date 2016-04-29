@@ -25,7 +25,7 @@
 			“Loop”:false,
 			“Type”: "Music",
 			“Channel”:1,
-			"Volume": 100
+			"Volume": 85
 		},
 		{
 			“FileName”:"Deck_Soundtrack_B_2",
@@ -34,7 +34,7 @@
 			“Loop”:false,
 			“Type”: "Music",
 			“Channel”:1,
-			"Volume": 100
+			"Volume": 85
 		},
 		{
 			“FileName”:"Placeholder_Put_Down_1",
@@ -475,7 +475,7 @@
 			“Loop”:true,
 			“Type”: "FX",
 			“Channel”:3,
-			"Volume": 60
+			"Volume": 80
 		},
 		{
 			“FileName”:"Rigger_Talk_A",
@@ -673,7 +673,7 @@
 			“Loop”:false,
 			“Type”: "Music",
 			“Channel”:1,
-			"Volume": 100
+			"Volume": 85
 		},
 		{
 			“FileName”:"Climb_Out_Hammock",
@@ -1015,7 +1015,7 @@
 			“Loop”:true,
 			“Type”: "FX",
 			“Channel”:3,
-			"Volume": 60
+			"Volume": 80
 		},
 		{
 			“FileName”:"Secondmate_Talk_A",
