@@ -43,6 +43,7 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
                 NextInteraction(next);
                 portraitMoving.transform.position = portraitPosition;
                 portraitMoving = null;
+                GameManager.UIManager.PortraitExiting = false;
             }
             else {
                 //Debug.Log("Moving portrait: " + portraitMoving + " to " + portraitDestination);
@@ -141,8 +142,9 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
 
     private void portraitExit(float dir) {
         GameManager.UIManager.LockScreen();
-
+        GameManager.UIManager.PortraitExiting = true;
         if (dir > 0) { portraitMoving = GameManager.InteractionManager.rightImage; }
+
         else { portraitMoving = GameManager.InteractionManager.leftImage; }
 
         portraitPosition = portraitMoving.transform.position;

@@ -23,6 +23,10 @@ public class InteractionButton : MonoBehaviour{
 	GameObject _arrow;
 
 	public void CompleteInteraction(){
+        if (GameManager.UIManager.PortraitExiting) {
+            return;
+        }
+
 		GameManager.InteractionManager.ClearInteractions ();
 		InteractionManager.CompleteInteraction (interactor, interaction);
 	}
