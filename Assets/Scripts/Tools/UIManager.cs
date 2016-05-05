@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour {
     public static UIManager _instance = null;
     public bool CanInteract = true;
 	public bool paused = false;
+    public bool PortraitExiting;
 
     [SerializeField]
 	GameObject tapToContinue = null;
