@@ -416,7 +416,7 @@ public class InteractionManager : MonoBehaviour {
 					interactor.GetComponent<Interactable> ().Flip ();
 				}
 
-				if (GameObject.Find ("Floor") != null && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped ==false && !isFacing(interactor)) {
+				if (GameObject.Find ("Floor") != null && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped ==false && !isFacing(interactor) && !allDerivatives(closeEnough)) {
 					//flip Sadie
 					GameObject.Find("Floor").GetComponent<NoahNavPlane>().Flip();
 
@@ -429,18 +429,18 @@ public class InteractionManager : MonoBehaviour {
 					
 					interactor.GetComponent<Interactable> ().Flip ();
 				}
-				if (GameObject.Find ("Floor") != null && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped != false && !isFacing(interactor)) {
+				if (GameObject.Find ("Floor") != null && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped != false && !isFacing(interactor) && !allDerivatives(closeEnough)) {
 					//flip Sadie
 					GameObject.Find("Floor").GetComponent<NoahNavPlane>().Flip();
 				}
 			}
 
-			if (isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == false) {
+			if (isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == false && !allDerivatives(closeEnough)) {
 				
 				GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().Flip ();
 			}
 
-			if (!isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == true) {
+			if (!isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == true && !allDerivatives(closeEnough)) {
 				
 				GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().Flip ();
 			}  
@@ -545,6 +545,16 @@ public class InteractionManager : MonoBehaviour {
 	static bool isRiggerInRigging (GameObject obj) {
 		return obj.name == RIGGER_OBJ_NAME && 
 			obj.GetComponentInChildren<Animator>().GetBool(IN_RIGGING_KEY);
+	}
+
+	static bool allDerivatives (List<Interaction> interactions) {
+		foreach (Interaction interaction in interactions) {
+			if (interaction.iType != InteractionType.Derivative) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 	public static void HandleInteraction(Interactable interactor, Interaction interaction){
