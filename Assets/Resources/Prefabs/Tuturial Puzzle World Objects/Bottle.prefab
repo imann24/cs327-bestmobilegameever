@@ -107,7 +107,7 @@ MonoBehaviour:
   MoveToWaypoint: {fileID: 0}
   SoundDelay: 0
   MoveSpeed: 0
-  MoveToPosition: {x: 4.89, y: -3.83, z: 6.61}
+  MoveToPosition: {x: 4.8, y: -3.83, z: 6.78}
   CreateAtPosition: {x: 4.89, y: -3.83, z: 8.34}
 --- !u!114 &11464702
 MonoBehaviour:
