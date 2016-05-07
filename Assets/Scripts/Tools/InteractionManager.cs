@@ -271,6 +271,9 @@ public class InteractionManager : MonoBehaviour {
 	[SerializeField]
 	private GameObject dimBackground=null;
 
+	const string RIGGER_OBJ_NAME = "Rigger";
+	const string IN_RIGGING_KEY = "inRigging";
+
 	void AddInteractionText(Interactable interactor, Interaction interaction){
 		if (interaction.HasText) {
 			GameObject newText;
@@ -409,10 +412,10 @@ public class InteractionManager : MonoBehaviour {
 			if (isLeft (interactor) && interactor.gameObject.name!="Sadie" && !isFacing(interactor) && interactor.gameObject.tag!="DontFlip"  )
 			{
 				
-				if(interactor.GetComponent<Interactable>().flipped ){ 
-					
+				if(interactor.GetComponent<Interactable>().flipped && !isRiggerInRigging(interactor.gameObject)) { 
 					interactor.GetComponent<Interactable> ().Flip ();
 				}
+
 				if (GameObject.Find ("Floor") != null && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped ==false && !isFacing(interactor)) {
 					//flip Sadie
 					GameObject.Find("Floor").GetComponent<NoahNavPlane>().Flip();
@@ -422,7 +425,7 @@ public class InteractionManager : MonoBehaviour {
 			if (!isLeft (interactor) && interactor.gameObject.name!="Sadie" && !isFacing(interactor)  && interactor.gameObject.tag!="DontFlip") 
 			{
 				
-				if (!interactor.GetComponent<Interactable> ().flipped) { //if interactor is facing right
+				if (!interactor.GetComponent<Interactable> ().flipped && !isRiggerInRigging(interactor.gameObject)) { //if interactor is facing right
 					
 					interactor.GetComponent<Interactable> ().Flip ();
 				}
@@ -537,6 +540,11 @@ public class InteractionManager : MonoBehaviour {
 		} else {
 			return specialActionsOfInteractable.GetPosition();
 		}
+	}
+
+	static bool isRiggerInRigging (GameObject obj) {
+		return obj.name == RIGGER_OBJ_NAME && 
+			obj.GetComponentInChildren<Animator>().GetBool(IN_RIGGING_KEY);
 	}
 
 	public static void HandleInteraction(Interactable interactor, Interaction interaction){
