@@ -67,6 +67,7 @@ GameObject:
   - 114: {fileID: 11496230}
   - 114: {fileID: 11413384}
   - 95: {fileID: 9599814}
+  - 114: {fileID: 11417904}
   m_Layer: 8
   m_Name: Sadie
   m_TagString: Player
@@ -82,7 +83,7 @@ Transform:
   m_GameObject: {fileID: 137342}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: -0.31, z: -0.34}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 479920}
   m_RootOrder: 2
@@ -93,7 +94,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1, y: 0, z: 1.65}
+  m_LocalPosition: {x: 9.94, y: -8.11, z: 2.32}
   m_LocalScale: {x: 0.6, y: 0.08, z: 0.6}
   m_Children:
   - {fileID: 488110}
@@ -215,6 +216,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba814e341da2ab0438ed9e76a918080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11417904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb490cc09cc0349fc96627b4f6799626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionTag: 
+  Sound: 
+  UseExtended: 0
+  ChangesSprite: 0
+  MovesObject: 0
+  CreatesObject: 0
+  PlaysSound: 0
+  UseNavMesh: 0
+  DestroyOnArrive: 0
+  NewSprite: {fileID: 0}
+  ObjectToMove: {fileID: 0}
+  ObjectToCreate: {fileID: 0}
+  CreateAtWaypoint: {fileID: 0}
+  MoveToWaypoint: {fileID: 0}
+  SoundDelay: 0
+  MoveSpeed: 2
+  MoveToPosition: {x: 0, y: 0, z: 0}
+  CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11446372
 MonoBehaviour:
   m_ObjectHideFlags: 1
