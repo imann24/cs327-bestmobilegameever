@@ -42,6 +42,7 @@
       <Name>talk</Name>
       <Type>Derivative</Type>
       <ALLTags>ojIntroComplete</ALLTags>
+      <NONETags>ojChalkGiven</NONETags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
       <SpecialActions>OJSpeech</SpecialActions>
@@ -51,10 +52,30 @@
       <Name>oj_intro_03_1</Name>
       <Type>Derivative</Type>
       <ALLTags>ojIntroComplete</ALLTags>
+      <NONETags>ojChalkGiven</NONETags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
       <Speaker>OJ</Speaker>
       <Text>The fruit be mine.</Text>
+      <Next>oj_choice</Next>
+    </Interaction>
+    <Interaction>
+      <Name>talk</Name>
+      <Type>Derivative</Type>
+      <ALLTags>ojIntroComplete|ojChalkGiven</ALLTags>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <SpecialActions>OJSpeech</SpecialActions>
+      <Next>oj_intro_04_1</Next>
+    </Interaction>
+    <Interaction>
+      <Name>oj_intro_04_1</Name>
+      <Type>Derivative</Type>
+      <ALLTags>ojIntroComplete|ojChalkGiven</ALLTags>
+      <Image>OrangeGuyBarrelN</Image>
+      <Image2>SadieNFade</Image2>
+      <Speaker>OJ</Speaker>
+      <Text>Greetings, bringer of the stone.</Text>
       <Next>oj_choice</Next>
     </Interaction>
   <!-- EndRegion -->
