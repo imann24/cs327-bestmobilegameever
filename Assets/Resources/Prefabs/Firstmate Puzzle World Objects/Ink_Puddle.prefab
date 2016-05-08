@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189188}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -587, z: 0}
   m_LocalScale: {x: 0.24533346, y: 1.45286, z: 0.40913674}
   m_Children: []
   m_Father: {fileID: 419058}
@@ -109,6 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionPath: worldobject_ink_puddle
   Debugging: 0
+  flipped: 0
+  agent: {fileID: 0}
 --- !u!136 &13649484
 CapsuleCollider:
   m_ObjectHideFlags: 1
