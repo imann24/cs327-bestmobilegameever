@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractionList>
 	<Interactions>
-  <!-- Region Intro -->
+  FU<!-- Region Intro -->
     <Interaction>
       <Name>oj_up</Name>
       <Type>Click</Type>
@@ -284,13 +284,13 @@
     <Interaction>
       <Name>oj_up</Name>
       <Type>UseItem</Type>
+      <ALLTags>holdingChalk|hasPoster</ALLTags>
       <SpecialActions>OJUp</SpecialActions>
       <Next>give_chalk</Next>
     </Interaction>
     <Interaction>
       <Name>give_chalk</Name>
       <Type>Derivative</Type>
-      <ALLTags>holdingChalk|hasPoster</ALLTags>
       <NONETags>ojChalkRequested</NONETags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
@@ -361,7 +361,7 @@
     <Interaction>
       <Name>give_chalk</Name>
       <Type>Derivative</Type>
-      <ALLTags>holdingChalk|ojChalkRequested</ALLTags>
+      <ALLTags>ojChalkRequested</ALLTags>
       <TakeTags>ojChalkRequested</TakeTags>
       <Image>OrangeGuyBarrelH</Image>
       <Image2>SadieNFade</Image2>
