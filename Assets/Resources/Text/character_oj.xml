@@ -11,7 +11,7 @@
     <Interaction>
       <Name>talk</Name>
       <Type>Derivative</Type>
-      <NONETags>ojIntroComplete</NONETags>
+      <NONETags>ojIntroComplete|ojChalkGiven</NONETags>
       <GiveTags>ojIntroComplete</GiveTags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
@@ -51,8 +51,6 @@
     <Interaction>
       <Name>oj_intro_03_1</Name>
       <Type>Derivative</Type>
-      <ALLTags>ojIntroComplete</ALLTags>
-      <NONETags>ojChalkGiven</NONETags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
       <Speaker>OJ</Speaker>
@@ -62,7 +60,7 @@
     <Interaction>
       <Name>talk</Name>
       <Type>Derivative</Type>
-      <ALLTags>ojIntroComplete|ojChalkGiven</ALLTags>
+      <ALLTags>ojChalkGiven</ALLTags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
       <SpecialActions>OJSpeech</SpecialActions>
@@ -71,11 +69,10 @@
     <Interaction>
       <Name>oj_intro_04_1</Name>
       <Type>Derivative</Type>
-      <ALLTags>ojIntroComplete|ojChalkGiven</ALLTags>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
       <Speaker>OJ</Speaker>
-      <Text>Greetings, bringer of the stone.</Text>
+      <Text>Greetings, ye fabled stone-bringer.</Text>
       <Next>oj_choice</Next>
     </Interaction>
   <!-- EndRegion -->
