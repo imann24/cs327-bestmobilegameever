@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractionList>
 	<Interactions>
-  FU<!-- Region Intro -->
+  <!-- Region Intro -->
     <Interaction>
       <Name>oj_up</Name>
       <Type>Click</Type>
@@ -256,16 +256,17 @@
       <Speaker>Cabin Girl Sadie</Speaker>
       <Text>I got you that chalk. Now please take this flyer off my hands.</Text>
       <SpecialActions>OJSpeech</SpecialActions>
-      <Next>give_poster_success</Next>
+      <Next>give_poster_1</Next>
     </Interaction>
     <Interaction>
-      <Name>give_poster_success</Name>
+      <Name>give_poster_1</Name>
       <Type>Derivative</Type>
       <Image>OrangeGuyBarrelN</Image>
       <Image2>SadieNFade</Image2>
       <Speaker>OJ</Speaker>
       <Text>Aye, great stone-bearer, I accept yer offering.</Text>
       <SpecialActions>OJDown</SpecialActions>
+      <Next>give_poster_success</Next>
     </Interaction>
     <Interaction>
       <Name>give_poster_success</Name>
