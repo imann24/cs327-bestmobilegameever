@@ -381,10 +381,11 @@ public class AudioController : MonoBehaviour {
 			ShortestSweetenerPlayFrequenecy,
 			LongestSweetenerPlayFrequenecy
 		);
-
+        /*
 		if ((PSScene)Application.loadedLevel == PSScene.MainGame) {
 			startCoroutines(_ambienceMainCoroutine,_swabbieCoroutine);
 		}
+        */
 		if ((PSScene)Application.loadedLevel == PSScene.TutorialScene) {
 			startCoroutines(_ambienceTutorialCoroutine);
 		}
