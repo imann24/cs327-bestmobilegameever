@@ -95,6 +95,9 @@ public class SpecialActions_Cutscene_Tutorial : SpecialActions {
             case "HideInventory":
                 GameManager.InventoryManager.Hide();
                 break;
+            case "ShowInventory":
+                GameManager.InventoryManager.Show();
+                break;
             case "ExitTutorialRoom":
                 StartCoroutine(NextScene());
                 break;
