@@ -12,15 +12,24 @@
     <Interaction>
       <Name>examine</Name>
       <Type>Click</Type>
+      <ALLTags>hasHookDirty</ALLTags>
+      <NONETags>hasOrange|bottleExamined</NONETags>
+      <Next>take_orange_fail_1</Next>
+      <NextInteractor>Sadie</NextInteractor>
+      <IgnoreDistance>true</IgnoreDistance>
+    </Interaction>
+    <Interaction>
+      <Name>examine</Name>
+      <Type>Click</Type>
       <NONETags>hasOrange|hasHookDirty</NONETags>
-      <Next>take_orange_fail</Next>
+      <Next>take_orange_fail_0</Next>
       <NextInteractor>Sadie</NextInteractor>
       <IgnoreDistance>true</IgnoreDistance>
     </Interaction>
     <Interaction>
       <Name>take</Name>
       <Type>Click</Type>
-      <ALLTags>hasHookDirty</ALLTags>
+      <ALLTags>hasHookDirty|bottleExamined</ALLTags>
       <NONETags>hasOrange</NONETags>
       <GiveItems>Orange</GiveItems>
       <SpecialActions>Destroy</SpecialActions>

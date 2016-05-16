@@ -125,9 +125,15 @@
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
-      <Name>take_orange_fail</Name>
+      <Name>take_orange_fail_0</Name>
       <Type>Derivative</Type>
       <Text>I really need to find the Captain's hook hand...</Text>
+      <TextType>Floating</TextType>
+    </Interaction>
+    <Interaction>
+      <Name>take_orange_fail_1</Name>
+      <Type>Derivative</Type>
+      <Text>No time for snacks now!</Text>
       <TextType>Floating</TextType>
     </Interaction>
     <Interaction>
