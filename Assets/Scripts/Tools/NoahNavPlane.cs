@@ -26,7 +26,7 @@ public class NoahNavPlane : MonoBehaviour, IPointerClickHandler {
 				if (flipped) {
 					Flip ();
 				}
-			} else {
+			} else if (Player.velocity.x < 0) {
 				if (!flipped) {
 					Flip ();
 				}
