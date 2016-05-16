@@ -84,7 +84,7 @@ public class SpecialActions : MonoBehaviour {
         if (obj == null) { obj = gameObject; }
         obj.GetComponent<SpecialActions>().MoveSpeed = speed;
         obj.GetComponent<SpecialActions>().MoveToPosition = pos;
-        if ((UseNavMesh || useNavMesh) && obj.GetComponent<NoahMove>() != null) { obj.GetComponent<NoahMove>().GoTo(pos); }
+        if ((UseNavMesh || useNavMesh) && obj.GetComponent<NoahMove>() != null) { obj.GetComponent<NoahMove>().GoTo(pos, speed); }
         else {
             if (obj.GetComponent<NavMeshAgent>() != null) { obj.GetComponent<NavMeshAgent>().enabled = false; }
             if (obj.GetComponentInChildren<NavMeshObstacle>() != null) { obj.GetComponentInChildren<NavMeshObstacle>().enabled = false; }

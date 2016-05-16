@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8, y: -9.109, z: 6.78}
+  m_LocalPosition: {x: 4.8, y: -9.174, z: 6.78}
   m_LocalScale: {x: 0.3164425, y: 0.031644247, z: 0.31644243}
   m_Children:
   - {fileID: 426150}
@@ -107,7 +107,7 @@ MonoBehaviour:
   MoveToWaypoint: {fileID: 0}
   SoundDelay: 0
   MoveSpeed: 0
-  MoveToPosition: {x: 4.8, y: -9.109, z: 6.78}
+  MoveToPosition: {x: 4.8, y: -9.174, z: 6.78}
   CreateAtPosition: {x: 4.89, y: -3.83, z: 8.34}
 --- !u!114 &11464702
 MonoBehaviour:
@@ -137,7 +137,7 @@ MonoBehaviour:
   SoundDelay: 0
   MoveSpeed: 2
   MoveToPosition: {x: 0, y: 0, z: 0}
-  CreateAtPosition: {x: 4.8, y: -9.109, z: 6.78}
+  CreateAtPosition: {x: 4.8, y: -9.174, z: 6.78}
 --- !u!114 &11498896
 MonoBehaviour:
   m_ObjectHideFlags: 1
