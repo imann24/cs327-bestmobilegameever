@@ -42,6 +42,12 @@
       <Text>Firstmate Quest 2</Text>
       <GiveItems>Hook|Mop_Handle|Poster</GiveItems>
     </Interaction>
+    <Interaction>
+      <Name>choose</Name>
+      <Type>Derivative</Type>
+      <Text>Firstmate Quest Complete</Text>
+      <GiveTags>postersGiven</GiveTags>
+    </Interaction>
     <!-- EndRegion -->
   <!-- EndRegion -->
   <!-- Region Test Item Tags -->

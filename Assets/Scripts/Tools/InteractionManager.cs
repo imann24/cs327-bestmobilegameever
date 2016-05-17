@@ -416,7 +416,7 @@ public class InteractionManager : MonoBehaviour {
 					interactor.GetComponent<Interactable> ().Flip ();
 				}
 
-				if (GameObject.Find ("Floor") != null && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped ==false && !isFacing(interactor) && !allDerivatives(closeEnough)) {
+				if (GameObject.Find ("Floor") != null && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped ==false && !isFacing(interactor) && !allDerivatives(closeEnough) && interactor.gameObject.GetComponent<InventoryItem>() == null) {
 					//flip Sadie
 					GameObject.Find("Floor").GetComponent<NoahNavPlane>().Flip();
 
@@ -429,18 +429,18 @@ public class InteractionManager : MonoBehaviour {
 					
 					interactor.GetComponent<Interactable> ().Flip ();
 				}
-				if (GameObject.Find ("Floor") != null && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped != false && !isFacing(interactor) && !allDerivatives(closeEnough)) {
+				if (GameObject.Find ("Floor") != null && GameObject.Find ("Floor").GetComponent<NoahNavPlane> ().flipped != false && !isFacing(interactor) && !allDerivatives(closeEnough) && interactor.gameObject.GetComponent<InventoryItem>() == null) {
 					//flip Sadie
 					GameObject.Find("Floor").GetComponent<NoahNavPlane>().Flip();
 				}
 			}
 
-			if (isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == false && !allDerivatives(closeEnough)) {
+			if (isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == false && !allDerivatives(closeEnough) && interactor.gameObject.GetComponent<InventoryItem>() == null) {
 				
 				GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().Flip ();
 			}
 
-			if (!isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == true && !allDerivatives(closeEnough)) {
+			if (!isLeft (interactor) && GameObject.Find ("NavFloor") != null && GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().flipped == true && !allDerivatives(closeEnough) && interactor.gameObject.GetComponent<InventoryItem>() == null) {
 				
 				GameObject.Find ("NavFloor").GetComponent<NoahNavPlane> ().Flip ();
 			}  

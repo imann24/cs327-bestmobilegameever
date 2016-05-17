@@ -9,7 +9,7 @@
       <Image>SadieS</Image>
       <Speaker>Cabin Girl Sadie</Speaker>
       <Next>examine_bottle_2</Next>
-      <MaxDistance>7</MaxDistance>
+      <MaxDistance>3</MaxDistance>
     </Interaction>
     <Interaction>
       <Name>examine_bottle_2</Name>

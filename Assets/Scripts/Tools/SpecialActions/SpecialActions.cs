@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 #if UNITY_EDITOR
@@ -84,7 +85,7 @@ public class SpecialActions : MonoBehaviour {
         if (obj == null) { obj = gameObject; }
         obj.GetComponent<SpecialActions>().MoveSpeed = speed;
         obj.GetComponent<SpecialActions>().MoveToPosition = pos;
-        if ((UseNavMesh || useNavMesh) && obj.GetComponent<NoahMove>() != null) { obj.GetComponent<NoahMove>().GoTo(pos); }
+        if ((UseNavMesh || useNavMesh) && obj.GetComponent<NoahMove>() != null) { obj.GetComponent<NoahMove>().GoTo(pos, speed); }
         else {
             if (obj.GetComponent<NavMeshAgent>() != null) { obj.GetComponent<NavMeshAgent>().enabled = false; }
             if (obj.GetComponentInChildren<NavMeshObstacle>() != null) { obj.GetComponentInChildren<NavMeshObstacle>().enabled = false; }
@@ -92,11 +93,13 @@ public class SpecialActions : MonoBehaviour {
         }
     }
 
-	void loadDemoEnd () {
-		SceneController.LoadDemoEnd();
-	}
+    IEnumerator LoadDemoEnd() {
+        Fader.FadeIn();
+        yield return new WaitForSeconds(2f);
+        SceneController.LoadDemoEnd();
+    }
 
-public void CreateObject(GameObject obj, Vector2 pos) {
+    public void CreateObject(GameObject obj, Vector2 pos) {
         GameObject newObject = (GameObject)Instantiate(obj, new Vector3(pos.x, pos.y, gameObject.transform.position.z), Quaternion.identity);
         newObject.name = obj.name;
     }
@@ -135,7 +138,7 @@ public void CreateObject(GameObject obj, Vector2 pos) {
                 break;
 
 			case EventList.END_DEMO:
-				loadDemoEnd();
+                StartCoroutine(LoadDemoEnd());
 				break;
 	
 			default:

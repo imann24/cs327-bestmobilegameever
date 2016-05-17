@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11422360}
   m_Layer: 0
   m_Name: Orange
-  m_TagString: Untagged
+  m_TagString: DontFlip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.49, y: -7.75, z: 0.51}
+  m_LocalPosition: {x: 4.49, y: -7.94, z: 0.51}
   m_LocalScale: {x: 0.45512715, y: 0.045512713, z: 0.45512706}
   m_Children:
   - {fileID: 402742}
@@ -77,8 +77,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1067368, y: 1, z: 1.1699724}
-  m_Center: {x: -0.02493144, y: 0, z: -0.008479837}
+  m_Size: {x: 1.1067368, y: 6.5552216, z: 1.1699723}
+  m_Center: {x: -0.024931092, y: 2.777623, z: -0.008479832}
 --- !u!114 &11422360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,6 +98,7 @@ MonoBehaviour:
   CreatesObject: 0
   PlaysSound: 1
   UseNavMesh: 0
+  DestroyOnArrive: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
@@ -120,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionPath: item_orange
   Debugging: 0
+  flipped: 0
+  agent: {fileID: 0}
 --- !u!212 &21237844
 SpriteRenderer:
   m_ObjectHideFlags: 1

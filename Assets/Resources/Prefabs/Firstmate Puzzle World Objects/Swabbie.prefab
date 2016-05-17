@@ -185,9 +185,9 @@ MonoBehaviour:
   UseExtended: 1
   ChangesSprite: 0
   MovesObject: 1
-  CreatesObject: 1
+  CreatesObject: 0
   PlaysSound: 1
-  UseNavMesh: 0
+  UseNavMesh: 1
   DestroyOnArrive: 0
   NewSprite: {fileID: 0}
   ObjectToMove: {fileID: 0}
@@ -243,6 +243,8 @@ MonoBehaviour:
   MoveSpeed: 2
   MoveToPosition: {x: 0, y: 0, z: 0}
   CreateAtPosition: {x: 0, y: 0, z: 0}
+  Ink_Puddle: {fileID: 176530, guid: 30afd617e922480429e72122be3b60a3, type: 2}
+  Waypoint_Ink: {fileID: 138276, guid: 3613650a95a6dea4a8393f795ec5227b, type: 2}
 --- !u!114 &11443974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -404,7 +406,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Ink_Puddle
+      value: 
+      objectReference: {fileID: 176530, guid: 30afd617e922480429e72122be3b60a3, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Waypoint_Ink
+      value: 
+      objectReference: {fileID: 138276, guid: 3613650a95a6dea4a8393f795ec5227b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 121796}

@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed685352894044189a30d02ed37d7ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Translation: {x: 0, y: -0.8, z: 0}
-  WaitTime: 2
+  Translation: {x: 0, y: 0, z: 0}
+  WaitTime: 0
 --- !u!114 &11488826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,10 +132,10 @@ MonoBehaviour:
   ObjectToMove: {fileID: 0}
   ObjectToCreate: {fileID: 0}
   CreateAtWaypoint: {fileID: 0}
-  MoveToWaypoint: {fileID: 159078, guid: 3613650a95a6dea4a8393f795ec5227b, type: 2}
+  MoveToWaypoint: {fileID: 108732, guid: 3613650a95a6dea4a8393f795ec5227b, type: 2}
   SoundDelay: 0.75
-  MoveSpeed: 4
-  MoveToPosition: {x: 4.93, y: -8, z: 3.92}
+  MoveSpeed: 2.5
+  MoveToPosition: {x: 4.79, y: -8.88, z: 4.65}
   CreateAtPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &21244584
 SpriteRenderer:
@@ -188,11 +188,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Translation.y
-      value: -0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: WaitTime
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

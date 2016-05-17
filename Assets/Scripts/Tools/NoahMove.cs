@@ -49,8 +49,9 @@ public class NoahMove : MonoBehaviour {
 		}
     }
 
-    public void GoTo(Vector3 targetPoint){
+    public void GoTo(Vector3 targetPoint, float speed = 0){
 		navAgent.SetDestination(targetPoint);
+        if (speed != 0) navAgent.speed = speed;
 	}
 
     public void GoToInteraction(Vector2 pos, Interactable i, List<Interaction> iList) {

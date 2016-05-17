@@ -10,7 +10,8 @@ public class ScreenFader : MonoBehaviour {
         if (fade != null) { Destroy(gameObject); }
         else {
             fade = GetComponent<Image>();
-            FadeIn(0f);
+            FadeIn();
+            Invoke("destroyMe", 2);
             DontDestroyOnLoad(gameObject);
         }
     }
@@ -26,4 +27,6 @@ public class ScreenFader : MonoBehaviour {
 			fade.CrossFadeAlpha(0f, time, true); 
 		}
 	}
+
+    private void destroyMe() { Destroy(gameObject); }
 }
