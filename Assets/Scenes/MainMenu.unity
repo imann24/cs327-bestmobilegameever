@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405084, guid: 2f0ab5494c689449d953f5006711cfd8, type: 2}
       propertyPath: versionNumber
-      value: 0.21
+      value: 0.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f0ab5494c689449d953f5006711cfd8, type: 2}
@@ -216,6 +216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd2ba89956694456abe540903873ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ReplaceWithCustomText: 0
+  CustomText: 
 --- !u!1 &296660827
 GameObject:
   m_ObjectHideFlags: 0
